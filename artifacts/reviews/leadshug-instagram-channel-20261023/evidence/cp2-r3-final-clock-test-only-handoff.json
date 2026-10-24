@@ -1,0 +1,36 @@
+{
+  "kind": "cp2-r3-final-clock-test-only-handoff",
+  "authority": "ApprovedST-IG-03v1.3, same actualCP2security/proofcontract, rootHOWconcretization. BothR3lanesterminal/rootmatched239/T/15+51/35/index beforethaw.",
+  "routing": "routing-cp2-r2-test-only.json",
+  "ownedPaths": [
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts"
+  ],
+  "admission": "Twooptionalnewfiles inside approved test/*instagram*.e2e-spec.ts A/?? andcanonicalapi-instagram selector. No newpublicroute/runner/protectedpath/WHAT.",
+  "readEvidence": [
+    "adherence-cp2-r3-result.json",
+    "adherence-cp2-r3-collection.json",
+    "cp2-r3-root-adjudication.json",
+    "cp2-api-full-r3-result.json",
+    "cp2-fullapi-r3-preflight-fixture-observation.json",
+    "cp2-final-clock-causal-proof-preparation.json",
+    "cp2-r2-confirmation-validation-13-result.json"
+  ],
+  "sourceFreeze": "cp2-r2-confirmation-frozen-manifest-13.json all239sourceproductionimmutable; onlythe2existingownedtestpaths mutable, other237unchanged; new2filesallowed",
+  "cases": [
+    "ROOT15 main1014case: qualify exactprofessionalId/businessIdentity/channel alreadycaptured, never arbitraryfindFirst among2accounts. Everyreceiptsnapshot/readback inthatcase mustuse samelocalchannel. Preserve identity/control/allpreflight/noeffects/assertioncounts.",
+    "ROOT02 actualcallback finalUPDATE/auditwait: validliveSIGNEDsession; actualPG exactattempt BEFOREUPDATE triggeradvisorybarrier onCANDIDATE_READY transition. Providerhookmaydeliberatelyshortenpersistedcallbacklease/deadline tostillfuture beforefinalTX; thenobserveactualPGwait, crossnaturalpassageofthatshortdeadline, release<4.5s original5sTX. Equal-duration livecontrol mustsucceed. Assertrollback/no candidate/audit; legit3HTTPalreadyperformedmustnotbedeleted. Clearlylabelpersistedlease-shorteningrobustness vsnatural60sexpiry. Add candidate60smargincrossing usingactualexpires_in justabove60 andshortactualDBwait, no clock/domain/Prismamocks. WHEREclockevaluatesbeforetriggerwait so assertfinalcommitclock notjustpreUPDATE.",
+    "ROOT02 analogousactualsubscription success/error finalwrite waits: beforevalidtuple then actualUPDATEtrigger/advisorywait crosses deliberatelyshortlease/deadline oractualcredentialmargin; matchedlivecontrols, no staleSUBSCRIBED/UNCERTAINfact, independentreceipt/cancel safe. KeepTX<5s/barriersfinite/finallyrelease/awaitall. CoveractualsuccessfulPOST andlateerror; sourceunchanged so expectcausalRED onlyafteractualbarrier/clockqualifiersreached.",
+    "SUBREC02 actualpost-POST subscriptionfinalization DBfault BEFORE subscriptionState SUBSCRIBED write (notlaterconfirmationCOMPLETED): originalHTTPsettled, faultcausesrollback; expectexactoriginalbindingholderreleased, successor/tombstone/cooldown andknownfacts preserved, nosecondPOST. Disableexactfaultbeforeanyrecovery andfinallydrop. IndependentactualsignedIN canprove receipt andoriginalkeylocalrecovery withzeroextraHTTP; donotreset budgets/drop originalrequest/ACKfacts orwait60s. Matchednofaultcontrol.",
+    "SUBREC02 successfulGET/null finalization takeover afterproviderCallcheck andbeforefollowingobservationTX: actualPGadvisoryFIFOqueue can deterministicallyplace takeoverbetween2ownerTXs. Holdresourceadvisorylockbefore releasingheldGET; observeproviderCallpostcheckqueued; enqueueactualtakeoverTX behindit on samekey and observequeue; releasefirstblocker, providercheckfinishes onoldtuple, queuedtakeovergetslockBEFOREobservationTX; update successor bindingtoken orcredential/generation andhold untilfollowingTXobservedqueued; releasecommit. Assertoriginaldenial/oldattempt unchanged, successorpreserved/noextraPOST; matchedordinarycontrol. No unreliabletimer-onlytakeover, transaction/domainmock orproviderCall spy. Ifbounded5s queuecannotbeproved, reportexactlimitation instead ofclaimingcausal.",
+    "R1-06 completedoriginalCONFIRM replayaftercurrentcredentialusabilitychanges: actualreauthorizeconnectedaccount promotesversion withno repeatPOST; originalkey/body returnsimmutableauthorizedcompletedDTO withoutHTTP/promotion andpreservesnewcredential. Additionalpersistedexpiredcredential/generationrobustness may beexplicitlylabelled butno v1/path scopecreep. Keepauthrequired.",
+    "R1-06 expandexistingCONFIGvariants withmissingwebhookappsecret/verifytoken andmissingmalformedcredentialkey (syntheticfixtureprocessenvonly, alwaysrestorefinally), preserve zeroattempt/audit/HTTP and safeDTO assertions. Add persistencebudget proof across realNestservice/apprecreation againstsamedisposablePG, no databaseclear/reset, freshactor10intents thenrecreatedapp11th429, existingbudget/idempotencyfacts unchanged. Closeonlysecondaryapp in finally."
+  ],
+  "constraints": [
+    "Sole testwriter. NO production/client/helper/schema/runner/sourcechanges, NO test/lint/build execution, no Git/private/runtime/provider/Meta/worktrees/copies/docs/T writes. RootownsT/evidence.",
+    "AlltestsactualNest/PostgreSQL/state/barriers; fakeonlyexternalproviderboundary. Noauth/clock/Prismamocks, no timeoutincrease/skips/weakenedassertions. Stablefinitebarriers and matchedcontrols; no assumedpositivecase fromunrelatedround.",
+    "Primaryobserver/middleware/privacy/bytes untouched/unaccepted. AllCP3..CP6 remain. ReturnterminalexactchangedpathSHAs andcase/body inventory with plannedRED/expectedGREEN, explicitlyNOTRUN. Rootseparatevalidator onlyafterrefreeze."
+  ]
+}

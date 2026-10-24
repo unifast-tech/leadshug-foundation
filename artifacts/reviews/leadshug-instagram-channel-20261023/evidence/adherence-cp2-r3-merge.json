@@ -1,0 +1,110 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r3-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "instagram_cp2_adherence_r3"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "mixed",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Retain the approved ST-IG-03 v1.3 architecture and finish the bounded corrections and meaningful proof below. This is the complete CP2 package review, not a residual-only review, checkpoint acceptance or feature delivery. All60 required actual source paths, all51 bound evidence inputs, the full1210-line governing TODO, dispatch/package and exact source13 freeze were inspected. CP2 source/test bodies received detailed inspection; preserved regression suites were inspected through their actual case/assertion/query and fixture contracts, with relevant lifecycle/owner bodies. The review-owned adherence-cp2-r3-collection.json records per-path inspection, all16 obligation rows and reached-versus-pending qualifications. All239 source hashes, the current TODO, all51 input hashes, all35 preservation rows and three exact root index references matched the final checks; the initial239/TODO/51/index check also matched, with the preservation baseline attested by the frozen manifest and35 paths independently rechecked during inspection. The bounded package was unchanged. No tests/lint/build/provider/Meta/runtime/database/process-env/Git inventory/private/backup/worktree/copy operations or product/TODO/input writes occurred; no active validation13 or future complete-API log was read. Routing GO and exact principal AGENTS/main/profile/Assurance authority governed. This review therefore grants no new current-source test result. Bound run12 passed31 migrations, lint/build,398unit and76of77 selected integration; its19 losers were all409, with18 CONFIRMATION_IN_PROGRESS and1 OPERATION_IN_PROGRESS, and subsequent winner/audit/replay assertions were unreached. Current source13 changes only the busy predicate for IN_PROGRESS mapped NOT_STARTED with the original live40-second deadline. That is a statically coherent repair without loser renewal, new timer/schema, repeated POST or changes to known-ACK/UNCERTAIN recovery; current behavioral proof must come from root's separate lane. The short natural signed-session user-row and attempt-UPDATE expiry cases now have actual matched live controls and qualified GREEN11/12; the old15-second confound remains excluded. The owner-local actorTransaction wrapper protects signed-session validity after final awaits and before commit; that repair is distinct from the remaining operation/credential clock finding below. Actual committed-writer result interruption, disabled fault, original CONNECT key/body replay and ciphertext/version/request-hash preservation are supported by reached11/12 proof. R2 counter/cooldown/mapped-version fixture defects, entry-account preflight and effective parser aliases are supported repaired; redirects are refused with actual native-fetch boundary proof. Five safe audit classifications and removal of the obsolete GET coverage entry are source-supported; complete-API catalog/index proof belongs to root. Historical CP1 closures and original CP2 ROOT01/03/05/06 and SUBPROTO02/03 remain supported and are not reopened. R1-01 TTL/cancellation/CAS and R1-02 auth order/active-BU/array repairs remain supported; R1-03 is supported; R1-05 and R2-01 source/proof repairs are supported. ROOT04's actual writer recovery is materially stronger; its remaining fresh20/historical replay proof is retained under R1-06. SUBREC02's original first-POST race, shared holder/cooldown and credential CAS are materially repaired, with residual continuation cleanup/fencing below. ROOT08/09 still require root's clean current complete-validation reconciliation; stable hashes alone are not acceptance. The narrow recommended changes improve coherent lifecycle ownership without a generic framework. Indexed bounded history lookups and chunked15000-row fixtures are favorable, but no throughput/latency/capacity claim or missing-index diagnosis follows from a fixture-timeout receipt. IG-SUBPROTO-01/IG-SUBREC-03 and the unadmitted precontroller companion remain open. Independent CP3 may proceed only under the recorded approved sequencing while CP2 stays unaccepted: shared Channel/policy/Outbound and v2/legacy consumer work remains required, including current APIv1/Consultar contact/BU.phone projections and Typebot boundaries. CP4 actual OAuth/capability/authorization/connection/inbox React consumers, pagination/disconnect/verify, gateway/CI/browser/freshness are planned and unwaived. CP5 ALL/all4pcv lanes/security/TQA/cutover/adherence/final and CP6 separately approved real Instagram plus both WhatsApp proofs remain mandatory. No backend-only delivery or admission/application of session middleware, privacy HTML or1000UTF8-byte proposals is inferred; the governing1000-character clauses remain unchanged."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-3007DA59",
+      "severity": "high",
+      "title": "Own-account subscription observation remains an unaccepted primary-contract obligation",
+      "rationale": "Existing SCOPE-04/DOD-03/CP2-UNCERTAINTY obligation; IG-SUBREC-03 remains open with this ID. The authoritative open list overrides generated historical resolved labels containing status=open. instagram-http.client.ts:84-92 still performs a provisional GET and returns null for every successful response. That safely preserves UNKNOWN, but cannot establish own subscription presence or complete own absence. The51 sealed inputs include repeated primary rechecks/opinions that do not establish GET support, envelope, identity purpose, own-app visibility or completeness. Current first-POST intent/resource history prevents another mutation after UNKNOWN, which is a supported safety improvement and not accepted observation delivery. No provider call or real grant was executed by this reviewer; missing documentation is not proof that GET is unsupported.",
+      "suggested_action": "Carry both IDs open through independent CP3 work. Establish the supported primary own-account observation contract before accepting recovery, then implement only its documented identity/required-field/completeness semantics with meaningful boundary proof. Preserve UNKNOWN and durable no-repeat history. Infer no parent-app identifier/configuration, alternate login, broader permission, retry or provider investigation authority from this finding.",
+      "reviewer_labels": [
+        "instagram_cp2_adherence_r3"
+      ],
+      "source_finding_ids": [
+        "IG-SUBPROTO-01"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-B5540351",
+      "severity": "medium",
+      "title": "The sixteen obligation areas have stronger coverage, but exact current proof is still incomplete",
+      "rationale": "All16 rows were cross-checked against actual source/assertions and qualified receipts; detailed map is adherence-cp2-r3-collection.json. CONFIG covers complete/partial and four absent/malformed variants with zero writes/HTTP, but not webhook/crypto variants or service-recreation budget proof. AUTHZ/CALLBACK now have the broad real denial matrix and two natural short signed-expiry/matched-control proofs; old15-second timeout-confounded PASS remains excluded. IDEMPOTENCY has20 fresh creates/audit-once and real committed-writer original-key/body recovery with fault disabled; fresh20 confirmations remain unproved on source13. Run12 reached19x409 with18 confirmation conflicts and1 operation conflict; its later winner/audit/credential/onePOST/replay assertions did not execute, and the one-path repair remains NOTRUN in the bound inputs. Completed replay tests preserve an unchanged usable credential, without the separately required current credential/generation usability-change replay case. TOKEN/IDENTITY cover mandatory3-step protocol, decoded scopes, distinct opaque IDs, short/long failures, real versioned/me delay and margin; nativefetch guard/header/body/redirect cases passed11/12. CONFIRM/CANCEL cover TTL after claim, actual-lock cancellation and credential-version contenders; the final-clock and continuation paths in ROOT02/SUBREC02 still lack causal proof. UNCERTAINTY supports indexed history/sharedholder/cooldown and no-repeat UNKNOWN across attempts but not the missing own observer. SIGNATURE covers purpose/raw-byte distinctions. BOUNDS proves1000 distinct updates with exact identities/routes/messages/unread and replay, full supported entry-account preflight and effective parser aliases. ORIENTATION/WINDOW and REPLAY now reach the previously blocked later account/partial-retry scenarios and self/deleted/read/reaction exclusions. RECEIPT has heldPOST late success, receipt/cancel late error and successor-holder positive/negative proof; those do not prove successful GET/null finalization, post-settlement final DB fault cleanup, or all final lease/credential/actor success/error boundaries. SAFE-OUTPUT supports DTO/ciphertext/controller/audit protections while precontroller and later consumer/gateway/browser remain open. The complete API r2 receipt had522/528 with fixture/catalog issues; current source removes obsoleteGETcoverage and chunks the15000-row fixture, but no current complete-API result is admitted here. A fixture setup timeout proves no missing index. ROOT08/09 cannot close from hashes or historical aggregate counts. These are exact proof limits, not claims that every untested combination is defective.",
+      "suggested_action": "Retain the full16-row reached/pending map and complete the bounded cases tied to the current source findings and remaining replay/concurrency obligations. Reconcile the separate current13 targeted and canonical complete-API terminal receipts against the unchanged freeze before adjudicating any closure; preserve strict19x409 confirmation losers, actual winner/onePOST/audit/version/replay assertions and all original scenarios/counters. Add current-usability-changed historical completed replay with authorized zeroHTTP/zero promotion. Fake only the provider boundary, use truthful local call deltas and actual PostgreSQL failures/barriers with finite reliable cleanup. Keep five-wave20-request/resource/ingress stress,10000-conversation EPS/RLS, <=15s batch measurement, ALL/CI/browser/freshness, security/TQA/cutover/final and CP6 physical proof explicitly pending in their approved sequence. Do not treat this adherence review as the final independent TQA or a consumer/observer/gate waiver.",
+      "reviewer_labels": [
+        "instagram_cp2_adherence_r3"
+      ],
+      "source_finding_ids": [
+        "IG-CP2-R1-06"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-F5E3CFE6",
+      "severity": "medium",
+      "title": "Settled-provider cleanup and final tuple checks do not cover every continuation",
+      "rationale": "Static residual of the approved per-binding holder/current-tuple contract, SCOPE-04/DOD-03/VAL-03 and CP2-UNCERTAINTY/CANCEL/RECEIPT; not evidence of duplicate POST or lost accepted receipt. The original first-POST history race, competing promotion CAS and binding-wide lease/cooldown are materially repaired. providerCall571-623 now releases its exact token after a settled provider exception or its own rejected success revalidation; run12 supports the repaired receipt/cancel error and both successor-holder success/error cases. However, after providerCall returns normally, subscribeAfterMapping552 awaits another requireSubscriptionOrReceipt and553-565 runs another finalization transaction; either can reject or roll back before releaseBindingOperation566, with no finally covering them. The observation-null transaction523-540 likewise can throw before release541. Thus a successfully settled HTTP request followed by a final DB/actor/expiry failure retains its original binding holder until lease expiry. The existing recovery trigger targets later confirmation_state=COMPLETED, after566, so it does not exercise this path. Additionally, the observation-null transaction locks resources but527-531 updates only the attempt/session/attempt-lease tuple; it does not revalidate current binding token, generation or credential version after the preceding providerCall check. A takeover between that check and this transaction can therefore still mutate the old attempt. The current takeover tests cover a POST returning true or throwing inside providerCall, not this successful GET/null continuation.",
+      "suggested_action": "Use one owner-local settlement/finalization boundary: after the external request has actually settled, ensure all subsequent exits release only the matching original binding token, including finalization rollback, while preserving cooldown/dispatch history and every successor token. Never release while HTTP is still pending. Revalidate the exact current binding/channel/generation/credential tuple in the observation finalization transaction before its attempt mutation. Add a real PostgreSQL fault on the post-POST subscription-finalization write, disable it before recovery, and prove original-holder cleanup with unchanged known facts/at-most-onePOST. Add a successful GET/null finalization takeover and matched ordinary control, preserving the original denial and independently committed cancel/receipt/message/unread facts. Do not bypass actor authorization for domain writes or clear a newer holder.",
+      "reviewer_labels": [
+        "instagram_cp2_adherence_r3"
+      ],
+      "source_finding_ids": [
+        "IG-SUBREC-02"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-65D94C40",
+      "severity": "medium",
+      "title": "Precontroller callback failures still retain the sensitive query URL",
+      "rationale": "Existing CP2-CALLBACK/SAFE-OUTPUT, SCOPE-04/DOD-03/VAL-03 requirement. The admitted controller37-54 sets no-store/no-referrer early and converts its reached failures to a fixed allowlisted303; those source/assertion repairs remain supported. session.middleware.ts:78-117 can still reject absent/expired/revoked sessions, mandatory password changes, onboarding or infrastructure errors before controller entry, with no callback-specific confidentiality headers or clean redirect. The code/state-bearing URL can therefore remain the error document URL. oauth-callback-session-companion-ready-v2.json records a converged proposal, not source admission or implementation; its exact source hash still matches the unmodified middleware. Proposal closure of IG-OAUTH-SESSCOMP-01 does not close R1-04. No browser/gateway/private-log result was inspected or inferred.",
+      "suggested_action": "Keep R1-04 open. After the current human authority admits the exact protected-path companion, the serialized writer must apply and prove real Nest/PG known denials plus unexpected precontroller failure, with no ordinary-route/auth-order regression. Preserve valid session/state/CAS. Finish the fixed-text React consumer and actual browser/gateway confidentiality in their approved CP4 lane. This finding grants no source-path admission or approval.",
+      "reviewer_labels": [
+        "instagram_cp2_adherence_r3"
+      ],
+      "source_finding_ids": [
+        "IG-CP2-R1-04"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-F8D0E7E8",
+      "severity": "medium",
+      "title": "Final writes still use lease/deadline clocks captured before another awaited authorization step",
+      "rationale": "Static current-source residual under SCOPE-04/DOD-03/VAL-03 and CP2-CALLBACK/CONFIRM/UNCERTAINTY; no dynamic exploit or current13 failure is claimed. Signed-session expiry after waits is materially repaired: requireActorTx:740-753 rechecks at its end, actorTransaction:758-765 checks after the work before transaction return and after commit, and the real short-wait matched controls passed11/12. That does not refresh other clocks. Callback completion checks actual SQL time and candidate60-second margin at159, captures committedAt at160, awaits requireActorTx at162, then updateMany163 uses the older committedAt and has no final candidate-expiry-margin predicate. The live session may remain valid while callback lease,40-second deadline, attemptTTL or candidate margin expires in that interval. Subscription success captures finalizedAt558 before await559 and uses it in560; credential/binding lease validity was established before that await at556 and is not refreshed in the final writes560-561. Provider-error settlement similarly captures observedAt593 before await594 and writes with that older time at595. Held rows preserve tuple identity, not passage of time. Current deadline/credential tests shorten state before post-provider tuple validation; they do not cross these last-await intervals. Thus a still-authorized transaction can record candidate/subscription/failure facts after the separate operation or credential boundary has elapsed.",
+      "suggested_action": "Finish the existing current-clock repair within the admitted owner. Put actual database time and relevant credential margin into final mutation predicates and perform a final synchronous current-time check using locked operation/credential facts before the transaction returns so any late boundary rolls back; keep actor/session checks separate. Preserve known past ACK/receipt facts and immutable completed replay, which are not new dispatch eligibility. Add bounded real PostgreSQL final-write/wait or trigger-delay regressions with an equal-duration live control inside the normal transaction budget, for callback candidate margin/deadline and subscription success/error. Label deliberate persisted lease shortening as robustness proof, not natural60-second expiry. Assert no stale terminal mutation, extra HTTP or receipt regression; do not raise timeouts or mock transaction outcomes.",
+      "reviewer_labels": [
+        "instagram_cp2_adherence_r3"
+      ],
+      "source_finding_ids": [
+        "IG-CP2-ROOT-02"
+      ],
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

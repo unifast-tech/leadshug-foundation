@@ -1,0 +1,973 @@
+{
+  "kind": "review-owned-complete-cp2-r3-collection",
+  "reviewer": "instagram_cp2_adherence_r3",
+  "principal": "/mnt/c/unifast/leadshug/leadshug_now_docker",
+  "readOnlyProductAndInputs": true,
+  "authority": {
+    "routing": "routing-adherence-cp2-r3-corrected.json",
+    "outcome": "go",
+    "profile": "Assurance / Tester-Quality",
+    "scopes": [
+      "nestjs",
+      "postgresql",
+      "prisma"
+    ],
+    "instructions": [
+      "AGENTS.md",
+      "delphi-ai/main_instructions.md",
+      "delphi-ai/workflows/docker/profile-selection-method.md",
+      "delphi-ai/profiles/assurance_tester_quality.md"
+    ],
+    "readiness": "Positive public-path manual readiness; no broad verify_context scan or private inventory."
+  },
+  "package": {
+    "path": "adherence-cp2-r3-package.json",
+    "sha256": "4e9ec9a9cd3b83b78ae2edf3dd4acd9b85305bc62f71699e431c1e53470e00cb",
+    "unchanged": true
+  },
+  "coverage": {
+    "requiredSources": 60,
+    "inspectedSources": [
+      {
+        "path": "api-app/.env.example",
+        "sha256": "5ae334bc61c924eb44b61c89c0e6127be7e410ea571ab2ffe180fab949452a66",
+        "lines": 80,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/prisma/migrations/20261023180000_instagram_adapter_type/migration.sql",
+        "sha256": "32208cc03faafa9e56c9c9a08dfab5c6342d4dd96a68b19e5c853c64c947f5cf",
+        "lines": 3,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql",
+        "sha256": "2f8a134b837fb67c78e5f9b47bf7d0f26ddedb77f5a3da1b855751987df29ceb",
+        "lines": 364,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+        "sha256": "56fa3232606291fcb457dfca8696d0a5e952bc87c46562594c4bc883ac6c15bc",
+        "lines": 77,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/prisma/schema.prisma",
+        "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d",
+        "lines": 1205,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+        "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8",
+        "lines": 105,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/channel-credential-crypto.ts",
+        "sha256": "b5f4ab6a5e7386fda28e4b1b0622918dfda8506da5ee2ad60b983e8c93f1c40a",
+        "lines": 96,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+        "sha256": "af79858c6c5039b2913806d3c9140e4f3cd8ea06eeb87e81ca59ab6995c7a963",
+        "lines": 113,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/channels.service.ts",
+        "sha256": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f",
+        "lines": 591,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "sha256": "5d73c2b6eca68a9e5260475715a9240931661ac703294c562e43e67ff0f778b3",
+        "lines": 786,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/number-registration.service.ts",
+        "sha256": "6f256430f609eed1a2fae72493268bf028135e0b8e6d34016c95ae0fef951631",
+        "lines": 528,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+        "sha256": "7c29336e78bd91e52ab585afc218fe74a723fee486c07e277fbd06dfec72a435",
+        "lines": 56,
+        "inspection": "static source body inspection",
+        "testDeclarations": 3,
+        "expectOccurrences": 8,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/channels/transport/channel.ts",
+        "sha256": "6f17741e198c79939d3542858b0595cb70afcdf8f281af77e44484e77c95d1b6",
+        "lines": 228,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/inbox/contact-identity.spec.ts",
+        "sha256": "6587b7b53ac5ce9726f8c8bcf48cce47efbc2ede8b0f7bf9fe3113026a7ab848",
+        "lines": 23,
+        "inspection": "static source body inspection",
+        "testDeclarations": 3,
+        "expectOccurrences": 4,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/inbox/contact-identity.ts",
+        "sha256": "41d56b56f315e30e3f4c76b580993bf2ffabea3cef623e43583b6363dd7f51e9",
+        "lines": 94,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+        "sha256": "1e2e797f83fe12d4609b0f1d6cb05b982b70baf492861da24368d9496a2ee606",
+        "lines": 92,
+        "inspection": "static source body inspection",
+        "testDeclarations": 6,
+        "expectOccurrences": 18,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+        "sha256": "76ec095570fcacaa5bc48aabd30ab31adc9387bf399cf046fd9d8a1889528700",
+        "lines": 67,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/inbox/historico.service.ts",
+        "sha256": "8b1123d45553f438146e615a5b7d144b2d524344f6011fb4443b162f2de1a7e7",
+        "lines": 198,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+        "sha256": "59f24070854e400881266ed723ddd754d47e40b7de0975a7eb7a39a62a64d9cc",
+        "lines": 369,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/infra/http/body-parsers.ts",
+        "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d",
+        "lines": 42,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+        "sha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769",
+        "lines": 149,
+        "inspection": "static source body inspection",
+        "testDeclarations": 8,
+        "expectOccurrences": 26,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/integrations/evolution/evolution.client.ts",
+        "sha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674",
+        "lines": 174,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "sha256": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287",
+        "lines": 159,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/integrations/instagram/instagram.module.ts",
+        "sha256": "8b4cfcae27fd552eabf731ee50b270e6809af809d2e61eccc1757864749803a5",
+        "lines": 5,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/bff/bff.module.ts",
+        "sha256": "a6d2544ea66c693f53b9fd3e92e8a6044462c6e3a1c1ce36fb8e4feac9a4c1b2",
+        "lines": 126,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+        "sha256": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b",
+        "lines": 91,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/public/conversations.controller.ts",
+        "sha256": "12fe72cc69911ab5ec50b8e5d9d2338febc34471a9773854be967b9154d55eac",
+        "lines": 294,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+        "sha256": "91d7d098ac77368b67537025e1169484fecd6acaf9f609bd272bbee60ea0071c",
+        "lines": 168,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+        "sha256": "611502e0a6a9bb8158e204edb0a031b65591bc07c29e61dd021790a3ad0ae9f0",
+        "lines": 148,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+        "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f",
+        "lines": 23,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/api-publica.e2e-spec.ts",
+        "sha256": "bf6a2a2932ba9b586c9478c2f3d2c662b1b0874f26f1d6752cb72d2af43ca363",
+        "lines": 354,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 19,
+        "expectOccurrences": 85,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/atendimento.e2e-spec.ts",
+        "sha256": "f57834be474b1c86858dab4a13a7a18bd26d1ee907de2828b6454dab7af07be9",
+        "lines": 718,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 25,
+        "expectOccurrences": 136,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/channel-transport.e2e-spec.ts",
+        "sha256": "13bb550b521e5b6fbee8c69d74668d70f081b231d5410f559467ed86855664df",
+        "lines": 568,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 17,
+        "expectOccurrences": 86,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/conversation-start.e2e-spec.ts",
+        "sha256": "93cac3cad902629605bbc6f4cbb6735afa95f0356b71db7de5d81e94699cf15d",
+        "lines": 241,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 9,
+        "expectOccurrences": 46,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+        "sha256": "8ba8028f5da55c5fa10b256fbfe7bccea5b46e6f7cba6dfb461f79988d2b9344",
+        "lines": 760,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 22,
+        "expectOccurrences": 127,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/helpers.ts",
+        "sha256": "b01da6b1e6fcd5f13aa2e28f77c63df7d2e2b2967332d740006888184e44b9dc",
+        "lines": 469,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 2,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/historico-atividades.e2e-spec.ts",
+        "sha256": "529cfad68489bcb6b2d1368505d58f9c4f1e2a18deac8074b86b0204d7f427b1",
+        "lines": 180,
+        "inspection": "static source body inspection",
+        "testDeclarations": 13,
+        "expectOccurrences": 41,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/historico.e2e-spec.ts",
+        "sha256": "4f729b9fcdfb219857b857d8f1b4baa33c0d50834b5fd9ea563723e880cbae55",
+        "lines": 212,
+        "inspection": "static source body inspection",
+        "testDeclarations": 11,
+        "expectOccurrences": 34,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+        "sha256": "e6d980c72a686eb1aa26c436eed0dae03ebf1e826a55e4075d33ee77fd16ece3",
+        "lines": 1407,
+        "inspection": "static source body inspection",
+        "testDeclarations": 28,
+        "expectOccurrences": 394,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-identity.e2e-spec.ts",
+        "sha256": "675eca8c4fd68c77f7d4bcc01be0d4d84fde21cf843bbea298cc9a4346282b53",
+        "lines": 241,
+        "inspection": "static source body inspection",
+        "testDeclarations": 10,
+        "expectOccurrences": 34,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+        "sha256": "5f39011d9c542438d7b2b94dd71fba15b726b1ffd3eb1d65f5ec09270a454f97",
+        "lines": 1007,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 17,
+        "expectOccurrences": 260,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-migration.e2e-spec.ts",
+        "sha256": "4deae0c82e317688c1217d230ce2d98215d783434c35ec19137937438d8618ec",
+        "lines": 236,
+        "inspection": "static source body inspection",
+        "testDeclarations": 2,
+        "expectOccurrences": 23,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+        "sha256": "cdfdc7adc4c558a9787dcd8da212b5eede87b520774b278934f1d75c8488d5d1",
+        "lines": 76,
+        "inspection": "static source body inspection",
+        "testDeclarations": 1,
+        "expectOccurrences": 8,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+        "sha256": "ec3d8cfd9733ef968bd00303aea68e22eba82a827118a94e50e570aae19c122f",
+        "lines": 1034,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 29,
+        "expectOccurrences": 339,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+        "sha256": "836aeda3eed8ae0a934ef36ad6eb37ce81673e734a429accdbf4b2fb3628ddc7",
+        "lines": 117,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 4,
+        "expectOccurrences": 26,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+        "sha256": "b059087dace84e40dfe03132c87c02a43b2d21c8ea8306f8de9f691bb1bd1972",
+        "lines": 588,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 8,
+        "expectOccurrences": 65,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+        "sha256": "5c447913be4f9b2a2d699f96b43cfd9df837317897be372044b7f02dcf76e809",
+        "lines": 255,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 9,
+        "expectOccurrences": 62,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/painel.e2e-spec.ts",
+        "sha256": "910975e63b3ee48a983107a9aaf4906924a103f6b353481f03dccfb934d64237",
+        "lines": 71,
+        "inspection": "static source body inspection",
+        "testDeclarations": 4,
+        "expectOccurrences": 14,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/setores.e2e-spec.ts",
+        "sha256": "8eec2be051aa9d71116b57b84ff5c3e863aca2005f61782c33ea87bd868cd203",
+        "lines": 379,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 26,
+        "expectOccurrences": 71,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/timeline-fixtures.cjs",
+        "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb",
+        "lines": 526,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/webhooks.e2e-spec.ts",
+        "sha256": "33c0267d8f5b5aa54b577f0461dfc117ba2af9aa7037f5cf7a0094354fbefa3f",
+        "lines": 490,
+        "inspection": "static case/assertion/query/fixture-contract inspection across the source, with relevant lifecycle and boundary bodies",
+        "testDeclarations": 28,
+        "expectOccurrences": 111,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+        "sha256": "cee239122de9f6f19b1285b447a6f5a3d85755536fda9e081fff442d51c5ecc7",
+        "lines": 730,
+        "inspection": "static source body inspection",
+        "testDeclarations": 12,
+        "expectOccurrences": 182,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/historico/catalogo.ts",
+        "sha256": "9c785f32a1c9fd10c40de2a0185932aaa16ae68dcccd7a42831fa284ad40f60b",
+        "lines": 93,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/domain/historico/cobertura.ts",
+        "sha256": "f19a8f904807dbc07aebc9e5a9be91e440c0af10b5cb6ef00b1c86bb329ef12a",
+        "lines": 163,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/surfaces/bff/session.middleware.ts",
+        "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+        "lines": 140,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/infra/session/session.service.ts",
+        "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200",
+        "lines": 140,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/infra/prisma/prisma.service.ts",
+        "sha256": "8c6034455186bfc6497b329f94af7c867fb6f28b9226d54db5716a907db6e200",
+        "lines": 13,
+        "inspection": "static source body inspection",
+        "testDeclarations": 0,
+        "expectOccurrences": 0,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+        "sha256": "49d791fa2d6112bf0d084e7d97c16efee9180c2516f2d9c5a60df4ef41a7141d",
+        "lines": 128,
+        "inspection": "static source body inspection",
+        "testDeclarations": 3,
+        "expectOccurrences": 18,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+        "sha256": "a9c78f4bc9b29b77d0dafee12b742763cb8e25a7617bc3fe8d6cd2f1230d77ce",
+        "lines": 255,
+        "inspection": "static source body inspection",
+        "testDeclarations": 3,
+        "expectOccurrences": 52,
+        "skipOnlyMarkers": false
+      },
+      {
+        "path": "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+        "sha256": "a75d9687f300486c9acf9ed38587f9fa507fcaeecd11588af5530e631cb1f856",
+        "lines": 132,
+        "inspection": "static source body inspection",
+        "testDeclarations": 1,
+        "expectOccurrences": 33,
+        "skipOnlyMarkers": false
+      }
+    ],
+    "requiredEvidence": 51,
+    "inspectedEvidence": [
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-targeted-green-candidate-17.json",
+        "sha256": "cb0d007b82f49be898bea224f12301e908d1a7d041f65936f8108355b8df3acb"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-candidate17-reported-coverage.json",
+        "sha256": "d6987e7b6705d6ce83bdeea899b55c4f46f0473b0964f544d18fa55fae0ba152"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-test-first-handoff-plan.json",
+        "sha256": "2f3c8e5d92580626e77631aa823f7749e0f629cb781a8b60c0578feeba9c9a62"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-execution-handoff.json",
+        "sha256": "7a306b858fa4d8967104b6e3426018a9a371ad459811e78b2a6837e0b293bf87"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-instagram-contract-r1.json",
+        "sha256": "a4264c3df341c4eeba6acf5ff4af9b7b4ba8192bb77728db47dc0b3fd6d08894"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-token-envelope-recheck.json",
+        "sha256": "342fe0b55b181eb0ac81ea62d7844d22a542b104cd01b39bc25d6595b76dea85"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-profile-version-recheck.json",
+        "sha256": "b8eef2af862483b0a80ad9be21d58da6fbc64860bead1a88ae248ced3e58694d"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-primary-subscription-recheck.json",
+        "sha256": "763ec16748bf6b3e9ef986696cba5667aa3c8cc3c11543ab0aca6bf1222aba9f"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/subscription-protocol-opinion-result.json",
+        "sha256": "3bc57a6e1bce80c3e5d02eff1aa261bdd7b447d5696a1c72701691e3d9ea7bd1"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/subscription-recovery-concretization-result.json",
+        "sha256": "95a34da9c2de10a43df3e866557420783f678f6e4d9170a7ade006f8997046ab"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-root-static-observations.json",
+        "sha256": "35634659c0ec0514b04385eb67a956c3e3c98e20d5f7e69d0e0329d34ef4bf59"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-confirmation-static-observation.json",
+        "sha256": "a2d02bb9ca2984c6f9955346785c5065caadc750b071ed2d684a43d8d5cf4f8b"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-reauthorization-receipt-observations.json",
+        "sha256": "2800816c32ec7cfedc50101a74d5b69e54630e87616e9500af5b6f6bc55fce1f"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-confirmation-idempotency-causal-red-01.json",
+        "sha256": "90ae764c893cedc6e0cc65851e2133b36c7b0dd660d6b7f655fadecec6ec8199"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-cancellation-inflight-causal-red-01.json",
+        "sha256": "ba117ec2eea4634eb94ce42d92f77653f23cd0cfb10080bf6f38a6c6bed75bc2"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-inventory-boundary-deviation.json",
+        "sha256": "6af8ff89f568917facfd54b69d7cd6198e9e6dcbb9f1dbb4ba156f3167e77422"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp1-r8-acceptance.json",
+        "sha256": "808f7d73392d6995db6d94c39489b5320be187f1c571e8e5c2491f42bc654457"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json",
+        "sha256": "f3540c342924a22c2be160613f954e22fbdcb51e34f691a9f00a51d14b2619e3"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-result.json",
+        "sha256": "fb542859f9a6978d2bc91ce32a9002d395ab3162f3b4854040b9335644539687"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-adjudication.json",
+        "sha256": "c7375fe555e93dfd55d07a5767f2a48732e496844422263c3200625a06166bd9"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-midrun-edit-deviation.json",
+        "sha256": "b6041935d9d26aa7a42c30e0d82aca2ef2ed7b75a176ab399f81728ff3e7ea32"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-context-alignment-deviation.json",
+        "sha256": "10edf4ecf8572744e6e6e68eb62de2b00035107c638403b3dbd55a54147fd8ef"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-code-only-terminal-reconciliation.json",
+        "sha256": "a9abfb51aa835cbdde009b8e4e5681cc302029905a7b4224893c8ff1059851f5"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-repair-precision.json",
+        "sha256": "68d6b61b2b4ec8b4c486e210157a6d451d511bd225ebdffaceb00384c19b3445"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-02-result.json",
+        "sha256": "bfc071c0423bf1b8230a133b72ab1cbfde25fd21a4b12f16a128327bdb327d45"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-03-result.json",
+        "sha256": "a695dc938f6f579fb7f15fe7b8a5b058667ee4f9f859a9c56e26f697eebd6ea0"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-04-result.json",
+        "sha256": "de9aadfd57aae9fc663154cdc8b1f97659b67d1fd7bc4086fff8fc2bb30293df"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-residual-validation-05-result.json",
+        "sha256": "b59ebd015ca44b66d377e557ff33986729a696f246ba8015dd5fb5978c18bba2"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-session-clock-static-observation.json",
+        "sha256": "65c4783534f77622324d9be4de889b7fe7a1e3d52cb1c63f84b00ac9a0a6a99f"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-natural-session-proof-confound.json",
+        "sha256": "9c2277fe1c5d2cb687870453032eef7688a3b08037b507a7a2e19473389410bf"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/subscription-primary-recheck-after-cp2r1.json",
+        "sha256": "0590d9526a37514caeea759ec00675ba456a71fadf29621ae37b40cf6fd435a7"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/oauth-callback-session-companion-ready-v2.json",
+        "sha256": "77f139cd162b45d9bae033da7e4059d7c97e6965d0f582f192028bfbc4c10ab8"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/privacy-instagram-companion-ready.json",
+        "sha256": "34322e1359c6e83b97ab657289d773c81ed2b1220230d8342006207726085069"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/instagram-text-byte-limit-ready.json",
+        "sha256": "26546e796e91fbec991017a103d8ed3ccc262261d1e97a663d2084e7e00f95b4"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r2-result.json",
+        "sha256": "afcbd1777a0819047a9fe7194979dfff66d69149f23058ebd807439a71a1b341"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r2-merge.json",
+        "sha256": "ae67dc518b58912a8641e769a27c0d77d4dfee9970433132b6e9c26640642bc2"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-root-adjudication.json",
+        "sha256": "c03e0b0235c1ca19008c3aa966840145af0d75c0db6e1125e0c010dff007f1af"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-api-full-r2-result.json",
+        "sha256": "05b3ea1edba2b6963d2b8398c25488dbbd38c31af6228c8e9a1fce599a804816"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-budget-how-clarification.json",
+        "sha256": "4c001cf211d69b64534f9a6c1be795d5a9fe564db408964a57f57746015a0f38"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-causal-validation-08-result.json",
+        "sha256": "89f54e94d20c0f7ad52fe7d6081ce521e1ba416c7945db08b7a1a47a217d3f81"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-source-validation-09-result.json",
+        "sha256": "17f78e55b841f368d06732b456b9799d2efe45def57b0fe2a40378bacf4cf702"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-source-static-followup-09.json",
+        "sha256": "970b2807ddaf026be7739ec3797c79762f2c9982d2d199933f4b253aaa483f64"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-binding-completion-clock-observation.json",
+        "sha256": "4375e21a4a3866fe3ea097154954d03e576bd7790de530cae7098cb8e67bcfc0"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-preexecution-final-clock-alignment.json",
+        "sha256": "74d62580b99c5654337dfb07516b16c7b60644f0bbc5855b4ba6cc393ef60e83"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-followup-validation-10-result.json",
+        "sha256": "c6415711225455a7609eb0181a4a5d586080c42564ffcba5739c3614b001c365"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-lint-validation-11-result.json",
+        "sha256": "6a43ff43b255a35e17d0bd43a4c61e502a70f65a6e2688246e1b99e43f615a08"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-qualified11-narrow-repair.json",
+        "sha256": "58806da4d8052fe3c1a6787e9de57c053c27bba1f6420765f86fbc7b757ad3fc"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-cleanup-terminal-12.json",
+        "sha256": "90b38c19c0a0ecdf5a7caaa9751c30cf24a5f1c7bb11600fe52be0d7352e5555"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-cleanup-validation-12-result.json",
+        "sha256": "f22118612936416dab008265e05e878536e626d7a4507a46e5e31b9820b53e48"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-confirmation-gap-repair-13.json",
+        "sha256": "7e2e493489453d6e0040e0b6c2fd11b69f5e82795d5d6ac4929f0d3cbb9d0158"
+      },
+      {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-confirmation-gap-terminal-13.json",
+        "sha256": "8b5db14403d31101b74eee118de6f0737b00d8d525c8dfce7fd9b4eedeb80b70"
+      }
+    ],
+    "fullTodo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "sha256": "394204970388fb139f481d45c81c30a9fad492c44b86f1d023be889e4264f45e"
+    },
+    "todoLines": 1210,
+    "axes": [
+      "adherence",
+      "structural_soundness",
+      "operational_fit",
+      "performance",
+      "elegance"
+    ]
+  },
+  "freeze": {
+    "initialSourceTodo51InputAndRootIndexChecks": "All matched at initial collection before source review. Baseline manifest also attests preservationMatched=35; independent 35-path hashing was repeated during inspection and before finalization.",
+    "beforeFinalAssessment": {
+      "sources": {
+        "checked": 239,
+        "mismatches": []
+      },
+      "todo": {
+        "sha256": "394204970388fb139f481d45c81c30a9fad492c44b86f1d023be889e4264f45e",
+        "matches": true
+      },
+      "inputs": {
+        "checked": 51,
+        "mismatches": []
+      },
+      "preservation": {
+        "checked": 35,
+        "mismatches": []
+      },
+      "rootIndex": {
+        "checked": 3,
+        "matches": true,
+        "actual": [
+          "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+          "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+          "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+        ]
+      }
+    },
+    "afterResultAndStrictMerge": {
+      "sources": {
+        "checked": 239,
+        "mismatches": []
+      },
+      "todo": {
+        "matches": true,
+        "sha256": "394204970388fb139f481d45c81c30a9fad492c44b86f1d023be889e4264f45e"
+      },
+      "inputs": {
+        "checked": 51,
+        "mismatches": []
+      },
+      "preservation": {
+        "checked": 35,
+        "mismatches": []
+      },
+      "rootIndex": {
+        "checked": 3,
+        "matches": true,
+        "actual": [
+          "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+          "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+          "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+        ]
+      },
+      "packageMatchesCollection": true
+    }
+  },
+  "proofBoundary": {
+    "currentSource13": "NOT RUN in bound inputs. Never read active validation13 or future full API log. Root reconciles terminal lanes.",
+    "run12": "31 migrations/lint/build/398 unit;76 of77 selected integration.19 losers all409:18 CONFIRMATION_IN_PROGRESS,1 OPERATION_IN_PROGRESS. Winner/audit/replay assertions after that predicate not reached.",
+    "r13Change": "Only service busy classification for IN_PROGRESS mapped NOT_STARTED under original live40s deadline; no timer renewal, no effect on known ACK or UNCERTAIN branches. Static support only.",
+    "sourceReadPrecision": "All60 required actual paths inspected; CP2 source/test bodies read in detail. Broad preserved regression suites inspected through their actual case/assertion/query and fixture contracts, with lifecycle/owner bodies where relevant. No claim that inventory or case names alone prove behavior.",
+    "noExecutedValidation": "No tests, lint, build, provider, runtime, database, process-environment or Git inventory command executed. The only Git read was the exact permitted root index command."
+  },
+  "obligations": [
+    {
+      "id": "CP2-CONFIG",
+      "source": "instagram-http.client.ts:126-142; instagram-authorization.service.ts:23-26; main69-86; residual197-229",
+      "supported": "Separate explicit purposes, full/absent/partial/malformed config, safe capability DTO; no fallback and no source dependency added.",
+      "proofGap": "Not every webhook/crypto-key malformed variant or service recreation quota proof. Existing variants retain qualified run12 support; current13 refresh pending."
+    },
+    {
+      "id": "CP2-AUTHZ",
+      "source": "controller14-33,57-82; service740-775; residual252-346",
+      "supported": "Real session/CSRF/role/scope/inactive BU/actor and authorized shape ordering; locked actor/grant checks. Natural short user-row expiry and actual attempt-UPDATE wait with matched live controls reached GREEN11/12.",
+      "proofGap": "Signed-session fix is supported, but does not prove all lease/deadline/credential clocks or every success/error finalization continuation."
+    },
+    {
+      "id": "CP2-IDEMPOTENCY",
+      "source": "service29-87,218-261; residual230-250; binding126-188; recovery32-132",
+      "supported": "Durable UUID/hash/audit-once,20 fresh creates, peractor10/BU30 persisted backoff; actual committed writer recovery and immutable original request.",
+      "proofGap": "Strict20 fresh confirmations run12 stopped at loser classification; source13 repair NOTRUN. Historical completed replay after current credential/generation usability changes lacks a dedicated reached case; recreation quota claim not specifically tested."
+    },
+    {
+      "id": "CP2-CALLBACK",
+      "source": "service98-176,704-715,740-775; main107-247,304-439,870-966",
+      "supported": "One-use state/session/TTL CAS,3 fixed protocol calls, correct profile hook, natural signed expiry rollback. Controller headers/redirect protect reached controller failures.",
+      "proofGap": "Residual current lease/deadline/credential clocks at final writes, callback provider-error revocation/expiry/takeover matrix and precontroller companion remain."
+    },
+    {
+      "id": "CP2-TOKEN",
+      "source": "http35-82; crypto; main269-302,417-439; residual348-389,546-583; HTTP unit",
+      "supported": "Mandatory short-long-versioned/me; required decoded scopes, ambiguous/numeric IDs refused; actual expiry and conservative pre-long-request anchor; candidate/active AAD; short/long failure/margin tests. Native header/body/guard remaining-budget and redirect tests passed11/12.",
+      "proofGap": "Candidate final update has separate clock gap after its preceding margin check; protocol tests are synthetic and never establish real grant."
+    },
+    {
+      "id": "CP2-IDENTITY",
+      "source": "service289-360; contact-identity.ts; identity e2e; main173-245",
+      "supported": "Authorization reference differs from professional user_id; immutable qualified contact/account/resource/BU tuples and SQL guards; opaque IDs stay strings.",
+      "proofGap": "Own-subscription returned identity/visibility/completeness remains primary unknown; no guessed equality or parent config accepted."
+    },
+    {
+      "id": "CP2-CONFIRM",
+      "source": "service218-400; main441-453,1068-1157; residual391-506; binding/recovery",
+      "supported": "Actual TTL/cancellation locks and credential version CAS; business and provider claim commit before external subscription; same-resource connected reauthorization preserves receipt/messages.",
+      "proofGap": "Current13 concurrent20 winner/audit/replay still pending; final temporal and cleanup gaps below prevent complete closure."
+    },
+    {
+      "id": "CP2-UNCERTAINTY",
+      "source": "service433-623; http84-101; main608-787,1212-1324",
+      "supported": "Resource advisory/identity/channel serialization; durable firstPOST fact; indexed existence checks; perattempt request cap3,10s HTTP/40s invocation/60s lease/10s cooldown; UNKNOWN retains no-repeat fence across cancel/newattempt/reauth/crash. No resource-lifetime request cap invented.",
+      "proofGap": "Own-account read protocol unaccepted. Settled post-provider continuations do not uniformly finalize/release under current tuple; final clocks still need repair/proof."
+    },
+    {
+      "id": "CP2-CANCEL",
+      "source": "service189-215; main788-823,1086-1157; residual669-730",
+      "supported": "Real cancellation/mapping race, candidate wiping and preserved active resource/messages. Signed receipt/cancel plus late error passes12, retaining CANCELLED and one message/unread.",
+      "proofGap": "Other stale success/error and GET-finalization clock/credential/actor permutations remain unproved; no source rollback or lost receipt inferred."
+    },
+    {
+      "id": "CP2-SIGNATURE",
+      "source": "instagram.controller.ts27-36,137-145; main495-556; residual585-602",
+      "supported": "Dedicated challenge never receipt; exact raw HMAC before domain content; missing/wrong/altered bytes/OAuth/WA secret rejected; semantically equal differently serialized JSON refused.",
+      "proofGap": "Real signature/provider receipt remains separately approved CP6; gateway parity belongs CP4."
+    },
+    {
+      "id": "CP2-BOUNDS",
+      "source": "body-parsers.ts23-32; webhook37-91; main557-606,825-868,1014-1066",
+      "supported": "Full preflight entry-account/message/MID;1000 DISTINCT updates and exact message/contact/route/conversation/unread deltas with zero-effect replay;8MiB/1001/16KiB limits; effective case/trailing-slash alias raw-signature and overflow proof11/12.",
+      "proofGap": "Isolated1000-update<=15s measured requirement, gateway/CI/browser parity remain CP4/CP5, no capacity claim from these counts."
+    },
+    {
+      "id": "CP2-ORIENTATION",
+      "source": "webhook92-133; main608-787; identity e2e",
+      "supported": "Entry equals recipient professional account; sender peer, echo reverse ignored; two-account same opaque peer separate. Unknown resource batch retry returns non200 and preserves earlier accepted entry.",
+      "proofGap": "No real account/provider eligibility claim; legacy consumer filtering is explicit CP3 work."
+    },
+    {
+      "id": "CP2-WINDOW",
+      "source": "webhook124-130; acceptance qualifiedOfficialTimestamp; main608-634; residual638-649",
+      "supported": "Only signed original eligible IN text supplies trusted time; old/future/missing and echo/self/deleted/read/reaction not window. Accepted old messages retain null trusted time.",
+      "proofGap": "Actual shared reply policy/Channel/initial/automation consumers remain CP3; current test cases do not prove future send behavior."
+    },
+    {
+      "id": "CP2-REPLAY",
+      "source": "acceptance108-175,275-316; main557-606,634-787; residual604-667",
+      "supported": "Shared transactional owner, identity locks and unique message key;20 fresh overlapping signed deliveries create one complete inbox effect; partial domain failure retry completes remainder without duplication.",
+      "proofGap": "Required five-wave stress and broad consolidated source proof remain later gates; no unsupported exactly-once provider claim."
+    },
+    {
+      "id": "CP2-RECEIPT",
+      "source": "webhook104-133; acceptance177-216; main190-245,760-784; residual669-730; binding/recovery",
+      "supported": "Mapping/OAuth/challenge/subscribe alone pending; actual authenticated synthetic eligible IN independently supplies receipt during heldPOST and after uncertainty; late settled success/error/cancel tests preserve receipt/message facts.",
+      "proofGap": "Current13 proof pending; blanket success/error credential/generation/actor and finalization failures are not all covered. Real Meta/device proof remains CP6."
+    },
+    {
+      "id": "CP2-SAFE-OUTPUT",
+      "source": "controller37-54; service179-186; crypto; catalog/cobertura; main1159-1196; residual240-250,638-641",
+      "supported": "Safe DTO/redirect/ciphertext/audit fields, generic provider errors, explicit catalog emissions and obsoleteGETcoverage removed.",
+      "proofGap": "Precontroller session errors still expose sensitive callback URL; exact middleware proposal unadmitted. React fixed-text consumer, browser/gateway confidentiality and privacy HTML proposal remain pending."
+    }
+  ],
+  "consumerSequence": {
+    "CP3": "Single Channel/policy/Outbound/MessageAcceptance, v2 new writes and qualified APIv1/Typebot/Consultar boundaries remain required. Current public controller and historico still use legacy contact/BU.phone; this remains approved pending work, not a reopened unchanged CP1 finding.",
+    "CP4": "Actual OAuth/capability/authorization/connection/inbox React consumers, paginated catalog/disconnect/verify, CI/gateway/browser/freshness not delivered or waived.",
+    "CP5": "ALL, all4 pcv-1 lanes, security/TQA/cutover/adherence/final required; no current complete API proof read.",
+    "CP6": "Separate runtime approval and actual Instagram plus both WhatsApp physical/retomada proofs required.",
+    "pendingHuman": "Session middleware/privacy HTML/1000UTF8 outbound byte proposals remain unadmitted/unapplied; governing1000-character clauses unchanged."
+  },
+  "historicalDisposition": "All supported CP1 closures and original CP2 ROOT01/03/05/06, SUBPROTO02/03 preserved. R2 open findings judged against current source and qualified proof, never against erroneous generated resolved labels containing status=open.",
+  "strictMerge": {
+    "exit": 0,
+    "reviewCount": 1,
+    "findings": 5,
+    "highestFindingSeverity": "high",
+    "resultSha256": "2be76b398a1f42b4d3aa528eeb11516fc0ea416fe298f765ca5dcbd9cb8f479d",
+    "mergeJsonSha256": "972b957154be2ce2db90468adf4cdd4c2662a8f5a7277c11c9fc8c1723c9d034",
+    "mergeMarkdownSha256": "85e9e7fadbbfe9699ee5bc16c80f639de5c59384c9e887c3a8c44c158bec5bf7"
+  },
+  "terminal": true
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "cp2-r3-both-terminal-root-reconciliation",
+  "reviewerTerminal": true,
+  "fullApiValidatorTerminal": true,
+  "matches": {
+    "sources": 239,
+    "todo": true,
+    "phaseInputs": 15,
+    "reviewInputs": 51,
+    "preserved": 35,
+    "rootIndex": 3
+  },
+  "reviewOutputSha256": {
+    "adherence-cp2-r3-result.json": "2be76b398a1f42b4d3aa528eeb11516fc0ea416fe298f765ca5dcbd9cb8f479d",
+    "adherence-cp2-r3-merge.json": "972b957154be2ce2db90468adf4cdd4c2662a8f5a7277c11c9fc8c1723c9d034",
+    "adherence-cp2-r3-merge.md": "85e9e7fadbbfe9699ee5bc16c80f639de5c59384c9e887c3a8c44c158bec5bf7",
+    "adherence-cp2-r3-collection.json": "ea07acd4565a574087f860ea843f0d19fa61ac9be1b1cd2a49ce1ae3a0366c5a"
+  },
+  "fullAPI": "cp2-api-full-r3-result.json:31mig/lint/build/398unit;534of535e2e oneambiguousfixture",
+  "selected": "cp2-r2-confirmation-validation-13-result.json:31mig/lint/build/398unit;77of77selected",
+  "qualification": "Reviewdidnotreadnew13/fullAPIlogs, itsNOTRUNqualifications reflectsealedinputs; rootreconcilescurrentstrictconcurrencyGREEN andfullfixturefailure. No CP2/featureacceptance. OldmixedGREEN/15sconfound remaininvalid.",
+  "thaw": "Mayprepareexacttest-onlycausal lane afterrootadjudication/Tledger; protectedhumanpaths/byteWHAT remainunadmitted."
+}

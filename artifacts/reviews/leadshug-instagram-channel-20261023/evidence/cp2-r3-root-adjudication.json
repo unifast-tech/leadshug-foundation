@@ -1,0 +1,72 @@
+{
+  "kind": "cp2-r3-root-adjudication",
+  "basis": "cp2-r3-both-terminal-reconciliation.json",
+  "review": "adherence-cp2-r3-result.json",
+  "overall": "changes_required, no checkpoint/featureacceptance",
+  "findings": [
+    {
+      "id": "IG-SUBPROTO-01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "ruleLevel": "project",
+      "qualification": "Unresolved primary ownGET prerequisite, no guessedidentity/decoder or providerauthority."
+    },
+    {
+      "id": "IG-CP2-ROOT-02",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "qualification": "Signed-session finalawait repaired; separatelease/deadline/credential clocks stillstaticresidual requiring actual finalwritewaitproof."
+    },
+    {
+      "id": "IG-SUBREC-02",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "qualification": "FirstPOST/globalholder/cooldown/CAS supportedrepaired, but settledHTTP continuationcleanup andsuccessfulGETnull finaltuple remain."
+    },
+    {
+      "id": "IG-CP2-R1-04",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "qualification": "Protectedmiddleware exactv2proposal stillpendinghuman; no pathadmission inferred."
+    },
+    {
+      "id": "IG-CP2-R1-06",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "ruleLevel": "project",
+      "qualification": "Root13qualifiedGREEN nowproves strict20 freshconfirm+winner/audit/credential/onePOST/replay; fullR3 534/535 onlyambiguouspreflightfixture; otherprecisecases/stress/browser remain."
+    }
+  ],
+  "additionalCurrentValidationFinding": {
+    "id": "IG-CP2-ROOT-15",
+    "classification": "release-blocker",
+    "severity": "medium",
+    "locus": "main1016findFirst within2IGaccounts sameBU",
+    "decision": "Fix onlyfixtureselection to exact capturedbusinessIdentity/channel; preserve everyassertion/count andrerun fullAPI. No productingressregression inferred fromunreachedassertions."
+  },
+  "supportedOriginalClosures": [
+    "R1-01 originalTTL/cancel/CAS distinctfromROOT02 residualclock",
+    "R1-02 authorizationorder/activeBU/arrays",
+    "R1-03 redirectrefusal",
+    "R1-05 entrypreflight/effectivealiases; fullfixturespecificROOT15stillpending",
+    "ROOT04 originalkeymissing+actualwriterrecovery/freshconfirmation13; changedusabilityreplay remainsR1-06",
+    "ROOT07 safeauditcatalog andobsoleteGETentry, completecanonicalcoveragepassedexceptunrelatedfixture"
+  ],
+  "preserve": "CP1historicalclosures; ROOT01/03/05/06 andSUBPROTO02/03; oldmixedGREEN05/15sconfound neverrehabilitated. ROOT08/09 cleanwholeacceptancestillpending.",
+  "next": "Fourpath test-only lane, causalRED onunchangedproduction + exactfixturecorrection andremainingnonpendingproof. Solewriterterminal/refreeze/separatevalidator beforeproductionrepair.",
+  "wholeGoal": "AllCP3..CP6, currentfullAPI/freshreview, primaryobserver andthreehumanproposals, allmandatoryconsumers/assurance/runtime remain. IndependentCP3canfollowtruthfulsafetyreconciliation, no waiver.",
+  "resolutionToolQualification": "gate_finding_resolution_extract.py doesnotaccept architecture_adherence; rejectedCLIattemptgeneratednoresult. No substitutecritique/fakevalidation used. AuthoritativeR3resolutiontable andPromotionRoutingLedger updated, strictadherencemerge+authorityguardGO remain actualproof; no gatewaiver."
+}
