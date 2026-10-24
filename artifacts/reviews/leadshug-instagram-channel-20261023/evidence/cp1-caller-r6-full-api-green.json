@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r6-full-api-green",
+  "command": "bash scripts/test-channels-local.sh api",
+  "executorReportedExit": 0,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  36 passed (36)",
+    "Tests  484 passed (484)"
+  ],
+  "migrations": "all30, schema/lint/build passed",
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-api-full-r6-01.log",
+    "sha256": "e71cce8872631b6f1f2a38d7732a5054a2328db7d9843aaa472aaea71db3132e",
+    "bytes": 197561
+  },
+  "sourceManifest": "cp1-caller-r6-frozen-source-manifest.json",
+  "rootHashCheck": {
+    "checked": 37,
+    "mismatches": [],
+    "todoSha256": "27aff5c718d327162d07c87d608e13ec7b8b3c73f8bbc7b457c3c9d7f2b30015"
+  },
+  "cleanup": "Root terminal log observed validation network/container/volume removal",
+  "qualification": "API379unit/484e2e on exact r6 source. Independent r2 critique has a distinct stale-failure static finding. No CP1 acceptance. Link in validator final duplicated repository directory; this receipt uses actual checked path."
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-pre-red-source-check",
+  "checked": 37,
+  "changedPaths": [
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "baselineSha": "b71ef98a4fd0e09e53fe50f2f5abfe0f370016fc58a85ec64025a5867a5f0321",
+      "testOnlySha": "dececa0e959e664bd0ad7e817f93110216125e190c1c24f47c05248d0e041567"
+    }
+  ],
+  "productionUnchanged": true,
+  "protectedHashes": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "119d962fdcd9c895b75845dca74d8506147e11480d74b82e8c37f29f97c04081"
+  },
+  "basis": "Root exact37public files read immediately after sole writer test-only seal and before RED/service repair; no private inventory",
+  "qualification": "Causal outcome not yet recorded; this seals test-first source only"
+}

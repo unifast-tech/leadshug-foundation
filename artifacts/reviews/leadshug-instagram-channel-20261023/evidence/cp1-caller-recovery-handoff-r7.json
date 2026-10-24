@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-caller-r7-serialized-handoff",
+  "authority": "Approved ST-IG-03 v1.3, existing admitted service/test only",
+  "finding": "IG-EVOCOMP-R2-01",
+  "priorSourceManifest": "cp1-caller-r6-frozen-source-manifest.json",
+  "ownedPaths": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts"
+  ],
+  "precondition": "r6 full API and fresh critique terminal; no live freeze reader",
+  "testFirst": "Deterministic actual BFF/PostgreSQL delayed cleanup owner A, expire actual persisted lease, owner B advances exact same reserved operation to RESERVED_NEVER_CREATED with pending tuple cleared, then release A. Causal RED must show late A overwrites B facts, not lazy-request or fixture noise. Use actual EvolutionHttpClient/Response exact HTTP stub where practical, no fake database results. Finally release waits and restore all hooks/env on failure.",
+  "repair": "Persist CLEANUP_AMBIGUOUS only under transactional exact channel/BU/type/generation/epoch/attempt/name/prior identity and live lease fencing, compatible current states. On lost ownership/revalidation failure propagate correct outcome without regressing later holder facts. Preserve provider\u2192BU\u2192channel lock order; no HTTP under DB transaction.",
+  "requiredProof": "After releasing A, B cleared tuple, attempt stage/state/version and cleaned prior facts survive. Same reserved generation/epoch/name/attempt creates once and stays unproved until actual proof. Existing quarantine/renew/unlink/receipt/concurrency proofs stay intact.",
+  "sequence": [
+    "new regression RED before product edits",
+    "narrow current-source repair",
+    "targeted canonical api-instagram GREEN",
+    "terminal report source/protected hashes; no more edits/runners"
+  ],
+  "forbidden": "protected client/spec edits, private/runtime/Meta, root/API/Web Git, worktree/copies, new GOAL tools, weakened prior assertions/DB result fabrication",
+  "later": "Root reseals37paths and full API plus fresh complete affected review before proposed protected admission"
+}

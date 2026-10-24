@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP1: fonte r6 congelada para API completo e crítica independente da proposta revisada; após ambas terminarem, solicitar validação limitada dos dois caminhos protegidos. Retomada passou379unit/26IG; parser200malformado ainda não alterado.
+- **Next exact step:** CP1: corrigir IG-EVOCOMP-R2-01 nos dois caminhos de caller já admitidos, com lease expirado real e RED/GREEN; depois nova fonte congelada para API completo/revisão. R6 API379unit/484e2e passou; adapter protegido segue inalterado.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -599,9 +599,10 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | closed by r5 | adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained |
 | IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | closed by r5 | adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance |
 | IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; proposed only | adherence-cp1-r5-result.json; evolution-observation-companion-proposal.json |
-| IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | open | evolution-observation-companion-critique-result.json |
-| IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | open; proposal only | evolution-observation-companion-critique-result.json |
-| IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | open; proposal only | evolution-observation-companion-critique-result.json |
+| IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | normal path supported r2; stale variant R2-01 remains | evolution-observation-companion-critique-r2-result.json; cp1-caller-r6-full-api-green.json |
+| IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
+| IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
+| IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | open; static, causal RED required | evolution-observation-companion-critique-r2-result.json; cp1-caller-r7-finding-classification.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -981,3 +982,9 @@ Next source phase owns only channels.service.ts and instagram-lifecycle.e2e-spec
 The clean causal RED in `evidence/cp1-caller-r6-causal-red.json` reproduced exactly one lifecycle failure through the actual EvolutionHttpClient/Response boundary; the earlier run1 remains qualified because of fixture teardown noise. `cp1-caller-r6-targeted-green.json` records379unit and26Instagram cases passing after the admitted caller repair. It retains the same reservation, generation, pairing epoch and attempt, resolves the exact managed cleanup tuple and advances to RESERVED_NEVER_CREATED before one create; new staging remains unproved and ingress blocked. All37immutable inherited public paths still match.
 
 Caller, lifecycle test, all other37sources, TODO and proposal revision3 are now frozen for separate complete API validation and a fresh independent companion/caller critique. Revision3 only updates the caller dependency/proof status after the actual repair; revision2 strengthened the proposed unit cases and clarified absence semantics. The adapter diff remains unapplied. No CP1 acceptance, path exception, private/runtime permission or delivery claim follows from targeted GREEN.
+
+## CP1 companion r2 result and serialized stale-failure repair
+
+Both r6 frozen lanes are terminal and source hashes matched. `cp1-caller-r6-full-api-green.json` records379unit/484integration passes on those exact bytes; no source repair occurred during either lane. The independent critique supports normal same-attempt recovery and proposed tests/wording02/03, but finds an inherited unfenced catch that can regress a later holder after lease expiry (IG-EVOCOMP-R2-01). Ordinary10s HTTP timeouts do not bound asynchronous authorization/database waits or suspension beyond45s. This is static evidence until a real PostgreSQL interleaving proves it.
+
+Root routes that finding as a release-blocker for the same recovery guarantee, on the two already-admitted caller/spec paths. Next writer must capture causal RED, then persist ambiguity only under exact current tuple/ownership/live lease fencing; lost/stale ownership must not rewrite later RESERVED_NEVER_CREATED, terminal or cancelled state or reopen cleaned resources. No protected path admission or parallel provider probe is authorized. The old r6 proof is preserved, and new full/API review is required after repair.

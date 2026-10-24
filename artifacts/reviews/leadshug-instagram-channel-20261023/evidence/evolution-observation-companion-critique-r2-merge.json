@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/evolution-observation-companion-critique-r2-dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "evolution_companion_critique_r2"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Preserve the supported normal recovery and proposal02/03 resolutions. Repair the remaining failure-path fencing on the already-admitted service/lifecycle surfaces after both frozen lanes become terminal, with causal coverage of a delayed resumed cleanup request and actual lease takeover. Recapture targeted and frozen complete API evidence and obtain affected independent review before considering the caller fully resolved. Then request human validation of only the two protected Evolution paths; this review grants no source admission. After admission, retain the proposed causal adapter tests and both actual-adapter cleanup-path regressions using synthetic configuration, exact HTTP interception, real Response parsing, authenticated BFF/service and PostgreSQL behavior, restored hooks/globals/environment, preserved ambiguity and explicit eventual recovery. Keep original preservation hashes as baseline facts. No CP1 acceptance, backend-only waiver, or relaxation of CP2\u2013CP6, browser/freshness, canonical ALL, pcv-1, independent audits, or separately approved runtime/Meta proof follows."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-AE31A470",
+      "severity": "medium",
+      "title": "A stale cleanup failure can overwrite the recovered reservation",
+      "rationale": "ChannelsService.completePairing catches failures from operationFence as well as provider calls at channels.service.ts:176\u2013188. Its catch then updates the prior identity using only id/managedLifecycle and updates the attempt using only id/generation/pairingEpoch, without requiring the current channel, pending-cleanup tuple, live lease token/deadline or compatible attempt state. A concrete newly affected sequence starts with ERROR/CLEANUP_AMBIGUOUS, a CLEANED prior identity and the retained pending tuple. Resumed request A enters the new recovery path but is delayed beyond its lease. Request B takes over that same reservation and successfully commits lines191\u2013218, clearing the pending tuple and advancing the same attempt to RESERVED_NEVER_CREATED. When A resumes, operationFence correctly rejects its stale lease, but the catch reopens the prior identity as CLEANUP_PENDING and overwrites B's attempt with ERROR/CLEANUP_AMBIGUOUS. After standalone cleanup reconciles that reopened identity, INITIAL cannot resume: the channel's pending tuple is already null, so exactCleanedCleanup is false and CHANNEL_SLOT_OCCUPIED returns. A later successful or cancelled attempt can likewise be overwritten. This is a static interleaving, not an executed reproduction. The unfenced catch is an inherited locus, not attributed to the proposed adapter or newly authored r6 statements; it undermines the newly reviewed same-attempt recovery. The 10-second HTTP timeout keeps normal timely provider work within the 45-second lease, but does not bound owner suspension or asynchronous revalidation/database waits. Controller revalidar awaits database/access checks without an operation-wide deadline, so those bounds do not exclude lease takeover followed by a late failure.",
+      "suggested_action": "Persist CLEANUP_AMBIGUOUS only under a transactional fence proving the same current channel, generation, epoch, attempt, exact pending-cleanup identity/name and live operation lease. On lost ownership or failed revalidation, propagate the stale/auth outcome without regressing lifecycle facts committed by a later holder. Do not overwrite RESERVED_NEVER_CREATED, terminal or cancelled attempts, or reopen a conclusively cleaned identity after its pending tuple has been cleared. Add a deterministic PostgreSQL lifecycle regression that delays request A, expires its actual persisted lease, lets request B commit the real recovery transition, then releases A. Assert B's cleared tuple and attempt state survive and the same reservation subsequently creates exactly once; retain real transactions and constraints.",
+      "reviewer_labels": [
+        "evolution_companion_critique_r2"
+      ],
+      "source_finding_ids": [
+        "IG-EVOCOMP-R2-01"
+      ],
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

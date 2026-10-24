@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "review-finding-classification",
+  "finding": "IG-EVOCOMP-R2-01",
+  "severity": "medium",
+  "classification": "release-blocker",
+  "routing": "fix admitted service/lifecycle in same TODO before human protected admission",
+  "currentObjective": "Same reserved recovery guarantee requires stale owner failure not to overwrite later holder facts; generation/epoch alone are insufficient after same-attempt takeover",
+  "changedVsInherited": "Failure catch is inherited; reviewer does not attribute it to r6 additions or unapplied adapter. Newly reviewed same-attempt recovery must preserve later committed facts.",
+  "evidenceStatus": "Static interleaving only; ordinary HTTP timeout is bounded10s but async revalidation/DB wait or suspension can exceed45s lease. Real persisted expired lease and authenticated BFF/PostgreSQL causal regression required.",
+  "scope": "Only channels.service.ts and instagram-lifecycle.e2e-spec.ts; protected adapter/spec still immutable",
+  "priorSupportedClosures": "Normal IG-EVOCOMP-01 recovery supported, proposal02/03 resolved in review r2; no total caller/CP1 acceptance",
+  "review": "evolution-observation-companion-critique-r2-result.json"
+}
