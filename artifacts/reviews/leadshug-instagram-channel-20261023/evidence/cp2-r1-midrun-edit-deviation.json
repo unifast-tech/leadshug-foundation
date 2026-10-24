@@ -1,0 +1,13 @@
+{
+  "kind": "cp2-r1-midrun-edit-deviation",
+  "date": "2026-10-24",
+  "finding": "IG-CP2-ROOT-08",
+  "severity": "medium",
+  "classification": "release-blocker",
+  "knownSourcePath": "api-app/src/domain/channels/instagram-authorization.service.ts",
+  "action": "Callback authorization-before-config and activeBUcheck added whileGREEN05e2e running",
+  "evidence": "Executor candidlyreported; final10currenthashes matched. No broaderinspectionorprivateuse inferred.",
+  "consequence": "GREEN05invalid for stable/current-source proof, preserveexactlog/qualifiedcounts; never acceptance",
+  "containment": "Executor instructed stop; became terminal. No revert duringrun. Fresh test-onlywriter then terminal; rootsealed separate validation-onlyexecutor with no active productwriter. Repeataffectedcanonical suite before acceptance.",
+  "userApprovalRequired": false
+}

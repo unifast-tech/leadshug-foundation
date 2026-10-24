@@ -1,0 +1,26 @@
+{
+  "kind": "cp2-r1-repair-postimplementation-diagnostic-02",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-green-02.log",
+  "sha256": "05ce7101258639ff1a446bfe8eff70be5fe7d3ee42c70a6cae7091c928edc33a",
+  "bytes": 53510,
+  "terminal": true,
+  "exit": 1,
+  "lint": "passed",
+  "build": "passed",
+  "unitPassed": 395,
+  "integrationPassed": 40,
+  "integrationFailed": 17,
+  "integrationTotal": 57,
+  "qualifications": [
+    "No checkpoint acceptance or source closure",
+    "Several old callbackerror status expectations now stop at intended clean303; later assertions/fixtures not reached",
+    "Existing promotioncancel fixture waits cancelcompletion while holding providerlock now needed byboth; harness needs linearized release and exactwinnerfacts, retain originalcausalRED",
+    "Existing mappedclaimbarrier expects twowaiters; newglobalserialization admitsone, testmust prove onePOST not assume scheduling",
+    "Missing supportedMID400contract retained; current403 diagnosed instead of weakening expectedstatus",
+    "ROOT04 replay unresolved; seededfixture proposedchange requires separate actualwriterimmutability assertion, no identicalcausalRED/GREENclaim",
+    "Precontroller middlewarepath stillunadmitted/unmodified"
+  ],
+  "next": "Executor repairs admittedsource/testharness after terminal, uniqueGREEN03; all R1-06proof stillrequired."
+}

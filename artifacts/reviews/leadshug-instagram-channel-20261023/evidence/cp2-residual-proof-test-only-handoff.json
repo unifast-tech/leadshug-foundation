@@ -1,0 +1,55 @@
+{
+  "kind": "cp2-residual-proof-test-only-handoff",
+  "date": "2026-10-24",
+  "objective": "Complete meaningful remaining CP2test proofs and repair four harness errors, before independent frozen validation. Test-only lane, not feature acceptance.",
+  "authority": "Approved ST-IG-03v1.3 admitted testpaths; routingguard and TODOauthority GO required; formerwriterterminal; noactive runner orproductwriter.",
+  "readFirst": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r1-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-intermediate-source-handoff.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-handoff.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-midrun-edit-deviation.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-result-05.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-test-first-handoff-plan.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.2.json"
+  ],
+  "ownedWrites": [
+    "api-app/test/instagram-cp2.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts (new if useful)",
+    "api-app/test/helpers.ts (strict testboundary-only support, no replacingdomain/session/grant/Prisma/transactionresults)"
+  ],
+  "readOnly": "All productcode, schema,migrations, middleware, Foundation,T/runner/config/index/Git remain read-only. Read only exact positivepublic dependencies, no inventory/private/env/runtime/Meta. No worktrees/copies/branches/subagents/GOALtools.",
+  "noExecution": "Do NOT execute any runner, lint/build/test, provider or operational command. Root validates after you become terminal and seals source. No sourceproductions fixes permitted in this lane, even if a defect obvious; report exactcase.",
+  "fourCorrections": [
+    "Callbacktakeover now correctly safe303 rather than409; assert fixedLocation/code, safeheaders/noqueryvalues and unchangedstage, preserve originalscenario.",
+    "Old permanent40s mapping-stage expiry was wrong perinvocation contract: assert newexplicit observationround allowed under own bounded deadline with durable POSTfence preserved; no mutationcounterreset.",
+    "CancellationPromise resolvedbefore.expect bug: retain realproviderrowblocker, enqueue cancelbeforeconfirm, release once genuinequeued/advisorywait proved; exactCANCELLED/no mapping/cred/POST winnerfacts, plus genuineoverlap not arbitraryscheduling.",
+    "Postmapping BFFinterruption/replay uses before/after POSTdelta, not globalfakecount; actualwriter expectedGeneration/requesthash unchanged beforeinterruption; later samekey/body completion without re-promotion/no2ndPOST. Keep syntheticcrashfixture qualified ifshapechanged; no falsely identicalcausalRED/GREEN."
+  ],
+  "missingRequiredProof": [
+    "CONFIG: absent/partial/malformed syntheticconfig matrices, no unavailablecapability writes/HTTP; use only testprocesssyntheticenv, never hostactualenv.",
+    "AUTHZ all create/get/confirm/advance/cancel: knownscopeATENDENTE403, outofscope/othertenant404, malformedpayload afterauth, inactiveBU retainedgrants404, session/grant revoked at actualawait ->no unauthorizedpromotion/facts/HTTP. Precontroller sessionconfidentiality companion unadmitted: record pending, do not fakepass/skip existingcase.",
+    "IDEMPOTENCY fresh20concurrent samekeycreates (not existingreplay), exactlyoneattempt/audit, mismatches409; fresh20same signedMID firstdeliveries, onecontact/conversation/route/message/unread, no preexistingmessage.",
+    "TOKEN/IDENTITY short/long HTTPfailure and near-expiry60smargin, opaqueidentitypurpose and lostexchange uncertain/noauto-code retry; actualBFF noactivecred overwrite.",
+    "DEADLINES realPGgrant/rowbarriers: expires during awaited authorization before dispatch and before successful/error completion; immutable40s invocationdeadline vs60slease/10srequest cap, lateholders unchanged. No mockedtransactions/auth; fakeonlyexternalHTTP+AbortSignal honoring. Cases must reach intendedexpiredpredicate, not fail unrelatedsession/config/setup.",
+    "RESOURCE simultaneous CONNECT/reauth and competingreauth: monotoniccredentialversions, no stalepromotion or secondresourcePOST; durableintent survives persistedcrash afterclaim/newattempt/cancel/leaseexpiry; resourceglobalfence realPG not preloadedreplay.",
+    "SIGNATURE wrongOAuthsecret distinctfromcorrectwebhooksecret and semanticallysameJSON/differentrawbytes with oldsignature; no domainfacts onrejection.",
+    "ORIENTATION self/deleted/validunsupported/echo vs eligibleIN, no fabricatedpeer/humanauthor/window/receipt; preserve accepted genuine old/missing/futuretimestamps behavior.",
+    "RECEIPT eligible signedIN then lateprovidererror/replacedholdercompletion, receipt/facts preserved and no duplicatePOST/message/unread.",
+    "SAFEOUTPUT actualhistory/events and success/failureDTO/Location: no token/code/rawstate/secret/DMcontent in activity metadata; safeallowlists. Queryfreshpersistedfacts not justHTTPstatus.",
+    "1000distinct updates/replay exactcounts existingproof retained; if timeradded measure isolatedinitialbatch excludingsetup/replay and enforce approved15s without weakening or inferring wholecaseduration. Full5wave/10k/EPS/RLS/browser/ALL still laterCP5, no falseclosure."
+  ],
+  "testQuality": "Prefer independent freshactor/tenant/BU fixtures for eachcase to avoid10/hour budget contamination; sharedfakecount use deltas/resetonlytest-ownedexternal state. Newfile may use actualNestsetup/BFFlogin/state/PG and externalHTTPfake fromhelpers. No BFFresponse interception, businesslogic/transaction/session/grant replacement. Preserve existingunit/WA/scenarios/counters/assertions. Use stable realbarriers, no fixedpollsleep as solecausality.",
+  "pendingHuman": [
+    "sessionmiddlewarepath",
+    "privacyHTMLpath",
+    "outbound1000UTF8bytes"
+  ],
+  "notClosed": [
+    "IG-SUBPROTO-01",
+    "IG-SUBREC-03",
+    "CP2acceptance",
+    "remainingCP3..CP6"
+  ],
+  "completion": "Return terminal with exact testfile hashes, concise planned-to-actual case map (all NOT RUN in this lane), any actualsource concern, and no broadlogs. Root freezes and validates in separate lane. If a test needs another path ask root first; do not stop at fourfixes while missingprovedcases remain."
+}

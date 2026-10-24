@@ -1,0 +1,17 @@
+{
+  "kind": "cp2-r1-repair-result-INVALIDmixedsource",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-green-05.log",
+  "sha256": "438dac54fcf975244fd44b4ddd96174bda29ac1f79453d5e4e61cf7ccccf186c",
+  "terminal": true,
+  "accepted": false,
+  "unitPassedBeforeEdit": 395,
+  "integrationObserved": {
+    "failed": 4,
+    "passed": 54,
+    "total": 58
+  },
+  "sourceProofValid": false,
+  "qualification": "Executor edited authorization service during e2e. Entire run invalid as stable/current source acceptance; rawcounts retained only diagnostic. Four reached failures: safecallback303 expected409; oldpermanentstageexpiry; Promise.expect harness; absoluteglobalPOSTcount. Reached BFFmapped replay assertions are mixed-source diagnostics, not acceptance."
+}

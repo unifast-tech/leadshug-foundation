@@ -1,0 +1,13 @@
+{
+  "kind": "terminal-review-availability-failure",
+  "date": "2026-10-24",
+  "lane": "instagram_session_callback_companion_critique_r2",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "terminalStatus": "errored",
+  "reason": "Selected model is at capacity. Please try a different model.",
+  "package": "oauth-callback-session-companion-critique-r2-package.json",
+  "packageSha256": "220530f028c15d03cfd91c0ceefd8db40ab374e878cc3d531eb76c37f6afa688",
+  "resultExists": true,
+  "resolution": "Retry once on exact same complete frozen package and contract-selected model after objective terminal failure. No downgrade, package reduction, source change, approval waiver or acceptance inferred."
+}

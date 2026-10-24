@@ -1,0 +1,16 @@
+{
+  "kind": "cp2-r1-repair-result-diagnostic13fail44pass",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-green-03.log",
+  "sha256": "4969faaebeef19e3f8d05285a0e8aa1c230a44768f47c73895896f7929572901",
+  "terminal": true,
+  "accepted": false,
+  "unitPassed": 395,
+  "integration": {
+    "failed": 13,
+    "passed": 44,
+    "total": 57
+  },
+  "qualification": "Mixed direct failures, obsolete callback expectations, unsupportedattachment preflight defect and harness scheduling/count errors; no source closure inferred."
+}

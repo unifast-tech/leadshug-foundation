@@ -629,7 +629,9 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP2-R1-06 | medium | release-blocker | fix in this TODO | The reported sixteen-obligation map exceeds the behavioral proof actually present | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
 | IG-CP2-ROOT-07 | medium | release-blocker | fix in this TODO | Five Instagram write routes need safe catalog/audit classification | open; full API coverage failure reached | cp2-action-catalog-observation.json |
 
-| IG-OAUTH-SESSCOMP-01 | medium | release-blocker | revise companion in same TODO | Unexpected precontroller callback failure also needs clean generic failure redirect | open; revised exact v2 proposal pending independent critique | oauth-callback-session-companion-critique-result.json |
+| IG-OAUTH-SESSCOMP-01 | medium | release-blocker | revise companion in same TODO | Unexpected precontroller callback failure also needs clean generic failure redirect | proposal resolved by terminal r2; source unadmitted, implementation proof pending | oauth-callback-session-companion-critique-result.json |
+
+| IG-CP2-ROOT-08 | medium | release-blocker | reprove stable candidate in this TODO | Executor edited authorization source during GREEN05, invalidating current-source proof | open; separate frozen validation lane required | cp2-r1-midrun-edit-deviation.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -1140,3 +1142,11 @@ The existing public privacy page still describes WhatsApp only. privacy-instagra
 ## OAuth callback session companion — exact proposal review
 
 R1-04 has a concrete protected-path dependency: session.middleware.ts can reject before the admitted controller. The first exact companion critique is terminal with one medium security finding IG-OAUTH-SESSCOMP-01; early headers plus known-denial redirects still leave unexpected database/session errors on a sensitive query URL. That finding is Integrated/useful/formalizable yes/project and retained as release-blocker. Revised exact proposal v2 wraps unchanged session enforcement only for the effective GETcallback; all failures before output use fixed safe303 and known/generic classifications, without making the callback public. Ordinary routes retain their original exception/status/order. Sourcehash/CRLF preserved, no sourcewrite/pathadmission. Fresh complete companion critique is required before humanvalidation of this unadmitted path. Controller, Numerosconsumer, actualNest/PG and latergateway/browser remain mandatory; no R1-04 closure or delivery is inferred.
+
+## CP2 repair diagnostics — source edit during validation, split lanes
+
+cp2-r1-repair-result-01..05 receipts retain exact qualified diagnostic outcomes; build-only rounds prove no functional behavior. GREEN05 is invalid as stable/current-source proof: the executor edited callback/activeBU authorization during e2e. Its395unit/54of58integration counts are diagnostic only. IG-CP2-ROOT-08 records the concrete deviation, no invented credential or data exposure. The executor stopped and became terminal; root matched10reported currentfiles,35immutable rows and3rootindex entries in cp2-r1-intermediate-source-handoff.json. No source acceptance follows.
+
+Next writer is fresh test-only, with no runner/sourceproduction authority: repair the four harness/assertion defects and add remaining actual-boundary CP2proof. Then it becomes terminal. Root alone freezes exactcurrent sources/TODO/reviewinputs and dispatches a separate validation-only executor. No active productwriter during validation; after every terminal result root explicitly thaws any repair. No edits during a running test or review. Primary observer obligation, fullAPI/currentreview and allCP3..CP6 remain mandatory.
+
+Sessioncompanion v2 is now proposal-converged: complete terminal r2critique has zero findings/allpositionsacceptable and strictmergeexit0. Initial native turn had capacity failure after saving outputs; samecomplete frozenpackage continuation verified them and completed successfully, without fallback/reduction/waiver. oauth-callback-session-companion-ready-v2.json binds exact sourcehash/CRLF/candidate/diff. Explicit onepath humanvalidation is requested and pending; session.middleware.ts remains unchanged/unadmitted. IG-OAUTH-SESSCOMP-01 closes atproposal level only; R1-04 remains open until actualsource/consumer/gateway/browserproof. Privacyfile and outboundbyte proposals also await human replies.

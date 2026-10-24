@@ -1,0 +1,31 @@
+{
+  "kind": "reviewed-unapplied-session-callback-companion-ready",
+  "date": "2026-10-24",
+  "requestedPath": "api-app/src/surfaces/bff/session.middleware.ts",
+  "sourceSha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+  "candidateSha256PreservingNewlines": "3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5",
+  "proposal": "oauth-callback-session-companion-proposal-v2.json",
+  "proposalSha256": "0e39354e49702cef82ddb68f989e00a10730688dade3186224af85db9627d9ce",
+  "patch": "oauth-callback-session-companion-proposal-v2.diff",
+  "patchSha256": "cf878cd18ca1e46c2988be2e7b486bfff66e5b52b17e07ad607e2e26d2796132",
+  "review": "oauth-callback-session-companion-critique-r2-result.json",
+  "reviewSha256": "8c92ea7a8db99c552e923ff7629705af7ed4a6d0c21fa9f65d8b8b7848efd0b3",
+  "merge": "oauth-callback-session-companion-critique-r2-merge.json",
+  "mergeSha256": "043cd51c9cf10f485bd2aa6a1dae8a211caebba8d36eaea344da880a95f47a78",
+  "reviewLifecycle": "Initialturn errored forcapacity after writes; exactsame completepackage continuation terminalsuccess verified unchanged outputs. No fallback/waiver/package reduction.",
+  "positions": "allacceptable",
+  "findings": 0,
+  "priorFinding": "IG-OAUTH-SESSCOMP-01 addressed atproposal level only; wholeR1-04open",
+  "userPathValidation": "pending",
+  "sourceUnmodified": true,
+  "change": "Only effectiveGETInstagramOAuthcallback redirects session/infrastructurefailures to fixedsafe relativeURL withpublicallowlistedcode, no-store/no-referrer. Same existingauthenforcement, neverpublic; ordinaryroutespreserved.",
+  "requiredAfterAdmission": [
+    "serializedsolewriterhandoff",
+    "exactsourcehash/CRLFandcandidate check",
+    "actualNest/PostgreSQLdenial/infrastructure/errororder/nosideeffectsproof",
+    "preservevalidstate/session/CAS",
+    "fixedtextNumerosconsumer plusrealbackendbrowser/gatewayconfidentiality",
+    "fullAPI andfreshadherence"
+  ],
+  "notGranted": "No runtime/Meta/private/featurecompletion orsourcewrite authority yet."
+}
