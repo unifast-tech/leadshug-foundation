@@ -1,0 +1,31 @@
+{
+  "kind": "cp3-test-first02-qualified-feature-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "exit": 1,
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 12,
+    "passed": 97,
+    "failed": 2,
+    "total": 99
+  },
+  "log": "cp3-test-first02-api-instagram.log",
+  "logSha256": "3074c5e47501601f48781b0ce54cc80bde07b98a7fc79c16245a749cf84970e4",
+  "rootMatched": {
+    "sources": 244,
+    "todo": true,
+    "boundInputs": 126,
+    "preservations": 35,
+    "index": 3
+  },
+  "reached": "Bothnewcases reached GET reply-options andexpected200butactual404. RoutingcaseprovedactualOAuth/signedingress/twoaccounts+samepeer separatecontacts/conversations/routes beforeoptions. Cutovercase reachedline404 afterordinary4states/livecontrols andinitial7states/live/deadline/unknownschema/knownACKlocalcompletion/originalkeyreplay/immutablefacts/zeroHTTPassertions. Allprior97selectedcasespassed.",
+  "unreached": "ReplyDTOmetadata/IGordinarysend/stalegeneration/fingerprint/crossroute/initialexclusion/policyinvalidtimestamp/echo/read/wrongresource/natural24hboundary; finalNEWV2WAoptions/send. Sequentialcase structure limits preimplementationproof. No IGdispatch/V2writer/primary/featureacceptance implied.",
+  "qualification": "Helperexactpriorreconstruction remains unproved; currenthelper exercised allprior97selectedcases. FullAPIcurrenthelpers andindependentreview/TQA stillrequired. No retry/source/runtime/private action."
+}

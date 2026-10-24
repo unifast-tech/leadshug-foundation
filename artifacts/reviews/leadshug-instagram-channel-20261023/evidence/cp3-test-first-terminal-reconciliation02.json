@@ -1,0 +1,37 @@
+{
+  "kind": "cp3-test-first-terminal-root-reconciliation02",
+  "writerTerminal": true,
+  "paths": [
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "7741d4815f7a4066984225f7c327bcc47ec167604da300b3a3368796fd8aeb60"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "sha256": "e1f20c12dcedb047ec6f4175e5838e4d7ace67419906f93962d11b56ab8b0332"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "24ad56d00b787dadf9558f793d2c20ee8cfeef170b4ce2a9d94cb18e3981114c"
+    }
+  ],
+  "priorSourcesUnchanged": 241,
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "helperPriorHash": "b01da6b1e6fcd5f13aa2e28f77c63df7d2e2b2967332d740006888184e44b9dc",
+  "helperQualification": "Exact previous helper bytes were not reconstructed: removal of obvious additions yields27692bytes SHA8e2f7d4947bdfa9afb13a4a51835a5589c07372fc6af0036ff355da3cc78e7eb versusprior27688bytes. Writercannotprovideexactpriorresetliteral; no savedblob/privatebackup consulted orautomaticrestore. Therefore no byte-identical residualhelperclaim. Current admittedhelperbehavior/source mustbe reviewed and coveredbycurrentfullAPI/TQA; this is an evidencequalification, notproof of an unrelated mutation. Allother241sources and35protectedrows exact.",
+  "review": "Rootreadfull642linesacrosstwospecsplusnarrowhelper/actualcontrollers/schema/owners. Static correction02; no dynamicproof. Two sequentialintegrationcases have manysubassertions; initial404canleave laterassertionsunreached. Reportactualreachedproof only. LaterTQA effectivenessaudit remainsmandatory.",
+  "notRun": [
+    "lint",
+    "build",
+    "unit",
+    "e2e",
+    "Meta",
+    "runtime"
+  ],
+  "next": "Freeze244sources/T/inputs and one separatecanonicalapi-instagrampreimplementationproof."
+}

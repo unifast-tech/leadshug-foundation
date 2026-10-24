@@ -1,0 +1,10 @@
+{
+  "kind": "cp3-test-first02-canonical-validation-only",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp3-test-first02-frozen-manifest.json",
+  "sourceCount": 244,
+  "inputCount": 126,
+  "log": "cp3-test-first02-api-instagram.log",
+  "instructions": "ExactlyONEcommand; noautofix/retry/alternatecommand; capturefullsyntheticstdout+exit. Checkbeforeafter244sources/T/inputs/35preserved/3index. No source/docs/input/Git/private/runtime/Meta/provider. Classifyactualfailures vs fixture/measurement; reportwhich642newcaseassertionsreached/unreached; do not inferfeaturecoveragefromaggregateorNOTRUN. OriginalCP2proofmustremainprotected; noadmission/primarywaiver. ReturnterminallogSHA/exit/beforeaftercounts/tests."
+}

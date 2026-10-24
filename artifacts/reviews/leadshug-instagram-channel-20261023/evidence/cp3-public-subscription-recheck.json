@@ -1,0 +1,26 @@
+{
+  "kind": "cp3-independent-public-subscription-doc-recheck",
+  "date": "2026-10-24",
+  "privateProviderOperations": false,
+  "sources": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks.md",
+      "sha256": "38846e838d4afbb0768a960675d2e7b9a273c85b9f61ef3c131ad44bd3b9b80e",
+      "bytes": 4955
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "sha256": "c3ae23a8c1a32d96879f78dab2eaf5fd793c1192b86dcd86463d1a9a912724ca",
+      "bytes": 18504
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/llms.txt",
+      "sha256": "204f82d1869e4bd9237f5ca4c16a67ad0b60835ddea02f71220f9cd7fcada3ff",
+      "bytes": 18901
+    }
+  ],
+  "retrieval": "web open failed; direct unauthenticated urllib official public markdown/index succeededHTTP200. Guessed ig-user/subscribed_apps markdown returned generic HTML application shell, not usable reference evidence; no protocol fact inferred from status200. No account/token/API endpoint called.",
+  "supported": "Setup guide distinguishes Instagram User token plus graph.instagram.com/account/subscribed_apps POST and success:true from Unified/FacebookLogin; callback/app fields/account enabling are separate prerequisites.",
+  "unproved": "No GET envelope/app-ID namespace/visibility/completeness/negative-absence semantics established by this recheck. Index lists no dedicated subscribed_apps reference. Ownprimaryobservation remains unresolved; no fabricatedID rule/retry/acceptance.",
+  "userReadiness": "Professional test account added; no test token generated. No manualtoken generation asked orprivateactivationauthorized; future approvedOAuthflow preferred."
+}

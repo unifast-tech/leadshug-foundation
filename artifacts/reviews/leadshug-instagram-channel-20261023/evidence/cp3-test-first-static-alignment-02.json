@@ -1,0 +1,49 @@
+{
+  "kind": "cp3-test-first-root-static-preexecution-alignment",
+  "date": "2026-10-24",
+  "state": "Sole testwriter correcting before anyrunner; no dynamictestresult claimed.",
+  "reviewedFiles": [
+    "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+    "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+    "api-app/test/helpers.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts"
+  ],
+  "corrections": [
+    {
+      "evidence": "Bootstrap sets legacyBUphone5584999990000 but creates neitherWAchannel norbusinessidentity. criarCanalVerificado rejects mismatched provedBusinessPhone onlywhenpriorbusinessidentityexists; priorrootwarning didnot establishanactualthrow inthisnewtenant.",
+      "action": "Aligned synthetic5584999990000 remainscoherent; no priorfixturefailure or retainedbusinessidentity inferred fromBUphone."
+    },
+    {
+      "evidence": "outbound.finalizeInitialInTransaction originalCAS canassign currentconversation IN_SERVICE/actor during knownACKlocalcompletion",
+      "action": "Preserve stored originalsnapshot exactly, assert actualpermittedconversationtransition instead of false unchangedactualupdatedAt."
+    },
+    {
+      "evidence": "ConversationsController initialMessageRequest validates64hexpreviewFingerprint before submit/replay",
+      "action": "Use deterministic syntheticSHA256hex previewfixture; canonicalrequest/fingerprint remainexact."
+    },
+    {
+      "evidence": "ConversationsController livePREPARED/SENDING reconcile202; unprovedknownACK localcompletion can503 withoutrelease",
+      "action": "State-specific statuses anddecisiveimmutable/exclusion snapshots, neverblanket200."
+    },
+    {
+      "evidence": "Timestamp-only routeordering doesnot identify accountfirst",
+      "action": "Assert outgoingaccount from actual selectedroutebusinessidentity."
+    },
+    {
+      "evidence": "deliver declaredasync wouldreturnPromise ratherthan supertestTest with.expect",
+      "action": "Removeasync frombuilder beforefirst runner."
+    },
+    {
+      "evidence": "Routingfixtureonly creates2IGchannels; bootstrapdoesnot createOFICIAL",
+      "action": "Initialoptions mustexcludeIG andreturnnoWAforIG-onlyfixture, ratherthan inventOFICIAL fromlegacyBUphone."
+    },
+    {
+      "evidence": "Naturalexpirycase initially hadonlyafterwaitassertion",
+      "action": "Requireobservedopenbeforewait/exactexpiry andclosedafteractualclockcrossing, nofakeclock/timeoutincrease."
+    }
+  ],
+  "coverageRequest": "Add isolated smallASCII closed/old/future/echo/read/wrongresource policycases andactual24hboundary/livecontrol, unknownschemas, explicitinitial/legacyWAboundary andliveV1deadlines/acknegativecontrols. Preserveallapprovedgoals andqualifiedrootadvisory; do not conflatewrittenwithreached.",
+  "safety": "Production/source18 andallother241files verified unchanged during initialwriter. No runner/lint/build/private/Meta/runtime/provider occurred; narrowexternalHTTPfake only. Rootseparatefreeze beforecanonicalproof."
+}
