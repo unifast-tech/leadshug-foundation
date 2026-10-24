@@ -1,0 +1,23 @@
+{
+  "kind": "cp2-r1-repair-causal-red-04",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-red-04.log",
+  "sha256": "ee907b1f6a5c4e25a034db40a611f833d7a534eb3f7d38c7a49addde9ffb1653",
+  "bytes": 38165,
+  "terminal": true,
+  "exit": 1,
+  "unitPassed": 395,
+  "integrationPassed": 48,
+  "integrationFailed": 8,
+  "integrationTotal": 56,
+  "preProductRepair": true,
+  "newReached": [
+    "HTTPboundary redirect:error policy assertion now reached (no actual credential exposure observed)"
+  ],
+  "qualifications": [
+    "Prior reached failures retained; only actual assertions reached count as evidence",
+    "No precontroller sessionmiddleware behavior proof"
+  ],
+  "cp2Accepted": false
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "cp2-r1-repair-causal-red-05",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-red-05.log",
+  "sha256": "9a8500e02ed2658a5a8ee93df16878dcd0549c460bec6a33b76d1916a6e05d92",
+  "bytes": 39201,
+  "terminal": true,
+  "exit": 1,
+  "unitPassed": 395,
+  "integrationPassed": 48,
+  "integrationFailed": 9,
+  "integrationTotal": 57,
+  "preProductRepair": true,
+  "newReached": [
+    "Original CONNECT confirmation body/key replay after persisted mapped IN_PROGRESS crashfixture cannot return completion (not a real process crash)"
+  ],
+  "qualifications": [
+    "Prior reached failures retained; only actual assertions reached count as evidence",
+    "Later credential/no-secondPOST assertions following ROOT04 firstfailure were not reached"
+  ],
+  "cp2Accepted": false
+}

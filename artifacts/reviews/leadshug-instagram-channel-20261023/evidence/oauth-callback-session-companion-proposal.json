@@ -1,0 +1,23 @@
+{
+  "kind": "exact-unapplied-session-callback-companion",
+  "date": "2026-10-24",
+  "status": "proposal only; strictpathadmission pending; sourceunchanged",
+  "requestedPath": "api-app/src/surfaces/bff/session.middleware.ts",
+  "sourceSha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+  "sourceNewline": "CRLF",
+  "candidateSha256PreservingNewlines": "4fc5d1227bf94423b51830933db6ee8aa2ce944804f882468ea504eb5266b478",
+  "patch": "oauth-callback-session-companion-proposal.diff",
+  "patchSha256": "09a78d3bef8157187a38d5b78a11a7c32db1be2817a0d4f9eaec6fda6306c8e8",
+  "problem": "IG-CP2-R1-04: failed callbacksession checks precede controller so controller-only headers/redirect cannot protect them. Request is session-protected, never made public.",
+  "exactScope": "Exact effective GET callback only, case-insensitive and optionaltrailing slash matching existing Expressrouter. Set no-store/no-referrer before lookup. Existing deniedsession/password/onboarding branches return303 to fixedrelative/numeros with allowlistedpublic classification; never provider/state/code/inputquery. No onward next() and no controller or provider processing on deniedcallback.",
+  "preserved": "Every other route keeps exactoriginal session/tenant/grant/password/onboarding/CSRF/order/status behavior; GETcallback successful authorization still existingmiddlewareguards before next. No publicexemption/newcredential/permissiondependency. No DB/provider/API/runtime calls added. No otherpath admitted.",
+  "failureLimit": "Unexpected infrastructureexceptions retain existing errorhandling after callbackconfidentialheaders; noqueryecho is added. Critique must judge whether generic infrastructureerror requires a safequery-free redirect too; do not silently claim complete R1-04closure if not. Controller still separately owns classified state/provider/expired returns in admitted source; gateway/browser later CP4required.",
+  "requiredProof": [
+    "actualNest/PG no/invalid/expiredsession and inactiveuser/passwordchanged/mustchangepassword/onboarding callbacks with sensitivefixturequery:303cleanLocation plusheaders, no attempt/providerchanges",
+    "validsessioncallback stillnext and fullyvalidatesstate/CAS; not public",
+    "noncallback original401/403/409 +CSRF behavior unchanged inclcase/trailingslash callbackequivalents",
+    "unexpected infrastructurefailure safeheaders/errorhandling boundary; exact residualqualification",
+    "fullAPI/freshadherence/browser/gateway still required after admission/apply"
+  ],
+  "authority": "No sourcewrite until critiqueconverged and explicituserpathvalidation plus serializedhandoff. Existing strictTODOrequires User validation: required on deviation."
+}

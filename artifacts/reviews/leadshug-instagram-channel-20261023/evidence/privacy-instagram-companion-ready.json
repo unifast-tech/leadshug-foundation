@@ -1,0 +1,31 @@
+{
+  "kind": "reviewed-unapplied-privacy-companion-ready",
+  "date": "2026-10-24",
+  "source": "web-app/public/privacidade.html",
+  "sourceSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "proposal": "privacy-instagram-companion-proposal.json",
+  "proposalSha256": "1d2c3af15c5c52e649e4c08f0e636a721a6a029da7e5c613a6d6645f920336c4",
+  "patch": "privacy-instagram-companion-proposal.diff",
+  "patchSha256": "0773d973c69c9586778eeabed76eb320af0cdd8d35b0f6a32370fae046b54117",
+  "reviewResult": "privacy-instagram-companion-critique-result.json",
+  "reviewResultSha256": "b7e6480279daaa549acf47384648e92871e9e5fc0542aa90c581f1b26051fa11",
+  "reviewMerge": "privacy-instagram-companion-critique-merge.json",
+  "reviewMergeSha256": "df03be10c61931eb9732c2e3d2678cd869dffd35a1f9450987a06084b79346d5",
+  "strictMerge": "exit0",
+  "findings": 0,
+  "positions": "allacceptable",
+  "productUnchanged": true,
+  "userAdmission": "pending",
+  "applyConditions": [
+    "explicit onepath humanvalidation",
+    "serialized productwriterhandoff",
+    "unchanged sourcehash/exactpatch",
+    "current date/finaldataflow parity recheck"
+  ],
+  "notGranted": [
+    "publication",
+    "runtime/private/Meta access",
+    "feature acceptance",
+    "legal compliance certification"
+  ]
+}

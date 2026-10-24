@@ -1,0 +1,54 @@
+--- a/api-app/src/surfaces/bff/session.middleware.ts
++++ b/api-app/src/surfaces/bff/session.middleware.ts
+@@ -65,8 +65,17 @@
+     private readonly prisma: PrismaService,
+   ) {}
+ 
+-  async use(req: Request, _res: Response, next: NextFunction): Promise<void> {
++  async use(req: Request, res: Response, next: NextFunction): Promise<void> {
+     const caminho = req.path;
++    const callbackInstagram = req.method.toUpperCase() === 'GET' &&
++      /^\/api\/bff\/instagram-authorizations\/callback\/?$/i.test(caminho);
++    const falhaCallback = (code: 'NAO_AUTENTICADO' | 'TROCA_DE_SENHA_OBRIGATORIA' | 'ONBOARDING_PENDENTE' | 'SESSAO_EXPIRADA') => {
++      res.redirect(303, `/numeros?instagramAuthorizationError=${code}`);
++    };
++    if (callbackInstagram) {
++      res.setHeader('Cache-Control', 'no-store');
++      res.setHeader('Referrer-Policy', 'no-referrer');
++    }
+     const mudaEstado = !['GET', 'HEAD', 'OPTIONS'].includes(req.method);
+ 
+     // Rota pública do BFF (só o login). Ela muda estado e não tem sessão para
+@@ -80,6 +89,7 @@
+     const token = this.sessions.extrairDoCabecalho(req.headers.cookie);
+     const claims = this.sessions.verificar(token);
+     if (!claims) {
++      if (callbackInstagram) { falhaCallback('NAO_AUTENTICADO'); return; }
+       throw new UnauthorizedException({ error: 'Não autenticado.', code: 'NAO_AUTENTICADO' });
+     }
+ 
+@@ -87,13 +97,16 @@
+     // Excluído, inativado ou com senha trocada depois da emissão: a sessão cai
+     // na requisição seguinte, não no vencimento do cookie.
+     if (!user || user.status !== 'ATIVO') {
++      if (callbackInstagram) { falhaCallback('NAO_AUTENTICADO'); return; }
+       throw new UnauthorizedException({ error: 'Não autenticado.', code: 'NAO_AUTENTICADO' });
+     }
+     if (user.passwordChangedAt && user.passwordChangedAt.getTime() > claims.iat) {
++      if (callbackInstagram) { falhaCallback('SESSAO_EXPIRADA'); return; }
+       throw new UnauthorizedException({ error: 'Sessão expirada.', code: 'NAO_AUTENTICADO' });
+     }
+ 
+     if (user.mustChangePassword && !LIBERADAS_EM_TROCA_OBRIGATORIA.has(caminho)) {
++      if (callbackInstagram) { falhaCallback('TROCA_DE_SENHA_OBRIGATORIA'); return; }
+       throw new ForbiddenException({
+         error: 'Troque sua senha inicial antes de usar o sistema.',
+         code: 'TROCA_DE_SENHA_OBRIGATORIA',
+@@ -109,6 +122,7 @@
+         select: { onboardingConcluido: true },
+       });
+       if (!cfg?.onboardingConcluido) {
++        if (callbackInstagram) { falhaCallback('ONBOARDING_PENDENTE'); return; }
+         throw new ConflictException({
+           error: 'A conta ainda está sendo configurada.',
+           code: 'ONBOARDING_PENDENTE',

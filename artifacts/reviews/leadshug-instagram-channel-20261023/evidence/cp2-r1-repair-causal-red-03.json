@@ -1,0 +1,37 @@
+{
+  "kind": "cp2-r1-repair-causal-red-03",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-red-03.log",
+  "sha256": "063668ce54aa5bd0b659ff52f807ec37d16c2cddc984a6550202681c3bb470da",
+  "terminal": true,
+  "exit": 1,
+  "unitPassed": 395,
+  "integration": {
+    "passed": 48,
+    "failed": 8,
+    "total": 56
+  },
+  "preProductRepair": true,
+  "reachedDefects": [
+    "scope before payload400instead404",
+    "arrayadvance200instead400",
+    "expiredcandidateconfirm200instead409",
+    "committedcanceloverwrittenconfirmation200",
+    "failedcallback400withoutclean303/confidentialheaders",
+    "malformed supportedMIDaccepted200",
+    "overlapping resourceclaims dispatched twoPOSTs instead<=1"
+  ],
+  "fixtureFailure": "Redirect case stopped at deliberate429budget during callbacksetup; no redirectbehavior conclusion. Separate freshBUcase requested.",
+  "reachedPositive": [
+    "1000distinct messages exact contacts/conversations/routes/messages/unread counts; replay zero new effects",
+    "crossattempt lostack/UNKNOWN retains one resourcePOST; unrecognizedread doesnotauthorizeanother"
+  ],
+  "pending": [
+    "exact interrupted mapped CONNECT originalrequestreplay",
+    "crashafterdurabledispatchclaim proof",
+    "all residual reviewerR1-06 cases and correction validation"
+  ],
+  "performanceQualification": "Whole1000case took20.5s including setup/replay, not isolatedbatch measurement; neither<=15s proof nor isolatedthresholdfailure inferred.",
+  "cp2Accepted": false
+}
