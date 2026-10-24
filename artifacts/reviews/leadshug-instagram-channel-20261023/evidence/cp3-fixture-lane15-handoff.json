@@ -1,0 +1,47 @@
+{
+  "kind": "cp3-qualified-fixture-lane15-handoff",
+  "date": "2026-10-24",
+  "state": "PREPARED; dispatch only after core14 terminal/root reconciled",
+  "authority": "ST-IG-03 v1.3 approved fixture/contract adaptations; no changed assertions removed",
+  "ownedPaths": [
+    "api-app/test/helpers.ts",
+    "api-app/test/atendimento.e2e-spec.ts",
+    "api-app/test/channel-transport.e2e-spec.ts",
+    "api-app/test/instagram-consumer-boundaries.e2e-spec.ts"
+  ],
+  "baseline": [
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "24ad56d00b787dadf9558f793d2c20ee8cfeef170b4ce2a9d94cb18e3981114c"
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "sha256": "f57834be474b1c86858dab4a13a7a18bd26d1ee907de2828b6454dab7af07be9"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "13bb550b521e5b6fbee8c69d74668d70f081b231d5410f559467ed86855664df"
+    },
+    {
+      "path": "api-app/test/instagram-consumer-boundaries.e2e-spec.ts",
+      "sha256": "011fbbd71e177f35d5f79ab8f83870efb1d13c9c6ab015ab2a007b73fc2aa01b"
+    }
+  ],
+  "requirements": [
+    "helpers: criarCanalVerificado gains optional provedWabaId; default remains null, no route side effects/default changes. Only explicit current operational Official callers opt in. All other fake/config/helper behavior exact.",
+    "helpers: narrow explicit criarRotaConversaFixture(prisma,{conversationId,channelId}) may derive exact canonicalContactIdentity/business/provider from those explicit IDs only; validate current same-BU resource/channel, canonical WA PERSON/GROUP, own verification/gen epoch, sole business ownership. No first-ready/latest-origin/BU.phone or blanket route side effect in criarConversaFixture. A separate helper to native GET reply-options and return exact schemaVersion/routeId/channelId/expectedGeneration/contextFingerprint for explicitly requested channelId allowed. Require unique matching option, do not require available=true for intentional unavailable negatives. No fake BFF/session/grants/domain.",
+    "atendimento: actual signed ingress automatically produces route from core14, NO manual insertion after webhook. Current Official positive fixtures explicitly opt in current WABA. Manually seeded reply/echo cases need explicit selected route before send; native BFF metadata before POST. Preserve raw authnegative requests/order and all sender/echo/unread/counters/retirement races/assertions. No new provider retry.",
+    "channel-transport: manually seeded send cases explicitly associate selected proved route. Positive Official seed rows qualify existing IN in place with selected providerResourceIdentityId and current trusted officialInboundAt; default helper seed remains unqualified. Explicit current WABA per positive account; no changing stored historical false requiresWindow or global proof shortcut. Evolution requires no Official window. Preserve all original tests/assertions/counters/barriers and 5waves20.",
+    "Capture BOTH metadata tuples before starting two-tenant held send, and all20 per round before starting sends; never wait for metadata serially inside pending dispatch or weaken overlap. Preserve synthetic mutation timing after tuple capture, so generation/epoch/credential changes are still causally exercised.",
+    "Empty manually seeded conversation ambiguity case: explicit canonical route for same WAresource is allowed without any inbound history; no trusted timestamp/message. Native thread must still show CANAL_AMBIGUO with two bindings; use wellformed real option tuple for rejected INITIAL_SEND_REQUIRED branch even if unavailable. Preserve exact409 and zeroHTTP assertions.",
+    "Tie case preserves fixed timestamps/IDs and deterministic newest-message expectation. Add explicit thread observation to prove Evolution latest tie resolution before sending explicit Evolution V2 tuple; original post-adapter assertion alone no longer proves automatic selection. Do not move fixed date to open an unnecessary Official window.",
+    "Root authorizes ONE older qualified Official IN in bot-ingress-pinned case (no total-message assertions), keeping existing newest Evolution row and exact provider counters. Also public-send/BFF-claim overlap currently has NO existing IN despite advisory assumption; authorize ONE qualified IN+explicit route before send so current policy admits operation. Preserve original claim/OUT assertions and all other message counts.",
+    "source13 new boundaries spec: qualify its declared current WA channel with explicit synthetic WABA, not production null-account allowance. Preserve every assertion, direct IG no-Typebot-query trap, WA session positive and all IG-only/legacy read oracles. Its manually seeded WAroute already exists; no new route injection after signed ingress."
+  ],
+  "restrictions": "Only4paths. All productcode/core14/CP2/middleware/otheroldtests/V1/templates exact. No docs/Git/network/private/runtime/Meta/runner/lint/build/test. Singlewriter, principal checkout only. Return complete terminal hashes and unresolved cases; later lane16 initial/dispatch/public/history and canonical validation mandatory.",
+  "advisoryCorrections": [
+    "Readonly plan14 is advisory only; actual ingress route absence repaired by production14, never masked.",
+    "Initial preview path already creates explicit route through production resolver; lane16 shared beforeEach must remain routefree, do not alter template journey fixture globally.",
+    "Public claimoverlap channeltransport had no seedIN; root explicitly adjudicates added qualified currentIN instead of falsely claiming in-place qualification."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "cp3-message-acceptance-wa-ingress-repair14",
+  "date": "2026-10-24",
+  "authority": "Approved ST-IG-03 v1.3 SCOPE02/03/06; canonical shared acceptance owner, no scope expansion",
+  "baseline": {
+    "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "sha256": "59f24070854e400881266ed723ddd754d47e40b7de0975a7eb7a39a62a64d9cc",
+    "bytes": 21325
+  },
+  "ownedPaths": [
+    "api-app/src/domain/inbox/message-acceptance.service.ts",
+    "api-app/test/instagram-cp3-whatsapp-ingress.e2e-spec.ts"
+  ],
+  "findings": {
+    "IG-CP3-ROOT-05": "Actual verified WA ingress persists Messages/ContactIdentity but no ConversationRoute; only IG incoming path creates one. Strict current V2 replies then cannot resolve route. Existing fixture06 claim that signed WA ingress creates it is invalidated. Do not mask this production defect by test route injection.",
+    "IG-CP3-ROOT-06": "Outbound load/reconcile/ambiguous diagnostic matches Conversation.contact legacy presentation string rather than exact canonical peer identity. Formatted retained legacy contact can pass new V2 send and fail local acceptance after provider ACK."
+  },
+  "required": [
+    "Create immutable route from actual verified live provider ingress IN and authenticated external OUT echo, with exact current channel/gen/epoch and same-BU durable business resource plus canonical ContactIdentity in shared locked transaction. Preserve IG account-scoped identities. Never choose first-ready/latest-origin, infer BU.phone, or invent old routes from receipts.",
+    "Validate supplied contactAddress against verified origin/platform/BU/peer/namespace/business account scope; IG must have explicit qualified address, never fall through WhatsApp default. WA business identity requires WHATSAPP_RESOURCE/BU with exact same-BU provider/resource. Keep no-business-proof legacy message acceptance compatible but no operational route invented.",
+    "Canonical matching for sender result, reconcile and ambiguous ACK persistence must use exact same conversation local contact/BU/platform identity; preserve legacy Conversation.contact string/IDs and V1 known receipt local completion/no external retry. Stored known receipt cannot manufacture current route; actual newly authenticated current replay can establish a missing current route without rewriting historical message facts.",
+    "Preserve identity locks, transaction/dedup/echo/sender/claims/counters/unread/window semantics. No provider HTTP in transaction; no migration or new endpoint/framework.",
+    "New real Nest/PG native-session spec: actual signed Meta and authenticated Evolution ingress establishes route automatically, GET reply-options then POST exact returned V2 sends through selected adapter once and records correctly. Add formatted legacy Conversation.contact retained with canonical ContactIdentity + signed IN -> reply -> echo/replay local convergence. Do not inject route after ingress. Explicit synthetic current WA account/resource setup before signed ingress permitted.",
+    "Exercise supplied wrong-platform/account/BU identity rejection without message/route mutation, absence of business proof does not create usable route, and authenticated echo-first route behavior where applicable. Fake only provider HTTP boundaries. Helpers and every existing spec are read-only."
+  ],
+  "restrictions": "Single principal product writer. Only exact owned2paths. Read positive public sources/T/docs/helpers as needed. No private/env/runtime/Meta/network/Git/schema/migration/CP2/window/client/root/Web/docs mutations or runner/lint/build/test. Return actual terminal hashes/full changes and unresolved obligations; no acceptance claim."
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "root-terminal-source13-reconciliation",
+  "date": "2026-10-24",
+  "state": "SOURCE APPLIED; NOTRUN; no checkpoint acceptance",
+  "baseline": "cp3-oauth-session12-public-baseline.json",
+  "positiveSources": 253,
+  "changedExisting": [
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/incoming.service.ts",
+    "api-app/src/surfaces/bff/me.controller.ts",
+    "api-app/src/surfaces/public/conversations.controller.ts"
+  ],
+  "new": "api-app/test/instagram-consumer-boundaries.e2e-spec.ts",
+  "rootCorrections": [
+    "Retained same-BU WA provider identity with null business association in historical read-only facts; no route invented.",
+    "Restored existing GROUP Typebot support with canonical WA identity/resource guard.",
+    "Fixed WA positive session control to keyword trigger because conversation is preexisting."
+  ],
+  "next": "Shared MessageAcceptance WA ingress route/canonical matching repair14, then serialized qualified fixtures, then fresh canonical validation."
+}

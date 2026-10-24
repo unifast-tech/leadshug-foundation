@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** implementar consumidores WA qualificados conforme cp3-whatsapp-consumer-implementation13-handoff.json, após companion12 terminal/rootreconciliado. Depois fixtures serializadas e validação da candidata consolidada. Fonte12 tem252caminhos públicos; última prova executada é fonte10(406unit/97de103E2E), sem aceite de checkpoint.
+- **Next exact step:** corrigir MessageAcceptance conforme cp3-message-acceptance-wa-ingress14-handoff.json: ingresso WA autenticado deve estabelecer rota canônica; aceitação usa identidade, preservando contact legado. Consumidores13 reconciliados em253fontes públicas, ainda NOTRUN. Depois fixtures serializadas e validação consolidada; última execução fonte10(406unit/97de103E2E), sem aceite de checkpoint.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -625,7 +625,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP2-R1-01 | high | release-blocker | fix in this TODO | Confirmation can promote an expired candidate or overwrite cancellation | closed original TTL/cancel/CAS defect; final clocks remain ROOT02 | adherence-cp2-r3-result.json; qualified stable11..13 |
 | IG-CP2-R1-02 | medium | release-blocker | fix in this TODO | Instagram authorization admission diverges from current BU scope and error ordering | closed original authorization order/activeBU/array defect | adherence-cp2-r3-result.json; qualified stable11..13 |
 | IG-CP2-R1-03 | high | release-blocker | fix in this TODO | The Instagram HTTP boundary follows redirects beyond its validated endpoints | closed original redirect defect; native fetch boundary proof | adherence-cp2-r3-result.json; qualified stable11..13 |
-| IG-CP2-R1-04 | medium | release-blocker | fix in this TODO | Failed OAuth callbacks retain sensitive query URLs without the required response protections | open; protected precontroller v2 companion still unadmitted | adherence-cp2-r3-result.json; oauth-callback-session-companion-ready-v2.json |
+| IG-CP2-R1-04 | medium | release-blocker | fix in this TODO | Failed OAuth callbacks retain sensitive query URLs without the required response protections | open; exact user-admitted v2 source applied12; infrastructure/fullAPI/gateway/browser proof NOTRUN | adherence-cp2-r3-result.json; oauth-callback-session-companion-ready-v2.json |
 | IG-CP2-R1-05 | medium | release-blocker | fix in this TODO | Whole-batch preflight does not validate the supported message structure | closed original preflight defect and exactaccount fixture; currentfullAPI passed | adherence-cp2-r4-result.json; cp2-api-full-r4-result.json |
 | IG-CP2-R1-06 | medium | release-blocker | fix in this TODO | The reported sixteen-obligation map exceeds the behavioral proof actually present | open; exact finalmapping/preHTTP TTL/postCOMMIT proof plus primary/precontroller; replay/config/secondNest now supported | adherence-cp2-r4-result.json; cp2-r4-root-adjudication.json; cp2-api-full-r4-result.json |
 | IG-CP2-ROOT-07 | medium | release-blocker | fix in this TODO | Five Instagram write routes need safe catalog/audit classification | closed original audit/catalog defect; complete canonical coverage passed | adherence-cp2-r3-result.json; cp2-api-full-r3-result.json |
@@ -1342,6 +1342,8 @@ Source03 is terminal and explicitly incomplete. Root matched14 changed existing 
 | IG-CP3-ROOT-02 | high | release-blocker | fix in this TODO | new strictV2 and historical local recovery/tuple proof are approved scope | open | metadata expiry not selected; V2 knownACK reader absent; explicit newWA route absent; accepted-account comparison/legacy credential coupling |
 | IG-CP3-ROOT-03 | high | release-blocker | fix in this TODO | SCOPE-03 requires all public/Typebot/Consultar/legacy consumers | open | author acknowledged remaining consumers; no subset acceptance |
 | IG-CP3-ROOT-04 | medium | release-blocker | retain corrected provenance in this TODO | writer-path discipline and originalCP2 preservation | corrected qualified | cp3-source03-boundary-correction04.json; own additions removed exactly before any runner |
+| IG-CP3-ROOT-05 | high | release-blocker | fix in this TODO | SCOPE02/06 actual verified WA ingress must establish reply route | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
+| IG-CP3-ROOT-06 | high | release-blocker | fix in this TODO | canonical peer identity must govern acceptance while preserving legacy presentation | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
 
 Root authorized only removal of the writer's accidental send method from the sealed OAuth client and four IG widenings plus the remaining own SQL cast from the sealed official window policy. Exact original hashes were reconstructed in memory and independently verified after correction; no Git restore, private backup or user-work discard occurred. The outgoing implementation moved into the already admitted new messaging client. These corrections add no human scope/WHAT deviation. The read-only CP4 advisor incidentally observed the changed OAuth hash while checking config; that read is not frozen or final-source evidence.
 
@@ -1402,3 +1404,12 @@ Nova candidata250fontes/T/inputs positivos fica selada em `cp3-consumer07-frozen
 
 ### Readiness humana complementar —2026-10-24
 O usuário confirmou outra conta Instagram disponível para enviar DM à conta profissional e verificar a resposta quando o plano real for autorizado. Nenhuma configuração ou mensagem real solicitada agora; não autoriza runtime, token manual ou provedor.
+
+
+## CP3 candidate13 reconciliation and actual WA ingress repair14
+
+Fonte13 terminal: quatro consumidores e um spec novo; root conferiu253fontes públicas, somente os quatro caminhos admitidos mudaram em relação à baseline12. O histórico mantém fatos WA canônicos sem canal ativo/rota e sem inferir número de BU.phone; API pública/legacy BUs ficam WA-only; Incoming qualifica a identidade antes de consultar Typebot e preserva grupos WA. O controle de sessão WA do novo spec usa gatilho por palavra-chave porque a conversa já existe. Tudo permanece NOTRUN; não equivale a prova de isolamento ou regressão. Artefatos: `cp3-consumers13-terminal-reconciliation.json` e baseline positiva homônima.
+
+A candidata exata OAuth v2 está aplicada12 (SHA3106e6...), com fault spec novo e restauração protegida, ainda sem execução. A readiness11 foi centralizada para aceitar o subestado IG SUBSCRIBED_PENDING_RECEIPT somente com CONECTADO/receipt reais; o V1 deliberado preserva todos os fatos anteriores e fornece WABA sintética só antes do novoV2. Essas fontes não foram validadas pela rodada10 anterior. R1-04 e os findings CP3 continuam abertos.
+
+Root encontrou duas lacunas adicionais no owner comum: ingresso WA autenticado ainda não cria ConversationRoute, e aceitação/eco compara o campo legado contact em vez da identidade canônica. A premissa da preparação06 de que o webhook WA já fornecia rota está invalidada; não preencher rota após o webhook em fixture para esconder defeito real. `cp3-message-acceptance-wa-ingress14-handoff.json` delimita um único writer no serviço de aceitação e spec novo: derivar rota apenas do ingresso atual comprovado, preservar fatos/IDs/display legados e provar o percurso webhook→opçõesV2→resposta com Nest/PostgreSQL. Nenhum runtime privado, migração ou alteração Meta está autorizado.
