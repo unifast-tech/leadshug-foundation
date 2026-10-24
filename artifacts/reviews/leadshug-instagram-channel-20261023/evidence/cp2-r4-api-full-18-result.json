@@ -1,0 +1,34 @@
+{
+  "kind": "cp2-r4-current-full-api18-green",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "exit": 0,
+  "migrations": {
+    "count": 31,
+    "schema": "up to date"
+  },
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398,
+    "failed": 0
+  },
+  "e2e": {
+    "files": 43,
+    "passed": 555,
+    "failed": 0
+  },
+  "rootPostMatched": {
+    "sources": 242,
+    "todo": true,
+    "inputs": 108,
+    "preserved": 35,
+    "index": 3
+  },
+  "log": "cp2-r4-api-full-18.log",
+  "logSha256": "d3e9e308b9fa505dcc6a3fdc7583c0e80a3dbb764279e4a7b5ff8d6385fb0061",
+  "targetedReconciliation": "All3qualified17bnegative boundaries now passed their decisive assertions with all3matchedlivecontrols. Actual62s candidate margin crossed while finalUPDATE queued, allpromotion/ownership/candidate effects rolledback; live65s same2.2swait onepromotion/POST. ShortenedfuturepersistedTTL expired at observedclaimUPDATE withotherauthorizationlive; noNEWPOST/counter0/NOT_STARTED; liveequalhold onePOST. Native signedsession observedvalid thenexpired atdeferredclaimCOMMIT,401/zeroNEWPOST/exactoriginalresourceholderreleased withcounter1/attemptlease/cooldown/firstPOSTintent intact; liveequalhold onePOST. Allnormal5sTX/below4.5srequest/holderpreconditions reached, nopriorassertionsunreached.",
+  "qualification": "ShortenedpersistedTTL is robustness, notnaturaltenminuteexpiry. Extra finalpreHTTP/postCOMMITclockcoherence sourceguard is not a separatelyheldfinal-fence timing experiment. FullAPIisnot ALL/browser/stress/realMeta/runtime/primaryobserver acceptance.",
+  "reviewBoundary": "FreshaffectedR5active on frozeninputs; thisunique receipt/log explicitlyexcluded/unreadbyreviewer. Source/T/inputfreeze remains untilR5terminal. Rootwilladjudicatebothterminal, no sourcewriter or CP2/featureacceptance yet."
+}

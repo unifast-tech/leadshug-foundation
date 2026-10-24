@@ -1,0 +1,24 @@
+{
+  "kind": "cp3-test-first-sole-writer-handoff01",
+  "ownedPaths": [
+    "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+    "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+    "api-app/test/helpers.ts"
+  ],
+  "basis": [
+    "cp2-r5-api18-both-terminal-reconciliation.json",
+    "cp2-r5-root-adjudication.json",
+    "cp3-fixture-concretization-qualified.json",
+    "cp3-primary-message-wire-verification.json",
+    "cp3-test-first-concretization-source13-preparation.json"
+  ],
+  "frozenProduction": "All242source18existingpaths immutable exceptnarrowmessagesfake inhelpers; authservice2ecfcbfe... andalloldtests remainexact. BothCP2lanesterminal, no runner/revieweractive.",
+  "scope": "Testfirstonly, beforeCP3source. ActualNest/BFF/PG/nativeSession; fakeonlyexternalproviderHTTP. Newtestsroutecontext/V2/newwriter/WAregression/policy boundaries andeveryV1state actualoldread/reconcile/ack/localknownACK/exclusion; rootqualifiedadvisory governsfield/route/state/oracleprecision.",
+  "helperChange": "Only extend existinginjected instagramFetch externalboundary with strict fixedgraph.instagram.com/v26.0/<account>/messages POST (primaryJSONrecipient/message.text), deterministicrecipient_id/message_id response andsafeaccount/peer/textcallcapture. OptionalsyntheticsendEnvelope forACKwithoutID/unknown tests, resetwithlimparBanco. PreserveeveryexistingOAuth/subscriptioncallobject/branch/hooks/counters/resetmeaning. Neverlog/capturetoken/header/query/code/state; syntheticmessagebodymemoryonly. No helperdomain/session/Prisma/resolver replacement, no globalnewfakeframework.",
+  "dtoConcretization": "Useoneexplicitreply-optionsDTO withinapprovedT, no permissivealternate-shapefallback; reportexactchosenitems/options/propertiesbeforeproductionthaw. Existingordinarytexto wirefield stays; routeId/channelId/expectedGeneration/contextFingerprint fromserveroption. No secondreplyendpoint ornewrequestkeysystem. Do not importnonexistentfuturemodules tocreatecompile-onlyfailure.",
+  "v1Precision": "All4ordinary+7initialstates, live/pastdeadline/matchedcontrols; exactinitial-onlyreceipt/request/fingerprintfields, logicalJSONpreservation. Oldread/reconcile/ackzeroHTTP isnotblanketbanonlegitimateNEWV2sendafterrelease. SeparateWAnewV2controlsfromnewIGtwoaccountcases. Unknownversion/unprovedassociationblocked;noV1conversion/rehash/sendableChannel. Do notrewriteconversation.updatedAt toforceCAS.",
+  "policyPrecision": "QualifiedactualsignedINtext opens24h onlyexactresource/peer; wrongaccount/echo/OUT/read/invalidoldfuture doesnotopen; IGinitial/Typebot/public/ConsultarlegacyremainWAonly. AllnewtextsmallASCII fittingbothpendinglimits. No character/bytechoice or numericguard assertion now.",
+  "testDiscipline": "Meaningfultest-firstfeatureRED, distinguishnotyetimplementedreply-options404 fromfixture/auth/ingressfailure. ActualOAuth/ingressandvalidfixturecontrolsmustreached; no domain mocks, no fakeclock/txn/session, no actorquota/timeoutincreases or seedshortcuts bypassingactualroute/account identity forIG. V1historicalrowsmaybeseededactualPrisma. Testsreadonlyexisting, noweakenedassertions; no skips togreen.",
+  "forbidden": "NO productcode/oldtestother/helperseed changes, runner/lint/build/Git/worktree/copy/docs/private.env*/.local-files/processenv/args/runtime/provider/Meta/network. RootownsT/E; allproduction sealed. Threependinghumanproposals/primaryobserverunwaived.",
+  "completion": "Returnterminal exact3pathSHA/testnames/fixture+DTOdecisions/actualboundedreadset/NOTRUN. Rootstaticpreflight+freeze beforeseparatecanonicalapi-instagramtestfirstvalidation; thenrootthawsourceimplementationandcurrentfullproof. CP3notacceptedfromtestwriting."
+}

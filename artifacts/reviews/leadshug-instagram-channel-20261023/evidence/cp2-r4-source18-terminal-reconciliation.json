@@ -1,0 +1,38 @@
+{
+  "kind": "cp2-r4-source18-terminal-reconciliation",
+  "writerTerminal": true,
+  "ownedPath": "api-app/src/domain/channels/instagram-authorization.service.ts",
+  "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a",
+  "otherSourcesMatched": 241,
+  "historicalInputsMatched": 100,
+  "preservationMatched": 35,
+  "rootIndexMatched": 3,
+  "productionExecution": "NOTRUN",
+  "rootPreflight": "Read changed mapping/claim/cleanup/tuple/fence/clock helpers. Fresh mapping DB-clock guard after finalpromotion uses locked immutablecandidate facts. Claim SQL includes expires_at. Active tuple uses DBclock boundedDate.now, receipt branch exempt. One lifecyclefinally covers acquisition await and allsettledcontinuations; exactoriginalaccount/tokenCAS releases no successor/history. FinalpreHTTP and active recheck capture locked immutableclocks and guard after awaitedtransaction, with final synchronous signed-session checks after last awaitedclockquery. Shared clock predicate/reader, no duplicatewrapper. Alltests/other241sources unchanged; no primary or pendinghuman edits.",
+  "actorTransactionCallers": {
+    "count": 17,
+    "activeTemporal": [
+      "callback claim",
+      "callback safe-failure settlement",
+      "callback candidate completion",
+      "candidate-to-active mapping",
+      "mapped subscription claim",
+      "GET/null settlement",
+      "POST success settlement",
+      "provider-error settlement",
+      "pre-request HTTP fence",
+      "callback-owner revalidation"
+    ],
+    "localHistoricalOrMixed": [
+      "create/idempotent replay",
+      "explicit cancel including expired cancellable attempts",
+      "confirmation claim: completed replay vs fresh/in-progress selective",
+      "save completed confirmation from resolved subscription result",
+      "advance known subscribed receipt/replay",
+      "mark independently known prior subscription",
+      "read active tuple OR independent committed receipt"
+    ]
+  },
+  "proofQualification": "New source18 NOTRUN. Current17b precise3causalRED +3passedlivecontrols; previous91passed. Additional post-COMMIT clock/source coherence static until current proof/review, no independently delayed final-fence clock case claimed. All17historical branches not blindly assigned activeexpiry.",
+  "next": "One complete canonicalAPI plus fresh bounded affected-source review supplementing completeR4, not replacing it. Rootreconcile bothterminal before thawCP3. No CP2/featureacceptance."
+}

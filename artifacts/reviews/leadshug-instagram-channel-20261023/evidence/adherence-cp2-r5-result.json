@@ -1,0 +1,95 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r5-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "instagram_cp2_adherence_r5-native-gpt-6.1-sol-xhigh",
+  "overall_assessment": "changes_required; AFFECTED R5 is complete: all12 required actual source bodies, all11 exact governing TODO ranges, all15 evidence semantics and all16 CP2 obligations assessed across the five required axes. Source18 coherently implements the three qualified17b owner-local repairs; no additional material source regression was identified in these actual reads. Its dynamic proof is outside this package and remains for root reconciliation. Primary own observation and precontroller confidentiality remain unaccepted. This supplements the terminal completeR4; it is neither a fresh full62-source/full-current-TODO review nor CP2/feature acceptance.",
+  "recommended_path": "Adherence remains mixed because unwaived primary/protected-path and precise evidence obligations remain. Preserve source18 and the unchanged tests while root independently reconciles the separate completeAPI18 against the exact freeze after both lanes terminate; no GREEN18 is assumed here. The mapping fresh-clock check, active attempt-TTL fence and single exact-original-token lifecycle are statically faithful to the approved contract. Keep ROOT02 and SUBREC02 at their governing high/release-blocker routing until current dynamic evidence qualifies disposition; no new product repair is requested solely because the receipt is excluded. Keep durable UNKNOWN/no secondPOST, independent signed-IN receipt, known ACK, cancellation, successors and immutable COMPLETED replay. Performance, elegance and structural soundness of the affected repair are acceptable within the existing owner; operational fit remains mixed pending supported own observation and complete consumers. Follow the approved independentCP3 sequencing only after root reconciliation, with CP2 still unaccepted. No parent-app/config-ID guess, lifetime-wide three-request cap, automatic retry, middleware/privacy/bytes admission or gate waiver is introduced. All three pending human proposals, CP3..CP6, all consumers, canonicalALL, EPS/FRC/BCI/RLS, stress/security/TQA/cutover/final and separately approved physical proof remain mandatory.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-SUBPROTO-01",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Supported own-account subscription observation remains unaccepted",
+      "rationale": "Carry IG-SUBREC-03 with this finding under SCOPE-04/DOD-03 and TODO1092-1105. Direct current body read: instagram-http.client.ts:85-92 still makes a provisional GET and returns null for every successful envelope. Service480-485 and493-515 preserve resource history/firstPOST intent; the observation continuation536-557 honestly settles UNKNOWN and cannot authorize a repeated POST. That safety does not implement the mandatory supported own-account observer. subscription-primary-recheck-after-cp2r1.json establishes POST success:true but does not establish GET envelope, identity namespace, own-app visibility or conclusive absence. Missing documentation is not proof of unsupported behavior; no provider operation or fresh web lookup was performed.",
+      "suggested_action": "Retain IG-SUBPROTO-01 and IG-SUBREC-03 as open primary prerequisites. Establish authoritative own-observation semantics before implementing their supported identity/completeness checks and meaningful proof. Preserve UNKNOWN/no-repeat and approved independentCP3 sequencing; infer no parent-app identity, new configuration, alternate login, broader permission or investigation authority.",
+      "affected_paths": [
+        "api-app/src/integrations/instagram/instagram-http.client.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-ROOT-02",
+      "severity": "high",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Temporal repairs are present, while current-source qualification remains outstanding",
+      "rationale": "Governing high/release-blocker retained, not a claim that source18 reproduces the defect. Qualified17b reached the actual final UPDATE with a real62-second candidate initially above60seconds, crossed its margin during2.2seconds, then observed409 with committed mapping/owner/channel/credential/provider effects and cleared candidate; matched65-second control passed. It also reached an actual subscription-claim UPDATE with a deliberately shortened future persisted TTL, crossed TTL while session/credential/phase stayed live, and observed one unwantedPOST/requests1/OBSERVING; equal-wait liveTTL control passed. This is shortened-metadata robustness, not natural ten-minute expiry. Source18 service333-335 reads the current locked candidate,368-379 guards after the awaited promotion via664-672 so crossed mapping clocks throw inside the transaction and roll back all effects. Acquisition505-519 now includes expires_at and rechecks active tuple752-771 with current database time. Final preHTTP642-654 and active recheck730-748 capture exact locked clocks and check fresh max(DB time,Date.now) after awaited transaction completion, followed by synchronous signed-session verification after the last awaited clock query. commit-fences spec162-260 retains full rollback/candidate/counter/zeroPOST and live controls with actual observed waits and normal<4.5second bounds. These source/test statements are static for source18: the active/future fullAPI18 log/result is deliberately excluded and unread.",
+      "suggested_action": "Root should reconcile the separate terminal fullAPI18 on this exact frozen service/tests/T/inputs before closing ROOT02 or calling these GREEN. Require the exact mapping rollback and zeroPOST/zero-counter assertions plus matched live controls and existing callback/subscription clock regressions, not merely409 or suite counts. Preserve the source16 six supported clock repairs, historical zeroHTTP replay/known facts and ordinary timing budgets. No additional source change or universal postcommit/interleaving proof is inferred from this affected review.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+        "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-SUBREC-02",
+      "severity": "high",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Acquisition cleanup now shares the exact-holder lifecycle; current proof still requires reconciliation",
+      "rationale": "Retain governing high/release-blocker until current code/evidence qualification. Qualified17b actually observed deferred claim COMMIT queued while a native signed session was live, observed its natural expiry before release, and reached401/zeroPOST with requests1/OBSERVING, durable claim history and the original binding holder incorrectly retained. Equal-duration liveSession control passed within the normal5second transaction budget. Source18 service454-459 now enters try before acquisition actorTransaction, and599-601 finally awaits657-662 exact provider/account/original-token CAS release. Thus actorTransaction855-862 rejecting after committed acquisition is statically covered. All provider/finalization continuations remain awaited inside the lifecycle: no release is moved ahead of an unresolved boundary call. Release clears only matching binding lease fields, retaining attempt lease, cooldown, firstPOST tombstone, request count, cancelled state, independent receipt/messages and a successor token. Actual current tests directly read: commit-fences263-317 distinguishes postCOMMIT cleanup/history; binding40-125/195-255 holds external calls and protects successors; finalization63-134/162-295 retains settled-fault and queued GET/null successor proof. Source16/17b prior91 and all three17b controls are supported historical dynamic evidence, not execution of source18.",
+      "suggested_action": "Root should reconcile the separate current fullAPI18 exact postCOMMIT401/zeroPOST/original-holder-cleared/history-retained case and live control plus held-provider/successor/receipt/fault regressions before closing SUBREC02. Keep the single exact-token lifecycle and do not clear successors, counters or history or release while the awaited provider boundary remains pending. No new framework, mutation retry or timeout increase is needed on the inspected source.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+        "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+        "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-04",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Precontroller callback confidentiality still awaits admitted middleware and consumer proof",
+      "rationale": "Direct R5 controller37-54 still sets no-store/no-referrer and a fixed allowlisted303 for reached failures. The unmodified session.middleware.ts:78-117 precontroller denial surface is carried from completeR4 by exact current hash80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211; its body was not freshly reread in R5. Known absent/expired/revoked-session, onboarding/password and unexpected infrastructure denials can occur before callback response protections and leave sensitive code/state as the error-document URL. oauth-callback-session-companion-ready-v2.json is a reviewed unapplied proposal with explicit userPathValidation pending; proposal-level closure of IG-OAUTH-SESSCOMP-01 does not implement this path or close R1-04. No browser/gateway/log exposure result is claimed.",
+      "suggested_action": "Keep R1-04 open. After explicit human admission, use a serialized writer for the exact protected path and prove actual Nest/PostgreSQL known denials and unexpected failures, ordinary-route/auth ordering and no side effects. Complete fixed-text React consumer and real-backend browser/gateway confidentiality in CP4. PrivacyHTML and outbound1000UTF8-byte proposals also remain pending; current1000-character rule is still normative.",
+      "affected_paths": [
+        "api-app/src/surfaces/bff/session.middleware.ts",
+        "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    },
+    {
+      "finding_id": "IG-CP2-R1-06",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "All sixteen obligations are retained with precise affected-proof and later-delivery limits",
+      "rationale": "The R5 collection records all12 actual bodies/3247 lines, all11 governing ranges and all15 required evidence semantics, the complete16-row R4 map and R5 affected/preserved/open/deferred status. CompleteR4 read all62 bodies/full then-current1252-lineTODO/61 evidence and is terminal; exact collectionSHA0d4c5044d3ec50a6ffa69d2f91c461b01c60e867238ed403cbc82d72903edbdf and60 unchanged current body hashes preserve that provenance. R5 is not a freshfull62/fullTODO pass. Historical source16 full398unit/549E2E and17b398unit/94of97 (all91 previous and3 live controls passed;3 new causalRED) are qualified inputs. Validation17 stopped before E2E on a wall-clock elapsed confound; unit17b changed only two elapsed measurements to performance.now, retaining absolute Date.now deadlines,875/1500 bounds and nativeHTTP/body/guard/request assertions. Existing strict20 confirmations, config9, actual credential-version/current-expiry historical replay, real committed-writer recovery and second realNest/samePG quota/URL replay remain supported; no closed unchanged finding is reopened. Current source18 dynamic proof is excluded, and primary observer, precontroller protection and later consumer/assurance proofs remain outstanding. Hash equality establishes freeze/provenance, not correctness or universal coverage.",
+      "suggested_action": "Root must reconcile both terminal lanes and record authoritative dispositions without replacing this affected review with an aggregateGREEN claim. Retain CP3 shared Channel/policy/sender/acceptance and all APIv1/Typebot/legacy consumers; CP4 actual React registration/OAuth/capabilities/connections/inbox/pagination/verify/disconnect/composer/CI/gateway/browser/freshness; CP5 canonicalALL, fourPCV lanes, five-wave20 claims/ingress/resource concurrency,10000-conversation EPS/RLS,<=15second1000-update proof, security/TQA/cutover/adherence/final; and CP6 separately approved preservation/runtime/physical Instagram and both WhatsApps. The three human proposals, all16 obligations and own observer are unwaived; this is not final independent TQA, backend-only delivery or CP2/feature acceptance.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+        "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+        "api-app/test/helpers.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "kind": "bounded-file-set-affected-cp2-source-adherence-r5",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "68df80a79d3c2f50bf5b302d92b24b3cf417c4a0991cc242cf539496df460575",
+    "bytes": 212984
+  },
+  "governingTodoRequiredReadRanges": [
+    [
+      1,
+      85
+    ],
+    [
+      207,
+      286
+    ],
+    [
+      296,
+      310
+    ],
+    [
+      325,
+      397
+    ],
+    [
+      427,
+      474
+    ],
+    [
+      646,
+      669
+    ],
+    [
+      723,
+      730
+    ],
+    [
+      773,
+      847
+    ],
+    [
+      867,
+      899
+    ],
+    [
+      1092,
+      1112
+    ],
+    [
+      1255,
+      1297
+    ]
+  ],
+  "governingTodoReadPolicy": "Read ALL listed exact governing current sections; fullT available for needed directclarification. This is explicitly bounded affectedreview supplementing completeR4, not a freshfullTODO/full62body pass. No reduction/replacementofliveR4: R4wascomplete terminal before prospectiveR5design.",
+  "freezeManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r4-source18-frozen-manifest.json",
+  "scope": "Affected current authorizationservice/fullbody, all3qualified17bcausalboundaryrepairs, existingcallback/subscription/replay/receipt/successor/grant/session ownership and newtests/unitmeasurement. All16CP2obligations must be mapped affected/preserved/open/deferredwithoutwaiver using exact unchanged completeR4 review provenance. Assess adherence/performance/elegance/structure/operationalfit and regressions ofclockcheck/lifecycle design. No CP2/feature acceptance.",
+  "requiredSourcePaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+    "api-app/src/infra/session/session.service.ts",
+    "api-app/src/infra/prisma/prisma.service.ts",
+    "api-app/test/helpers.ts",
+    "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts"
+  ],
+  "mustReadEvidence": [
+    "adherence-cp2-r4-result.json",
+    "adherence-cp2-r4-merge.json",
+    "adherence-cp2-r5-r4-carry-forward.json",
+    "cp2-r4-root-adjudication.json",
+    "cp2-r4-causal-validation-17b-result.json",
+    "cp2-r4-source18-terminal-reconciliation.json",
+    "cp2-r4-source-repair-18.json",
+    "cp2-api-full-r4-result.json",
+    "cp2-r4-causal-validation-17-result.json",
+    "cp2-r4-unit17b-terminal-reconciliation.json",
+    "cp2-test-first-handoff-plan.json",
+    "subscription-primary-recheck-after-cp2r1.json",
+    "oauth-callback-session-companion-ready-v2.json",
+    "privacy-instagram-companion-ready.json",
+    "instagram-text-byte-limit-ready.json"
+  ],
+  "allowedOptionalEvidence": [
+    "adherence-cp2-r4-collection.json",
+    "adherence-cp2-r4-package.json",
+    "cp2-r4-causal-validation-17b.log",
+    "inherited-public-preservation-v1.2.json"
+  ],
+  "contextReadPolicy": "Read all12requiredactualsourcebodies fully. Immediatepubliccontext only within242sealedpathsexactmanifest if needed; recordactualadditionalreads. No tests/runner/private.env*/.local-files/processargs/env/runtime/Meta/provider/Git broadinventory. ExactR/AGENTS.md +R/delphi-ai/main_instructions.md/currentprofilebootstrap only; neverbackup search. R4largecollection may be JSON-parsed for all62readcompleteness/16obligation/completion metadata without dumping historicalrange inventories into context; rootcarryforward preserves relevantstructuredfullmap and exactSHA. CurrentfullAPI18log/result excluded whileactive.",
+  "mandatoryQuestions": [
+    "Do finalmapping temporal facts revalidate after actual awaitedpromotion and roll back allowner/channel/credential/provider/candidate effects? Check actual62vs65providerlifetime and queuedSQL evidence;409alone is insufficient.",
+    "Does active subscriptionclaim/preHTTP eligibility include currentattemptTTL/databaseclock and preserve historical/localreceipt paths? RealshortenedTTL case is robustness, notnaturaltenminuteexpiry; all3controls passed and all91oldcases passed.",
+    "Does one exactoriginalaccount/token lifecyclefinally include acquisition await/postCOMMITthrows and allsettledprovidercontinuations, keep holderwhileHTTPpending, neverclear successor/history/cooldown/firstPOSTtombstone/counter?",
+    "Review new clockfacts after actorTransaction: session checked synchronously after lastawait; no stale phase/owner/generation/credential assumptions or self-created locks/deadlocks; no HTTP insideTX, no added mutation retries, no lifetimebudget invented.",
+    "All17actorTransaction callers classified: newphase vs authorizedhistorical/localfact. Immutablecompletedreplay, knownACK, independentqualifiedINreceipt/cancel/cleanupcurrenttuple/successors retained. No blanket expiry rejections.",
+    "Meaningfultests realNest/BFF/PostgreSQL/nativeSessionService/fakeexternalHTTP only; actual queued barriers/eligiblethenexpired/normal5s budget/equalwaitcontrols reached before decisiveassertions. Test17unit confound:875/1500bounds unchanged, monotonicelapsed only, no relaxed/replaced oracles.",
+    "Performance/elegance/structure: avoid unnecessary DBqueries on historical/noholderbranches, duplication/scatteredconditions/framework growth; evaluate boundedlock/query additions and normalcaps honestly, no unexecutedpcv claim.",
+    "Carry completeR4 all16/currentprimary/publicconfidentiality/consumers/CP3..CP6 ledger precisely. Existingclosedunchanged findings not reopenedwithoutnewactualevidence. Pendinghumanprivacy/middleware/bytes are not approved or waived."
+  ],
+  "openFindingsAuthoritative": [
+    "IG-SUBPROTO-01",
+    "IG-SUBREC-03",
+    "IG-CP2-ROOT-02",
+    "IG-SUBREC-02",
+    "IG-CP2-R1-04",
+    "IG-CP2-R1-06"
+  ],
+  "consumerMatrix": "ExactTFrontend/ConsumerMatrix inrequiredread. ActualReact/operatorconsumers remainmandatoryapprovedCP4, notimplemented/evidenced/no waiver. CP3policy/sharedsender, CP4UI/CI/browserfreshness, CP5ALL/stress/security/TQA/cutover/final, CP6separatelyapprovedruntime remainmandatory; no backend-onlydelivery.",
+  "primaryBoundary": "Publicofficialdocs establishPOSTsubscription success:true; GET own-app identity/completeness/absence not established. CurrentnullUNKNOWN withoutrepeatPOST is not a completedownobserver; no guessedappID/config/alternateflow.",
+  "pendingHuman": "T1000characters remainsnormative; reviewed1000UTF8bytes, privacyHTML andsessionmiddlewarecompanion allawait explicitvalidation. Protected files unchanged.",
+  "fullApi": "Source16fullAPI398unit549E2E remains historical.17b398unit94/97E2E with3causalRED +3controls. Current source18fullAPI validation runs separately on samefreeze and is excludedfromreviewinput. Do not readfuturelog/claimgreen. Rootreconcileslater.",
+  "reviewOutput": "StrictJSONcanonicaldispatch with all5axes/findingsconcretepathline/staticvsdynamic/reachedproof and exactstillopenobligations. Writeonly newresult/collection/merge outputs specifieddispatch. Collection12bodyreads complete andallgoverningranges/required15evidence. Source/T/input/preservation/index beforeafter exact checks. No feature/checkpoint acceptance.",
+  "reviewOutputFiles": [
+    "adherence-cp2-r5-result.json",
+    "adherence-cp2-r5-collection.json",
+    "adherence-cp2-r5-merge.json",
+    "adherence-cp2-r5-merge.md"
+  ]
+}

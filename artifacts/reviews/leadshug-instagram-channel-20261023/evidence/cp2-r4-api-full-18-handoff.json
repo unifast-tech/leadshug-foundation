@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r4-full-api-only18",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "freeze": "cp2-r4-source18-frozen-manifest.json",
+  "sourceCount": 242,
+  "boundInputCount": 108,
+  "log": "cp2-r4-api-full-18.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r4-validation18.json",
+  "instructions": "ONEcompletecanonicalAPI includes targeted97andallprior549API plus6new cases; no redundantselectedrun. Separatevalidationonly, unique log output. Beforeafter242/T/inputs/35preserved/3index. No retry/autofix/source/docs/input/Git/private/runtime/provider/Meta. FreshaffectedR5reader mayrunreadonly inparallel on samefreeze; do notread/write itsresults. All3qualifiedRED17b mustbeclassified currentpassed/reached/unreached along3matchedcontrols andalloldcases. Rootreconcile bothterminal beforeanythaw. No primary/human/feature/CP2acceptance."
+}

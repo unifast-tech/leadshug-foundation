@@ -1,0 +1,612 @@
+{
+  "kind": "cp2-r5-affected-review-complete-r4-carry-forward",
+  "completeR4": {
+    "result": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r4-result.json",
+      "sha256": "dc7ca0ad8a7eea3a50ee7f418af137157cbb2d9160c49daa003d253762a3e771",
+      "bytes": 15304
+    },
+    "collection": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r4-collection.json",
+      "sha256": "0d4c5044d3ec50a6ffa69d2f91c461b01c60e867238ed403cbc82d72903edbdf",
+      "bytes": 286172
+    },
+    "merge": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence-cp2-r4-merge.json",
+      "sha256": "cc7fd6afd06fab763c96e0b70d8add0c087eee9b64648ba1375a5ed573bcb436",
+      "bytes": 14515
+    },
+    "reviewCompletion": {
+      "actualRequiredSourceBodies": 62,
+      "allRequiredSourceBodiesRead": true,
+      "fullApprovedTodoRead": true,
+      "todoLines": 1252,
+      "requiredEvidenceSemanticsInspected": 61,
+      "allSixteenObligationsAssessed": true,
+      "requiredAxes": [
+        "adherence",
+        "structural_soundness",
+        "operational_fit",
+        "performance",
+        "elegance"
+      ],
+      "strictResultAndMergeComplete": true,
+      "allPostchecksTerminal": true,
+      "reviewerTestsOrRuntimeExecuted": false,
+      "newCurrentFullApiReceiptInspected": false,
+      "overallFeatureComplete": false,
+      "checkpointAccepted": false
+    },
+    "obligationAssessment": [
+      {
+        "id": "CP2-CONFIG",
+        "source": [
+          "instagram-http.client.ts:124-159",
+          "instagram-authorization.service.ts:24-34"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:69-86",
+          "instagram-cp2-residual.e2e-spec.ts:199-238"
+        ],
+        "qualifiedProof": "Complete/partial capability; nine individual missing/malformed product/webhook/crypto variants, zero new attempts/HTTP, secrets absent; current selected16 receipt supports reached cases. All-absent shape is statically fail-closed; not every arbitrary configuration string enumerated.",
+        "remaining": "Actual React/operator consumer planned CP4, no waiver; do not silently admit three human proposals."
+      },
+      {
+        "id": "CP2-AUTHZ",
+        "source": [
+          "instagram-authorizations.controller.ts:14-91",
+          "session.middleware.ts:78-140",
+          "instagram-authorization.service.ts:804-841"
+        ],
+        "tests": [
+          "instagram-cp2-residual.e2e-spec.ts:263-354",
+          "instagram-cp2.e2e-spec.ts:248-267,967-994"
+        ],
+        "qualifiedProof": "Actual401/CSRF403/insufficientrole403/outscope404/otheractor404/inactiveBU404; authorized malformed shape400 follows authorization, zero provider effect. Current locked actor/grant checks and signed-expiry-after-wait wrapper directly read.",
+        "remaining": "Precontroller callback safe failure path still unadmitted R1-04; post-commit claim cleanup SUBREC02."
+      },
+      {
+        "id": "CP2-IDEMPOTENCY",
+        "source": [
+          "instagram-authorization.service.ts:30-88,235-278,391-417"
+        ],
+        "tests": [
+          "instagram-cp2-residual.e2e-spec.ts:240-261",
+          "instagram-cp2-binding.e2e-spec.ts:125-193",
+          "instagram-cp2.e2e-spec.ts:455-493,1382-1469",
+          "instagram-cp2-recovery.e2e-spec.ts:31-132"
+        ],
+        "qualifiedProof": "20 fresh creates one row/URL/audit;20 fresh confirmations strict19x409 CONFIRMATION_IN_PROGRESS then winneronePOST/audit/version1/completedreplay; real committed writer fault disabled before originalkey/body replay preserves ciphertext/version/hash; actual new credentialversion thenexpiry historicalreplay immutable0HTTP; secondrealNest/samePG quota+URL replay. Run12 old18+1 is historical, exact13/16 asserts support reached currentproof.",
+        "remaining": "FullcurrentcanonicalAPI rootreceipt excluded; CP5fivewaves/stress remain."
+      },
+      {
+        "id": "CP2-CALLBACK",
+        "source": [
+          "instagram-authorization.service.ts:99-194,770-782,824-831",
+          "instagram-authorizations.controller.ts:37-54"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:107-246,304-439,870-965,1163-1200",
+          "instagram-cp2-residual.e2e-spec.ts:53-197",
+          "instagram-cp2-final-clock.e2e-spec.ts:200-337"
+        ],
+        "qualifiedProof": "Wrong/missing/expired/crosssession/replay/CAS before HTTP; cancel/grant/password/token takeover after held OAuth call; two natural short signed-session PG waits with matched controls; actual expires_in margin and shortenedmetadata finalcallback rollback controls. Controller failure strips secrets and appliesno-store/no-referrer.",
+        "remaining": "Precontroller R1-04 remains; no gateway/browser proof; old15s confound never used."
+      },
+      {
+        "id": "CP2-TOKEN",
+        "source": [
+          "instagram-http.client.ts:36-82,104-123",
+          "channel-credential-crypto.ts:1-96",
+          "instagram-authorization.service.ts:157-193,300-305,362-377"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:269-302,423-438",
+          "instagram-cp2-residual.e2e-spec.ts:356-387,516-584",
+          "instagram-http.client.spec.ts:41-128",
+          "instagram-cp2-final-clock.e2e-spec.ts:275-337,344-349"
+        ],
+        "qualifiedProof": "Mandatory fixed short\u2192long\u2192versioned/me, decoded scopes, ambiguous/unsafeIDs fail, short/long errors; acquiredAt conservatively beforelongrequest andactual expiry; real versioned/me delay; nativefetch guard/header/bodydeadline/redirect tests. Candidate vsactive AAD distinct.",
+        "remaining": "ROOT02 mapping finalwrite clock gap; no actual Meta token/readiness proof."
+      },
+      {
+        "id": "CP2-IDENTITY",
+        "source": [
+          "schema.prisma:333-402,539-589",
+          "20261023190000_instagram_identity_routes/migration.sql:1-364",
+          "instagram-authorization.service.ts:306-377",
+          "instagram.controller.ts:90-130"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:234-245,441-453,776-785",
+          "instagram-identity.e2e-spec.ts:78-241"
+        ],
+        "qualifiedProof": "Distinct authref/professional opaque strings; namespace/client/API family account scope; global retained business/resource owner, scoped compositeFK/immutability and twoIGsamepeer separate. Current migrations/source/test bodies read.",
+        "remaining": "No guessed ownGET identity/config; CP3 exact dispatchconsumer still required."
+      },
+      {
+        "id": "CP2-CONFIRM",
+        "source": [
+          "instagram-authorization.service.ts:235-417"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:107-246,441-453,788-823,1072-1161,1330-1432",
+          "instagram-cp2-residual.e2e-spec.ts:389-476,655-673",
+          "instagram-cp2-binding.e2e-spec.ts:39-193"
+        ],
+        "qualifiedProof": "Explicit candidate, no channel/credential preconfirm; key invalid/missing400; sameowner/credentialversion fences and crossBU refusal; TTL/cancel real-lock and actual competingreauth preservewinner/currentreceipt/messages. Historicalresult replay before newusability work intentionally correct.",
+        "remaining": "ROOT02 finalpromotion and mappeddispatch TTL boundaries need exact meaningful proof; do not erase supported originalR1-01/ROOT04 repairs."
+      },
+      {
+        "id": "CP2-UNCERTAINTY",
+        "source": [
+          "instagram-authorization.service.ts:450-747",
+          "instagram-http.client.ts:84-102"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:635-785,1216-1328",
+          "instagram-cp2-binding.e2e-spec.ts:39-124,195-255",
+          "instagram-cp2-finalization.e2e-spec.ts:136-297"
+        ],
+        "qualifiedProof": "Resourcewide durablefirstPOSTintent/holder/cooldown; indexed bounded history existence reads; atmost3 currentattempt requests; held duplicate denies; UNKNOWNempty/unrecognized cannotrepeatPOST acrossnewattempt/reauth/cancel. Perexplicit40s not permanentmappingdeadline;60slease and10scooldown remain distinct. GETnull insideTX tuple/successor repaired and causalGREEN16 qualified.",
+        "remaining": "IG-SUBPROTO01/SUBREC03 primaryownobserver unaccepted; SUBREC02 acquisitionpostcommitcleanup and ROOT02 attemptTTL dispatch. No invented resource-lifetime3cap."
+      },
+      {
+        "id": "CP2-CANCEL",
+        "source": [
+          "instagram-authorization.service.ts:206-233,598-600,653-657"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:308-331,739-823,1090-1161,1308-1328",
+          "instagram-cp2-residual.e2e-spec.ts:676-738"
+        ],
+        "qualifiedProof": "Real authenticatedcancel controlsstate; pendingGET/POST lateactor result denied; independent receipt/messages/unread andciphertextversion retained; exactoldtokenfinallycleanup aftersettled providererror, successorCAS protectsnewholder.",
+        "remaining": "No remote revoke/transfer implied; disconnectconsumer remains approved laterwork; postcommitclaim cleanup static."
+      },
+      {
+        "id": "CP2-SIGNATURE",
+        "source": [
+          "body-parsers.ts:1-42",
+          "instagram.controller.ts:26-43,132-138"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:88-96,495-555",
+          "instagram-cp2-residual.e2e-spec.ts:586-599"
+        ],
+        "qualifiedProof": "RawbytesHMAC beforedomaincontent; missing/wrong/alteredbytes, OAuthsecretandWAsecretrefused; semanticJSONequivalent differentbytescannotreuseHMAC; verify challengeisolated.",
+        "remaining": "No realappsecret/provider/browser proof inferred."
+      },
+      {
+        "id": "CP2-BOUNDS",
+        "source": [
+          "body-parsers.ts:23-42",
+          "instagram.controller.ts:9-88"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:557-606,825-868,996-1070"
+        ],
+        "qualifiedProof": "Actual1000distinctMID/peer batch exact1000messages/conversations/routes/identities/unread thenzeroeffectreplay;1001/8MiB/16KiB refuse; canonicalcase/trailingslash aliasprobes; malformedmessage/mid/entryaccount wholebatchbeforeeffects. ROOT15 exactprofessional fixture currentselected16passes; oldwholeR3laterassertionsunreached.",
+        "remaining": "Gateway/CIparityCP4, <=15s batch capacityCP5 not proved by count or arbitrary endpointtimeout."
+      },
+      {
+        "id": "CP2-ORIENTATION",
+        "source": [
+          "instagram.controller.ts:90-130",
+          "message-acceptance.service.ts:256-308"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:608-633,776-785",
+          "instagram-cp2-residual.e2e-spec.ts:601-674"
+        ],
+        "qualifiedProof": "Exactentryrecipient/account, senderpeer;echo/self/deleted/read/reactionnotIN; accountscopepeers separate, routescreated by soleacceptance.",
+        "remaining": "CP3reply exactroute/contextconsumer pending, no backend-onlycompletion."
+      },
+      {
+        "id": "CP2-WINDOW",
+        "source": [
+          "instagram.controller.ts:115-126",
+          "message-acceptance.service.ts:220-225"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:608-625",
+          "instagram-cp2-residual.e2e-spec.ts:641-650"
+        ],
+        "qualifiedProof": "Originalsignedtimestamp only; old25h/future10min/missing acceptedwithoutqualifiedwindow timestamp; echo/read/self/deleted/unsupported noinput creation; noentry.time/localtime substitution. Sharedtimestamp helper conservatively refuses anyfuture.",
+        "remaining": "Actual24hreplypolicy/ChannelandUI allCP3/CP4; no initial/automationIG introduced."
+      },
+      {
+        "id": "CP2-REPLAY",
+        "source": [
+          "message-acceptance.service.ts:103-174,256-308,336-363"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:495-555,626-633,776-785",
+          "instagram-cp2-residual.e2e-spec.ts:601-650"
+        ],
+        "qualifiedProof": "20concurrentFIRST signedmessages produceexact1allinboxeffects; keyedresource+mid uniqueness and retrywholeTX; validfirstunknownsecondbatchnon200 retainsfirst, laterexactaccountmapping replaycommitssecondwithoutduplicatefirst.",
+        "remaining": "CP5fivewavesloadandlatercutoveraudits required; aggregateGREEN notallstress."
+      },
+      {
+        "id": "CP2-RECEIPT",
+        "source": [
+          "instagram.controller.ts:18-23,94-130",
+          "message-acceptance.service.ts:179-218",
+          "instagram-authorization.service.ts:724-757"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:59-67,198-245,645-696,776-785",
+          "instagram-cp2-residual.e2e-spec.ts:676-738",
+          "instagram-cp2-finalization.e2e-spec.ts:63-134"
+        ],
+        "qualifiedProof": "Challenge/OAuth/subscribeonlypending; heldPOST signedIN independently verifiescurrentresource; lateerror/cancel preservesreceipt/messages/unread; targetedpostPOSTSQLfault disablesbeforeoriginalkeyrecovery, noextraPOST; exactholdercleanup aftersettlement/successortakeover causalGREEN16.",
+        "remaining": "No actualMeta/device proof; CP6separateapprovedruntime; originalSUBREC02 acquisitiongap notcovered."
+      },
+      {
+        "id": "CP2-SAFE-OUTPUT",
+        "source": [
+          "instagram-authorizations.controller.ts:37-54",
+          "instagram-authorization.service.ts:196-203,843-847",
+          "catalogo.ts:49-53",
+          "cobertura.ts:88-94",
+          "session.middleware.ts:78-117"
+        ],
+        "tests": [
+          "instagram-cp2.e2e-spec.ts:124-126,157-174,284-301,984-990,1163-1171",
+          "instagram-cp2-residual.e2e-spec.ts:224-237,255-256,638-639"
+        ],
+        "qualifiedProof": "DTOs/redirectheaders/ciphertext/auditsafeidentifiersonly; fiveactions cataloguedandtransactionalemissions; obsoletecallbackGETcoverage removed;precontrollerknownunprotectedsourceunchanged/humanproposalpending.",
+        "remaining": "R1-04openprotectedpath; fixedtextoperatorconsumer/gateway/querylog/browserCP4; privacyand1000UTF8outboundproposalstillunadmitted."
+      }
+    ],
+    "technicalAssessment": {
+      "adherence": {
+        "position": "mixed",
+        "assessment": "changes_required; complete approved CP2 source/evidence adherence review, all16 obligations and five axes. The core ownership/protocol/security architecture and qualified source16 repairs are supported, while two precise static clock/cleanup boundaries, primary own observation and precontroller confidentiality remain open. This is neither CP2 acceptance nor overall feature completion."
+      },
+      "performance": {
+        "position": "acceptable",
+        "assessment": "Indexed bounded existence/history and page-limited queries, no HTTP inside transactions,3 current-attempt requests/10s per request/40s per invocation/60s holder/10s cooldown; actual native abort header/body/guard proofs. Main1000-update and15000-conversation index evidence do not prove production capacity/SLO,<=15s ingress or completion of CP5 PCV lanes. WholeAPI R3 reached actual15k plan; do not infer a missing index from prior fixture setup timeout."
+      },
+      "elegance": {
+        "position": "mixed",
+        "assessment": "Purpose-specific HTTP/config/crypto and common acceptance owners stay narrow; coherent current-lock/time helpers. Final mapping and acquisition try boundary remain inconsistent with the rest. Small owner-local repairs suffice; no new WHAT/config/general framework/guessed provider identity."
+      },
+      "structural_soundness": {
+        "position": "mixed",
+        "assessment": "Single durable global business/resource ownership, scoped immutable identities/routes, composite/deferred PostgreSQL constraints and existing common Message/Outbound are supported; selected causal GET-null successor/fault cleanup fixes supported. Acquisition post-COMMIT rejection skips cleanup; final promotion lacks the repaired fresh clock pattern."
+      },
+      "operational_fit": {
+        "position": "mixed",
+        "assessment": "Safe durable UNKNOWN/no-repeat across new attempts/reauth/cancel/crash plus independent signed-IN receipt are supported, but primary own observer is unaccepted; acquisition holder can remain with no HTTP. Actual React/operator/browser/gateway/CI/freshness and later approved physical runtime remain mandatory, not completed."
+      },
+      "security": {
+        "position": "mixed",
+        "assessment": "Dedicated secret/raw HMAC before domain parse; bounded whole-batch preflight; opaque account-qualified identity; candidate/active AAD; actor/session/grant/active-BU/CSRF ordering; safe DTO/audit/fixed-host redirects supported. Precontroller callback sensitive-URL protection pending exact human-admitted path; no private/provider/browser/log exposure inferred."
+      },
+      "test_quality": {
+        "position": "mixed",
+        "assessment": "Actual causal RED15 to GREEN16 counterparts and matched controls meaningfully improve confidence; fullbody assertions distinguish reached vs unexecuted. Shortened persisted clocks are robustness; natural signed session and actual provider expiry clocks are separately qualified. Old timeoutconfound/GREEN05 not rehabilitated. Precise mapping/acquisition proofs plus primary/protected-path criteria and independent full-current-API adjudication remain, while final TQA/stress/browser/ALL are later unwaived gates."
+      }
+    }
+  },
+  "unchangedSources": [
+    {
+      "path": "api-app/.env.example",
+      "sha256": "5ae334bc61c924eb44b61c89c0e6127be7e410ea571ab2ffe180fab949452a66",
+      "bytes": 3565
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023180000_instagram_adapter_type/migration.sql",
+      "sha256": "32208cc03faafa9e56c9c9a08dfab5c6342d4dd96a68b19e5c853c64c947f5cf",
+      "bytes": 245
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql",
+      "sha256": "2f8a134b837fb67c78e5f9b47bf7d0f26ddedb77f5a3da1b855751987df29ceb",
+      "bytes": 19101
+    },
+    {
+      "path": "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+      "sha256": "56fa3232606291fcb457dfca8696d0a5e952bc87c46562594c4bc883ac6c15bc",
+      "bytes": 3987
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d",
+      "bytes": 51597
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8",
+      "bytes": 5953
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.ts",
+      "sha256": "b5f4ab6a5e7386fda28e4b1b0622918dfda8506da5ee2ad60b983e8c93f1c40a",
+      "bytes": 3663
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "af79858c6c5039b2913806d3c9140e4f3cd8ea06eeb87e81ca59ab6995c7a963",
+      "bytes": 6532
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "sha256": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f",
+      "bytes": 46758
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "sha256": "6f256430f609eed1a2fae72493268bf028135e0b8e6d34016c95ae0fef951631",
+      "bytes": 44938
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+      "sha256": "7c29336e78bd91e52ab585afc218fe74a723fee486c07e277fbd06dfec72a435",
+      "bytes": 1973
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "6f17741e198c79939d3542858b0595cb70afcdf8f281af77e44484e77c95d1b6",
+      "bytes": 10551
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.spec.ts",
+      "sha256": "6587b7b53ac5ce9726f8c8bcf48cce47efbc2ede8b0f7bf9fe3113026a7ab848",
+      "bytes": 1395
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "sha256": "41d56b56f315e30e3f4c76b580993bf2ffabea3cef623e43583b6363dd7f51e9",
+      "bytes": 3229
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+      "sha256": "1e2e797f83fe12d4609b0f1d6cb05b982b70baf492861da24368d9496a2ee606",
+      "bytes": 5231
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "sha256": "76ec095570fcacaa5bc48aabd30ab31adc9387bf399cf046fd9d8a1889528700",
+      "bytes": 3439
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "8b1123d45553f438146e615a5b7d144b2d524344f6011fb4443b162f2de1a7e7",
+      "bytes": 6306
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "59f24070854e400881266ed723ddd754d47e40b7de0975a7eb7a39a62a64d9cc",
+      "bytes": 21325
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d",
+      "bytes": 2011
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "sha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769",
+      "bytes": 9665
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "sha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674",
+      "bytes": 8014
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "sha256": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287",
+      "bytes": 8596
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram.module.ts",
+      "sha256": "8b4cfcae27fd552eabf731ee50b270e6809af809d2e61eccc1757864749803a5",
+      "bytes": 300
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "a6d2544ea66c693f53b9fd3e92e8a6044462c6e3a1c1ce36fb8e4feac9a4c1b2",
+      "bytes": 6675
+    },
+    {
+      "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+      "sha256": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b",
+      "bytes": 5938
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "12fe72cc69911ab5ec50b8e5d9d2338febc34471a9773854be967b9154d55eac",
+      "bytes": 12497
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "sha256": "91d7d098ac77368b67537025e1169484fecd6acaf9f609bd272bbee60ea0071c",
+      "bytes": 10030
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "sha256": "611502e0a6a9bb8158e204edb0a031b65591bc07c29e61dd021790a3ad0ae9f0",
+      "bytes": 9791
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f",
+      "bytes": 1209
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "bf6a2a2932ba9b586c9478c2f3d2c662b1b0874f26f1d6752cb72d2af43ca363",
+      "bytes": 20403
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "sha256": "f57834be474b1c86858dab4a13a7a18bd26d1ee907de2828b6454dab7af07be9",
+      "bytes": 40950
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "sha256": "13bb550b521e5b6fbee8c69d74668d70f081b231d5410f559467ed86855664df",
+      "bytes": 37372
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "sha256": "93cac3cad902629605bbc6f4cbb6735afa95f0356b71db7de5d81e94699cf15d",
+      "bytes": 15966
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "8ba8028f5da55c5fa10b256fbfe7bccea5b46e6f7cba6dfb461f79988d2b9344",
+      "bytes": 52251
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "b01da6b1e6fcd5f13aa2e28f77c63df7d2e2b2967332d740006888184e44b9dc",
+      "bytes": 27688
+    },
+    {
+      "path": "api-app/test/historico-atividades.e2e-spec.ts",
+      "sha256": "529cfad68489bcb6b2d1368505d58f9c4f1e2a18deac8074b86b0204d7f427b1",
+      "bytes": 7919
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "sha256": "4f729b9fcdfb219857b857d8f1b4baa33c0d50834b5fd9ea563723e880cbae55",
+      "bytes": 8273
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "sha256": "86e116a8889bafcb45e686714e9c4671708e98117760e4853354532f5971ccf4",
+      "bytes": 118462
+    },
+    {
+      "path": "api-app/test/instagram-identity.e2e-spec.ts",
+      "sha256": "675eca8c4fd68c77f7d4bcc01be0d4d84fde21cf843bbea298cc9a4346282b53",
+      "bytes": 14863
+    },
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "sha256": "5f39011d9c542438d7b2b94dd71fba15b726b1ffd3eb1d65f5ec09270a454f97",
+      "bytes": 74447
+    },
+    {
+      "path": "api-app/test/instagram-migration.e2e-spec.ts",
+      "sha256": "4deae0c82e317688c1217d230ce2d98215d783434c35ec19137937438d8618ec",
+      "bytes": 27927
+    },
+    {
+      "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+      "sha256": "cdfdc7adc4c558a9787dcd8da212b5eede87b520774b278934f1d75c8488d5d1",
+      "bytes": 5952
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "sha256": "ec3d8cfd9733ef968bd00303aea68e22eba82a827118a94e50e570aae19c122f",
+      "bytes": 83275
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "sha256": "836aeda3eed8ae0a934ef36ad6eb37ce81673e734a429accdbf4b2fb3628ddc7",
+      "bytes": 6703
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "b059087dace84e40dfe03132c87c02a43b2d21c8ea8306f8de9f691bb1bd1972",
+      "bytes": 44431
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "sha256": "5c447913be4f9b2a2d699f96b43cfd9df837317897be372044b7f02dcf76e809",
+      "bytes": 19778
+    },
+    {
+      "path": "api-app/test/painel.e2e-spec.ts",
+      "sha256": "910975e63b3ee48a983107a9aaf4906924a103f6b353481f03dccfb934d64237",
+      "bytes": 2933
+    },
+    {
+      "path": "api-app/test/setores.e2e-spec.ts",
+      "sha256": "8eec2be051aa9d71116b57b84ff5c3e863aca2005f61782c33ea87bd868cd203",
+      "bytes": 17500
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb",
+      "bytes": 41305
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "33c0267d8f5b5aa54b577f0461dfc117ba2af9aa7037f5cf7a0094354fbefa3f",
+      "bytes": 28254
+    },
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "sha256": "295ac89fb550d3b5ffeedf8336de2c480a5c2fd901b1f49caa6d29a719cddf52",
+      "bytes": 56523
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "sha256": "9c785f32a1c9fd10c40de2a0185932aaa16ae68dcccd7a42831fa284ad40f60b",
+      "bytes": 8758
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "sha256": "f19a8f904807dbc07aebc9e5a9be91e440c0af10b5cb6ef00b1c86bb329ef12a",
+      "bytes": 9536
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+      "bytes": 5651
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200",
+      "bytes": 5483
+    },
+    {
+      "path": "api-app/src/infra/prisma/prisma.service.ts",
+      "sha256": "8c6034455186bfc6497b329f94af7c867fb6f28b9226d54db5716a907db6e200",
+      "bytes": 393
+    },
+    {
+      "path": "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+      "sha256": "a9c78f4bc9b29b77d0dafee12b742763cb8e25a7617bc3fe8d6cd2f1230d77ce",
+      "bytes": 17866
+    },
+    {
+      "path": "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+      "sha256": "a75d9687f300486c9acf9ed38587f9fa507fcaeecd11588af5530e631cb1f856",
+      "bytes": 8663
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "sha256": "acbd91214c09c401da50e2a62a6937fe08c6facbbc30d06f667cc3884dcee774",
+      "bytes": 20179
+    },
+    {
+      "path": "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+      "sha256": "223739cd8cd4a529203cd8e686b297f2e51c53147be35b5916f1f353e99d3fe5",
+      "bytes": 19779
+    }
+  ],
+  "changedReviewedSources": [
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a",
+      "bytes": 73878
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+      "sha256": "3a8676acdead9b9eebe9e18c1525c98d41a2f8b11c112da07100cac07a59901b",
+      "bytes": 6073
+    }
+  ],
+  "newUnreviewedSource": {
+    "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+    "sha256": "2a59106818d2169dc49a3267a9ce11b26ece1790fec07f8297eb049c69cdad0f",
+    "bytes": 22801
+  },
+  "qualification": "Root loaded complete structured62body/all16R4 collection and compared actual current60unchanged bodyhashes. Hash equality carries their alreadycompletedbodyreview provenance, not new correctness proof. FreshR5 supplements affected source; it is not freshcomplete62review. All5findings/primary/pendinghuman/fullconsumers/CP3..CP6 remain for currentadjudication. Metadata-only R4filename discovery remains honestly recorded; no backupcontent read/use or inference."
+}

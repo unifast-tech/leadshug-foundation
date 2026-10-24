@@ -1,0 +1,58 @@
+{
+  "kind": "cp2-r5-current-root-adjudication",
+  "review": "adherence-cp2-r5-result.json",
+  "bothTerminal": "cp2-r5-api18-both-terminal-reconciliation.json",
+  "dispositions": [
+    {
+      "ids": [
+        "IG-SUBPROTO-01",
+        "IG-SUBREC-03"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "status": "open",
+      "reason": "Supportedprimaryownobserver stillmissing; conservativeUNKNOWN/no-secondPOST retained; no provider/config/mutation/waiver inferred."
+    },
+    {
+      "ids": [
+        "IG-CP2-ROOT-02"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "governingSeverity": "high retained historically; notdowngraded",
+      "status": "resolved for current source18 qualified temporal defects",
+      "evidence": "Fresh affectedR5 fullservice/fences/testread and bothROOT02qualified17bnegativecases and theirmatchedlivecontrols plus source16callback/subscription temporal regressions actualpassed in fullAPI18. Mapping rollback/candidate+allowner/credentialeffects0; TTL beforeNEWPOST counter0 NOT_STARTED. No universalcommitinterleaving ornaturaltenminuteclaim."
+    },
+    {
+      "ids": [
+        "IG-SUBREC-02"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "governingSeverity": "high retained historically; notdowngraded",
+      "status": "resolved for current source18 exact-holder lifecycle defects",
+      "evidence": "R5staticsinglefinally/exactCAS +fullAPI18 actualpostCOMMIT nativeexpiry401/zeroPOST/originalbindingholdercleared/historyretained, livecontrol, pendingHTTP/successor/receipt/cancel/settlementfault/GETnull cases allpassed. No releaseaheadunsettledHTTP orhistoryreset."
+    },
+    {
+      "ids": [
+        "IG-CP2-R1-04"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "status": "open",
+      "reason": "Exactprecontrollersessioncompanion pendinghumanadmission, lateractualNest/gateway/React/browserproof required."
+    },
+    {
+      "ids": [
+        "IG-CP2-R1-06"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "status": "partialproofreconciled; remainingdeliveryproof open",
+      "reason": "Currentthreeboundaryoracles/allold555APIpassed onstablefreeze; no remainingnewsourcebug fromR5. Primary/precontroller/CP3..CP6/allconsumers/ALL/stress/security/TQA/cutover/final/runtime mandatory."
+    }
+  ],
+  "axisOutcome": "Affectedsourceperformance/elegance/structure acceptable; adherence/operationalfit mixed due remainingunwaivedprimary/human/consumers. No checkpointorfeatureacceptance.",
+  "historicalPrecision": "17unitfailurepreE2E staysqualified;17bthreecausalRED/3passedcontrols +all91oldpassed; current18full398unit555E2E replacesneitherhistorynorrequiredCP5ALL. Source16full549 andcompleteR4 remainhistoricalsupported. ROOT08/09/15alreadyqualifiedclosed stayunchanged; filename-onlyR4contextdeviationnoterased.",
+  "next": "Independent CP3 testfirst may nowactuallybegin underrecordedsequencing; onewriter/new2admittedspecs +strictfakeHTTPhelperextension only. No codewriter duringfrozenproof; bothnowterminal. Primaryobserver andthreehumanproposals remainmandatory; no source/numeric/protected/runtimewaiver."
+}

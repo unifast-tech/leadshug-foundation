@@ -1,0 +1,27 @@
+{
+  "kind": "cp3-primary-message-wire-readonly-verification",
+  "date": "2026-10-24",
+  "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/messaging-api.md",
+  "retrieval": "OfficialpublicHTTPS read only; webopen failed, urllibHTTP200; genuine documentation contained in HTML pre wrapper; no Graphprovider/account/token/APIrequest.",
+  "rawSha256": "a6ea0c65d1701a515c86a667830e27fe0417c24692d81587b6e9ba0e5dfce58c",
+  "bytes": 19761,
+  "facts": {
+    "method": "POST",
+    "endpoint": "https://graph.instagram.com/v26.0/<professionalIG_ID>/messages",
+    "authorization": "Bearer Instagram User access token; JSON content-type",
+    "textBody": {
+      "recipient": {
+        "id": "<IGSID>"
+      },
+      "message": {
+        "text": "<TEXT>"
+      }
+    },
+    "responseExamples": {
+      "recipient_id": "<IGSID>",
+      "message_id": "<MESSAGE-ID>"
+    }
+  },
+  "scope": "Onlyindividualplaintext reply. Media/reactions/templates/posts/reply_to outsideapprovedslice; docsmention is notauthorization.",
+  "pendingLimit": "Officialcurrenttext documented1000UTF8bytes, supporting alreadyreviewedpendingproposal. T stillnormatively1000charactersuntil explicitvalidation. No numericalguard/fakecontractchange authorized here; allnewtests smallASCII fitboth."
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "cp3-readonly-fixture-concretization-root-qualified",
+  "advisoryOnly": true,
+  "reader": "instagram_cp3_fixture_reader terminal; no writes/tests/network/currentCP2outputs",
+  "basis": [
+    "cp3-bounded-integration-preparation.json",
+    "cp3-type-boundary-preparation.json",
+    "cp3-execution-preparation-after-r1.json",
+    "cp3-test-first-concretization-source13-preparation.json",
+    "currentT/schemapublicsource read"
+  ],
+  "actualBff": {
+    "replyOptions": "GET /api/bff/conversations/:id/reply-options notimplementedcurrent; /start-options isdifferentWAinitialoptions",
+    "ordinaryNew": "POST /api/bff/conversations/:id/messages; existingtexto wirefield preserved plusmandatoryrouteId/channelId/expectedGeneration/contextFingerprint inupdatedcontract",
+    "ordinaryRecovery": "POST /api/bff/conversations/:id/dispatch-admissions/:admissionId/reconcile with{}",
+    "ordinaryRisk": "POST same/acknowledge with{} andX-Confirm-Duplication-Risk:true",
+    "initialRecovery": "POST /api/bff/conversations/:id/initial-messages/:attemptId/reconcile with{}",
+    "initialRisk": "POST same/acknowledge with{} andexactriskheader",
+    "initialRead": "GET /api/bff/conversations/:id/initial-messages/:attemptId; GET /start-options",
+    "newInitial": "POST /initial-message-preview and/initial-messages are NEWrequests, notrecovery"
+  },
+  "ordinaryModel": "id/conversationId/buId/caller/actorId/ownerNonce/selectedContext/state/expiresAt/dispatchDeadlineAt/releasedAt/riskAcknowledgedAt/riskAcknowledgedByActorId/createdAt/updatedAt. NO request/requestFingerprint/idempotencyKey/externalMessageId.",
+  "initialModel": "id/conversationId/buId/actorId/idempotencyKey/ownerNonce/requestFingerprint/request/selectedContext/state/leaseExpiresAt/dispatchDeadlineAt/externalMessageId/slotReleasedAt/riskAcknowledgedAt/riskAcknowledgedByActorId/createdAt/updatedAt.",
+  "v1Shape": "Exactuntagged9keys channelId,buId,channelOrigin,providerResourceIdentityId,generation,pairingEpoch,activeCredentialVersion,requiresWindow,providerAccountReference. NewwriterexactV2 only.",
+  "stateOracles": {
+    "ordinary": [
+      "PREPAREDfuture unreleasedholds; pastoriginalexpiresAt reconcile=>SETTLED/released locally withzeroHTTP",
+      "SENDINGfuture holds; pastdispatchDeadlineAt reconcile=>UNCERTAIN withreleaseNULL, zeroHTTP",
+      "UNCERTAIN retainsexclusion; explicitriskheader+elapsedoriginaldeadline allowsack/risk/release, zeroHTTP",
+      "SETTLED terminalpreserved; absenceofactiveexclusion doesnotpoisonnewV2send"
+    ],
+    "initial": [
+      "PREPAREDfuture holds; expiredreconcile=>REJECTED/slotReleased locallyzeroHTTP",
+      "SENDINGfuture holds; expiredreconcile=>AMBIGUOUS retainsslot, zeroHTTP",
+      "EXTERNAL_ACCEPTED/EXTERNAL_ACCEPTED_LOCAL_BLOCKED withexactknownreceipt+provedoriginalassociation locallycompleteoneMessage orremainblocked;zeroHTTP",
+      "AMBIGUOUS orLOCAL_BLOCKED ackonlyexplicitrisk+originaldeadline, setsrisk/release fields locally",
+      "SUCCEEDED/REJECTED terminaloldkeyreplay/readfacts preserved; noHTTPoldflow"
+    ]
+  },
+  "preservation": "ExactoriginalIDs/actor/nonce/context; initial-only key/fingerprint/requestJSON/canonicalbody/originalactor/conversationsnapshot/receipt; originaldeadlineDatetimevalues. JSONB deep logicalequality, notserializedkeyorder/physicalbytes claim. Designated state/release/risk/updatedAt fields maychangeonlyperallowedmatrix. ExistingMessageprovenance/author/content/createdAt retained; do notinvent ordinaryACK orbackdate newlycreatedMessage absentstoredtime.",
+  "newOperationDistinction": "Measure zeroexternalHTTP ONLYaroundoldread/reconcile/ack/originalkeyreplay. Afterpermittedrelease a genuinelyNEWexplicitV2request canlegitimatelyPOST; assertV2 andexactnewoperation separately. LegacyV1 contextsareWAonly: newcontrols onlegacyconversations useprovedWAroute/recipient, neverfabricateIGroute/IGSID onWAcontact. TwoIGaccountcases areseparate newIGfixtures.",
+  "igFixtures": "ActualsubirApp/listen/limparBanco/criarMantenedora/login +OAuth/callback/confirm peraccountsameBU;actualrawsignedPOST /webhooks/instagram. Helper INSTAGRAM_WEBHOOK_SECRET ispublicsyntheticconstant mappedto appconfig INSTAGRAM_WEBHOOK_APP_SECRET; neverrealenv/OAuthsecret/METAsecret. Sameopaquepeeracrossbusinessaccounts separateContact/Identity/Conversation/Route. criarConversaFixture isWAonly.",
+  "policyCases": "Useisolatedpeer/scopedaccountfixture foreachnegativepolicy soearlierfreshINcannotmaskold/OUT/read/wrongaccount/futurequalification. ActualoriginalsignedIN+resource+peer24h only. Observewindowopenbeforecrossingiftestingexpiry; denialscannotallbeassumedzeroDBrows iflegitimateprepareprecededexpiry, but noSENDING/newHTTPwhenclaimdenied. Wronginputcontext/IGinitial/bot mustfailbeforeclaim/effects percontract.",
+  "pending": "Numeric1000chars/UTF8bytes remainspending; smallASCII only. Otherpendinghumanpaths/primaryobserver/CP4..CP6 remain.",
+  "noAuthority": "Readonlyadvisory; actual CP3writes require separate rootthaw/currentauthority. No newendpoint/architecture/state/provider discovery."
+}

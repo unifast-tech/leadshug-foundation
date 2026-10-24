@@ -1,0 +1,23 @@
+{
+  "kind": "cp2-r5-api18-both-terminal-reconciliation",
+  "bothTerminal": true,
+  "matched": {
+    "sources": 242,
+    "todo": true,
+    "boundInputs": 108,
+    "reviewInputs": 24,
+    "preserved": 35,
+    "rootIndex": 3,
+    "reportedOutputHashes": 4
+  },
+  "currentApi": "cp2-r4-api-full-18-result.json;31migrations/lint/build/398unit/555E2E actualGREEN",
+  "affectedReview": "adherence-cp2-r5-result.json;strictmergeexit0,12actualfullbodies/all11governingranges/15evidence/all16/17callers;60unchangedR4bodyhashes retaincompleteR4provenance; no freshfull62/fullT claim",
+  "reviewBoundary": "CurrentAPI18receipt/lognotreadbyR5; rootindependentlyreconcilesactualterminalGREEN. No midrunwrites; sources/T/inputs unchanged throughbothlanes.",
+  "outputs": {
+    "adherence-cp2-r5-result.json": "a6739bba36e31d242ed7d0f1800a397939bdac223a3d759889aeb1feebac4b82",
+    "adherence-cp2-r5-collection.json": "d062bc0b3f16f8378c8478445f997e52010e69948f97b26350286008c8a975f9",
+    "adherence-cp2-r5-merge.json": "8f301bbd43ae27a75bd80fff53d21e4e0e9d689b3cd4151bc4026b831bb4c201",
+    "adherence-cp2-r5-merge.md": "df622a8978d1dd70ded886b2f1e90c7661ac5d744a9b497f1bf340a234890b54"
+  },
+  "source18": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a"
+}
