@@ -1,0 +1,27 @@
+{
+  "kind": "root-api22-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sources": 254,
+  "boundInputs": 258,
+  "preservedRows": 35,
+  "rootIndexMatched": 3,
+  "todoMatched": true,
+  "logSha256": "a0eca580b377dc7ecb3a6361cd9d1944cfb882d368782c45a4fb008cc35eb591",
+  "actual": "31 migrations/lint/build/406 unit PASS; 530/569 E2E PASS,39FAIL in11files; no complete checkpoint accepted.",
+  "reachability": [
+    "39FAIL headers parsed; Vitest emits22dispatch case headers then one commonbeforeEach stack, not22independent executedcasebodies. All22 are blocked at prepareInitial(kind:text) beforecase body.",
+    "CP3routing reaches twoaccounts/route/options/initialineligible proof but fails first ordinarysend201; subsequentpolicy/mismatch assertions not proved.",
+    "OAuthinfra callback generic303/noeffects assertions reached; ordinarypath expected500 fails at actual503. Restoration finally runs; laternormalcontrols beyondfailedassert notproved bythosetests.",
+    "Final-clock firstcase200-243 PASS includes reached strict<2000assert226; no standalone numericmeasurementemitted. Corrects underqualified validator summary, does not relax original bound. Two separate4500/750clock measurements failed, no proven producttimefence violation inferred.",
+    "CP3V1 singlecase PASS and consumerboundaries3PASS; notcompleteCP3/sourceadherence acceptance.",
+    "1000-update case times out30000; absent per-request markers cannot distinguish initial POST vs replay. Complete response/count/replay/orientation proof is unestablished, not evidence that all earlier assertions were unexecuted or effects lost. No throughputGREEN/timeoutincrease."
+  ],
+  "classifications": {
+    "fixture": "22dispatch missingproper structuralinitialkind;6manualopen missingprovedWABA;2webhook missingprovedWABA;1legacy seed violatesimmutability;1PCVfullparams nowinclude2businessscopeIDs;1publicEvolution existingIN unqualified providerID.",
+    "oracle": "2OAuthnativeP2021 faults remain503 BANCO_DESATUALIZADO byexistingglobalfilter, not500. Preserveordinarypath semantics.",
+    "product": "IG outbound discards qualifiedaddress afterlookup; acceptanceInput omitsit so confirmedACKlocalacceptancefails503. Sourcecausal, dynamiccode/body specifics stillneedcurrentproof. UNKNOWNdiagnostic also affected.",
+    "unresolved": "2clockmeasurement bounds+1batchtimeout; no threshold edits; investigateboundedsource/runnerperformance.",
+    "countNote": "33 fixture cases,2 oracle cases,1 IG productcase,2 clockmeasurements,1 batchtimeout =39; static classification subject to next native proof."
+  },
+  "next": "Lift22freeze for serialized exact fixture24 repair; separately qualifiedIGsender productfix and currentproof. CP4 preparations remain unimplemented and unaccepted."
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "root-qualified-cp4-browser-composer-preparation23",
+  "state": "Preparation, not implementation or executed proof. New unbound artifact only during API22 freeze.",
+  "readset": [
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+      "sha256": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200"
+    }
+  ],
+  "composerHow": [
+    "Add narrow pure frontend context/draft state in admitted src/*instagram*.ts with unit tests and typed safe API DTOs. Preserve existing timeline recovery, initial-message/template owners.",
+    "Fetch reply-options once per current opened composer and authorize exact route/channel/generation/fingerprint before typing. Independent in-memory draft per BU/conversation/route/context; restore only when same tuple is freshly authorized.",
+    "Monotonic intent token fences A→B→A and late option/send completions. Synchronous per-action in-flight ref blocks doubleclick. Exact V2 POST only; clear only captured draft version after acceptance. Conflict/uncertainty retains draft, no automatic retry.",
+    "Use same safe platform/account/recipient projection for list/thread/options. No opaque Instagram ID as phone. IG initial/template/automation paths stay ineligible; WhatsApp initial/template journeys remain unchanged."
+  ],
+  "FrcFixtureQualification": "Same opaque peer in two Instagram accounts must be two contacts/conversations created by actual signed ingress. No fabricated cross-account merge to make UI test pass. Test actual account A→B→A and delayed completion; use same-business WhatsApp adapters for in-conversation adapter switch if needed.",
+  "harnessBaselineCorrection": "Prep03 WEB_ORIGIN assumption is now stale: current InstagramAuthorizationsController builds final303 from WEB_ORIGIN. A proxy alone over default HTTP API would not prove HTTPS final return. Protected Playwright/global default WEB_ORIGIN must remain unchanged.",
+  "harnessHow": [
+    "In admitted browser-server.cjs, parent HTTP3100/4173 remains unchanged; own same-file internal child real Nest3102 uses exact child-only WEB_ORIGIN HTTPS4174 and Instagram redirect callback on HTTPS4174. No new global config/protected App.tsx edit.",
+    "Owned loopback TLS frontdoor4174 proxies /api and native /ws upgrade to real child3102 and all assets/config to built preview4173. Preserve browser path/Host/Origin/cookie and response/Location; no auth/session/DB/WS/response stubs. Child API uses same guarded synthetic dedicated PG, session secret and external provider fixture3101.",
+    "Only external provider authorization document/HTTP boundary is simulated. BFF creates real attempt/state; actual browser top-level callback crosses TLS and real session/PG, asserts safe303 and native page/attempt. Generic relative middleware denial resolves to HTTPS and must remain allowed, not rewritten for test.",
+    "Same-file child flag prevents recursion. Parent owns health/readiness, child/frontdoor/cert lifetime and awaited cleanup. Child never migrates/resets shared DB. Bind only loopback; deny unlisted external fixture calls.",
+    "Use per-spec HTTPS context/cert-error exception without changing global Playwright config; document that ephemeral cert trust itself is not production trust proof. To claim Secure-cookie behavior, use explicit child-only production/None cookie configuration and observe native cookie, not fake/injected session.",
+    "Verify actual HTTPS served bundle/source/child compiled backend freshness and real API/PG effects. Existing global HTTP freshness is insufficient for new child by itself. Keep all WA ordinary/initial/template/onboarding/browser regressions."
+  ],
+  "next": "After API22 terminal reconciliation, issue exact serialized test-first/source handoffs under admitted paths, then execute canonical browser proof. No current activation/private/tunnel/provider authority."
+}

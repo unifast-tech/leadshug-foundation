@@ -1,0 +1,44 @@
+{
+  "kind": "root-static-fixture24-reconciliation",
+  "sources": 254,
+  "changedOnly": [
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "2fcedfa1081647c29ad323f28f62de8fd502b8b6d9bf6ecc1dc462d36b953422",
+      "reverseMatched": true
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "sha256": "eb4aeed1202f4528d3b7a0c09b7162c5a4873fef43ceb80f6ee6dc67d75a8846",
+      "reverseMatched": true
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "06d3cf3317a7e35baaf9f9131adb7edde5764bbbba644467be1e5aadd6c6ae24",
+      "reverseMatched": true
+    },
+    {
+      "path": "api-app/test/instagram-cp3-whatsapp-ingress.e2e-spec.ts",
+      "sha256": "5ddac42e0edcee85534ebc5831792a188930d35e0605ce9fe77c15db3353a510",
+      "reverseMatched": true
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts",
+      "sha256": "8bea752ff32271ea857d9e23289a258e93acd310c1d29edc4ec208c53552cd28",
+      "reverseMatched": true
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "d88fc37e462a73ae938bafee14e3b6d784c4d9287319db41f4a857688220f235",
+      "reverseMatched": true
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "433d34c0a8e484880a8be83fc56c11bb844d5f493bd6057f23b48be9a3b1bd6f",
+      "reverseMatched": true
+    }
+  ],
+  "reverseExact": "All7original22hashes reproduced in RAM by reversing only admitted fixture/oracle changes. Root read full narrowdiffs. No source/history rewrite, source/clock/other assertions unchanged.",
+  "preserved": 35,
+  "state": "NOTRUN; no pass/acceptance"
+}

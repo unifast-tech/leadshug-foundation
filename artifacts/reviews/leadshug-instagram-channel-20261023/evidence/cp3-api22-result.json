@@ -1,0 +1,223 @@
+{
+  "kind": "cp3-api22-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "outcome": "FAIL",
+  "preflight": {
+    "passed": true,
+    "positivePublicSources": {
+      "expected": 254,
+      "matched": 254
+    },
+    "todoSha256": "5719589b138873f5e3ecb6bf8a2d55b8adbee87b79edf8ec8bdf3da3b9cb8728",
+    "boundInputs": {
+      "expected": 258,
+      "matched": 258
+    },
+    "preservationRows": {
+      "expected": 35,
+      "matched": 35
+    },
+    "rootIndexEntries": {
+      "expected": 3,
+      "matched": true
+    },
+    "writersTerminal": true,
+    "foundationCommit": "ee2181a3a2395be5b6879f8ef4b64a8333c976e7"
+  },
+  "postflight": {
+    "passed": true,
+    "positivePublicSources": {
+      "expected": 254,
+      "matched": 254
+    },
+    "boundInputs": {
+      "expected": 258,
+      "matched": 258
+    },
+    "preservationRows": {
+      "expected": 35,
+      "matched": 35
+    },
+    "rootIndexEntries": {
+      "expected": 3,
+      "matched": true
+    },
+    "sourceTodoInputChanges": 0
+  },
+  "log": {
+    "path": "cp3-api22-api.log",
+    "sha256": "a0eca580b377dc7ecb3a6361cd9d1944cfb882d368782c45a4fb008cc35eb591",
+    "bytes": 247845,
+    "captured": "complete synthetic stdout and stderr",
+    "containsCompleteVitestFailureBodies": true
+  },
+  "stages": [
+    {
+      "stage": "runner setup and validation guard",
+      "status": "passed",
+      "parityGuardMutationsRejected": 26
+    },
+    {
+      "stage": "Prisma client generation",
+      "status": "passed",
+      "clientVersion": "6.19.3"
+    },
+    {
+      "stage": "PostgreSQL migration deploy",
+      "status": "passed",
+      "migrationsFound": 31,
+      "migrationsApplied": 31
+    },
+    {
+      "stage": "API lint",
+      "status": "passed"
+    },
+    {
+      "stage": "API build",
+      "status": "passed"
+    },
+    {
+      "stage": "unit tests",
+      "status": "passed",
+      "files": 38,
+      "casesPassed": 406,
+      "casesFailed": 0,
+      "durationSeconds": 5.0
+    },
+    {
+      "stage": "complete E2E/API integration suite",
+      "status": "failed",
+      "files": 50,
+      "filesPassed": 39,
+      "filesFailed": 11,
+      "casesPassed": 530,
+      "casesFailed": 39,
+      "casesTotal": 569,
+      "durationSeconds": 595.37
+    }
+  ],
+  "failureFiles": {
+    "test/api-publica.e2e-spec.ts": 1,
+    "test/conversation-start.e2e-spec.ts": 6,
+    "test/dispatch-admission.e2e-spec.ts": 22,
+    "test/instagram-cp2-commit-fences.e2e-spec.ts": 1,
+    "test/instagram-cp2-residual.e2e-spec.ts": 1,
+    "test/instagram-cp2.e2e-spec.ts": 1,
+    "test/instagram-cp3-routing.e2e-spec.ts": 1,
+    "test/instagram-cp3-whatsapp-ingress.e2e-spec.ts": 1,
+    "test/instagram-oauth-session-infrastructure.e2e-spec.ts": 2,
+    "test/number-onboarding-pcv.e2e-spec.ts": 1,
+    "test/webhooks.e2e-spec.ts": 2
+  },
+  "failureCases": [
+    " test/api-publica.e2e-spec.ts > API pública v1 > contrato > reconcilia eco Evolution público entregue durante send e expõe a mesma OUT no refresh",
+    " test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > creates a queued empty row once, then reuses it without changing unread/status/owner even if readiness later changes",
+    " test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > serializes concurrent opens on the shared BU/contact advisory key",
+    " test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > serializes a manual open racing with first inbound identity creation",
+    " test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > completes five waves of twenty same-contact opens with one row and one creation",
+    " test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > does not fire NOVA_CONVERSA on manual open or on the first inbound into that row",
+    " test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > still applies PALAVRA_CHAVE to the first inbound after a manual open",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > keeps Prisma-representable and intentional SQL-only admission indexes explicit",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > distinguishes a committed reservation with lost ACK from a rolled-back reservation",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > positively reads back a committed claim after ACK loss and leaves a rolled-back claim PREPARED",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > reads back receipt commit after ACK loss and preserves SENDING after real rollback",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > reads back a committed prepared release after ACK loss and leaves a rolled-back release untouched",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > commits irreversible risk release and its audit together across ACK loss, and rolls both back together",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > enforces the actor and canonical account rate windows across released reservations",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > keeps multiple ordinary provider phases open without holding the conversation lock over them",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > excludes initial reservation behind any ordinary token, including expired SENDING uncertainty",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > excludes a new ordinary send behind an active initial slot and keeps idempotent replay on its captured owner",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > rechecks database time after delayed preflight so an expired PREPARED token cannot claim or POST",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > keeps ordinary window expiry in the final database claim predicate",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > does not claim an initial attempt after delayed transaction validation crosses its immutable deadline",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > keeps a late known receipt attached to an irreversibly released owner after a successor reserves",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > rejects risk acknowledgment before the immutable deadline, then releases exactly once after it",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > never releases a persisted SENDING claim through prepared-only cleanup",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > completes a known first outbound receipt locally through the shared Message owner and reconciles it without network",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > preserves a known receipt across local-completion commit ACK loss and rollback",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > rolls back the whole initial completion on a real P2002 race, exact-reads back, and retries one local transaction",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > does not assign or reopen the conversation when the accepted external key already has an echo row",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > does not report full ordinary-send success when settlement rolls back after ACK and Message acceptance",
+    " test/dispatch-admission.e2e-spec.ts > ordinary/initial dispatch admission interlock (PostgreSQL) > preserves ACK_WITHOUT_ID diagnostics when ordinary uncertainty settlement rolls back and readback is unavailable",
+    " test/instagram-cp2-commit-fences.e2e-spec.ts > Instagram CP2 commit fences > expired shortened attempt TTL at actual subscription claim prevents a new provider POST",
+    " test/instagram-cp2-residual.e2e-spec.ts > Instagram CP2 residual BFF and PostgreSQL proofs > CP2-SESSION-CLOCK residual: natural expiry after a short real user-row wait blocks exchange while a matched live session succeeds",
+    " test/instagram-cp2.e2e-spec.ts > Instagram CP2 public and authenticated boundaries > preflights the whole batch and ignores echo/read events without opening receipt or creating messages",
+    " test/instagram-cp3-routing.e2e-spec.ts > Instagram CP3 explicit route and reply contract > binds the same opaque peer to two real Instagram accounts and sends only through the selected V2 route",
+    " test/instagram-cp3-whatsapp-ingress.e2e-spec.ts > CP3 WhatsApp ingress route acceptance > accepts legacy WhatsApp receipt facts without a proved business resource or a reply route",
+    " test/instagram-oauth-session-infrastructure.e2e-spec.ts > Instagram OAuth session infrastructure faults (Nest/PostgreSQL) > maps an unexpected app_users lookup failure to the generic callback redirect and restores normal session access",
+    " test/instagram-oauth-session-infrastructure.e2e-spec.ts > Instagram OAuth session infrastructure faults (Nest/PostgreSQL) > maps an unexpected mantenedora_settings lookup failure to the generic callback redirect and preserves the ordinary error path",
+    " test/number-onboarding-pcv.e2e-spec.ts > number onboarding bounded performance and read-scope probes (PostgreSQL) > bounds latest-message hydration for a deep public page and reports the executed SQL plan",
+    " test/webhooks.e2e-spec.ts > webhooks de entrada > Meta — assinatura (fecha o risco S2) > opens the shared window only from the current resource trusted timestamp, never createdAt or a retired resource",
+    " test/webhooks.e2e-spec.ts > webhooks de entrada > deduplicates ten concurrent Meta deliveries per key across three new contacts"
+  ],
+  "failureBodies": [
+    {
+      "case": "22 dispatch-admission E2E failures grouped in test/dispatch-admission.e2e-spec.ts",
+      "observed": "Vitest recorded 22 failed cases in this file; ConflictException: Conflict Exception appears in the failure output. Full per-case output is preserved in the log."
+    },
+    {
+      "case": "Instagram OAuth session infrastructure faults",
+      "observed": "Both app_users and mantenedora_settings fault cases expected ordinary-path HTTP 500 and received 503."
+    },
+    {
+      "case": "CP3 WhatsApp ingress legacy receipt case",
+      "observed": "PostgreSQL check violation 23514: provider business identity link is immutable, on providerResourceIdentity.update()."
+    },
+    {
+      "case": "CP2 shortened TTL claim timing",
+      "observed": "5751ms exceeded the test bound of 4500ms."
+    },
+    {
+      "case": "CP2 natural session expiry clock",
+      "observed": "1260ms exceeded the test bound of 750ms."
+    },
+    {
+      "case": "CP2 whole-batch webhook case",
+      "observed": "Timed out after 30000ms."
+    },
+    {
+      "case": "CP3 routing selected V2 route",
+      "observed": "Expected HTTP 201 and received 503."
+    },
+    {
+      "case": "API public Evolution echo reconciliation",
+      "observed": "Expected HTTP 201 and received 409."
+    },
+    {
+      "case": "Conversation-start cases",
+      "observed": "Six failed cases; several expected HTTP 201 and received 409, with concurrency assertions also failing."
+    },
+    {
+      "case": "Remaining failures",
+      "observed": "The complete log contains exact bodies for all 39 failed cases, including dispatch-admission, webhook, and PCV failures."
+    }
+  ],
+  "assertionReachability": {
+    "unitTestCases": {
+      "reached": 406,
+      "passed": 406,
+      "failed": 0
+    },
+    "e2eTestCases": {
+      "reached": 569,
+      "passed": 530,
+      "failed": 39
+    },
+    "oauthSessionFaultCases": {
+      "reached": 2,
+      "failed": 2
+    },
+    "unreachedCases": 0,
+    "note": "Case counts are exact Vitest totals. Tests that stopped at a failed assertion do not prove later sequential assertions in that case were reached."
+  },
+  "strictCp2ClockCriterion": {
+    "thresholdMs": 2000,
+    "changed": false,
+    "separateMeasurement": "No distinct strict-2000ms measurement was emitted in the run summary; the separately reported CP2 case timings above retain their own original 4500ms and 750ms bounds."
+  },
+  "classification": "The current full API run reached and completed the E2E suite. Unit tests passed; 39 of 569 E2E test cases failed across 11 files. Full failure output is retained in the fixed log. No GREEN claim is made; strict CP2 <2000ms criterion is unchanged.",
+  "manifestAndFrozenInputsUnchanged": true
+}

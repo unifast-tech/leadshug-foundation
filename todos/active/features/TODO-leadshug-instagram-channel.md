@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** selar a candidata17 (254fontes públicas) e executar uma validação canônica completa da API conforme cp3-api18-validation-handoff.json. Todos os writers estão terminais; nenhuma fonte/T/input muda durante a rodada. Última execução anterior: fonte10(406unit/97de103E2E); fontes11..17 ainda NOTRUN, sem aceite de checkpoint.
+- **Next exact step:** congelar a candidata27 com fixtures24/sender25/batch26 reconciliados e executar UMA validação canônica completa da API. Todos os writers estão terminais. Última candidata executada22:406unitPASS e530/569E2EPASS,39falhas qualificadas; alterações24..26 ainda NOTRUN, sem aceite de checkpoint.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** a candidata passou build/406unit e alcançou integração; a rodada10 confirmou lacunas de isolamento, retorno OAuth e prontidão IG, além da pré-condição sintética da contaWA atual e uma medição de tempo. Restam correções serializadas e provas completas; nenhum checkpoint está aceito por essa rodada.
+- **Why this state now:** a API22 passou build/406unit e alcançou569casos de integração;39falhas exigiram separar fixture/oracle, perda real do endereçoIG no aceite e medidas de tempo/batch. As correções24/25 e o lote26 estão aplicados e reconciliados estaticamente;256fontes públicas e35preservações conferidas. Os testes do scheduler têm barreiras e limpeza; nenhuma alteração24..26 foi validada por uma execução posterior ainda.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
-- **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source applied under explicit user admission; its new infrastructure test and later browser/gateway proof remain NOTRUN. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** rodada10 passou setup/31migrations/generate/lint/build/406unit;97/103E2E passaram e6falharam. Root conferiu250fontes/T/198inputs/35preservações/3índices e log intactos. Consultar incluiu3conversas(esperado1); callback sem sessão/alias respondeu401(esperado303); prontidão IG rejeita indevidamente o subestado já validado com receipt; fixture V1 atual não temWABA para novoV2; mediçãoCP2 marcou2357ms(<2000 exigido), sem prova de defeito temporal do produto.
+- **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; API22 proved callback confidentiality assertions but two infrastructure cases stopped at an incorrect ordinary500 expectation (native baseline503); corrected tests24 and browser/gateway proof remain unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
+- **Last confirmed truth:** API22 passed31migrations/lint/build/406unit;530/569E2E passed and39 failed across11files. Root matched254sources/T/258inputs/35preservations/3index/log.33fixture cases,2ordinaryfault oracle cases,1IGpost-ACK localacceptance defect,2clock-budget misses and1batchtimeout are qualified separately; no completeGREEN. Strict<2000final-clock assertion passed within its case. Current24..26 changes require freshproof.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1345,6 +1345,7 @@ Source03 is terminal and explicitly incomplete. Root matched14 changed existing 
 | IG-CP3-ROOT-05 | high | release-blocker | fix in this TODO | SCOPE02/06 actual verified WA ingress must establish reply route | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
 | IG-CP3-ROOT-06 | high | release-blocker | fix in this TODO | canonical peer identity must govern acceptance while preserving legacy presentation | open; shared acceptance repair14 | cp3-message-acceptance-wa-ingress14-handoff.json |
 | IG-CP3-ROOT-07 | high | release-blocker | fix in this TODO | identity/contact-advisory/conversation lock order shared acceptance | open; source16 companion repairs newly introduced ordering before callback; no dynamic deadlock claimed | cp3-fixture16-lock-order-companion.json |
+| IG-CP3-ROOT-08 | high | release-blocker | fix in this TODO | D-02/D-04/D-07 require qualified captured IG address for accepted and uncertain local facts | open; sender25 prepared, not applied | API22 first ordinary IG503; outbound acceptanceInput drops qualified address |
 
 Root authorized only removal of the writer's accidental send method from the sealed OAuth client and four IG widenings plus the remaining own SQL cast from the sealed official window policy. Exact original hashes were reconstructed in memory and independently verified after correction; no Git restore, private backup or user-work discard occurred. The outgoing implementation moved into the already admitted new messaging client. These corrections add no human scope/WHAT deviation. The read-only CP4 advisor incidentally observed the changed OAuth hash while checking config; that read is not frozen or final-source evidence.
 
@@ -1460,3 +1461,23 @@ Root reconferiu254fontes/T/242inputs/35preservações/3índices e hash do log. L
 
 ### Compiler21 terminal — nova candidata API22
 Root reproduziu o SHA anterior exato do histórico ao inverter somente import/type/const e confirmou253demais fontes iguais. As annotations contextuais usam o contrato gerado Prisma sem cast permissivo. Candidata254/T/inputs será selada para UMA execução completa API22, sem writer/retry concorrente. Prova anterior20 é somente lint/compilação interrompida. Preparação CP4 também identificou endpoints de catálogo/verify/disconnect ainda ausentes e a reativação da mesma conta após tombstone como percurso obrigatório; não há UI/backend de conexões aceito por antecipação.
+
+
+### API22 terminal — prova completa alcançada, sem GREEN global
+Root confirmou254fontes/T/258inputs/35preservações/3índices e hash do log.31migrações/lint/build/406unit passaram; integração530/569passou e39casos falharam em11arquivos.22admissioncases param na mesma preparação antes do corpo;33falhas são classificadas estaticamente como fixture,2como oracle503do filtro existente,1como omissão real de endereço Instagram no aceite apósACK,2como limites medidos de relógio e1como timeout do batch1000. A classificação não equivale a correção provada. O primeiro caso final-clock passou e contém o assert estrito<2000; outras medidas4500/750falharam, sem relaxamento. cp3-api22-root-reconciliation.json qualifica reachability e evidência.
+
+Freeze22 encerrado. cp3-fixture24-handoff.json admite somente7specs já autorizados e ajustes causais de dados/contexto/oracle, preservando cada cenário/limite/contador; não alterar produto, helpersglobais ou testes CP2tempo/batch. Depois será corrigido o endereço canônico que o sender Instagram descarta, com prova nativa deACK/UNKNOWN e sem retry. CP4continua preparada, não implementada; nenhuma pendência ou gate foi dispensado.
+
+
+### Sender25 preparada e desempenho sem inferência
+O endereço Instagram é resolvido na rota, mas reduzido a peer string antes do aceite e do diagnóstico UNKNOWN. cp3-sender-address25-handoff.json delimita correção no owner existente e prova nativa deACK/semID; só despachar após fixture24 terminal. O batch1000não tem marcador por request, portanto o timeout não identifica se ocorreu no primeiroPOST ou replay. Nenhuma perda/duplicação foi demonstrada, mas o critério15scontinua sem prova e não será relaxado. O caminho de paralelismo limitado por peer, mantendo cada transação/fence atuais e aguardando trabalho em voo antes de erro, está em avaliação somente como HOW. Nenhuma nova superfície funcional ou aceite parcial.
+
+
+### Fixture24 terminal e sender25 serializado
+Root reconstruiu em RAM os7SHAs anteriores exatos revertendo somente as alterações admitidas;254fontes,35preservações conferidas. Nenhum teste/runner ocorreu. Templatekind na fixture de admissão captura apenas a tupla operacional sem inventar janela/texto/histórico; legado é nulo desdeCREATE, não apagado depois. cp3-fixture24-terminal.json registra a conferência. Agora um único writer25 trata o endereçoIG no sender e seus trêscompanions já admitidos. Teste conhecidoACK tem REDnativo22; o casoUNKNOWNnovo será escrito antes da correção, sem alegar REDdinâmico ainda não executado. Campos/snapshotsV1, todas as cercas e ausência de retry preservados.
+
+
+### Sender25 terminal e batch26 delimitado
+Root conferiu254fontes, somente os3caminhos autorizados mudaram; leu os corpos afetados e os cenários nativosACK/UNKNOWN. O endereço qualificado é capturado da rota antes do envio e mantido no aceite/diagnóstico; snapshotsV1, inicialInstagraminapto e cercas permanecem. Não houve execução; ROOT08segue aberto.
+
+cp3-batch26-handoff.json define HOW limitado para o timeout1000:4workers locais por peer com ordem preservada, colisão de mesma chave entrepeers volta à ordem FLAToriginal, falha interrompe agendamento e aguarda tudo em voo antes de responder. Cada mensagem mantém a transação/fence do owner comum. A proposta de atalho em receipt foi descartada: receiptVerifiedAt e connectedAt continuam atualizados como antes; nenhuma alteração MessageAcceptance/autorização/cache. Teste existente ganha medição inicial<=15s e marcadores primeiro/replay, mantendo30s/asserts/restante byte exatos. Fonte só poderá mudar por writerúnico após despacho; desempenho não é presumido.

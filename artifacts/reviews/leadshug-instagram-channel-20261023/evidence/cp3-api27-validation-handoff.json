@@ -1,0 +1,15 @@
+{
+  "kind": "cp3-complete-api-validation27",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "freeze": "cp3-api27-frozen-manifest.json",
+  "sourceCount": 256,
+  "log": "cp3-api27-api.log",
+  "beforeOutput": "cp3-api27-before.json",
+  "afterOutput": "cp3-api27-after.json",
+  "resultOutput": "cp3-api27-result.json",
+  "instructions": "Exactly ONE canonical invocation after root freezes manifest27 and all writers terminal. Validate positive256sources/currentT/all boundInputs/35preservedrows/3rootIndex before and after. Writes ONLY four named outputs log/before/after/result. No autofix/retry/source/T/input/Git/private/env/operational/provider/tunnel work. Runner owns only leadshug_channels_validation, NEVER leadshug_channels_local. Capture complete synthetic stdout/stderr, exit code and log hash. Report actual stages/counts/assertion reachability; no blanket GREEN. Concise progress each minute.",
+  "classification": "Candidate fixtures24/sender25/batch26 including corrected scheduler unit oracles. Canonical API includes parity/migrations/generate/lint/build/allunit/allE2E. Report actual counts. Preserve all thresholds including CP2 strict<2000 and batch initial fullPOST<=15000 within30s case timeout. Safe batch phase markers distinguish initial/replay. Separately classify all failures with full bodies and reached versus unreached assertions.",
+  "remaining": "NotALL/Web/browser/currentformalreview/primaryproviderprotocol/realruntime orcheckpointacceptance. CP4 UI/realtime/source work remains after adjudication."
+}

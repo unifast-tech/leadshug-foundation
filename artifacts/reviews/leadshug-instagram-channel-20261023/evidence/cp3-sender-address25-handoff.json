@@ -1,0 +1,34 @@
+{
+  "kind": "cp3-sender-address25-prepared-handoff",
+  "state": "READY after fixture24 terminal/root exact7reverse audit; only explicit root dispatch grants writer25.",
+  "profile": "Operational / Coder",
+  "sourceReadset": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "a4c01799288c88d569e676552971c83675f6178d4d73edb2bfa5892a7ecba657"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "66fe55264020d919d11e70824424404e30a661a72c2ce79611557b430a2ae05d"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "7741d4815f7a4066984225f7c327bcc47ec167604da300b3a3368796fd8aeb60"
+    }
+  ],
+  "causalRED": "API22 existing native twoaccount route/options case reachesfirstPOST, expects201 gets503. Sourcepath loses qualifiedaddress before MessageAcceptance which requires it; downstreamnegativeoracles unproved. No new UNKNOWN dynamicRED claimed.",
+  "productHOW": [
+    "Keep existing public recipientForOperation(context):Promise<string> contract for initial/recovery callers. Factor one richer private exact immutable route/contactidentity lookup returning server-owned ContactIdentityAddress; validate BU/contact/identity/platform/scope/namespace peer and retainactual persistedvalues.",
+    "Ordinarysend captures this qualifiedaddress before dispatch/reservation. Use externalPeerId for provider recipient; carry same captured address into known-ACK acceptanceInput and finishUnknown/recordAmbiguousOutbound. Do not performanotherfresh peer/route selection afterACK or getaddress frombrowser/BU.phone/opaqueconstant.",
+    "Preserve all generation/credential/window/account/lease/admission guards, sender result behavior, canonical lock ordering, per-route idempotent Message and uncertain exclusion. No providerretry/new sender/no bypass to MessageAcceptance.",
+    "Instagraminitial staysunsupported; do not broadeninitial/template/automation. Keep historicalV1 completion and originalsnapshots/fingerprints unchanged."
+  ],
+  "testFirstAndProof": [
+    "Before source correction, strengthen existing native201 assertion with safe code/outcome/diagnostic flags and provider send count as failure context; keep201 mandatory. Test must assert one scopedproviderpost and durableOUT on exactconversation/providerresource/route/contactidentity, preservealllaternegativepolicy/403/unknownversion/mismatchoracles.",
+    "Add independent native Instagram ACK-without-ID case (fresh realOAuth/signedIN/account/route/session) before productedit. Use existing instagramFake.sendEnvelope at externalHTTP boundary only. Assert exact409 EXTERNAL_MESSAGE_ID_MISSING +AMBIGUOUS_SEND_RECORDED +diagnosticPersistenceRECORDED, oneexternalPOST and one FALHOU/nullExternalId diagnosticMessage inexactconversation/provider namespace. No retry/sendrepeat/MessageAcceptancemock. Restore fakeenvelope in finally. Existingsharedheaders/fakes unchanged.",
+    "Existingunitfixture companions may supply exactqualifiedContactIdentity fields if currenthelper needs them; no mock bypass/assertweakening. Mainproof remains actualNest/PG routes/owner/HTTPboundary.",
+    "This lane runs NO commands/tests. Root staticallyreconciles and freezes after subsequent preparedperformancework; one currentcompleteAPI separately. Existing22 is causalRED knownACK; newUNKNOWN prepatch testnot dynamically executed yet, state that honestly."
+  ],
+  "forbidden": "Only three exact paths. No MessageAcceptance/helper/CP2/otherproduction/test/schema/controller/UI/config/protectedclient/middleware/privacy/doc edits. No lint/build/npm/runner/Git/private/env/provider/operational/tunnel work. No newapprovalWHAT. Report any genuine additionalpath need beforemutation.",
+  "terminal": "Exact touchedpaths/fullnarrowdiff/hash/newscenario/assertions and remainingNOTRUN; no pass/acceptanceclaim."
+}

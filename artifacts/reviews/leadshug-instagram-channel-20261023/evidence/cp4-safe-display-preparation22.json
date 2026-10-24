@@ -1,0 +1,40 @@
+{
+  "kind": "cp4-safe-display-preparation22",
+  "state": "Read-only qualification only. New unbound prep artifact; no mutation of any API22 frozen input.",
+  "readset": [
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "625d0908aed0dbc68440737eca55f4c9687dac5b4ec009a85383f99f680d79f2"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "d2d274cb1d1aeb36c48bea05896e22b5105723701e56d51dac77c4f43dc66064"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "dcbbeaae17da0b7bf2e6c354c6446ae4570904ce7356450415f016bc8dc68478"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "sha256": "a6d2544ea66c693f53b9fd3e92e8a6044462c6e3a1c1ce36fb8e4feac9a4c1b2"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d"
+    }
+  ],
+  "actualFindings": [
+    "Current list and thread expose legacy Conversation.contact/displayName only; no platform/served-account safeprojection.",
+    "replyOptions WAaccountLabel uses rawWABAID, not proved businessnumber.",
+    "replyOptions IGusername selects latest authorization attempt bychannelId regardless successfulmapping/accountmatch. Reauthorize reserves channelId before candidateaccountcheck, so wrongaccount rejectedcandidate may alter presentation if query iskept. This is staticcausalrisk, not an executedexploit."
+  ],
+  "faithfulHow": [
+    "One narrow server-owned batch display helper using Prisma already owned by ConversationsService; avoid adding a ctor dependency requiring non-admitted public modulechanges or newframework. Shared proven account label function also used byreplyOptions.",
+    "Read only current page<=50 conversation/route/contact/business/provider references. Preserve relation/namespace/scope qualifiers and localopaqueIDs; display neverauthorizesdispatch.",
+    "IGaccount username only from durably mapped sameverifiedprofessionalUserId/businessscope/channel ownership attempt; pending/rejected candidate must not relabel servedaccount. Nullusername -> neutralInstagram account.",
+    "WA business display from sole durableWHATSAPPidentity canonicalnumber, neverWABAID/BU.phone. IGpeer displayknownname or genericContato do Instagram, neveropaquepeer asphone. Ambiguous/no-route remainsneutral ratherthanfirst/latestaccount guessing.",
+    "Count raw Prismaqueries including existingcount/page/load and all projection queries. <=8domainqueries/page with no providerHTTP/profileHTTP/credentialdecrypt, no perrowreply-options. NativePG querymeasurement required; no performanceclaim fromstaticdesign.",
+    "Add actualnativeBFF tests twoIGaccounts samepeer, wrongaccountcandidate labelfence, unknownname neutral, WAcanonicalnumber, ambiguousroute, foreignscope404, paged50bound. UI thenconsumes exactsame projection list/thread; draft routing independentlyuses replyoptions tuple."
+  ],
+  "authority": "Existing SCOPE03/07 + CP4 producer/consumer obligations. Further exact serialized source/test handoff required after API22 terminal adjudication; no current write authority from this prep."
+}

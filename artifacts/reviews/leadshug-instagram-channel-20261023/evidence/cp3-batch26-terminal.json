@@ -1,0 +1,34 @@
+{
+  "kind": "root-static-batch26-reconciliation",
+  "sources": 256,
+  "fourAdmittedPaths": [
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "sha256": "87b888c018db496ab7d6ea5f75e8ada1d26b5865d1ffa428240a50c648973fbf",
+      "bytes": 10255
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "sha256": "2afc8055cfe08975e60918cfd9f68409a628686376faafaaaa9fc9d94da509ac",
+      "bytes": 119304
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.ts",
+      "sha256": "dc1801e9935c4db6e9648e7d4a00d84303b5cad7a98539d6c4f84fa8c2923986",
+      "bytes": 1950
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.spec.ts",
+      "sha256": "95a65f42662cc8d9eadc752b39bac54390f184d26535c2b554df49274e6e71bd",
+      "bytes": 8717
+    }
+  ],
+  "followupChangedOnly": [
+    "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.spec.ts"
+  ],
+  "testPrefixSuffixUnchanged": true,
+  "preservedRowsMatched": 35,
+  "rootIndexMatched": true,
+  "rootRead": "Full scheduler and corrected unit suite, controller integration diff and existing1000 batch timing diff. Per-peer serial, max4, anomalous account/message collision uses original flat order; failure drains. Unit barrier assertion fixed before any runner, interleaved flat-order oracle strengthened and finally cleanup added.",
+  "state": "NOTRUN; no performance, GREEN or checkpoint acceptance claim."
+}

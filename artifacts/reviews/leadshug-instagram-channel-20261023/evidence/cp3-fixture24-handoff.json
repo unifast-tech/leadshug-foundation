@@ -1,0 +1,45 @@
+{
+  "kind": "cp3-fixture24-bounded-handoff",
+  "profile": "Operational / Coder",
+  "allowedPaths": [
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "bfba0cb37f0102d7de1dcb4ceba25061c77daab4fcc6d81a8ad131aa69b1b845"
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "sha256": "93cac3cad902629605bbc6f4cbb6735afa95f0356b71db7de5d81e94699cf15d"
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "sha256": "33c0267d8f5b5aa54b577f0461dfc117ba2af9aa7037f5cf7a0094354fbefa3f"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-whatsapp-ingress.e2e-spec.ts",
+      "sha256": "7803d43923a6de09e5eacff626e47a992617fe3b1763c3cdb5ed359cb71bc0ab"
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts",
+      "sha256": "d8d6c312e6f6271f2d4513661d4cb0b4ab227f1f9dc596f323e048f2ba63e2c9"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "sha256": "be6cff68c0daddbd1850db2668709be4815bf5e10401390bd94888b8dbff578a"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "6aa10600f120845ace0e227ea375c6f35c3efc697c5e08db4bfd92a56b3d64b7"
+    }
+  ],
+  "changes": [
+    "Dispatch two prepareInitial contextfixture calls use kind approved-template only to capture structurally realV2/route on emptyOfficialconversation. No template preview/send, no newIN/history, no claimtexteligible. All directadmissionpayloads/states/quotas/oracles unchanged.",
+    "Conversation-start sharedOfficialfixture explicitprovedWabaId123456789 only. Keep everyrow/concurrency/manualopen/NOVA_CONVERSA/keyword assertion and testbody otherwise unchanged.",
+    "Webhooks sharedOfficialA explicitprovedWabaId123456789; twoBresourcefixtures explicitdistinct456789123 samewithinB. Preserveeverypayload/expectation/window/replay/dedupe/Typebot oracle.",
+    "NewIGlegacycase directly seed matchingBuChannel/provideridentity businessIdentityIdnull FROMCREATE, not throughnormalhelper theneraseimmutablelink. Onlythissyntheticlegacycase. Keep exactsignedIN/persistedMessage/zeroRoutes/zeroOptions expectations; no DBtriggerdisable or newroute.",
+    "OAuthinfra ordinarypath503 +code BANCO_DESATUALIZADO +noLocation areexistingfiltercontract. Keep callback303/confidentiality/noeffects/nativePGtablefault/finallyrestore/normalcontrols untouched. No filter/middleware edit.",
+    "PCV deep publicpage: firstpageLimit params exactpageConversationIDs; remainingtwo exactsameproved BusinessChannelIdentity.id. Preserveallpage/row/querycount/index/EXPLAIN budgets, seeds500/OUTheavy/10kEPS/RLS/timing. No compare slice dropping unexplainedtail: explicitly assertbothscopeparams/count.",
+    "PublicEvolution echo fixture: qualify existingmanualIN with channel.identity.id. No extraMessage/content/date/counter changes. Add safe error context to failed201 assertion ifneeded (code/outcome only), preserving201 requirement. ResolverselectCandidate694-724 provesnullproviderID cannotselectexistingIN. Stillproveactualsend/echo pathinlaternativevalidation."
+  ],
+  "forbidden": "No production/newhelper/otherfile/doc edits, no test/build/lint/npm/runner/Docker/Git/private/env/provider/operational/tunnel operations. Do notedit any CP2clock/batch tests or thresholds. No skips/assertion weakening. Root owns documentation.",
+  "terminal": "Report full exact perfilediff/hashes. StaticNOTRUN, no fix/pass/acceptance claim. Singleproductwriter, otheragentsreadonly."
+}

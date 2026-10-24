@@ -1,0 +1,35 @@
+{
+  "kind": "cp3-bounded-instagram-batch26-handoff",
+  "state": "Ready only after explicit root dispatch, sender25 terminal reconciled.",
+  "profile": "Operational / Coder",
+  "existingPaths": [
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "sha256": "611502e0a6a9bb8158e204edb0a031b65591bc07c29e61dd021790a3ad0ae9f0"
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "sha256": "86e116a8889bafcb45e686714e9c4671708e98117760e4853354532f5971ccf4"
+    }
+  ],
+  "newPaths": [
+    "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.ts",
+    "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.spec.ts"
+  ],
+  "approvedWHAT": "Same signed textual Instagram ingress, complete envelope preflight <=1000/8MiB, one existing MessageAcceptance owner/fences and replay; required frozen1000-update <=15s evidence. No feature or numeric expansion.",
+  "chosenHOW": [
+    "Keep MessageAcceptanceService COMPLETELY unchanged, including both receiptVerifiedAt and connectedAt refreshes, row-lock ordering and all per-message transactions. Do not implement proposed receipt early return/cache/chunk acceptance owner. Root confirmed receipt write serializes initial transitions; advisory race concern is withdrawn.",
+    "After ALL existing shape/count/entry validation, form supported work in original flat source order using EXACT current ignore/orientation predicates. Every work item still invokes the exact existing current-resource/readiness lookup and acceptance code at execution time. No cached owner/readiness/epoch/credential data.",
+    "Use a narrow Instagram-only scheduler module: work carries accountId, peerId, externalMessageId and execute():Promise<void>. Group by JSON([account,peer]) in first-appearance order; preserve every item order inside group. Process with at most4 workers for this one request; one awaited acceptance at a time per worker. No globalqueue/retry/background task/HTTP-in-transaction.",
+    "Before grouping, detect same(account,externalMessageId) assigned to different peers. Such anomalous work MUST use original FLAT serial item order, not grouped single-worker order; this preserves existing first-key-winner behavior and conflicts. Same peer duplicate keys remain ordered; different accounts are independent.",
+    "On first worker failure set shared stop flag, stop taking new work and check before each next item; drain/await all started work before rethrowing original captured error. No early Promise rejection leaving writes running after HTTP error, no dropped work hidden by200. Partial successful independent commits retain existing exact-key replay semantics.",
+    "Leave signature/rawbody/config/challenge/error mapping/qualified timestamps/receipt/ownership/epoch/whole-envelope preflight/WA unchanged. No constant changes or source15s/timing test relaxations. No new canonicalbatch framework or concrete Channelmethods."
+  ],
+  "testFirst": [
+    "Create scheduler unit tests BEFORE product scheduler/controller edits, using deferred work boundaries only (not Prisma/acceptance transaction stubs): max4 in flight, per-peer original order despite reverse completions, same-account same-key/differentpeer flat serial fallback, differentaccounts samekey independent, error stopsqueuedwork and drains active calls before rejecting sameerror, empty input. Tests must be causal barriers with cleanup, not wallclock sleeps or implementation snapshots. No dynamicRED claim unless actually executed later.",
+    "In existing CP2 batch case ONLY, add safe phase started/completed markers for initial and replay POST, elapsed monotonic ms +updates1000. Assert initial full POST <=15000ms after response. Keep 30s testtimeout, every existing payload/count/replay/malformed403/over1000 413/echo assertion and every other case byte unchanged. Do not add per-event/request payload logging.",
+    "Root captured old controller in RAM plus exact CP2 batch block and prefix/suffix hashes. Report full diff; root proves untouched testprefix/suffix before separate canonical completeAPI run. Native performance/correctness and later fresh review remain mandatory."
+  ],
+  "forbidden": "Only4 exactpaths, no other source/test/helper/UI/schema/config/infra/private/env/provider/operational/tunnel/Git/doc edits. NO tests/build/lint/npm/runner/Docker commands. No change to MessageAcceptance/Incoming/realtime in26. No actual external calls. Stop/report a genuine missing path.",
+  "remaining": "CP2 primary protocol/human proposals, two other timing measurements, CP3 fresh source adherence, CP4 frontend/realtime/connection lifecycle and CP5..CP6 remain unaccepted; no claim that 4 workers meet15s until measured."
+}

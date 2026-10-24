@@ -1,0 +1,25 @@
+{
+  "kind": "root-static-sender25-reconciliation",
+  "sources": 254,
+  "changedOnly": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "213af82c21fcc25c3cb22997aaca8e1653a17ae2069b0b2ae49fb42cf64b13d0",
+      "bytes": 27699
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "2bc49e04d43bb6c5c8ea92704cea7d7cfa7b521abad3a813d2b93d47c41cd1b5",
+      "bytes": 49735
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823",
+      "bytes": 21532
+    }
+  ],
+  "rootRead": "Current complete affected lookup/send/acceptance/UNKNOWN helper bodies, unit fixture/address assertions, knownACK native assertions and independent OAuth/signedIN UNKNOWN case read. Exactly3existingpaths changed; no newfiles. No full-byte reverse claim for functional change.",
+  "fix": "Capture persisted route ContactIdentityAddress once before dispatch; provider peer and knownACK/UNKNOWN local ownership use same address. Existing recipientForOperation string wrapper and V1/initial behavior retained.",
+  "testQualityCorrection": "Full-body failure dump narrowed to allowed status/code/outcome/localMessageState/diagnosticPersistence; redundant ineffective negative outcome assertion removed; persisted response Message id equality added.",
+  "state": "NOTRUN; no GREEN or finding08 closure"
+}
