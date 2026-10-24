@@ -1,0 +1,19 @@
+{
+  "kind": "root-reconciled-lock37-test-only-terminal",
+  "sourceCount": 258,
+  "unchangedPriorSources": 257,
+  "newTest": {
+    "path": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "bytes": 14368,
+    "sha256": "155fdfff84cf22ca60979969423723dbf6cbe6807a4eefefcfdb649afd00c189"
+  },
+  "productionUntouched": true,
+  "tests": "NOTRUN",
+  "staticCorrectionsBeforeFirstRun": [
+    "IGcannotprepareInitial; realexactreplyresolver used",
+    "actualWAphoneNumberIDnumeric",
+    "cleanupallobservedoutcomesawaited/throwsoutsidefinally",
+    "earlyreservationcompletioncausaloracle beforedefault5sTXexpiry"
+  ],
+  "proofPlan": "One canonicalapi-instagramRED; distinguish reachednativefailure fromfixture/lint/type errors. No productrepair untilterminal/postflight."
+}

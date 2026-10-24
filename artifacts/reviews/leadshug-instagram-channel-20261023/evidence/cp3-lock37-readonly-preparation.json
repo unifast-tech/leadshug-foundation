@@ -1,0 +1,18 @@
+{
+  "kind": "root-qualified-lock37-readonly-preparation",
+  "status": "NOTIMPLEMENTED",
+  "sourceBaseline": "cp3-api35-frozen-manifest.json except outbound activelyauth36; rebind aftersolewriterterminal",
+  "rootFinding": "IG-CP3-ROOT-07 high releaseblocker",
+  "derivation": [
+    "Canonicallock JSONobject fields buId,platform,namespace,scopeReference,externalPeerId exactownerlockContactIdentityAddress. V2 must read persistedroute/contactidentityusingcapturedtuple, notpresentationoridentityID key.",
+    "Instagramactualscope `${config.clientId}:graph.instagram.com:${professionalUserId}`; sameopaquepeer DIFFERENTaccounts has differentlocks, samequalifiedaccount/peer serializes. Reject initialhelperwrongadvice; actualsourceconfirmed identity uniquenessincludesaccountscope.",
+    "V1WAacceptedrecovery intentionallydoesNOTrequire existingConversationRoute. Samepersistedconversationbu/contact/contactType canonicalwhatsappPeerAddress key; sharedacceptance remainsauthorityfor exactlocalContactassociation. Do not addnewrouteconstraint/newidentitywrites to historicalreader.",
+    "Provideridentity lock first, canonicalqualifiedpeer advisory then conversation thenadmission/intent. Applicable reserveOrdinary,reserveInitial,claimOrdinary,claimInitial,lockInitialOwner,ackOrdinaryRisk AND reconcileOrdinary.",
+    "OutboundprivatefinalizeInitial is calledonly inside sharedacceptance beforeCommit callback, aftersameprovider/peer/conversationlocks. Re-read bothcalls; simplest remove redundantlegacy-keyacquisition ifalreadyguaranteedsamecanonicalmutex, or reentrant exactcanonicalkey; never anothershadowkeyunderconvlock."
+  ],
+  "nativeProof": [
+    "FormattedWA samecanonicalpeer blocks correctly; samequalifiedIGaccount/peer blocks; differentaccount/sameopaquepeer proceeds independently. Gatebarriers/nativepg_locks, cleanupfinally release/settle/restore; no sleep-threshold-only oracle.",
+    "Preserve originalP2002case exactnineoracles/count3/default5s; V1cutoverlocal-onlycases/no transport; all originalfailureordering/counters."
+  ],
+  "scope": "Preparationnotcode/notreviewgate. Rootsolewriterhandoff afterauth36terminal; no privateruntime/Git/tunnel/Meta orprotectedpaths."
+}

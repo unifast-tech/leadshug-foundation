@@ -1,0 +1,26 @@
+{
+  "kind": "root-reconciled-auth36-static-terminal",
+  "changedExisting": [
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts"
+  ],
+  "new": [
+    "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts"
+  ],
+  "sourceCountMatched": 257,
+  "preservationRowsMatched": 35,
+  "rootIndexMatched": true,
+  "hashes": {
+    "api-app/src/domain/inbox/outbound.service.ts": "34e7b98462228f37ff2915cfbdf067fa2b2591a198d9ae7d8779976e35db5a26",
+    "api-app/src/domain/inbox/outbound.service.spec.ts": "ad8e4f19b3aacf6df772526ab730d6de9e89dc420ad0ccc859f820cbf882e5b2",
+    "api-app/src/domain/inbox/conversations.service.ts": "1aa8ad944527529255b589af45f5e1d05aa0bc36d504f2315330ca9ed546cd5b",
+    "api-app/src/domain/inbox/initial-message.service.ts": "ed7dac94eb2125525d66553b059b63f1770651dc30638e262fd33e157c6f188a",
+    "api-app/src/surfaces/bff/conversations.controller.ts": "799a1866c203557b9a115c327dfb466b40c71cb937218997c1a2fecec6ad34e2",
+    "api-app/test/instagram-cp3-routing.e2e-spec.ts": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823",
+    "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts": "ac62369b48608336ab89e1a865881927d3a1ab5c1821653e6006a24318a30411"
+  },
+  "tests": "NOTRUN; code-first authored then corrected native causal preconditions beforefirstexecution, no RED claim",
+  "reviewQualification": "No formal/checkpointacceptance; next ROOT07source serialized beforecanonicalvalidation"
+}

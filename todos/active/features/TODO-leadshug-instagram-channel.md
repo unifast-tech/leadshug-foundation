@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** corrigir, por executor único, os achados de adherence35 em autorização final, independência de credencial após ACK, consultas exatas/bounded, locks canônicos e harness. API35 foi reconciliadaGREEN:412unit/570E2E. Depois, validação/revisão atual e CP4 completo, sem aceite parcial.
+- **Next exact step:** congelar258fontes/T/inputs com auth36 aplicado e ROOT07produto ainda inalterado; UMA validação canônica api-instagram para RED nativo do novo teste de locks. Separar defeito alcançado de erro de fixture/lint/tipo. Depois, correção ROOT07/ROOT01/ROOT02/harness/CSV, validação completa/revisão atual e CP4 integral.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1498,3 +1498,17 @@ Both fresh no-context canonical review streams reached `turn.completed` and both
 | IG-CP3-ROOT-03 | Integrated | useful | partial | project | n/a | Alias B35-06; original high retained. Known CP4 UI/connections/projections/realtime/browser obligations remain, plus CP2primary/human and CP5/6gates. No waiver or backend-only acceptance. |
 
 Original ROOT05/06canonical ingress/peer repairs and ROOT08capturedqualifiedIGaddress have source support in both complementary reviews and native passing API35 cases. This closes only those original defects, preserving historical failures and all other open obligations. All seven deduplicated findings route to `release-blocker / fix in this TODO`; no nonblocking real finding is discarded or silently deferred. Remaining code corrections are approvedHOW inside SCOPE02/03/06/08, not a new provider flow or new capability. The agent lane remains routine executor `gpt-6-luna / medium`, principal checkout single writer, no worktrees; root remains Strategic/CTO-Tech-Lead across NestJS/React/Vite/Prisma/PostgreSQL/Docker for orchestration and exact documentation only.
+
+
+## CP3 auth36 — serialized source repair, not validated
+
+Trusted BFF authority is forwarded through ConversationsService to the existing OutboundService. Missing human fence is rejected; ordinary claim and the last ordinary/initial provider boundary recheck the current actor/session/grant. Final check uses autocommit read, so the existing signed-session check occurs after the awaited DB response and only synchronous deadline checks remain before transport. PUBLIC/BOT contracts and knownACK completion were preserved. Root reconciled all257positive public sources,35preservation rows and3rootgitlinks in `cp3-auth36-terminal.json`. Four existingfiles changed and one native Instagram-named spec was added; two owned companionfiles remained exact.
+
+Six causal native cases are authored but NOTRUN: Instagramordinary revoke/expiry/livecontrol and Evolutioninitial revoke/expiry/livecontrol. Session cases use a genuine signed30s cookie and advance Date-only past that expiry while proving the native90sdispatchdeadline and grant remain live. No executedRED or test-first temporal claim: this executor authored tests after product code. Root caught and corrected an initial confounded24hexpiry test and an ineligible official-text/emptywindow fixture before any execution. None is evidence of a product pass. Next serialized source repair addresses ROOT07 with the exact qualified lock owner; API35 remains proof only for its earlier frozen source.
+
+
+## CP3 lock37 test-only boundary and prospective RED
+
+The sole writer authored native PostgreSQL contention before any ROOT07 production edit and then became terminal. Root checked257prior source hashes exact and the new `test/instagram-cp3-locks.e2e-spec.ts` SHA155fdfff84cf22ca60979969423723dbf6cbe6807a4eefefcfdb649afd00c189. Original native P2002 nineasserts/count3/default5s and V1cutover were untouched. Test setup now uses exact reply resolver for eligible Instagram, numeric WA provider ID, immediately observed operation outcomes, early completion versus native pg_locks and cleanup before rethrow. These corrections occurred before first execution and establish no RED/GREEN claim.
+
+Next frozen validation is exactly one `bash scripts/test-channels-local.sh api-instagram`; source/T/boundinputs remain immutable, no retry/autofix. The new samequalifiedpeer reservation should expose the missing sharedmutex, but this remains a hypothesis until reached. Accountscope independence and formattedWA later assertions may remain unreached if the first oracle fails; report that honestly. Auth36sixcases also receive their first behavioral run here; API35 remains historical for earlier sources. After terminal root reconciliation, source repair37 may proceed. No other gate or checkpoint is accepted.
