@@ -1,0 +1,15 @@
+{
+  "kind": "cp2-r2-confirmation-gap-qualified12-service-only",
+  "precondition": "Validator12 terminal, root239/T/12/35/index/logmatch receipt saved",
+  "routing": "routing-cp2-r2-source-repair.json",
+  "authority": "authority-cp2-r2-qualified11.json",
+  "ownedPaths": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts"
+  ],
+  "facts": [
+    "Run12 actual19losers all409:18CONFIRMATION_IN_PROGRESS,1OPERATION_IN_PROGRESS. Winner/replayassertions afterloserpredicate unreached. Receipt/cancellationgreen.",
+    "Current confirm busy branch onlyrecentCANDIDATE_READY orliveoperationlease; aftermapping statusMAPPED_PENDING_SUBSCRIPTION subscriptionStateNOT_STARTED and nooperationlease before subscribeAfterMapping claimsresource. A samekey contendercanenterthatgap and competeforproviderphase, though resourcefence blockssecondHTTP."
+  ],
+  "repair": "Extend owner-local busy classification to existing live confirmation claim during mapped-but-subscription-NOT_STARTED gap, using persisted original operationDeadlineAt/current40s stage; no newtimer/schema or renewalonloser. Do not classify knownSUBSCRIBED/MAPPED_PENDING_RECEIPT localACKrecovery asbusy or lose immediate recovery afterresultcommitfault. Preserve UNCERTAIN recovery and nosecondPOST tombstone, immutable key/hash/audit, staleactor/cancel/generation/credentialfences. Any alternative must close actual sameclaim gap without weakening strict19assertion or widening scope.",
+  "constraints": "Soleonepathcodewriter; no tests/lint/build/runtime/provider/private/Git/docs. Allother238sources matchfreeze12. Returnterminal withSHA/exactreason/NOTRUN. Rootwillrefreeze independentvalidation."
+}

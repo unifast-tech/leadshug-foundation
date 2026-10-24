@@ -1,0 +1,10 @@
+{
+  "kind": "cp2-r2-cleanup-validation-only-12",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r2-cleanup-frozen-manifest-12.json",
+  "log": "cp2-r2-cleanup-validation-12.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r2-qualified11.json",
+  "instructions": "Same canonicaldisposable runner exactlyonce; onlylogwrite. Independentlymatch239/T/12inputs/35/index beforeandafter. No code/docs/private/runtime/Meta/provider/Git mutation. Root ownsreceipt. On concurrencyfailure report actual syntheticstatus/code assertiondiff; do not edit/retry. Alllanes remain frozen untilterminal."
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "cp2-r2-cleanup-validation12-qualified",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "exit": 1,
+  "logSha256": "3e58e173dd5d843da70e0db6698af9513118cfb946b5a06801ecd077fac346b6",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r2-cleanup-validation-12.log",
+  "migrations": 31,
+  "lint": "PASS",
+  "build": "PASS",
+  "unit": {
+    "files": 37,
+    "passed": 398
+  },
+  "e2e": {
+    "files": 7,
+    "passed": 76,
+    "failed": 1,
+    "total": 77
+  },
+  "actualConcurrencyLosers": {
+    "total": 19,
+    "status409": 19,
+    "CONFIRMATION_IN_PROGRESS": 18,
+    "OPERATION_IN_PROGRESS": 1
+  },
+  "reached": "ProviderPOST held; loser classification failed exact contract; later winner/audit/replay assertions unreached. No duplicatePOST claim follows.",
+  "qualifiedPasses": [
+    "receipt/cancellation now releases original holder after settled error, preserving acceptedmessage/receipt/cancel and noextraPOST",
+    "other3binding cases inclbothsuccess/error successorholdertakeover",
+    "committedwriter recovery originalkey/body",
+    "naturalPGsessionexpiry matchedcontrol",
+    "28mainCP2/lifecycle20/identity10/migration2"
+  ],
+  "rootPostMatched": {
+    "sources": 239,
+    "todo": true,
+    "inputs": 12,
+    "preserved": 35,
+    "index": 3
+  },
+  "validatorTerminal": true,
+  "acceptance": "Still diagnosticRED; no fullcheckpoint/feature acceptance",
+  "next": "One exactservice code-only correction for confirmed same-key transient mapping/holder-gap, strictassertions unchanged; preserve knownACKlocalrecovery and UNKNOWNfence"
+}

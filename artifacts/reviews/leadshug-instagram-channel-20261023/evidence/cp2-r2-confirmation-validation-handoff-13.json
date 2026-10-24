@@ -1,0 +1,10 @@
+{
+  "kind": "cp2-r2-confirmation-validation-only13",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp2-r2-confirmation-frozen-manifest-13.json",
+  "log": "cp2-r2-confirmation-validation-13.log",
+  "routing": "routing-cp2-r2-causal-validation.json",
+  "authority": "authority-cp2-r2-confirmation13.json",
+  "instructions": "Exactlyonce canonicaldisposable. Verify239/T/15inputs/35/index beforeandafter; no source/T/inputs/private/runtime/provider/Git writes, onlynewlog. No rerun/autofix/fullAPI untilrootterminalreconciles. Report everyreachedconcurrency loser/winner/audit/credential/replay and anyfailure. Rootownsreceipt."
+}

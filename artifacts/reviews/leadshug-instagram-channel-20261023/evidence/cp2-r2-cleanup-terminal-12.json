@@ -1,0 +1,12 @@
+{
+  "kind": "cp2-r2-qualified11-code-terminal",
+  "changed": {
+    "api-app/src/domain/channels/instagram-authorization.service.ts": "9da4979830398054e2e648e511d1a416c96b591a780167eee1cb326dadf618de",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts": "a9c78f4bc9b29b77d0dafee12b742763cb8e25a7617bc3fe8d6cd2f1230d77ce"
+  },
+  "other237SourcesMatched": true,
+  "preserved": 35,
+  "rootIndex": 3,
+  "validation": "NOTRUN",
+  "qualification": "Exact-token cleanup post-settlement; concurrency assertion diagnostic-only, strict19x409 unchanged; actual unexpected outcome unknown"
+}

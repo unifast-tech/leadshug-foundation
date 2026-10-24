@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** reparar fontes/provas CP2r2 admitidas em lane somente código, conforme handoff revisado; refreeze e validação separada/API completa/revisão. CP3independente pode seguir sem aceitar o observer próprio; CP4..CP6 permanecem.
+- **Next exact step:** corrigir somente o intervalo entre confirmação mapeada e claim de inscrição, preservar conflitos/recovery; refreeze e validação separada13, API completa e revisão CP2 completa. CP3 independente segue depois da reconciliação sem aceitar o observer próprio; CP4..CP6 permanecem.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** CP1 aceito; CP2r2 completo estável passou395unit e522de528integração. Revisão completa terminal exige correções de sessão pós-espera, operação por vínculo, preflight e limites nas variantes de rota. Um executor somente testes, sem runner; CP2 ainda não aceito.
+- **Why this state now:** CP1 aceito; validação12 estável passou31migrações/lint/build/398unit e76de77integração selecionada. Sessão causal, ingresso/limites, retomada e cancelamento passaram. Uma das19confirmações paralelas bloqueadas recebeu OPERATION_IN_PROGRESS em vez do conflito de confirmação; correção somente código, sem runner concorrente. CP2 ainda não aceito.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware, privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
-- **Last confirmed truth:** CP1r8 aceito; CP2r2 completo terminal com31migrações/lint/build,395unit e522de528integração. Root confirmou236fontes/TODO,42entradas de revisão,35preservações e3referências do índice antes do thaw somente testes. Revisão changes_required com10findings, sem aceitação CP2.
+- **Last confirmed truth:** validação12 terminal; root confirmou239fontes/TODO,12entradas,35preservações,3referências e hash do log. Os19concorrentes foram bloqueados com409;18CONFIRMATION_IN_PROGRESS e1OPERATION_IN_PROGRESS. Assertions posteriores do vencedor/replay ainda não alcançadas. API completa/revisão completa atuais permanecem pendentes.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1202,3 +1202,9 @@ After the source writer became terminal, root sealed239public sources/currentTOD
 Two residual failures are explicit. The20freshconfirmation case failed its loser status/code predicate, without capturing the actual distribution; later winner/replay/audit assertions were not reached. The receipt/cancellation case retained the original bindingholder after a settled provider error; cancellation and acceptedmessage/receipt assertions passed before that failure. Source inspection identifies tuple rejection before the holderrelease in the error path. Do not infer duplicate provider dispatch or lostreceipt from either result.
 
 cp2-r2-qualified11-narrow-repair.json thaws only the previouslyadmitted authorizationservice and binding/residual specs for one serialized code-only writer. Preserve strict19conflict losers, one actualPOST and immutable replay; capture safe actualstatus/code diagnostics rather than relax the predicate. Ensure exact-token cleanup after the HTTP operation settles and stale result handling rejects, retaining successorholders, independentreceipt/cancel, cooldown and firstPOST history. No runner whilewriter active. Other236sources stayimmutable; root will refreeze before separatevalidation. Primaryobserver, pendinghumancompanions, complete regression/freshreview and CP3..CP6 remain required.
+
+## CP2 cleanup12 — receipt cancellation passes, exact concurrency conflict remains
+
+The cleanup writer was terminal before root sealed239sources/TODO/12inputs. Separate validation12 passed31migrations/lint/build/398unit and76of77integration. Root independently matched allfrozeninputs/35preservations/3index and exactlogSHA after validator terminal. The signedreceipt/cancellation case now passed including originalholder cleanup and independentlycommitted facts; both late successorholder success/error cases, recovery and shortsession matchedcontrol remainGREEN.
+
+The actual20fresh case reached19losers, all409:18CONFIRMATION_IN_PROGRESS and1OPERATION_IN_PROGRESS. Laterwinner/replay/audit assertions were not reached. This proves a classification/claimgap, not a duplicatePOST. The currentclaim predicate misses mapped/NOT_STARTED between mappingcommit and resourceholderclaim. cp2-r2-confirmation-gap-repair-13.json explicitlythaws onlytheauthorizationservice for the existing original liveclaim interval underits40s deadline; no newlease/schema or renewalonloser. KnownSUBSCRIBED localrecovery and UNCERTAIN/no-repeatPOST history remain unchanged. Allother238sources staysealed; no runner duringwriter. Currentcomplete regression/freshreview and everypendinghuman/primary/CP3..CP6 obligation remain.

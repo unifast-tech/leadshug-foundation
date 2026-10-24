@@ -1,0 +1,42 @@
+{
+  "kind": "complete-cp2-r3-review-preparation-no-dispatch",
+  "basis": "adherence-cp2-r2-package.json",
+  "requiredSourcePathsAdditional": [
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/test/instagram-cp2-recovery.e2e-spec.ts"
+  ],
+  "packagePolicy": "Retain complete57requiredsources+all34historicalevidence and all16obligations, add3newproofsources/currentqualifiedreceipts. Not residual-only or a rerun of old findings. RefreshcurrentTODO/all239manifest/inputs onlyafterterminal correctivewriter; no source review beforeactualnewfreeze. Rootadjudication/qualifiedfailedrounds remain evidence, not instructions to reviewer to accept.",
+  "requiredCurrentEvidence": [
+    "adherence-cp2-r2-result.json",
+    "adherence-cp2-r2-merge.json",
+    "cp2-r2-root-adjudication.json",
+    "cp2-api-full-r2-result.json",
+    "cp2-r2-budget-how-clarification.json",
+    "cp2-r2-causal-validation-08-result.json",
+    "cp2-r2-source-validation-09-result.json",
+    "cp2-r2-source-static-followup-09.json",
+    "cp2-r2-binding-completion-clock-observation.json",
+    "cp2-r2-preexecution-final-clock-alignment.json",
+    "cp2-r2-followup-validation-10-result.json",
+    "cp2-r2-lint-validation-11-result.json",
+    "cp2-r2-qualified11-narrow-repair.json",
+    "cp2-r2-cleanup-terminal-12.json"
+  ],
+  "clarifications": [
+    "Three-requestbudget peradministrativestage/currentattempt, never inventedlifetimecap; no repeatmutation afterUNKNOWN stilldurableacrossattempts",
+    "ShortnaturalPGsession proof hasactualmatchedlivecontrol and reachedrollback assertions; do notrehabilitateold15sconfound",
+    "Actualcommittedwriterfault anddisabledfaultreplay; originalkey/body immutability, localACK recovery vsnewHTTP",
+    "Sharedbindingliveholder/cooldown cleanup exacttoken aftersettledsuccess/error; pendingHTTPmustretainholder; latecancellation/session/credential/generation rejection mustnotclear successor or undoindependentreceipt",
+    "Twentyfreshconcurrentfirstconfirmations arependingqualifieddiagnosis; inspectactualnextlog and assertwinneronePOST/audit/credential alongsideeveryloser, notcompletedcachealone",
+    "Nativefetchguardwait/headers/body consumeabsolutephasebudget; tokenclock conservative beforelongtokenrequest",
+    "CanonicalExpresscase/trailingslash effectivealiaslimits and wholebatchentrypreflight",
+    "FullcanonicalAPIcurrentstablepassand freshcomplete review stillmandatory; noacceptancefrom239hashes or aggregatecounts"
+  ],
+  "gatesPending": [
+    "PrimaryownsubscriptionGETsemanticsunresolved",
+    "Threehumanproposalspending/unadmitted",
+    "CP3throughCP6/fullbrowser/ALL/performance/RLS/TQA/security/cutover/final"
+  ],
+  "status": "Preparationonly; validation12active source/T/inputfreeze unchanged; nodispatch/noacceptance"
+}
