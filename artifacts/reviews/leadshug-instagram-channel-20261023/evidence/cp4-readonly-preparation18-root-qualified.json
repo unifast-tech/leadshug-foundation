@@ -1,0 +1,53 @@
+{
+  "kind": "cp4-readonly-preparation18-root-qualified",
+  "date": "2026-10-24",
+  "state": "PREPARATION ONLY, no implementation/proof/review acceptance",
+  "readset": [
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "625d0908aed0dbc68440737eca55f4c9687dac5b4ec009a85383f99f680d79f2"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "d2d274cb1d1aeb36c48bea05896e22b5105723701e56d51dac77c4f43dc66064"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "dcbbeaae17da0b7bf2e6c354c6446ae4570904ce7356450415f016bc8dc68478"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "sha256": "22cf5877d6336e4c22b8650402c5913b064278b9ba639e20e10f9a80c00fc791"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    }
+  ],
+  "baselineDelta": "prep04 channel.ts SHA is historical; currentaa648... adds latercanonicalcontext contract. Refreeze terminal CP3sources before CP4write. Other listedproducer/frontend sources unchanged vs original prep04.",
+  "implementationDirection": [
+    "One server-owned safe platform/account/recipient display projection shared by BFF list/thread, derived only actualpage50routes/qualifiedidentities; ambiguous/no-route stays neutral. No opaqueIGpeerphone/technicalWABAID UI/BU.phone inference.",
+    "Boundedbatch <=8domainqueries/page to measure withnativePG, notperrowreply-options/credentials/profileHTTP. Safe display neverauthorizesdispatch.",
+    "Inbox consumes projection and one authorizedreply-options per openedcomposer, exactstrictV2POST, selectedroute/gen/fingerprint anddraftfences includingA-B-A. Keep current1000characterWHAT pendinghumanbyteproposal.",
+    "Numeros uses paginatedconnectioncatalog andactualOAuthpopup/attempt lifecycle; genericclean303/cancellation/rehydration/reauthorization. No protectedApp.tsx/globalPlaywright/middlewarefurtheredits.",
+    "RealbackendVite/nativePG browser harness + narrowtestTLSfrontdoor ifactualHTTPSOAuthreturn; retainnativecookie/session/WS andbundle/API freshness. ExistingWAordinary/initial/template/onboarding flows allmandatory."
+  ],
+  "futureOracles": [
+    "actualpage50 <=8query measurement; twoIGaccounts sameopaquepeer accountscope; neutralambiguity; noID/secret leak",
+    "nativebrowser renderedIGlabels+selectedaccount send/return; staleA-B-Afetch/send/draft fences",
+    "safeOAuthcancel/reload/reauth; zeroquery/tokenleak; realWAregressions"
+  ],
+  "qualifier": "Read-only advisory not formal adherence, freshness/PGbrowser/query performance or delivery proof. No Git dirtiness inference retained."
+}

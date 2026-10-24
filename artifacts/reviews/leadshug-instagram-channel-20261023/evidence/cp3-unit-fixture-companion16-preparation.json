@@ -1,0 +1,27 @@
+{
+  "kind": "cp3-unit-fixture-companion16-preparation",
+  "date": "2026-10-24",
+  "state": "PREPARED; only next serialized lane16 may write after15terminal",
+  "authority": "Existing approved domain/inbox/** unit companions, no production/mockfallback expansion",
+  "additionalOwnedPaths": [
+    "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+    "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts"
+  ],
+  "baseline": [
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+      "sha256": "f6561e2e2dce670f94ce95510f97da0680249ff2484b0c1098d5e6a3b1232ee6"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "sha256": "7b0e7d75fc5809b8c950896818779402fe2bf32ef37a94d970fe081240562975"
+    }
+  ],
+  "basis": "Root actualstaticreads show newcanonicalpeer and WA consumer guard query collaborators absent in old unit doubles. No functionalRED asserted; no test run.",
+  "requirements": [
+    "MessageAcceptance2oldcases: supply coherent canonicalContactIdentity/localContact contactId matching exactBU/peer for existingidentity lookup, and exactnew read collaborator. Distinguish resource lock SQL from canonicalcontact advisory in querymock, no fakeproviderresource row for advisory. Preserve original callback-beforetimestamp/keyedinsert and echo-first no-conversation-rewrite assertions/order; do not require productionskip newidentitychecks. If trace includes newlock use additional explicitordering assertion without deleting original causaloracle. SenderResult must not fabricate route; unit can add zero-routecreation assertion.",
+    "IncomingTypebot4oldcases: add exactcurrent WA business/provider/contactIdentity query collaborators to prisma double before trigger/session: uniqueWAresource, exactprovider/binding/BU/gen/epoch plus canonicalPERSONidentity and conversation.contactId. Existing continue-case peer literal1 is invalid underapprovedE164grammar; replace onlyits synthetic peer withvalid explicitWA string consistently. Preserve all start/continue/no-second-output/sender count/assertions; no bypass or mocks ofnewguard itself. This remains unitcollaboration evidence; newboundaries realPG proof remains distinct.",
+    "No productioncode/sourcebehavior, oldscenario removal, timeout/metric/expectation weakening. No snapshots/deadlines/provider counters changed. All otherunitfiles frozen."
+  ],
+  "restrictions": "Sole writer16 only after15terminal. No tests/lint/build/runner/private/env/runtime/Git/docs/network. Return hashes and actual fixture-onlydiff, no passclaim."
+}

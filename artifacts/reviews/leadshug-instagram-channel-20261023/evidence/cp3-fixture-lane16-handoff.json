@@ -1,0 +1,41 @@
+{
+  "kind": "cp3-qualified-fixture-lane16-handoff",
+  "date": "2026-10-24",
+  "state": "PREPARED; dispatch only after source15 terminal/rootreconciled",
+  "authority": "Approved ST-IG-03 v1.3 canonical fixture adaptations preserve all scenarios/oracles",
+  "ownedPaths": [
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/dispatch-admission.e2e-spec.ts",
+    "api-app/test/api-publica.e2e-spec.ts",
+    "api-app/test/historico.e2e-spec.ts"
+  ],
+  "baseline": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "197aeba4c765168c7fba66ec56209241025a8bfc09475e3100f4be1995d0a13d"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "8ba8028f5da55c5fa10b256fbfe7bccea5b46e6f7cba6dfb461f79988d2b9344"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "sha256": "bf6a2a2932ba9b586c9478c2f3d2c662b1b0874f26f1d6752cb72d2af43ca363"
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "sha256": "4f729b9fcdfb219857b857d8f1b4baa33c0d50834b5fd9ea563723e880cbae55"
+    }
+  ],
+  "requirements": [
+    "All existing test cases/assertions/provider counters/barriers/deadlines/snapshots retained; no weaker domain/auth/session/DB mocks, no timeout increase or expectation weakening. Test fixture must supply actual canonical identity/resource proof. Production allreadonly. Helpers from lane15 readonly; report unavoidable change.",
+    "Initial-message: shared beforeEach/open MUST remain routefree. Real OutboundService.prepareInitial/initial preview owns route creation, no blanket fixture side effect (especially templates from original line737+). The manual ordinary positive320rows can opt-in explicit selectedEvolution route before native GETreply-options/V2POST; preserve320rowvalues/nullprovider IDs and query LIMIT1/noCOUNT/counters.",
+    "Initial-message empty ordinary negatives: controller requires completeV2 shape before assertOrdinary gate; preserve INITIAL_SEND_REQUIRED409 with explicitly schema-valid NONEXISTENT synthetic routeUUID/fixed64hex and actual selected channel/gen, labeled structural-only no metadata provenance. No route/message/provider effect invented; existing contextual route exists after actualprepareInitial can use nativeoptions for later interlock checks. Preserve raw authnegative ordering. No template-path body changes beyond actual needed context.",
+    "Dispatch-admission new reserveOrdinary/reserveInitial context must come from actual OutboundService.prepareInitial(...explicit channel...), producing canonicalV2 route/context. Change beforeEach and all reset assignments(original193,217,241,273,329,597); contexts include real current WABA via opt-in helper. Never forge V2 tuple or spread legacy fields into it. No provider send just from prepare.",
+    "Dispatch cross-tenant account-rate seed: retain60 deliberately releasedREJECTED historicalV1 rows (original313..322), with explicit oldV1 keys, no schemaVersion/routeId/V2fields. Use actual metaAccountReference of explicit shared syntheticWABA for legacyseed and secondTenantrealchannel; new currentV2context from resolver unchanged. Do not let spreadselectedV2convertlegacyseeds. First rate-window60records/counters/deadlines remain. Historical contexts/snapshots in other genuine cutover cases must not be rewritten.",
+    "Public API maintains its own requestbody, noBFFcontext. Default actualsignedWAingress setup receivesroute onlythrough repaired productionowner14. Explicit currentOfficialWABA needed for readiness; cannot injectroute after webhook. ManualEvolution echo fixture original178..184 needs explicit routebeforepublicsend. Empty lookahead record original322..335 needs explicit selectedroute for routequalifiedpubliclist, preserving null message/direction, limit+1 andSQLbounds. No >500-row perf fixture exists here; actualsmallparambounds remain exact.",
+    "Historico: retain all historical rows, canonicalcontacts, chronology/CSV/unread/audit and no routes/activechannels. Existing assertions require number5584900000000; explicitly declare a synthetic durableBusinessChannelIdentity WHATSAPP/WHATSAPP_RESOURCE/BU with this literal in setup forA only (not read/infer BU.phone). Keep storedBU.phone unchanged, preserve original expectedvalues. This is declared fixture proof, not productionbackfill. Other historical unknownnumber coverage in newboundaries spec remains routefree/noBCI/numberempty.",
+    "Conversation-start and frozenV1cutover/CP3routing/OAuth/CP2/oldtemplate suites readonly. No new auth/grant bypass, metadatafake or removal of existing scenarios. Report actual staticneeded input differences candidly; later canonicalallAPI proof mandatory."
+  ],
+  "restrictions": "Sole principalwriter only4testpaths. No helper/product/root/Web/docs/Git/private/env/Meta/network/runner/lint/build/test mutation/actions. Return hashes and precise adaptation/unchangedoracle status. No acceptance."
+}

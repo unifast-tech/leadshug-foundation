@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** corrigir MessageAcceptance conforme cp3-message-acceptance-wa-ingress14-handoff.json: ingresso WA autenticado deve estabelecer rota canônica; aceitação usa identidade, preservando contact legado. Consumidores13 reconciliados em253fontes públicas, ainda NOTRUN. Depois fixtures serializadas e validação consolidada; última execução fonte10(406unit/97de103E2E), sem aceite de checkpoint.
+- **Next exact step:** adaptar fixtures15 conforme cp3-fixture-lane15-handoff.json após core14 terminal/root reconciliado (254fontes públicas, NOTRUN). Depois fixtures16 e validação canônica consolidada; última execução fonte10(406unit/97de103E2E), sem aceite de checkpoint.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1413,3 +1413,9 @@ Fonte13 terminal: quatro consumidores e um spec novo; root conferiu253fontes pú
 A candidata exata OAuth v2 está aplicada12 (SHA3106e6...), com fault spec novo e restauração protegida, ainda sem execução. A readiness11 foi centralizada para aceitar o subestado IG SUBSCRIBED_PENDING_RECEIPT somente com CONECTADO/receipt reais; o V1 deliberado preserva todos os fatos anteriores e fornece WABA sintética só antes do novoV2. Essas fontes não foram validadas pela rodada10 anterior. R1-04 e os findings CP3 continuam abertos.
 
 Root encontrou duas lacunas adicionais no owner comum: ingresso WA autenticado ainda não cria ConversationRoute, e aceitação/eco compara o campo legado contact em vez da identidade canônica. A premissa da preparação06 de que o webhook WA já fornecia rota está invalidada; não preencher rota após o webhook em fixture para esconder defeito real. `cp3-message-acceptance-wa-ingress14-handoff.json` delimita um único writer no serviço de aceitação e spec novo: derivar rota apenas do ingresso atual comprovado, preservar fatos/IDs/display legados e provar o percurso webhook→opçõesV2→resposta com Nest/PostgreSQL. Nenhum runtime privado, migração ou alteração Meta está autorizado.
+
+
+### Core14 terminal e fixtures15/16 preparadas
+Root conferiu254fontes públicas, somente MessageAcceptance alterado e um spec novo;35preservações e3índices mantidos. A correção usa identidade canônica para entradas/eco/resultados/diagnóstico, mantém display legado e deriva rota apenas de ingresso atual comprovado. Foram corrigidos estaticamente o enum do guard, a comparação de telefone formatado e o eco com conversa explícita; nenhuma execução ocorreu. Findings ROOT05/06 continuam abertos até validação/revisão.
+
+Fixtures seguem serializadas em `cp3-fixture-lane15-handoff.json` (helpers/atendimento/transporte/boundaries) e `cp3-fixture-lane16-handoff.json` (initial/admission/public/history). WABA é opção explícita para recurso operacional atual, defaultnull preservado. Rotas sintéticas são opt-in apenas para conversas manualmente semeadas; ingresso real deve criá-las no produto. Abertura/preview inicial continua com o owner real de rota, sem efeito global na fixture; seeds históricos V1 e templates preservados. Correções estáticas de fixture não provam o produto e não dispensam a suíte atual completa.

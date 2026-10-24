@@ -1,0 +1,11 @@
+{
+  "kind": "serial-writer15-type-companion",
+  "date": "2026-10-24",
+  "authority": "Existing approved shared inbox domain path; discovered compile contract, no runtime/WHAT expansion",
+  "additionalOwnedPath": "api-app/src/domain/inbox/message-acceptance.service.ts",
+  "baselineSha256": "4531d8bf0abe7d9f2f1c671e687bd027bdff89d7cac761db7eaed31f102e4e47",
+  "exactChange": "Only resolvePeer and matchesCanonicalConversation input parameter type changes from full MessageAcceptanceInput to Omit<MessageAcceptanceInput, externalMessageId|status> or equivalent narrow Pick of fields actually used. No function body/cast/fake externalID/other source modification.",
+  "reason": "recordAmbiguousOutbound intentionally has no externalMessageId; both new helpers require it unnecessarily, causing static TS2345 before any functional proof. Full acceptance inputs structurally satisfy the narrower helpers.",
+  "writer": "instagram_fixtures15, sole current codewriter; core14 stays terminal/read-only",
+  "restriction": "No tests/runner/build/lint in writer lane. Root rechecks exact two signature-only changes; full canonical validation later."
+}
