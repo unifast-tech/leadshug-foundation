@@ -1,0 +1,22 @@
+{
+  "kind": "root-reconciled-api33",
+  "sourcesMatched": 256,
+  "boundInputsMatched": 583,
+  "todoMatched": true,
+  "preservedRowsMatched": 35,
+  "rootIndexMatched": true,
+  "exitCode": 1,
+  "logSha256": "ee0988fbc153831dc484ea55f8011aee13935470f5cb64f70d7928798dacdef8",
+  "logBytes": 13935,
+  "passed": "parity26/generate/31migrations",
+  "failed": "Lint preserve-caught-error at dispatch759, AggregateError in Object.defineProperty catch lacks cause. Prior no-unsafe-finally errors gone.",
+  "notReached": [
+    "build",
+    "unit",
+    "E2E",
+    "P2002count3",
+    "clock/batch proof"
+  ],
+  "reviewStatus": "Canonical closed52body review33 terminal collection failure BEFORE model turn: input1069735chars exceeds1048576. No turn.completed/result/findings. Complete same source/rubrics must be rebound and losslessly compacted for retry; no subset review accepted.",
+  "state": "RED; routine one-line cause repair required"
+}

@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** congelar candidata33 com finally32 reconciliado para UMA validação canônica completa da API e revisão independente atual de aderência CP3. API31 parou em lint no-unsafe-finally; build/unit/E2E não alcançados. Correção32 coleta erros na limpeza e relança depois. Review31 preparado nunca foi executado; pacote será refeito sobre33. Revisão escreve apenas artefatos novos, sem fontes/TODO/inputs congelados. Depois, CP4 completo sem aceite parcial.
+- **Next exact step:** congelar candidata35 com cause34 reversível conferido e executar UMA validação canônica completa da API. API33 parou em lint preserve-caught-error; build/unit/E2E não alcançados. Revisão33 encerrou antes do turno do modelo por limite de1048576caracteres; nova embalagem deve preservar52corpos completos/todos os critérios, retirando apenas repetições e whitespace JSON. Review e validação podem criar apenas artefatos novos, sem fontes/TODO/inputs congelados. Depois, CP4 completo sem aceite parcial.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation

@@ -1,0 +1,9 @@
+{
+  "kind": "root-static-cause34",
+  "changedOnly": [
+    "api-app/test/dispatch-admission.e2e-spec.ts"
+  ],
+  "reverseExactTo32": true,
+  "sha256": "b67794d5d9327e517f27620292e71fa3d9986d0f6aa259c59a07052497e6a5d5",
+  "state": "NOTRUN; same test-only scope, no behavioral proof"
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "cp3-complete-api-validation35",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "times": 1,
+  "freeze": "cp3-api35-frozen-manifest.json",
+  "sourceCount": 256,
+  "log": "cp3-api35-api.log",
+  "beforeOutput": "cp3-api35-before.json",
+  "afterOutput": "cp3-api35-after.json",
+  "resultOutput": "cp3-api35-result.json",
+  "instructions": "Exactly ONE canonical invocation after root freezes manifest27 and all writers terminal. Validate positive256sources/currentT/all boundInputs/35preservedrows/3rootIndex before and after. Writes ONLY four named outputs log/before/after/result. No autofix/retry/source/T/input/Git/private/env/operational/provider/tunnel work. Runner owns only leadshug_channels_validation, NEVER leadshug_channels_local. Capture complete synthetic stdout/stderr, exit code and log hash. Report actual stages/counts/assertion reachability; no blanket GREEN. Concise progress each minute.",
+  "classification": "Exact one-line nativecause34 fixes API33 preserve-caught-error lint. Currenttests30/32/34 unrun; same API29 product. Complete canonicalAPI actualcounts/reachedoracles, allclock/batch/nativequeue thresholds unchanged; independent complete52body review on same source may create only newreviewartifacts.",
+  "remaining": "NotALL/Web/browser/currentformalreview/primaryproviderprotocol/realruntime orcheckpointacceptance. CP4 UI/realtime/source work remains after adjudication."
+}

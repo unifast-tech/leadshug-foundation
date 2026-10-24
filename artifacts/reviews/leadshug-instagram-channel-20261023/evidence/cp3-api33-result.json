@@ -1,0 +1,96 @@
+{
+  "kind": "cp3-api33-canonical-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED",
+  "log": {
+    "path": "cp3-api33-api.log",
+    "bytes": 13935,
+    "sha256": "ee0988fbc153831dc484ea55f8011aee13935470f5cb64f70d7928798dacdef8",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "evidence": "26 parity mutation cases rejected; wrapper checks passed"
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "generated successfully; complete details in log"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "evidence": "31 migrations applied and schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "FAIL",
+      "evidence": "/workspace/api-app/test/dispatch-admission.e2e-spec.ts:759:25 error preserve-caught-error: There is no `cause` attached to the symptom error being thrown; 1 problem (1 error, 0 warnings)"
+    },
+    {
+      "name": "build",
+      "status": "NOT_REACHED"
+    },
+    {
+      "name": "unit tests",
+      "status": "NOT_REACHED",
+      "count": null
+    },
+    {
+      "name": "E2E tests",
+      "status": "NOT_REACHED",
+      "count": null
+    }
+  ],
+  "failureBody": {
+    "file": "api-app/test/dispatch-admission.e2e-spec.ts",
+    "line": 759,
+    "column": 25,
+    "rule": "preserve-caught-error",
+    "message": "There is no `cause` attached to the symptom error being thrown",
+    "summary": "\u2716 1 problem (1 error, 0 warnings)"
+  },
+  "assertions": {
+    "nativeP2002Count3": "NOT_REACHED",
+    "liveControlTiming": "NOT_REACHED",
+    "strictCp2Clock": "NOT_REACHED",
+    "instagramBatchInitialAndReplay": "NOT_REACHED"
+  },
+  "batchMarkers": {
+    "initialStarted": "NOT_REACHED",
+    "initialCompleted": "NOT_REACHED",
+    "replayStarted": "NOT_REACHED",
+    "replayCompleted": "NOT_REACHED"
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "prismaMigrations": 31,
+    "lintErrors": 1,
+    "unitTests": 0,
+    "e2eTests": 0
+  },
+  "notes": [
+    "Lint failed before build, unit and E2E stages. The API31 three no-unsafe-finally diagnostics are no longer present in this run; one preserve-caught-error diagnostic remains.",
+    "No native P2002, live timing, strict-clock, or batch assertions were reached on API33.",
+    "No source fix/retry or threshold change was performed; no checkpoint/provider/browser/delivery acceptance claim is made."
+  ]
+}
