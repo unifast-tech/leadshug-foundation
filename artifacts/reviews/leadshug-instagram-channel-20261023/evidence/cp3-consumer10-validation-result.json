@@ -1,0 +1,123 @@
+{
+  "kind": "cp3-consumer10-canonical-test-first-validation-result",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": "cp3-consumer10-api-instagram.log",
+  "logSha256": "6d2ab3e39a70e795799e6576019658ab015953e2e66e2a0599e220157ef19524",
+  "logLines": 699,
+  "stages": {
+    "isolatedSetup": "PASS",
+    "databaseMigrations": "PASS",
+    "prismaGenerate": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "unit": "PASS: 406/406 tests in 38 files",
+    "e2e": "FAIL: 6 failed, 97 passed (103 total; 5 files failed, 9 passed)"
+  },
+  "e2eFailures": [
+    {
+      "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+      "line": 102,
+      "case": "keeps history, legacy channel projection, public v1, and Typebot on canonical WhatsApp routes when two Instagram accounts use the same numeric peer",
+      "expected": "history.body.total = 1",
+      "actual": "history.body.total = 3"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "line": 226,
+      "case": "callback final candidate write is denied in a deliberately shortened persisted-lease robustness wait",
+      "expected": "duration < 2000 ms",
+      "actual": "duration = 2357 ms"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "line": 80,
+      "case": "binds the same opaque peer to two real Instagram accounts and sends only through the selected V2 route",
+      "expected": "available=true, reason=AVAILABLE",
+      "actual": "available=false, reason=CHANNEL_NOT_READY"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "line": 408,
+      "case": "recovers every V1 ordinary and initial state locally while preserving immutable request facts and exclusions",
+      "expected": "available=true",
+      "actual": "available=false"
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session.e2e-spec.ts",
+      "line": 49,
+      "helperLine": 33,
+      "case": "redirects absent, invalid, inactive, password-changed, must-change-password and pending-onboarding sessions before controller effects",
+      "expected": "HTTP 303",
+      "actual": "HTTP 401"
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session.e2e-spec.ts",
+      "line": 83,
+      "helperLine": 33,
+      "case": "applies the same precontroller protection to callback case and trailing-slash aliases",
+      "expected": "HTTP 303",
+      "actual": "HTTP 401"
+    }
+  ],
+  "assertionReachability": {
+    "consumerIsolation": "REACHED_AND_FAILED",
+    "oauthSessionPrecontrollerDenials": "REACHED_AND_FAILED",
+    "core04ExplicitRouting": "REACHED_AND_FAILED",
+    "core04V1CutoverRecovery": "REACHED_AND_FAILED"
+  },
+  "causalClassification": "Target consumer/session and core04 assertions were reached after setup, build, and unit stages; observed failures are current proof of the asserted mismatches. Separate CP2 final-clock timing assertion also failed.",
+  "frozenEvidence": {
+    "before": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 198,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "after": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 198,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "unchanged": true
+  },
+  "scope": "This selector lane does not establish broad ALL-channel, browser, primary protocol, runtime, or checkpoint acceptance."
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "cp3-consumer10-canonical-test-first-validation",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "times": 1,
+  "freeze": "cp3-consumer10-frozen-manifest.json",
+  "sourceCount": 250,
+  "log": "cp3-consumer10-api-instagram.log",
+  "beforeOutput": "cp3-consumer10-validation-before.json",
+  "afterOutput": "cp3-consumer10-validation-after.json",
+  "resultOutput": "cp3-consumer10-validation-result.json",
+  "instructions": "Exactly one canonical invocation from principal checkout. No autofix/retry/alternate command. Capture complete synthetic stdout/stderr+exit and terminal log SHA. Validate frozen250source/T/boundInputs/35preservation/3rootIndex before and after. Only named evidence outputs may be written. No source/T/input/Git/private/env/operational DB/volumes/containers/provider/tunnel work. Canonical runner alone owns disposable leadshug_channels_validation, NEVER leadshug_channels_local. Do not invoke broad Git or private enumeration/hash guards.",
+  "classification": "Report lint/build/unit/e2e reached, exact failure path/line and assertions reached/unreached. Expected new RED is Consultar IG isolation and precontroller OAuth denials before implementation; earlier compile/unit/setup failure does not prove these assertions. Core04 source new routing/V1 recovery cases are also current first-run proof and may expose real regressions. Not ALL/browser/primary protocol/runtime or checkpoint acceptance.",
+  "reasonForNewRun": "Terminal09 npm Prisma engines download ECONNRESET before tests. Identical250-source candidate, new prospective attempt10; no test waiver or source change."
+}

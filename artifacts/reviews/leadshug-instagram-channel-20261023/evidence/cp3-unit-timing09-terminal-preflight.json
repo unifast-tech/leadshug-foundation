@@ -1,0 +1,23 @@
+{
+  "kind": "cp3-unit-timing09-terminal-root-preflight",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "changed": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "66fe55264020d919d11e70824424404e30a661a72c2ce79611557b430a2ae05d",
+      "bytes": 27071
+    }
+  ],
+  "unchangedSources": 249,
+  "outsideOwnedChanges": [],
+  "previousBytesReconstructedInMemory": true,
+  "method": "Reverse exact two mock schedules and three split assertions back to obsolete old count3 inRAM; exact pre08bytes reproduced. No production or assertion projection changes.",
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "sourceExecution": "NOTRUN"
+}

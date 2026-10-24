@@ -1,0 +1,18 @@
+{
+  "kind": "cp3-core-readiness-proof-repair11",
+  "date": "2026-10-24",
+  "authority": "Same approvedST-IG-03 v1.3; actual10 RED adjudicated, no runtime/provider/path scope expansion.",
+  "ownedPaths": [
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/domain/channels/channel-credential-resolver.ts",
+    "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts"
+  ],
+  "optionalOwnedNewHelper": "api-app/src/domain/channels/channel-provider-readiness.ts (only if one narrowly shared current-state predicate avoids inconsistent four boundary checks; no framework/newChannelmethods)",
+  "required": [
+    "IG CP2 immutable lifecycle deliberately preserves providerConnectionState SUBSCRIBED_PENDING_RECEIPT even after signed IN confirms receipt and status CONECTADO. Resolver/credential sender currently falsely require onlySUBSCRIBED. Honor both substates ONLY together with actual CONECTADO/receipt/canonicalidentity/credential proof. Preserve MAPPED_PENDING_SUBSCRIPTION/no-receipt/notconnected/expired/inactive failures. Do not change accepted CP2 lifecycle or infer readiness from OAuth/challenge/subscribePOST alone.",
+    "Align actual read candidateReadiness, credential send resolution, locked validateOperationContextInTransaction and contextBeforeDispatch predicates; preserve full strict V2 tuple/currentcredential/time fences, stable accepted receipt recovery, WA states and all guards.",
+    "Actual V1 fixture deliberately has historical wabaId null and providerAccountReference null. Preserve everyV1 storedcontext/snapshot/fingerprint/key/deadline/ID and local-noHTTP assertions. For NEWV2afterrecovery only, supply an explicit synthetic current account binding AFTER all historical recovery assertions and before GETreply-options; require current wabaId nonnull/proved coherent with fixture resource. No production nullaccount allowance, no rewriting past facts, no changed original assertions. Keep the other frozen routing/consumer/session/new E2E/helpers exact.",
+    "No test run here. Report exact diff/hash/pathset and remaining concerns; root static reconciliation then next serialized companion lane. No checkpoint acceptance or claim downstream assertions executed."
+  ],
+  "restrictions": "Sole principal codewriter. No other tests/helpers/source/CP2 service/webhook/window/client/schema/Web/root/docs/private/env/operationalruntime/Meta/network/Git edits. No test/lint/build/runner. CP2 elapsed2357ms measurement test remains exact; no bound increase or cleanup removal."
+}

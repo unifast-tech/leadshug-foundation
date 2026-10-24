@@ -1,0 +1,40 @@
+{
+  "kind": "cp3-core-readiness11-terminal-root-preflight",
+  "date": "2026-10-24",
+  "changedExisting": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630",
+      "bytes": 9525
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "dcbbeaae17da0b7bf2e6c354c6446ae4570904ce7356450415f016bc8dc68478",
+      "bytes": 55174
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "sha256": "efe52d6fb58ccd2781c8e6d07b2a3bc467bc83e6b962a03a5014b5ff759191b9",
+      "bytes": 32002
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "api-app/src/domain/channels/channel-provider-readiness.ts",
+      "sha256": "8e47f5c0a0ad5f667c58212dbad3f15b84379d24a3d5d99cd4f1886e5dcca816",
+      "bytes": 831
+    }
+  ],
+  "unchangedExisting": 247,
+  "outsideOwnedChanges": [],
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "historicalV1ExactBytesReconstructedInMemory": true,
+  "staticReview": "Helper uses canonical origin type and failsclosed unknown. Actual read/send/lockedclaim/preprovider paths require connected+realreceipt alongside accepted IG substate; all strictidentity/resource/credential/time checks retained. This is static qualification, not runtime proof.",
+  "qualification": "Actual10 priorV1localfacts assertions reached; late synthetic current WABA insertion proves fixture precondition only, no actual reauthorization/Meta operation. NewV2 send beyond old408 remains unexecuted.",
+  "sourceExecution": "NOTRUN on11candidate"
+}

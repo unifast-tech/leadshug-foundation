@@ -1,0 +1,25 @@
+{
+  "kind": "cp3-oauth-session-exact-apply12-handoff",
+  "date": "2026-10-24",
+  "state": "PREPARED ONLY until core11 terminal and explicit root dispatch; actual consumer10 causalRED reached401vs303 on absent/casealias, valid/noncallback control passed. Do not claim laterdenials/infrastructure causalproof yet.",
+  "authority": "Exact one-path human answer Validar o ajuste do retorno OAuth, recorded in oauth-callback-session-user-admission-v2.json. Test additional path is within already-approved test/*instagram*.e2e-spec.ts creation glob. Same approved product/auth/validation scope; no new private/runtime/Meta authority.",
+  "profile": "Operational/Coder, gpt-6-luna medium, principal-checkout sole product writer",
+  "ownedPaths": [
+    "api-app/src/surfaces/bff/session.middleware.ts",
+    "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts"
+  ],
+  "productionExactness": "Original middleware SHA80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211; apply only reviewed oauth-callback-session-companion-proposal-v2.diff preserving CRLF and exact candidate3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5. Abort/report actual baseline mismatch. No new auth exception/public callback, dependency or changes to original enforcement body/order.",
+  "additionalProof": [
+    "Retain two consumer05/session specs byte-identical after their actual RED. New infrastructure spec supplements actual native-session/actor-denial integration cases; do not replace them or claim per-fault causalRED unless measured.",
+    "Exercise actual unexpected failure at both appUser and mantenedoraSettings lookups through real Nest/native valid signed session and disposable PostgreSQL. A temporary fixed-name table rename or similarly bounded real PG fault may be used only inside serialized disposable integration test with unconditional finally restoration and verification; no manual/operational DB action, schema migration or persistent reset. Recheck actual table names/schema and canonical DB guard, do not guess from this advisory.",
+    "Callback failure returns exact generic query-free303 INSTAGRAM_AUTHORIZATION_UNAVAILABLE with no-store/no-referrer and zero provider/attempt/credential side effects. After restoring PG, legitimate valid session and ordinary route still work. Equivalent noncallback infrastructure failure keeps original error path/status instead of a new redirect. Explicitly record injected PG object-unavailability origin, not a valid-user-input-induced outage.",
+    "Never mock domain/session/grant/Prisma/transaction results to manufacture integration proof. If the session-service unexpected-error origin cannot be induced through actual HTTP, qualify it as unexecuted; a focused boundary-fault supplement may be proposed but cannot replace actual PG/native session proof. No fabricated coverage claim.",
+    "Actual schema maps AppUser to app_users and MantenedoraSettings to mantenedora_settings. Existing subirApp(undefined,true) supports real Prisma query-event instrumentation without helper edits; no need to recreate or mock Prisma.",
+    "Canonical public docker-compose.channels.yml validation DB is leadshug_timeline_channels_ci; CI calls the same runner. Before any ALTER, assert actual current_database() equals this exact disposable database. SQL fault operations are test-only, fixed allowlisted identifiers, no env/operational lookup. Use default bounded transaction and local lock timeout for rename and guaranteed finally restoration, with actual verification after restore.",
+    "Use ordinary /api/bff/me as appUser-fault control and /api/bff/setores as settings-fault control, since me bypasses settingslookup. Keep real signed cookie/active owner, native normal control before/after, exact303generic+headers+zeroOAuthattempt/provider/credential sideeffects; noncallback original500/noLocation.",
+    "If an earlier fault assertion fails, restore first unconditionally, verify schema names, then fail; no persistent corruption of subsequent files. Test remains strictly sequential. Do not change global test timeouts or helper/provider behavior."
+  ],
+  "restrictions": "No other source/test/helper/schema/CP2/window/client/Web/root/doc/private/runtime/provider/network/Git changes. No tests/build/lint/runner in source phase. If test fault requires another path or threatens shared state, report exact need before edit. Root separately freezes and assigns canonical validation/freshadherence; browser/gateway/Numeros fixedtext remain mandatory.",
+  "newProof": "cp3-consumer10-root-reconciliation.json; actual frozen two05specs remain byte-identical.",
+  "remaining": "Source exact patch + infrastructure supplement still NOTRUN until frozen canonical validation. Consumer implementation/fixtures follow as serialized owned lanes before next run to avoid knowingly incomplete candidate. FullAPI/browser/gateway/freshadherence and R1-04 remain required."
+}

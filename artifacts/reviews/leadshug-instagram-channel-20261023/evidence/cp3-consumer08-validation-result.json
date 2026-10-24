@@ -1,0 +1,96 @@
+{
+  "kind": "cp3-consumer08-canonical-test-first-validation-result",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": "cp3-consumer08-api-instagram.log",
+  "logSha256": "52c0e6c78fded2f27fa4d1c6bb8ad48ad22e43c4e4f396217d3ffac7d384f1ac",
+  "logLines": 374,
+  "stages": {
+    "isolatedSetup": "PASS",
+    "databaseMigrations": "PASS",
+    "prismaGenerate": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "unit": "FAIL: 3 failed, 403 passed (406 total; 1 file failed, 37 passed)",
+    "e2e": "NOT_REACHED"
+  },
+  "unitFailure": {
+    "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "failedCount": 3,
+    "failures": [
+      {
+        "test": "gives a detected post-dispatch identity change precedence before null-ID diagnostics",
+        "line": 332,
+        "assertion": "Expected diagnosticPersistence UNCONFIRMED; received RECORDED."
+      },
+      {
+        "test": "returns UNKNOWN/503 when the diagnostic commit is uncertain and context remains current",
+        "line": 344,
+        "assertion": "Expected resolver.contextAfterDispatch called 3 times; got 2."
+      },
+      {
+        "test": "does not start Message acceptance when the identity changed after an acknowledged send",
+        "line": 374,
+        "assertion": "Expected send() to reject CHANNEL_CONTEXT_CHANGED; promise resolved with message-1."
+      }
+    ]
+  },
+  "assertionReachability": {
+    "consumerIsolationAndOauthSession": "NOT_REACHED; unit suite failed before E2E",
+    "core04RoutingAndV1Recovery": "NOT_REACHED in the selector E2E stage; unit suite terminated first"
+  },
+  "causalClassification": "INCONCLUSIVE for target consumer/session behavior; suite stopped on three outbound service unit failures before target E2E assertions",
+  "frozenEvidence": {
+    "before": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 179,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "after": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 179,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "unchanged": true
+  },
+  "scope": "This API Instagram lane did not establish broad channel, browser, primary protocol, runtime, or checkpoint acceptance."
+}

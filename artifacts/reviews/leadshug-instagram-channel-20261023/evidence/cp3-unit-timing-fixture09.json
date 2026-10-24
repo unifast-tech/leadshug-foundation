@@ -1,0 +1,16 @@
+{
+  "kind": "cp3-outbound-unit-timing-fixture09",
+  "date": "2026-10-24",
+  "authority": "Same approved inbox spec; exact fixture concretization after actual08 failures. No source/product scope change.",
+  "ownedPaths": [
+    "api-app/src/domain/inbox/outbound.service.spec.ts"
+  ],
+  "sourceBeforeSha256": "12b83cd81b3c2e7d10bc852736712a42db1eaa704ee0572a409b02bb271f3b11",
+  "required": [
+    "In detected post-dispatch identity-before-null-ID case, schedule CHANGED at first contextAfterDispatch; predispatch is independently CURRENT through contextBeforeDispatch. Preserve409 UNKNOWN UNCONFIRMED and zero diagnostic write.",
+    "In acknowledged-send identity-change case schedule first postdispatch CHANGED; preserve rejected409 accepted-local-incomplete/unconfirmed, zero Message acceptance and provider once.",
+    "In uncertain diagnostic commit case retain503/UNKNOWN and no accept, replace obsolete contextAfterDispatch total3 with explicit current contextBeforeDispatch once plus contextAfterDispatch twice; strengthen ordering assertion where useful. This preserves three actual checks across the new owner contract, not a call-count reduction to hide a missing guard.",
+    "All other scenarios, mock schedules, projections/assertions and provider counts untouched. New exact boundary assertions on affected cases allowed. No production redundant read or acceptance weakening."
+  ],
+  "restrictions": "Sole writer one spec only; no tests/lint/build/runner/Git/private/runtime/provider/network/docs/otherfiles. Save before bytes inRAM, report exact diff/hash. Root separately refreezes canonical run."
+}

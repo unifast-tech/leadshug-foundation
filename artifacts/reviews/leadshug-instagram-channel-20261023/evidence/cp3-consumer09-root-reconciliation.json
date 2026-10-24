@@ -1,0 +1,12 @@
+{
+  "kind": "cp3-consumer09-root-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sources": 250,
+  "inputs": 190,
+  "todo": 1,
+  "preserved": 35,
+  "index": 3,
+  "logMatched": true,
+  "actual": "Isolated npm setup failed fetching Prisma engines: ECONNRESET. Migrations/lint/build/unit/E2E not reached. No candidate source defect inferred.",
+  "next": "One fresh canonical attempt10 on unchanged250-source candidate; preserve safety/run isolation and no test omission."
+}

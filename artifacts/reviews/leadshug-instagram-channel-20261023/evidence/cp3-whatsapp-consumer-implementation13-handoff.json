@@ -1,0 +1,67 @@
+{
+  "kind": "cp3-qualified-whatsapp-consumer-implementation13-handoff",
+  "date": "2026-10-24",
+  "state": "PREPARED ONLY; dispatch after exactOAuthcompanion12 writer isterminal/rootreconciled. Actual consumer10 RED history3instead1; laterpublic/me/Typebot assertions wereunreached, not alreadyproved.",
+  "authority": "ApprovedST-IG-03 v1.3 SCOPE03/IG-ARCH-R1; no WHAT/protectedpath/private/runtime expansion.",
+  "ownedPaths": [
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/incoming.service.ts",
+    "api-app/src/surfaces/public/conversations.controller.ts",
+    "api-app/src/surfaces/bff/me.controller.ts"
+  ],
+  "optionalOwnedNewHelper": "api-app/src/domain/inbox/whatsapp-consumer-identity.ts (narrow shared canonicalWA consumer predicate/projection; use only if needed for these actual callers, no universal capabilities framework)",
+  "optionalOwnedNewSpec": "api-app/test/instagram-consumer-boundaries.e2e-spec.ts (supplement actualIG-only publicscope and actualIncoming Typebot guard/retainedWA control, if used; existing consumer spec remains exact)",
+  "baseline": [
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "8b1123d45553f438146e615a5b7d144b2d524344f6011fb4443b162f2de1a7e7",
+      "bytes": 6306
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b",
+      "bytes": 6157
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "094cb41f31fa19181cedb837edb1956b49af6ab997b77884d416ffd0889d1ae8",
+      "bytes": 15025
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "sha256": "0edd826d4e9a3c0b8cde4334bf2e88f360f5f5e9d5db99e5dfc4382b5bf71bb0",
+      "bytes": 9442
+    }
+  ],
+  "basis": [
+    "cp3-consumer-qualified-preparation05.json",
+    "cp3-consumer-preparation09-supplement.json",
+    "cp3-consumer10-root-reconciliation.json",
+    "cp3-core-readiness11-terminal-preflight.json",
+    "governingTODO Frontend/Consumer Matrix and normative consumer restrictions"
+  ],
+  "requirements": [
+    "Consultar remains WhatsApp-only: list/count/contact filter/drilldown/messages/CSV use canonical WA contact/route and sole durable WA business resource, never BU.phone or IG opaque peer as phone. Preserve pagination, filters, chronology, rights, unread invariance, CSV quoting and export audit. Preserve supported historical messages; do not require nonexistent old provider fields or rewrite legacy facts merely to filter. Qualification must be proved via retained canonical associations.",
+    "Public v1 accounts/list/thread/messages/claim/release/respond stay WA-only and qualified by the requested BU, canonical WA person identity and sole WA business resource. No arbitrary first route or latest-IG-origin fallback. Exclude IG-only/no-WA-resource BUs from WA accounts. A numeric IG peer can separately be a legitimate WA number with a distinct proved WA identity; isolate exact contact/resource instead of blanket numeric rejection.",
+    "Legacy /business-units channels projection includes at most the compatible official and Evolution bindings for its single WA resource. Never hydrate all IG channels, hide conflict by filtering readiness, or silently truncate. Preserve all grants/roles/other controller behavior; separate paged channel catalog owns IG.",
+    "Typebot must prove WA platform/contact/resource/provider binding before any trigger/session lookup or client call. Preserve historical session keys, WA tenant/global triggers/session ownership, queued behavior, epochs/window/echo/dedup and all existing counters. Do not generalize session keys for IG. Signed IG webhook currently bypasses IncomingService; test that actual journey as regression, and test actual IncomingService defensive guard separately if claiming its causal coverage.",
+    "Add real Nest/PostgreSQL integration proof, synthetic actors with native sessions and real constraints: same BU with qualified WA and two IG resources, same-looking numeric peer strings kept as distinct contacts, history/public isolation, me projection, scope denials, no Typebot activation for IG and retained WA control. Fake only external provider/Typebot boundaries. Existing Typebot fake counters already exported in helpers. Do not mock domain services, sessions, grants, Prisma/transactions or return fake BFF responses.",
+    "Partner OutboundWebhookService has no current source callers; do not add IG wiring or invent an existing positive WA partner-delivery feature. A synthetic receiver counter can prove no-new-activation only. Realtime is real scoped WebSocket, not partner HTTP.",
+    "Keep all old tests/helpers/new CP3 routing and V1 cutover specs byte-identical in this lane. If a baseline fixture needs canonical proof adaptation, identify actual need for the later serialized fixture owner rather than weakening or deleting assertions. No production data migrations, backfills, route guesses or history resets."
+  ],
+  "testProtection": {
+    "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+    "sha256": "61c6576e3dc913c058d4a3ba7c2fa28afa426b34e072b1b2f93b245659d661ea",
+    "rule": "READONLY causal oracle, preserve allasserts exactly; no existing spec/helper mutation in this lane. CoreV1lateWABAfixture isalreadyqualified11; preserve currentexactbytes."
+  },
+  "concreteCautions": [
+    "Public SQL LATERAL currently omits provider_resource_identity_id in selected latestcolumns whileouterreferencesit; fix coherent realquery, no fake result/removed assertion.",
+    "Public default200/max500 pagination mustremaincoherent with current generic batch cap50. Boundedchunking/sharedowner allowed; no shrink/drop/emptyover50. No first-route guess/lastIG origin/BUphone fallback; exactqualifiedWAcontact/resource acrossallread/write endpoints.",
+    "Legacy me.list and me.detail both need querytime compatibleWA bindings only(max2 logically, no truncation/readyfilter to hide conflict). Preserve othercontrollerbody/grants/statuses.",
+    "History keepsoldWAfacts even providerResourceIdentityId null wherehistoricalcanonicalassociationsproveWA. Do not reset/drop/backfill/rewritedata or require nonexistentnewmessagefields. CSVquoting/chronology/paging/audit/unread invariant remain.",
+    "DirectIncoming defensiveguard may be tested separately through actual app.get(IncomingService).registrar on realacceptedIGgraph, not a mock. Existing subirApp(undefined,true) provides nativePrisma query eventlogging; record rangebefore actualentry and prove no typebot_triggers/typebot_sessions reads or providerTypebotHTTP forIG, with activeBU/globaltrigger and existingWA-style session samepeer trap. SignedIGwebhookjourney bypassesIncoming and doesnotaloneprove thisguard. Retain actualWA positive start/continue/sessionkey. No helper edit needed.",
+    "IG-only/noWA BU must be excluded from publicaccounts; nativeAPIkey/grants mustnotreveal/mutate IGthroughphoneendpoint, same numericWApeer remainslegitimate separateidentity. Supplement newtestmayuse actualBFFBUcreation/OAuth/signedIN, no domain/grant/Prismamock. Keep errorstatusoracle tiedactualapprovedcontract, no inventednew publicroute.",
+    "No partnerHTTPactivation: existingOutboundWebhookService has nocallers. Do not invent positiveWAfeature or conflateWSrealtimewithpartnerdelivery."
+  ],
+  "restrictions": "Sole principal codewriter. No runner/test/lint/build/network/Git/docs/private/env/runtime/Meta actions. No CP2/session/credentialresolver/othercore/schema/migration/Web/root/oldE2E/helpers mutations. Optionalspec/helper only within exactabove; reportusedpaths. Return terminalfulldiffs/hashes/remainingobligations. No checkpointacceptance; laterfullAPI/browser/PCV/freshreviews/runtime remainmandatory."
+}

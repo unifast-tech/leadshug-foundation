@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar uma rodada canônica api-instagram sob cp3-consumer08-validation-handoff.json, após reparo08 terminal exclusivo da fixture unitária. Rodada07: build passou,386/406 unit passaram e20 falharam na fixture; E2E ainda não alcançado. CP2 e CP4..CP6 continuam obrigatórios.
+- **Next exact step:** implementar consumidores WA qualificados conforme cp3-whatsapp-consumer-implementation13-handoff.json, após companion12 terminal/rootreconciliado. Depois fixtures serializadas e validação da candidata consolidada. Fonte12 tem252caminhos públicos; última prova executada é fonte10(406unit/97de103E2E), sem aceite de checkpoint.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** núcleo04 declara as obrigações de fonte implementadas; root corrigiu por handoff lacunas de política de template, chave SQL, fence pós-claim e campo inexistente no readback. A candidata segue NOTRUN e não aceita. Restam isolamento dos consumidores, fixtures e prova da fonte consolidada; a evidência histórica não valida esta candidata.
+- **Why this state now:** a candidata passou build/406unit e alcançou integração; a rodada10 confirmou lacunas de isolamento, retorno OAuth e prontidão IG, além da pré-condição sintética da contaWA atual e uma medição de tempo. Restam correções serializadas e provas completas; nenhum checkpoint está aceito por essa rodada.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
-- **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware v2 was explicitly admitted2026-10-24 and awaits serialized application/proof; privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
-- **Last confirmed truth:** rodada07 passou setup/31migrations/generate/lint/build;386unit passaram e20 falharam no único spec outbound.service.spec.ts por fixture sem conversationRoute.findFirst. Root conferiu250fontes/T/168inputs/35preservações/3índices e log real intactos. E2E/consumer/session ainda não alcançados. Middleware admitido continua sem aplicação.
+- **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source applied under explicit user admission; its new infrastructure test and later browser/gateway proof remain NOTRUN. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
+- **Last confirmed truth:** rodada10 passou setup/31migrations/generate/lint/build/406unit;97/103E2E passaram e6falharam. Root conferiu250fontes/T/198inputs/35preservações/3índices e log intactos. Consultar incluiu3conversas(esperado1); callback sem sessão/alias respondeu401(esperado303); prontidão IG rejeita indevidamente o subestado já validado com receipt; fixture V1 atual não temWABA para novoV2; mediçãoCP2 marcou2357ms(<2000 exigido), sem prova de defeito temporal do produto.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope

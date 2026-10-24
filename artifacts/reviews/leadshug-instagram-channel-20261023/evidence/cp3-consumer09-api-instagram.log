@@ -1,0 +1,75 @@
+ Network leadshug_channels_validation_validation  Creating
+ Network leadshug_channels_validation_validation  Created
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_npm_cache"  Creating
+ Volume "leadshug_channels_validation_channels_npm_cache"  Created
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Creating
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Created
+ Volume "leadshug_channels_validation_validation_pg_data"  Creating
+ Volume "leadshug_channels_validation_validation_pg_data"  Created
+ Volume "leadshug_channels_validation_channels_api_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_api_workspace"  Created
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_web_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_web_workspace"  Created
+ Container leadshug_channels_validation-validation-postgres-1  Creating
+ Container leadshug_channels_validation-validation-postgres-1  Created
+ Container leadshug_channels_validation-validation-postgres-1  Starting
+ Container leadshug_channels_validation-validation-postgres-1  Started
+Runner Node: v22.23.3
+debconf: delaying package configuration, since apt-utils is not installed
+{"guard": "channels-ci-parity-v1", "mutations_rejected": ["missing-pr-trigger", "missing-channels-job", "missing-retained-guard", "weakened-job-gate", "swallowed-job-errors", "skipped-validate-step", "swallowed-retained-job", "skipped-retained-admission", "missing-retained-private-checkout", "missing-common-guard", "swallowed-common-guard-failure", "missing-instagram-selector", "widened-instagram-selector", "extra-runner-arguments-accepted", "missing-e2e", "swallowed-e2e-failure", "missing-browser", "missing-migrate", "missing-generate", "missing-lint", "reordered-suite", "missing-shell-guard", "widened-wsl-socket", "changed-wsl-host-prefix", "wrong-wsl-mask-source", "missing-wsl-overlay"], "outer_wrapper": {"collision_control": {"compose_calls": 0, "exit_code": 1}, "empty_config_control": {"compose_calls": [["compose", "--project-name", "leadshug_channels_validation", "--env-file", "/workspace/.env.example", "--env-file", "/tmp/tmp.iFiv5fIRV9", "-f", "/workspace/docker-compose.yml", "-f", "/workspace/docker-compose.channels.yml", "--profile", "validation", "config", "--quiet"]], "exit_code": 0}, "inventory_failures": {"network": {"compose_calls": 0, "docker_calls": 3, "exit_code": 1}, "ps": {"compose_calls": 0, "docker_calls": 1, "exit_code": 1}, "volume": {"compose_calls": 0, "docker_calls": 2, "exit_code": 1}}, "mandatory_failure_cleanup": {"cleanup_observed": true, "compose_lifecycle": ["run", "down"], "exit_code": 42, "provider_or_real_docker_invoked": false, "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"}, "native_path_control": {"exit_code": 0, "overlay_added": false, "posix_bind_paths_preserved": true}, "unsupported_wsl_socket_control": {"docker_calls": 0, "exit_code": 1}, "wsl_bind_path_control": {"skipped": "self-test checkout is not on a WSL-mounted drive"}}, "yaml": "safe-no-alias-no-duplicates"}
+OpenSSL: OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)
+Principal API/Web source binds and API/root dotenv masks verified before npm.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm error code 1
+npm error path /workspace/api-app/node_modules/@prisma/engines
+npm error command failed
+npm error command sh -c node scripts/postinstall.js
+npm error node:internal/process/promises:394
+npm error     triggerUncaughtException(err, true /* fromPromise */);
+npm error     ^
+npm error
+npm error Error: aborted
+npm error     at TLSSocket.socketCloseListener (node:_http_client:535:19)
+npm error     at TLSSocket.emit (node:events:531:35)
+npm error     at node:net:347:12
+npm error     at TCP.done (node:internal/tls/wrap:748:7) {
+npm error   code: 'ECONNRESET',
+npm error   attemptNumber: 1,
+npm error   retriesLeft: 2
+npm error }
+npm error
+npm error Node.js v22.23.3
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-10-24T17_05_17_485Z-debug-0.log
+ Container leadshug_channels_validation-validation-postgres-1  Stopping
+ Container leadshug_channels_validation-validation-postgres-1  Stopped
+ Container leadshug_channels_validation-validation-postgres-1  Removing
+ Container leadshug_channels_validation-validation-postgres-1  Removed
+ Volume leadshug_channels_validation_channels_api_node_modules  Removing
+ Volume leadshug_channels_validation_channels_npm_cache  Removing
+ Volume leadshug_channels_validation_channels_api_workspace  Removing
+ Volume leadshug_channels_validation_channels_web_workspace  Removing
+ Volume leadshug_channels_validation_channels_web_node_modules  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removing
+ Volume leadshug_channels_validation_validation_pg_data  Removing
+ Volume leadshug_channels_validation_channels_playwright_cache  Removing
+ Volume leadshug_channels_validation_leadshug_pg_data  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removed
+ Volume leadshug_channels_validation_channels_api_node_modules  Removed
+ Network leadshug_channels_validation_validation  Removing
+ Network leadshug_channels_validation_validation  Removed
+ Volume leadshug_channels_validation_leadshug_pg_data  Removed
+ Volume leadshug_channels_validation_channels_npm_cache  Removed
+ Volume leadshug_channels_validation_channels_web_node_modules  Removed
+ Volume leadshug_channels_validation_channels_api_workspace  Removed
+ Volume leadshug_channels_validation_channels_playwright_cache  Removed
+ Volume leadshug_channels_validation_channels_web_workspace  Removed
+ Volume leadshug_channels_validation_validation_pg_data  Removed

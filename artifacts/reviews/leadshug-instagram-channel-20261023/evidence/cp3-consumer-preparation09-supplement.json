@@ -1,0 +1,35 @@
+{
+  "kind": "cp3-consumer-preparation09-static-supplement",
+  "date": "2026-10-24",
+  "state": "READONLY PREPARATION; consumer09 validator running on frozen source; no source mutation or consumer causalRED adjudication yet.",
+  "readset": [
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "sha256": "8b1123d45553f438146e615a5b7d144b2d524344f6011fb4443b162f2de1a7e7",
+      "bytes": 6306
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "sha256": "390d48de06ad863b9d9c47344c1eb2919d0ba07aa96626b0ef1596fcbde4795b",
+      "bytes": 6157
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "094cb41f31fa19181cedb837edb1956b49af6ab997b77884d416ffd0889d1ae8",
+      "bytes": 15025
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "sha256": "0edd826d4e9a3c0b8cde4334bf2e88f360f5f5e9d5db99e5dfc4382b5bf71bb0",
+      "bytes": 9442
+    }
+  ],
+  "supplements": [
+    "Public SQL LATERAL selects candidate.content/direction/channel_origin but outer requests latest.providerResourceIdentityId; must project actual provider_resource_identity_id coherently. Static probable SQL error, not observed runtime failure. Do not remove namespace/window assertions to avoid it.",
+    "Public legacy limit is200 default/500max while generic bounded metadata method caps50. Preserve public pagination contract with coherent bounded chunks or qualified shared batch method, no silent shrinking200/500 or dropping page entries. Measure actual queries in appropriate tests.",
+    "Public listing currently chooses routes.take1 and firstbusinessresource. Replace only with exact proved canonical WA identity/sole durable businessresource; no arbitraryfirst/lastIG fallback. Separate IG-only/noWA account negative proof remains needed beyond current one-BU consumer spec.",
+    "Both me listing channels relation and detail buChannel.findMany currently include all channels; filter bounded compatible WA binding at query time. Preserve statuses/conflicts/grants, no ready-only hiding and no truncate-to2 to hide integrity failure.",
+    "Incoming registrar calls acceptance before Typebot guard and IG signed webhook bypasses this method. Defensive automation guard must prove WA binding/contact/resource before trigger/session/client effects; do not turn a signed IG journey control into a causal claim for that new guard.",
+    "Retain frozen new consumer/session tests. Qualified later fixtures may add separate actual Nest/PG negatives/WA controls, with real sessions/domain/DB and fakes only at external HTTP."
+  ]
+}

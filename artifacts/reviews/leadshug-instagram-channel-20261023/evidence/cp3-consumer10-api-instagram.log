@@ -1,0 +1,699 @@
+ Network leadshug_channels_validation_validation  Creating
+ Network leadshug_channels_validation_validation  Created
+ Volume "leadshug_channels_validation_validation_pg_data"  Creating
+ Volume "leadshug_channels_validation_validation_pg_data"  Created
+ Volume "leadshug_channels_validation_channels_api_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_api_workspace"  Created
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_web_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_web_workspace"  Created
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_npm_cache"  Creating
+ Volume "leadshug_channels_validation_channels_npm_cache"  Created
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Creating
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Created
+ Container leadshug_channels_validation-validation-postgres-1  Creating
+ Container leadshug_channels_validation-validation-postgres-1  Created
+ Container leadshug_channels_validation-validation-postgres-1  Starting
+ Container leadshug_channels_validation-validation-postgres-1  Started
+Runner Node: v22.23.3
+debconf: delaying package configuration, since apt-utils is not installed
+{"guard": "channels-ci-parity-v1", "mutations_rejected": ["missing-pr-trigger", "missing-channels-job", "missing-retained-guard", "weakened-job-gate", "swallowed-job-errors", "skipped-validate-step", "swallowed-retained-job", "skipped-retained-admission", "missing-retained-private-checkout", "missing-common-guard", "swallowed-common-guard-failure", "missing-instagram-selector", "widened-instagram-selector", "extra-runner-arguments-accepted", "missing-e2e", "swallowed-e2e-failure", "missing-browser", "missing-migrate", "missing-generate", "missing-lint", "reordered-suite", "missing-shell-guard", "widened-wsl-socket", "changed-wsl-host-prefix", "wrong-wsl-mask-source", "missing-wsl-overlay"], "outer_wrapper": {"collision_control": {"compose_calls": 0, "exit_code": 1}, "empty_config_control": {"compose_calls": [["compose", "--project-name", "leadshug_channels_validation", "--env-file", "/workspace/.env.example", "--env-file", "/tmp/tmp.FPW9WDEwEr", "-f", "/workspace/docker-compose.yml", "-f", "/workspace/docker-compose.channels.yml", "--profile", "validation", "config", "--quiet"]], "exit_code": 0}, "inventory_failures": {"network": {"compose_calls": 0, "docker_calls": 3, "exit_code": 1}, "ps": {"compose_calls": 0, "docker_calls": 1, "exit_code": 1}, "volume": {"compose_calls": 0, "docker_calls": 2, "exit_code": 1}}, "mandatory_failure_cleanup": {"cleanup_observed": true, "compose_lifecycle": ["run", "down"], "exit_code": 42, "provider_or_real_docker_invoked": false, "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"}, "native_path_control": {"exit_code": 0, "overlay_added": false, "posix_bind_paths_preserved": true}, "unsupported_wsl_socket_control": {"docker_calls": 0, "exit_code": 1}, "wsl_bind_path_control": {"skipped": "self-test checkout is not on a WSL-mounted drive"}}, "yaml": "safe-no-alias-no-duplicates"}
+OpenSSL: OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)
+Principal API/Web source binds and API/root dotenv masks verified before npm.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 555 packages, and audited 556 packages in 26s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+19 vulnerabilities (4 moderate, 11 high, 4 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+prisma                  : 6.19.3
+@prisma/client          : 6.19.3
+Computed binaryTarget   : debian-openssl-3.0.x
+Operating System        : linux
+Architecture            : x64
+Node.js                 : v22.23.3
+TypeScript              : 5.9.3
+Query Engine (Node-API) : libquery-engine c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/libquery_engine-debian-openssl-3.0.x.so.node)
+PSL                     : @prisma/prisma-schema-wasm 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Schema Engine           : schema-engine-cli c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/schema-engine-debian-openssl-3.0.x)
+Default Engines Hash    : c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Studio                  : 0.511.0
+
+> @leadshug/api@0.1.0 prisma:generate
+> prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 277ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Want to turn off tips and other hints? https://pris.ly/tip-4-nohints
+
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.3 -> 8.0.0-rc.27                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+added 105 packages, and audited 106 packages in 4s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (5 moderate, 2 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> @leadshug/api@0.1.0 prisma:migrate
+> prisma migrate deploy
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+31 migrations found in prisma/migrations
+
+Applying migration `20260818125556_nucleo_v1_tenancy_identidade_atendimento`
+Applying migration `20260821175101_modulos_e_marca_por_mantenedora`
+Applying migration `20260821180000_tres_papeis_owner_admin_atendente`
+Applying migration `20260821190000_setor_e_proveniencia_do_grant`
+Applying migration `20260821190500_concessao_de_setor_e_fato_proprio`
+Applying migration `20260821200000_historico_de_atividades`
+Applying migration `20260821210000_wizard_de_onboarding`
+Applying migration `20260821220000_preserva_modulo_ja_em_uso`
+Applying migration `20260824122559_perfil_do_proprio_usuario`
+Applying migration `20260824125224_arquivos_logo_e_avatar`
+Applying migration `20260824125227_arquivos_dono`
+Applying migration `20260824125334_avatar_e_do_usuario_nao_da_bu`
+Applying migration `20260824161138_convite_e_recuperacao_de_senha`
+Applying migration `20260827170000_cor_secundaria`
+Applying migration `20260831130000_cores_primarias_por_tema`
+Applying migration `20260901120000_typebot_bots_and_triggers`
+Applying migration `20260901130000_typebot_sessions`
+Applying migration `20261015120000_number_onboarding_foundation`
+Applying migration `20261015130000_number_onboarding_provider_resource_ownership_immutable`
+Applying migration `20261015140000_number_onboarding_channel_operation_fence`
+Applying migration `20261015150000_number_onboarding_managed_cleanup`
+Applying migration `20261016160000_number_onboarding_current_channel_identity_index`
+Applying migration `20261020170000_message_inbound_window_index`
+Applying migration `20261021130000_message_template_drafts`
+Applying migration `20261021150000_message_template_operations`
+Applying migration `20261022140000_initial_message_orchestration`
+Applying migration `20261022150000_initial_message_admissions`
+Applying migration `20261022160000_initial_message_inbox_order`
+Applying migration `20261023180000_instagram_adapter_type`
+Applying migration `20261023190000_instagram_identity_routes`
+Applying migration `20261024100000_instagram_authorization_attempts`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260818125556_nucleo_v1_tenancy_identidade_atendimento/
+    └─ migration.sql
+  └─ 20260821175101_modulos_e_marca_por_mantenedora/
+    └─ migration.sql
+  └─ 20260821180000_tres_papeis_owner_admin_atendente/
+    └─ migration.sql
+  └─ 20260821190000_setor_e_proveniencia_do_grant/
+    └─ migration.sql
+  └─ 20260821190500_concessao_de_setor_e_fato_proprio/
+    └─ migration.sql
+  └─ 20260821200000_historico_de_atividades/
+    └─ migration.sql
+  └─ 20260821210000_wizard_de_onboarding/
+    └─ migration.sql
+  └─ 20260821220000_preserva_modulo_ja_em_uso/
+    └─ migration.sql
+  └─ 20260824122559_perfil_do_proprio_usuario/
+    └─ migration.sql
+  └─ 20260824125224_arquivos_logo_e_avatar/
+    └─ migration.sql
+  └─ 20260824125227_arquivos_dono/
+    └─ migration.sql
+  └─ 20260824125334_avatar_e_do_usuario_nao_da_bu/
+    └─ migration.sql
+  └─ 20260824161138_convite_e_recuperacao_de_senha/
+    └─ migration.sql
+  └─ 20260827170000_cor_secundaria/
+    └─ migration.sql
+  └─ 20260831130000_cores_primarias_por_tema/
+    └─ migration.sql
+  └─ 20260901120000_typebot_bots_and_triggers/
+    └─ migration.sql
+  └─ 20260901130000_typebot_sessions/
+    └─ migration.sql
+  └─ 20261015120000_number_onboarding_foundation/
+    └─ migration.sql
+  └─ 20261015130000_number_onboarding_provider_resource_ownership_immutable/
+    └─ migration.sql
+  └─ 20261015140000_number_onboarding_channel_operation_fence/
+    └─ migration.sql
+  └─ 20261015150000_number_onboarding_managed_cleanup/
+    └─ migration.sql
+  └─ 20261016160000_number_onboarding_current_channel_identity_index/
+    └─ migration.sql
+  └─ 20261020170000_message_inbound_window_index/
+    └─ migration.sql
+  └─ 20261021130000_message_template_drafts/
+    └─ migration.sql
+  └─ 20261021150000_message_template_operations/
+    └─ migration.sql
+  └─ 20261022140000_initial_message_orchestration/
+    └─ migration.sql
+  └─ 20261022150000_initial_message_admissions/
+    └─ migration.sql
+  └─ 20261022160000_initial_message_inbox_order/
+    └─ migration.sql
+  └─ 20261023180000_instagram_adapter_type/
+    └─ migration.sql
+  └─ 20261023190000_instagram_identity_routes/
+    └─ migration.sql
+  └─ 20261024100000_instagram_authorization_attempts/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+31 migrations found in prisma/migrations
+
+Database schema is up to date!
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+ ✓ src/infra/config/modulos.spec.ts (11 tests) 14ms
+ ✓ src/domain/inbox/initial-message-template-renderer.spec.ts (9 tests) 21ms
+ ✓ src/domain/message-templates/template-definition.spec.ts (26 tests) 55ms
+ ✓ src/domain/access/scope.spec.ts (22 tests) 30ms
+ ✓ src/integrations/meta/message-template.client.spec.ts (45 tests) 105ms
+ ✓ src/integrations/evolution/evolution.client.spec.ts (22 tests) 23ms
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 9ms
+ ✓ src/integrations/meta/meta.client.spec.ts (55 tests) 55ms
+ ✓ src/domain/inbox/dispatch-admission.service.spec.ts (14 tests) 23ms
+ ✓ src/domain/inbox/conversation-start.service.spec.ts (13 tests) 13ms
+ ✓ src/integrations/meta/initial-message.client.spec.ts (6 tests) 16ms
+ ✓ src/domain/message-templates/template-management.ports.spec.ts (1 test) 7ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (5 tests) 15ms
+ ✓ src/domain/message-templates/template-management.dependencies.spec.ts (13 tests) 49ms
+[33m[Nest] 4566  - [39m10/24/2026, 5:11:12 PM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+[31m[Nest] 4566  - [39m10/24/2026, 5:11:12 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 4566  - [39m10/24/2026, 5:11:12 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 13ms
+ ✓ src/domain/channels/transport/channel-initial-message.spec.ts (15 tests) 45ms
+ ✓ src/domain/channels/transport/channel-dependencies.spec.ts (8 tests) 35ms
+ ✓ src/domain/inbox/message-acceptance.service.spec.ts (2 tests) 9ms
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (4 tests) 18ms
+ ✓ src/domain/inbox/outbound.service.spec.ts (33 tests) 61ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 14ms
+ ✓ src/domain/access/role.spec.ts (9 tests) 7ms
+ ✓ src/domain/channels/channel-credential-resolver.spec.ts (3 tests) 11ms
+ ✓ src/integrations/instagram/instagram-http.client.spec.ts (3 tests) 1195ms
+   ✓ InstagramHttpClient HTTP deadline boundary > aborts native response.json body reading within the absolute request deadline 718ms
+   ✓ InstagramHttpClient HTTP deadline boundary > applies the same deadline before headers and accepts a normal response with exactly three OAuth protocol requests 473ms
+ ✓ src/domain/channels/transport/channel-operation-context.spec.ts (3 tests) 4ms
+ ✓ src/domain/inbox/channel-window-policy.spec.ts (2 tests) 4ms
+ ✓ src/domain/inbox/contact-identity.spec.ts (8 tests) 6ms
+ ✓ src/main.spec.ts (6 tests) 6ms
+ ✓ src/domain/inbox/initial-message.service.spec.ts (4 tests) 14ms
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 6ms
+ ✓ src/integrations/instagram/instagram-messaging.client.spec.ts (4 tests) 6ms
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 5ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 11ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 4ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 6ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 5ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 3ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 407ms
+
+ Test Files  38 passed (38)
+      Tests  406 passed (406)
+   Start at  17:11:10
+   Duration  4.11s (transform 16.59s, setup 0ms, collect 34.43s, tests 2.33s, environment 13ms, prepare 4.06s)
+
+
+> @leadshug/api@0.1.0 test:e2e
+> vitest run --config vitest.config.e2e.ts --no-file-parallelism --maxWorkers=1 test/instagram-consumer-isolation.e2e-spec.ts test/instagram-cp2-binding.e2e-spec.ts test/instagram-cp2-commit-fences.e2e-spec.ts test/instagram-cp2-final-clock.e2e-spec.ts test/instagram-cp2-finalization.e2e-spec.ts test/instagram-cp2-recovery.e2e-spec.ts test/instagram-cp2-residual.e2e-spec.ts test/instagram-cp2.e2e-spec.ts test/instagram-cp3-routing.e2e-spec.ts test/instagram-cp3-v1-cutover.e2e-spec.ts test/instagram-identity.e2e-spec.ts test/instagram-lifecycle.e2e-spec.ts test/instagram-migration.e2e-spec.ts test/instagram-oauth-session.e2e-spec.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+[31m[Nest] 5339  - [39m10/24/2026, 5:11:54 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPayloadTooLargeError: request entity too large
+    at readStream [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:163:17[90m)[39m
+    at getRawBody [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:116:12[90m)[39m
+    at read [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/read.js:113:3[90m)[39m
+    at oauthJson [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/types/json.js:60:5[90m)[39m
+    at [90m/workspace/api-app/[39msrc/infra/http/body-parsers.ts:30:14
+    at Layer.handleRequest [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/lib/layer.js:152:17[90m)[39m
+    at trimPrefix [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:342:13[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:297:9
+    at processParams [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:582:12[90m)[39m
+    at next [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:291:5[90m)[39m {
+  expected: [33m17431[39m,
+  length: [33m17431[39m,
+  limit: [33m16384[39m,
+  type: [32m'entity.too.large'[39m
+}
+[31m[Nest] 5339  - [39m10/24/2026, 5:11:54 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPayloadTooLargeError: request entity too large
+    at readStream [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:163:17[90m)[39m
+    at getRawBody [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:116:12[90m)[39m
+    at read [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/read.js:113:3[90m)[39m
+    at oauthJson [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/types/json.js:60:5[90m)[39m
+    at [90m/workspace/api-app/[39msrc/infra/http/body-parsers.ts:30:14
+    at Layer.handleRequest [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/lib/layer.js:152:17[90m)[39m
+    at trimPrefix [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:342:13[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:297:9
+    at processParams [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:582:12[90m)[39m
+    at next [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:291:5[90m)[39m {
+  expected: [33m17431[39m,
+  length: [33m17431[39m,
+  limit: [33m16384[39m,
+  type: [32m'entity.too.large'[39m
+}
+[31m[Nest] 5339  - [39m10/24/2026, 5:11:54 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPayloadTooLargeError: request entity too large
+    at readStream [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:163:17[90m)[39m
+    at getRawBody [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:116:12[90m)[39m
+    at read [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/read.js:113:3[90m)[39m
+    at oauthJson [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/types/json.js:60:5[90m)[39m
+    at [90m/workspace/api-app/[39msrc/infra/http/body-parsers.ts:30:14
+    at Layer.handleRequest [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/lib/layer.js:152:17[90m)[39m
+    at trimPrefix [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:342:13[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:297:9
+    at processParams [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:582:12[90m)[39m
+    at next [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:291:5[90m)[39m {
+  expected: [33m17431[39m,
+  length: [33m17431[39m,
+  limit: [33m16384[39m,
+  type: [32m'entity.too.large'[39m
+}
+[31m[Nest] 5339  - [39m10/24/2026, 5:11:54 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPayloadTooLargeError: request entity too large
+    at readStream [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:163:17[90m)[39m
+    at getRawBody [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:116:12[90m)[39m
+    at read [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/read.js:113:3[90m)[39m
+    at instagramRaw [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/types/raw.js:40:5[90m)[39m
+    at [90m/workspace/api-app/[39msrc/infra/http/body-parsers.ts:32:78
+    at Layer.handleRequest [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/lib/layer.js:152:17[90m)[39m
+    at trimPrefix [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:342:13[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:297:9
+    at processParams [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:582:12[90m)[39m
+    at next [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:291:5[90m)[39m {
+  expected: [33m8388609[39m,
+  length: [33m8388609[39m,
+  limit: [33m8388608[39m,
+  type: [32m'entity.too.large'[39m
+}
+[31m[Nest] 5339  - [39m10/24/2026, 5:11:54 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPayloadTooLargeError: request entity too large
+    at readStream [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:163:17[90m)[39m
+    at getRawBody [90m(/workspace/api-app/[39mnode_modules/[4mraw-body[24m/index.js:116:12[90m)[39m
+    at read [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/read.js:113:3[90m)[39m
+    at instagramRaw [90m(/workspace/api-app/[39mnode_modules/[4mbody-parser[24m/lib/types/raw.js:40:5[90m)[39m
+    at [90m/workspace/api-app/[39msrc/infra/http/body-parsers.ts:32:78
+    at Layer.handleRequest [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/lib/layer.js:152:17[90m)[39m
+    at trimPrefix [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:342:13[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:297:9
+    at processParams [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:582:12[90m)[39m
+    at next [90m(/workspace/api-app/[39mnode_modules/[4mrouter[24m/index.js:291:5[90m)[39m {
+  expected: [33m8388609[39m,
+  length: [33m8388609[39m,
+  limit: [33m8388608[39m,
+  type: [32m'entity.too.large'[39m
+}
+ ✓ test/instagram-cp2.e2e-spec.ts (29 tests) 36782ms
+   ✓ Instagram CP2 public and authenticated boundaries > reserves OAuth durably, replays one URL, binds callback state to the actor session, and waits for explicit account confirmation 1002ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-AUTHZ: applies real session, CSRF and BU role checks before inspection or provider work 393ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-TOKEN: rejects missing scopes, ambiguous exchange envelopes and unsafe numeric identities while preserving active credentials 304ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-CALLBACK: revalidates session, grant, attempt and lease after each provider await and anchors expiry to token receipt 2848ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-IDEMPOTENCY: preserves the actor budget in PostgreSQL and returns Retry-After without provider calls 1133ms
+   ✓ Instagram CP2 public and authenticated boundaries > preflights the whole batch and ignores echo/read events without opening receipt or creating messages 20694ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-ORIENTATION and CP2-WINDOW: accepts only account-directed IN text and uses its original event timestamp 884ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-BOUNDS: enforces the OAuth 16 KiB and Instagram 8 MiB limits before any new attempt or message 302ms
+   ✓ Instagram CP2 public and authenticated boundaries > rechecks natural signed-session expiry after the real attempt UPDATE wait with an equal-duration live control 3847ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-R1 causal RED: cancellation wins while real PostgreSQL blocks resource promotion 346ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-R1 causal RED: rejects provider redirects at the credential-bearing Instagram HTTP boundary 519ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-R1 causal RED: serializes concurrent same-resource subscription claims with real PostgreSQL barriers 732ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-R1 causal RED: persists first-dispatch intent across a crash-like lost acknowledgement and a new attempt 607ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-IDEMPOTENCY residual: completed CONNECT replay returns its immutable result without new HTTP or promotion 589ms
+   ✓ Instagram CP2 public and authenticated boundaries > CP2-BUDGET residual: actor authorization quota and idempotent replay persist across real Nest app recreation 447ms
+ ✓ test/instagram-lifecycle.e2e-spec.ts (20 tests) 13507ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims the freshly confirmed official number before credential promotion 861ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims a pending managed Evolution pairing only after current provider proof 616ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > claims a migrated managed unmapped provider only after provider proof 567ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > rejects a foreign retained owner before trust or link mutation 692ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > creates a WhatsApp route from an actual claimed owner and canonical PERSON identity 551ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > completes a managed RENEW only after the replacement instance proves the retained number 597ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > resumes the same retained RENEW reservation after actual provider cleanup observation becomes conclusive 628ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > keeps retained-renewal cleanup pending after 'object-shaped 200' from the actual Evolution client 620ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > keeps retained-renewal cleanup pending after 'invalid JSON 200' from the actual Evolution client 613ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > keeps detached post-unlink cleanup pending after 'object-shaped 200' from the actual Evolution client 666ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > keeps detached post-unlink cleanup pending after 'invalid JSON 200' from the actual Evolution client 741ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > does not let a late cleanup failure overwrite a reservation recovered by the next lease owner 690ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > revalidates the real BFF session before persisting a failed cleanup observation 559ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > rejects a replacement RENEW instance that proves a different number and retains the old owner 649ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > quarantines a trusted current Evolution identity after contradictory current-instance proof 725ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > rejects an unlink whose real channel snapshot was replaced by a completed RENEW and staged replacement 704ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > observes a connecting replacement on repeated INITIAL after 'normal acknowledgement' without creating twice 634ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > observes a connecting replacement on repeated INITIAL after 'lost acknowledgement' without creating twice 622ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > retains cleanup ownership when unlinking a pending replacement and blocks recreation until cleanup 636ms
+   ✓ Instagram CP1 WhatsApp ownership lifecycle (PostgreSQL) > returns retryable redacted metadata for current unproved staging, then accepts its key once after proof 661ms
+ ✓ test/instagram-cp2-residual.e2e-spec.ts (12 tests) 12360ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-SESSION-CLOCK residual: natural expiry after a short real user-row wait blocks exchange while a matched live session succeeds 4986ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-IDEMPOTENCY residual: twenty fresh concurrent BFF creates reserve and audit exactly once 330ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-AUTHZ residual: complete role, scope, inactive-BU, and post-authorization malformed-body matrix 1025ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-TOKEN residual: short and long exchange failures retain no candidate, and the 60-second margin blocks promotion 387ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-DEADLINE residual: expiry after the durable confirmation claim blocks the later mapping transaction 303ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-DEADLINE residual: a real subscription response after the persisted stage deadline cannot finalize or verify receipt 384ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-CREDENTIAL residual: a real subscription response after credential expiry cannot finalize or verify receipt 369ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-CREDENTIAL residual: callback completion refuses a candidate inside the sixty-second credential margin 2253ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-IDEMPOTENCY residual: twenty concurrent first signed deliveries create one complete PostgreSQL inbox result 1073ms
+   ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-RECEIPT residual: signed receipt survives a late error after cancellation supersedes the provider holder 507ms
+ ❯ test/instagram-cp3-v1-cutover.e2e-spec.ts (1 test | 1 failed) 1748ms
+   × Instagram CP3 strict V1 read and local cutover > recovers every V1 ordinary and initial state locally while preserving immutable request facts and exclusions 1285ms
+     → expected { schemaVersion: 2, …(14) } to match object { channelOrigin: 'OFICIAL', …(8) }
+(6 matching properties omitted from actual)
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.3 -> 8.0.0-rc.27                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+Error: ERROR: Instagram identity migration blocked: invalid or conflicting legacy peer rows (invalid_people=4, normalized_collisions=2, invalid_groups=0)
+
+
+ ✓ test/instagram-migration.e2e-spec.ts (2 tests) 7625ms
+   ✓ Instagram cutover preserves seeded legacy records (isolated PostgreSQL schema) > applies the real 28-migration legacy schema and two CP1 migrations without changing persisted identity or receipt data 3648ms
+   ✓ Instagram cutover preserves seeded legacy records (isolated PostgreSQL schema) > aborts invalid and normalized-collision legacy peers before changing conversations or receipts 3464ms
+ ✓ test/instagram-cp2-commit-fences.e2e-spec.ts (6 tests) 19193ms
+   ✓ Instagram CP2 commit fences > final mapping rolls back promotion and every owner/credential effect after the actual 62-second margin crosses 2652ms
+   ✓ Instagram CP2 commit fences > final mapping live control promotes and subscribes once across the equal 2.2-second wait 2686ms
+   ✓ Instagram CP2 commit fences > expired shortened attempt TTL at actual subscription claim prevents a new provider POST 3390ms
+   ✓ Instagram CP2 commit fences > live attempt TTL control completes one provider POST through the same claim wait 3501ms
+   ✓ Instagram CP2 commit fences > signed session expiry after the deferred claim COMMIT returns 401, releases original binding holder, and preserves claim history 3182ms
+   ✓ Instagram CP2 commit fences > equal-duration live session control commits and subscribes once with normal holder release 3285ms
+ ❯ test/instagram-cp2-final-clock.e2e-spec.ts (9 tests | 1 failed) 19250ms
+   × Instagram CP2 final operation and credential clocks > callback final candidate write is denied in a deliberately shortened persisted-lease robustness wait 752ms
+     → expected 2357 to be less than 2000
+   ✓ Instagram CP2 final operation and credential clocks > matched live callback survives the same real final UPDATE wait and commits its candidate 1841ms
+   ✓ Instagram CP2 final operation and credential clocks > callback candidate margin crossing at the final UPDATE wait is denied with actual expires_in evidence 2542ms
+   ✓ Instagram CP2 final operation and credential clocks > matched live candidate margin remains valid through the same final UPDATE wait 2497ms
+   ✓ Instagram CP2 final operation and credential clocks > matched live subscription success survives the same final-write wait 1987ms
+   ✓ Instagram CP2 final operation and credential clocks > matched live credential margin survives the same 2.2-second subscription final-write wait 2666ms
+   ✓ Instagram CP2 final operation and credential clocks > subscription success is denied in a shortened-deadline robustness wait that crosses the actual credential margin 2630ms
+   ✓ Instagram CP2 final operation and credential clocks > matched live provider-error settlement remains UNCERTAIN after the same final-write wait 1908ms
+   ✓ Instagram CP2 final operation and credential clocks > provider-error settlement does not record stale UNCERTAIN after a shortened persisted deadline expires during final UPDATE wait 1927ms
+[31m[Nest] 5910  - [39m10/24/2026, 5:13:35 PM [31m  ERROR[39m [38;5;3m[Banco] [39m[31mPrisma P2010: [39m
+ ✓ test/instagram-cp2-finalization.e2e-spec.ts (4 tests) 2492ms
+   ✓ Instagram CP2 post-provider finalization and replay proofs > matched no-fault control finalizes the settled POST once and releases its binding holder 500ms
+   ✓ Instagram CP2 post-provider finalization and replay proofs > settled successful POST finalization fault rolls back, releases its exact holder, and original-key recovery uses an independent signed receipt without another POST 506ms
+   ✓ Instagram CP2 post-provider finalization and replay proofs > successful GET/null continuation control preserves UNKNOWN and the durable no-repeat POST budget 492ms
+   ✓ Instagram CP2 post-provider finalization and replay proofs > successful GET/null continuation denies a takeover queued between owner postcheck and observation finalization 516ms
+ ✓ test/instagram-cp2-binding.e2e-spec.ts (4 tests) 2826ms
+   ✓ Instagram CP2 resource binding operation fence > blocks reauthorization promotion while a real CONNECT subscription request owns the binding 779ms
+   ✓ Instagram CP2 resource binding operation fence > serializes twenty fresh confirmations for one original key while the actual provider POST is held 753ms
+   ✓ Instagram CP2 resource binding operation fence > does not let a late provider false completion overwrite a newer persisted binding holder 415ms
+   ✓ Instagram CP2 resource binding operation fence > does not let a late provider true completion overwrite a newer persisted binding holder 387ms
+[31m[Nest] 5995  - [39m10/24/2026, 5:13:44 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientUnknownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Response from the Engine was empty
+    at ei.handleRequestError [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/RequestHandler.ts:237:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/RequestHandler.ts:143:12[90m)[39m
+    at a [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/getPrismaClient.ts:833:24[90m)[39m
+    at ConversationsController.assertActorTenant [90m(/workspace/api-app/[39msrc/surfaces/bff/conversations.controller.ts:245:18[90m)[39m
+    at ConversationsController.replyOptions [90m(/workspace/api-app/[39msrc/surfaces/bff/conversations.controller.ts:70:5[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4m@nestjs/core[24m/router/router-execution-context.js:55:62
+    at [90m/workspace/api-app/[39mnode_modules/[4m@nestjs/core[24m/router/router-proxy.js:9:17 {
+  clientVersion: [32m'6.19.3'[39m
+}
+ ❯ test/instagram-cp3-routing.e2e-spec.ts (1 test | 1 failed) 1327ms
+   × Instagram CP3 explicit route and reply contract > binds the same opaque peer to two real Instagram accounts and sends only through the selected V2 route 623ms
+     → expected { schemaVersion: 2, …(14) } to match object { …(13) }
+(2 matching properties omitted from actual)
+ ✓ test/instagram-identity.e2e-spec.ts (10 tests) 5129ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > allows one durable WhatsApp identity and multiple independent Instagram accounts per BU 513ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > keeps legacy adapter aliases unambiguous within a BU and adapter type 431ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > separates equal external peer strings by platform and account scope 450ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > reuses one local WhatsApp conversation across manual start and verified-resource ingress without inventing a route 451ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > does not invent a route when an old local conversation has no proved resource association 416ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > requires the route to match the conversation contact and business resource and prevents mutation 454ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > rejects an Instagram peer from account A routed through account B at the database constraint 413ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > enforces current provider attachment BU, business resource and adapter equality in PostgreSQL 529ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > retains business ownership when disconnected and rejects deletion or cross-BU reclaim 497ms
+   ✓ Instagram identity and immutable route constraints (PostgreSQL) > serializes provider-proved WhatsApp ownership claims across adapters and BUs 500ms
+ ❯ test/instagram-consumer-isolation.e2e-spec.ts (1 test | 1 failed) 1923ms
+   × Instagram consumer isolation (real Nest and PostgreSQL) > keeps history, legacy channel projection, public v1, and Typebot on canonical WhatsApp routes when two Instagram accounts use the same numeric peer 1132ms
+     → expected 3 to be 1 // Object.is equality
+[31m[Nest] 6121  - [39m10/24/2026, 5:13:59 PM [31m  ERROR[39m [38;5;3m[ExceptionsHandler] [39mPrismaClientUnknownRequestError: 
+Invalid `tx.instagramAuthorizationAttempt.updateMany()` invocation in
+/workspace/api-app/src/domain/channels/instagram-authorization.service.ts:405:60
+
+  402   }
+  403 }
+  404 await this.requireActorTx(tx, actor, attempt.buId);
+→ 405 const saved = await tx.instagramAuthorizationAttempt.updateMany(
+Error occurred during query execution:
+ConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: "P0001", message: "synthetic committed-writer result fault", severity: "ERROR", detail: None, column: None, hint: None }), transient: false })
+    at ei.handleRequestError [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/RequestHandler.ts:237:13[90m)[39m
+    at ei.handleAndLogRequestError [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/RequestHandler.ts:174:12[90m)[39m
+    at ei.request [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/RequestHandler.ts:143:12[90m)[39m
+    at a [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/getPrismaClient.ts:833:24[90m)[39m
+    at [90m/workspace/api-app/[39msrc/domain/channels/instagram-authorization.service.ts:405:21
+    at [90m/workspace/api-app/[39msrc/domain/channels/instagram-authorization.service.ts:857:21
+    at Proxy._transactionWithCallback [90m(/workspace/api-app/[39mnode_modules/[4m@prisma/client[24m/src/runtime/getPrismaClient.ts:722:18[90m)[39m
+    at InstagramAuthorizationService.actorTransaction [90m(/workspace/api-app/[39msrc/domain/channels/instagram-authorization.service.ts:856:20[90m)[39m
+    at InstagramAuthorizationService.confirm [90m(/workspace/api-app/[39msrc/domain/channels/instagram-authorization.service.ts:392:5[90m)[39m
+    at [90m/workspace/api-app/[39mnode_modules/[4m@nestjs/core[24m/router/router-execution-context.js:55:62 {
+  clientVersion: [32m'6.19.3'[39m
+}
+ ✓ test/instagram-cp2-recovery.e2e-spec.ts (1 test) 1134ms
+   ✓ Instagram CP2 committed writer recovery > replays the original confirmation after a real PostgreSQL fault between mapping commit and result commit 656ms
+ ❯ test/instagram-oauth-session.e2e-spec.ts (3 tests | 2 failed) 1268ms
+   × Instagram OAuth callback session confidentiality (Nest/PostgreSQL) > redirects absent, invalid, inactive, password-changed, must-change-password and pending-onboarding sessions before controller effects 214ms
+     → expected 401 to be 303 // Object.is equality
+   × Instagram OAuth callback session confidentiality (Nest/PostgreSQL) > applies the same precontroller protection to callback case and trailing-slash aliases 3ms
+     → expected 401 to be 303 // Object.is equality
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/instagram-consumer-isolation.e2e-spec.ts > Instagram consumer isolation (real Nest and PostgreSQL) > keeps history, legacy channel projection, public v1, and Typebot on canonical WhatsApp routes when two Instagram accounts use the same numeric peer
+AssertionError: expected 3 to be 1 // Object.is equality
+
+- Expected
++ Received
+
+- 1
++ 3
+
+ ❯ test/instagram-consumer-isolation.e2e-spec.ts:102:32
+    100|     const history = await request(app.getHttpServer()).get(`/api/bff/b…
+    101|       .set('cookie', cookie).expect(200);
+    102|     expect(history.body.total).toBe(1);
+       |                                ^
+    103|     expect(history.body.numeroDaBu).toBe(waBusiness.externalResourceId…
+    104|     expect(history.body.numeroDaBu).not.toBe(legacyDisplayPhone);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  test/instagram-cp2-final-clock.e2e-spec.ts > Instagram CP2 final operation and credential clocks > callback final candidate write is denied in a deliberately shortened persisted-lease robustness wait
+AssertionError: expected 2357 to be less than 2000
+ ❯ test/instagram-cp2-final-clock.e2e-spec.ts:226:42
+    224|       const waitStartedAt = Date.now();
+    225|       while (Date.now() <= shortenedDeadline) await pause(Math.min(50,…
+    226|       expect(Date.now() - waitStartedAt).toBeLessThan(2_000);
+       |                                          ^
+    227|       expect(await waitForAttemptWriter(barrier.blockerPid)).toBe(true…
+    228|       barrier.release();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  test/instagram-cp3-routing.e2e-spec.ts > Instagram CP3 explicit route and reply contract > binds the same opaque peer to two real Instagram accounts and sends only through the selected V2 route
+AssertionError: expected { schemaVersion: 2, …(14) } to match object { …(13) }
+(2 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  Object {
+    "accountLabel": Any<String>,
+-   "available": true,
++   "available": false,
+    "channelId": "78fae87f-630a-486c-b80b-273b32e88cf9",
+    "channelOrigin": "INSTAGRAM",
+    "policy": "INSTAGRAM_24H",
+-   "reason": "AVAILABLE",
++   "reason": "CHANNEL_NOT_READY",
+    "recipientLabel": Any<String>,
+    "requiresWindow": true,
+    "routeId": "1779fb2b-8b03-4431-9570-16709f9531a4",
+    "schemaVersion": 2,
+    "supportedKinds": Array [
+      "text",
+    ],
+    "windowExpiresAt": Any<String>,
+    "windowOpen": true,
+  }
+
+ ❯ test/instagram-cp3-routing.e2e-spec.ts:80:22
+     78|       const route = routes.find((candidate) => candidate.conversationI…
+     79|       const channel = await prisma.buChannel.findFirstOrThrow({ where:…
+     80|       expect(option).toMatchObject({
+       |                      ^
+     81|         routeId: route.id,
+     82|         channelId: channel.id,
+ ❯ test/instagram-cp3-routing.e2e-spec.ts:72:35
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  test/instagram-cp3-v1-cutover.e2e-spec.ts > Instagram CP3 strict V1 read and local cutover > recovers every V1 ordinary and initial state locally while preserving immutable request facts and exclusions
+AssertionError: expected { schemaVersion: 2, …(14) } to match object { channelOrigin: 'OFICIAL', …(8) }
+(6 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  Object {
+    "accountLabel": Any<String>,
+-   "available": true,
++   "available": false,
+    "channelOrigin": "OFICIAL",
+    "policy": "OFFICIAL_WINDOW",
+    "requiresWindow": true,
+    "schemaVersion": 2,
+    "supportedKinds": Array [
+      "text",
+    ],
+    "windowExpiresAt": Any<String>,
+    "windowOpen": true,
+  }
+
+ ❯ test/instagram-cp3-v1-cutover.e2e-spec.ts:408:20
+    406|     expect(options.body.options).toHaveLength(1);
+    407|     const option = options.body.options[0];
+    408|     expect(option).toMatchObject({ channelOrigin: 'OFICIAL', schemaVer…
+       |                    ^
+    409|       accountLabel: expect.any(String),
+    410|       available: true, requiresWindow: true, windowOpen: true, windowE…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL  test/instagram-oauth-session.e2e-spec.ts > Instagram OAuth callback session confidentiality (Nest/PostgreSQL) > redirects absent, invalid, inactive, password-changed, must-change-password and pending-onboarding sessions before controller effects
+AssertionError: expected 401 to be 303 // Object.is equality
+
+- Expected
++ Received
+
+- 303
++ 401
+
+ ❯ expectSafeCallback test/instagram-oauth-session.e2e-spec.ts:33:29
+     31|     const response = await request(app.getHttpServer()).get(path).quer…
+     32|       .set(cookie ? 'cookie' : 'x-test-no-cookie', cookie ?? '');
+     33|     expect(response.status).toBe(303);
+       |                             ^
+     34|     expect(response.headers['cache-control']).toMatch(/no-store/i);
+     35|     expect(response.headers['referrer-policy']).toBe('no-referrer');
+ ❯ test/instagram-oauth-session.e2e-spec.ts:49:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL  test/instagram-oauth-session.e2e-spec.ts > Instagram OAuth callback session confidentiality (Nest/PostgreSQL) > applies the same precontroller protection to callback case and trailing-slash aliases
+AssertionError: expected 401 to be 303 // Object.is equality
+
+- Expected
++ Received
+
+- 303
++ 401
+
+ ❯ expectSafeCallback test/instagram-oauth-session.e2e-spec.ts:33:29
+     31|     const response = await request(app.getHttpServer()).get(path).quer…
+     32|       .set(cookie ? 'cookie' : 'x-test-no-cookie', cookie ?? '');
+     33|     expect(response.status).toBe(303);
+       |                             ^
+     34|     expect(response.headers['cache-control']).toMatch(/no-store/i);
+     35|     expect(response.headers['referrer-policy']).toBe('no-referrer');
+ ❯ test/instagram-oauth-session.e2e-spec.ts:83:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+ Test Files  5 failed | 9 passed (14)
+      Tests  6 failed | 97 passed (103)
+   Start at  17:11:14
+   Duration  158.29s (transform 7.45s, setup 85ms, collect 29.10s, tests 126.56s, environment 3ms, prepare 799ms)
+
+ Container leadshug_channels_validation-validation-postgres-1  Stopping
+ Container leadshug_channels_validation-validation-postgres-1  Stopped
+ Container leadshug_channels_validation-validation-postgres-1  Removing
+ Container leadshug_channels_validation-validation-postgres-1  Removed
+ Volume leadshug_channels_validation_leadshug_arquivos  Removing
+ Volume leadshug_channels_validation_channels_web_node_modules  Removing
+ Volume leadshug_channels_validation_channels_npm_cache  Removing
+ Volume leadshug_channels_validation_channels_api_node_modules  Removing
+ Volume leadshug_channels_validation_channels_web_workspace  Removing
+ Volume leadshug_channels_validation_channels_api_workspace  Removing
+ Volume leadshug_channels_validation_channels_playwright_cache  Removing
+ Volume leadshug_channels_validation_validation_pg_data  Removing
+ Volume leadshug_channels_validation_leadshug_pg_data  Removing
+ Network leadshug_channels_validation_validation  Removing
+ Network leadshug_channels_validation_validation  Removed
+ Volume leadshug_channels_validation_leadshug_pg_data  Removed
+ Volume leadshug_channels_validation_leadshug_arquivos  Removed
+ Volume leadshug_channels_validation_channels_api_node_modules  Removed
+ Volume leadshug_channels_validation_channels_web_node_modules  Removed
+ Volume leadshug_channels_validation_channels_web_workspace  Removed
+ Volume leadshug_channels_validation_validation_pg_data  Removed
+ Volume leadshug_channels_validation_channels_npm_cache  Removed
+ Volume leadshug_channels_validation_channels_api_workspace  Removed
+ Volume leadshug_channels_validation_channels_playwright_cache  Removed

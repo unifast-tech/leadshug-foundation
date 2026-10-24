@@ -1,0 +1,31 @@
+{
+  "kind": "cp3-oauth-session12-terminal-root-preflight",
+  "date": "2026-10-24",
+  "changedExisting": [
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "sha256": "3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5",
+      "bytes": 6683
+    }
+  ],
+  "newFiles": [
+    {
+      "path": "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts",
+      "sha256": "d8d6c312e6f6271f2d4513661d4cb0b4ab227f1f9dc596f323e048f2ba63e2c9",
+      "bytes": 6906
+    }
+  ],
+  "unchangedExisting": 250,
+  "outsideOwnedChanges": [],
+  "exactAdmittedMiddlewareCandidate": true,
+  "middlewareCRLF": 159,
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "staticCorrections": "Root required rename await inside finally ownership, independentrestoreDBguard, actualmatchingnormalcontrol beforefault and appclosefinally; allapplied in new spec only.",
+  "qualification": "Exact sourceadmission applied; realPGfaultspec unexecuted, SessionService unexpectedexception origin unproved. R1-04 remainsopen until realfullAPI/gateway/browser/Numeros/freshreview.",
+  "sourceExecution": "NOTRUN"
+}

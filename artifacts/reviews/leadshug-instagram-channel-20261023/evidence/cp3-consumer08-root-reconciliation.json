@@ -1,0 +1,12 @@
+{
+  "kind": "cp3-consumer08-root-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sources": 250,
+  "inputs": 179,
+  "todo": 1,
+  "preserved": 35,
+  "index": 3,
+  "logMatched": true,
+  "actual": "Setup/31migrations/generate/lint/build passed;403unit passed3failed of406, all outbound.service.spec.ts assertion failures; E2E and target consumer/session RED not reached.",
+  "adjudication": "Source now owns predispatch via contextBeforeDispatch and postdispatch via contextAfterDispatch; old fixture consumes CURRENT as if first postdispatch call were preflight. No proven production regression in these3 failures. Preserve semantic negative cases and split old count3 into real before1+after2 rather than adding redundant source reads."
+}

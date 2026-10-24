@@ -1,0 +1,82 @@
+{
+  "kind": "cp3-consumer09-canonical-test-first-validation-result",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": "cp3-consumer09-api-instagram.log",
+  "logSha256": "a1917d383f0c975bbb3f4f605d2e939c5d380e1918864b7ec39e11a068eee80d",
+  "logLines": 75,
+  "stages": {
+    "isolatedSetup": "FAIL during npm postinstall fetching Prisma engines",
+    "databaseMigrations": "NOT_REACHED",
+    "prismaGenerate": "NOT_REACHED",
+    "lint": "NOT_REACHED",
+    "build": "NOT_REACHED",
+    "unit": "NOT_REACHED",
+    "e2e": "NOT_REACHED"
+  },
+  "setupFailure": {
+    "command": "node scripts/postinstall.js",
+    "package": "@prisma/engines",
+    "error": "Error: aborted",
+    "code": "ECONNRESET",
+    "attemptNumber": 1
+  },
+  "assertionReachability": {
+    "consumerIsolationAndOauthSession": "NOT_REACHED; runner stopped during setup",
+    "core04RoutingAndV1Recovery": "NOT_REACHED; runner stopped during setup"
+  },
+  "causalClassification": "INCONCLUSIVE; setup dependency fetch failed before any target assertions",
+  "frozenEvidence": {
+    "before": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 190,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "after": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 190,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "unchanged": true
+  },
+  "scope": "This API Instagram lane did not establish broad channel, browser, primary protocol, runtime, or checkpoint acceptance."
+}

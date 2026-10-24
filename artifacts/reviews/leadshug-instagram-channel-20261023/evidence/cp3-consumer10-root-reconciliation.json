@@ -1,0 +1,34 @@
+{
+  "kind": "cp3-consumer10-root-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sources": 250,
+  "inputs": 198,
+  "todo": 1,
+  "preserved": 35,
+  "index": 3,
+  "logMatched": true,
+  "actual": "Setup/31migrations/generate/lint/build and406unit PASS; E2E103=97pass6fail.",
+  "causal": [
+    {
+      "path": "instagram-consumer-isolation.e2e-spec.ts:102",
+      "observed": "history3 instead1; actual qualifiedIG contacts/realOAuth/signedIN reached; later history/public/me/Typebot assertions unreached."
+    },
+    {
+      "path": "instagram-oauth-session.e2e-spec.ts:49,83(helper33)",
+      "observed": "401instead303 on absent session/casealias. Later invalid/inactive/password/wizard/trailslash assertions unreached in failing cases; separate valid/noncallback control passed."
+    },
+    {
+      "path": "instagram-cp3-routing.e2e-spec.ts:80",
+      "observed": "window open but availablefalse CHANNEL_NOT_READY. Later dispatch/stalecontext/window assertions unreached."
+    },
+    {
+      "path": "instagram-cp3-v1-cutover.e2e-spec.ts:408",
+      "observed": "All prior V1 snapshots/local completion/noHTTP reached; new operationalV2 readiness false. NewV2send/replay later assertions unreached."
+    },
+    {
+      "path": "instagram-cp2-final-clock.e2e-spec.ts:226",
+      "observed": "Elapsed2357ms failed strict<2000; actual finalcandidate assertions unreached. Measurement failure; no proven production temporal regression. Keep existing bound/test byte-identical."
+    }
+  ],
+  "next": "Serialized11 readiness source correction and late current-account V1 fixture proof; exact admitted middleware companion and consumer implementation follow. No checkpoint acceptance."
+}
