@@ -1,0 +1,38 @@
+{
+  "kind": "root-reconciled-consumer39-qualified-static-terminal",
+  "changedExisting": [
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/inbox/historico.service.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts"
+  ],
+  "new": [
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts"
+  ],
+  "existingSourcesMatched": 260,
+  "currentSources": 261,
+  "preserved": 35,
+  "rootIndexMatched": true,
+  "clockReverseProof": [
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "substitutions": 13,
+      "originalSha256": "acbd91214c09c401da50e2a62a6937fe08c6facbbc30d06f667cc3884dcee774",
+      "reverseExact": true
+    },
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "substitutions": 12,
+      "originalSha256": "295ac89fb550d3b5ffeedf8336de2c480a5c2fd901b1f49caa6d29a719cddf52",
+      "reverseExact": true
+    }
+  ],
+  "initialPreviewReverseExact": true,
+  "tests": "NOTRUN; CSV test authored after product edit, no test-first/dynamicRED/GREEN claim. Independent bounded readback required after reported read-boundary incidents.",
+  "openStaticDefects": [
+    "Harness globally rejects .sendMessage(), which is the required abstract Channel dispatch. Concrete token pattern misses INSTAGRAM_CLIENT. Bounded branch regex can miss concrete policy selection past braces/length; no execution needed to establish these static flaws.",
+    "Native CSV test has no IG/group messages, no negative date controls, no ordered-array oracle or ambiguous-empty-conversation control. Its raw IN regex may reject a legitimate relational IN(SELECT) while intending to forbid full-ID fanout. Strengthen meaningful oracles without lowering existing assertions."
+  ],
+  "qualification": "Hashes prove only positive inventory/explicit new source state and35preservations; accidental broader Git/search outputs are not proof and are not reproduced."
+}

@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir o writer único consumer39/clocks40, depois selar fontes para a API completa e revisão afetada. Root conferiu os patches locks37/query38, ainda NOTRUN. O RED37b e os seis casos de autorização aprovados permanecem provas históricas. CP4 integral segue obrigatório.
+- **Next exact step:** selar a candidata de261 fontes para UMA execução completa da API41 e revisão afetada. Todos os writers estão terminais; patches locks37/query38/consumer39/40 e relógios ainda NOTRUN. O RED37b e seis casos de autorização aprovados são provas históricas. CP4 integral segue obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1558,3 +1558,24 @@ Native query and accepted-fact cases are authored but NOTRUN. They cover the12-a
 Explicit thaw is now one new sole product writer under `evidence/cp3-consumer39-handoff.json`, limited to its six existing paths and one native CSV spec. It completes the inherited bounded-record CSV finding without changing the full returned output, extends the small dependency harness to Instagram and the initial consumer, and derives initial preview metadata through the abstract policy. The two clock companions change elapsed durations/polling to monotonic time while preserving absolute session/credential/database expiry checks, every numeric threshold, hold and existing assertion. Root requires reverse-exact clock reconstruction before validation.
 
 No test/build/runner is active during the writer lane. Root retains Foundation ownership. After terminal reconciliation, one complete canonical API invocation will cover the new cases and all regressions, followed by fresh affected-source adherence carrying the complete prior review coverage. All pending primary/human obligations, full CP4 consumers and later assurance/physical gates remain required.
+
+
+Consumer39 read-boundary incident: the executor reported two read-only Git diff/stat/status commands outside its no-Git handoff. Status/stat enumerated working-tree path names beyond the positive inventory; root did not reproduce raw output or those names. No Git write occurred. Further Git/broad discovery was stopped; the same bounded source work continues using positive public paths only. `evidence/cp3-consumer39-read-boundary-incident.json` retains exact commands and limits. Accidental output is not scope/preservation evidence or authorization; root must independently reconcile the candidate against the positive baseline, and current source remains NOTRUN. No private-path, runtime or Git authority is expanded.
+
+
+### CP3 consumer39 qualified terminal and independent two-test repair40
+
+Root matched the260-source positive baseline, five changed existing paths, one new native spec,35 preservation rows and3 root index references. The history unit spec stayed byte-identical. Replacing only performance.now calls with Date.now reconstructed both original clock files byte-for-byte (13 and12 substitutions). Reverting only the abstract requiresWindow expression reconstructed the original initial-preview source. No limits, absolute clocks, original assertions or other changes are hidden in those three companions.
+
+Consumer39 also reported earlier broad path enumeration and source searches outside its bounded input set, plus product-before-native-test authoring. The incident receipt now qualifies these facts; no raw output or private names were reproduced. Root ended that writer lane. No clean-input or test-first/RED claim is accepted, and accidental Git/search output is not proof of source scope or preservation.
+
+Root static read found two concrete test-package defects before any run: a new harness rule rejects the required abstract Channel.sendMessage, and the native CSV case lacks actual exclusion/date/ambiguity/order controls while its SQL-IN regex can reject a legitimate relational subquery. `evidence/cp3-consumer39-terminal-qualified.json` records this qualification. No product failure or runtime leak is inferred.
+
+One fresh independent sole writer now owns only the harness spec and native CSV spec under `evidence/cp3-consumer40-handoff.json`. It must allow abstract dispatch/policy and legitimate identity proof, catch concrete Instagram/provider policy selection, and strengthen actual full-output/native bounded-query oracles. All product code and duration companions remain frozen. No test/build/runner/Git/broad discovery is authorized in that lane. Root will reconcile those two files and then freeze for complete canonical API validation and fresh affected-source review. CP4 and all primary/human/later gates remain mandatory; no acceptance is implied.
+
+
+### CP3 consumer40 terminal and complete API41 freeze
+
+Root independently matched261 positive public sources, exactly the two owned test changes,35 preservation rows and3 root index entries. The first AST revision produced deterministic false positives on abstract imports/policy names and provider literals; the same bounded writer corrected them before execution. Positive abstract dispatch/policy/platform/address fixtures and negative concrete-provider fixtures are retained. This remains a bounded static harness, not a complete dataflow analyzer. The native CSV case now asserts exact full ordered rows, actual exclusions/date filters, finite real query/delegate reads, and denial of an ambiguous matching conversation with zero messages. The old expanded-IN assertion was strengthened to allow legitimate relational IN(SELECT) while forbidding full-ID parameter fanout.
+
+All writers are terminal and all current source is NOTRUN. Root will freeze exact261 sources/current TODO/positive bound inputs for ONE complete `bash scripts/test-channels-local.sh api` invocation, not a selected-only replacement. No source/TODO/input writer during execution; the separate validation lane may write only its four unique before/log/after/result artifacts. No autofix, retry or private/runtime/Git expansion. Root must reconcile terminal bytes and actual assertion reachability before thaw. The incident limitations and code-before-test provenance remain explicit; no retroactive authorization or RED/GREEN claim. Fresh affected adherence carrying complete prior review coverage follows; all CP4/primary/human/CP5/CP6/ALL/assurance/physical obligations remain mandatory.

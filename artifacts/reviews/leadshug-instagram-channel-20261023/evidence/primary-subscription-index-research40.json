@@ -1,0 +1,52 @@
+{
+  "kind": "public-primary-index-research40",
+  "date": "2026-10-24",
+  "method": "Read-only official Meta web pages via web tool then direct urllib HTTPS without cookies, credentials or Graph API calls. Web tool429/inaccessibility did not establish direct-fetch unavailability.",
+  "retrievals": [
+    {
+      "url": "https://developers.facebook.com/llms.txt",
+      "http": 200,
+      "bytes": 6068,
+      "sha256": "fc98bed87f818e2cf2f0bbec5c880fe97011a1bd33738e940ffcaf1dce70d3ab"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/llms.txt",
+      "http": 200,
+      "bytes": 18901,
+      "sha256": "204f82d1869e4bd9237f5ca4c16a67ad0b60835ddea02f71220f9cd7fcada3ff"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/reference/me.md",
+      "http": 200,
+      "bytes": 942,
+      "sha256": "5f14ed97cb888aceecbe022ca53effa06be0cb9dbe04e0e10859b79b3d7ad9be"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "http": 200,
+      "bytes": 18504,
+      "sha256": "c3ae23a8c1a32d96879f78dab2eaf5fd793c1192b86dcd86463d1a9a912724ca"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user.md",
+      "http": 200,
+      "bytes": 15447,
+      "sha256": "6ad72e0c2f1efdc5f1dd35410703c20083effb0ac4fe0a5f43450feccb49cea0"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/instagram-messaging/webhooks/debugging.md",
+      "http": 200,
+      "bytes": 2356,
+      "sha256": "7461a4a10001f52124ba3f02d7dff12c96e380234119f2218602b7ac35a3498f"
+    }
+  ],
+  "observations": [
+    "The official root index exposes product-specific llms indexes and actual Markdown exports. Some responses vary content type/body; .md naming or200 alone is not accepted as evidence of actual desired content.",
+    "Instagram setup explicitly distinguishes Unified Login/Facebook Login graph.facebook.com from Instagram Login graph.instagram.com and documents account-level subscription POST with success:true.",
+    "The inspected Instagram Login sources still do not establish own-subscription GET response envelope, returned ID namespace, visibility/completeness or conclusive-empty absence.",
+    "The inspected debugger guide concerns a linked Facebook Page and Messenger dashboard; it cannot establish Instagram Login GET semantics."
+  ],
+  "conclusion": "IG-SUBPROTO01/SUBREC03 remain open. No guessed IDs, Page flow, success/absence parser, new config or no-op acceptance. No conclusion of unsupported endpoint from omission.",
+  "implementationChange": false,
+  "runtimeOrProviderProof": false
+}

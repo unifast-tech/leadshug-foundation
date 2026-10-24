@@ -1,0 +1,17 @@
+{
+  "kind": "root-reconciled-consumer40-static-terminal",
+  "changed": [
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts"
+  ],
+  "currentSourcesMatched": 261,
+  "preserved": 35,
+  "rootIndexMatched": true,
+  "hashes": {
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts": "f427d97f992ce07b85b2bda3ee7f61ea7b75aa2c0863f1d6c04fdf7c9adc0b46",
+    "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts": "d952fe4299610c9297603617315395d9cff1c26209c30f97de13f8046c48c6d9"
+  },
+  "staticQualification": "First AST revision also falsely matched abstract imports/EligibilityPolicy names/provider literals in branch conditions. Same bounded writer corrected before any execution; positive abstract-call/platform/address fixtures now present. Still a bounded heuristic guard, not complete dataflow analysis.",
+  "csvQualification": "Original assertions retained except literal SQL-IN false-positive replaced by stronger full exact output, actual finite delegate args and expanded-parameter-IN exclusion allowing relational SELECT. Actual excluded-message/date/contact and ambiguous-empty controls added. Authored after CSV source, no test-first claim.",
+  "tests": "NOTRUN; no dynamic GREEN or checkpoint acceptance; completeAPI41 follows"
+}

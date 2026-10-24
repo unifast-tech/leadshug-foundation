@@ -1,0 +1,32 @@
+{
+  "kind": "consumer40-bounded-independent-source-readback-and-repair",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "sourceBaseline": "cp3-consumer40-public-baseline.json",
+  "ownedExisting": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "sha256": "19c4a3ae9955ba50a92b7b0b42a8ca8b267da084470f00c4b7b2232db3cb9353",
+      "bytes": 3939
+    },
+    {
+      "path": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "sha256": "a5fef7f225f9aa8a119a724b96cb572485f5c6bab8040b60e5935fc734238a0e",
+      "bytes": 7355
+    }
+  ],
+  "ownedNew": [],
+  "authority": "authority-cp3-consumer40.json",
+  "routing": "routing-cp3-consumer40.json",
+  "objective": "Repair concrete static harness/oracle defects while preserving abstract dispatch and full CSV behavior; source-only, NOTRUN",
+  "rules": [
+    "Read this exact absolute handoff FIRST; use literal absolute known AGENTS/main/T/workflow paths, NO discovery commands. Sole product writer, principal checkout, no Git commands at all, no rg --files/find/readdir/glob across workspace, no private/runtime/provider/test/build/runner/worktree/copies/branches. Root owns Foundation. Only exact positive baseline file reads; targeted rg inside explicit known public files okay. No GOAL tools.",
+    "Only two owned test paths may mutate. CSV service/initial preview/duration companions are frozen; report actual product defect to root before needing source ownership. All old tests/assertions/counters/thresholds preserved. CSV source authored before test in39; do not claim test-first or RED.",
+    "Dependency harness must ALLOW direct abstract operation.channel.sendMessage() and abstract eligibilityPolicy calls; detect actual concrete clients/imports/tokens including Instagram and concrete eligibility policies. Current regex rejects abstractsend and misses INSTAGRAM_CLIENT. Small bounded AST via existing TypeScript dependency may improve branch recognition; no framework/typechecker build/new dependency.",
+    "Detect provider-origin concrete dispatch/client/policy selection in if/ternary/switch without brace/160char blind spot, while preserving legitimate qualified platform/address proof and historical metadata. Positive fixtures for generic sendMessage/policy and pure qualified platform/address mapping, negative fixtures for aliased concrete calls/policy selection/tokens. No global file exemption or implementation-specific arbitrary allowlist. Report limits honestly; not a complete dataflow analyzer.",
+    "Native CSV strengthen real PG/Nest fulloutput proof: existing205ties+legacyresource row retained, verify exact ordered full row array/content/direction/author/display/phone/time; seed actual excluded IG/group messages; negative conversationlastMessageAt and messagecreatedAt date filters, partialphone exclusions; foreignBU/resource behavior. New separate matching ambiguous contact with TWO qualifying identities and ZERO messages must cause409, proving fullconversation ambiguity validation. Preserve every existing assertion unless its literal raw-SQL shape oracle is shown false-positive, then replace with strongeractual delegate+SQL boundedproof, document exactjustification.",
+    "Clear actual query trace immediately before measured request. Trace actual Prisma args while executing native DB (no result/rule stubs): every message/conversation page finite takes, identities take2; no allconversationIDs materialization. SQL may legitimately use relational IN(SELECT), so distinguish it from an expanded IN parameters list; do not reject valid SQL syntax or assert only shape without full-output proof. Restore wrappeddelegates in finally and awaitcleanup.",
+    "No test/build/runner now. End with exactpathsha/bytes, statically preserved assertions and NOTRUN. Any missingpositivepublic file or ownedpath reportfirst, never expand."
+  ],
+  "complete": "Two-path repair ready for root consolidation and separate fullcanonicalAPI",
+  "blocked": "Need actual newproductpath/WHAT/authority: report before action"
+}
