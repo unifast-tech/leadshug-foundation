@@ -1,0 +1,838 @@
+ Network leadshug_channels_validation_validation  Creating
+ Network leadshug_channels_validation_validation  Created
+ Volume "leadshug_channels_validation_validation_pg_data"  Creating
+ Volume "leadshug_channels_validation_validation_pg_data"  Created
+ Volume "leadshug_channels_validation_channels_api_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_api_workspace"  Created
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_api_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_web_workspace"  Creating
+ Volume "leadshug_channels_validation_channels_web_workspace"  Created
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Creating
+ Volume "leadshug_channels_validation_channels_web_node_modules"  Created
+ Volume "leadshug_channels_validation_channels_npm_cache"  Creating
+ Volume "leadshug_channels_validation_channels_npm_cache"  Created
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Creating
+ Volume "leadshug_channels_validation_channels_playwright_cache"  Created
+ Container leadshug_channels_validation-validation-postgres-1  Creating
+ Container leadshug_channels_validation-validation-postgres-1  Created
+ Container leadshug_channels_validation-validation-postgres-1  Starting
+ Container leadshug_channels_validation-validation-postgres-1  Started
+Runner Node: v22.23.3
+debconf: delaying package configuration, since apt-utils is not installed
+{"guard": "channels-ci-parity-v1", "mutations_rejected": ["missing-pr-trigger", "missing-channels-job", "missing-retained-guard", "weakened-job-gate", "swallowed-job-errors", "skipped-validate-step", "swallowed-retained-job", "skipped-retained-admission", "missing-retained-private-checkout", "missing-common-guard", "swallowed-common-guard-failure", "missing-instagram-selector", "widened-instagram-selector", "extra-runner-arguments-accepted", "missing-e2e", "swallowed-e2e-failure", "missing-browser", "missing-migrate", "missing-generate", "missing-lint", "reordered-suite", "missing-shell-guard", "widened-wsl-socket", "changed-wsl-host-prefix", "wrong-wsl-mask-source", "missing-wsl-overlay"], "outer_wrapper": {"collision_control": {"compose_calls": 0, "exit_code": 1}, "empty_config_control": {"compose_calls": [["compose", "--project-name", "leadshug_channels_validation", "--env-file", "/workspace/.env.example", "--env-file", "/tmp/tmp.BVBAoUdiZB", "-f", "/workspace/docker-compose.yml", "-f", "/workspace/docker-compose.channels.yml", "--profile", "validation", "config", "--quiet"]], "exit_code": 0}, "inventory_failures": {"network": {"compose_calls": 0, "docker_calls": 3, "exit_code": 1}, "ps": {"compose_calls": 0, "docker_calls": 1, "exit_code": 1}, "volume": {"compose_calls": 0, "docker_calls": 2, "exit_code": 1}}, "mandatory_failure_cleanup": {"cleanup_observed": true, "compose_lifecycle": ["run", "down"], "exit_code": 42, "provider_or_real_docker_invoked": false, "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"}, "native_path_control": {"exit_code": 0, "overlay_added": false, "posix_bind_paths_preserved": true}, "unsupported_wsl_socket_control": {"docker_calls": 0, "exit_code": 1}, "wsl_bind_path_control": {"skipped": "self-test checkout is not on a WSL-mounted drive"}}, "yaml": "safe-no-alias-no-duplicates"}
+OpenSSL: OpenSSL 3.0.22 25 Aug 2026 (Library: OpenSSL 3.0.22 25 Aug 2026)
+Principal API/Web source binds and API/root dotenv masks verified before npm.
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+added 555 packages, and audited 556 packages in 28s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+19 vulnerabilities (4 moderate, 11 high, 4 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+prisma                  : 6.19.3
+@prisma/client          : 6.19.3
+Computed binaryTarget   : debian-openssl-3.0.x
+Operating System        : linux
+Architecture            : x64
+Node.js                 : v22.23.3
+TypeScript              : 5.9.3
+Query Engine (Node-API) : libquery-engine c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/libquery_engine-debian-openssl-3.0.x.so.node)
+PSL                     : @prisma/prisma-schema-wasm 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Schema Engine           : schema-engine-cli c2990dca591cba766e3b7ef5d9e8a84796e47ab7 (at node_modules/@prisma/engines/schema-engine-debian-openssl-3.0.x)
+Default Engines Hash    : c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+Studio                  : 0.511.0
+
+> @leadshug/api@0.1.0 prisma:generate
+> prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.19.3) to ./node_modules/@prisma/client in 289ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.3 -> 8.0.0-rc.27                 │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+added 105 packages, and audited 106 packages in 4s
+
+16 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (5 moderate, 2 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> @leadshug/api@0.1.0 prisma:migrate
+> prisma migrate deploy
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+31 migrations found in prisma/migrations
+
+Applying migration `20260818125556_nucleo_v1_tenancy_identidade_atendimento`
+Applying migration `20260821175101_modulos_e_marca_por_mantenedora`
+Applying migration `20260821180000_tres_papeis_owner_admin_atendente`
+Applying migration `20260821190000_setor_e_proveniencia_do_grant`
+Applying migration `20260821190500_concessao_de_setor_e_fato_proprio`
+Applying migration `20260821200000_historico_de_atividades`
+Applying migration `20260821210000_wizard_de_onboarding`
+Applying migration `20260821220000_preserva_modulo_ja_em_uso`
+Applying migration `20260824122559_perfil_do_proprio_usuario`
+Applying migration `20260824125224_arquivos_logo_e_avatar`
+Applying migration `20260824125227_arquivos_dono`
+Applying migration `20260824125334_avatar_e_do_usuario_nao_da_bu`
+Applying migration `20260824161138_convite_e_recuperacao_de_senha`
+Applying migration `20260827170000_cor_secundaria`
+Applying migration `20260831130000_cores_primarias_por_tema`
+Applying migration `20260901120000_typebot_bots_and_triggers`
+Applying migration `20260901130000_typebot_sessions`
+Applying migration `20261015120000_number_onboarding_foundation`
+Applying migration `20261015130000_number_onboarding_provider_resource_ownership_immutable`
+Applying migration `20261015140000_number_onboarding_channel_operation_fence`
+Applying migration `20261015150000_number_onboarding_managed_cleanup`
+Applying migration `20261016160000_number_onboarding_current_channel_identity_index`
+Applying migration `20261020170000_message_inbound_window_index`
+Applying migration `20261021130000_message_template_drafts`
+Applying migration `20261021150000_message_template_operations`
+Applying migration `20261022140000_initial_message_orchestration`
+Applying migration `20261022150000_initial_message_admissions`
+Applying migration `20261022160000_initial_message_inbox_order`
+Applying migration `20261023180000_instagram_adapter_type`
+Applying migration `20261023190000_instagram_identity_routes`
+Applying migration `20261024100000_instagram_authorization_attempts`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20260818125556_nucleo_v1_tenancy_identidade_atendimento/
+    └─ migration.sql
+  └─ 20260821175101_modulos_e_marca_por_mantenedora/
+    └─ migration.sql
+  └─ 20260821180000_tres_papeis_owner_admin_atendente/
+    └─ migration.sql
+  └─ 20260821190000_setor_e_proveniencia_do_grant/
+    └─ migration.sql
+  └─ 20260821190500_concessao_de_setor_e_fato_proprio/
+    └─ migration.sql
+  └─ 20260821200000_historico_de_atividades/
+    └─ migration.sql
+  └─ 20260821210000_wizard_de_onboarding/
+    └─ migration.sql
+  └─ 20260821220000_preserva_modulo_ja_em_uso/
+    └─ migration.sql
+  └─ 20260824122559_perfil_do_proprio_usuario/
+    └─ migration.sql
+  └─ 20260824125224_arquivos_logo_e_avatar/
+    └─ migration.sql
+  └─ 20260824125227_arquivos_dono/
+    └─ migration.sql
+  └─ 20260824125334_avatar_e_do_usuario_nao_da_bu/
+    └─ migration.sql
+  └─ 20260824161138_convite_e_recuperacao_de_senha/
+    └─ migration.sql
+  └─ 20260827170000_cor_secundaria/
+    └─ migration.sql
+  └─ 20260831130000_cores_primarias_por_tema/
+    └─ migration.sql
+  └─ 20260901120000_typebot_bots_and_triggers/
+    └─ migration.sql
+  └─ 20260901130000_typebot_sessions/
+    └─ migration.sql
+  └─ 20261015120000_number_onboarding_foundation/
+    └─ migration.sql
+  └─ 20261015130000_number_onboarding_provider_resource_ownership_immutable/
+    └─ migration.sql
+  └─ 20261015140000_number_onboarding_channel_operation_fence/
+    └─ migration.sql
+  └─ 20261015150000_number_onboarding_managed_cleanup/
+    └─ migration.sql
+  └─ 20261016160000_number_onboarding_current_channel_identity_index/
+    └─ migration.sql
+  └─ 20261020170000_message_inbound_window_index/
+    └─ migration.sql
+  └─ 20261021130000_message_template_drafts/
+    └─ migration.sql
+  └─ 20261021150000_message_template_operations/
+    └─ migration.sql
+  └─ 20261022140000_initial_message_orchestration/
+    └─ migration.sql
+  └─ 20261022150000_initial_message_admissions/
+    └─ migration.sql
+  └─ 20261022160000_initial_message_inbox_order/
+    └─ migration.sql
+  └─ 20261023180000_instagram_adapter_type/
+    └─ migration.sql
+  └─ 20261023190000_instagram_identity_routes/
+    └─ migration.sql
+  └─ 20261024100000_instagram_authorization_attempts/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": PostgreSQL database "leadshug_timeline_channels_ci", schema "public" at "validation-postgres:5432"
+
+31 migrations found in prisma/migrations
+
+Database schema is up to date!
+
+> @leadshug/api@0.1.0 lint
+> eslint "{src,test}/**/*.ts"
+
+
+> @leadshug/api@0.1.0 build
+> nest build
+
+
+> @leadshug/api@0.1.0 test
+> vitest run --config vitest.config.ts
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /workspace/api-app
+
+ ✓ src/infra/config/modulos.spec.ts (11 tests) 17ms
+ ✓ src/domain/message-templates/template-definition.spec.ts (26 tests) 25ms
+ ✓ src/domain/inbox/initial-message-template-renderer.spec.ts (9 tests) 18ms
+ ✓ src/domain/access/scope.spec.ts (22 tests) 18ms
+ ✓ src/integrations/meta/message-template.client.spec.ts (45 tests) 86ms
+ ✓ src/infra/session/session.service.spec.ts (17 tests) 10ms
+ ✓ src/integrations/evolution/evolution.client.spec.ts (22 tests) 22ms
+ ✓ src/integrations/meta/meta.client.spec.ts (55 tests) 55ms
+ ✓ src/domain/inbox/dispatch-admission.service.spec.ts (14 tests) 28ms
+ ✓ src/domain/inbox/conversation-start.service.spec.ts (13 tests) 15ms
+ ✓ src/domain/message-templates/template-management.ports.spec.ts (1 test) 5ms
+ ✓ src/domain/message-templates/template-management.dependencies.spec.ts (13 tests) 36ms
+ ✓ src/integrations/meta/initial-message.client.spec.ts (6 tests) 28ms
+ ✓ src/domain/channels/channel-credential-crypto.spec.ts (5 tests) 18ms
+ ✓ src/domain/channels/transport/channel-dependencies.spec.ts (8 tests) 30ms
+[33m[Nest] 4592  - [39m10/24/2026, 3:09:11 PM [33m   WARN[39m [38;5;3m[Email] [39m[33mRESEND_API_KEY ausente — "x" não foi enviado para a@b.test.[39m
+ ✓ src/integrations/email/email.client.spec.ts (6 tests) 14ms
+[31m[Nest] 4592  - [39m10/24/2026, 3:09:11 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mResend recusou (403): {"message":"domain is not verified"}[39m
+[31m[Nest] 4592  - [39m10/24/2026, 3:09:11 PM [31m  ERROR[39m [38;5;3m[Email] [39m[31mFalha de rede ao enviar para a@b.test: Error: getaddrinfo ENOTFOUND[39m
+ ✓ src/domain/inbox/incoming.typebot.integration.spec.ts (4 tests) 16ms
+ ✓ src/domain/channels/channel-credential-resolver.spec.ts (3 tests) 12ms
+ ✓ src/domain/channels/transport/channel-initial-message.spec.ts (15 tests) 67ms
+ ✓ src/domain/inbox/message-acceptance.service.spec.ts (2 tests) 11ms
+ ✓ src/integrations/typebot/typebot.client.spec.ts (5 tests) 11ms
+ ✓ src/integrations/instagram/instagram-http.client.spec.ts (3 tests) 1195ms
+   ✓ InstagramHttpClient HTTP deadline boundary > aborts native response.json body reading within the absolute request deadline 714ms
+   ✓ InstagramHttpClient HTTP deadline boundary > applies the same deadline before headers and accepts a normal response with exactly three OAuth protocol requests 476ms
+ ✓ src/domain/access/role.spec.ts (9 tests) 8ms
+ ❯ src/domain/inbox/outbound.service.spec.ts (33 tests | 20 failed) 116ms
+   × OutboundService error projection > keeps the initial slot when claim commit/readback is unknown and prevents provider POST 20ms
+     → expected TypeError: Cannot read properties of unde… to match object { Object (response) }
+   × OutboundService error projection > reserves an ordinary owner before preflight and claims it only at the final provider boundary 5ms
+     → Cannot read properties of undefined (reading 'findFirst')
+   × OutboundService error projection > reserves and releases an unclaimed owner when preflight blocks before the provider fence 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409 }
+   × OutboundService error projection > preserves BLOCKED when releasing the unclaimed reservation has an uncertain result 12ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(2) } }
+   × OutboundService error projection > retains an uncertain claimed send instead of releasing it 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 400 }
+   × OutboundService error projection > settles a confirmed provider refusal after the owner claim 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 400 }
+   × OutboundService error projection > preserves definitive REJECTED when ordinary settlement has an uncertain result 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 400, response: { …(2) } }
+   × OutboundService error projection > records one diagnostic only for a valid ACK without external ID 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+   × OutboundService error projection > keeps malformed or failed transport unknown without writing a diagnostic 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 400, response: { …(3) } }
+   × OutboundService error projection > preserves transport UNKNOWN and its legacy mapping when uncertainty settlement fails 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 400, response: { …(3) } }
+   × OutboundService error projection > records ACK_WITHOUT_ID diagnostic after settlement acknowledgment loss without retrying the provider 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(4) } }
+   × OutboundService error projection > gives a detected post-dispatch identity change precedence before null-ID diagnostics 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+   × OutboundService error projection > returns UNKNOWN/503 when the diagnostic commit is uncertain and context remains current 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(4) } }
+   × OutboundService error projection > gives a detected context retirement during diagnostic persistence precedence with no external-id write 3ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(4) } }
+   × OutboundService error projection > reports a confirmed diagnostic write as RECORDED if the identity retires immediately afterward 1ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(4) } }
+   × OutboundService error projection > does not start Message acceptance when the identity changed after an acknowledged send 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+   × OutboundService error projection > reports uncertainty before local Message acceptance as UNCONFIRMED 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(3) } }
+   × OutboundService error projection > reports a confirmed Message commit as RECORDED after a later local finalization failure 8ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(3) } }
+   × OutboundService error projection > does not report complete ordinary success when the durable settlement is explicitly unconfirmed 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(3) } }
+   × OutboundService error projection > keeps a known committed Message RECORDED and returns context-changed after a local finalization failure 2ms
+     → expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+ ✓ src/domain/inbox/channel-window-policy.spec.ts (2 tests) 4ms
+ ✓ src/domain/channels/transport/channel-operation-context.spec.ts (3 tests) 4ms
+ ✓ src/domain/inbox/contact-identity.spec.ts (8 tests) 8ms
+ ✓ src/domain/inbox/initial-message.service.spec.ts (4 tests) 14ms
+ ✓ src/main.spec.ts (6 tests) 8ms
+ ✓ src/domain/channels/safe-redaction.spec.ts (1 test) 7ms
+ ✓ src/integrations/instagram/instagram-messaging.client.spec.ts (4 tests) 15ms
+ ✓ src/domain/integration/rate-limit.service.spec.ts (3 tests) 11ms
+ ✓ src/domain/inbox/timeline-pagination.spec.ts (11 tests) 16ms
+ ✓ src/domain/inbox/historico.service.spec.ts (6 tests) 5ms
+ ✓ src/domain/integration/api-key.service.spec.ts (2 tests) 6ms
+ ✓ src/surfaces/bff/integracao.typebot.spec.ts (2 tests) 8ms
+ ✓ src/domain/inbox/incoming.typebot.spec.ts (2 tests) 4ms
+ ✓ src/domain/identity/password.service.spec.ts (5 tests) 488ms
+   ✓ PasswordService > gera e confere bcrypt 305ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 20 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > keeps the initial slot when claim commit/readback is unknown and prevents provider POST
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { Object (response) }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-   },
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:134:5
+    132|     blocked.admissions.markInitialAmbiguous = vi.fn().mockResolvedValu…
+    133| 
+    134|     await expect(blocked.service.sendInitial({
+       |     ^
+    135|       conversationId: conversation.id, buId: conversation.buId, channe…
+    136|       intent: { id: 'intent-1', selectedContext: context as unknown as…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > reserves an ordinary owner before preflight and claims it only at the final provider boundary
+TypeError: Cannot read properties of undefined (reading 'findFirst')
+ ❯ OutboundService.recipientForOperation src/domain/inbox/outbound.service.ts:49:55
+     47| 
+     48|   async recipientForOperation(context: ChannelOperationContext): Promi…
+     49|     const route = await this.prisma.conversationRoute.findFirst({
+       |                                                       ^
+     50|       where: {
+     51|         id: context.routeId, conversationId: context.conversationId, b…
+ ❯ OutboundService.send src/domain/inbox/outbound.service.ts:392:37
+ ❯ src/domain/inbox/outbound.service.spec.ts:175:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > reserves and releases an unclaimed owner when preflight blocks before the provider fence
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409 }
+
+- Expected
++ Received
+
+- Object {
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:184:5
+    182|     const blocked = setup({ outcome: 'BLOCKED', reason: 'CHANNEL_CONTE…
+    183|     // A preflight rejection occurs before the provider adapter invoke…
+    184|     await expect(blocked.service.send(input())).rejects.toMatchObject(…
+       |     ^
+    185|     expect(blocked.admissions.reserveOrdinary).toHaveBeenCalledOnce();
+    186|     expect(blocked.admissions.claimOrdinary).not.toHaveBeenCalled();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > preserves BLOCKED when releasing the unclaimed reservation has an uncertain result
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(2) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-     "outcome": "BLOCKED",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:195:5
+    193|     blocked.admissions.releasePrepared.mockRejectedValue(new Error('sy…
+    194| 
+    195|     await expect(blocked.service.send(input())).rejects.toMatchObject({
+       |     ^
+    196|       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcom…
+    197|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > retains an uncertain claimed send instead of releasing it
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 400 }
+
+- Expected
++ Received
+
+- Object {
+-   "status": 400,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:210:5
+    208|       return { outcome: 'UNKNOWN', evidence: 'TRANSPORT_UNCONFIRMED', …
+    209|     });
+    210|     await expect(uncertain.service.send(input())).rejects.toMatchObjec…
+       |     ^
+    211|     expect(uncertain.admissions.reserveOrdinary).toHaveBeenCalledOnce(…
+    212|     expect(uncertain.admissions.claimOrdinary).toHaveBeenCalledOnce();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > settles a confirmed provider refusal after the owner claim
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 400 }
+
+- Expected
++ Received
+
+- Object {
+-   "status": 400,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:223:5
+    221|       return { outcome: 'REJECTED', code: 'PROVIDER_REFUSED' };
+    222|     });
+    223|     await expect(refused.service.send(input())).rejects.toMatchObject(…
+       |     ^
+    224|     expect(refused.admissions.reserveOrdinary).toHaveBeenCalledOnce();
+    225|     expect(refused.admissions.claimOrdinary).toHaveBeenCalledOnce();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > preserves definitive REJECTED when ordinary settlement has an uncertain result
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 400, response: { …(2) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "PROVIDER_REFUSED",
+-     "outcome": "REJECTED",
+-   },
+-   "status": 400,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:238:5
+    236|     refused.admissions.settleOrdinary.mockRejectedValue(new Error('syn…
+    237| 
+    238|     await expect(refused.service.send(input())).rejects.toMatchObject({
+       |     ^
+    239|       status: 400, response: { code: 'PROVIDER_REFUSED', outcome: 'REJ…
+    240|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > records one diagnostic only for a valid ACK without external ID
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "EXTERNAL_MESSAGE_ID_MISSING",
+-     "diagnosticPersistence": "RECORDED",
+-     "outcome": "AMBIGUOUS_SEND_RECORDED",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:249:5
+    247|   it('records one diagnostic only for a valid ACK without external ID'…
+    248|     const { service, acceptance, channel } = setup({ outcome: 'UNKNOWN…
+    249|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    250|       status: 409, response: { code: 'EXTERNAL_MESSAGE_ID_MISSING', ou…
+    251|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > keeps malformed or failed transport unknown without writing a diagnostic
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 400, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "META_RECUSOU",
+-     "evidence": "TRANSPORT_UNCONFIRMED",
+-     "outcome": "UNKNOWN",
+-   },
+-   "status": 400,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:259:5
+    257|   it('keeps malformed or failed transport unknown without writing a di…
+    258|     const { service, acceptance, channel } = setup({ outcome: 'UNKNOWN…
+    259|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    260|       status: 400, response: { code: 'META_RECUSOU', outcome: 'UNKNOWN…
+    261|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > preserves transport UNKNOWN and its legacy mapping when uncertainty settlement fails
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 400, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "META_RECUSOU",
+-     "evidence": "TRANSPORT_UNCONFIRMED",
+-     "outcome": "UNKNOWN",
+-   },
+-   "status": 400,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:275:5
+    273|     uncertain.admissions.settleOrdinary.mockRejectedValue(new Error('s…
+    274| 
+    275|     await expect(uncertain.service.send(input())).rejects.toMatchObjec…
+       |     ^
+    276|       status: 400, response: { code: 'META_RECUSOU', outcome: 'UNKNOWN…
+    277|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > records ACK_WITHOUT_ID diagnostic after settlement acknowledgment loss without retrying the provider
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(4) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "EXTERNAL_MESSAGE_ID_MISSING",
+-     "diagnosticPersistence": "RECORDED",
+-     "evidence": "ACK_WITHOUT_ID",
+-     "outcome": "AMBIGUOUS_SEND_RECORDED",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:292:5
+    290|     uncertain.admissions.settleOrdinary.mockRejectedValue(new Error('s…
+    291| 
+    292|     await expect(uncertain.service.send(input())).rejects.toMatchObjec…
+       |     ^
+    293|       status: 409, response: { code: 'EXTERNAL_MESSAGE_ID_MISSING', ou…
+    294|         evidence: 'ACK_WITHOUT_ID', diagnosticPersistence: 'RECORDED' …
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > gives a detected post-dispatch identity change precedence before null-ID diagnostics
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-     "diagnosticPersistence": "UNCONFIRMED",
+-     "outcome": "UNKNOWN",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:305:5
+    303|     const { service, resolver, acceptance } = setup({ outcome: 'UNKNOW…
+    304|     resolver.contextAfterDispatch.mockResolvedValueOnce('CURRENT').moc…
+    305|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    306|       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcom…
+    307|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > returns UNKNOWN/503 when the diagnostic commit is uncertain and context remains current
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(4) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "OUTBOUND_LOCAL_INCOMPLETE",
+-     "diagnosticPersistence": "UNCONFIRMED",
+-     "evidence": "ACK_WITHOUT_ID",
+-     "outcome": "UNKNOWN",
+-   },
+-   "status": 503,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:314:5
+    312|     const { service, acceptance, resolver } = setup({ outcome: 'UNKNOW…
+    313|     acceptance.recordAmbiguousOutbound.mockRejectedValue(new Error('fi…
+    314|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    315|       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outc…
+    316|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > gives a detected context retirement during diagnostic persistence precedence with no external-id write
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(4) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-     "diagnosticPersistence": "UNCONFIRMED",
+-     "evidence": "ACK_WITHOUT_ID",
+-     "outcome": "UNKNOWN",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:327:5
+    325|       throw new Error('identity fence rejected diagnostic transaction'…
+    326|     });
+    327|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    328|       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcom…
+    329|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > reports a confirmed diagnostic write as RECORDED if the identity retires immediately afterward
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(4) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-     "diagnosticPersistence": "RECORDED",
+-     "evidence": "ACK_WITHOUT_ID",
+-     "outcome": "UNKNOWN",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:337:5
+    335|     const { service, resolver, acceptance } = setup({ outcome: 'UNKNOW…
+    336|     resolver.contextAfterDispatch.mockResolvedValueOnce('CURRENT').moc…
+    337|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    338|       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcom…
+    339|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > does not start Message acceptance when the identity changed after an acknowledged send
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-     "localMessageState": "UNCONFIRMED",
+-     "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:347:5
+    345|     resolver.contextAfterDispatch.mockResolvedValueOnce('CURRENT').moc…
+    346|     prisma.message.findUnique.mockResolvedValue(null);
+    347|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    348|       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcom…
+    349|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > reports uncertainty before local Message acceptance as UNCONFIRMED
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "OUTBOUND_LOCAL_INCOMPLETE",
+-     "localMessageState": "UNCONFIRMED",
+-     "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+-   },
+-   "status": 503,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:358:5
+    356|     resolver.contextAfterDispatch.mockResolvedValue('CURRENT');
+    357|     prisma.message.findUnique.mockResolvedValue(null);
+    358|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    359|       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outc…
+    360|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > reports a confirmed Message commit as RECORDED after a later local finalization failure
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "OUTBOUND_LOCAL_INCOMPLETE",
+-     "localMessageState": "RECORDED",
+-     "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+-   },
+-   "status": 503,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:366:5
+    364|     const { service, acceptance, prisma } = setup({ outcome: 'ACCEPTED…
+    365|     prisma.$transaction.mockRejectedValue(new Error('fixture conversat…
+    366|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    367|       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outc…
+    368|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > does not report complete ordinary success when the durable settlement is explicitly unconfirmed
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 503, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "OUTBOUND_LOCAL_INCOMPLETE",
+-     "localMessageState": "RECORDED",
+-     "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+-   },
+-   "status": 503,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:375:5
+    373|     const { service, acceptance, admissions, channel } = setup({ outco…
+    374|     admissions.settleOrdinary.mockResolvedValue(false);
+    375|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    376|       status: 503, response: { code: 'OUTBOUND_LOCAL_INCOMPLETE', outc…
+    377|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/20]⎯
+
+ FAIL  src/domain/inbox/outbound.service.spec.ts > OutboundService error projection > keeps a known committed Message RECORDED and returns context-changed after a local finalization failure
+AssertionError: expected TypeError: Cannot read properties of unde… to match object { status: 409, response: { …(3) } }
+
+- Expected
++ Received
+
+- Object {
+-   "response": Object {
+-     "code": "CHANNEL_CONTEXT_CHANGED",
+-     "localMessageState": "RECORDED",
+-     "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+-   },
+-   "status": 409,
+- }
++ [TypeError: Cannot read properties of undefined (reading 'findFirst')]
+
+ ❯ src/domain/inbox/outbound.service.spec.ts:387:5
+    385|     prisma.$transaction.mockRejectedValue(new Error('fixture finalizat…
+    386|     resolver.contextAfterDispatch.mockResolvedValueOnce('CURRENT').moc…
+    387|     await expect(service.send(input())).rejects.toMatchObject({
+       |     ^
+    388|       status: 409, response: { code: 'CHANNEL_CONTEXT_CHANGED', outcom…
+    389|     });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/20]⎯
+
+ Test Files  1 failed | 37 passed (38)
+      Tests  20 failed | 386 passed (406)
+   Start at  15:09:09
+   Duration  4.53s (transform 17.82s, setup 0ms, collect 38.41s, tests 2.46s, environment 9ms, prepare 4.42s)
+
+ Container leadshug_channels_validation-validation-postgres-1  Stopping
+ Container leadshug_channels_validation-validation-postgres-1  Stopped
+ Container leadshug_channels_validation-validation-postgres-1  Removing
+ Container leadshug_channels_validation-validation-postgres-1  Removed
+ Volume leadshug_channels_validation_leadshug_pg_data  Removing
+ Volume leadshug_channels_validation_leadshug_arquivos  Removing
+ Volume leadshug_channels_validation_validation_pg_data  Removing
+ Volume leadshug_channels_validation_channels_api_node_modules  Removing
+ Volume leadshug_channels_validation_channels_api_workspace  Removing
+ Volume leadshug_channels_validation_channels_web_node_modules  Removing
+ Volume leadshug_channels_validation_channels_playwright_cache  Removing
+ Volume leadshug_channels_validation_channels_web_workspace  Removing
+ Volume leadshug_channels_validation_channels_npm_cache  Removing
+ Network leadshug_channels_validation_validation  Removing
+ Volume leadshug_channels_validation_leadshug_pg_data  Removed
+ Volume leadshug_channels_validation_leadshug_arquivos  Removed
+ Volume leadshug_channels_validation_channels_api_workspace  Removed
+ Network leadshug_channels_validation_validation  Removed
+ Volume leadshug_channels_validation_channels_api_node_modules  Removed
+ Volume leadshug_channels_validation_channels_web_workspace  Removed
+ Volume leadshug_channels_validation_channels_playwright_cache  Removed
+ Volume leadshug_channels_validation_channels_web_node_modules  Removed
+ Volume leadshug_channels_validation_validation_pg_data  Removed
+ Volume leadshug_channels_validation_channels_npm_cache  Removed

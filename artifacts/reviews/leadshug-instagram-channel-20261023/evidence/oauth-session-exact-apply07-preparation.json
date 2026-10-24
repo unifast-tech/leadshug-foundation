@@ -1,0 +1,19 @@
+{
+  "kind": "prepared-exact-oauth-session-companion-application07",
+  "date": "2026-10-24",
+  "state": "PREPARED, not dispatched; wait terminal current validation06 and root actual failure adjudication. No authority to mutate frozen250source/currentinputs while validator active.",
+  "authority": "Exact one-path human answer Validar o ajuste do retorno OAuth, recorded in oauth-callback-session-user-admission-v2.json. Test additional path is within already-approved test/*instagram*.e2e-spec.ts creation glob. Same approved product/auth/validation scope; no new private/runtime/Meta authority.",
+  "profile": "Operational/Coder, gpt-6-luna medium, principal-checkout sole product writer",
+  "ownedPaths": [
+    "api-app/src/surfaces/bff/session.middleware.ts",
+    "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts"
+  ],
+  "productionExactness": "Original middleware SHA80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211; apply only reviewed oauth-callback-session-companion-proposal-v2.diff preserving CRLF and exact candidate3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5. Abort/report actual baseline mismatch. No new auth exception/public callback, dependency or changes to original enforcement body/order.",
+  "additionalProof": [
+    "Retain two consumer05/session specs byte-identical after their actual RED. New infrastructure spec supplements actual native-session/actor-denial integration cases; do not replace them or claim per-fault causalRED unless measured.",
+    "Exercise actual unexpected failure at both appUser and mantenedoraSettings lookups through real Nest/native valid signed session and disposable PostgreSQL. A temporary fixed-name table rename or similarly bounded real PG fault may be used only inside serialized disposable integration test with unconditional finally restoration and verification; no manual/operational DB action, schema migration or persistent reset. Recheck actual table names/schema and canonical DB guard, do not guess from this advisory.",
+    "Callback failure returns exact generic query-free303 INSTAGRAM_AUTHORIZATION_UNAVAILABLE with no-store/no-referrer and zero provider/attempt/credential side effects. After restoring PG, legitimate valid session and ordinary route still work. Equivalent noncallback infrastructure failure keeps original error path/status instead of a new redirect. Explicitly record injected PG object-unavailability origin, not a valid-user-input-induced outage.",
+    "Never mock domain/session/grant/Prisma/transaction results to manufacture integration proof. If the session-service unexpected-error origin cannot be induced through actual HTTP, qualify it as unexecuted; a focused boundary-fault supplement may be proposed but cannot replace actual PG/native session proof. No fabricated coverage claim."
+  ],
+  "restrictions": "No other source/test/helper/schema/CP2/window/client/Web/root/doc/private/runtime/provider/network/Git changes. No tests/build/lint/runner in source phase. If test fault requires another path or threatens shared state, report exact need before edit. Root separately freezes and assigns canonical validation/freshadherence; browser/gateway/Numeros fixedtext remain mandatory."
+}

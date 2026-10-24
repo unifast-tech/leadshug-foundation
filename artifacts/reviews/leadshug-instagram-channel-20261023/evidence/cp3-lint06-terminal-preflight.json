@@ -1,0 +1,30 @@
+{
+  "kind": "cp3-lint06-terminal-root-preflight",
+  "date": "2026-10-24",
+  "changed": [
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "sha256": "ed7dac94eb2125525d66553b059b63f1770651dc30638e262fd33e157c6f188a",
+      "bytes": 24541
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "2716ab40be1ff1a7e99ed4495423b008d0dc131a022c619c33056d989053b751",
+      "bytes": 25382
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "1f4208bc1cdb9d8ed955017f1aec4f0e30835f22672cac20ec814bc8623e1499",
+      "bytes": 54291
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee",
+      "bytes": 9602
+    }
+  ],
+  "outsideOwnedChanges": [],
+  "unchangedSources": 246,
+  "exactPreviousBytesReconstructedInMemoryForAll4": true,
+  "qualification": "Root reversed only eight lint edits in RAM and matched exact pre-run source hashes. No source restoration/write. No semantic/test-pass/consumerRED claim; canonical rerun required."
+}

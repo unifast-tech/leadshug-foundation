@@ -1,0 +1,14 @@
+{
+  "kind": "cp3-current-candidate-lint-repair06",
+  "date": "2026-10-24",
+  "authority": "Same approved ST-IG-03 v1.3, validator terminal exit1. Root independently matched250source/150inputs/T/35preservation/3index/log. This is a limited thaw, not consumer implementation or a test-pass claim.",
+  "ownedPaths": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts"
+  ],
+  "required": "Fix actual eight lint errors in cp3-consumer05-api-instagram.log lines220..236: empty interface alias, unused policy/mock parameters, unused initial recipient default assignment, unused ChannelAdapterOrigin import and duplicate unused identity variable. Preserve functional behavior/abstraction/security/fixtures/assertions and all other files. No eslint disable, weakened rules, generic autofix, test edits outside one owned fixture, or new architecture.",
+  "frozen": "Everything else in cp3-consumer05-frozen-manifest.json including new causal specs/helpers, schema/CP2/OAuth/session/privacy/protectedclients/root. Source changes outside4paths require concrete root adjudication before edit.",
+  "restriction": "Sole product writer, no test/build/lint/runner/runtime/private/provider/network/Git/docs. Return4 exact hashes after complete source repair. Root refreezes separately before a new canonical run."
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "cp3-consumer05-canonical-test-first-validation-result",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": "cp3-consumer05-api-instagram.log",
+  "logSha256": "149c449c3b84f2647b00967d304dca5690ea41c976043327f698746f7d717358",
+  "logLines": 261,
+  "stages": {
+    "isolatedSetup": "PASS",
+    "databaseMigrations": "PASS",
+    "lint": "FAIL",
+    "build": "NOT_REACHED",
+    "unit": "NOT_REACHED",
+    "e2e": "NOT_REACHED"
+  },
+  "lintFindings": [
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "lines": [
+        20,
+        81,
+        82
+      ],
+      "errors": 4
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "lines": [
+        116
+      ],
+      "errors": 1
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "lines": [
+        17
+      ],
+      "errors": 1
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "lines": [
+        15,
+        248
+      ],
+      "errors": 2
+    }
+  ],
+  "assertionReachability": {
+    "consumerIsolationAndOauthSession": "NOT_REACHED; lint terminated runner before build/unit/e2e",
+    "core04RoutingAndV1Recovery": "NOT_REACHED; lint terminated runner before build/unit/e2e"
+  },
+  "causalClassification": "INCONCLUSIVE; failure occurred at lint before target assertions",
+  "frozenEvidence": {
+    "before": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 150,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "after": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 150,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "unchanged": true
+  },
+  "scope": "This API Instagram lane did not establish broad channel, browser, primary protocol, runtime, or checkpoint acceptance."
+}

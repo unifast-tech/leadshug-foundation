@@ -1,0 +1,23 @@
+{
+  "kind": "cp3-unit-fixture08-terminal-root-preflight",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "changed": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "sha256": "12b83cd81b3c2e7d10bc852736712a42db1eaa704ee0572a409b02bb271f3b11",
+      "bytes": 26926
+    }
+  ],
+  "unchangedSources": 249,
+  "outsideOwnedChanges": [],
+  "previousBytesReconstructedInMemory": true,
+  "method": "Removed exact route helper, setup lookup, initial-case peer lookup and reserve expiry addition in memory; reproduced exact pre07 SHA. All original scenario/assertion text therefore preserved.",
+  "preserved": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "sourceExecution": "NOTRUN; fixture changes are not proof of production correctness."
+}

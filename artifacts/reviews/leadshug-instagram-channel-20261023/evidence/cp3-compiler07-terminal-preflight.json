@@ -1,0 +1,37 @@
+{
+  "kind": "cp3-compiler07-terminal-source-preflight",
+  "date": "2026-10-24",
+  "writerTerminal": true,
+  "changed": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "cb83fc1741dfdbf380ceb1168e51fc71a1a1023b53d2132f7eec4207d8f62a62",
+      "bytes": 9596
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf",
+      "bytes": 13235
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "a4c01799288c88d569e676552971c83675f6178d4d73edb2bfa5892a7ecba657",
+      "bytes": 48386
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "f944e89d6a364f7c435cb1a6a974676fe0d1b5efca83ca9ffa68b79297ab1f6b",
+      "bytes": 54409
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "sha256": "094cb41f31fa19181cedb837edb1956b49af6ab997b77884d416ffd0889d1ae8",
+      "bytes": 15025
+    }
+  ],
+  "unchangedSources": 245,
+  "outsideOwnedChanges": [],
+  "publicControllerOriginalReconstructedInRamFromSpellingOnly": true,
+  "publicControllerCrLf": 315,
+  "sourceClaim": "Compiler diagnostics repaired; fresh canonical build/units/E2E still required. No core/consumer/OAuth acceptance."
+}

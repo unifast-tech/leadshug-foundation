@@ -1,0 +1,37 @@
+{
+  "kind": "cp3-consumer05-validation-after",
+  "manifest": "cp3-consumer05-frozen-manifest.json",
+  "sources": {
+    "count": 250,
+    "intact": true,
+    "mismatchPaths": []
+  },
+  "todo": {
+    "count": 1,
+    "intact": true,
+    "mismatchPaths": []
+  },
+  "boundInputs": {
+    "count": 150,
+    "intact": true,
+    "mismatchPaths": []
+  },
+  "preservationRows": {
+    "count": 35,
+    "intact": true,
+    "mismatchPaths": []
+  },
+  "preservationRowCount": 35,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "rootIndexCount": 3,
+  "expectedRootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "rootIndexMatches": true
+}

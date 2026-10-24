@@ -1,0 +1,12 @@
+{
+  "kind": "cp3-consumer06-root-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sources": 250,
+  "inputs": 159,
+  "todo": 1,
+  "preserved": 35,
+  "index": 3,
+  "logMatched": true,
+  "actual": "Setup/31migrations/generate/lint passed;28TypeScript build errors in5sourcepaths; no units/E2E/causal consumerRED.",
+  "next": "Limited compiler repair07, no middleware/consumer implementation or test weakening."
+}

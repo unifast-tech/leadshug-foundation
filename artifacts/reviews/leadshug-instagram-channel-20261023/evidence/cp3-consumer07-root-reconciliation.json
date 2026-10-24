@@ -1,0 +1,12 @@
+{
+  "kind": "cp3-consumer07-root-terminal-reconciliation",
+  "date": "2026-10-24",
+  "sources": 250,
+  "inputs": 168,
+  "todo": 1,
+  "preserved": 35,
+  "index": 3,
+  "logMatched": true,
+  "actual": "Setup/31migrations/generate/lint/build passed;386unit passed20failed of406, all20 in outbound.service.spec.ts on missing canonical-route fixture. E2E and target consumer/session RED not reached.",
+  "next": "Restricted unit-fixture repair08, preserve all scenarios/assertions/counters; no middleware/consumer implementation yet."
+}

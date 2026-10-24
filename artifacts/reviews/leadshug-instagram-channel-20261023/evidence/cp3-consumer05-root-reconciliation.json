@@ -1,0 +1,15 @@
+{
+  "kind": "cp3-consumer05-root-terminal-reconciliation",
+  "date": "2026-10-24",
+  "checks": {
+    "publicSource": 250,
+    "inputs": 150,
+    "todo": 1,
+    "preserved": 35,
+    "rootIndex": 3,
+    "log": 1
+  },
+  "matched": true,
+  "actual": "31migrations passed; eight lint errors prevent build/unit/E2E. No consumer or OAuth causalRED reached, no currentcorepass.",
+  "repair": "Thaw only the four current source/unit lint paths under cp3-lint-repair06.json; all tests/helpers/OAuth/middleware/privacy/schema remain frozen. Revalidate with new prospective freeze after terminal."
+}

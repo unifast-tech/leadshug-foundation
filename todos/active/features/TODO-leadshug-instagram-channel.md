@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** preparar a prova PostgreSQL de isolamento dos consumidores CP3 sob cp3-consumer-source-handoff05.json, inicialmente somente o novo teste. Núcleo04 terminou com15arquivos existentes alterados+1spec novo, sem execução; preflight público não encontrou mudanças fora da lane. Depois consolidar consumidores/fixtures e validar API completa/revisão. CP2 e CP4..CP6 continuam obrigatórios.
+- **Next exact step:** executar uma rodada canônica api-instagram sob cp3-consumer08-validation-handoff.json, após reparo08 terminal exclusivo da fixture unitária. Rodada07: build passou,386/406 unit passaram e20 falharam na fixture; E2E ainda não alcançado. CP2 e CP4..CP6 continuam obrigatórios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -40,7 +40,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Session middleware v2 was explicitly admitted2026-10-24 and awaits serialized application/proof; privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, with no gate waiver.
-- **Last confirmed truth:** preimplementation02 passou398unit/97integrações antigas e falhou nos dois novos GET404. Fonte04 é NOTRUN; preflight248caminhos confirmou15existentes alterados+1spec novo sobre fonte03,35preservações/3índices e zero mudança fora da lane. Middleware v2 admitido, não aplicado; primary e2propostas humanas continuam abertos.
+- **Last confirmed truth:** rodada07 passou setup/31migrations/generate/lint/build;386unit passaram e20 falharam no único spec outbound.service.spec.ts por fixture sem conversationRoute.findFirst. Root conferiu250fontes/T/168inputs/35preservações/3índices e log real intactos. E2E/consumer/session ainda não alcançados. Middleware admitido continua sem aplicação.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1364,3 +1364,41 @@ IG-CP3-ROOT-01/02 permanecem pendentes de validação/revisão; IG-CP3-ROOT-03 p
 Em2026-10-24 o usuário respondeu `Validar o ajuste do retorno OAuth` à call_99741f4364ad445eac91376a11faa152. O receipt `oauth-callback-session-user-admission-v2.json` vincula fonte original80d8be.../CRLF, candidata3106e6... e diff/review/merge exatos já apresentados. O caminho singular `api-app/src/surfaces/bff/session.middleware.ts` está admitido somente para essa mudança. Continua sem alteração nesta anotação; autenticação, ordem e exceções das outras rotas devem permanecer idênticas. Não tornar callback público nem ampliar a admissão para outras mudanças nesse middleware.
 
 A execução será serializada: primeiro testes de negação confidencial pela sessão/Nest/PostgreSQL reais, controle de outras rotas e qualificação dos faults de infraestrutura; depois aplicação dos bytes revisados por writer único e validação. A prova de Numeros/gateway/browser e fullAPI/freshadherence continua obrigatória. R1-04 não está encerrado. A admissão não cobre `.env`, runtime, Meta, credenciais, worktrees ou Git de produto. Privacy HTML e limite1000UTF8bytes continuam pendentes; as menções históricas a3propostas pendentes acima descrevem seus momentos anteriores.
+
+
+## CP3 consumer05/OAuth companion — test-first frozen candidate
+
+Test-onlywriter terminal. Root leu ambos os novos specs e reconvergiu os oracles: snapshots Typebot anteriores ao ingresso, número empresarial canônico diferente de BU.phone, list/detail legados, códigos de sessão exatos. `cp3-consumer05-test-first-preflight.json` registra2specs novos e248fontes anteriores preservadas, incluindo middleware ainda original. Não foram executados testes pelo writer. Cobertura de falha inesperada de infraestrutura e guard defensivo Incoming não é alegada por esses testes.
+
+Congelar250fontes públicas, este TODO e entradas positivas para uma execução canônica separada `bash scripts/test-channels-local.sh api-instagram`, conforme `cp3-consumer05-validation-handoff.json`. A rodada deve distinguir RED causal de consumidor/callback, eventual defeito novo no núcleo e falhas de fixture/compilação; não chamar um bloqueio anterior de prova dos asserts não alcançados. Nenhuma mudança de fonte/TODO/inputs durante a execução, apenas evidências distintas. Depois, adjudicação root e lanes serializadas de reparo/consumidores/companion; fullAPI/freshadherence, UI/ALL/assurance e runtime próprio permanecem obrigatórios.
+
+
+## CP3 consumer05 canonical attempt — lint blocked before tests
+
+Uma execução canônica terminou exit1:31migrations e setup passaram, lint encontrou8erros em4caminhos; build/unit/E2E não foram alcançados. `cp3-consumer05-validation-result.json` e `cp3-consumer05-root-reconciliation.json` registram a leitura root do log real e correspondência250fontes/150inputs/T/35preservações/3índices. Isso não é RED causal de consumidor/OAuth nem GREEN do núcleo.
+
+Thaw limitado a `cp3-lint-repair06.json`, writer único para quatro caminhos de lint. Nenhuma semântica nova ou redução de regra; novos testes/helpers/CP2/middleware/schema ficam preservados. Depois do retorno terminal, congelar nova candidata e repetir uma execução canônica separada. O ajuste middleware já admitido só será aplicado após prova causal/qualificação; fullAPI e demais gates não foram dispensados.
+
+
+## CP3 lint06 terminal — prospective canonical rerun
+
+Writer de lint terminal. `cp3-lint06-terminal-preflight.json` confirma somente4caminhos alterados,246demais fontes preservadas. Root reconstruiu apenas em memória os8ajustes de lint e reproduziu o hash anterior exato dos4arquivos; nada foi restaurado na fonte. Não há alegação de equivalência funcional além dessa edição restrita nem de teste aprovado.
+
+Nova candidata250fontes/T/inputs positivos será congelada conforme `cp3-consumer06-frozen-manifest.json` para uma nova execução de `bash scripts/test-channels-local.sh api-instagram`, prevista em `cp3-consumer06-validation-handoff.json`. Mesmos asserts causais preservados. Nenhum writer durante a rodada; resultado anterior é lint-bloqueado, não RED causal nem prova dos testes não alcançados.
+
+
+## CP3 consumer06 canonical attempt — build blocked before tests
+
+Uma nova execução terminou exit1 depois de setup/31migrations/generate/lint aprovados. Build Nest reportou28erros TypeScript em5caminhos; unit/E2E não foram alcançados. `cp3-consumer06-root-reconciliation.json` confirmou fonte250/inputs159/T/preservação35/índices3 e hash do log real. Não há RED causal dos consumidores ou callback nem GREEN do núcleo.
+
+Thaw limitado a `cp3-compiler-repair07.json`: cinco fontes já admitidas, incluindo correção do nome real da relação Prisma em public/conversations.controller.ts. Honrar nullability real de staging sem enfraquecer contexto operacional v2; restaurar o shape de receipt realmente consumido pela recuperação; corrigir ordem dos parâmetros e narrowing. Nenhuma mudança em assert/regra/schema/middleware/consumidor funcional. Depois, nova candidata selada e validação canônica separada.
+
+
+## CP3 compiler07 terminal — prospective canonical rerun
+
+Writer07 terminal. `cp3-compiler07-terminal-preflight.json` confirma5fontes alteradas/245demais preservadas. O controller público mudou somente a grafia da relação Prisma: root reconstituiu bytes anteriores em memória e preservou315CRLF, zero LF isolado. O receipt de recuperação voltou a um tipo com os campos realmente consumidos; contexto v1/v2 é discriminado antes do uso. Nullability de staging foi mantida sem dispensar prova empresarial de operação nova. Nada disso é prova de build/teste.
+
+Nova candidata250fontes/T/inputs positivos fica selada em `cp3-consumer07-frozen-manifest.json` para uma execução canônica `bash scripts/test-channels-local.sh api-instagram`, conforme `cp3-consumer07-validation-handoff.json`. Novos testes/helpers/middleware continuam inalterados; resultado06 não provou nenhum assert unit/E2E. Adjudicação posterior distingue erros de compilação/fixture de RED causal e corretude.
+
+### Readiness humana complementar —2026-10-24
+O usuário confirmou outra conta Instagram disponível para enviar DM à conta profissional e verificar a resposta quando o plano real for autorizado. Nenhuma configuração ou mensagem real solicitada agora; não autoriza runtime, token manual ou provedor.

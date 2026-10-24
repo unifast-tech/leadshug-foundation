@@ -1,0 +1,47 @@
+{
+  "kind": "cp4-display-producer-preparation04-root-qualified",
+  "date": "2026-10-24",
+  "state": "Read-only preparation during separate canonical disposable validator; no source/T/input mutation and not implemented/tested/accepted",
+  "readset": [
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "sha256": "625d0908aed0dbc68440737eca55f4c9687dac5b4ec009a85383f99f680d79f2"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "d2d274cb1d1aeb36c48bea05896e22b5105723701e56d51dac77c4f43dc66064"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "6ca4be2112c637bee13066e503519fd9dda2fdda2c6d507d044c97be2d54449d"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "sha256": "22cf5877d6336e4c22b8650402c5913b064278b9ba639e20e10f9a80c00fc791"
+    }
+  ],
+  "actualGap": "Current list and thread conversa DTOs expose legacy contact/name/status/setor and thread channel-window origin only; no server-owned safe platform/account/peer display. Inbox renders displayName/name or raw contact. reply-options has correct action-selection metadata but cannot become one HTTP request per list row.",
+  "candidateDerivedHow": [
+    "Retain existing WA fields and semantics, add a small server-owned display projection to list rows and thread conversa; reuse reply option label semantics/names where faithful, exact DTO settled by later owner. It distinguishes actual platform/channelOrigin, safe accountLabel and recipientLabel; unresolved/multiple applicable routes remain neutral until explicit composer choice, never pick first row/most-recent origin as sender.",
+    "Derive peer label from proved contact identity and account namespace. WA may display proved human-readable number/name; IG uses known displayName/username or neutral Instagram-contact label, never opaque peer as phone. No profile fan-out/CRM merge/new sender or route inferred from BU.phone.",
+    "Resolve only page<=50 conversation IDs and their actual routes/business/provider resources in bounded batch. Avoid BU-wide connections, per-row replyOptions/credential lookup and loading historical attempts. Reuse same display owner for thread. Actual<=8domainqueries/page/EPS must later be measured against PG; this advisory is not performance proof.",
+    "Opening composer makes one authorized reply-options request and captures explicit route/channel/generation/fingerprint. Display projection does not confer availability/dispatch authority or implicit default selection. Preserve drafts and late-response fences A→B→A under current contract.",
+    "API producer paths already within approved core/domain/BFF globs, Web consumers in admitted api.ts/Inbox.tsx; serialize source owners and add real backend browser proof. Numeros uses separate paged connection catalog and legacy WA-only projection; no IG hydration via BU.phone."
+  ],
+  "anchors": [
+    "ConversationsService.listar46-99",
+    "BFF listar256-281/thread284-312",
+    "api.ts Conversa384-392/Thread403-408",
+    "Inbox list473-477/threadheading485-490/reply431",
+    "channel.ts ChannelReplyOptions199-217"
+  ],
+  "pending": "Exact implementation belongs CP4 and follows current CP3 source/tests/consumers plus unresolved CP2 gates. No protected App.tsx/Playwrightconfig/middleware/privacy edit authorized by this preparation. Middleware has separate exact human admission; privacy/byte limit still pending."
+}

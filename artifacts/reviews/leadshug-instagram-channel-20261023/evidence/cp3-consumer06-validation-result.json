@@ -1,0 +1,246 @@
+{
+  "kind": "cp3-consumer06-canonical-test-first-validation-result",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": "cp3-consumer06-api-instagram.log",
+  "logSha256": "78af6a8f8bc6e52632527b7fab55ac3a9a4d0c615a955526f61e7ca3aaf5f1a7",
+  "logLines": 368,
+  "stages": {
+    "isolatedSetup": "PASS",
+    "databaseMigrations": "PASS",
+    "prismaGenerate": "PASS",
+    "lint": "PASS",
+    "build": "FAIL (28 TypeScript errors)",
+    "unit": "NOT_REACHED",
+    "e2e": "NOT_REACHED"
+  },
+  "buildErrorCount": 28,
+  "buildErrors": [
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "line": 110,
+      "column": 7,
+      "code": "TS2322"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "line": 275,
+      "column": 5,
+      "code": "TS1016"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 77,
+      "column": 17,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 77,
+      "column": 112,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 81,
+      "column": 53,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 87,
+      "column": 89,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 90,
+      "column": 89,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 90,
+      "column": 118,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 98,
+      "column": 33,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 102,
+      "column": 51,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 112,
+      "column": 96,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 113,
+      "column": 59,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 114,
+      "column": 51,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 130,
+      "column": 148,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 131,
+      "column": 15,
+      "code": "TS18047"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 145,
+      "column": 95,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 150,
+      "column": 150,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 151,
+      "column": 15,
+      "code": "TS18047"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 152,
+      "column": 114,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 152,
+      "column": 143,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 153,
+      "column": 95,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "line": 155,
+      "column": 89,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "line": 375,
+      "column": 5,
+      "code": "TS1016"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "line": 583,
+      "column": 11,
+      "code": "TS2322"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "line": 55,
+      "column": 39,
+      "code": "TS2353"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "line": 64,
+      "column": 19,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "line": 65,
+      "column": 19,
+      "code": "TS2339"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "line": 65,
+      "column": 33,
+      "code": "TS7006"
+    }
+  ],
+  "assertionReachability": {
+    "consumerIsolationAndOauthSession": "NOT_REACHED; build failed before unit/e2e",
+    "core04RoutingAndV1Recovery": "NOT_REACHED; build failed before unit/e2e"
+  },
+  "causalClassification": "INCONCLUSIVE; build failed before target assertions",
+  "frozenEvidence": {
+    "before": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 159,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "after": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 159,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "unchanged": true
+  },
+  "scope": "This API Instagram lane did not establish broad channel, browser, primary protocol, runtime, or checkpoint acceptance."
+}

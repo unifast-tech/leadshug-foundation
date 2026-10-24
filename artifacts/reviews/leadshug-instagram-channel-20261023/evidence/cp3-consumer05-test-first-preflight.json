@@ -1,0 +1,29 @@
+{
+  "kind": "cp3-consumer05-test-first-terminal-preflight",
+  "date": "2026-10-24",
+  "productionUnchanged": true,
+  "matchedCorePublicFiles": 248,
+  "newFiles": [
+    {
+      "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+      "sha256": "61c6576e3dc913c058d4a3ba7c2fa28afa426b34e072b1b2f93b245659d661ea",
+      "bytes": 12494
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session.e2e-spec.ts",
+      "sha256": "99f980ee88a4665c0c8f1ef9ac522dac3ce8ecc6054a1f8df5dc482c7a1bd761",
+      "bytes": 8096
+    }
+  ],
+  "rootReadQualification": "Root read both complete actual test bodies and required correction of tautological Typebot snapshot timing, explicit canonical-number-vs-BU.phone oracle, both legacy projections, exact session denial codes. Existing helpers/specs and all production match terminalcore04.",
+  "expectedRed": [
+    "history includes IG conversations/canonical number from legacyBUphone",
+    "session callback authentication failure returns JSON before controller rather than safe303"
+  ],
+  "notProven": [
+    "unexpected database/session infrastructure fault origin",
+    "direct IncomingService defensive guard causal coverage",
+    "unreached downstream clauses until actual test progression"
+  ],
+  "status": "NOTRUN"
+}

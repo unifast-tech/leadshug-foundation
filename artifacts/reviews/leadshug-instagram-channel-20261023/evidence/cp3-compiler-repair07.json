@@ -1,0 +1,21 @@
+{
+  "kind": "cp3-actual-compiler-repair07",
+  "date": "2026-10-24",
+  "authority": "Same approved ST-IG-03 v1.3; current validator06 terminal and root checks matched. Public controller is admitted in TODO and is explicitly added to this narrowed source repair despite being excluded in core04 handoff. No human path deviation.",
+  "ownedPaths": [
+    "api-app/src/domain/channels/channel-credential-resolver.ts",
+    "api-app/src/domain/channels/transport/channel.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/surfaces/public/conversations.controller.ts"
+  ],
+  "required": [
+    "Fix actual28TypeScript diagnostics in cp3-consumer06-api-instagram.log, preserving runtime guards/required V2 tuple and all existing assertions. No any/never/non-null/default ID to hide missing proof.",
+    "Credential resolver: provider.businessIdentityId is genuinely nullable in schema for staged/historical rows; keep honest staging/registration semantics and fail closed for a sendable V2 operation without canonical business proof. Do not coerce null to a string or make V2 businessIdentityId optional. A credential-only nullable type can be honest if operational resolver remains strict.",
+    "ChannelResolver abstract/implementation signatures: required parameter cannot follow optional; align real contract/default/order without relaxing dispatch validation.",
+    "Outbound reconcileInitial incorrectly narrowed its full persisted known-receipt intent to Pick(id,selectedContext), despite reading state/request/externalID/owner/actor etc. Restore honest exact full required shape for recovery (separate from limited sendInitial input); narrow storedContext explicitly before closures. Unknown schemas remain blocked, v1 local only, no newHTTP.",
+    "Prisma explicit initial route: capture proved nonnull business identity in a local const before transaction closure, rather than casting mutable nullable candidate property.",
+    "Public accounts: actual Prisma relation is businessChannelIdentities; correct select/projection spelling only so it compiles. Full consumer qualification/no-WA-resource exclusion/page50 remains later consumer implementation, not permission to alter tests or add BU.phone fallback. Preserve CRLF on that source."
+  ],
+  "restrictions": "Sole source writer, no test edits/rules/schema/CP2/session/privacy/Web/root/docs/private/runtime/provider/Git/network. No tests/lint/build/runner. Outside5paths requires concrete root adjudication before mutation. Return exact5hashes; root refreezes and delegates canonical rerun."
+}

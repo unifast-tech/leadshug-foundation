@@ -1,0 +1,207 @@
+{
+  "kind": "cp3-consumer07-canonical-test-first-validation-result",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": "cp3-consumer07-api-instagram.log",
+  "logSha256": "5820484ccafa401b18d192b7f5d40ab6c6376ef1921726aa176d0c35ffad3ef5",
+  "logLines": 838,
+  "stages": {
+    "isolatedSetup": "PASS",
+    "databaseMigrations": "PASS",
+    "prismaGenerate": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "unit": "FAIL: 20 failed, 386 passed (406 total; 1 file failed, 37 passed)",
+    "e2e": "NOT_REACHED"
+  },
+  "unitFailure": {
+    "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "failedCount": 20,
+    "commonObservedError": "TypeError: Cannot read properties of undefined (reading 'findFirst')",
+    "representativeAssertionLocation": {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "line": 134
+    },
+    "failedCases": [
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > keeps the initial slot when claim commit/readback is unknown and prevents provider POST",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 134
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > reserves an ordinary owner before preflight and claims it only at the final provider boundary",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 175
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > reserves and releases an unclaimed owner when preflight blocks before the provider fence",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 184
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > preserves BLOCKED when releasing the unclaimed reservation has an uncertain result",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 195
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > retains an uncertain claimed send instead of releasing it",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 210
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > settles a confirmed provider refusal after the owner claim",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 223
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > preserves definitive REJECTED when ordinary settlement has an uncertain result",
+        "assertionLocation": {
+          "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+          "line": 238
+        }
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > records one diagnostic only for a valid ACK without external ID",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > keeps malformed or failed transport unknown without writing a diagnostic",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > preserves transport UNKNOWN and its legacy mapping when uncertainty settlement fails",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > records ACK_WITHOUT_ID diagnostic after settlement acknowledgment loss without retrying the provider",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > gives a detected post-dispatch identity change precedence before null-ID diagnostics",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > returns UNKNOWN/503 when the diagnostic commit is uncertain and context remains current",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > gives a detected context retirement during diagnostic persistence precedence with no external-id write",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > reports a confirmed diagnostic write as RECORDED if the identity retires immediately afterward",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > does not start Message acceptance when the identity changed after an acknowledged send",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > reports uncertainty before local Message acceptance as UNCONFIRMED",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > reports a confirmed Message commit as RECORDED after a later local finalization failure",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > does not report complete ordinary success when the durable settlement is explicitly unconfirmed",
+        "assertionLocation": null
+      },
+      {
+        "suite": "api-app/src/domain/inbox/outbound.service.spec.ts",
+        "test": "OutboundService error projection > keeps a known committed Message RECORDED and returns context-changed after a local finalization failure",
+        "assertionLocation": null
+      }
+    ]
+  },
+  "assertionReachability": {
+    "consumerIsolationAndOauthSession": "NOT_REACHED; unit stage failed before E2E",
+    "core04RoutingAndV1Recovery": "NOT_REACHED in the selector E2E stage; unit suite terminated before E2E"
+  },
+  "causalClassification": "INCONCLUSIVE for target consumer/session behavior; runner stopped on unrelated outbound.service unit failures before target E2E assertions",
+  "frozenEvidence": {
+    "before": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 168,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "after": {
+      "sources": {
+        "count": 250,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "todo": {
+        "count": 1,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "boundInputs": {
+        "count": 168,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "preservationRows": {
+        "count": 35,
+        "intact": true,
+        "mismatchPaths": []
+      },
+      "rootIndexCount": 3,
+      "rootIndexMatches": true
+    },
+    "unchanged": true
+  },
+  "scope": "This API Instagram lane did not establish broad channel, browser, primary protocol, runtime, or checkpoint acceptance."
+}

@@ -1,0 +1,15 @@
+{
+  "kind": "cp3-outbound-unit-fixture-repair08",
+  "date": "2026-10-24",
+  "authority": "Approved ST-IG-03 v1.3 admitted inbox specs; terminal07 independently reconciled, no runtime or path deviation.",
+  "ownedPaths": [
+    "api-app/src/domain/inbox/outbound.service.spec.ts"
+  ],
+  "sourceBeforeSha256": "2716ab40be1ff1a7e99ed4495423b008d0dc131a022c619c33056d989053b751",
+  "required": [
+    "Model coherent canonical route/contact identity returned by recipientForOperation; no production fallback or cast to bypass proof. Existing opaque peer must remain opaque for ordinary cases; initial explicit phone scenario must use its actual captured peer.",
+    "Supply original admission expiresAt in the override reservation fixture as required by final provider deadline contract. Preserve trace order and final-claim assertions.",
+    "Preserve all33 scenarios, every assertion, provider call count, failure projection and historical no-retry invariant. Only setup/collaborator/fixture data adaptations; if behavioral defect emerges stop and report before product mutation."
+  ],
+  "restrictions": "Sole writer exact one spec. No production/helpers/othertests/T/docs/private/env/runtime/provider/Git/network. No tests/lint/build/runner. Return exact hash and changes; root refreezes and delegates canonical command."
+}
