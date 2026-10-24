@@ -1,0 +1,21 @@
+{
+  "kind": "root-static-test30-reconciliation",
+  "changedOnly": [
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "591addcbde0d686b58e9ef7047d18e1614340711ba5986b5f4e8712ef24d3f52",
+      "bytes": 57297
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "sha256": "4d402c4a3e7e26e44d7a5ef209ee3554e09009727abf1e01dd907d73f22c5951",
+      "bytes": 22906
+    }
+  ],
+  "dispatchOtherCasesPrefixSuffixExact": true,
+  "dispatchOriginalAssertionLinesPreserved": 9,
+  "clockReverseExactByDurationClockReplacement": true,
+  "preservedRowsMatched": 35,
+  "rootRead": "Complete revised native peer-holder/queue/typed outcome/callback/finally case and entire monotonic-only clock diff. No production changes or timeout/limit/assert removal. Syntax and causal queue still require canonical execution.",
+  "state": "NOTRUN; no GREEN/P2002/retry/livecontrol proof claim."
+}

@@ -1,0 +1,113 @@
+{
+  "kind": "cp3-api29-canonical-api-validation-result",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "terminalOutcome": "FAILED",
+  "log": {
+    "path": "cp3-api29-api.log",
+    "bytes": 226797,
+    "sha256": "3c8e636a30e0777dfda6496647586ccc153b7271d58fde8b1008b152f035da9c",
+    "completeStdoutStderr": true
+  },
+  "preflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3,
+    "authority": "GO",
+    "routing": "GO"
+  },
+  "postflight": {
+    "fileCount": 256,
+    "allExact": true,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "stages": [
+    {
+      "name": "channels parity/self-guards",
+      "status": "PASS",
+      "evidence": "parity guard emitted 26 rejected-mutation cases; canonical wrapper validations passed"
+    },
+    {
+      "name": "Prisma client generation",
+      "status": "PASS",
+      "evidence": "Prisma Client v6.19.3 generated in 321ms"
+    },
+    {
+      "name": "database migrations",
+      "status": "PASS",
+      "evidence": "31 migrations applied; subsequent status reported schema up to date"
+    },
+    {
+      "name": "lint",
+      "status": "PASS"
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "evidence": "nest build completed and unit runner started"
+    },
+    {
+      "name": "unit tests",
+      "status": "PASS",
+      "files": 39,
+      "passed": 412,
+      "failed": 0
+    },
+    {
+      "name": "E2E tests",
+      "status": "FAIL",
+      "files": {
+        "passed": 48,
+        "failed": 2,
+        "total": 50
+      },
+      "tests": {
+        "passed": 568,
+        "failed": 2,
+        "total": 570
+      }
+    }
+  ],
+  "failures": [
+    {
+      "file": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "case": "ordinary/initial dispatch admission interlock (PostgreSQL) > rolls back the whole initial completion on a real P2002 race, exact-reads back, and retries one local transaction",
+      "body": "PrismaClientKnownRequestError: Invalid tx.providerResourceIdentity.findFirst() invocation in /workspace/api-app/src/domain/inbox/message-acceptance.service.ts:377:56. Transaction API error: Transaction already closed: A query cannot be executed on an expired transaction. The timeout for this transaction was 5000 ms, however 5001 ms passed since the start of the transaction. Trace: MessageAcceptanceService.establishRouteFromVerifiedIngress at message-acceptance.service.ts:377:22; loadOutboundConversation at :315:32; acceptInTransaction at :159:22.",
+      "classification": "Interactive transaction exceeded configured 5000ms timeout by 1ms; test failed before proving the exact-readback/retry assertions."
+    },
+    {
+      "file": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "case": "Instagram CP2 commit fences > equal-duration live session control commits and subscribes once with normal holder release",
+      "body": "AssertionError: expected 5869 to be less than 4500; at commitCase (test/instagram-cp2-commit-fences.e2e-spec.ts:310:30), called from :317:114.",
+      "classification": "Existing 4500ms timing bound failed with observed 5869ms; threshold unchanged. This measurement does not itself establish a provider temporal contract violation."
+    }
+  ],
+  "assertions": {
+    "instagramBatch": "PASS: initial-started=1000; initial-completed=1000 elapsedMs=5391.779; replay-started=1000; replay-completed=1000 elapsedMs=3360.879; complete batch case passed in 8780ms, so <=15000ms initial POST assertion and subsequent count/replay/malformed/oversize/echo/read assertions in that case completed.",
+    "strictCp2Clock": "test/instagram-cp2-final-clock.e2e-spec.ts passed 9/9; its assertions were reached. Log includes per-test durations but no separate emitted strict-bound measurement. No threshold change.",
+    "failedDispatchAssertionReachability": "not reached beyond failure at route identity lookup after transaction expiration; intended rollback/readback/retry success not established",
+    "failedTimingAssertionReachability": "reached and failed at 5869ms < 4500ms assertion"
+  },
+  "counts": {
+    "parityMutationsRejected": 26,
+    "prismaMigrations": 31,
+    "unitPassed": 412,
+    "e2ePassed": 568,
+    "e2eFailed": 2,
+    "e2eFilesPassed": 48,
+    "e2eFilesFailed": 2,
+    "batchInitialUpdates": 1000,
+    "batchInitialElapsedMs": 5391.779,
+    "batchReplayUpdates": 1000,
+    "batchReplayElapsedMs": 3360.879
+  },
+  "notes": [
+    "E2E terminal summary: 2 files failed, 48 passed; 2 tests failed, 568 passed of 570.",
+    "Canonical run reached and passed lint, build, unit tests, batch 15s initial-post assertion and replay/effects checks; full E2E remains failed on the two listed cases.",
+    "No source fix/retry or test threshold adjustment was performed; no checkpoint, provider, browser, or delivery acceptance claim is made."
+  ]
+}

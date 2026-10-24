@@ -1,0 +1,42 @@
+{
+  "kind": "root-reconciled-api29",
+  "exitCode": 1,
+  "sourceCount": 256,
+  "boundInputsMatched": 553,
+  "todoMatched": true,
+  "preservedRows": 35,
+  "rootIndexMatched": true,
+  "logSha256": "3c8e636a30e0777dfda6496647586ccc153b7271d58fde8b1008b152f035da9c",
+  "logBytes": 226797,
+  "unit": {
+    "files": 39,
+    "passed": 412
+  },
+  "integration": {
+    "files": 50,
+    "passedFiles": 48,
+    "total": 570,
+    "passed": 568,
+    "failed": 2
+  },
+  "proved": [
+    "parity26/migrations31/lint/build",
+    "IG native V2 twoaccount reply and separate ACK-without-ID UNKNOWN diagnostic cases both passed",
+    "1000 initial POST5391.779ms <=15000; replay3360.879ms; whole case8780ms; all row/unread/replay/preflight/1001/echo assertions reached",
+    "CP2 final-clock9cases passed including actual strict<2000 assertion; no isolated timing scalar emitted"
+  ],
+  "failures": [
+    {
+      "case": "dispatch-admission realP2002 race",
+      "actual": "expired5000ms transaction; query at5001ms",
+      "causalSource": "Test pauses sender callback after canonical peer lock and waits for echo acceptance of same peer before releasing. Echo needs held lock; fixture must place both prior reads before native peer lock instead. No production lock-order change or timeout increase.",
+      "unproved": "echo creationWinner/P2002/readback/localretry/count3 assertions after await failed."
+    },
+    {
+      "case": "CP2 equal-duration live-session control",
+      "actual": "Date.now elapsed5869ms violates4500; Vitest reports wholecase3282ms",
+      "qualification": "Duration clocks disagree. Correct elapsed-only measurement to monotonic clock, keep absolute session/credential/deadline Date.now and every strict bound. No assertion that this was a successful live-control behavior: later state/holder-duration checks unreached."
+    }
+  ],
+  "state": "RED; two test corrections required, no complete GREEN or checkpoint acceptance."
+}

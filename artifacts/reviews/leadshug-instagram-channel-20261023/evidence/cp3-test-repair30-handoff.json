@@ -1,0 +1,27 @@
+{
+  "kind": "cp3-causal-test-repair30",
+  "approvedWhat": "Preserve native P2002 rollback/readback/one-local-retry and exact3calls/3countedtransactions; keep real session expiry and all strict4500/4000/5000ms bounds. No feature or norm change.",
+  "ownedPaths": [
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "sha256": "2fcedfa1081647c29ad323f28f62de8fd502b8b6d9bf6ecc1dc462d36b953422"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "sha256": "2a59106818d2169dc49a3267a9ce11b26ece1790fec07f8297eb049c69cdad0f"
+    }
+  ],
+  "dispatchHow": [
+    "Only existing realP2002 case plus exact needed import of existing lockContactIdentityAddress/whatsappPeerAddress from domain/inbox/contact-identity. Preserve every existing assertion, counter and scenario, all other cases byte-exact.",
+    "Current test pauses after peer advisory lock then awaits echo needing same lock. Replace setup ordering with an external native PostgreSQL peer lock holder using saved bound transactionOriginal before counting; holder is fixture infrastructure, not counted operation transaction. Use exact existing lockContactIdentityAddress and canonical samepeer address (no copied guessed hash).",
+    "Obtain holder native pg_backend_pid; start real acceptance echo FIRST, prove it queued on exact holder advisory key using pg_locks/pg_stat_activity/pg_blocking_pids; then start outbound reconcileInitial SECOND and prove two pending samekey workers. Observe queued lock rows rather than sleeping to hope ordering. Both normal acceptance paths now read absent external key before canonical peer lock.",
+    "Release fixture holder; FIFO echo first creates native winner, sender then reaches existing beforeConversationMutation barrier with priorExists false. Await native echo and original creationWinner true, release sender callback; original insertion suffers actual native P2002, original owner rolls back/reads back/retries. Keep wrapped3/count3/message1/succeeded/provider0 assertions unchanged. No DB/domain/transaction mock beyond retained existing spies; no bypassed sender/acceptance owner/direct Message write.",
+    "Bound every new observation with monotonic finite deadline under normal5s transaction budget. Always release both gates and await holder/echo/reconciliation settlement in finally before restoring spies, even early error. Attach rejection handlers promptly to avoid unhandled promise errors. If observation cannot establish real queue order, stop rather than weaken assertions."
+  ],
+  "clockHow": [
+    "In instagram-cp2-commit-fences only, change ALL elapsed-duration origins/differences/holder duration/queue-observation deadlines/matched waiting duration to performance.now; keep absolute session iat/exp, credential margins, attempt expiry and policy deadlines on Date.now. Every4500/4000/3000/5000 numeric guarantee unchanged. No body/expectedstate/counter/oracle removal.",
+    "API29 native log whole live-controlcase3282ms vs Date.now elapsed5869 shows duration clocks disagree; monotonic correction is test-clock validity, not a productclock change or timing waiver. Fresh complete execution must still prove all later livecontrol state/POST/lease assertions."
+  ],
+  "forbidden": "Only2paths. NO production/helper/schema/config/private/env/runtime/Meta/tunnel/docs/Git/runner/tests/build/lint commands. No timeout/limit increase or oldscenario/assert/counter deletion. Allwriters otherthanthis terminal; no validator while writing.",
+  "completion": "Return exact SHA/narrow diff/terminal. Root reconciles256public/35preserved/3index and unchanged other testcase bytes, refreezes before separate fullAPI."
+}
