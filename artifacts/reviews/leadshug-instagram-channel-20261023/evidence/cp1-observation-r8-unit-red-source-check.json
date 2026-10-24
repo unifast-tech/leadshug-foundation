@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-observation-r8-unit-pre-red-source-check",
+  "hashes": {
+    "api-app/src/integrations/evolution/evolution.client.ts": "b0824e8fd4f801a239521855aaa02da5e0943a8c86c4ac8778e2f1f352821698",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts": "433e4674eb71f583b975aa76d43e62437a4772449d043dd8ef54675418d1ed54"
+  },
+  "clientUnchanged": true,
+  "exactReviewedSpecCandidate": true,
+  "qualification": "Root exact public source check; unit RED outcome pending"
+}

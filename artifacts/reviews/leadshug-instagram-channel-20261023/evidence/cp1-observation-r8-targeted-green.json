@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "root-observed-targeted-green",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-observation-r8-green-01.log",
+  "sha256": "f6f712a277b2f819f64bb3027c490d0f14da1995da9385253a428db9dafba5da",
+  "exit": 0,
+  "migrations": 30,
+  "lint": "passed",
+  "build": "passed",
+  "unit": {
+    "files": 36,
+    "passed": 395
+  },
+  "integration": {
+    "files": 3,
+    "passed": 32
+  },
+  "proof": "Four actual EvolutionHttpClient/Response malformed-object and invalid-JSON cases pass across retained renewal and post-unlink. Actual BFF/PG, pending cleanup/no fake delete/inventory retained/zero create, later validated absence recovery, same retained tuple or new explicit post-unlink channel/attempt, exactly one create; old cancelled attempt remains. Fresh resource remains unproved, signed existing Evolution ingress503 without content/conversation/bot/realtime.",
+  "limits": "Targeted only; frozen full API and fresh complete CP1 adherence pending. CP2..CP6 remain required.",
+  "preservation": {
+    "activePolicy": "inherited-public-preservation-v1.2.json",
+    "immutableMatches": 35,
+    "reviewedCandidateMatches": 2
+  },
+  "executor": "terminal; stopped all edits and runners",
+  "cleanup": "Executor reports disposable namespace empty; canonical teardown observed in log. No operational runtime used."
+}

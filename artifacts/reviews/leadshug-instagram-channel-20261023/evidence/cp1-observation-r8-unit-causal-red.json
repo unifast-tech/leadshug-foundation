@@ -1,0 +1,17 @@
+{
+  "kind": "cp1-observation-r8-unit-causal-red",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-observation-r8-unit-red-01.log",
+  "sha256": "ccd4b7f831f21bb5c0eec9e3c15ccf4ab7ca5d5cca293b879322289070b0f9af",
+  "exit": 1,
+  "unit": {
+    "filesPassed": 35,
+    "filesTotal": 36,
+    "passed": 384,
+    "failed": 11,
+    "total": 395
+  },
+  "causality": "Client remained original; exact reviewed16unit cases added. Eleven malformed/ambiguous observations resolved instead of rejecting, including duplicate target returning a projection. Canonical runner stopped before integration as expected. Separate product RED precedes this and reached real BFF/PostgreSQL.",
+  "preSourceSeal": "cp1-observation-r8-unit-red-source-check.json",
+  "schemaVersion": 1,
+  "command": "bash scripts/test-channels-local.sh api-instagram"
+}

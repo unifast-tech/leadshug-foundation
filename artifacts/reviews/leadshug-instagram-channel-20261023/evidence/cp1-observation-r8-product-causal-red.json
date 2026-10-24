@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "kind": "cp1-observation-r8-product-causal-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "executorReportedExit": 1,
+  "rootObservedSummary": [
+    "Test Files  36 passed (36)",
+    "Tests  379 passed (379)",
+    "Test Files  1 failed | 2 passed (3)",
+    "Tests  4 failed | 28 passed (32)"
+  ],
+  "log": {
+    "path": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-observation-r8-product-red-01.log",
+    "sha256": "e31b23fcd3a87da4bca493b3a4ad3431a8ee6d34e6f1860552ad71bc25a80416",
+    "bytes": 27214
+  },
+  "causalObservation": "All4 actual-adapter tests fail directly on persisted CLEANED instead of CLEANUP_PENDING, before response assertions: malformed object200 and invalidJSON200 in retained-renewal and post-unlink cleanup. Old adapter/spec unchanged; actual BFF/PostgreSQL/EvolutionHttpClient Response parsing reached.",
+  "qualification": "Later explicit recovery/single-create/ingress assertions execute only in GREEN; not claimed reached here. No fixture failure.",
+  "sourceSeal": "cp1-observation-r8-product-red-source-check.json",
+  "cleanup": "Terminal disposable removal observed"
+}

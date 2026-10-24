@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "bounded-qualified-attempts",
+  "attempts": [
+    {
+      "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-observation-r8-green-qualified-02.log",
+      "sha256": "1787f4b972bee67791722ce1fcd28e717e438298438c406cc16a5c50c6eb6455",
+      "notAcceptance": true,
+      "qualification": "Unsupported deletedAt fixture query, no product defect claimed."
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-observation-r8-green-qualified-03.log",
+      "sha256": "0749520c8ae53863833ae16fb936ba87bbab619a198963fac97472f2912cf842",
+      "notAcceptance": true,
+      "qualification": "New INITIAL uses attached provider with unproved business identity; old expected detached projection incorrect."
+    },
+    {
+      "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp1-observation-r8-green-qualified-04.log",
+      "sha256": "d9da71a47d6f93ba3d7f8ff2c49f145673fee3f1c77654625d8547ac4b6867c1",
+      "notAcceptance": true,
+      "qualification": "Final request-count assertion omitted actual read-before-create query for new name; safety/ingress assertions passed."
+    }
+  ],
+  "preservation": "Original logs retained. Corrections only tests; service remained frozen. Final harness returns real fake inventory for new resource, valid absence only for vanished old name."
+}

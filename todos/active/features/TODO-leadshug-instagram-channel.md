@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar RED real-adapter nas duas limpezas e unit RED, guard aprovado/GREEN; depois39fontes congeladas, API completo/revisão CP1 e seguir CP2..CP6.
+- **Next exact step:** conciliar API completa e revisão independente CP1 sobre39fontes congeladas; se aceito, executar CP2 OAuth/ingresso e continuar CP3..CP6.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -40,7 +40,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 
 ## Blocker Notes
 - **Blocker:** none for approved code/disposable synthetic validation; two-path admission received.
-- **Last confirmed truth:** caller r7 passou379unit/486APIintegration e crítica r3 sem apontamentos; client/spec nas hashes originais antes do novo RED.
+- **Last confirmed truth:** guard admitido aplicado nas hashes exatas revisadas;395unit/32Instagram passaram;35preservações intactas; fullAPI/revisão atual pendentes.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -601,7 +601,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP1-R3-04 | low | release-blocker | fix in this TODO | required ownership concurrency proof cannot assume winner scheduling; fix assertions in this TODO | closed by r5 | adherence-cp1-r5-result.json; actual-winner concurrency assertion retained |
 | IG-CP1-ROOT-01 | high | release-blocker | fix in this TODO | pending current ingress remains retryable without content/trust before proof | closed by r5 | adherence-cp1-r5-result.json; metadata-only staged retry and accepted-key proof retained |
 | IG-CP1-R4-01 | high | release-blocker | repeat affected proof in this TODO | four mutations violated the explicit r4 freeze; preserve evidence and validate current bytes anew | closed by r5 | adherence-cp1-r5-result.json; cp1-frozen-full-api-green-r5.json; new stable proof replaces invalidated acceptance |
-| IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; proposed only | adherence-cp1-r5-result.json; evolution-observation-companion-proposal.json |
+| IG-CP1-R5-01 | medium | release-blocker | bounded companion in this TODO; protected path validation required | current staged cleanup guarantee depends on a truthful absence observation; inherited adapter weakness is not a new Instagram regression | open; admitted guard applied, fresh proof/review pending | evolution-observation-companion-user-validation.json; cp1-observation-r8-targeted-green.json |
 | IG-EVOCOMP-01 | medium | release-blocker | fix admitted caller lifecycle in this TODO | conclusive cleanup must recover same reserved operation and permit one create, without widening protected paths | closed by r3/current full API; protected parser remains R5-01 | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 | IG-EVOCOMP-02 | medium | release-blocker | strengthen proposed tests before source admission | independent malformed name/state and null projection branches need concrete proof plan | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
 | IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
@@ -1019,3 +1019,9 @@ User answered **“Validar os dois arquivos”** to admission-ready question `ca
 Execution is test-first: real-adapter retained-renewal and post-unlink malformed observation RED with client/unit unchanged; then unit RED; then exact reviewed guard and GREEN. Stable tuple checks apply to an existing replacement reservation; post-unlink recovery must never resurrect a cancelled/deleted channel or attempt. No DB result fabrication, weakened prior scenario, new HTTP/fallback or general Evolution refactor is authorized.
 
 After targeted terminal proof, freeze39sources and require full API plus fresh complete CP1 adherence. CP1 acceptance enables CP2 and is not a stopping point; all CP2..CP6 and delivery criteria remain required.
+
+## CP1 r8 actual observation guard — frozen complete validation
+
+User-admitted client/spec equal the exact reviewed candidate hashes. The clean product RED reached four actual authenticated BFF/PostgreSQL CLEANUP_PENDING→CLEANED violations with the original client; the separate unit RED reached11malformed/ambiguous response failures. `evidence/cp1-observation-r8-targeted-green.json` records395unit and32Instagram passes after the guard. All qualified fixture/query/projection/count attempts remain separately retained; none is presented as product failure or acceptance. Tests fake external HTTP only, reflect inventory truth, verify no deletion/create after malformed observation, and prove explicit eventual recovery and blocked ingress before identity.
+
+The writer is terminal. `evidence/cp1-observation-r8-frozen-source-manifest.json` seals39exact public product paths;35remaining immutable inherited rows match. Source/TODO and review artifacts are frozen until both the validation-only full API executor and fresh complete CP1 adherence reviewer are terminal. No repair during either lane. R5-01 remains open for adjudication after matching current-source evidence. Prior supported closures and r4 invalidation history remain intact. This checkpoint is not delivery: CP2..CP6, complete consumer/UI/browser/freshness/ALL/pcv/security/TQA/cutover/final reviews and separately approved real runtime/Meta proof remain mandatory.
