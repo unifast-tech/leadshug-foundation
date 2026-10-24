@@ -1,0 +1,63 @@
+{
+  "kind": "CP4 connection contract HOW preparation",
+  "status": "Preparation only. Not a source handoff, test result, checkpoint acceptance or runtime authorization. Root will ratify within approved WHAT after current frozen API and affected adherence.",
+  "authority": "Approved ST-IG-03 v1.3 connection endpoints, lifecycle, safe display and error categories. Concrete DTO names/cursor encoding are routine HOW; no new operation or external identifier input.",
+  "routeOwner": {
+    "controller": "Second ChannelConnectionsController class in existing admitted src/surfaces/bff/channels.controller.ts, registered in bff.module.ts.",
+    "catalog": "Small domain/channels/channel-connections.service.ts; same pure safe display owner will be shared by inbox projection/reply options. No universal capability framework.",
+    "lifecycle": "InstagramAuthorizationService owns Instagram verify/disconnect/reactivation; UUID WA bridge delegates existing owner only with captured exact id/type/generation checked in its transaction. Never type-reselect another binding."
+  },
+  "list": {
+    "path": "GET /api/bff/business-units/:buId/channel-connections",
+    "authorization": "ATENDENTE+ in authorized BU. Session/grants before query validation. Foreign BU404; known BU insufficient role403. No external I/O or mutation.",
+    "query": "Only cursor and limit. Default20; integer1..50. Opaque cursor <=512 characters, base64url canonical version1 JSON with buId, createdAt ISO timestamp and local id UUID. Validate exact shape/BU/finite time after authorization. Stable ascending createdAt,id; take limit+1 and explicit continuation. Cursor is paging context, never authority.",
+    "response": {
+      "connections": [
+        {
+          "id": "local UUID",
+          "type": "OFICIAL | NAO_OFICIAL | INSTAGRAM",
+          "generation": "positive integer",
+          "status": "existing ChannelStatus",
+          "display": {
+            "platform": "WHATSAPP | INSTAGRAM",
+            "accountLabel": "string or null",
+            "whatsappPhone": "qualified business number or null",
+            "instagramUsername": "verified mapped username or null"
+          },
+          "identityVerified": "boolean",
+          "providerConnectionState": "safe existing state",
+          "receiptVerified": "boolean for current verified generation"
+        }
+      ],
+      "nextCursor": "opaque string or null"
+    },
+    "bounds": "Local fixed BU page; batch related proof only for page bindings; at most8 actual domain SQL queries/page including projection/count if any. No N+1, credential decryption, external IDs in DTO, per-row provider calls or display from BU.phone.",
+    "display": "IG username only from successful durably mapped same-account/channel/BU/current credential version, never latest pending/rejected candidate. Null neutral account label when unproved. WA phone only unique proved BusinessChannelIdentity. Display is never dispatch authority."
+  },
+  "verify": {
+    "path": "POST /api/bff/business-units/:buId/channel-connections/:channelId/verify",
+    "body": {
+      "expectedGeneration": "positive integer, no extra keys"
+    },
+    "authorization": "ADMIN+, CSRF, exact same-BU UUID and generation; current signed session/grant checked throughout bounded observation.",
+    "success": "200 with { connection: same safe list item, observation: CURRENT | UNKNOWN }. UNKNOWN is explicit inconclusive observation, not subscription absence, receipt or readiness. If transport cannot produce a valid safe observation, existing503 category applies. Root must settle this distinction against existing owner rather than use arbitrary statuses.",
+    "effects": "Explicit bounded read only, common provider identity lease60s/cooldown10s/global cap3requests10s and total40s. Credential/binding durable independently of expired OAuth attempt. No POST subscribed_apps or invented cleanup/readiness from UNKNOWN. Existing real receipt remains a known fact, never erased by present unknown observation."
+  },
+  "disconnect": {
+    "path": "POST /api/bff/business-units/:buId/channel-connections/:channelId/disconnect",
+    "body": {
+      "expectedGeneration": "positive integer, no extra keys"
+    },
+    "success": "200 with {connection: safe current item, remoteCleanup: PENDING | CONFIRMED}. Instagram remains PENDING unless exact own-app remote cleanup is independently proven; no guessed DELETE.",
+    "effects": "One fenced local transaction disables selected IG binding, increments generation, invalidates credential/leases/current receipt and cancels active unfinished attempts. Preserve channel/BCI/provider owner tombstones, routes/conversations/messages, completed authorization snapshots/receipts and all historical ACK records. Detach provider currentChannelId if required by canonical inactive mapping. No transfer or deletion. Late callback/confirm cannot promote old generation. Repeated old generation returns409; no mutation retry.",
+    "WA": "Preserve existing cleanup owner and semantics; adapt return safely without claiming remote cleanup from local detach. Preserve sibling binding and known receipts. Do not use generic WA disconnect for IG."
+  },
+  "reactivation": {
+    "existingOperation": "REAUTHORIZE with exact retained local channel id and current generation. Support absent credential only for same-owned disconnected tombstone.",
+    "CAS": "Capture absent-vs-version explicitly; at confirm require same account/app namespace/BCI/provider owner/BU/generation and same absence or captured live version. Foreign account, changed credential or concurrent candidate409. No CONNECT fallback, transfer or new operation enum.",
+    "version": "Fresh version > maximum genuinely mapped historical version for same channel/account. Do not derive from unpromoted candidate expectedCredentialVersion. Existing completed confirmations immutable.",
+    "mapping": "Reattach same retained provider identity and active generation; new receipt required after disconnected generation. Live reauthorization may retain genuine same-generation receipt. Clear prior active leases only through fenced lifecycle. Preserve global previous subscription POST/uncertainty; never reset it into blind mutation retry."
+  },
+  "errors": "Use existing categories401/403/404/400/409/429+Retry-After/503. Proposed routine safe codes PAYLOAD_INVALIDO, CONNECTION_CURSOR_INVALID, CHANNEL_GENERATION_STALE, OPERATION_IN_PROGRESS and existing lifecycle safe codes; no raw upstream data.",
+  "testFirst": "New admitted test/instagram-cp4-connections.e2e-spec.ts initially expects actual contract success200 for missing catalog and observes404 RED. Do not assert404 as a passing missing-route contract. Real PG/OAuth/signed ingress and native lifecycle, external HTTP fake only. Preserve all prior tests. Then implement and prove scoping/paging/negative generation/CSRF/current grants/cooldown/UNKNOWNzero effects/disconnect history/late callback/same-owner absent credential reactivation/fresh version/WA exact UUID+sibling. No real Meta, private data or runtime."
+}

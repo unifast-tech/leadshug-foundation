@@ -1,0 +1,28 @@
+{
+  "kind": "cp3-repair56-root-reconciliation",
+  "date": "2026-10-24",
+  "sourceRows": 261,
+  "changes": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50850,
+      "sha256": "97b1257cd629a1a495e6f9e6d1eaa66656c5d891e059f744f792be803deb257b"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 46124,
+      "sha256": "4fc5ce0f7b8d70f6ad960c36d836809bb80943a5bfec0d3d4f3dbecd47a1d386"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 16237,
+      "sha256": "b537817fa46e54ac05a3798155be3629a7fb9039c2821bbc1e313b2e8b5904dd"
+    }
+  ],
+  "otherRowsExact": 258,
+  "reverseInitializersExact55": true,
+  "initializerQualification": "Actual previous optionCount initializer was -1, not0 as handoff/report described. Exact reverse -1 independently matches55hash. Both unused initializer removals only; criteria unchanged.",
+  "originalNineBodiesReverseExact53": true,
+  "newIGControlInspection": "Full candidate ready before sender; old active token explicitly unchanged. Then real final actor TX native PID, actual confirm waits, release sender, exactly one captured account/peer/original token POST; confirm commit precedes ACK release; exact201/200. No lock/threshold/product behavior adjustment.",
+  "status": "NOTRUN; solewriterterminal; freeze one complete canonical API57 next. All remaining gates mandatory."
+}

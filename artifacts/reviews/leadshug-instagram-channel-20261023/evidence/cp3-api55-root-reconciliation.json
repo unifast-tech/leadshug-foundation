@@ -1,0 +1,27 @@
+{
+  "kind": "cp3-api55-root-reconciliation",
+  "date": "2026-10-24",
+  "sourceRowsExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 734,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "bytes": 14127,
+    "sha256": "0fb980f5bdbc6f800b22f04aba4773d18cd26ab1eb1e1cd37f58a2b2b1ff0857"
+  },
+  "exitCode": 1,
+  "reached": "Parity26, Prisma generation,31migrations and schema current; lint blocked on exactly two no-useless-assignment diagnostics.",
+  "unreached": [
+    "build",
+    "unit",
+    "allE2E",
+    "allnew7controls",
+    "alloldcausal9",
+    "batch1000",
+    "lock/P2002/query/CSV/ACK/finalclock"
+  ],
+  "separateRootObservation": "cp3-api55-serialization-fixture-order-observation.json is source-inspection hypothesis only; lint prevented execution. New IG test prepares REAUTHORIZE while pinned sender blocks lifecycle reservation; move candidate preparation before sender, actual confirm remains after captured final actor PID.",
+  "next": "Freeze55 ends after terminal root reconciliation; sole bounded repair56 only3existing admittedpaths for2initializers and newIGcontrol preparation ordering. No product eligibility/locks/deadlines/oracle changes. One full API57 follows terminal root reconciliation.",
+  "acceptance": false
+}

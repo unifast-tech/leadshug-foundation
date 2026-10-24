@@ -1,0 +1,11 @@
+{
+  "kind": "read-only-observation-during-api55-freeze",
+  "date": "2026-10-24",
+  "observation": "New authorization-first IG control holds sender final actor transaction before starting REAUTHORIZE create/callback. Existing create REAUTHORIZE calls lockMappedResource and channel FOR UPDATE, which conflicts with final sender pins. Therefore setup may wait/expire before reaching intended confirm blocker oracle.",
+  "sources": [
+    "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts"
+  ],
+  "status": "Hypothesis before terminal API55; no source mutation, interruption, retry or failure classification. Preserve active complete canonical run.",
+  "prospectiveHow": "If terminal failure confirms, prepare real REAUTHORIZE candidate and validate callback/CANDIDATE_READY before starting/holding sender; active credential remains old until actual confirm. Start only real confirm after held sender, observe native blocking there. Preserve original nine bodies and seven test criteria; no product/threshold/lock weakening."
+}

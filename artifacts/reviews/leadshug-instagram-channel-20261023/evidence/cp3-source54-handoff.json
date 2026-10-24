@@ -1,0 +1,101 @@
+{
+  "kind": "cp3-source54-bounded-implementation-handoff",
+  "date": "2026-10-24",
+  "authority": "ApprovedST-IG-03v1.3 admitted14paths, opinion47HOWintegrated, actual53threeA46+B46causalRED reconciled. No newWHAT/APIroute/schema/config/Channelmethod/framework/protectedpath/runtimeauthority.",
+  "writePaths": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 49351,
+      "sha256": "37bcfc6cdc9e3ba53f8ee97ec68c923d07aab8bb90492b60872ece10ae473c30"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 48540,
+      "sha256": "559039c84b20ac986b6bc3b2b0590a50a6be9454634d7bbb2c05d706c5a387e4"
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "bytes": 5050,
+      "sha256": "7fc075ab2a17f55edc0d082c4628e6f47cfe0db7f6d0dec346000c20de04ae4a"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 9520,
+      "sha256": "1aa8ad944527529255b589af45f5e1d05aa0bc36d504f2315330ca9ed546cd5b"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24534,
+      "sha256": "aa33ca7ed6f74cabd878ebccec9529dd6a32b8311dad107babbc212d905ecc41"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 21521,
+      "sha256": "799a1866c203557b9a115c327dfb466b40c71cb937218997c1a2fecec6ad34e2"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64107,
+      "sha256": "607a14170052225551396210293625f26182385c7bc7fa1e6acfa318c405aa0f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 29248,
+      "sha256": "11d961f30f98ec6b2d79b279e8c3cefdb0e1f686f0c036419e1e4a14b1ce31d9"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "bytes": 7368,
+      "sha256": "7d6bd42f336c935b1d14e412a962cb5866ffc106d80534c0d0e3d7be9aa13d86"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "bytes": 58517,
+      "sha256": "b67794d5d9327e517f27620292e71fa3d9986d0f6aa259c59a07052497e6a5d5"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 28104,
+      "sha256": "8e95ce1ed4911e3a44a8dbbf6e26f1b35ae61d4b76bc50020fb7f3fb7af5d3c4"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 15363,
+      "sha256": "7bada2a66635d8dc1e5cee18c3d4b9b331201b4714baf846d7711861a284de21"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34866,
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979"
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "bytes": 119304,
+      "sha256": "2afc8055cfe08975e60918cfd9f68409a628686376faafaaaa9fc9d94da509ac"
+    }
+  ],
+  "readManifest": "cp3-red53-frozen-manifest.json",
+  "rootProof": "cp3-red53-root-reconciliation.json",
+  "governingHow": "cp3-final-fence47-opinion-raw.json",
+  "howAdjudication": "cp3-final-fence47-root-adjudication.json",
+  "constraints": [
+    "Soleproductwriter onprincipalcheckout. Other247sourcepaths immutable. No tests/build/runner/Git/private/env/runtime/Meta/volumes/processargs/docs/goals; NOTRUN untilterminal/rootfreeze/separatecompleteAPI55.",
+    "No protectedSessionService/AccessService/OAuthmiddleware/Meta/Evolutionclient/InstagramOAuthservice changes. No privacy/UTF8 change, ownGETguess or criterionwaiver.",
+    "Keep existingpublic contextBeforeDispatch as PRELIMINARY outsidefinalTX, preservingoldmutation-first seam/6controls/3REDcases; newpinnedTXdecisive. No postlastread artificial mutationcancelcriterion.",
+    "ProviderHTTP outsideTX, no retry/deadlineextension. Same owner/admission/acceptance/knownACK/V1readonlyrecovery semantics preserved. No credentialcouplingafterknownACK.",
+    "Native5secondTX/locks/250msmatchedcontrol/4500ms/1000<=15s/12cohort/P2002count3/nineoracles/WAformat/independentaccount thresholds stay. No arbitrary status sets or mockdecisions/transactions/lifecycle."
+  ],
+  "tasks": [
+    "FirstaddnewGreenobservationcontrols and boundedIGzeroqueryoracles withoutediting3mutationfirstcasesor6oldbodies; thenimplementfaithful47HOW. No executedREDclaim fornewpositivecontrols.",
+    "OutboundfinalProviderFence receivesactualpersistedselectedContext capturedfromdurableclaimrow and capturedrecipient, operation/policyinput, originaldeadline/credentialexpiry. One shortReadCommittedTX: narrowAdmission.pinContextForFinalDispatch parses/comparesV2, providerSHARENOWAIT\u2192samecanonicalqualifiedpeertryadvisorykey\u2192exactconversationSHARENOWAIT\u2192reuseexistingvalidateDispatchContext/resolvervalidator\u2192abstractpolicy\u2192actorlast. Missing/mismatch/55P03/failedtrylock/unconfirmedCOMMIT returnfalse, existingBLOCKEDsettlement.",
+    "ContactIdentity trylockhelper mustshareexactexistingJSONkey/propertyorder/hash withblockinglock. Factorpurekeyifuseful; preserveexistingblockingcallerbehavior. NOWAIT afterprefix, no lockeveryBUchannel. No providerI/O/decrypt inTX.",
+    "SmallpairedActorDispatchFence(validateInTransaction,isSessionCurrent) inexistingcommonowner, completepairrequiredfordispatchBFF/initialhuman. Controllercapturessignedcookie+verifieduid/iat/exp; useexistingSessionService.verificar(cookie,now). Passpairedfence throughConversations/Initial/Outbound. Keepreconcile/ack APIsandselectiveexistingactorrequirements unchanged. PureSessioncheckafter awaitedCOMMIT, exactoriginaldeadline/window/strict60scredentialmargin; no later asyncauthorization. Rejectinvalidclock/claims, no legacyhumanfallback.",
+    "B46 initialOptions first proves uniquecanonicalqualifiedWAidentity/address ofexactconversation; IGrecipient returns[] BEFOREchannel/credentialqueries. Readboundedtake2, no BU.phone/contactstringguess. PreservegenuineWAoptions/pending/cardinalitycohort/caps and sharedeligibilitymeaning.",
+    "UpdateonlydirectBFF/initialpairedfencefixtures in3admittedunit/native companions, keepalloldscenarios/asserts/counters and deliberateV1/P2002oracles. No weakening tests toaccommodatebrokenproduction.",
+    "NativeGreenauthorization-first proof: wrapperpublicpreliminarycontext delegates+armsfinalphase; wraprealcontrolleractorcheck delegateunchanged, onlyafterarmed+true capturetx.pg_backend_pid andholdwhilefinalTXpinslive. StartactualfullIGreauth orWAordinary/initialdisconnect, observeactualpg_blocking_pids waitedon capturedsenderrows, releasewithoutawaitblockedmutation. Exactlyonecapturedaccount/peerPOST; controlACK withexistingInstagram.afterRequestHook/Evolution.sendHook, awaitlifecyclecommit beforeACKreleaseifneeded, assert exactknownACK/localincomplete outcome/receipt state, noarbitrarystatusset/noDB+HTTPatomicclaim.",
+    "Nativepostactor-sessionexpiry+matchedlive controls forbothordinaryandinitial: realactorqueryreturnedtrue whileTXheld; naturally signedsyntheticsession and Date-onlyadvance ascurrentold6 permitted forboundaryclock, originaldispatchdeadlinekeptlive. Release/actualCOMMIT, requirezeroPOSTexpired andexactonePOSTlive. PureSessionownerchecksremainreal; no fakegrant/Prisma/policyresult. Preserveall3mutationfirstand6priorcasebodies.",
+    "Helperchangesonlyifnecessaryfornewobservations, preservingold3fieldmessages/syntheticWeakMaptrace/existingproviderhooks. Do notalteroldaccepted-facts/routingtests. QueryspecIGnegativeaddsactualchannel/credentialzero-readcounters, unchangedWApositivebounds/12accountcohort.",
+    "CP2durationcompanion: in one case rechecks natural signed-session expiry after real attempt UPDATE wait, replace ONLY5elapsed Date.now calls for expiredCallbackStartedAt, expiredWaitMs calculation, liveCallbackStartedAt, remainingMatchedHold and finalMath.abs elapsed assertion withperformance.now. PreserveabsoluteissuedAt/sessionExpiresAt/waitloop/SessionServiceclock, polltimeout, allnumericlimits/PGwaiting/status/attempt/providerassertions. Rootwillreverse5replacementsinmemory toexact53hash; no OScauseclaim or promise thisalonefixesactualslowcase."
+  ],
+  "terminalReport": "Listonlyactualownedchanges withhash/bytes, decisions/fixtures/newtestcases andNOTRUN. If APIinsufficientstopreportbeforeextra paths; no unilateralbroaderpatch."
+}

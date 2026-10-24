@@ -1,0 +1,61 @@
+{
+  "candidate": "cp3-api55",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exit_code": 1,
+  "log": {
+    "path": "cp3-api55-api.log",
+    "bytes": 14127,
+    "sha256": "0fb980f5bdbc6f800b22f04aba4773d18cd26ab1eb1e1cd37f58a2b2b1ff0857",
+    "complete_stdout_stderr": true
+  },
+  "stages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "canonical_validation_project": "started and cleaned up by runner",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "failed: 2 no-useless-assignment errors",
+    "build": "not reached",
+    "unit": "not reached",
+    "e2e": "not reached"
+  },
+  "failure": {
+    "stage": "lint",
+    "errors": [
+      {
+        "file": "api-app/src/domain/inbox/outbound.service.ts",
+        "line": 720,
+        "rule": "no-useless-assignment",
+        "message": "The value assigned to 'eligibility' is not used in subsequent statements"
+      },
+      {
+        "file": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+        "line": 188,
+        "rule": "no-useless-assignment",
+        "message": "The value assigned to 'optionCount' is not used in subsequent statements"
+      }
+    ],
+    "full_failure_body": "> @leadshug/api@0.1.0 lint\n> eslint \"{src,test}/**/*.ts\"\n\n\n/workspace/api-app/src/domain/inbox/outbound.service.ts\n  720:9  error  The value assigned to 'eligibility' is not used in subsequent statements  no-useless-assignment\n\n/workspace/api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts\n  188:9  error  The value assigned to 'optionCount' is not used in subsequent statements  no-useless-assignment\n\n\u2716 2 problems (2 errors, 0 warnings)\n"
+  },
+  "unreached_assertions": {
+    "unit_and_e2e_all": "not reached because lint terminated canonical runner",
+    "source54_new7_auth_first_controls": "not reached",
+    "source53_original_three_A46_native_RED": "not reached in this API55 run",
+    "source53_B46_negative": "not reached in this API55 run",
+    "native_serialization_crypto_WA_ACK_expiry_live_and_other_E2E": "not reached",
+    "CP2_clocks_batch_lock_P2002_ACK_query_CSV": "not reached"
+  },
+  "freeze_postflight": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 734,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "scope": "one full canonical local synthetic API validation only; no acceptance or release claim"
+}

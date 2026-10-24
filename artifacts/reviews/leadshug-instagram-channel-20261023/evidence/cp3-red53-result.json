@@ -1,0 +1,125 @@
+{
+  "candidate": "cp3-red53",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exit_code": 1,
+  "log": {
+    "path": "cp3-red53-api.log",
+    "bytes": 56063,
+    "sha256": "5ed1a3efffbe8bd236892b9841a985557d808a0003c6a921401a60ab39fb2d98",
+    "complete_stdout_stderr": true
+  },
+  "stages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": {
+      "files_passed": 39,
+      "tests_passed": 426,
+      "tests_failed": 0
+    },
+    "e2e": {
+      "files_passed": 19,
+      "files_failed": 3,
+      "files_total": 22,
+      "tests_passed": 127,
+      "tests_failed": 5,
+      "tests_total": 132,
+      "duration": "191.28s"
+    }
+  },
+  "failures": [
+    {
+      "case": "CP2 equal-duration live control after signed-session expiry wait",
+      "classification": "timing-bound assertion failure; no product temporal violation inferred",
+      "assertion": "measured absolute timing delta 3403ms, expected <250ms",
+      "frame": "instagram-cp2.e2e-spec.ts:970:74",
+      "later_unreached": [
+        "live response status and attempt persistence assertions"
+      ]
+    },
+    {
+      "case": "A46 ordinary Instagram reply after completed real reauthorization rotates credential",
+      "classification": "causal zero-provider-post RED reached after real reauthorization; concrete old credential was used",
+      "first_oracle": "provider POST delta expected 0, actual 1",
+      "diagnostic": {
+        "status": 201,
+        "postDelta": 1,
+        "providerMessages": [
+          {
+            "accountId": "synthetic-cp3-auth-4a19d2d9-6f44-4945-a6d8-b4b5b183b730",
+            "recipientId": "synthetic-auth-boundary-peer",
+            "usedOldCredential": true
+          }
+        ]
+      },
+      "frame": "instagram-cp3-authorization-fences.e2e-spec.ts:170:143",
+      "later_unreached": [
+        "409 response/status and CHANNEL_CONTEXT_CHANGED body assertions"
+      ]
+    },
+    {
+      "case": "A46 ordinary WhatsApp reply after real disconnect at held final boundary",
+      "classification": "causal zero-provider-post RED reached at first provider count oracle",
+      "first_oracle": "Evolution POST delta expected 0, actual 1",
+      "diagnostic": {
+        "status": 409,
+        "code": "CHANNEL_CONTEXT_CHANGED",
+        "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+        "postDelta": 1
+      },
+      "frame": "instagram-cp3-authorization-fences.e2e-spec.ts:215:139",
+      "later_unreached": [
+        "response body contract assertions"
+      ]
+    },
+    {
+      "case": "A46 initial WhatsApp send after real disconnect at held final boundary",
+      "classification": "causal zero-provider-post RED reached at first provider count oracle",
+      "first_oracle": "Evolution POST delta expected 0, actual 1",
+      "diagnostic": {
+        "status": 503,
+        "code": "INITIAL_LOCAL_ACCEPTANCE_UNCONFIRMED",
+        "outcome": "ACCEPTED_LOCAL_INCOMPLETE",
+        "postDelta": 1
+      },
+      "frame": "instagram-cp3-authorization-fences.e2e-spec.ts:252:139",
+      "later_unreached": [
+        "409 response/status and CHANNEL_CONTEXT_CHANGED body assertions"
+      ]
+    },
+    {
+      "case": "B46 mixed-channel Instagram recipient initialOptions",
+      "classification": "expected causal RED reached",
+      "assertion": "expected zero options, received two",
+      "frame": "instagram-cp3-query-boundaries.e2e-spec.ts:183:21",
+      "later_unreached": [
+        "provider-count assertions"
+      ]
+    }
+  ],
+  "full_failure_bodies_and_stacks": "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 5 \u23af\u23af\u23af\u23af\u23af\u23af\u23af\n\n FAIL  test/instagram-cp2.e2e-spec.ts > Instagram CP2 public and authenticated boundaries > rechecks natural signed-session expiry after the real attempt UPDATE wait with an equal-duration live control\nAssertionError: expected 3403 to be less than 250\n \u276f test/instagram-cp2.e2e-spec.ts:970:74\n    968|     }\n    969|     const liveResponse = await liveCallback;\n    970|     expect(Math.abs(Date.now() - liveCallbackStartedAt - expiredWaitMs\u2026\n       |                                                                          ^\n    971|     expect(liveResponse.status).toBe(303);\n    972|     expect((await prisma.instagramAuthorizationAttempt.findUniqueOrThr\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[1/5]\u23af\n\n FAIL  test/instagram-cp3-authorization-fences.e2e-spec.ts > CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary Instagram reply after a completed real reauthorization rotates its credential\nAssertionError: {\"status\":201,\"postDelta\":1,\"providerMessages\":[{\"accountId\":\"synthetic-cp3-auth-4a19d2d9-6f44-4945-a6d8-b4b5b183b730\",\"recipientId\":\"synthetic-auth-boundary-peer\",\"usedOldCredential\":true}]}: expected 1 to be +0 // Object.is equality\n\n- Expected\n+ Received\n\n- 0\n+ 1\n\n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:170:143\n    168|       expect(postDelta, JSON.stringify({ status: response.status, code\u2026\n    169|         postDelta, providerMessages: instagramFake.messages.slice(befo\u2026\n    170|           recipientId: entry.recipientId, usedOldCredential: instagram\u2026\n       |                                                                                                                                               ^\n    171|       expect(response.status).toBe(409);\n    172|       expect(response.body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHA\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[2/5]\u23af\n\n FAIL  test/instagram-cp3-authorization-fences.e2e-spec.ts > CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary WhatsApp reply after real channel disconnection at the held final boundary\nAssertionError: {\"status\":409,\"code\":\"CHANNEL_CONTEXT_CHANGED\",\"outcome\":\"ACCEPTED_LOCAL_INCOMPLETE\",\"postDelta\":1}: expected 1 to be +0 // Object.is equality\n\n- Expected\n+ Received\n\n- 0\n+ 1\n\n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:215:139\n    213|       const response = await pending;\n    214|       const postDelta = evolutionFake.enviados.length - before;\n    215|       expect(postDelta, JSON.stringify({ status: response.status, code\u2026\n       |                                                                                                                                           ^\n    216|       expect(response.status).toBe(409);\n    217|       expect(response.body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHA\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[3/5]\u23af\n\n FAIL  test/instagram-cp3-authorization-fences.e2e-spec.ts > CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an initial WhatsApp send after real channel disconnection at the held final boundary\nAssertionError: {\"status\":503,\"code\":\"INITIAL_LOCAL_ACCEPTANCE_UNCONFIRMED\",\"outcome\":\"ACCEPTED_LOCAL_INCOMPLETE\",\"postDelta\":1}: expected 1 to be +0 // Object.is equality\n\n- Expected\n+ Received\n\n- 0\n+ 1\n\n \u276f test/instagram-cp3-authorization-fences.e2e-spec.ts:252:139\n    250|       const response = await pending;\n    251|       const postDelta = evolutionFake.enviados.length - before;\n    252|       expect(postDelta, JSON.stringify({ status: response.status, code\u2026\n       |                                                                                                                                           ^\n    253|       expect(response.status).toBe(409);\n    254|       expect(response.body).toMatchObject({ code: 'CHANNEL_CONTEXT_CHA\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[4/5]\u23af\n\n FAIL  test/instagram-cp3-query-boundaries.e2e-spec.ts > CP3 selected and bounded channel queries (real Nest/PostgreSQL) > offers no WhatsApp initial operation to an Instagram recipient in a mixed-channel BU\nAssertionError: expected [ { \u2026(7) }, { \u2026(7) } ] to have a length of +0 but got 2\n\n- Expected\n+ Received\n\n- 0\n+ 2\n\n \u276f test/instagram-cp3-query-boundaries.e2e-spec.ts:183:21\n    181|       instagram: instagramFake.messages.length };\n    182|     const options = await app.get(ChannelResolver).initialOptions(inst\u2026\n    183|     expect(options).toHaveLength(0);\n       |                     ^\n    184|     expect(metaFake.enviados).toHaveLength(sentBefore.meta);\n    185|     expect(evolutionFake.enviados).toHaveLength(sentBefore.evolution);\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[5/5]\u23af\n\n Test Files  3 failed | 19 passed (22)\n      Tests  5 failed | 127 passed (132)\n   Start at  22:57:30\n   Duration  191.28s (transform 7.93s, setup 116ms, collect 41.48s, tests 145.80s, environment 4ms, prepare 1.22s)",
+  "additional_reached": {
+    "A46_other_fences_and_controls": "6 of 9 authorization-fence cases passed; revoked grant, expired session and live controls completed",
+    "B46_query_controls": "4 of 5 query cases passed",
+    "native_dispatch_locks": "all same-account IG, independent-account, and formatted WhatsApp groups passed (709ms suite case; 1705ms file)",
+    "CP2_batch": "initial 1000 updates 5000.156ms; replay 1000 updates 3437.665ms; batch case passed in 8464ms",
+    "CP2_final_clock": "9/9 passed",
+    "CSV": "1/1 passed"
+  },
+  "freeze_postflight": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 722,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "scope": "one local canonical synthetic api-instagram run; no acceptance, release, checkpoint or real-provider claim"
+}

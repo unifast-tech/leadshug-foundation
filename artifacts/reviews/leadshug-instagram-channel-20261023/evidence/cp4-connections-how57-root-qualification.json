@@ -1,0 +1,13 @@
+{
+  "kind": "Root qualification of read-only CP4 HOW57 preparation",
+  "status": "Preparation, no source handoff or test result. Current API57 inputs unchanged.",
+  "accepted": [
+    "Safe minimal local DTO and stable BU-bound untrusted cursor. Opaque means clients must not interpret, not encrypted or confidential. Tests exercise continuation and malformed data without coupling to serialization.",
+    "Same existing InstagramAuthorizationService owns verify/disconnect/reauthorization. WA UUID selection captured and revalidated inside existing owner, not type-only reselection after controller check.",
+    "Absent credential CAS for retained same-account/BU tombstone; next version derived solely from truly mapped history. Preserve completed snapshots, historical receipt/ACK; current-generation receipt cleared on disconnect.",
+    "Late callback uses actual held provider HTTP, local disconnect, then release; safe303/zero promotion/zero subscription mutation. Do not hardcode an unapproved new error enum; use existing safe lifecycle category.",
+    "Missing endpoint baseline must expect contract200 and fail on actual404. New test file only after fullAPI/currentaffected review."
+  ],
+  "correctionToDraftAndAdvisor": "The approved T explicitly assigns503 to externally inconclusive outcomes. Therefore verify UNKNOWN is503 with safe {code: SUBSCRIPTION_OBSERVATION_UNCONFIRMED, observation: UNKNOWN, connection: safe current item}; transport/unusable response also503 with its safe category. 200 is reserved for conclusive current own-binding observation or an existing durable current-generation accepted receipt. No success inference from profile/UNKNOWN and no guessed subscription absence. This tightens HOW to existing WHAT, not new approval or waiver. Exact safe code is routine proposed concretization for later handoff.",
+  "scope": "No new WHAT, route, schema, operation enum, protocol assumption, protected path, runtime or Meta authorization. Complete CP4 realtime/safe display/composer/native HTTPS browser still required; this catalog preparation cannot replace them."
+}

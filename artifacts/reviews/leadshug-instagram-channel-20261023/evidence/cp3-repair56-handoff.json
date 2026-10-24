@@ -1,0 +1,28 @@
+{
+  "kind": "cp3-repair56-bounded-handoff",
+  "writePaths": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50857,
+      "sha256": "c9158692ca739b759cd6a59691036434610cb1d60ff44d18dd540ab5608b6d21"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 45903,
+      "sha256": "eae104611d3c4f76a6ad80f06c1630968d435960d7a4825fdbfce9aed155decd"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 16234,
+      "sha256": "828447d7240a325291e4bc8b64f09bae67d7646fe70e38819b674e247011d64a"
+    }
+  ],
+  "readManifest": "cp3-api55-frozen-manifest.json",
+  "rootProof": "cp3-api55-root-reconciliation.json",
+  "authority": "Existing approvedSTIG03v1.3, source54targets only. RoutineHOW and exactlint correction; no newWHAT.",
+  "tasks": [
+    "Remove only unused initial null value for finalProviderFence eligibility; retain declared type/assignment in awaitedTX/catchfailclosed. Remove only unused initial0 optionCount in queryspec; retain original assertions/counters/realquery.",
+    "In ONLY new IG authorization-first serialization test, prepare full real REAUTHORIZE candidate/validate callback and CANDIDATE_READY BEFORE starting/holding sender. Active original credential must remain unchanged until actual confirm. Then hold final actorTX, invoke actual unscoped confirm and observe real native blocker. Release sameACKhook afterconfirmcommit; preserve exactly1capturedoldaccount/peer/tokenPOST and201/200. Add exact provider account/peer assertion to strengthenexistingrequirement. Do not weaken/remove original9bodies or other6newcases.",
+    "No tests/build/runner/Git/docs/runtime/private/Meta/goals. No changes to any258otherpaths. RootownsT/evidence; returnterminalall3hashbytes/NOTRUN."
+  ]
+}

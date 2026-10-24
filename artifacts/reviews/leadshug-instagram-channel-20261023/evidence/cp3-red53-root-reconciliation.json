@@ -1,0 +1,48 @@
+{
+  "kind": "cp3-red53-root-reconciliation",
+  "date": "2026-10-24",
+  "sourceRowsExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 722,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red53-api.log",
+    "bytes": 56063,
+    "sha256": "5ed1a3efffbe8bd236892b9841a985557d808a0003c6a921401a60ab39fb2d98"
+  },
+  "exitCode": 1,
+  "passed": {
+    "units": 426,
+    "e2e": 127,
+    "migrations": 31
+  },
+  "e2eFailures": 5,
+  "causalProof": [
+    {
+      "id": "A46IGreauthorize",
+      "evidence": "FullBFFREAUTHandcrypto/version/decrypt/owner/receipt/grant/deadline completedbeforegaprelease. FirstzeroPOSTexpected0got1;201 andcapturedsyntheticusedOldCredential=true. Later409/bodyassertsNOTREACHED."
+    },
+    {
+      "id": "A46WAordinaryDisconnect",
+      "evidence": "Actualfirstsendcompleted201; actualdisconnectcommitted/channelremoved/providerdetached/livegrant/deadlinebeforegaprelease. FirstzeroPOSTexpected0got1;409CHANNEL_CONTEXT_CHANGED/ACCEPTED_LOCAL_INCOMPLETE, so409aloneisnotblockedproof. LaterBLOCKEDbodyassertNOTREACHED."
+    },
+    {
+      "id": "A46WAinitialDisconnect",
+      "evidence": "Actualdisconnect/livenesssetupcompleted; firstzeroPOSTexpected0got1;503INITIAL_LOCAL_ACCEPTANCE_UNCONFIRMED/ACCEPTED_LOCAL_INCOMPLETE. Later409/bodyassertsNOTREACHED."
+    },
+    {
+      "id": "B46IGinitialOptions",
+      "evidence": "Expected0 choicesgot2again; subsequentprovidersendassertsNOTREACHED."
+    }
+  ],
+  "fixtureCompatibility": "Allfiveoldrecordshape failures from51 nowabsent; no oldassert weakened.",
+  "timingFailure": "CP2 natural-session matched-control delta3403ms vs strict<250; laterlive-status/persistenceoraclesNOTREACHED. No OScause/flakiness/producttemporalviolation inferred. Rootfoundremainingwallclockelapsedmeasurement inthatcase; prospective5elapsed-only Date.now->performance.now replacements, keepallabsoluteexpiry clocks/250/4500/otherasserts. MustreprovecompleteAPI.",
+  "batch": {
+    "initial1000Ms": 5000.156,
+    "replay1000Ms": 3437.665,
+    "allFollowingAssertsReached": true
+  },
+  "otherReached": "Native3lockgroups/finalclock9/CSV1 passed. All6originalauthcontrols passed.",
+  "status": "Terminal/rootindependentlyreconciled;53freezeended. A46threepathsnowcausalRED; explicitproduction54handoff follows. No CP3/fullAPI/ALL/featureacceptance."
+}

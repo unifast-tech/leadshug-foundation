@@ -1,0 +1,68 @@
+{
+  "candidate": "cp3-api57",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exit_code": 1,
+  "log": {
+    "path": "cp3-api57-api.log",
+    "bytes": 17212,
+    "sha256": "b79698fc3e8b071e54a04c2bc59a307dab2a099057b1af019d61585fcd14c953",
+    "complete_stdout_stderr": true
+  },
+  "stages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "canonical_validation_project": "started and cleaned up by runner",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "passed",
+    "build": "failed: TypeScript reported 3 errors",
+    "unit": "not reached",
+    "e2e": "not reached"
+  },
+  "failure": {
+    "stage": "build",
+    "error_count": 3,
+    "diagnostics": [
+      {
+        "file": "api-app/src/domain/inbox/initial-message.service.ts",
+        "line": 195,
+        "code": "TS2353",
+        "message": "'actorDispatchFence' does not exist in accepted parameter type"
+      },
+      {
+        "file": "api-app/src/domain/inbox/initial-message.service.ts",
+        "line": 237,
+        "code": "TS2345",
+        "message": "Argument lacks required actorDispatchFence property"
+      },
+      {
+        "file": "api-app/src/domain/inbox/outbound.service.ts",
+        "line": 236,
+        "code": "TS2339",
+        "message": "Property 'actorDispatchFence' does not exist on input type"
+      }
+    ],
+    "full_failure_body": "> @leadshug/api@0.1.0 build\n> nest build\n\nFound 3 error(s).\n\n\u001b[96msrc/domain/inbox/initial-message.service.ts\u001b[0m:\u001b[93m195\u001b[0m:\u001b[93m7\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2353: \u001b[0mObject literal may only specify known properties, and 'actorDispatchFence' does not exist in type '{ readonly conversationId: string; readonly buId: string; readonly channelId: string; readonly kind: \"text\" | \"approved-template\"; readonly intent: Pick<{ id: string; buId: string; createdAt: Date; ... 14 more ...; riskAcknowledgedByActorId: string | null; }, \"id\" | ... 1 more ... | \"leaseExpiresAt\">; ... 7 more ......'.\n\n\u001b[7m195\u001b[0m       actorDispatchFence: input.actorDispatchFence,\n\u001b[7m   \u001b[0m \u001b[91m      ~~~~~~~~~~~~~~~~~~\u001b[0m\n\u001b[96msrc/domain/inbox/initial-message.service.ts\u001b[0m:\u001b[93m237\u001b[0m:\u001b[93m60\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2345: \u001b[0mArgument of type '{ intent: { id: string; buId: string; createdAt: Date; updatedAt: Date; request: Prisma.JsonValue; conversationId: string; state: $Enums.InitialMessageIntentState; ... 10 more ...; riskAcknowledgedByActorId: string | null; }; actorId: string; actorName: string; validateActorInTransaction: (tx: Prisma.TransactionClie...' is not assignable to parameter of type '{ readonly intent: { id: string; buId: string; createdAt: Date; updatedAt: Date; request: JsonValue; conversationId: string; state: InitialMessageIntentState; ... 10 more ...; riskAcknowledgedByActorId: string | null; }; readonly actorId: string; readonly actorName: string; readonly validateActorInTransaction: Initi...'.\n  Property 'actorDispatchFence' is missing in type '{ intent: { id: string; buId: string; createdAt: Date; updatedAt: Date; request: Prisma.JsonValue; conversationId: string; state: $Enums.InitialMessageIntentState; ... 10 more ...; riskAcknowledgedByActorId: string | null; }; actorId: string; actorName: string; validateActorInTransaction: (tx: Prisma.TransactionClie...' but required in type '{ readonly intent: { id: string; buId: string; createdAt: Date; updatedAt: Date; request: JsonValue; conversationId: string; state: InitialMessageIntentState; ... 10 more ...; riskAcknowledgedByActorId: string | null; }; readonly actorId: string; readonly actorName: string; readonly validateActorInTransaction: Initi...'.\n\n\u001b[7m237\u001b[0m       const message = await this.outbound.reconcileInitial({ intent, actorId: input.actorId, actorName: input.actorName, validateActorInTransaction: input.validateActorInTransaction });\n\u001b[7m   \u001b[0m \u001b[91m                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\u001b[0m\n\n  \u001b[96msrc/domain/inbox/outbound.service.ts\u001b[0m:\u001b[93m77\u001b[0m:\u001b[93m14\u001b[0m\n    \u001b[7m77\u001b[0m     readonly actorDispatchFence: ActorDispatchFence;\n    \u001b[7m  \u001b[0m \u001b[96m             ~~~~~~~~~~~~~~~~~~\u001b[0m\n    'actorDispatchFence' is declared here.\n\u001b[96msrc/domain/inbox/outbound.service.ts\u001b[0m:\u001b[93m236\u001b[0m:\u001b[93m15\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS2339: \u001b[0mProperty 'actorDispatchFence' does not exist on type '{ readonly conversationId: string; readonly buId: string; readonly channelId: string; readonly kind: \"text\" | \"approved-template\"; readonly intent: Pick<{ id: string; buId: string; createdAt: Date; ... 14 more ...; riskAcknowledgedByActorId: string | null; }, \"id\" | ... 1 more ... | \"leaseExpiresAt\">; ... 7 more ......'.\n\n\u001b[7m236\u001b[0m         input.actorDispatchFence);\n\u001b[7m   \u001b[0m \u001b[91m              ~~~~~~~~~~~~~~~~~~\u001b[0m\n"
+  },
+  "unreached_assertions": {
+    "unit_and_e2e": "not reached after build failure",
+    "new_authorization16_cases": "not reached",
+    "native_IG_confirm_serialization": "not reached",
+    "A46_original_three_causal_cases": "not reached on API57",
+    "CP2_strict_session_clock_and_batch": "not reached",
+    "native_locks_P2002_ACK_query_CSV_final_clock": "not reached"
+  },
+  "freeze_postflight": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 748,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "scope": "one full canonical local synthetic API validation only; no acceptance or release claim"
+}

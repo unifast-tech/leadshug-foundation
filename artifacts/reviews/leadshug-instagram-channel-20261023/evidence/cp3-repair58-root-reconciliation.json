@@ -1,0 +1,9 @@
+{
+  "kind": "cp3-repair58-root-reconciliation",
+  "path": "api-app/src/domain/inbox/outbound.service.ts",
+  "bytes": 50850,
+  "sha256": "14cc63c095022ce7890a43a1ea6613d4be7dd582c6cfb28e86b45aab29e0795a",
+  "exactTypeMemberMoveReverseMatches57": "97b1257cd629a1a495e6f9e6d1eaa66656c5d891e059f744f792be803deb257b",
+  "other260SourcesExact": true,
+  "status": "NOTRUN; sourcewriterterminal. FullcanonicalAPI59 next. No behavior gatesaccepted."
+}

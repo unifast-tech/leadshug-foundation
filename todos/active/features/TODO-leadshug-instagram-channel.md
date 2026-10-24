@@ -31,11 +31,11 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** executar uma prova canônica api-instagram53 das fixtures52 corrigidas; exigir rotação cifrada e desconexão ordinária efetivamente alcançadas antes de reparar produção. CP4 completo segue obrigatório.
+- **Next exact step:** implementar reparo54 do fence final coerente e elegibilidade B46, com controles nativos de serialização/sessão e ajuste apenas de medição; depois API completa55 e adherence afetada. CP4 completo permanece obrigatório.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** API45 completaGREEN histórica; adherence46 apontou3gaps, API49 reproduziu elegibilidadeIG incorreta(426unit/128E2Epassaram,1RED). Opinião47 integrou fence transacional curto e checagem síncrona pósCOMMIT; ainda não implementado.
+- **Why this state now:** Source54 e correções restritas56 estão prontas; API55 parou no lint antes de build/testes. Root conferiu os deltas e preservou os nove casos anteriores. Próxima prova é uma execução completa API57, seguida de revisão de fonte afetada; API45 permanece evidência histórica.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
@@ -1660,3 +1660,41 @@ Alllanes terminal and51freeze ended. Only two existing test paths thaw under cp3
 Root verified only the same two test files changed, all259other sources and all productionAPI45bytes unchanged. Six original authorization case bodies remain byte-exact. Fake message records again have their original three fields; a resettable WeakMap holds synthetic bearer observations separately. REAUTHORIZE checks its clean callback/ready candidate and supplies the generation required by the actual confirmation owner. The ordinary WA case completes a real first send (201/SUCCEEDED/CONFIRMED/RECORDED) before reply options and its counter baseline. InitialWA causal and all original timing/count oracles remain. These corrections are NOTRUN.
 
 All writers are terminal. Freeze current261sources/T/positiveinputs for exactly one separate api-instagram53 invocation, no edits/retries/autofix while active. Actual crypto rotation and ordinary WA disconnect must reach their first provider-count assertion to supplement the already reached initialWA51RED; old fixture compatibility must be rechecked. Root reconciles terminal receipt before any production54thaw. Full CP4, primary/human and later gates remain required.
+
+## CP3 RED53 reconciled and source54 thaw — 2026-10-24
+
+Root matched261sources/T/722inputs/35preservations/3gitlinks/log56063bytes SHA5ed1a3efffbe8bd236892b9841a985557d808a0003c6a921401a60ab39fb2d98. All three A46 zeroPOST oracles were reached after committed real lifecycle/crypto/liveness checks and saw1POST. Instagram full encrypted reauthorization preserved ownership/receipt, changed credential/version, decrypted the replacement, yet the captured old credential was used (201). Ordinary WA disconnect produced409 but outcomeACCEPTED_LOCAL_INCOMPLETE; status alone is not blocked proof. Initial WA produced503 after onePOST. B46 again returned2where0expected. Later assertions after these first count failures are unproved. Five fixture-shape failures from51 are resolved without altering their old assertions.
+
+426unit and127/132selectedE2E passed. Separate CP2 matched-duration delta3403ms violated strict250ms, leaving its later live-status/persistence assertions unreached. No OS/flakiness/product-temporal cause is inferred. The same case still measures elapsed durations with Date.now; five duration-only replacements by performance.now are admitted as a measurement correction, preserving all absolute expiry clocks, natural session behavior, PG wait,250/4500 bounds and other assertions. Full API must reprove it. Lote1000 phases5000.156ms/3437.665ms and all following assertions passed; native3lockgroups/finalclock9/CSV1 passed.
+
+All lanes terminal;53freeze ended. cp3-source54-handoff.json authorizes one sole writer across14existing admitted source/test paths. Implement HOW47 short coherent final authorization transaction, canonical NOWAIT protection and complete paired actor fence with synchronous session/time checks after COMMIT; preserve HTTP outsideTX and historical ACK/V1 recovery. Qualify WA recipient before offering initial operations. Add actual PG authorization-first serialization/controlled ACK and postactor-session/live controls; preserve all3mutation-first/sixold cases and thresholds. No runner during writer, no protected-path/primary/privacy/UTF8/runtime expansion. Root reconciles exactterminal changes, then complete canonical API55 and fresh affected adherence. Full CP4 and every remaining gate remain mandatory; no checkpoint/feature acceptance follows from RED.
+
+## CP3 source54 reconciled — complete API55 freeze
+
+Root independently reconciled261sources:12changes within14admitted paths,249unchanged,35preservations/3rootgitlinks exact. `evidence/cp3-source54-root-reconciliation.json` records source hashes, exact in-memory reversal of original nine native case bodies to53hash and only five elapsed CP2clock replacements to53hash. No original oracle/threshold changed. Root caught a nonexistent confirm URL in one new control and the sole writer corrected it before execution.
+
+Sequence qualification: causal3A46+B46 RED53 preceded product edits, but the seven new authorization-first/clock GREEN controls were authored after production contrary to requested order; no test-first or executedRED claim for those seven. All current changes remain NOTRUN. Complete final authorization uses a short coherent ReadCommitted transaction with canonical pins, paired real grant/session fence and pure time/session checks after COMMIT, retaining HTTP outsideTX and historical ACK/V1 recovery. IG initialOptions proves a WA recipient before channel/credential queries.
+
+All writers terminal. Freeze current261sources/thisTODO/positive boundinputs for exactly ONE complete canonical `bash scripts/test-channels-local.sh api` invocation55. Separate validator may write only its four unique55outputs; no source/T/input writes/retries/autofix/private/runtime/Meta/Git expansion during validation. Root reconciles actual reachability and terminal bytes before thaw; fresh affected adherence56 carries prior complete coverage. Full CP4, primaryGET/SUBREC03, pending human proposals and CP5/6/ALL/assurance/realruntime remain mandatory. No checkpoint or feature acceptance.
+
+## CP3 API55 lint stop — bounded repair56
+
+Root independently verified261sources/T/734positiveinputs/35preservations/3gitlinks and log14127bytes SHA0fb980f5bdbc6f800b22f04aba4773d18cd26ab1eb1e1cd37f58a2b2b1ff0857. Single command exited1 atlint: unused initial values of eligibility and optionCount. Parity26/generate/31migrations/schema passed; build/unit/E2E and every behavior oracle are unreached. No GREEN/RED/acceptance inference.
+
+All lanes terminal;55freeze ended. `evidence/cp3-repair56-handoff.json` permits only3existing admittedpaths for the two initializers and newIGserialization fixture setup order. Root source inspection found REAUTHORIZE reservation locks same owner before confirm; candidate must be prepared before held sender so actual confirm is the contender. This is unexecuted fixture diagnosis, no product failure. Original nine bodies/allthresholds/othernewcontrols remain immutable. No runner while writer. Root then freezes one complete API57; fresh affected adherence follows. CP4whole/primary/human/latergates remain required.
+
+## CP3 repair56 terminal — complete API57 freeze
+
+Root reconciled only3admitted changes/258unchanged sources. Reversing two initializer edits restores exact55hashes; previous optionCount was -1 rather than0 as described, no assertion change. Removing only new imports/helpers/seven appended cases restores original nine native bodies exact53hash. New IGserialization prepares candidate before sender, proves original active token unchanged, then actual confirm waits on final actor TX and exact captured account/peer/token201/200 is asserted. No product lock/policy/deadline or assertion weakening. All current changes remain NOTRUN.
+
+All writers terminal; freeze261sources/thisTODO/positiveinputs for exactly one complete canonical API57. Separate validator four57outputs only; no source/T/input edits, retries, autofix, private/runtime/Meta/Git expansion. Root reconciles terminal bytes/reachability then fresh affected source adherence and allCP4. Primary/human/CP5/6/ALL/assurance/physical obligations remain unwaived.
+
+## CP3 API57 compile stop — exact type wiring58
+
+Root independently matched261sources/T/748positiveinputs/35preservations/3gitlinks and log17212bytes SHAb79698fc3e8b071e54a04c2bc59a307dab2a099057b1af019d61585fcd14c953. Parity26/generate/31migrations/schema/lint passed; compilation stopped on3errors. No unit/E2E/newnative/clock/batch oracle executed.
+
+Terminal57freeze ended. Source54 had required actorDispatchFence on local-only reconcileInitial signature instead of sendInitial. `evidence/cp3-repair58-handoff.json` permits only moving that one required type member in outbound.service.ts; actualsend retains paired validation and historical ACK recovery adds no present dispatch requirement. Root exact reverse proof precedes one complete API59 and later fresh affected adherence. No other source edits or criteria changes; fullCP4/primary/human/latergates remain required.
+
+## CP3 repair58 terminal — complete API59 preparation
+
+Root independently reversed the exact single type-member move to57hash and verified260other sources unchanged. Paired session/grant fence is now required on actual sendInitial; historical local-only reconcileInitial preserves its prior signature. This is an unexecuted type-wiring correction, not a behavior proof. All writers terminal. Next freeze261sources/thisTODO/positiveinputs for exactly one complete API59; root reconciles terminal bytes/reachability and then fresh affected adherence. No source/T/input edits or retries during validation. Complete CP4 and all primary/human/later gates remain mandatory.

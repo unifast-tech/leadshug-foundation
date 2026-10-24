@@ -1,0 +1,17 @@
+{
+  "kind": "cp3-api57-root-reconciliation",
+  "sourceRowsExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 748,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "bytes": 17212,
+    "sha256": "b79698fc3e8b071e54a04c2bc59a307dab2a099057b1af019d61585fcd14c953"
+  },
+  "exitCode": 1,
+  "reached": "Parity26/generate/31migrations/schema/lint pass.",
+  "unreached": "Build stopped on3 actorDispatchFence type errors. All unit/E2E/native/clock/batch assertions unreached. No behaviorproof.",
+  "diagnosis": "Source54 placed required paired actorDispatchFence on local-only reconcileInitial input instead of actual sendInitial input; callsite passes it for actual send and no new present credential/session requirement belongs on historical local-only reconciliation.",
+  "next": "Terminal freeze57 ends. Bounded repair58 moves exactly one type member in existing outbound.service.ts only; preserve initial service/calls/fixtures/runtime behavior. Root reverse proof then one full API59. Fresh affected adherence later; no checkpoint acceptance."
+}

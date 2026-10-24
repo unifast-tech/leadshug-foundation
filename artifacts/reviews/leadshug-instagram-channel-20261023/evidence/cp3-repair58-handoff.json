@@ -1,0 +1,13 @@
+{
+  "kind": "cp3-repair58-single-path-type-wiring",
+  "writePaths": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50850,
+      "sha256": "97b1257cd629a1a495e6f9e6d1eaa66656c5d891e059f744f792be803deb257b"
+    }
+  ],
+  "readManifest": "cp3-api57-frozen-manifest.json",
+  "rootProof": "cp3-api57-root-reconciliation.json",
+  "task": "Move exactly readonly actorDispatchFence: ActorDispatchFence from reconcileInitial input to sendInitial input immediately after validateActorInTransaction. Required for actualsend, absent from historical local-only receipt reconciliation. No behavior or any other text edits, tests/build/runner/docs/Git/private/runtime/Meta/goals. Root reverses exact member move to57hash before fullAPI59. Returnterminalhashbytes/NOTRUN."
+}

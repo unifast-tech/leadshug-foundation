@@ -1,0 +1,22 @@
+{
+  "candidate": "cp3-red53",
+  "postflight": "pass",
+  "counts": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 722,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "log": {
+    "path": "cp3-red53-api.log",
+    "bytes": 56063,
+    "sha256": "5ed1a3efffbe8bd236892b9841a985557d808a0003c6a921401a60ab39fb2d98",
+    "complete_stdout_stderr": true
+  },
+  "errors": []
+}
