@@ -1,0 +1,28 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/oauth-callback-session-companion-critique-dispatch.json",
+  "review_kind": "critique",
+  "reviewer_label": "formal-reviewer-gpt-6.1-sol-xhigh",
+  "overall_assessment": "Revise the exact unapplied proposal before path validation. The callback-specific normative row requires a 303 without sensitive parameters, so converting callback denials to a fixed safe error redirect coherently specializes the general BFF 401/403/409 response contract; the denial still prevents admission. Other routes retain their original exceptions, statuses, CSRF checks and order. For the stated effective GET route, req.path excludes the query, and the anchored case-insensitive matcher with one optional trailing slash is appropriately narrow under the packaged Express routing assumptions. Each added denial returns before next(), usuario assignment, controller work or provider work; all successful callback requests still traverse the original session, current-user, password and onboarding gates. Location uses only the fixed relative /numeros destination and literal allowlisted classifications, with no browser-controlled URL or callback data. A middleware companion is justified because the admitted controller cannot protect a denial that occurs before it. Performance and elegance are acceptable: no additional I/O or authentication framework is introduced. Structural soundness and operational fit remain mixed because unexpected precontroller exceptions still leave the sensitive callback URL in place. This is proposal critique only, with no source, delivery or runtime acceptance; the required actual Nest/PostgreSQL, consumer, browser and gateway proofs remain pending.",
+  "recommended_path": "Resolve IG-OAUTH-SESSCOMP-01 in a revised exact one-path proposal and rerun bounded critique before requesting human validation of session.middleware.ts. Preserve all admission checks and their order, the callback-only scope, fixed relative Location, literal code allowlist, and original noncallback exception behavior. Specify a distinguishable generic safe callback failure classification for unexpected precontroller errors and its existing/admitted Numeros consumer handling. After convergence, retain explicit path validation and serialized source-hash/CRLF handoff before any source write. Subsequent proof must cover genuine middleware-to-controller route matching including case/trailing-slash equivalents, every listed session/password/onboarding denial, unexpected session and database failures, no denied-path attempt/provider changes, valid-session state/CAS enforcement, and unchanged ordinary BFF statuses/CSRF. Controller failure handling and later browser/gateway confidentiality remain separate mandatory obligations; this review closes none of their gates.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-OAUTH-SESSCOMP-01",
+      "severity": "medium",
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Unexpected precontroller callback failures still retain the sensitive query URL",
+      "rationale": "The exact diff adds clean redirects only inside known authentication, password and onboarding denial branches. An unexpected exception from session extraction/verification, appUser.findUnique, or mantenedoraSettings.findUnique escapes to the existing error handler. The early no-store/no-referrer headers protect caching and referrer propagation, but the resulting ordinary error response still leaves the browser on /api/bff/instagram-authorizations/callback with its original code/state/provider-error query. proposal.failureLimit explicitly retains this behavior. The approved callback row and the carried IG-CP2-R1-04 obligation require an unsuccessful callback to remove those sensitive parameters through a safe return path; infrastructure failure is a concrete remaining path through the same gap. The package provides no basis to assert that the inherited error handler cleans the browser URL or satisfies the required all-failure output confidentiality.",
+      "suggested_action": "Revise only the proposed callback-owned precontroller boundary so unexpected failures also terminate with a 303 to the fixed relative /numeros destination using a literal allowlisted generic infrastructure-failure classification, with no code/state/provider input, raw exception, cookie or URL in Location or body. Preserve a truthful distinguishable operational failure and safe diagnosis through the established error-reporting mechanism; never report authentication denial or success merely because infrastructure failed. Keep all guards and ordering, stop before next()/controller/provider work, and retain the original exception path unchanged for noncallback requests. Specify subsequent actual Nest/PostgreSQL proof for failures at both database lookup boundaries and unexpected session-service failure, asserting the clean Location, confidentiality headers, safe body and absence of downstream mutations. Retain existing mandatory controller, consumer, browser and gateway work. Re-review the revised exact proposal before path admission; do not claim IG-CP2-R1-04 closure from the current diff.",
+      "affected_paths": [
+        "api-app/src/surfaces/bff/session.middleware.ts"
+      ]
+    }
+  ]
+}

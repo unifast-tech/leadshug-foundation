@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/oauth-callback-session-companion-critique-dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "formal-reviewer-gpt-6.1-sol-xhigh"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Resolve IG-OAUTH-SESSCOMP-01 in a revised exact one-path proposal and rerun bounded critique before requesting human validation of session.middleware.ts. Preserve all admission checks and their order, the callback-only scope, fixed relative Location, literal code allowlist, and original noncallback exception behavior. Specify a distinguishable generic safe callback failure classification for unexpected precontroller errors and its existing/admitted Numeros consumer handling. After convergence, retain explicit path validation and serialized source-hash/CRLF handoff before any source write. Subsequent proof must cover genuine middleware-to-controller route matching including case/trailing-slash equivalents, every listed session/password/onboarding denial, unexpected session and database failures, no denied-path attempt/provider changes, valid-session state/CAS enforcement, and unchanged ordinary BFF statuses/CSRF. Controller failure handling and later browser/gateway confidentiality remain separate mandatory obligations; this review closes none of their gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-6EA27FA0",
+      "severity": "medium",
+      "title": "Unexpected precontroller callback failures still retain the sensitive query URL",
+      "rationale": "The exact diff adds clean redirects only inside known authentication, password and onboarding denial branches. An unexpected exception from session extraction/verification, appUser.findUnique, or mantenedoraSettings.findUnique escapes to the existing error handler. The early no-store/no-referrer headers protect caching and referrer propagation, but the resulting ordinary error response still leaves the browser on /api/bff/instagram-authorizations/callback with its original code/state/provider-error query. proposal.failureLimit explicitly retains this behavior. The approved callback row and the carried IG-CP2-R1-04 obligation require an unsuccessful callback to remove those sensitive parameters through a safe return path; infrastructure failure is a concrete remaining path through the same gap. The package provides no basis to assert that the inherited error handler cleans the browser URL or satisfies the required all-failure output confidentiality.",
+      "suggested_action": "Revise only the proposed callback-owned precontroller boundary so unexpected failures also terminate with a 303 to the fixed relative /numeros destination using a literal allowlisted generic infrastructure-failure classification, with no code/state/provider input, raw exception, cookie or URL in Location or body. Preserve a truthful distinguishable operational failure and safe diagnosis through the established error-reporting mechanism; never report authentication denial or success merely because infrastructure failed. Keep all guards and ordering, stop before next()/controller/provider work, and retain the original exception path unchanged for noncallback requests. Specify subsequent actual Nest/PostgreSQL proof for failures at both database lookup boundaries and unexpected session-service failure, asserting the clean Location, confidentiality headers, safe body and absence of downstream mutations. Retain existing mandatory controller, consumer, browser and gateway work. Re-review the revised exact proposal before path admission; do not claim IG-CP2-R1-04 closure from the current diff.",
+      "reviewer_labels": [
+        "formal-reviewer-gpt-6.1-sol-xhigh"
+      ],
+      "source_finding_ids": [
+        "IG-OAUTH-SESSCOMP-01"
+      ],
+      "category": "security",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

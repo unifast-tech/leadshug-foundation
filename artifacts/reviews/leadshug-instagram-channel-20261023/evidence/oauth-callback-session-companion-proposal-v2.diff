@@ -1,0 +1,36 @@
+--- a/api-app/src/surfaces/bff/session.middleware.ts
++++ b/api-app/src/surfaces/bff/session.middleware.ts
+@@ -1,4 +1,4 @@
+-import { ConflictException, ForbiddenException, Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
++import { ConflictException, ForbiddenException, HttpException, Injectable, NestMiddleware, UnauthorizedException } from '@nestjs/common';
+ import type { NextFunction, Request, Response } from 'express';
+ import { PrismaService } from '../../infra/prisma/prisma.service';
+ import { SessionService } from '../../infra/session/session.service';
+@@ -65,7 +65,26 @@
+     private readonly prisma: PrismaService,
+   ) {}
+ 
+-  async use(req: Request, _res: Response, next: NextFunction): Promise<void> {
++  async use(req: Request, res: Response, next: NextFunction): Promise<void> {
++    const callbackInstagram = req.method.toUpperCase() === 'GET' &&
++      /^\/api\/bff\/instagram-authorizations\/callback\/?$/i.test(req.path);
++    if (!callbackInstagram) return this.autenticar(req, next);
++    res.setHeader('Cache-Control', 'no-store');
++    res.setHeader('Referrer-Policy', 'no-referrer');
++    try {
++      await this.autenticar(req, next);
++    } catch (error) {
++      if (res.headersSent) throw error;
++      const resposta = error instanceof HttpException ? error.getResponse() : null;
++      const codigos = ['NAO_AUTENTICADO', 'TROCA_DE_SENHA_OBRIGATORIA', 'ONBOARDING_PENDENTE'];
++      const code = resposta !== null && typeof resposta === 'object' && 'code' in resposta &&
++        typeof resposta.code === 'string' && codigos.includes(resposta.code)
++        ? resposta.code : 'INSTAGRAM_AUTHORIZATION_UNAVAILABLE';
++      res.redirect(303, `/numeros?instagramAuthorizationError=${code}`);
++    }
++  }
++
++  private async autenticar(req: Request, next: NextFunction): Promise<void> {
+     const caminho = req.path;
+     const mudaEstado = !['GET', 'HEAD', 'OPTIONS'].includes(req.method);
+ 

@@ -1,0 +1,27 @@
+{
+  "kind": "exact-unapplied-session-callback-companion",
+  "date": "2026-10-24",
+  "status": "revised exact proposal only; not pathadmitted or applied",
+  "requestedPath": "api-app/src/surfaces/bff/session.middleware.ts",
+  "sourceSha256": "80d8be0072b817ec34b3eb7d29218835bd218a40670c1f917d0b1787b0b57211",
+  "sourceNewline": "CRLF",
+  "candidateSha256PreservingNewlines": "3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5",
+  "patch": "oauth-callback-session-companion-proposal-v2.diff",
+  "patchSha256": "cf878cd18ca1e46c2988be2e7b486bfff66e5b52b17e07ad607e2e26d2796132",
+  "problem": "IG-CP2-R1-04: failed callbacksession checks precede controller so controller-only headers/redirect cannot protect them. Request is session-protected, never made public.",
+  "exactScope": "Existing enforcement body/order moved verbatim into private autenticar; noncallback immediately delegates outside callbackcatch, retaining original exceptions. Exact effectiveGETcallback setsheaders before enforcement; all thrown precontroller failures safelyredirect303, with literalknowncodes or distinguishable INSTAGRAM_AUTHORIZATION_UNAVAILABLE. No next/controller/provider on failure; successfulenforcement stillnexts normally. If response already sent, preserve genuineexception rather than issue secondresponse.",
+  "preserved": "Every other route keeps exactoriginal session/tenant/grant/password/onboarding/CSRF/order/status behavior; GETcallback successful authorization still existingmiddlewareguards before next. No publicexemption/newcredential/permissiondependency. No DB/provider/API/runtime calls added. No otherpath admitted.",
+  "failureLimit": "Unexpected precontroller failures before headerssent now have query-free fixedsafe303 and genericinfrastructureclassification, no raw exception/log/body/providerinput. Session/password/onboarding are still mandatory. Controller owns its postmiddleware failures, gateway/browser stillCP4.",
+  "requiredProof": [
+    "ActualNest/PGknownsession/password/onboarding denials, no/invalidsession and equivalentGETrouteforms ->safe303+headers, zero downstreamfacts/providercalls",
+    "Actualunexpectederrors at both DBlookups ->genericclean303; noncallback equivalenterrors retain establishederrorpath",
+    "Successfulvalidsessionstillstate/CAS/grants; invalidstate/providererror/expired callbacks separatelysafe via controller",
+    "Real sessionverification remains; do not replace authentication/grant/transaction results with mocks to manufacture proof. If unexpectedsessionservice origin cannot be induced by validHTTPinput, record exact reachedsource/failureorigin rather than claim unexecutedcase; focusedboundaryfault proof may supplement, never replace actualsession/PGcases.",
+    "Numeros handles codeallowlist +genericinfrastructure code with fixedtext; realbackend browser/gateway checks required",
+    "Source hash/CRLF/exactcandidate/preservednoncallbackbody comparison and fullAPI/freshadherence after admission/apply"
+  ],
+  "authority": "No sourcewrite until critiqueconverged and explicituserpathvalidation plus serializedhandoff. Existing strictTODOrequires User validation: required on deviation.",
+  "version": 2,
+  "diagnostic": "Existing public callbackresponse carries safe distinct infrastructureerror code; Numeros must display fixedfailure and keep attemptpending, never treat it as authdenial orsuccess; no raw error/log/secret introduced.",
+  "reviewResolution": "Integrates IG-OAUTH-SESSCOMP-01 via one callback-owned wrapper, no new authframework orpublicexemption; requires fresh critique before humanvalidation."
+}

@@ -629,6 +629,8 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP2-R1-06 | medium | release-blocker | fix in this TODO | The reported sixteen-obligation map exceeds the behavioral proof actually present | open; fresh source review, causal proof pending | adherence-cp2-r1-result.json |
 | IG-CP2-ROOT-07 | medium | release-blocker | fix in this TODO | Five Instagram write routes need safe catalog/audit classification | open; full API coverage failure reached | cp2-action-catalog-observation.json |
 
+| IG-OAUTH-SESSCOMP-01 | medium | release-blocker | revise companion in same TODO | Unexpected precontroller callback failure also needs clean generic failure redirect | open; revised exact v2 proposal pending independent critique | oauth-callback-session-companion-critique-result.json |
+
 ## TODO Closeout Disposition
 - **Disposition:** blocked
 - **Disposition reason:** implementação aprovada em curso; CP1 aceito, findings CP2 e demais checkpoints/gates abertos, sem entrega parcial aceita.
@@ -1134,3 +1136,7 @@ Source freeze is lifted for this serialized repair. After targeted terminal proo
 ## Public privacy companion — reviewed proposal, admission pending
 
 The existing public privacy page still describes WhatsApp only. privacy-instagram-companion-ready.json binds the exact one-file staticHTML proposal, unchanged sourcehash, full original/diff and terminal independent critique with zero findings/allpositionsacceptable; strict merge passed. The proposal adds only factual Instagram Login/profile/identifier/textDM/humanreply descriptions and BU scoping, preserving institutional contact, legal/retention/deletion text, existing hosting claims and staticpage protections. User path validation is requested because web-app/public/privacidade.html is outside this strict contract. No expected-path admission, product change, publication, legal-compliance certification or runtime authority follows until explicit approval. Before applying, the sole writer must recheck sourcehash, effective date and actual final data-flow parity; material mismatch returns the proposal to review. All React/operator/browser consumers and CP2..CP6 remain required.
+
+## OAuth callback session companion — exact proposal review
+
+R1-04 has a concrete protected-path dependency: session.middleware.ts can reject before the admitted controller. The first exact companion critique is terminal with one medium security finding IG-OAUTH-SESSCOMP-01; early headers plus known-denial redirects still leave unexpected database/session errors on a sensitive query URL. That finding is Integrated/useful/formalizable yes/project and retained as release-blocker. Revised exact proposal v2 wraps unchanged session enforcement only for the effective GETcallback; all failures before output use fixed safe303 and known/generic classifications, without making the callback public. Ordinary routes retain their original exception/status/order. Sourcehash/CRLF preserved, no sourcewrite/pathadmission. Fresh complete companion critique is required before humanvalidation of this unadmitted path. Controller, Numerosconsumer, actualNest/PG and latergateway/browser remain mandatory; no R1-04 closure or delivery is inferred.

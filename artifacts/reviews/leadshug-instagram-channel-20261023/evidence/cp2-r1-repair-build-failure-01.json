@@ -1,0 +1,13 @@
+{
+  "kind": "cp2-r1-repair-pretest-build-failure",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-green-01.log",
+  "sha256": "16318c78b77a215f72df0789d6d49fa61d1b7ed2e0e2514b209f65d11fbb36e9",
+  "terminal": true,
+  "exit": 1,
+  "stage": "NestTypeScriptbuild",
+  "failure": "Three narrowing errors on HttpException.getResponse union",
+  "testsReached": false,
+  "qualification": "No new unit/integration/functional evidence. Executor corrected narrowing only after terminal and started uniqueGREEN02; source stillmutable/noacceptance."
+}
