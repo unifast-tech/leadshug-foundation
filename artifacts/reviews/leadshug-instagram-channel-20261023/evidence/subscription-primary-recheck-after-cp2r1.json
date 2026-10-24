@@ -1,0 +1,33 @@
+{
+  "kind": "bounded-public-primary-recheck-after-cp2r1",
+  "date": "2026-10-24",
+  "activity": "Official public documentation reads/search only; no Graph/resource/account/token/provider API calls",
+  "pages": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/llms.txt",
+      "rawSha256": "0e71c9bfd9fe3b54ac829e92e1bf1c7829a043f23f44d1945e4045aed4976878",
+      "bytes": 19218,
+      "genuineDocumentation": true
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "rawSha256": "8d6c5c5668b750631ceae080ebddd1d817b5608c9dba067df11504f11bb1819b",
+      "bytes": 18668,
+      "genuineDocumentation": true
+    },
+    {
+      "url": "https://www.postman.com/meta/instagram/documentation/6yqw8pt/instagram-api",
+      "rawSha256": "a01d0ada4f28d68f86218583ff5ec6c438c15641819833b64bbfe57499c612d5",
+      "bytes": 101772,
+      "limitation": "public application shell; not endpoint protocol evidence"
+    }
+  ],
+  "supported": "Instagram Login uses Instagram user token and POST graph.instagram.com/v26.0/IG_ID/subscribed_apps; success:true. Unified/Facebook Login host and credentials differ and are not imported.",
+  "notEstablished": [
+    "GET supported envelope and ID namespace",
+    "own-app visibility and identification",
+    "complete/empty semantics proving absence"
+  ],
+  "search": "Additional domain-constrained official documentation and official Meta Postman searches returned no result resolving GET. Third-party search snippets were not accepted as technical evidence.",
+  "disposition": "IG-SUBPROTO-01 and IG-SUBREC-03 stay open. No code/config change, alternate login, mutation retry or acceptance inferred. Later bounded empirical check requires its own authorization; no test token exists yet per operator."
+}

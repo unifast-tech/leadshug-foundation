@@ -1,0 +1,34 @@
+{
+  "kind": "cp2-r1-repair-causal-red-01",
+  "date": "2026-10-24",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp2-r1-repair-red-01.log",
+  "sha256": "69e093aa81ce94eb6f0bd99487004604f82a26408221b35a7a98ca731bc33739",
+  "bytes": 31194,
+  "terminal": "executor reports terminal; final cleanup present, exit1",
+  "unitPassed": 395,
+  "integration": {
+    "passed": 47,
+    "failed": 2,
+    "total": 49,
+    "filesPassed": 3,
+    "filesTotal": 4,
+    "durationSeconds": 55.14
+  },
+  "preProductRepair": true,
+  "reached": [
+    {
+      "finding": "IG-CP2-R1-02",
+      "assertion": "malformed create for out-of-scope BU expected404 got400"
+    },
+    {
+      "finding": "IG-CP2-R1-02",
+      "assertion": "advance array body expected400 got200"
+    }
+  ],
+  "notReached": [
+    "callback failure confidentiality assertions later in first composite case",
+    "malformed supported message/MID assertions later in second composite case"
+  ],
+  "qualification": "Two reached failures only. No causal evidence inferred for downstream or concurrent promotion/resource/crash/deadline findings. Earlier executor provisional SHA excluded because cleanup appended before terminal. No CP2 acceptance."
+}

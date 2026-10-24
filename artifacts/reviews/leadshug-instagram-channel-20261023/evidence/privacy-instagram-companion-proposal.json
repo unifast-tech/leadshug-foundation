@@ -1,0 +1,24 @@
+{
+  "kind": "unapplied-exact-public-privacy-companion-proposal",
+  "date": "2026-10-24",
+  "status": "proposal only; no product mutation or path admission; no publication/runtime authorization",
+  "requestedPath": "web-app/public/privacidade.html",
+  "sourceSha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d",
+  "candidateSha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753",
+  "patch": "privacy-instagram-companion-proposal.diff",
+  "patchSha256": "0773d973c69c9586778eeabed76eb320af0cdd8d35b0f6a32370fae046b54117",
+  "purpose": "Extend existing public factual channel/data-flow description to approved Instagram Login and textualDM/humanreply slice; same institutional responsible UNIFAST and contact unitech@unifast.com.br.",
+  "scope": "Exact one staticHTML file only, no scripts/forms/network dependencies, no app route or operationaldata access. No changes to legal bases, rights, retention/deletion promises, authority, encryption of message content, data-export policy or hosting claims.",
+  "dataFlowBasis": "Approved TODO identity/account/token/scopedBU/inbound-first/noautomation clauses; final implementation/runtime factual parity must be rechecked before applying/publishing. Instagram integration remains described explicitly as test-installation scope, not proof of delivery.",
+  "reviewRequirements": [
+    "Full exactdiff and originalHTML content; no inventedlegal/retention promises.",
+    "No secret/private values or opaqueoperational IDs; correct BUvschannel scoping and identifiers purpose.",
+    "No claim allInstagramusernames available, no claiming password collection/client tokens or automaticcontactmerging.",
+    "Full frontend consumer matrix retained; this page is one publicconsumer of factualdataflow, never substitute for CP4React/browser or CP6realproof.",
+    "Check whether provisionaldate or proposed wording implies readiness; require recheck if implementation changes.",
+    "After independentreview convergence, humanvalidation needed because path absent strictTODOexpectedpaths. Until then productHTML unchanged; apply once only with matching sourcehash and exactpatch after bothadmission and productwriterhand-off."
+  ],
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "consumerStatus": "Existing publicstaticpage needs factualInstagramextension; proposalnotconsumerimplementation; all other CP4consumers still mandatory and pending; no waiver",
+  "unchangedHtmlSecurity": "same CSP/no-referrer/noindex/no-externalresources/contacts/retention/legalparagraphs"
+}

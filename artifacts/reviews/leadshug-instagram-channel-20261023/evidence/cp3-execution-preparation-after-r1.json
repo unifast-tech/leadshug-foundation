@@ -1,0 +1,48 @@
+{
+  "kind": "cp3-execution-preparation-not-dispatch",
+  "date": "2026-10-24",
+  "state": "Preparation only; CP2r1 sole writer active; not execution authority or acceptance",
+  "basis": [
+    "cp3-bounded-integration-preparation.json",
+    "cp3-type-boundary-preparation.json",
+    "governing approved TODO v1.3"
+  ],
+  "rootRechecked": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "6f17741e198c79939d3542858b0595cb70afcdf8f281af77e44484e77c95d1b6"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "cb4b2e68c7377411991960c65e3d15cef8bc1aea927049cd99345e523433bd9f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "sha256": "655b735e239e89fbaede36689d1c22245d3804d66646f7736db991cb5099b02b"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "sha256": "e0ebdd78e387f7ee3af902f038d22449e212c1301ffa642bbceb5a5f05d2abfc"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "sha256": "4aa42bb2e873c576b63b5ac1f50db368fbecb189fe91be19f3b7fb726733370d"
+    }
+  ],
+  "candidateImplementationOrder": [
+    "Causal real-PG multichannel route/policy/newcontext and every V1state tests before source changes; keep old fixtures deliberate.",
+    "Explicit V2 operational alias/resolver/writers; separate exactV1 local-only recovery, never send-capable V1. Preserve Channel abstract methods; add no speculative transport method. Registry/factories use admitted adapter origin.",
+    "Resolve policy with each exact route operation: official wraps current qualified window, Evolution preserves current behavior, Instagram requires qualified original INtext/account/peer within24h and human reply; reject initial/bot before claim.",
+    "Instagram concrete Channel delegates providerHTTP; exact send recipient+business tuple, beforeDispatch fence, documented ACK ID, generic safe errors/UNKNOWN without automatic resend.",
+    "Unify new BFF reply route options/post through existing Outbound/Admission/Acceptance; route stale or wrongcontact must fail before effects. New admissions always strictV2.",
+    "Migrate public APIv1/Typebot/Consultar list+drilldown+CSV/legacy BUchannel projection to proved WhatsApp subset. No IGnumericID to phone, no latest/solechannel fallback across accounts. Preserve initial options with explicit paging rather than silent take10.",
+    "Actual BFF/PG tests cover twoIGaccounts samepeer sameBU, bothWAadapters, everylegacy state preservation/exclusion/knownACKzeroHTTP, deniedautomation/publicboundary and honest current policy, then fullcanonical API and fresh source review."
+  ],
+  "runnerCaution": "Current api-instagram selects test/instagram*.e2e-spec.ts only. New targeted CP3 specs should match that admitted pattern or rootDevOps must explicitly update canonical selector+CI parity in serialized lane. Existing WA/shared spec changes require fullAPI before acceptance. Do not run ad hoc host vitest or fake domain services.",
+  "pendingHumanDecision": "Outbound1000UTF8byte correction is reviewed but not yet approved. Recheck explicit reply before execution; retain current normativeWHAT until then. No change to received-DM constraints.",
+  "constraints": "No code writes now. Re-read all changed shared source after CP2 terminal and preserve35immutable plus sixlimited companions. No private inventory/runtime/Meta/provider operations. Own-account observer stays unaccepted; no gate waiver."
+}

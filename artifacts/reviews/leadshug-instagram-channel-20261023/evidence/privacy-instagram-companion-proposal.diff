@@ -1,0 +1,68 @@
+--- a/web-app/public/privacidade.html
++++ b/web-app/public/privacidade.html
+@@ -33,8 +33,8 @@
+   <header>
+     <p class="marca">LeadsHug · UNIFAST</p>
+     <h1>Política de Privacidade</h1>
+-    <p class="data">Versão de 17 de outubro de 2026</p>
+-    <p>Esta política descreve o tratamento de dados no LeadsHug, plataforma de atendimento e relacionamento por WhatsApp disponibilizada pela UNIFAST. Abrange pessoas que usam a plataforma e pessoas que conversam com as organizações que a utilizam.</p>
++    <p class="data">Versão de 24 de outubro de 2026</p>
++    <p>Esta política descreve o tratamento de dados no LeadsHug, plataforma de atendimento e relacionamento por WhatsApp e Instagram disponibilizada pela UNIFAST. Abrange pessoas que usam a plataforma e pessoas que conversam com as organizações que a utilizam.</p>
+     <p>Esta versão se refere à instalação local de testes, cuja área operacional é restrita aos operadores autorizados. Esta página de política é pública.</p>
+   </header>
+ 
+@@ -48,8 +48,8 @@
+     <h2 id="dados">2. Quais dados são tratados</h2>
+     <ul>
+       <li><strong>Usuários e acesso:</strong> nome, e-mail, telefone e imagem de perfil quando informados, vínculos com organizações, permissões, credencial de senha protegida por hash e informações necessárias à sessão, aos convites e à recuperação de acesso.</li>
+-      <li><strong>Atendimento:</strong> telefone e nome do contato quando disponíveis, conteúdo das mensagens, datas, direção e tipo de mensagem, estados de entrega disponibilizados pelo canal e autoria dos atendimentos. Informações sobre mídia podem ser registradas; isso não significa que todo anexo do WhatsApp seja automaticamente baixado e armazenado.</li>
+-      <li><strong>Contas e integrações:</strong> identificação da conta WhatsApp Business e do número empresarial autorizado, permissões concedidas, estado da conexão, identificadores técnicos de mensagens e credenciais necessárias à integração.</li>
++      <li><strong>Atendimento:</strong> telefone e nome do contato quando disponíveis no WhatsApp; identificadores técnicos do contato e da conta profissional no Instagram e nome de usuário quando disponível; conteúdo das mensagens, datas, direção e tipo de mensagem, estados de entrega disponibilizados pelo canal e autoria dos atendimentos. Informações sobre mídia podem ser registradas; isso não significa que todo anexo do WhatsApp seja automaticamente baixado e armazenado.</li>
++      <li><strong>Contas e integrações:</strong> identificação da conta WhatsApp Business e do número empresarial autorizado, ou da conta profissional e do perfil Instagram autorizados; permissões concedidas, estado da conexão, identificadores técnicos de mensagens e credenciais necessárias à integração.</li>
+       <li><strong>Arquivos de perfil e marca:</strong> imagens enviadas voluntariamente aos recursos de upload, quando habilitados.</li>
+       <li><strong>Segurança e auditoria:</strong> tentativas de acesso, alterações de cadastro e permissões, autoria, datas, endereço IP quando registrado e diagnósticos técnicos de integrações. Os registros de webhook podem conter dados do contato e cópias do conteúdo das mensagens; passam por filtragem de segredos técnicos.</li>
+     </ul>
+@@ -58,14 +58,15 @@
+ 
+   <section aria-labelledby="finalidades">
+     <h2 id="finalidades">3. Para que usamos os dados</h2>
+-    <p>Usamos os dados para administrar contas e acessos, conectar os números autorizados, receber e responder mensagens, organizar o atendimento, preservar o histórico, executar automações habilitadas pela organização e prestar suporte. Também são usados para controlar permissões, prevenir uso indevido e investigar falhas.</p>
++    <p>Usamos os dados para administrar contas e acessos, conectar os números e perfis autorizados, receber e responder mensagens, organizar o atendimento, preservar o histórico, executar automações habilitadas pela organização e prestar suporte. Também são usados para controlar permissões, prevenir uso indevido e investigar falhas.</p>
+     <p>As bases aplicáveis dependem da finalidade: execução de contrato, cumprimento de obrigação legal, exercício de direitos, legítimo interesse avaliado no caso concreto ou consentimento, quando necessário. Autorizar uma integração não equivale a consentir com todas as finalidades de atendimento.</p>
+   </section>
+ 
+   <section aria-labelledby="whatsapp">
+-    <h2 id="whatsapp">4. WhatsApp e serviços integrados</h2>
++    <h2 id="whatsapp">4. WhatsApp, Instagram e serviços integrados</h2>
+     <p>No canal oficial, a conexão é autorizada pela organização na Meta. O LeadsHug usa as permissões concedidas para identificar a conta e o número selecionados, configurar o recebimento e trocar mensagens. O conteúdo tratado no LeadsHug pode ser consultado pelos usuários autorizados da organização. A validação operacional do canal oficial nesta instalação de testes está em andamento.</p>
+     <p>O canal não oficial, quando habilitado, utiliza uma conexão por dispositivo e a tecnologia Evolution na infraestrutura configurada para o serviço. A organização escolhe a modalidade que utiliza.</p>
++    <p>A integração Instagram desta instalação de testes é destinada a contas profissionais autorizadas. O login do Instagram permite identificar a conta conectada e obter as permissões necessárias para receber mensagens diretas de texto e responder a conversas iniciadas por outra pessoa. As credenciais da integração são tratadas no servidor. Essa integração não inicia conversas por nome de usuário nem habilita automações de atendimento no Instagram.</p>
+     <p>O uso do WhatsApp também está sujeito à <a href="https://www.whatsapp.com/legal/privacy-policy" rel="noreferrer">política de privacidade do WhatsApp</a>. Desconectar ou revogar uma integração interrompe ou limita os recursos associados, mas não apaga automaticamente o histórico já registrado no LeadsHug.</p>
+   </section>
+ 
+@@ -73,7 +74,7 @@
+     <h2 id="compartilhamento">5. Com quem os dados podem ser compartilhados</h2>
+     <ul>
+       <li><strong>A organização responsável pelo atendimento e seus usuários autorizados,</strong> conforme as permissões concedidas no LeadsHug.</li>
+-      <li><strong>Meta/WhatsApp,</strong> para autorização do canal oficial, identificação do número e transmissão de mensagens e eventos.</li>
++      <li><strong>Meta/WhatsApp e Instagram,</strong> para autorização das integrações correspondentes, identificação do número ou perfil conectado e transmissão de mensagens e eventos.</li>
+       <li><strong>Serviços necessários à instalação:</strong> no ambiente de testes atual, a UNIFAST mantém a infraestrutura local e utiliza Cloudflare para disponibilizar o acesso HTTPS. Esse transporte está sujeito à <a href="https://www.cloudflare.com/privacypolicy/" rel="noreferrer">política da Cloudflare</a>.</li>
+       <li><strong>Serviços opcionais configurados para a instalação ou pela organização,</strong> como Typebot para automações, Resend para e-mails de acesso e integrações por API, nos limites da função habilitada.</li>
+       <li><strong>Autoridades ou terceiros legitimados,</strong> quando houver fundamento aplicável para atender obrigação ou proteger direitos.</li>
+@@ -91,7 +92,7 @@
+ 
+   <section aria-labelledby="seguranca">
+     <h2 id="seguranca">7. Proteção e acesso</h2>
+-    <p>O LeadsHug aplica controles de acesso por organização e número, valida as permissões dos usuários e protege com cifra no servidor os tokens de acesso do canal oficial que persiste. As senhas são armazenadas como hash. O acesso disponibilizado para os testes usa HTTPS.</p>
++    <p>O LeadsHug aplica controles de acesso por organização e Business Unit (operação de atendimento), valida as permissões dos usuários e protege com cifra no servidor os tokens de acesso dos canais oficial WhatsApp e Instagram que persiste. As senhas são armazenadas como hash. O acesso disponibilizado para os testes usa HTTPS.</p>
+     <p>Essas medidas não significam que todas as mensagens armazenadas pelo LeadsHug sejam cifradas de ponta a ponta dentro da plataforma. Administradores e atendentes autorizados precisam acessar o conteúdo para executar o atendimento.</p>
+   </section>
+ 
+@@ -99,6 +100,7 @@
+     <h2 id="navegador">8. Cookies e armazenamento no navegador</h2>
+     <p>O aplicativo utiliza cookie de sessão para autenticação, com validade de até 24 horas, e armazenamento local para preferências de aparência e navegação. Bloquear o cookie de sessão impede o uso das áreas autenticadas.</p>
+     <p>Ao iniciar o cadastro do canal oficial, o aplicativo carrega o SDK da Meta para abrir a autorização. Esse serviço possui suas próprias práticas de tratamento. Esta página de política não carrega esse SDK, formulários, ferramentas de análise ou recursos externos automaticamente.</p>
++    <p>Ao conectar uma conta profissional do Instagram, o operador é encaminhado ao login do Instagram para conceder acesso à conta. A autenticação com o Instagram ocorre nesse serviço; a senha do Instagram não é solicitada pelo LeadsHug.</p>
+   </section>
+ 
+   <section aria-labelledby="direitos">
