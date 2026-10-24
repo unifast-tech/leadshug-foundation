@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-11.log",
+  "sha256": "caf692bbf2e2e9e3ed4e3e75c948e58173e0a2915584ca0318d1b4a9a11eccd3",
+  "exit": 1,
+  "unitPassed": 395,
+  "lint": "passed",
+  "build": "passed",
+  "integration": {
+    "passed": 45,
+    "failed": 2,
+    "total": 47
+  },
+  "qualification": "This is a distinct post-correction log. Executor mistakenly reused the conversational label11; earlier cp2-red-confirm-idempotency-01.log remains preserved with bd5625888de968bef23f2e3a16bf6b68e11d67f15f7995df104b9f164f3427fe. No overwrite or false byte-equivalence is inferred.",
+  "reachedPositive": "Initial OAuth test passed missing/invalid key, in-flight same-key409, four completed concurrent replays, payload conflict and one initial subscription POST, per executor; complete5waves\u00d720proof remains subject to exact map/review.",
+  "failures": [
+    "Fixture Prisma relation filter uses wrong syntax; positive connected reauthorization case did not reach.",
+    "Signed input for second mapped current account rejected403 after subscription POST ambiguity; executor confirmed identity/owner/credential were valid and recognized circular readiness gate."
+  ],
+  "required": "Retain eligible partial-batch replay proof; do not change expected statuses to accommodate circular gate. Initial subscription UNKNOWN remains unconfirmed until actual eligible ingress; GET alone cannot manufacture receipt.",
+  "acceptance": "none; source mutable, further corrections and fresh review required"
+}

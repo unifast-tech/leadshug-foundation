@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "kind": "proposed-primary-text-limit-reconvergence",
+  "date": "2026-10-24",
+  "state": "proposal only; no product or governing numeric rule changed; not user approved",
+  "todo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "fact": {
+    "url": "https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login/messaging-api.md",
+    "http": 200,
+    "rawSha256": "eb5954bb9a5292a6812b0ee923c2ef9128c23cb93005924d865d2780a6b4817f",
+    "body": "Actual official markdown decoded from HTML-pre wrapper, no Page Not Found. Send text section requires UTF-8 text of1000bytes or less.",
+    "supportingExcerpt": "Message text must be UTF-8 and be a 1000 bytes or less."
+  },
+  "approvedMismatch": "Two governing clauses currently say Instagram1..1000caracteres. At least501accented letters or251four-byte emoji can be under1000characters yet exceed the documented send limit. No send policy exists yet in CP3; current CP2 ingress is unrelated.",
+  "exactNormativeDelta": [
+    {
+      "from": "Instagram aceita1..1000caracteres, WhatsApp mantém4096e seu parser/envelope atual",
+      "to": "Instagram aceita texto não vazio de até1000bytes em UTF-8; WhatsApp mantém4096caracteres e seu parser/envelope atual"
+    },
+    {
+      "from": "Instagram textual inicialmente entre1e1000caracteres; WhatsApp mantém4096e o envelope/parser atual.",
+      "to": "Resposta textual Instagram inicialmente não vazia e com até1000bytes em UTF-8; WhatsApp mantém4096caracteres e o envelope/parser atual."
+    }
+  ],
+  "productBehavior": [
+    "Only outbound Instagram text is bounded by actual UTF-8 encoded byte length, before dispatch claim/provider HTTP. Empty-text treatment follows existing approved text normalization; no arbitrary Unicode normalization is added.",
+    "The same captured route policy drives server admission and browser feedback. Over-limit input receives a safe actionable error asking to shorten text; browser prevents the send while invalid. Backend remains authoritative.",
+    "Preserve exact selected valid text. Do not truncate, split, create multiple messages, silently change accents/emoji or add another sender. Preserve single OutboundService and common acceptance.",
+    "Do not impose outbound1000byte bound on received DM, webhook raw8MiB/1000updates, or WhatsApp4096character reply/current parser/envelope. No media, initial Instagram send,7day/agent window or other new capability."
+  ],
+  "admittedPathsOnly": [
+    "api-app/src/domain/channels/** (existing transport/eligibility DTO purpose only; no new Channel method)",
+    "api-app/src/domain/inbox/** (existing single Outbound/eligibility boundary)",
+    "api-app/src/integrations/instagram/** and src/integrations/channels/** (fixed text send adapter)",
+    "api-app/test/*instagram*.e2e-spec.ts and test/channel-transport.e2e-spec.ts",
+    "web-app/src/api.ts; web-app/src/telas/Inbox.tsx; web-app/src/*instagram*; web-app/e2e/instagram*.spec.ts",
+    "Foundation TODO and admitted analysis/brief/module/evidence surfaces only as exact contradictory language is identified"
+  ],
+  "proof": [
+    "Exact ASCII1000bytes accepted vs1001rejected before claim/provider HTTP.",
+    "500é=1000UTF-8 bytes accepted vs501é=1002rejected;250four-byteemoji=1000accepted vs251=1004rejected. Valid outbound text exactly preserved.",
+    "Real BFF/PostgreSQL route-qualified tests plus browser against actual backend/fake provider; no mocked domain/transaction. Incorrect client payload still blocked server-side.",
+    "WhatsApp approved4096character behavior and current parser/envelope regressions retained. Incoming DM longer than the outbound byte bound remains admitted according to original ingress rules."
+  ],
+  "authorityBoundary": "Primary provider fact does not silently rewrite the explicit numeric approval. Root seeks bounded critique then explicit user validation of this concrete delta; existing unrelated CP2 and later independent work continue under existing authority. No extra path/package/runtime/Meta/private permission.",
+  "consumerMatrix": "This correction touches existing reply-options/policy and message admission consumed by Inbox route-specific composer; both server and browser must be implemented and proved. No backend-only consumer waiver. OAuth/candidate/channel-connections consumers and all CP2–CP6 obligations remain as approved.",
+  "reviewAsk": "Fresh no-context critique of necessity, exact scope, consumer completeness, test adequacy and whether any wording changes broader behavior. Flag concrete defects only. Do not inspect mutable source or private/provider state; package only plus stated public primary URL. No execution/approval granted."
+}

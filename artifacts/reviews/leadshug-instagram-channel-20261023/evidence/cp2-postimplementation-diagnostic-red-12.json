@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "postimplementation-diagnostic-red",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "log": "foundation_documentation/artifacts/tmp/instagram-channel-implementation/cp2-api-instagram-12.log",
+  "sha256": "5bdc7d6dcb5c26f0e8be66149d3d99c53cc801f8bb971004d033842122293383",
+  "exit": 1,
+  "unitPassed": 395,
+  "lint": "passed",
+  "build": "passed",
+  "integration": {
+    "passed": 45,
+    "failed": 2,
+    "total": 47
+  },
+  "failures": [
+    "Positive connected-reauthorization fixture relation query typo still prevented reaching that behavior; required Conversation.routes.some(channelId) shape identified.",
+    "Partial-batch replay reached final count1 instead of2 because mapped valid second-account ingress was blocked403 on uncertain subscription gate."
+  ],
+  "qualification": "Evidence supports reached circular-receipt issue and remaining fixture defect. It does not prove positive connected-reauthorization behavior or held-subscription-response interleaving. Original eligible-message expected200 must be restored/preserved, not weakened to fit current gate.",
+  "next": "Sole writer fixes exact test fixture, current mapped signed-IN receipt acceptance and late-result preservation within admitted shared transaction paths, then reruns canonical selector.",
+  "acceptance": "none; source mutable; final exact coverage/freeze/full API/fresh review remain required."
+}

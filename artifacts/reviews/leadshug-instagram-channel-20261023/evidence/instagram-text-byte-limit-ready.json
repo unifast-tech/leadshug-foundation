@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "user-validation-ready-proposal",
+  "state": "awaiting explicit user validation; no numeric contract/product implementation changed",
+  "proposal": "instagram-text-byte-limit-proposal-v1.json",
+  "primaryFact": "Instagram outbound text at most1000UTF8bytes, not1000characters. Non-ASCII text may reach the limit sooner.",
+  "boundedChange": "Update the two exact governing numeric clauses, server policy/transport and browser route-composer validation; reject before dispatch, preserve exact valid text; no truncation/splitting. WhatsApp4096character contract, incoming DM and raw webhook limits retained.",
+  "review": "Fresh strongest no-context critique terminal, findings[], all positions acceptable; strict merge passed.",
+  "hashes": {
+    "instagram-text-byte-limit-proposal-v1.json": "9e87ae8c3ef338a9665e8423e6dee6f51cedbd89b8a11fb15394c8055a7507e5",
+    "text-byte-limit-critique-dispatch.json": "316b8a406595967de5785f37a66dcc116042bcc14b6350b61ea050965c5a1aef",
+    "text-byte-limit-critique-result.json": "37ec6bb6e796dd785172b5e42ebd3df8be4f72264aed627c5bc26c61f9407664",
+    "text-byte-limit-critique-merge.json": "183ba93ce1365321d8ded1015444c4691c8911d461c12d6ad39a33f3ea3a7e37"
+  },
+  "noOtherAuthority": "No private env, actual Meta/provider/runtime or additional source path authority granted."
+}

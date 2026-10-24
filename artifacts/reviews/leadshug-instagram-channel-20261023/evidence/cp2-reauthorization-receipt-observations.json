@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "kind": "bounded-current-candidate-observations",
+  "findings": [
+    {
+      "findingId": "IG-CP2-ROOT-05",
+      "severity": "medium",
+      "subject": "Successful reauthorization of an already connected channel",
+      "evidence": "Static candidate confirms REAUTHORIZE can preserve CONECTADO then invoke subscription tuple checker requiring CONECTANDO; active credential promotion precedes this later gate. The first new positive reauthorization case is not yet reached due a fixture query error; no exploit or causal RED is claimed.",
+      "action": "Prove successful same-resource reauthorization preserving owner/receipt/messages and reusing known subscription without another POST; repair actual defect in admitted paths if demonstrated."
+    },
+    {
+      "findingId": "IG-CP2-ROOT-06",
+      "severity": "high",
+      "subject": "Circular ingress gate after ambiguous initial subscription dispatch",
+      "evidence": "Terminal post-correction cp2-api-instagram-11.log rejected signed second-account text403. Sole executor confirmed the mapped current resource had valid identity/owner/credential and was blocked only by MAPPED_PENDING_SUBSCRIPTION after uncertain first POST. Root records reported diagnosis, not independent live-provider proof.",
+      "action": "Actual accepted signed eligible ingress is independent receipt evidence. Do not demand prior known subscription result to admit that evidence or weaken eligible partial-batch assertions. Prove current tuple, cryptographic/resource fences and state transition through shared PostgreSQL acceptance, with no receipt from observer/challenge/echo."
+    }
+  ],
+  "scope": "Approved reauthorization/receipt behavior only; no new path, provider call, token or private authority. Source remains mutable; independent source review and broader proof still mandatory."
+}
