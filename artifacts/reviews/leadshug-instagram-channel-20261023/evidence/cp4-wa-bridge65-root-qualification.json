@@ -1,0 +1,13 @@
+{
+  "kind": "CP4 WA UUID bridge65 root-qualified preparation",
+  "status": "Read-only preparation during API64. Not sourcehandoff, executedproof, formalreview or acceptance. Frozen261/T/812inputs unchanged.",
+  "inspection": "Routine instagram_test48 terminal plusrootdirect ChannelsService364/517 ownerread.",
+  "acceptedHow": [
+    "ExistingWA verificar/desconectar owner accepts narrowoptional exactbinding{id,type,generation}; legacytype routes preserve contract. Resolve exactUUID then revalidate capturedid/type/gen underactualprovider\u2192BU\u2192channellocks withinowner; nevercontrollercheck\u2192type-onlyreselection. Post-provider lease/currentgeneration fences remain.",
+    "Nativefixture: oneprovedWAbusinessnumber/commonBCI, officialphoneNumberId and separateEvolutioninstance providerIDs. ExactUUIDsiblingoperation/foreignBU/stalegeneration/actualheldproviderrace/zero unintendedcalls. Cardinality>2 legacycompatibleWA conflict, notsilenttruncation."
+  ],
+  "correctionToAdvisor": "WA disconnect updates/cancels/detaches registrationattemptrows; it does not delete their history. It deletesactivecredential/BuChannel and retainsBCI/providerownertombstones. Do not accidentally use thisdeletingowner forIG, whichmustretainchannelrow/completedreceipts/routes/history for sameaccountREAUTHORIZE.",
+  "routineDtoConcretization": "Draft HOW57 disconnect response requiring safe connection for everyprovider cannot refetch deletedWAchannel. Laterhandoff should use safe {channelId:localUUID,connection:SafeConnection|null,remoteCleanup:PENDING|CONFIRMED}; IG retainedrow gives safeitem, WAexistingremoval givesnull. No inventedpersistedgeneration/display/row afterdeletion. Re-fetchcatalogafteroperation. This is routineDTOshape insideapprovedendpoint, notnewWHAT.",
+  "cleanupQualification": "CONFIRMED onlyactualcurrent ownmanagedcleanupdurablefact. Official/Instagram remainPENDING withoutproven ownscope remotecleanup. Never infercleanup fromlocaldetach or callotherapp/unregister.",
+  "next": "Serialize native test-first/sourcehandoff after64terminal/root/currentaffectedadherence; allCP4consumer/primary/human/latergatesremain."
+}

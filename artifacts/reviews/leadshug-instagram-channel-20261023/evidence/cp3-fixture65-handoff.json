@@ -1,0 +1,25 @@
+{
+  "kind": "cp3-residual-session-fixture65-test-only-handoff",
+  "writePaths": [
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "bytes": 56607,
+      "sha256": "e9a904041200a7938731039949f868edd3573f53567cc1d4cfc63633d023f5ee"
+    }
+  ],
+  "readManifest": "cp3-api64-frozen-manifest.json",
+  "rootReconciliation": "cp3-api64-root-reconciliation.json",
+  "goal": "Correct static early-release fixture gap in ONLY first CP2-SESSION-CLOCK case; no product/session implementation change.",
+  "how": [
+    "Keep actual livecontrol FIRST, alloriginalsessionissue/expiry/signing/currentBFF/realPGlock/pidwaiter/timeorigins/nativeexpiry/sessionvalid-atqueue/counters/state/headers/cleanup assertions. After originalnaturalexpiryloop and invalidsession assertion, wait with actualperformance.now until callbackStartedAt+matchedHoldMs. Only then existingactualstillBlocked nativequery/releasedAt/timebounds/release. NofakeDate/session/tx/policy, noexpiryrewrite/reissuance, no retries/skip or sender repeat.",
+    "Preserve exact live<4000ms, expired<4500ms, absolute matchedDelta<750ms and allguard/waittimeouts. The addedactualwait is inside originalheldPGtransaction; sessionnaturallyexpired already; no newHTTP or mutation. A realoverrun remains failed, nofinitebufguarantee.",
+    "Add smallsafe numeric telemetry in this case before bounds: controlDurationMs, expiredDurationMs, signedDeltaMs, absDeltaMs, actualnativewaiterSeen/currentstillBlocked/sessionExpired booleans fromactualfacts. Do not logsession/cookie/state/code/token/URL/personaldata. Preserveeverylater303/no-store/pragma/referrer/cleanURL/zeroHTTP/no candidate/mapping/credential assertion and finallyrelease/drain.",
+    "Allremaining11cases and allproduction/other260sources byteexact64. No sharedhelper rewrite, scope expansion or rootdocs/Git mutation."
+  ],
+  "rootClassification": "Routine HOW preserving approved natural-session/current-authorization and matching criteria; firstpass ambiguity resolved, independentroutineinspection agrees. Actual64absdelta alone does NOT prove sign/cause; staticgap is identified, noOS/flakiness/productinference.",
+  "constraints": [
+    "Single-code-writer44, no tests/build/runner/Git/docs/private/env/runtime/Meta/goals/broad discovery/spawn.",
+    "Return targetbytesSHA and conciseexactchanges, NOTRUN. Root reverseunrelatedbodyproof, then exactlyone completeAPI66 and freshcurrentaffectedadherence67. NoCP3/fullfeatureacceptance."
+  ],
+  "inspection": "instagram_test48 terminal read-only confirms proposed extraexpired-heldwait retainsrealPGcausalproof and unchangedtimebounds."
+}

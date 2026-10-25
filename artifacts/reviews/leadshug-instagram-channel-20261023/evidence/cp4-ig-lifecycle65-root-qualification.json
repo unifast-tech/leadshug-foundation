@@ -1,0 +1,15 @@
+{
+  "kind": "CP4 IG lifecycle65 root-qualified preparation",
+  "status": "Read-only feasibility, nohandoff/sourcewrite/proof/acceptance. API64frozeninputs unchanged.",
+  "executor": "instagram_repair44 terminal read-only; routing-cp4-ig-lifecycle65-inspection GO",
+  "currentOwner": "InstagramAuthorizationService existing actorTransaction/requireActorTx/PId-resource\u2192channel\u2192attempt locking/subscription lease owner. Do notsendIGthroughdeletingWAowner ornewparallelstatemachine.",
+  "acceptedHow": [
+    "Durablecurrentbinding verify independent expired10minOAuthattempt, currentadmin/session/grant before/afterboundedHTTP; resourcelease/cooldown and exactgeneration/version/ownermapping. UNKNOWN503 safeobservation, noPOST/readinessinference. Existingactualsignedcurrentreceipt may qualifyknownfact.",
+    "DisconnectretainsIGchannel/PId/BCI/route/messages/completedhistory, clearscurrentcredential/receipt/operationleases,bumpsgeneration/cancelsunfinishedattempts. Actualheldcallback/confirm/subscription cannotpromoteaftercommit. No guessedremoteDELETE/cleanupconfirmation.",
+    "REAUTHORIZE exactretaineddisconnected sameaccount/app/BU/generation with absentcredentialCAS; re-readlockedrowsratherthanprelocksnapshot. NoCONNECTfallback/resource transfer. Freshversion frommaxtrulymappedCredentialVersion forsamebinding/account,nevercandidate expectedversion. Liveconnectedreauth samegenerationretainstrue receipt; disconnectednewgenerationrequiresnewacceptedreceipt.",
+    "Preserve PId globalpriorPOSTdispatch marker andhistoricaluncertainty acrossattempts/disconnect/reconnect; UNKNOWNdoesnotauthorizerepeatedPOST. PrimaryGETidentity/envelope/completeness remainsopen."
+  ],
+  "budgetAdjudication": "ApprovedT783/798 fixes atmost3externalrequests peradministrative stage,10seach,total40underlease60; verify/advance sharedbindinglease and10scooldown. It does NOT define3requests total perPIdlifetime. Existingattempt.subscriptionRequests isperattempt, not provennewverifyrequest accounting. Newdurablebindingverify mustexplicitlyenforce its ownboundedoperation (canuse1GET), sharedglobalPIdlease/cooldown andliveCAS; donotclaimexistingperattemptcounteralone provesallthis oraddinventedglobal lifetimecounter.",
+  "errorQualification": "Freezeactual newroutestatuses lateragainstT774:409context/operationconflict,429budget/cooldown+RetryAfter,503inconclusive. Earlierprep shorthand lease/cooldown429 isnot additionalWHAT; preserveexistingownercategories unlessexplicitnewroutebudgetclassificationjustified.",
+  "next": "AfterAPI64root/currentaffectedadherence, boundednative test-first+sourcehandoffs. Completecatalog/realtime/safedisplay/composer/HTTPSbrowser/allCP5/6/assurance remainmandatory."
+}

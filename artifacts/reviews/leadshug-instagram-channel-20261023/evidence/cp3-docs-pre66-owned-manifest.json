@@ -1,0 +1,119 @@
+{
+  "kind": "ExactownedFoundationpre66commitmanifest",
+  "paths": [
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-before.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-api.log",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-after.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-result.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-frozen-manifest.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-root-reconciliation.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence65-coverage-preparation.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp4-wa-bridge65-inspection.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp4-ig-lifecycle65-inspection.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-wa-bridge65-root-qualification.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-ig-lifecycle65-root-qualification.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture65-handoff.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture65-root-reconciliation.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp3-fixture65.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp3-fixture65.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp3-api66.json",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp3-api66.json",
+    "todos/active/features/TODO-leadshug-instagram-channel.md"
+  ],
+  "rows": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-before.json",
+      "bytes": 707,
+      "sha256": "356b8c59ee1933269455a4c4a77b2b983bcc601be4284a77605ef41675b12e88"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-api.log",
+      "bytes": 229599,
+      "sha256": "aac7e93a6cc12b2c9b329f786834ef1bf576222de686cd6392f3b10634d30d27"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-after.json",
+      "bytes": 525,
+      "sha256": "041916add99b42b394a83e843f6cca6cd2222f6a56f92ce60d1bd8cf10661ed9"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-result.json",
+      "bytes": 6433,
+      "sha256": "1561dc6ed6563f3a72406c794ac0179f5c14b312e77536f11ea75e32a808a3fe"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-frozen-manifest.json",
+      "bytes": 238697,
+      "sha256": "f23c589ad9e1b66681fd0afadf364b866a2214821a310bb6ead3848d8931cc14"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-root-reconciliation.json",
+      "bytes": 8056,
+      "sha256": "68f40e814274a0b851537a73cdc2ce34e5e1f99586c96ac7aa208e8ea489b7d5"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence65-coverage-preparation.json",
+      "bytes": 11172,
+      "sha256": "cba0e950b967628d80ae11bcdb1165963dcdf1a4c28f4b4850dfbd02bd43a557"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp4-wa-bridge65-inspection.json",
+      "bytes": 941,
+      "sha256": "643dda3027cb2664208db1b82f42a4601584ef1967da2360ba6a426b63baf5b2"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp4-ig-lifecycle65-inspection.json",
+      "bytes": 941,
+      "sha256": "643dda3027cb2664208db1b82f42a4601584ef1967da2360ba6a426b63baf5b2"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-wa-bridge65-root-qualification.json",
+      "bytes": 2149,
+      "sha256": "86bbd4f0300c7c93627aa31629c02e130789beb7d768a5424fca1dda040dc9bd"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-ig-lifecycle65-root-qualification.json",
+      "bytes": 2715,
+      "sha256": "16cf9f55208762bee3b346b9ff0a2ce6a767639f52aa9316ab7162c4d16fff2e"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture65-handoff.json",
+      "bytes": 2625,
+      "sha256": "10480c234cb0724842c56aa8990f34c297bc6ccd090c69e0708fba440cea6245"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture65-root-reconciliation.json",
+      "bytes": 1233,
+      "sha256": "628bc511e891bce3825b02fafab3a544bdc941c6298f0105f57b5e9d6ef81d8b"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp3-fixture65.json",
+      "bytes": 870,
+      "sha256": "672f59f3bb5e28edd8e21d597c83f249915045410830eca06c20ec0190abe885"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp3-fixture65.json",
+      "bytes": 930,
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp3-api66.json",
+      "bytes": 870,
+      "sha256": "672f59f3bb5e28edd8e21d597c83f249915045410830eca06c20ec0190abe885"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp3-api66.json",
+      "bytes": 941,
+      "sha256": "643dda3027cb2664208db1b82f42a4601584ef1967da2360ba6a426b63baf5b2"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 304318,
+      "sha256": "04afeffb8ff0d437b167dfefee13dc82460b94cd4c24b93d392a3d0762e9c91b"
+    }
+  ],
+  "rawBytePreservationPaths": [
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api64-api.log"
+  ],
+  "exclusions": "UnrelatedFoundationchanges/oldcp2repairlogs/productrepositories/rootgitlinks preservednotstaged."
+}

@@ -1,0 +1,126 @@
+{
+  "kind": "cp3-api64-root-reconciliation",
+  "sourceRowsExact": 261,
+  "todoExactAtTerminal": true,
+  "positiveBoundInputsExact": 812,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "path": "cp3-api64-api.log",
+    "bytes": 229599,
+    "sha256": "aac7e93a6cc12b2c9b329f786834ef1bf576222de686cd6392f3b10634d30d27",
+    "complete_stdout_stderr": true
+  },
+  "exitCode": 1,
+  "passedStages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "canonical_validation_project": "started and cleaned up by runner",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": {
+      "files_passed": 39,
+      "tests_passed": 426,
+      "tests_failed": 0,
+      "duration": "4.39s"
+    },
+    "e2e": {
+      "files_passed": 54,
+      "files_failed": 1,
+      "files_total": 55,
+      "tests_passed": 596,
+      "tests_failed": 1,
+      "tests_total": 597,
+      "duration": "587.89s"
+    }
+  },
+  "soleFailure": {
+    "case": "CP2-SESSION-CLOCK residual: natural expiry after a short real user-row wait blocks exchange while a matched live session succeeds",
+    "assertion": "matched-hold absolute difference was 857.4773700000005 ms, exceeding the unchanged <750 ms bound; the preceding actualHoldMs <4500 ms assertion passed",
+    "frame": "test/instagram-cp2-residual.e2e-spec.ts:170:54",
+    "classification": "timing-bound assertion failure only; no product temporal violation or flaky classification is inferred",
+    "normal_path_assertions_not_reached": [
+      "blocker await in the normal path",
+      "matched live response 303",
+      "response header and no-sensitive-query checks",
+      "provider POST count zero",
+      "no-candidate, channel, provider-identity, and credential effect assertions"
+    ],
+    "finally_behavior": "finally path releases the held user row and drains the blocker; do not characterize cleanup as unreached",
+    "full_failure_body": "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 1 \u23af\u23af\u23af\u23af\u23af\u23af\u23af\n\n FAIL  test/instagram-cp2-residual.e2e-spec.ts > Instagram CP2 residual BFF and PostgreSQL proofs > CP2-SESSION-CLOCK residual: natural expiry after a short real user-row wait blocks exchange while a matched live session succeeds\nAssertionError: expected 857.4773700000005 to be less than 750\n \u276f test/instagram-cp2-residual.e2e-spec.ts:170:54\n    168|       const actualHoldMs = releasedAt - callbackStartedAt;\n    169|       expect(actualHoldMs).toBeLessThan(4_500);\n    170|       expect(Math.abs(actualHoldMs - matchedHoldMs)).toBeLessThan(750);\n       |                                                      ^\n    171|       releaseUserRow();\n    172|       await blocker;\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[1/1]\u23af\n\n Test Files  1 failed | 54 passed (55)\n      Tests  1 failed | 596 passed (597)\n   Start at  00:11:39\n   Duration  587.89s (transform 9.67s, setup 268ms, collect 92.79s, tests 484.97s, environment 9ms, prepare 3.05s)"
+  },
+  "timingQualification": "Only residual matchedhold delta857.477ms exceededunchanged750. Normalpath release/await/status/headers/noeffectassertions afterline170unreached; finallystillreleases/drains. NoOS/flakiness/product-temporal cause inferred.",
+  "fixed63Proof": {
+    "all26InitialMessageCasesPassed": true,
+    "credentialPinCaseDurationMs": 774,
+    "mapping6Passed": true,
+    "finalClock9Passed": true,
+    "actualTelemetry": {
+      "ST04_CREDENTIAL_PIN": {
+        "validationSucceeded": true,
+        "credentialUpdateWaited": true,
+        "claimPid": 290,
+        "rotationPid": 276,
+        "rotationBlockedByClaim": true,
+        "claimInitialSucceeded": true,
+        "credentialVersionAdvanced": true,
+        "postsDeltaWhilePinned": 0,
+        "postsDelta": 0,
+        "outMessagesDelta": 0,
+        "sendStatus": 409,
+        "finalState": "REJECTED"
+      },
+      "CP2_MAPPING_LIVE_CLOCK": {
+        "expiresInSeconds": 75,
+        "actualLifetimeMs": 75000,
+        "remainingAtQueueMs": 74883,
+        "remainingBeforeReleaseMs": 72679,
+        "remainingAtCompletionMs": 72550,
+        "holdDurationMs": 2203.737671,
+        "elapsedMs": 2390.540218,
+        "holderDurationMs": 2394.174261,
+        "waiterObservedBeforeRelease": true
+      },
+      "CP2_CALLBACK_LIVE_CLOCK": {
+        "acquiredAt": "2026-10-25T00:17:15.041Z",
+        "expiresAt": "2026-10-25T00:18:30.041Z",
+        "actualLifetimeMs": 75000,
+        "remainingAtQueueMs": 74954,
+        "remainingBeforeReleaseMs": 72751,
+        "remainingAtCompletionMs": 72745,
+        "waitDurationMs": 2202.1520629999995,
+        "elapsedMs": 2283.760451,
+        "waiterObservedAtQueue": true,
+        "waiterObservedBeforeRelease": true
+      }
+    },
+    "exactNativePinOraclesReached": "ActualPIDblock/version+1/decryption/liveunrelatedfacts/tuple/originaldeadline and exact409/BLOCKEDzeroPOST/OUT/REJECTED/released/noexternalreceipt allasserted inpassedcase."
+  },
+  "otherReached": {
+    "initial_message_suite": "26/26 passed (suite 28189ms); credential-pin-through-commit case passed (774ms)",
+    "authorization_fences": "16/16 passed: three A46 mutation-first controls, six prior controls, seven new authorization-first controls (suite 13218ms)",
+    "IG_actual_credential_rotation_serialization": "passed; real final Instagram dispatch serialized before credential rotation waiting on pinned owner (1093ms)",
+    "WA_disconnect_controls": "ordinary provider POST before real disconnect passed (772ms); confirmed initial receipt after disconnect committed following pinned POST passed (663ms)",
+    "CP2_strict_natural_session_250ms": "passed: natural signed-session expiry/equal-duration live-control test completed with its strict <250ms assertion reached and passing (3849ms)",
+    "CP2_batch": "initial 1000 updates 4980.730ms; replay 1000 updates 3329.615ms; full case passed (8343ms), including following count/replay/malformed/oversize/echo/read assertions",
+    "native_dispatch_locks": "same-account IG, independent-account, and formatted WhatsApp groups passed (case 740ms; file 1732ms)",
+    "P2002": "real P2002 rollback/exact-readback/retry test passed (582ms), including count-three and nine-oracle assertions",
+    "ACK": "4/4 passed (file 3744ms)",
+    "query_boundaries": "5/5 passed (file 9060ms)",
+    "CSV": "1/1 passed (file 1525ms)",
+    "CP2_final_clock": "9/9 passed (file 20164ms)",
+    "residual_pin_and_live_telemetry": [
+      "CP2_MAPPING_LIVE_CLOCK: expiresInSeconds=75; actualLifetimeMs=75000; remainingAtQueueMs=74883; remainingBeforeReleaseMs=72679; remainingAtCompletionMs=72550; holdDurationMs=2203.737671; elapsedMs=2390.540218; holderDurationMs=2394.174261; waiterObservedBeforeRelease=true",
+      "CP2_CALLBACK_LIVE_CLOCK: actualLifetimeMs=75000; remainingAtQueueMs=74954; remainingBeforeReleaseMs=72751; remainingAtCompletionMs=72745; waitDurationMs=2202.152063; elapsedMs=2283.760451; waiterObservedAtQueue=true; waiterObservedBeforeRelease=true"
+    ]
+  },
+  "derivedReportCorrection": {
+    "initialDerivedSha256": "a0a0d86c080214015da03348faef17a4c07ce186fbd63108b946dbefc783ca97",
+    "correctedDerivedSha256": "1561dc6ed6563f3a72406c794ac0179f5c14b312e77536f11ea75e32a808a3fe",
+    "cause": "Validatorinitialsummary incorrectly carried61failurefields/durations despitecorrect64rawfailurebody. Rootdetectedcontradictionandrequiredonlyderivedcorrection fromimmutable64rawlog. Noextra runner/rawchange.",
+    "rootActualRead": "Initialsuite26pass;solefailureCP2residual;IGrotation1093,WAordinary772/ACK663,lockgroups740/P2002582 fromactual64log."
+  },
+  "status": "64freeze ends onlyafterthisrootmatch; fullAPI notGREEN. Native3residual63nowproven, currentadherencestillpending; routinefixturealignment65 thencompleteAPI66/freshcurrentadherence67 planned. AllCP4/primary/human/CP5/6/ALL/assurance/physicalremain."
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "cp3-fixture65-root-reconciliation",
+  "changed": [
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "bytes": 57287,
+      "sha256": "5f2d3da6b64ee64953f04ff927011ef04a8606b9213d29e9a0e79ae752065164"
+    }
+  ],
+  "other260SourcesExact64": true,
+  "productCodeUnchanged": true,
+  "reverseExact64": "e9a904041200a7938731039949f868edd3573f53567cc1d4cfc63633d023f5ee",
+  "scope": "Onlyextra actualmonotonicwait afternaturalexpiry andsafeactualtelemetry/equivalent750expression. Removingexactadditions restoresentireoldbytes, so allremaining11cases/allpriorasserts/helpers unchanged.",
+  "how": "Livefirst/currentBFF/realPG/nativevalidatqueue/realexpiredsessionbeforecontinuedhold preserved. Originaltimeorigins and strict4000/4500/750 bounds; actualstillBlocked queryafteraddedwait. NoDatefake,expiryrewrite/reissue,providerrepeat,retry,skip or thresholdrelax.",
+  "inspection": "Rootfirstpass routineHOW +independentread-onlytest48 confirmsstaticgap. Actual64absdeltaalone doesnotprovewhichsign/cause. Futurepause/clock/setupoverrunstillfails originalbounds.",
+  "tests": "NOTRUN. Writerterminal, onefullAPI66 next; freshcurrentaffectedadherence67 andallCP4/primary/human/latergatesmandatory."
+}
