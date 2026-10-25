@@ -1,0 +1,20 @@
+{
+  "kind": "Protected-template EPS selector companion proposal",
+  "status": "PENDING freshcritique then explicit humanpathvalidation; NO implementation authority granted.",
+  "path": "api-app/test/message-template-management.e2e-spec.ts",
+  "originalBytes": 178069,
+  "originalSha256": "788fe852c821c62533f560eaa14057789ebb5d2e1ed8fb57affa74b5f7e31d1a",
+  "candidateBytes": 178445,
+  "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a",
+  "exactDiff": "template-eps81-selector-proposed.diff",
+  "actualEvidence": "cp4-api80-root-reconciliation.json/raw80: selectedEXPLAINwasmissingpointlookup eps_detail_remote_13, noWITHrequested/unnest; actualcatalogrows50present. Originalfindmatchedanyobservationquery insteadactualcatalogbatch. Exacttiming/causeofeventarrival notinferred.",
+  "change": "SelectexactlyONE actualcatalogWITHrequested+unnest+LATERALquery beforeEXPLAIN andassertALLoriginal50requestIDs+contextKey binds. Neverselectbyplan/indexresult.",
+  "unchanged": "Alloriginalfixtures/cardinalities/assertions/thresholds/index/noSeqScan/50loops/12buffers/limits; no product/schema/index/planner/deps/runtime change. No read/write real.env/private/Meta.",
+  "postApprovalOnly": {
+    "todo": "Add exactAPItest path ExpectedChangedPaths and changeinheritedrow193 fromimmutable toboundedexactselector exception; retain all otherprotectedrows.",
+    "preservation": "Create inherited-public-preservation-v1.3.json asderivedpolicy, immutablev1.2retained. Exactly34remainingrows +thirdapprovedexception containing original/candidate hashes/useradmission/reviewreceipt; twoEvolutionexceptionsunchanged. No policyactivationuntilhumanapproval.",
+    "implementation": "Soleroutineexecutor appliesreviewedexactdiff only afterrootpreimagecheck; then appropriatecurrentcanonicalvalidation, fullall/assurance/physicalgatesremain.",
+    "authorityReason": "TODO User validation: required on deviation and inheritedbyte-exact row explicitly protects this test."
+  },
+  "limits": "This is fixture attribution correction proposal, not proof productionindexdefect or passingtest. API81authorized5pathfixes continue independently. Fullfeature remains incomplete."
+}

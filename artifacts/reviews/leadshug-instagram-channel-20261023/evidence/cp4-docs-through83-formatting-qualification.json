@@ -1,0 +1,12 @@
+{
+  "kind": "Owned documentation formatting qualification",
+  "initialCheck": "git diff --cached --check exited2 on exact four hashed raw/generated evidence paths",
+  "paths": [
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-api.log",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-dispatch.md",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-merge.md",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-review-package.md"
+  ],
+  "findings": "Six trailing-whitespace lines in raw canonical API80 output; EOF blankline in three canonical generated review artifacts. Bytes remain immutable as already root-qualified. No prose/source format finding.",
+  "resolution": "Preserve exact evidentiary bytes. Strict diff --check runs on all other exact staged paths; frozen outputs checked by SHA256 rather than normalized. No source/test/product/policy change."
+}

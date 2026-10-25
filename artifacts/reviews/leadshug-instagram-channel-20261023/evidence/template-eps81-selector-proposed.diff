@@ -1,0 +1,17 @@
+--- a/api-app/test/message-template-management.e2e-spec.ts
++++ b/api-app/test/message-template-management.e2e-spec.ts
+@@ -1309,7 +1309,13 @@
+     const draftQuery = pageQueries.first20;
+     const detailQuery = detailEvents.find((event) => event.query.includes('message_template_operations')
+       && event.query.includes('message_template_submission_receipts') && /LATERAL/i.test(event.query));
+-    const catalogQuery = catalogEvents.find((event) => event.query.includes('message_template_remote_observations') && event.query.includes('remote_template_id'));
++    const catalogQueries = catalogEvents.filter((event) => /WITH\s+requested\s+AS\s*\(/i.test(event.query)
++      && /unnest\s*\(/i.test(event.query) && /CROSS JOIN LATERAL/i.test(event.query)
++      && event.query.includes('message_template_remote_observations'));
++    expect(catalogQueries).toHaveLength(1);
++    const catalogQuery = catalogQueries[0];
++    if (!catalogQuery) throw new Error('Expected the real catalog observation batch query.');
++    expect(JSON.parse(catalogQuery.params)).toEqual([...remoteIds.slice(0, 50), contextKey]);
+     const explain = async (event: typeof queryEvents[number] | undefined) => event
+       ? await prisma.$queryRawUnsafe<Array<{ 'QUERY PLAN': unknown }>>(
+         `EXPLAIN (ANALYZE, BUFFERS, FORMAT JSON) ${event.query}`, ...JSON.parse(event.params) as unknown[])

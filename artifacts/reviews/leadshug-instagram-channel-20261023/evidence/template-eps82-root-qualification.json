@@ -1,0 +1,13 @@
+{
+  "kind": "Root exact EPS82 patch qualification",
+  "candidateExact": true,
+  "other265KnownSourceBytesExact": true,
+  "immutable34RowsExact": true,
+  "approvedExceptions": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "fullCurrentProof": "OPEN; full CP4 consumer continuation first, consolidated full proof later",
+  "path": "api-app/test/message-template-management.e2e-spec.ts",
+  "bytes": 178445,
+  "sha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+}

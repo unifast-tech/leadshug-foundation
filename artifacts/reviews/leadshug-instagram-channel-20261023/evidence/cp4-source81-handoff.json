@@ -1,0 +1,49 @@
+{
+  "kind": "CP4 source81 exact implementation handoff",
+  "allowedWrites": [
+    "api-app/src/domain/channels/channel-display.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14440,
+      "sha256": "dba3edec19d889bf826553199fa6c2e508f11e5dfe6fdb495344682f60d3e228"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 88920,
+      "sha256": "7ac6ec66b7285cffe36cd0e9830f83ed4a1a4b8b530a4a35e4f0a23be47a5a31"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 10346,
+      "sha256": "d7294c9a885217ba85dc25a062c977769c66e1a69437d791ecacd604a2c6d217"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22491,
+      "sha256": "574679d3ad9300295c3cdeb92867158c7ce5661ba51ca66fb0d0853f51b0acee"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 53961,
+      "sha256": "78577cd90c1e769b5e099cf61e97a79ecdaab5735c7599a136db2225484b908e"
+    }
+  ],
+  "required": [
+    "WAprojectorprovider_resource_identities.external_resource_id isMetaPhoneID/Evolutioninstance, notbusinessphone. BOTHbatchqueries enforceexactcurrentchannel/provider/bu/business/retirement plusOFICIALexternal=c.phone_number_id, NAOexternal=c.evolution_instance_name, IGexternal=businessaccount. Preserve native namespaces/currentcredential username/neutralambiguousgraphs/noHTTP/decrypt/SQLbudgets.",
+    "BFFlist/thread legacycontact fields mustnotexposeIG/unknownopaquepeer. SanitizeonlyBFFreadDTOusingproven display/platform, preserve WAcontactcompatwherequalified. Do NOT rewrite Conversation.contact/db/WS or publicv1/domainrawcontactdata, donotinferviaphoneregex/BUphone/firstchannel. ClientnullablecontractupdatedlaterUI. No removingnativeprivacyassert.",
+    "Conversation listing orderedsubquery insideonejoinedpageSQL: SELECT cv.* FROMconversationscv withsamefilters ORDER BY COALESCE(last_message_at, created_at)DESC,idDESC OFFSET/LIMIT BEFOREbusinessUnit/sectorjoin, outerstableequivalentorder. Thisretainsoldstructuraloracle/indexedmeaning withunambiguousinnercolumns,3domainqueries,zero message hydration. No comment/evasion/testedit.",
+    "Knownhistoricalsubscription reattach: alreadySubscribed branchmustatomicallyfencecurrentactor/exactowner/channel/gen/currentcredentialversion beforeupdatingattempt andchannelproviderstate. Ifcurrentreceiptabsent channelCONECTANDO+SUBSCRIBED_PENDING_RECEIPT; neverclaimreceipt/CONNECTED, neverHTTPPOST. Ifreceiptpresent preserveconnectedfacts. Do notweaken assertMappedSubscriptionResult/clock/session/ownershipchecks. Actual80HTTP409code notprinted; ifanothercauseexists, sourcequalifyit, no guessingorwidening.",
+    "Legacy>2fixture createoneprovedOFICIAL +onelegacyOFICIAL(nullbusiness) +onelegacyNAO_OFICIAL(nullbusiness withvalidinstance shape), honoring bothpartialuniqueindexes. Keep3rows/409/zeroMeta oracles; no schema/constraintdisable.",
+    "PriorPOSTuncertain reconnectfixture mustrespectreal10sresourcecooldown BEFOREsecondconfirm (actualglobaltimestamp/deadlineelapsed boundednativewait, not rewritingtimestamps orsleepfake). Preservemarker andzeroadditionalPOST/actualGET/UNCERTAIN/context assertions; no cooldownthresholdchange orblindrequestretry. Nativehelpermay add failurediagnostic only HTTPstatus+safe code allowlist, no payload/token/state printing."
+  ],
+  "immutable": "Other261knownsourcepaths/allprotectedtemplates/tests/limits/rawcanonicalContactdata/schema/migrations/deps/RootGitindex. No broadinventory orother source/path changes.",
+  "readAuthority": "Exact266publicsourcepaths enumerated cp4-api80-frozen-manifest.json +currentT+thishandoff+cp4-api80-root-reconciliation.json+raw80log. Individualnamedfiles only; never rg/cat source/evidence directories. GovernanceAGENTS/Delphinamedinstructionsallowed.",
+  "forbidden": "No tests/build/lint/runtime/provider/network/Git/status/private/env discovery orFoundation writes. Rootownsevidence/T. No sourcewriter/runner overlap.",
+  "next": "Terminalhashbytes/rationale, rootqualify actualdiff; protectedEPSproposal separate. Thenonecurrentcanonicalproof, fullReactV2/HTTPSbrowser/alllatergatesmandatory."
+}

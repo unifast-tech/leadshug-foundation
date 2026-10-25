@@ -1,0 +1,38 @@
+{
+  "kind": "Source81/81a root qualification",
+  "changed": [
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90997,
+      "sha256": "805759928260a6bfb80e2247aff3b2b5136e6135009b19fb32feb1febd40b06e"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 10463,
+      "sha256": "71312450799a964ef6057330fdcdddaa0a98246e2caef4b0ad305ffa98412e6a"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22627,
+      "sha256": "c9544b159c1aaeb984c94bf20726b0da1416a95afb2c213f5e6a7181f8c2b516"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 54746,
+      "sha256": "5e2643c3417c8b899eac40c4cf671921988eee1200aa8070b87a9fefcddf9b1d"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14864,
+      "sha256": "667ec21d2a44e54e9adcbb0abd1db72583776105a57b2e2bb2c8eaed1d3d74e6"
+    }
+  ],
+  "other261Exact": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "separateFormalReviewInputsAll8Exact": true,
+  "staticReview": "Providerexternal IDs qualifiedperadapter inboth batchqueries. BFFcontactnullonlyIG/unknownprojection; canonicalrawContact/database/WS/publicv1untouched. Actualorderedinnerone-table COALESCE unqualified/outerqualified correctsactual80structuralmatcher while retainingindexsemantics. Exacttuple/actor/credential/identityfencedknownsubscriptionreattach restorespendingreceiptstateonlywhenreceiptabsent, preservesreceipt-presentfacts andupdatedAt; no extraPOST. Legacyfixturevalidoneperlegacyadapter; uncertainreconnectawaitsrealDBclockglobal10s+25ms, no timestamprewrite.",
+  "notRun": "No lint/build/unit/E2E/runtime/provider executed by writer/rootqualification. Missinglateoracles remainunproven untilcurrentrun.",
+  "limits": "ProtectedEPSproposal remainsunapplied/active35preservations unchanged whilefreshcritique runs. CurrentT frozenforreview, noteditedhere.",
+  "next": "After critique/humanprotectedpathvalidation applyexactadmittedtestdiff thenonecurrentfullcanonicalAPI. ContinuewholeReact/HTTPSbrowser/primary/alllatergates; no backend-onlydelivery."
+}

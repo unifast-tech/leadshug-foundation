@@ -1,0 +1,81 @@
+{
+  "kind": "CP4API80 root actual reconciliation",
+  "all266SourcesCurrentT665Inputs35Preservations3IndexExact": true,
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-before.json",
+      "bytes": 424033,
+      "sha256": "828be52b64b09e2fd37a2dd7ad99a419cc0abd4346ac87ad8b80596c7c7552ca"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-api.log",
+      "bytes": 267076,
+      "sha256": "46257554ef12a358975c2f00719eb30582ef0a1784d5d34d218c14d33197737c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-after.json",
+      "bytes": 444469,
+      "sha256": "421702fe5fe03d1447525d1a6a48238b539a3f24b67f225907a623e113a94fbe"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-result.json",
+      "bytes": 6268,
+      "sha256": "194c2de9e6a7bb0382684056c1efa4a65ee8ff85234568f2ba7a5a29e890f8fe"
+    }
+  ],
+  "actualResult": {
+    "parityProbes": 26,
+    "migrations": 31,
+    "schemaCurrent": true,
+    "lint": true,
+    "build": true,
+    "unitTests": 433,
+    "unitFiles": 39,
+    "e2ePassed": 604,
+    "e2eFailed": 7,
+    "e2ePassedFiles": 54,
+    "e2eFailedFiles": 4,
+    "e2eDurationSeconds": 634.01
+  },
+  "failures": [
+    {
+      "test": "test/conversation-start.e2e-spec.ts > manual conversation open (PostgreSQL) > keeps OUT-heavy QUEUED inbox listing batched and performs no per-row IN/message hydration",
+      "details": "AssertionError: expected false to be true // Object.is equality\n\n- Expected\n+ Received\n\n- true\n+ false\n\n \u276f test/conversation-start.e2e-spec.ts:192:114\n    190|     const messageQueries = queries.filter((query) => /\\bmessages\\b/i.t\u2026\n    191|     expect(conversationQueries).toHaveLength(3); // count + ordered pa\u2026\n    192|     expect(conversationQueries.some((query) => /ORDER BY COALESCE\\(las\u2026\n       |                                                                                                                  ^\n    193|     expect(conversationQueries.filter((query) => /\\bid\\b.*\\bIN\\b/i.tes\u2026\n    194|     expect(messageQueries).toHaveLength(0);\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[1/7]\u23af"
+    },
+    {
+      "test": "test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > makes a legacy type-only WhatsApp operation conflict when more than two compatible rows exist",
+      "details": "PrismaClientKnownRequestError: \nInvalid `prisma.buChannel.createMany()` invocation in\n/workspace/api-app/test/instagram-cp4-connections.e2e-spec.ts:366:28\n\n  363 await criarCanalVerificado(prisma, buId, 'OFICIAL', 'synthetic-cp4-phone-a', {\n  364   provedBusinessPhone: phone, provedWabaId: 'synthetic-cp4-waba',\n  365 });\n\u2192 366 await prisma.buChannel.createMany(\nUnique constraint failed on the fields: (`bu_id`,`type`)\n \u276f ei.handleRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:228:13\n \u276f ei.handleAndLogRequestError node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12\n \u276f ei.request node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12\n \u276f a node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24\n \u276f test/instagram-cp4-connections.e2e-spec.ts:366:5\n    364|       provedBusinessPhone: phone, provedWabaId: 'synthetic-cp4-waba',\n    365|     });\n    366|     await prisma.buChannel.createMany({ data: ['synthetic-cp4-phone-b'\u2026\n       |     ^\n    367|       buId, type: 'OFICIAL' as const, phoneNumberId, businessIdentityI\u2026\n    368|     })) });\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[2/7]\u23af"
+    },
+    {
+      "test": "test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > reattaches an absent-credential same-account channel with a mapped-history version and requires a new-generation receipt",
+      "details": "Error: expected 200 \"OK\", got 409 \"Conflict\"\n \u276f authorize test/instagram-cp4-connections.e2e-spec.ts:94:63\n     92|     const confirmBody = operation === 'CONNECT' ? {} : { expectedGener\u2026\n     93|     const confirmed = await bff('post', `/api/bff/instagram-authorizat\u2026\n     94|       .set('idempotency-key', randomUUID()).send(confirmBody).expect(2\u2026\n       |                                                               ^\n     95|     const attempt = await prisma.instagramAuthorizationAttempt.findUni\u2026\n     96|     const channel = attempt.channelId\n \u276f test/instagram-cp4-connections.e2e-spec.ts:613:29\n \u276f Test._assertStatus node_modules/supertest/lib/test.js:309:14\n \u276f node_modules/supertest/lib/test.js:365:13\n \u276f Test._assertFunction node_modules/supertest/lib/test.js:342:13\n \u276f Test.assert node_modules/supertest/lib/test.js:195:23\n \u276f localAssert node_modules/supertest/lib/test.js:138:14\n \u276f fn node_modules/supertest/lib/test.js:156:7\n \u276f Test.callback node_modules/superagent/src/node/index.js:904:3\n \u276f fn node_modules/superagent/src/node/index.js:1183:18\n \u276f IncomingMessage.<anonymous> node_modules/superagent/src/node/parsers/json.js:19:7\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[3/7]\u23af"
+    },
+    {
+      "test": "test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > keeps the global prior-POST uncertainty fence across disconnect and reauthorization",
+      "details": "Error: expected 200 \"OK\", got 429 \"Too Many Requests\"\n \u276f test/instagram-cp4-connections.e2e-spec.ts:710:97\n    708|       .query({ state: new URL(next.body.authorizationUrl).searchParams\u2026\n    709|     const nextConfirm = await bff('post', `/api/bff/instagram-authoriz\u2026\n    710|       .set('idempotency-key', randomUUID()).send({ expectedGeneration:\u2026\n       |                                                                                                 ^\n    711|     expect(nextConfirm.body.subscriptionState).toBe('UNCERTAIN');\n    712|     expect(instagramFake.calls.filter((call) => call.method === 'POST'\u2026\n \u276f Test._assertStatus node_modules/supertest/lib/test.js:309:14\n \u276f node_modules/supertest/lib/test.js:365:13\n \u276f Test._assertFunction node_modules/supertest/lib/test.js:342:13\n \u276f Test.assert node_modules/supertest/lib/test.js:195:23\n \u276f localAssert node_modules/supertest/lib/test.js:138:14\n \u276f fn node_modules/supertest/lib/test.js:156:7\n \u276f Test.callback node_modules/superagent/src/node/index.js:904:3\n \u276f fn node_modules/superagent/src/node/index.js:1183:18\n \u276f IncomingMessage.<anonymous> node_modules/superagent/src/node/parsers/json.js:19:7\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[4/7]\u23af"
+    },
+    {
+      "test": "test/instagram-cp4-display.e2e-spec.ts > Instagram CP4 safe conversation display (real Nest, sessions and PostgreSQL) > projects two same-peer IG accounts safely across a real 50-row paged inbox and current credential mapping",
+      "details": "AssertionError: expected '{\"total\":50,\"pagina\":1,\"temMais\":fals\u2026' not to contain 'opaque-cp4-display-shared-3ab519db-bb\u2026'\n\n- Expected\n+ Received\n\n- opaque-cp4-display-shared-3ab519db-bbfa-4c0c-ad84-3141a10ee7f8\n\n \u276f test/instagram-cp4-display.e2e-spec.ts:170:32\n    168|     expect(serializedList).not.toContain(accountA);\n    169|     expect(serializedList).not.toContain(accountB);\n    170|     expect(serializedList).not.toContain(sharedPeer);\n       |                                ^\n    171|     expect(serializedList).not.toMatch(/synthetic-(?:long-lived|short)\u2026\n    172|     expect(providerCallCounts()).toEqual(providerCallsBeforeRead);\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[5/7]\u23af"
+    },
+    {
+      "test": "test/instagram-cp4-display.e2e-spec.ts > Instagram CP4 safe conversation display (real Nest, sessions and PostgreSQL) > uses the qualified WhatsApp business identity and recipient address, not contradictory BU or provider metadata",
+      "details": "AssertionError: expected null to be 'WHATSAPP' // Object.is equality\n\n- Expected: \n\"WHATSAPP\"\n\n+ Received: \nnull\n\n \u276f test/instagram-cp4-display.e2e-spec.ts:369:35\n    367|     const row = (result.body.conversations as ListedConversation[]).fi\u2026\n    368|     expect(row.display).toBeDefined();\n    369|     expect(row.display!.platform).toBe('WHATSAPP');\n       |                                   ^\n    370|     expect(row.display!.instagramUsername).toBeNull();\n    371|     expect(row.display!.recipientPhone?.replace(/\\D/g, '')).toBe(recip\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[6/7]\u23af"
+    },
+    {
+      "test": "test/message-template-management.e2e-spec.ts > scoped template-management provider (PostgreSQL) > measures scoped draft and observation reads against high-cardinality PostgreSQL fixtures",
+      "details": "AssertionError: expected '[{\"Plan\":{\"Node Type\":\"Limit\",\"Parall\u2026' to contain 'mt_observation_context_remote_uq'\n\nExpected: \"mt_observation_context_remote_uq\"\n\n \u276f test/message-template-management.e2e-spec.ts:1443:29\n    1441|     expect(Number(operationScan?.['Actual Loops'] ?? Number.POSITIVE_I\u2026\n    1442|     const catalogPlanText = JSON.stringify(catalogPlan[0]?.['QUERY PLA\u2026\n    1443|     expect(catalogPlanText).toContain('mt_observation_context_remote_u\u2026\n       |                             ^\n    1444|     expect(catalogPlanText).not.toContain('Seq Scan');\n    1445|     const catalogPlanRoot = (catalogPlan[0]?.['QUERY PLAN'] as Array<{\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[7/7]\u23af\n\n Test Files  4 failed | 54 passed (58)\n      Tests  7 failed | 604 passed (611)\n   Start at  04:35:45\n   Duration  634.01s (transform 10.33s, setup 291ms, collect 102.28s, tests 520.75s, environment 10ms, prepare 3.33s)\n\n Container leadshug_channels_validation-validation-postgres-1  Stopping\n Container leadshug_channels_validation-validation-postgres-1  Stopped\n Container leadshug_channels_validation-validation-postgres-1  Removing\n Container leadshug_channels_validation-validation-postgres-1  Removed\n Volume leadshug_channels_validation_channels_playwright_cache  Removing\n Volume leadshug_channels_validation_channels_web_node_modules  Removing\n Volume leadshug_channels_validation_leadshug_pg_data  Removing\n Volume leadshug_channels_validation_channels_api_workspace  Removing\n Volume leadshug_channels_validation_validation_pg_data  Removing\n Volume leadshug_channels_validation_channels_web_workspace  Removing\n Volume leadshug_channels_validation_channels_api_node_modules  Removing"
+    }
+  ],
+  "qualifiedHOW": [
+    "OUT-heavy structural SQL oracle: joinedpage alias nowbreaksunqualifiedCOALESCE matcher. Preserve nativeorderedpagedsubquery beforeBU/sectorjoins, no comment/testevasion.",
+    "Legacy3rowfixture remainsinvalidbecause legacy partialunique bu/type permitsone pertype. Useoneprovedofficial+onelegacyofficial+onelegacynonofficial, nottwolegacyofficial. Constraintsremainexact.",
+    "Absentcredentialreauth alreadySubscribedbranch updatesattempt but notrestoredchannel providerstate; final currentmappedassert demands SUBSCRIBED_PENDING_RECEIPT. Add exactcurrenttuple atomicCAS/no newreceipt orPOST; retain live knownreceipt. 409bodycode notprinted, so this isstaticqualifieddefect, notprovenactualcode.",
+    "PriorPOSTsecondconfirm occursinside10scooldown; preservecooldown/globalmarker andwaitactualeligibleclockbeforeconfirmation, no backdate/thresholdchange/repeatPOST.",
+    "IG safeDisplay objectcorrect but legacyBFFcontact stillleaksopaquepeer. SanitizeBFFlist/thread only usingqualifieddisplay, notcanonicalDB/WS/publicWAv1.",
+    "WAprojector incorrectlyrequires providerexternalID=businessphone; actualMetaPhoneID/Evolutionname distinct. Enforcecurrentprovider/capturedownproviderID +sharedbusinessassociation; equalityaccountforIGonly.",
+    "TemplateEPS capturedplan ispointlookup eps_detail_remote_13, lacksactualcatalogWITHrequested/unnest. Protectedtestselector too broad; proposal/review/userpathvalidation required beforeanyedit. No index/planner/OS inference."
+  ],
+  "reached": "Nativecatalog/currentUUID/WArace/durableverify/heldcallback/heldsubscription/live-reauth/wrongaccount/realtime positive passed; display50 paging/strictqueryread-only reached beforeopaquecontactfailure. All later assertions after eachfailure remainunreached.",
+  "next": "Bounded5pathsource81 repairs; independentlyreviewprotectedEPSselectorproposal. ThenwholecurrentAPIvalidation andentireReact/HTTPSbrowser/primary/human/alllatergates. No featureacceptance."
+}

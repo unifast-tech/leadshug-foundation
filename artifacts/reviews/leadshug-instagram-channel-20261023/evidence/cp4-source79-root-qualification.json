@@ -1,0 +1,27 @@
+{
+  "kind": "Source79/79a terminal root qualification",
+  "changed": [
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 88920,
+      "sha256": "7ac6ec66b7285cffe36cd0e9830f83ed4a1a4b8b530a4a35e4f0a23be47a5a31"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 12318,
+      "sha256": "e14cce0eb51ba98b05fa15dc6776680313f46898b13d0ef50b0d3f3070f78813"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 53961,
+      "sha256": "78577cd90c1e769b5e099cf61e97a79ecdaab5735c7599a136db2225484b908e"
+    }
+  ],
+  "other263Exact": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "staticReview": "Narrow exactmetadata propertyposition exemption; allpriorprovidernegativecases retained, added same-name import/type/local/directcall/propertydispatch/elementdispatch cases anddata/Datepositives. No genericnameglobalexemption. DTOadds onlylocalchannelId/originalexpectedGeneration; nativepreconfirmGETchecks capturedoperation/binding+exactprivatekey/valueabsence.",
+  "incident": "cp4-source79-read-boundary-incident.json retained; broadreadnotreplayed, noactualprivateexposureinferred.",
+  "notRun": "No lint/build/unit/E2E/runtime/provider run by writer/root qualification. Allbehavior requiresactual80.",
+  "next": "One fullAPI80; fresh routine for laterproductwrites, thencompleteReact/HTTPSbrowser/primary/human/CP5/6/assurance/physicalproof."
+}

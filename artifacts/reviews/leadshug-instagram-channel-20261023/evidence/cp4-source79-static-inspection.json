@@ -1,0 +1,19 @@
+{
+  "kind": "Source79 static inspection beforeAPI80",
+  "original79Terminal": "Guard11588/8022bda3; authorization88920/7ac6ec66; native53961/78577cd9; original terminal bytes will be superseded only for unitguard by79a.",
+  "findings": [
+    {
+      "id": "IG-CP4-79-01",
+      "source": "New positive synthetic fixture",
+      "detail": "Generic localvariable metadata itself matches existing Meta prefix scanner/i; use fields in this new fixture. No product rename or existingoracle relaxation."
+    },
+    {
+      "id": "IG-CP4-79-02",
+      "source": "isChannelMetadataProperty",
+      "detail": "Non-call property exemption can hide metadata-named receiver of provider sendMessage/sendText. Explicitly retain detection at such receiver use, add property/string-element/directcall negatives plus Date-data positive."
+    }
+  ],
+  "authorizationDTO": "Safe two localfields only, existingactor/session/tenant conditions preserved.",
+  "nativeHelper": "ActualGETaftercallback/beforeconfirm uses capturedoperation/channel/gen expectations, exact secretkeys/value absence, oldbarriers/HTTP/lifecycle/thresholds preserved.",
+  "proofStatus": "Static only; no tests/build/runtime/provider called. Sameoneguardpath79a repair requested; all265others immutable. Root qualifies terminal beforeONEFULLAPI80."
+}

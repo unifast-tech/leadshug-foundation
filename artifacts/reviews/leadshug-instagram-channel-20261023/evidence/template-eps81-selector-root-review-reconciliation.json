@@ -1,0 +1,53 @@
+{
+  "kind": "FocusedEPS81 proposal critique rootreconciliation",
+  "all8FrozenInputsExact": true,
+  "canonicalRunner": "subagent_review_run.py, closedstdin completepackage, gpt-6.1-sol, strictconfig xhigh in-memoryargvonly, isolatedselfcontainedcontext/read-only/ephemeral; helper/config notmutated.",
+  "turnCompleted": true,
+  "strictMergePassed": true,
+  "assessment": "go",
+  "findings": [],
+  "scope": "Exactunappliedprotectedtestselectorproposal only; no wholefeature, producttestpass or runtimeapproval.",
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-dispatch.json",
+      "bytes": 34510,
+      "sha256": "ca435a2b223e974a9299414e36713edd9cfd600eab95b06b1b631bf044742e10"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-dispatch.md",
+      "bytes": 29078,
+      "sha256": "fc9e263d6d14c0eaf61a84d45cd1c7ca17c739613a7bfe2d7267fb0ca02c426f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-review-package.md",
+      "bytes": 579675,
+      "sha256": "0d0114d6225fc0b8ce2948ba5faa99c41cda6ca57c4b57be7e718d98f538b0d4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-review.raw.json",
+      "bytes": 2238,
+      "sha256": "3f7e0adb6c775a745ab896255627455434e6cc9d25c9d08f3488cad0a78d40ab"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-review.events.jsonl",
+      "bytes": 2651,
+      "sha256": "db604c5c2510326243dbd45fe61ca6b97846db51b06884471d627d8e4102e335"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-review.stderr.log",
+      "bytes": 1608,
+      "sha256": "5033cc6e36f7724550363cb214c1bbbee1c755f0e75181f68df75be76e779ac4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-merge.json",
+      "bytes": 2606,
+      "sha256": "46cc65d13d5051abb706ddd342b6cc86a587c06c6166a6b5ee36d2202bc1d5ae"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-merge.md",
+      "bytes": 4381,
+      "sha256": "68501e0bd0c6629a55e1238bd18b6596102472a3c518ced66db29dfa78d4630a"
+    }
+  ],
+  "next": "Ask explicit humanpathvalidation. Original35preservations/v1.2stillactive. ContinueindependentalreadyauthorizedwholeCP4workwithopenAPI81proof; no backend-onlydelivery."
+}

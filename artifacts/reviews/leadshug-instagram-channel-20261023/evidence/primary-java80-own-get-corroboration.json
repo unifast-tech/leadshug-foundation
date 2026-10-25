@@ -1,0 +1,19 @@
+{
+  "kind": "Public primary SDK80 corroboration only",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/facebook/facebook-java-business-sdk/main/src/main/java/com/facebook/ads/sdk/IGUserForIGOnlyAPI.java",
+      "bytes": 129229,
+      "sha256": "4221456d84f141f22b6167810f463fcf07132b594519cf4b12a2cdb8cee7db18",
+      "fact": "IGOnly APIRequestGetSubscribedApps uses GET /subscribed_apps, emptydeclaredFIELDS, parses APINode (generic). No IGUserSubscribedAppsData target reference inmethod."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebook/facebook-java-business-sdk/main/src/main/java/com/facebook/ads/sdk/IGUserSubscribedAppsData.java",
+      "bytes": 9047,
+      "sha256": "cc9f78ec71eda7e640a39044710c4b94fe59e580dfc0b0596081e96edc32739a",
+      "fact": "Separate type declares app_id string/subscribed_fields list; notlinked toobservedIGOnlyGET target."
+    }
+  ],
+  "qualification": "Corroborates partial PythonSDK75 edge existence. Does NOT close primaryownID namespace/visibility/completeness/wireprotocol orauthorizeemptyabsence. Main mutablepublicrefs/hashes captured; no dependency orsourcechange, runtime/Meta/token/SDKinstallation orproviderprobe.",
+  "researchLimits": "Websearch returned largely thirdparty descriptions, not relied on as technicalauthority. Primarygap remains OPEN; no production inference or tests/acceptance claimed."
+}

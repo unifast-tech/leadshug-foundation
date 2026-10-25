@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API78 passedlint/build/425of426unit, ASTguard falselyclassifiesmetadata. Repair79 narrowguard+safeOAuthresumeDTO/nativeasserts, thenONEFULLAPI80. Complete strictV2React/HTTPSbrowser andalllatergates remainrequired.
+- **Next exact step:** API80 completed:433unit and604/611E2E pass. Repair81 qualified projection/lifecycle/fixture failures; prepare reviewed protected-template EPS-selector admission while authorizedwork continues. Then complete strictV2React/HTTPSbrowser andalllatergates.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -190,7 +190,7 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | test/dispatch-admission.e2e-spec.ts | A,M,?? | Canonical fixture/qualified lookup/context adaptations only; preserve all scenarios/assertions/counters and deliberate v1 cutover cases; baseline hash retained, final freeze lifted per IG-CRIT-R1-01 |
 | API | test/message-template-bff.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
 | API | test/message-template-drafts.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
-| API | test/message-template-management.e2e-spec.ts | ?? | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
+| API | test/message-template-management.e2e-spec.ts | A,M,?? | Exact user-validated EPS catalog selector diff only; original/candidate hashes and critique bound in evidence/template-eps82-user-admission.json; all original performance/index assertions retained |
 | API | src/integrations/evolution/evolution.client.spec.ts | M | Limited user-validated Evolution observation guard/unit tests; exact scope and original hashes in evidence/evolution-observation-companion-user-validation.json; no unrelated mutation |
 | API | src/integrations/evolution/evolution.client.ts | M | Limited user-validated Evolution observation guard/unit tests; exact scope and original hashes in evidence/evolution-observation-companion-user-validation.json; no unrelated mutation |
 | API | src/integrations/meta/meta.client.spec.ts | M | Inherited public source ONLY; byte-exact baseline hash required, NO new Instagram mutation |
@@ -1861,3 +1861,33 @@ Root independently matched266sources/FULLT/647positiveinputs/35preservations/3gi
 #### Source79 read-boundary incident
 
 Solewriter selfreported recursive rg overentireevidencedirectory ratherthannamedpositiveinputs; outputtruncated/exitunknown, no privatecontent/value visiblyobserved perreport. Rootdidnotreplay/enumerateresults orinfervalueexposure. `evidence/cp4-source79-read-boundary-incident.json` recordscontainment/limits. Laneconfinedagain toexact3sourcewrites/namedinputs; terminalhashreconciliationrequired, futureimplementationfreshboundedroutine. No expandedprivate/runtime/providerauthority.
+
+### CP4 source79/79a terminal — API80 freeze
+
+Root independently matched3reportedcurrenthashes/263othersources/35preservations/3gitlinks. NarrowASTmetadatafixretainsalloldcouplingcontrols andadds7negativeuses plusdata/Datecontrols; static79acorrecionsavoidsyntheticmetadata-localfalsepositive andblockmetadata-namedsendreceivers. Safegetadds onlylocalchannelId/originalnullableexpectedGeneration; nativeactualpreconfirmGETchecks capturedbinding/privacy. TestsNOTRUNbywriter; no E2Epassinferred. Incident79retainedwithoutprivateexposureinference.
+
+Allwriters terminal. Freeze266sources/FULLcurrentT/positiveinputs/35preservations/3gitlinks for exactlyONEFULLcanonicalAPI80, fouruniqueoutputs only. No source/T/inputwrites/retry/autofix/private/operationalruntime/provider/Git expansion. Rootreconcile actual80rawfacts; thenfreshboundedroutineforwholeReactV2+HTTPSbrowser/alllatergates. No backend-onlydelivery.
+
+### CP4 API80 full terminal — qualified repair81 and protected EPS proposal
+
+Root independently matched266sources/FULLT/665inputs/35preservations/3gitlinks andallfour80outputs. Raw267076bytesSHA46257554ef12a358975c2f00719eb30582ef0a1784d5d34d218c14d33197737c.26parity/31migrations/schema/lint/buildPASS;433unit39filesPASS;604/611E2E,54/58filesPASS,634.01s. CP4catalog/realtime actualpositivePASS,8/11lifecyclePASS,2displayFAIL. Sevenactualfailuresandunreachedoracles inrootreceipt, no old66/73countsreused.
+
+Freeze80endedafterrootreceipt. Solefresh81writer5admittedpaths correctsWAproviderID/businessphoneprojection, BFFsafecontactonly (canonicalDB/WS/publicWAv1preserved), nativeorderedpagedsubquery, currenttuplechannelstatewhenreattachingknownsubscription, valid3rowlegacyfixture andreal10scooldowneligibility beforepriorPOSTreauth. Alloldtests/thresholds/constraints/no-repeatPOST preserved. ProtectedtemplateEPSplanselector pickedapointquery eps_detail_remote_13 ratherthancatalogWITHrequested/unnest; exactproposal/freshreview/humanpathvalidation required beforeediting protectedtest. No templateproduction/indexchange orOS/flakinesscauseinference. Authorizedworkcontinues; wholeReactV2/HTTPSbrowser/primary/human/CP5/6/allassurance/realgatesremainmandatory.
+
+#### Protected template EPS selector proposal81 — not applied
+
+`evidence/template-eps81-selector-proposal.json` andexactdiff proposechangingonlyprotectedtestcatalogeventselector: exactlyoneactualWITHrequested/unnest/LATERALbatch andall50IDs+contextKeybindassert, preservingallindex/noSeqScan/buffer/loop/cardinalityassertions. Wrongpointplan80isactualproof; exactasynceventarrivalcauseunknown. Freshcritiqueandhumanpathvalidationrequired beforeimplementation/preservationv1.3activation; original35rows/v1.2remainactive meanwhile. Source81otherfivepathscontinue, no protectedtestmutationauthorized.
+
+#### Focused EPS81 critique terminal — human path validation pending
+
+Freshcanonicalgpt-6.1-sol/xhighclosedstdinfullpackage reachedturn.completed; strictmergeGO/no findings. Rootmatchedall8frozeninputs/T/test/service/migrations/proposal/diff/80receipt andoutputs. `template-eps81-selector-root-review-reconciliation.json` recordslimits: exacttest-onlyproposal, noimplementation/testpass/fullfeatureacceptance. Reviewedtesthashremainsoriginal788fe852,35preservations/v1.2active. Askhumanvalidationbeforeapply; independentapprovedCP4UIwork maycontinuewith81proofopen, no waiverofcurrentfullAPI/ALL/browser/assurance/primary/physicalgates.
+
+Source81/81aterminal rootqualified5changed/261exact/35preservations/3gitlinks. `cp4-source81-root-qualification.json` bindscurrenthashes andstaticlimits; no newtestexecclaim. CurrentfullAPIproofmustbeobtainedonconsolidatedsourcesbeforeacceptance; missingprotectedEPSadmissionnotreasonforbackend-onlystop.
+
+### Exact EPS82 human path admission
+
+User validated the reviewed test-only selector adjustment. `evidence/template-eps82-user-admission.json` binds the reply, exact original/candidate hashes and fresh critique. Active preservation policy is now v1.3: 34 immutable rows and 3 bounded approved exceptions; v1.2 remains historical and unchanged. Sole routine executor may apply only `template-eps81-selector-proposed.diff`; no other test, product, schema, index, budget or runtime change. Root verifies exact candidate plus 265 other sources before consolidated validation. Whole CP4 UI work may continue with current API proof open; no gate waiver or backend-only delivery.
+
+### CP4 React83 whole consumer handoff
+
+Root matched exact EPS82 candidate and 265 other source bytes, 34 immutable preservation rows/3 bounded exceptions/root gitlinks. No current test pass is claimed. Sole fresh routine Operational/Coder now owns only the 7 existing +4 new exact React paths in `evidence/cp4-react83-handoff.json`; all other known API/Web bytes preserved by `cp4-react83-preimages.json`. This is the already approved whole CP4 consumer: common connection catalog, full-navigation Instagram lifecycle, strict V2 composer, qualified draft/revision/action fences and preserved WhatsApp flows. Source work proceeds while consolidated API proof is open; no runtime/provider/private/dependency/global-config authority. Root reconciles terminal source before canonical web/API/browser proof; all primary/CP5/CP6/assurance/physical gates remain mandatory.

@@ -1,0 +1,11 @@
+{
+  "kind": "Exact protected EPS selector human admission",
+  "userReply": "Validar ajuste pontual do teste",
+  "questionItemId": "call_724cbcfec40a4ecc8b22b162e1a8bf91",
+  "proposal": "template-eps81-selector-proposal.json",
+  "review": "template-eps81-selector-root-review-reconciliation.json",
+  "path": "api-app/test/message-template-management.e2e-spec.ts",
+  "originalSha256": "788fe852c821c62533f560eaa14057789ebb5d2e1ed8fb57affa74b5f7e31d1a",
+  "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a",
+  "scope": "Exact reviewed diff only. All other test/index/performance/product/privacy/runtime boundaries preserved."
+}

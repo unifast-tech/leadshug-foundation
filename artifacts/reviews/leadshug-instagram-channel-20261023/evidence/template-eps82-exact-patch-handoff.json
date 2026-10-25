@@ -1,0 +1,20 @@
+{
+  "profile": "Operational/Coder",
+  "routing": "routing-template-eps82.json",
+  "goal": "Apply exact human-admitted reviewed EPS selector diff, then stop for root qualification. No tests or other edits.",
+  "readPaths": [
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps82-user-admission.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-proposed.diff",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-proposal.json",
+    "api-app/test/message-template-management.e2e-spec.ts"
+  ],
+  "writePaths": [
+    "api-app/test/message-template-management.e2e-spec.ts"
+  ],
+  "originalSha256": "788fe852c821c62533f560eaa14057789ebb5d2e1ed8fb57affa74b5f7e31d1a",
+  "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a",
+  "candidateBytes": 178445,
+  "forbidden": "No other product/docs writes; no directory search/Git/env/private/runtime/provider/build/lint/test/process inspection/worktree/deps. Only exact named reads.",
+  "completion": "Exact candidate hash and bytes, name only changed path; terminal."
+}

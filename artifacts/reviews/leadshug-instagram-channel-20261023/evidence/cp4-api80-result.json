@@ -1,0 +1,162 @@
+{
+  "kind": "cp4-api80-result",
+  "scenario": "ST-IG-03 complete API canonical disposable synthetic validation",
+  "canonicalCommand": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "canonicalExitCode": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-api.log",
+    "bytes": 267076,
+    "sha256": "46257554ef12a358975c2f00719eb30582ef0a1784d5d34d218c14d33197737c",
+    "lineCount": 1506
+  },
+  "stages": {
+    "runnerSetup": "completed; canonical disposable synthetic runner and cleanup completed",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": true,
+      "guard": "channels-ci-parity-v1",
+      "mutationsRejected": 26,
+      "outerWrapperControlsPresent": true
+    },
+    "prismaClientGeneration": {
+      "reached": true,
+      "passed": true
+    },
+    "prismaMigrateDeploy": {
+      "reached": true,
+      "passed": true,
+      "migrationsFound": 31,
+      "allMigrationsApplied": true,
+      "databaseSchemaUpToDate": true
+    },
+    "apiLint": {
+      "reached": true,
+      "passed": true,
+      "evidence": "canonical runner proceeded to API build"
+    },
+    "apiBuild": {
+      "reached": true,
+      "passed": true,
+      "evidence": "canonical runner proceeded to API unit suite"
+    },
+    "apiUnitTests": {
+      "reached": true,
+      "passed": 433,
+      "failed": 0,
+      "testFilesPassed": 39,
+      "testFilesFailed": 0,
+      "totalTests": 433,
+      "durationSeconds": 4.88
+    },
+    "apiE2ETests": {
+      "reached": true,
+      "passed": 604,
+      "failed": 7,
+      "testFilesPassed": 54,
+      "testFilesFailed": 4,
+      "totalTests": 611,
+      "totalTestFiles": 58,
+      "durationSeconds": 634.01
+    }
+  },
+  "actualFailures": [
+    {
+      "file": "test/conversation-start.e2e-spec.ts",
+      "test": "manual conversation open > keeps OUT-heavy QUEUED inbox listing batched and performs no per-row IN/message hydration",
+      "decisive": "assertion at line 192 expected true; observed false for expected ORDER BY COALESCE(...) query shape"
+    },
+    {
+      "file": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "makes a legacy type-only WhatsApp operation conflict when more than two compatible rows exist",
+      "decisive": "synthetic fixture `buChannel.createMany` failed unique constraint `(bu_id,type)` before behavior assertion"
+    },
+    {
+      "file": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "reattaches an absent-credential same-account channel with a mapped-history version and requires a new-generation receipt",
+      "decisive": "authorization confirmation expected HTTP 200; observed 409 Conflict"
+    },
+    {
+      "file": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "keeps the global prior-POST uncertainty fence across disconnect and reauthorization",
+      "decisive": "authorization confirmation expected HTTP 200; observed 429 Too Many Requests; later fence assertions unreached"
+    },
+    {
+      "file": "test/instagram-cp4-display.e2e-spec.ts",
+      "test": "projects two same-peer IG accounts safely across a real 50-row paged inbox and current credential mapping",
+      "decisive": "serialized response contained the synthetic opaque shared peer in the `contact` field; privacy assertion failed"
+    },
+    {
+      "file": "test/instagram-cp4-display.e2e-spec.ts",
+      "test": "uses the qualified WhatsApp business identity and recipient address, not contradictory BU or provider metadata",
+      "decisive": "expected display.platform `WHATSAPP`; observed null"
+    },
+    {
+      "file": "test/message-template-management.e2e-spec.ts",
+      "test": "scoped template-management provider > measures scoped draft and observation reads against high-cardinality PostgreSQL fixtures",
+      "decisive": "query plan did not contain expected index `mt_observation_context_remote_uq`"
+    }
+  ],
+  "actualPassedTotals": {
+    "migrationsApplied": 31,
+    "unitTestsPassed": 433,
+    "unitTestFilesPassed": 39,
+    "e2eTestsPassed": 604,
+    "e2eTestFilesPassed": 54
+  },
+  "actualFailedTotals": {
+    "unitTestsFailed": 0,
+    "e2eTestsFailed": 7,
+    "e2eTestFilesFailed": 4
+  },
+  "behavioralReachability": {
+    "cp4CatalogAssertion": {
+      "reached": true,
+      "passed": true,
+      "observed": "approved catalog 200 assertion passed"
+    },
+    "cp4Connections": {
+      "testCases": 11,
+      "passed": 8,
+      "failed": 3,
+      "failures": [
+        "more-than-two compatible WhatsApp fixture unique constraint before behavior assertion",
+        "same-account reattach returned 409 instead of 200",
+        "prior-POST uncertainty reauthorization returned 429 instead of 200"
+      ]
+    },
+    "cp4Display": {
+      "testCases": 2,
+      "passed": 0,
+      "failed": 2,
+      "failures": [
+        "opaque shared peer identifier appeared in serialized contact field",
+        "qualified WhatsApp display platform was null instead of WHATSAPP"
+      ]
+    },
+    "cp4Realtime": {
+      "testCases": 1,
+      "passed": 1,
+      "failed": 0,
+      "reachedAssertions": "account-scoped accepted messages, BU socket scope, and Typebot WhatsApp-only test completed"
+    },
+    "cp4LifecycleAndRace": "Held reauthorization disconnect, in-flight subscription/disconnect, selected UUID, and other completed cases that passed were reached; assertions after first failure in each failing case were not reached."
+  },
+  "postflight": {
+    "checksPassed": 969,
+    "checksFailed": 0,
+    "sourceCount": 266,
+    "todoChecked": true,
+    "boundInputCount": 665,
+    "preservationRows": 35,
+    "approvedExceptions": 2,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "canonical runner cleanup observed; validation postgres container, disposable volumes and network removed",
+  "limitations": [
+    "Complete API target exits 1 because four E2E files contain seven failures.",
+    "Catalog and realtime CP4 assertions passed, but display privacy and qualified WhatsApp projection assertions failed.",
+    "Assertions after each failed test\u2019s decisive assertion were not reached; passing tests completed their assertions.",
+    "This run does not establish feature acceptance or later React/browser gates."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "Whole CP4 React83 exact sole-writer implementation handoff",
+  "authority": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "profile": "Operational/Coder; react,vite,nestjs DTO read only",
+  "routing": "routing-cp4-react83.json",
+  "state": "API80 actual qualified RED; source81 and exact human-admitted EPS82 fixes root matched; current full API proof OPEN. Continue whole approved UI then consolidated current validation. No backend-only delivery.",
+  "goal": "Implement the complete approved CP4 UI consumer in existing Numeros and Inbox: multichannel connections + native full-navigation Instagram authorization + strict V2 reply composer with concurrency-safe scoped drafts, preserving WhatsApp onboarding/initial/recovery/timeline flows. Add meaningful unit cases.",
+  "allowedWrites": [
+    "web-app/src/api.ts",
+    "web-app/src/api.spec.ts",
+    "web-app/src/telas/Numeros.tsx",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/CadastroNumero.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/componentes/NovaConversa.spec.ts",
+    "web-app/src/instagramState.ts",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx"
+  ],
+  "preimages": "cp4-react83-preimages.json",
+  "readAuthority": {
+    "sourceFiles": "Only exact files enumerated cp4-react83-preimages.json and four new owned paths after creation; no directory traversal/search/Git inventory. Exact-file rg allowed.",
+    "docs": [
+      "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "foundation_documentation/project_constitution.md",
+      "foundation_documentation/modules/integrations-and-channels.md",
+      "foundation_documentation/modules/inbox-and-conversations.md",
+      "foundation_documentation/modules/identity-and-tenancy.md",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react83-preimages.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react-next-root-preparation.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react79-prospective-boundary.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser80-plan-root-adjudication.json"
+    ],
+    "governance": [
+      "AGENTS.md",
+      "delphi-ai/main_instructions.md",
+      "delphi-ai/profiles/operational_coder.md",
+      "delphi-ai/workflows/react/change-ui-boundary-method.md",
+      "delphi-ai/workflows/docker/effort-selection-method.md",
+      "delphi-ai/config/agent_role_routing.json"
+    ]
+  },
+  "required": [
+    "Use CURRENT producer DTOs/routes in exact API files; do not trust old prospective API hashes. GET attempt now has safe local channelId/original nullable expectedGeneration. Existing BFF contact/contato now nullable. Common display DTO is authority for rendering, never raw opaque peer interpreted as phone. Unknown display neutral Contato. Never change canonical stored contact/WS/public v1.",
+    "Numeros existing menu/path; BU is operation. Common safe catalog cards keyed local channel UUID, readable platform/account/state/receipt; manual page20/max50 explicit continuation, no all-pages loop/provider fanout. ATENDENTE reads, ADMIN/OWNER actions. Keep guided WA onboarding, only suppress duplicate old cards via optional prop if useful. No App/menu/global config edits.",
+    "Instagram connect/reauthorize/status/confirm/advance/cancel/verify/disconnect uses current BU/id/gen with monotonic async intent. Full-navigation server authorizationURL, no SDK/token. Parse only safe UUID/error from callback, synchronously clean query using history.replaceState; never retain/log code/state/token. Safe attempt UUID/BU hint storage only, storage unavailable graceful. Server GET resolves captured binding; no auto selected-BU change from late callback. UUID-only idempotency grammar, stable per-attempt confirm key and one createUUID per explicit intent. No repeat ambiguous POST.",
+    "Consume strict schemaVersion2 reply-options; unknown/malformed/unavailable fail closed before typing/sending. Only exactly one option may autoselect; multiple qualified adapters/routes require explicit choice, never latest/first/fallback. Versioned send body EXACT texto,schemaVersion:2,routeId,channelId,expectedGeneration,contextFingerprint. Instagram only replies within policy; no initial/prospect/template/Typebot. Current 1000-character policy unchanged pending separate admission; WA4096.",
+    "Monotonic intent across EVERY asynchronous list/thread/options/send/recovery/error/finally: A1->B2->A3 must ignore old A even matching IDs. Actor/BU/conversation/route/channel/generation/fingerprint capture. Keep per full-tuple drafts with revision; switching away/back restores with fresh revision so old ACK cannot clear restored same text. Preserve drafts on policy/context/409/UNKNOWN; do not auto copy old generation drafts to new binding.",
+    "Synchronous in-flight action latch before rerender; captured ticket and revision. Double click single POST, late finally cannot unlock new action or clear new work, accepted ACK clears only exact captured revision. No server ordinary->ordinary concurrency or durable-idempotency promise changes. Other-account inbound only refreshes list/timeline, never changes chosen route/draft.",
+    "Preserve existing list pagination/thread pagination/read/unread/claim/close/recovery/WS and WhatsApp initial free text + approved templates. Scope outer PrimeiraMensagem/OrdinaryRecovery onOptions and onComplete to captured monotonic intent too; key/remount where needed. IG may read local start-options admissions for recovery but cannot start IG conversations.",
+    "Use focused state abstraction shared by real components and meaningful pure tests. Cases: same-ID A/B/A stale response; restored revision/old ACK/new typing; new tuple no draft borrow; double-click same tick; late failure fails closed; unknown/malformed V2; scopes. Extend existing safe API and NovaConversa tests only as needed preserving all existing oracles.",
+    "Accessible labels/buttons/selects/live errors, useful loading/empty/disconnected/pendingreceipt/UNKNOWN copy. No provider IDs/lease/hash/infrastructure jargon in product UX. Do not rewrite unrelated layout."
+  ],
+  "forbidden": "No other writes (including Foundation), tests/build/lint/runner/runtime/network/provider/tunnels/realMeta/private/.env/process/Git/worktree/branches/dependencies/configs/privacy/App modifications. No directory rg/glob or inventory outside enumerated public paths. If exact source gap requires another path, report it first. Root owns docs and later canonical validation; no writer/validation overlap.",
+  "completion": "All owned changes terminal; return each changed/new path bytes SHA256, observable decisions and remaining concrete gaps. Tests deliberately NOTRUN by writer; no passing claims. No persistent goals."
+}

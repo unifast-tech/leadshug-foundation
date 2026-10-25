@@ -1,0 +1,30 @@
+{
+  "kind": "Browser80 fixture static qualification",
+  "status": "PREPARATION ONLY whileAPI80frozen; no browser run/mutation/failedbehavior claim.",
+  "readset": [
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 41305,
+      "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 12867,
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 12369,
+      "sha256": "6960a14dbd30f317253ae577196bc62c252c0446b5c75885b82d08f1753b3542"
+    }
+  ],
+  "actualGaps": [
+    "Timeline seed creates proved-looking WAchannels/providers/credentials but noBusinessChannelIdentity/channel-providerassociation/ConversationRoute; contactfixturescreateContactIdentityonly. Nativebrowserdisplay/reply-options therefore need faithful qualified fixture setup through existingowners, not UI fallback.",
+    "Seedhistoricalmessages mostly14Oct2026 with no original qualifiedinbound/providerassociation. ExistingrequiresWindow=falsefixtureflagcannotoverrideactualofficialpolicy. Positiveofficialreply browserjourney must establish genuine signedcurrentIN beforetyping (or qualify seed as nativeactual ingress), preservinghistorypaginationcounts/IDs/invariants honestly ratherthanweakeningpolicy.",
+    "Fixture /incoming signs actualMetaingress but omits originalmessage timestamp; addrealcurrenttimestamp forpositivequalifiedwindow whereappropriate. Older/tiedhistory stayshistorical; no forgingfutureclock orreopeningfromread/echo/localcreatedAt.",
+    "Existing channel-transport browsertest assumes latestorigin automaticallyselectsEvolution; newapprovedstrictV2multiple-route/adapterchoice requires explicit selection. Preserve actualproviderdestination/ACKunknown/draft/A-B-A assertions, update onlysupersededimplicitselection interaction andnativefixture prerequisites.",
+    "browser-server currentglobalfetchfakesonlygraph.facebook.com. AddisolatedInstagramHTTPboundary fake/authorizationdocument andsameguardedtestDB HTTPSchild branch perqualified67HOW, no BFF/session/Prisma/WS rulefake."
+  ],
+  "requiredLater": "Exactadmitted browser-server/timeline-fixtures/e2e paths handoff. PreserveexistingWAonboarding/initial/template/timeline/read/recovery assertions; all runtime proof currentbundle/compiledNest/nativeDB. No protectedglobalconfig/deps/privacy/SessionService changes.",
+  "limits": "No laterauthority inferred, no operationalDB/private/env/providercalls. Rootmayprepareonly; actualfixture edits serialized afterAPI80terminal/currentrootqualification."
+}

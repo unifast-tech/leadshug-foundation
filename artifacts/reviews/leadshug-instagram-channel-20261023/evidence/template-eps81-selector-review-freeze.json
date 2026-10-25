@@ -1,0 +1,47 @@
+{
+  "kind": "FocusedtemplateEPS81proposalreviewfreeze",
+  "files": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 324927,
+      "sha256": "964e1797fbac9f416dcfed334b2156f28ce9c6b3cdab41501dd62915462bf211"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "bytes": 178069,
+      "sha256": "788fe852c821c62533f560eaa14057789ebb5d2e1ed8fb57affa74b5f7e31d1a"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "bytes": 39343,
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "bytes": 4453,
+      "sha256": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "bytes": 12940,
+      "sha256": "2822bff860b5aa3476e7614f6a5d5515520dfd8e40708767d1bc4c5bfe2d991d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-proposal.json",
+      "bytes": 2189,
+      "sha256": "afae89034b09402fb894baed0132e82d40dd57716d49fdbb6ddc944d9edc758e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/template-eps81-selector-proposed.diff",
+      "bytes": 1375,
+      "sha256": "043ae67f39339af5015d6822119f599258ba9d8286587fba95091e64be71691e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api80-root-reconciliation.json",
+      "bytes": 13674,
+      "sha256": "ab59d11826e06c303c5e3bead5bd9f23bd5b34c5e63284f395728ce386ee52bb"
+    }
+  ],
+  "packageBytes": 579675,
+  "mutationsForbidden": "Reviewedtest/service/migrations/T/proposal/diff/evidence immutable until naturalreviewterminal/rootreconcile. DisjointAPI81sourcewriter remainsauthorized, noall266freezeclaim."
+}
