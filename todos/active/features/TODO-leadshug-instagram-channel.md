@@ -659,9 +659,9 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | F-B67948FF | high | release-blocker | fix in this TODO | preserve signed-session fence after new awaitedCOMMIT | closed affected repair by API66/current complementary adherence67 | cp3-api66-root-reconciliation.json; cp3-adherence67-root-adjudication.json |
 | F-82E76A38 | high | release-blocker | fix in this TODO | causal mutation-first and actualPG serialization proof of sameapprovedfence | closed affected repair by API66/current complementary adherence67 | cp3-api66-root-reconciliation.json; cp3-adherence67-root-adjudication.json |
 | F-175B5680 | medium | release-blocker | fix in this TODO | clarify existing local orderingpoint; never atomicDB+HTTP claim | closed affected repair by API66/current complementary adherence67 | cp3-api66-root-reconciliation.json; cp3-adherence67-root-adjudication.json |
-| IG-ADHERENCE111A-01 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
-| IG-ADHERENCE111A-02 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
-| IG-ADHERENCE111A-03 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-ADHERENCE111A-01 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-ADHERENCE111A-02 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-ADHERENCE111A-03 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 | IG-CP5-111E-01 | high | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
 | IG-CP5-111E-02 | high | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
 | IG-CP5-111E-03 | high | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
@@ -669,7 +669,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP5-111E-05 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
 | IG-CP5-111E-06 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
 | IG-CP5-111E-07 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
-| IG-ADHERENCE111D-01 | high | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-01 | high | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 | IG-ADHERENCE111D-02 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-03 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-04 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
@@ -678,12 +678,12 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-ADHERENCE111D-07 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-08 | low | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 
-| IG-ADHERENCE114F-01 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | open; native proof and fresh review required | adherence113f114f-root-adjudication.json |
-| IG-ADHERENCE114F-02 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | open; native proof and fresh review required | adherence113f114f-root-adjudication.json |
-| IG-ADHERENCE119B-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
-| IG-ADHERENCE119C-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
-| IG-API116-EVOLUTION-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
-| IG-API116-GATEWAY-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
+| IG-ADHERENCE114F-01 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-ADHERENCE114F-02 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-ADHERENCE119B-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-ADHERENCE119C-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-API116-EVOLUTION-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-API116-GATEWAY-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -2126,9 +2126,9 @@ Root corrects its source110 instruction: T851 eight-domain-query cap applies to 
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| IG-ADHERENCE111A-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
-| IG-ADHERENCE111A-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
-| IG-ADHERENCE111A-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-ADHERENCE111A-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-ADHERENCE111A-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-ADHERENCE111A-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
 | IG-CP5-111E-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
 | IG-CP5-111E-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
 | IG-CP5-111E-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
@@ -2157,7 +2157,7 @@ With113a writer terminal and no live review/validator freeze, root may dispatch 
 
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| IG-ADHERENCE111D-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
 | IG-ADHERENCE111D-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-04 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
@@ -2165,12 +2165,12 @@ With113a writer terminal and no live review/validator freeze, root may dispatch 
 | IG-ADHERENCE111D-06 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-07 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-08 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
-| IG-ADHERENCE114F-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence113f114f-root-adjudication.json; still open |
-| IG-ADHERENCE114F-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence113f114f-root-adjudication.json; still open |
-| IG-ADHERENCE119B-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
-| IG-ADHERENCE119C-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
-| IG-API116-EVOLUTION-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
-| IG-API116-GATEWAY-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
+| IG-ADHERENCE114F-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-ADHERENCE114F-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-ADHERENCE119B-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-ADHERENCE119C-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-API116-EVOLUTION-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-API116-GATEWAY-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
 
 
 ### Prepared gateway115 and Web117 — no parallel source authorization
@@ -2220,3 +2220,24 @@ All freezes now released afterrootterminalqualification. Serialize one source120
 Rootmatched five120hashes,328unchangedknownsources/protected34/threeexceptions/rootindex. Productmetadata sorting usesdurablemappedversionDESC; nativefixture repairs andsafeNginxstartup/actualEXPLAINdiagnostics are source-only, testsNOTRUN. No CP5predicate/index/work/budget/oracle weakened. All writers terminal.
 
 Freeze current333sources/fullT/positivepublicinputs/protections/index for exactlyONE `bash scripts/test-channels-local.sh api-instagram` invocation121. It is the canonicalfocuseddiagnostic owner for changedInstagramnativepaths, includingCP5/newgateway; expectedknownpeer-indexguard mayfail andmustemitactualplanbeforerootadjudication. No filter/retry/autofix/skip/threshold/timeout/source/T/inputmutation/private/operational/provider/Meta/Git expansion. Fourunique121outputs, ownedsyntheticcleanup mandatory, rootmatchesactualresults beforethaw. Thistarget is diagnostic-only anddoesnotreplaceVAL05 fullALL/completeAPI/Web/browser/physicalgates. A freshaffectedmetadata/connection/gatewayreview mayrun readonly againstexactfrozenT/source. Web117/fullALL/CP5EPS/primary/human/completeassurance/CP6remainmandatory.
+
+
+### Instagram121 and current122G reconciled — bounded peer oracle123, then Web117
+
+The single focused canonical run completed naturally: API lint/build,31 migrations and435 unit tests pass;167of168 Instagram integration tests pass across28of29 files,547.17s. All current connection expiry/successor/module controls, two-account metadata cancellation chronology and real Nginx gateway boundaries passed. Root independently matched333 sources/fullTODO/1190 public inputs/protected rows/exceptions/rootindex/four exact outputs and owned cleanup. Current122G independently reviewed18 complete affected source bodies with all rubrics/fullT, strict merge/root hashes, no material findings. Ten original connection/metadata/gateway findings are closed only for their affected repair via `evidence/cp4-instagram121-adherence122g-scoped-closure.json`; this does not accept a checkpoint or feature.
+
+The sole native failure is an over-specific peer-index predicate in CP5. Actual captured full SQL/params/EXPLAIN proves `ci` uses declared `contact_identities_contact_id_bu_id_idx`, contact_id+bu_id lookup, exact id/platform/scope residual filter, one row/one loop/zero removals. The list independently uses the primary-key index. The approved contract requires an indexed bounded qualified lookup, not a particular physical key. `evidence/cp5-peer121-actual-plan-adjudication.json` records production access as by-design/no-action and keeps existing111E07 harness repair open as release-blocker. No index/scan-work/list<=8/p95/20k or other protection is waived.
+
+All source and review freezes are released. Serialize source123 on the admitted CP5 spec only: recognize both proven indexed peer access paths while retaining exact owner/scope/identity predicates, declared index and actual work checks, diagnostics and all workloads/budgets. No runtime or other source change. Root qualifies the terminal bytes, then hands off Web117 on the existing prepared scope (including the exact admitted fixed55-peer fixture companion). Final current fullALL and fresh CP5/Web reviews will execute after the complete consumer candidate; no redundant standalone focused run is required for this one proven predicate repair. All seven E findings,111D02-D08, primary/human/security/TQA/cutover/final/CP6 physical proof remain mandatory.
+
+
+### Source123 qualified — sole complete Web117 consumer handoff
+
+Root matched the sole89,839-byte CP5 spec/SHA,332 unchanged known sources,34 protections/three exceptions/rootindex. The native oracle recognizes the actual qualified contact_id+bu_id indexed path with exact peer residuals as well as primary-id access. All SQL/index/actual scan-work/cohort/workload/counter/p95/list budgets remain intact. This is source qualification, not a new native pass; complete currentALL and fresh E remain mandatory.
+
+All prior writers,121 runtime and122G review are terminal and reconciled. Hand off Operational/Coder Web117 on exactly twelve already-admitted paths through `evidence/cp4-web117-handoff.json`: the eleven prepared React/state/unit/native/freshness paths plus `api-app/test/timeline-fixtures.cjs`, which the strict approved scope already admits M. The companion is limited to55 fixed accountA synthetic peers through genuine signed ingress, with all old accountB/negative/counter semantics preserved. No arbitrary seeding/BFF mocking or other fixture/server/backend path is authorized.
+
+Finish all open111D02-D08 consumer requirements together: bounded50 pagination; unresolved start-options block sending with actionable recovery; one shared request-start owner for all admission publishers; admission-id lifetime reset; exact key/body creation recovery with safe storage/memory fallback; consistent codepoint input bounds; one indexed retained-draft owner without global copying/scanning. Preserve91 existing native cases/oracles/timeouts and all full Instagram/WhatsApp flows, drafts, currentness, grants, provider/PG effects and accepted/uncertain handling. No test/build/runtime/private/env/provider/Meta/Git authority to sourcewriter. Root qualifies terminal source, runs the canonical Web check before fullALL, and obtains complete affected E/D assurance. Primary/human/security/TQA/cutover/final/CP6 physical gates stay unwaived; no partial delivery is accepted.
+
+
+Fresh complementary124E may review the complete current CP5 protection spec and its seventeen API owners/contexts while the sole Web117 writer edits its twelve disjoint consumer/fixture paths. Its closed packet includes the full current TODO, all ten architectural obligations, all five review axes and exact actual121 evidence. During that review, its API bodies/TODO/evidence stay immutable. No Web117 path overlaps the seventeen enclosed API bodies; timeline-fixtures.cjs is not part of124E. The review is source-only and cannot grant native EPS, browser or full delivery acceptance.

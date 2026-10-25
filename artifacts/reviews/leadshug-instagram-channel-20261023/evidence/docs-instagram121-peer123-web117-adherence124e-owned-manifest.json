@@ -1,0 +1,135 @@
+{
+  "kind": "Root owned Foundation progress promotion through121/123/Web117/124E",
+  "files": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-before.json",
+      "bytes": 1585,
+      "sha256": "cfaa3a132ddd8cbceb7a2c9452c57ffd7d0dfaccf34d12eec6bbdb4364ea7dae"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-instagram.log",
+      "bytes": 124267,
+      "sha256": "c365424489a6851773bfa683239b1aef645e7124f0d48a84d647a2ceb662f7ef"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-after.json",
+      "bytes": 2389,
+      "sha256": "93a0f54c1c9cc6954e7f1a866605ba4bc74a491a4722aa6bd7a5308149370aae"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-result.json",
+      "bytes": 4517,
+      "sha256": "062a7dd73efd96b6c3d906d6957c1f101b51250911e8cf6079c4157b3dc2b55c"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-root-reconciliation.json",
+      "bytes": 2499,
+      "sha256": "95117b1686b2ddd5f1ca6c8cd960f23435498a52d142d020e03379032ba921d9"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-peer121-actual-plan-preliminary.json",
+      "bytes": 7243,
+      "sha256": "40a7de91fdd69afbd1d39aa79b647e68bb00fc84e27f4702aecf33b2c48434aa"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-peer121-actual-plan-adjudication.json",
+      "bytes": 7984,
+      "sha256": "3eb5bb6fb02b6d4de3c4320c052c3f29c63fd89923547db4dc5744c197e947ce"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-adherence122g-scoped-closure.json",
+      "bytes": 993,
+      "sha256": "fffb9873e27dbcea45dd1dcd285e9b322b18877d0178b07a0cd3d6e4b99a24ae"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-peer123-handoff.json",
+      "bytes": 1966,
+      "sha256": "73a1379a36f7ea3f6985ab25201cf75cbd8032be7c158af0b897ecaab0694c96"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-peer123-ready.json",
+      "bytes": 870,
+      "sha256": "184bba9e87127c23a8e30851025f71705ded748239ffce3e984a6ace37d78a43"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-peer123-ready.json",
+      "bytes": 930,
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-source123-root-qualification.json",
+      "bytes": 820,
+      "sha256": "84b8727f1ed8ef05ca1262831fc1cc95e044e96468a498645df24ca0879756b9"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source123-terminal-manifest.json",
+      "bytes": 61586,
+      "sha256": "0a8957c254f2c396421930fd38218dd3c72916c520f155e47492d5d4b4d024f6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web117-handoff.json",
+      "bytes": 10155,
+      "sha256": "0b018d4f6ef21e2a6ed9902833f28f72496d4d944de47ed56840bf77692d469b"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-web117-ready.json",
+      "bytes": 870,
+      "sha256": "184bba9e87127c23a8e30851025f71705ded748239ffce3e984a6ace37d78a43"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-web117-ready.json",
+      "bytes": 930,
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-adherence124e-ready.json",
+      "bytes": 870,
+      "sha256": "184bba9e87127c23a8e30851025f71705ded748239ffce3e984a6ace37d78a43"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-adherence124e-ready.json",
+      "bytes": 964,
+      "sha256": "c3092e2bce53d0e79173bdeed8411978898f7a35a3760afc90b8f37464d78de6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-package.json",
+      "bytes": 11625,
+      "sha256": "0f85f81ae1e9cece31327630e51ea0dada653f3d51f8c8b422a3ee480767af2a"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-closed-package.md",
+      "bytes": 951597,
+      "sha256": "4c4d4ae9535de22711c0ef25a41d1dfb25dd342a4ba1c822aaea715fe33daca6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-dispatch.json",
+      "bytes": 44825,
+      "sha256": "7fe790a2b6384a6af3747f34f90599af7dc5d340981eb9e82c0a9f6a86e3ec7d"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-dispatch.md",
+      "bytes": 36832,
+      "sha256": "8f17aefdc4511b9c22b02b56d0b4b94439ce72d97604ef99ee6fd0e05bb83e13"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-prompt-preflight.json",
+      "bytes": 89,
+      "sha256": "13b2e193ed00d90b222494ccbab29263dc471f4445834b6f10dfef461b614271"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-execution-plan.json",
+      "bytes": 6651,
+      "sha256": "5663610d21f518397fc372bb60c5eca4b2fd1695b655bb8f4fffd827d188bdf3"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 393422,
+      "sha256": "0d1b0f2ed876ad632777ea4680cee0e922ed67e3bbfc0fec4b459b14e1f0796a"
+    }
+  ],
+  "rawEvidenceWhitespaceExceptions": [
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-instagram.log",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-closed-package.md"
+  ],
+  "scope": "Only terminalactual121proof/rootclosure, source123qualification, readyWeb117handoff and frozenclosed124Einputdocs/fullT. CurrentWeb117solewriter ondisjointproductfiles;124Eoutputs stillrunning andEXCLUDED. Preserveactualrawlogs/reviewinputs. No product/rootGit/private changes."
+}

@@ -1,0 +1,146 @@
+{
+  "kind": "Final actual121 peer-index root contract adjudication",
+  "state": "121 natural terminal and complete root postflight qualified; no active freezes",
+  "observations": [
+    {
+      "source": "BFF-list-page-route-display",
+      "diagnosticUtf8Bytes": 30194,
+      "diagnosticSha256": "90f44573d93b867fc33dedeeb2d2ed0c04ccb083735debfdbb3cb8e3cf1741cb",
+      "capturedSqlSha256": "9da9ef9f41376b3d02cc5dd87131957e20791df0d490ece285a5ef93b663816b",
+      "parameterCount": 51,
+      "relevantScanNodes": [
+        {
+          "alias": "r",
+          "table": "conversation_routes",
+          "nodeType": "Index Scan",
+          "index": "conversation_routes_conversation_created_id_idx",
+          "indexCondition": "(conversation_id = cv.id)",
+          "recheckCondition": null,
+          "filter": "((bu_id = cv.bu_id) AND (contact_id = cv.contact_id))",
+          "actualRowsPerLoop": 1,
+          "loops": 50,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 50
+        },
+        {
+          "alias": "rr",
+          "table": "conversation_routes",
+          "nodeType": "Index Scan",
+          "index": "conversation_routes_conversation_created_id_idx",
+          "indexCondition": "(conversation_id = cv.id)",
+          "recheckCondition": null,
+          "filter": "((bu_id = cv.bu_id) AND (contact_id = cv.contact_id))",
+          "actualRowsPerLoop": 1,
+          "loops": 50,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 50
+        },
+        {
+          "alias": "b",
+          "table": "business_channel_identities",
+          "nodeType": "Index Scan",
+          "index": "business_channel_identities_bu_platform_idx",
+          "indexCondition": "((bu_id = r.bu_id) AND (platform = r.platform))",
+          "recheckCondition": null,
+          "filter": "((id = r.business_identity_id) AND (scope_reference = r.business_scope_reference) AND (((namespace = 'WHATSAPP_RESOURCE'::text) AND (scope_reference = 'BU'::text)) OR (namespace = 'INSTAGRAM_LOGIN'::text)) AND (((r.platform = 'WHATSAPP'::\"ChannelPlatform\") AND (namespace = 'WHATSAPP_RESOURCE'::text) AND (scope_reference = 'BU'::text)) OR ((r.platform = 'INSTAGRAM'::\"ChannelPlatform\") AND (namespace = 'INSTAGRAM_LOGIN'::text) AND (r.contact_scope_reference = r.business_scope_reference))))",
+          "actualRowsPerLoop": 1,
+          "loops": 50,
+          "removedByFilterPerLoop": 5,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 300
+        },
+        {
+          "alias": "ci",
+          "table": "contact_identities",
+          "nodeType": "Index Scan",
+          "index": "contact_identities_pkey",
+          "indexCondition": "(id = r.contact_identity_id)",
+          "recheckCondition": null,
+          "filter": "((bu_id = r.bu_id) AND (contact_id = r.contact_id) AND (platform = r.platform) AND (scope_reference = r.contact_scope_reference))",
+          "actualRowsPerLoop": 1,
+          "loops": 50,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 50
+        }
+      ]
+    },
+    {
+      "source": "BFF-thread-peer-owner-display",
+      "diagnosticUtf8Bytes": 22800,
+      "diagnosticSha256": "d5e6992f2670c88f3fb2f3352523d94fdf1bd1d44a4de705385a491fd8285cbc",
+      "capturedSqlSha256": "fd9e5034de83b9ec60a5b1c5b12d8d1679bcdfdcbd1f93c2356625dc70dd290f",
+      "parameterCount": 2,
+      "relevantScanNodes": [
+        {
+          "alias": "r",
+          "table": "conversation_routes",
+          "nodeType": "Index Scan",
+          "index": "conversation_routes_conversation_created_id_idx",
+          "indexCondition": "(conversation_id = '92d831d6-44f8-46cd-8839-20869e2818c9'::text)",
+          "recheckCondition": null,
+          "filter": null,
+          "actualRowsPerLoop": 1,
+          "loops": 1,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 1
+        },
+        {
+          "alias": "rr",
+          "table": "conversation_routes",
+          "nodeType": "Index Scan",
+          "index": "conversation_routes_conversation_created_id_idx",
+          "indexCondition": "(conversation_id = cv.id)",
+          "recheckCondition": null,
+          "filter": "((bu_id = cv.bu_id) AND (contact_id = cv.contact_id))",
+          "actualRowsPerLoop": 1,
+          "loops": 1,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 1
+        },
+        {
+          "alias": "b",
+          "table": "business_channel_identities",
+          "nodeType": "Index Scan",
+          "index": "business_channel_identities_bu_platform_idx",
+          "indexCondition": "((bu_id = r.bu_id) AND (platform = r.platform))",
+          "recheckCondition": null,
+          "filter": "((id = r.business_identity_id) AND (scope_reference = r.business_scope_reference) AND (((namespace = 'WHATSAPP_RESOURCE'::text) AND (scope_reference = 'BU'::text)) OR (namespace = 'INSTAGRAM_LOGIN'::text)) AND (((r.platform = 'WHATSAPP'::\"ChannelPlatform\") AND (namespace = 'WHATSAPP_RESOURCE'::text) AND (scope_reference = 'BU'::text)) OR ((r.platform = 'INSTAGRAM'::\"ChannelPlatform\") AND (namespace = 'INSTAGRAM_LOGIN'::text) AND (r.contact_scope_reference = r.business_scope_reference))))",
+          "actualRowsPerLoop": 1,
+          "loops": 1,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 1
+        },
+        {
+          "alias": "ci",
+          "table": "contact_identities",
+          "nodeType": "Index Scan",
+          "index": "contact_identities_contact_id_bu_id_idx",
+          "indexCondition": "((contact_id = r.contact_id) AND (bu_id = r.bu_id))",
+          "recheckCondition": null,
+          "filter": "((id = r.contact_identity_id) AND (platform = r.platform) AND (scope_reference = r.contact_scope_reference))",
+          "actualRowsPerLoop": 1,
+          "loops": 1,
+          "removedByFilterPerLoop": 0,
+          "removedByIndexRecheckPerLoop": 0,
+          "totalObservedWork": 1
+        }
+      ]
+    }
+  ],
+  "contractAdjudication": "Actual thread peer uses declared contact_id+bu_id index with 1 row/1loop/0removed and exact id/platform/scope residual filter. Current assertion only permits whole-word id in IndexCond, so rejects legitimate scoped indexed contact lookup despite preserved exact ci.id=r.contact_identity_id SQL and 1row work bound. Production query is not shown to regress; no forcedplanner or performance waiver justified.",
+  "proposedSourceRepair": "Only current CP5 native spec: recognize actual qualified contact_id+bu_id access as well as primary id access, with exactidentity residual predicate and all existing scopedSQL/alias/declared-index/loops/rowsremoved/work/list<=8/p95/20k/counters unchanged. Reprove full EPS native; no new numeric gates or production SQL change.",
+  "remaining": "Only one native predicate repair is authorized, then Web117 and final current full ALL plus fresh CP5/Web review and all remaining protocol/human/assurance/CP6 gates. No extra standalone focused rerun needed before planned full ALL unless new evidence warrants it.",
+  "terminalLog": {
+    "path": "cp4-instagram121-instagram.log",
+    "bytes": 124267,
+    "sha256": "c365424489a6851773bfa683239b1aef645e7124f0d48a84d647a2ceb662f7ef"
+  },
+  "productionClassification": "by-design/no-action: PostgreSQL selects the existing qualified contact_id+bu_id index, retains exact identity/platform/scope filter, and examines one row. The approved index/scan-work contract does not mandate a primary-key access path.",
+  "harnessClassification": "release-blocker in existing IG-CP5-111E-07: the test wrongly rejects this proven indexed lookup; keep all other plan/budget invariants, recognize the qualified composite path and reprove full EPS."
+}

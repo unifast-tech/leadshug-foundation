@@ -1,0 +1,52 @@
+{
+  "kind": "Independent root natural-terminal focused Instagram121 reconciliation",
+  "sourceExact": 333,
+  "boundInputsExact": 1190,
+  "fullTodoExact": true,
+  "immutableExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-before.json",
+      "bytes": 1585,
+      "sha256": "cfaa3a132ddd8cbceb7a2c9452c57ffd7d0dfaccf34d12eec6bbdb4364ea7dae"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-instagram.log",
+      "bytes": 124267,
+      "sha256": "c365424489a6851773bfa683239b1aef645e7124f0d48a84d647a2ceb662f7ef"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-after.json",
+      "bytes": 2389,
+      "sha256": "93a0f54c1c9cc6954e7f1a866605ba4bc74a491a4722aa6bd7a5308149370aae"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-result.json",
+      "bytes": 4517,
+      "sha256": "062a7dd73efd96b6c3d906d6957c1f101b51250911e8cf6079c4157b3dc2b55c"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "actualResults": {
+    "migrations": 31,
+    "lint": "pass",
+    "build": "pass",
+    "unitFiles": 40,
+    "unitTestsPass": 435,
+    "focusedE2EFiles": 29,
+    "focusedE2EFilesPass": 28,
+    "focusedE2ETests": 168,
+    "focusedE2ETestsPass": 167,
+    "focusedE2ETestsFail": 1,
+    "e2eDurationSeconds": 547.17,
+    "soleFailure": "CP5 EPS line498 peer IndexCond regex; actual ci contact_id+bu_id IndexScan 1row/1loop/no removals; full latency round unreached",
+    "gateway": "Actual Nginx1.22.1/configcheck/health; bothslashpaths2MiB+1/exact8MiB200;8MiB+1413preupstream;Meta2MiBapp413/2MiB+1gateway413;wrongHMAC401;4accepted/zeroeffectsonreject",
+    "connectionDisplayProof": "Current successor postCOMMIT/livecontrol, moduleON/OFF bothUUID/legacy and accountlabel two completed mappings/cancelolder nativecases pass"
+  },
+  "cleanup": "OwnedPGcontainer/network/allninevolumes removed",
+  "qualification": "Focused canonical diagnostic only; all122Gfrozenrows/rootqualified no materialfindings, no active freezes/writers afterrootqualification. Still no currentfullAPI/Web/browser/ALL/CP5EPS/fullfeature acceptance."
+}

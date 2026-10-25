@@ -1,0 +1,15 @@
+{
+  "kind": "Independent terminal123 root source qualification",
+  "candidate": {
+    "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "bytes": 89839,
+    "sha256": "8bf313b017286aacfc2f43659bb6f92f1eb570c5b076bd97a5e99f401b024333"
+  },
+  "otherKnownSourcesExact": 332,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Only thread peer access-path oracle expanded to declared composite contact_id+bu_id IndexScan on exact ci/relation with exact identity/platform/scope residuals, or preexisting primary-id index path. All actual work/loops/removed/SQL/list<=8/p95/cohort/counter/6case invariants retained. It admits actual121measured one-row indexed plan; no runtime/EPS/ALL pass inferred."
+}

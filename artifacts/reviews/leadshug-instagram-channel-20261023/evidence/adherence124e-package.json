@@ -1,0 +1,153 @@
+{
+  "reviewKind": "architecture_adherence",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "mandatoryObligations": [
+    "Channel abstract sendMessage/supportedKinds with actual DI; business send/policy callers depend on abstract operation policy/contract, concrete provider protocol isolated; no growing generic plugin framework or hidden concrete dispatch switch/fallback.",
+    "Strict V2 new writers capture current immutable route/business/provider/contact address/credential generation/version/fingerprint before external send; selected route never silently falls back or borrows another account/lastIN. TwoIGaccounts/samepeer remain distinct; route/account stale denial precedes external POST.",
+    "Qualified captured address flows unchanged to knownACK and UNKNOWN diagnostic local owner; one shared OutboundService/admission/MessageAcceptance; accepted/blocked/refused/uncertain semantics never fabricate success or retry external uncertainty.",
+    "Shared canonical contact proof and provider identity\u2192peer advisory\u2192conversation lock order; real WA verified ingress creates route, legacy presentation preserved while canonical peer governs equality. Compare newP2002 causal test to actual owner order; no DB/domain mocks, counters or assertions weakened.",
+    "Operation-specific policy from qualified current-resource timestamps: official persistedrequiresWindow=false is an existing trusted policy exception; trueofficialtext requires24h; approvedtemplate firstsend outsidewindow; Evolutionfalse. Instagramalways inbound-originatedtextual24h, no templates/prospecting/groups/Typebot. CURRENT1000characters normative; proposed1000UTF8bytes requires pending humanadmission and is not applied.",
+    "Historical V1 accepted facts and exact key/generation/account tuple replay local-only after present credential removal/rotation; no historical provider redispatch or mutation of stored fingerprints/deadlines/receipts. Legitimate NEW V2 sends remain eligible after permitted oldslot release.",
+    "APIv1/account_id/phone, Typebot, Consultar/list/drilldown/CSV, legacyBU projection remain WA-only and bounded; never treatIGopaquepeer as phone or BU.phone as authority; noN+1/whole-history/per-rowprovidercalls, nativePCV limits unchanged.",
+    "Bounded1000/8MiB signedIG ingress completepreflight, max4 independentpeer workers ordered withinpeer, anomalous sameaccount/samemessage/differentpeer originalflatserial preservesfirstwinner. Failure stopsnewwork/drainsstarted writes, no200lostwork; no globalqueue or cached stale resource fences.",
+    "Performance/elegance/structure/operationalfit under actual inspected code and measured proof: reject scatteredconditions, duplicated ownership/metadata/admission, unnecessary layers/queries, retry/fallback/constraint bypass; report remaining risks without inventing benchmark/runtime pass.",
+    "All implemented CP4 consumer surfaces and actual native runtime/assurance proof remain mandatory. FullcurrentTODO Frontend/ConsumerMatrix enclosed. Consumers are implemented in source but actual completeInstagram browser/CP5/currentALL/CP6 evidence remains open; no backend-onlyacceptance, zero approvedconsumerwaivers. Distinguish knownopenproof obligations from new source defects. This complementary CP5 affected-source review is only one complementary affected-source lane, not wholefeature acceptance."
+  ],
+  "axes": [
+    "performance",
+    "elegance",
+    "structural-coherence",
+    "operational-fit",
+    "architectural-adherence"
+  ],
+  "frontendConsumerMatrix": "FULLcurrentT enclosed; no consumerwaivers. Current React consumers exist, nativeIGcompleteproofpending. Do not infer peer-lane reading; no new backend-only acceptance.",
+  "sourceRendering": "All source content enclosed with LF line endings, as canonicalrunner read_text also normalizes CRLF; sourcepath bytecounts/hashes bind original unchanged files. No code omission or runtime modification.",
+  "kind": "Fresh complete current CP5 adherence124E after actual121 and source123",
+  "scope": "All seventeen full current API bodies below, especially complete six-case CP5 native protection over retained20k cohort. Assess all E01-E07 repairs and real121 peer-plan evidence, including source123 accepting primary-id OR qualified contact_id+bu_id index with exact identity/platform/scope residuals. No declared benchmark/runtime pass from authored assertions.",
+  "focus": "Actual121 peer IndexScan uses declared contact_identities_contact_id_bu_id_idx with exact contact_id/bu_id key and id/platform/scope filter, one row/one loop/no removals; list uses PK.123 permits both without waiving alias/relation/index/scoped SQL/scan-work controls. Challenge all real EXPLAIN/capturedparams/correct models/20k retention/observer capacity/genuine waiter/five20waves/OAuth/replay/RLS/1000batch/dedup/threeprovidercounter and telemetry oracles against actual owners/helpers/schema. List-only8domainquery cap, lookup/options telemetry/p95; preserve original thresholds, no forceplanner/wholecohort scans/fabricated SQL, no extra quota bypass or unrelated numeric gate.",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 393422,
+    "sha256": "0d1b0f2ed876ad632777ea4680cee0e922ed67e3bbfc0fec4b459b14e1f0796a"
+  },
+  "requiredSourceBodies": [
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 89839,
+      "sha256": "8bf313b017286aacfc2f43659bb6f92f1eb570c5b076bd97a5e99f401b024333"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34866,
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "bytes": 51597,
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90997,
+      "sha256": "deb98b8fb4e74e6f03b5109ee03dccfb1a53d1366cbbcb9abd742b67e54f5067"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "bytes": 8596,
+      "sha256": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22627,
+      "sha256": "c9544b159c1aaeb984c94bf20726b0da1416a95afb2c213f5e6a7181f8c2b516"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 10463,
+      "sha256": "71312450799a964ef6057330fdcdddaa0a98246e2caef4b0ad305ffa98412e6a"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64882,
+      "sha256": "675eed284a1623d5c235da9b1c1f977af7ea07581bb97231fcea128d2025b9f2"
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "bytes": 5953,
+      "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 9525,
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 27690,
+      "sha256": "1c47d314fd333a8826a121a9a593eeb54e0d156af2a0f4ade494dfee3250f131"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10218,
+      "sha256": "6caeefd575ec00a76d23ad4a4327e00156a12b6a9163063285fb06a233b5ec88"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 8705,
+      "sha256": "79dc13cc0e56d3d547448a3269b0849ae559cd5108ba751598f4f43094384e31"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13273,
+      "sha256": "85d7c8223cb61bdab94c08575266625bc699bb4a85952f535215c14471ec2805"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "bytes": 5700,
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14299,
+      "sha256": "6fbbd96f8a19dffe298ff98dd730943b88fd87bb5583e1b7587420a1c5a67ff4"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50886,
+      "sha256": "df4c49f903838cc2efd8171a40f0ebc866e9415c691ad4adde816662f62a0d86"
+    }
+  ],
+  "sourceCount": 17,
+  "requiredEvidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence111e-raw.json",
+      "bytes": 9705,
+      "sha256": "d94b4d88a252347675edd28e8c84b7ac824b0395603d4b2c44fdb9f62e3a3eaa"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence113f-raw.json",
+      "bytes": 2737,
+      "sha256": "548aae6e4ec0fc42ce089c00547ddbe6f8ed45230602bf7fa8a34c885b4696d4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-root-reconciliation.json",
+      "bytes": 2499,
+      "sha256": "95117b1686b2ddd5f1ca6c8cd960f23435498a52d142d020e03379032ba921d9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-peer121-actual-plan-adjudication.json",
+      "bytes": 7984,
+      "sha256": "3eb5bb6fb02b6d4de3c4320c052c3f29c63fd89923547db4dc5744c197e947ce"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-source123-root-qualification.json",
+      "bytes": 820,
+      "sha256": "84b8727f1ed8ef05ca1262831fc1cc95e044e96468a498645df24ca0879756b9"
+    }
+  ],
+  "actualValidation": "Actual116 fullAPI435unit/622of626integration pass; actual121 focused435unit/167of168IGintegration pass. Current connection/display/gateway boundaries pass; only CP5 EPS index-condition oracle failed before complete EPS round. Five other CP5 nativecases pass including20actual resourceclaims/13PGwaiters/onewinner, same20kcohort RLS, signed1000batch4897ms/replay noeffects. Source123 changes one legitimate peer-plan assertion only; native EPS after123 not yet executed. Historical browser10888of91pass/3failed;109harnessfixes unexecuted. No current fullALL/browser/featureacceptance.",
+  "knownOpen": "SoleWeb117 writer is implementing12 disjoint React/state/unit/native/fixed55peerfixture paths while this review runs; none is in enclosed17APIbodies. Complete consumer/native evidence stillmandatory, no waivers. Primary ownsubscriptionGET appnamespace/completeness/emptysemantics UNKNOWN/no guessedrePOST; human privacy/UTF8byteproposals pendingunapplied. FullcurrentALL/completebrowser/CP5EPS/security/TQA/cutover/final/CP6approvedphysicalproofremainmandatory.",
+  "carry": "Prior E01-E06 were statically supported by113f; E07 remainedopen due vacuous emitted-rows/incidental-index checks, then118added actualalias/loops/removed-work protection.121 proved a valid alternative peer index physically;123 now recognizes it. Identify material new defects rather than demand unapproved primary-key-only plans or reopen historical closed work without changed locus/proven insufficiency. Only fullbody/actualevidence coverage enclosed may be claimed.",
+  "output": "Canonical schema-valid architecture_adherence JSON only/exactdispatchJSONpath; no tools/edits/network. FullcurrentT/FrontendConsumerMatrix/all10obligations/all5axes enclosed, UTF8/charlimit checked."
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "Scoped original defect closure using actual121 and current122G",
+  "closedOriginalFindings": [
+    "IG-ADHERENCE111A-01",
+    "IG-ADHERENCE111A-02",
+    "IG-ADHERENCE111A-03",
+    "IG-ADHERENCE114F-01",
+    "IG-ADHERENCE114F-02",
+    "IG-ADHERENCE119B-01",
+    "IG-ADHERENCE119C-01",
+    "IG-API116-EVOLUTION-01",
+    "IG-API116-GATEWAY-01",
+    "IG-ADHERENCE111D-01"
+  ],
+  "nativeProof": "cp4-instagram121-root-reconciliation.json; all current connection lifecycle and display cases plus gateway boundary pass; sole failed CP5 EPS oracle stays open.",
+  "currentFullBodyReview": "adherence122g-root-reconciliation.json;18 full current bodies, no material findings, no tools, strict merge/natural terminal and exact source/T hash reconciliation.",
+  "notAcceptance": "No checkpoint/fullfeature/currentfullAPI/Web/browser/ALL/completeCP5 or primary/assurance/physical acceptance. All seven E findings remain open pending full EPS/current ALL/fresh E; Web111D02-D08 remainopen."
+}

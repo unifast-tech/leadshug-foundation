@@ -1,0 +1,88 @@
+{
+  "kind": "CP4 Instagram121 canonical diagnostic result",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-frozen-manifest.json",
+  "manifestSha256": "673165894f985141e73776b956ec36c1a416e7e79d41bd28b0943831fb38a463",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "termination": "natural; canonical runner completed owned disposable cleanup",
+  "stages": {
+    "PrismaClientGeneration": "passed",
+    "PostgreSQLMigrations": "all applied; schema up to date",
+    "APILint": "passed",
+    "APIBuild": "passed",
+    "APIUnit": "40 files, 435 passed, 4.45s",
+    "FocusedInstagramE2E": "29 files; 28 passed / 1 failed; 168 tests; 167 passed / 1 failed; 547.17s",
+    "gatewayBoundary": "passed; Nginx 1.22.1 config syntax/test succeeded",
+    "otherAPIIntegrationOutsideTarget": "not run",
+    "WebUnitBuildBrowserAndFullALL": "not part of focused command; not run"
+  },
+  "failure": {
+    "file": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "test": "measures real EPS BFF reads over the retained 20k Instagram cohort",
+    "stack": "line 498: usesDeclaredIndex(threadPlan, contact_identities, routeIndex...) expected false to be true. Later scan-work assertions were unreached.",
+    "diagnostic": {
+      "rawLogLines": [
+        401,
+        404
+      ],
+      "fullEvidence": "Each CP5-EXPLAIN-DIAGNOSTIC marker retains capturedSql, capturedParams, explainAnalyzeJson, relevantScanNodes. The thread profile is line 404 (BFF-thread-peer-owner-display), 1 output row, 2 parameters, EXPLAIN Execution Time 0.166ms. Alias ci/table contact_identities: Index Scan contact_identities_contact_id_bu_id_idx; Index Cond ((contact_id = r.contact_id) AND (bu_id = r.bu_id)); Filter ((id = r.contact_identity_id) AND (platform = r.platform) AND (scope_reference = r.contact_scope_reference)); actualRowsPerLoop=1, loops=1, removedByFilter=0, removedByIndexRecheck=0, totalObservedWork=1. The 50-row list profile line401 used alias ci with contact_identities_pkey on (id = r.contact_identity_id), filters for BU/contact/platform/scope, 50 loops and totalObservedWork=50. Full SQL/parameters/plan are preserved in raw log; no cause inferred."
+    }
+  },
+  "gatewayBoundaryActual": {
+    "nginxVersion": "nginx/1.22.1",
+    "configCheck": "status 0, error null; nginx.conf syntax ok and test successful",
+    "positive": {
+      "paths": [
+        "/webhooks/instagram",
+        "/webhooks/instagram/"
+      ],
+      "bodySizesBytes": [
+        2097153,
+        8388608
+      ],
+      "allStatuses": 200,
+      "upstreamStatuses": 200
+    },
+    "overLimit": {
+      "bodySizeBytes": 8388609,
+      "bothPathStatuses": 413,
+      "upstreamStatus": null
+    },
+    "otherWebhookAt2097152": {
+      "status": 413,
+      "upstreamStatus": 413
+    },
+    "otherWebhookAt2097153": {
+      "status": 413,
+      "upstreamStatus": null
+    },
+    "wrongHmacStatus": 401,
+    "acceptedMessages": 4,
+    "domainEffectsOnRejections": 0
+  },
+  "cp5OtherCases": "Five of six CP5 tests passed (OAuth five-by-twenty reservation/confirmation waves, signed replay, cross-BU resource claims, five RLS rounds, and 1000-message signed batch); only EPS declared-index assertion failed. Concrete markers are preserved in raw log.",
+  "postflight": "pass: all 333 frozen source hashes, full TODO exact bytes/SHA256, 1,190 bound inputs, 34 preservation rows, 3 approved exception candidate paths/current hashes, and exact root-index gitlinks matched.",
+  "cleanup": {
+    "postgresContainer": "stopped and removed",
+    "network": "removed",
+    "ownedVolumes": "all nine listed canonical validation volumes removed"
+  },
+  "artifacts": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-before.json",
+      "bytes": 1585,
+      "sha256": "cfaa3a132ddd8cbceb7a2c9452c57ffd7d0dfaccf34d12eec6bbdb4364ea7dae"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-instagram.log",
+      "bytes": 124267,
+      "sha256": "c365424489a6851773bfa683239b1aef645e7124f0d48a84d647a2ceb662f7ef"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-after.json",
+      "bytes": 2389,
+      "sha256": "93a0f54c1c9cc6954e7f1a866605ba4bc74a491a4722aa6bd7a5308149370aae"
+    }
+  ]
+}

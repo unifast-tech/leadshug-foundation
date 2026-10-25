@@ -1,0 +1,23 @@
+{
+  "kind": "Sole source123 legitimate peer access-path oracle repair",
+  "state": "READY;121/122G naturally terminal/rootqualified, no sourcewriter/freeze active",
+  "profile": "Operational / Coder",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "preimage": {
+    "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "bytes": 88944,
+    "sha256": "886144e88e4375c77404275bedac33030c411a8ad76c2b5da1abeff2294bcc1e"
+  },
+  "baseline": "cp4-source120-terminal-manifest.json",
+  "basis": "cp5-peer121-actual-plan-adjudication.json",
+  "requirements": [
+    "Only the thread peer indexed-access assertion currently requires whole-word id in Index Cond. Accept either proven primary-id lookup, or actual declared contact_id+bu_id lookup with exact identity/platform/scope residual proof, using existing plan evidence/helper where practical. Keep alias ci, correct relation, actual declared index identity and every scoped SQL predicate. Do not accept arbitrary IndexScan, full cohort scan, incidental lateral index or another peer/owner.",
+    "Retain all current loops/rows-removed/work<=1 thread checks, actual SQL/params/EXPLAIN diagnostics, list main r/rr work and index protection, owner small-cohort bound, options plans, 20k original cohort, all6cases/5x20/1000batch/replays/counters/p95/list<=8. No plannerforce/ANALYZE/schema/production query change or threshold modification. No extra unit tests mirroring this native oracle.",
+    "Exactly this one admitted spec, static only. No other source/docs/Git/private/env/runtime/provider/Meta/network/npm/Node/lint/build/tests/Docker/discovery/worktree/copy. Root owns docs and later complete ALL. Report terminal bytes/SHA/testsNOTRUN."
+  ],
+  "next": "Root qualifies123, then serializes Web117 twelve-path consumer source. No focused rerun now unless new defect; fullcurrentALL and fresh E/D remain required."
+}
