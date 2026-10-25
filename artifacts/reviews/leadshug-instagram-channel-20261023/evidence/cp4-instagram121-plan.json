@@ -1,0 +1,17 @@
+{
+  "kind": "Canonical focused Instagram121 diagnostic plan",
+  "state": "READY explicitrootdispatch required;120terminal rootqualified/noactivewriters/reviews",
+  "profile": "Operational / Coder implementation-validation; source readonly",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-instagram.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-result.json"
+  ],
+  "sourceManifest": "cp4-source120-terminal-manifest.json",
+  "policy": "Exactlyone canonicalfocusedInstagram diagnostic, no adhoctestselection/retry/edit/autofix/skip/oracle/threshold/timeout changes. Currentprincipal333sources/T/publicmasks frozen. Only canonicalowneddisposablebuild/test/fakeprovider/DB/log/cleanup. Realprovider/Meta/operational/privateenv/Gitwrites forbidden; readonlyexactroot3gitlinks allowed. Actualstages/results only, no currentfullALL/API/Web/browserpass inferred."
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "Independent terminal120 root source qualification",
+  "candidates": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69817,
+      "sha256": "ebdcf5520be52c735ddc07e815316edfce768fe5e6e39ec92529a1816c417162"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 88944,
+      "sha256": "886144e88e4375c77404275bedac33030c411a8ad76c2b5da1abeff2294bcc1e"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 26011,
+      "sha256": "aec0aef965e1c1cda60b0095d0492fe8b9abe3a9104153694c46e472b17fdf48"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14299,
+      "sha256": "6fbbd96f8a19dffe298ff98dd730943b88fd87bb5583e1b7587420a1c5a67ff4"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 41853,
+      "sha256": "6cc2f1f4f015042ff10d6e923d57496c7a59a1870895ef4413133761195737f2"
+    }
+  ],
+  "otherKnownSourcesExact": 328,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Positive Evolution fixture canonicalmoduleenabled, separateOFForaclekept; actualNULL-beforeclaim/immutabletuplequeuedUPDATE; versionDESCmetadata+newerthenoldercancelnative; exactsafeNginxlogdestination/realconfigcheck/boundedstderr; actualSQL/params/EXPLAINdiagnostics insertedbeforeunchangedindex/work/budgetassertions. No actualpeerindex/startupcause inference."
+}

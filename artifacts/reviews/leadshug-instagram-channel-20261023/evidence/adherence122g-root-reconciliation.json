@@ -1,0 +1,15 @@
+{
+  "kind": "Independent root 122G natural-terminal reconciliation",
+  "frozenRowsExact": 29,
+  "fullSourceBodiesExact": 18,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "no_material_findings",
+  "findingIds": [],
+  "qualification": "Current focused connection/metadata/gateway source review only. CP5spec not enclosed/claimed; actual121/API fullsource freeze remainsactive. No currentALL/Web/browser/CP5EPS/fullfeature acceptance."
+}
