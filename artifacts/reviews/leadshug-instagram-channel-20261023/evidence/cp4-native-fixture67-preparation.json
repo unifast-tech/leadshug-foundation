@@ -1,0 +1,33 @@
+{
+  "kind": "CP4 native fixture67 concrete preparation",
+  "status": "Preparation only during API66; no sourcehandoff, actualtest, formalreview or acceptance. Existing261/T/830inputs remain immutable.",
+  "authority": "OnlyexistingapprovedCP4producer/consumer/lifecycle contracts; no newWHAT/protectedpath/runtime/Meta authority. Use nativeBFF/PG with onlyexternalproviderHTTPsynthetic.",
+  "testFiles": [
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/test/instagram-cp4-realtime.e2e-spec.ts"
+  ],
+  "testFirst": "First missingcatalogroute test asserts approved200 and therefore actual404 isRED, not a passingexpect404. Laterexistingadmittedspecs retained; no source before qualifiedbaseline.",
+  "catalogPagingFixture": {
+    "setup": "Dedicated BU with21genuine syntheticOAuth+confirm IGaccounts,3actualADMIN+actors each7attempts. This respects unchanged10attempts/actor/hour and30/BU/hour; no quota bypass/rewrite. SeparateWAbridge fixture avoids conflatingpagecounts.",
+    "checks": "Default20+explicitcontinuation1, limit1and50, keysetties/no repeats, malformed/crossBUcursor/unauthorizedordering, currentrole/safeDTO/noexternalIDs/ciphertext. SnapshotproviderHTTP andDBmutationcountsaroundlists; <=8actualdomainSQL/page includingprojection. Do notinvent51rowsorchangebusinessquotas."
+  },
+  "waBridgeFixture": {
+    "setup": "OneprovedWAbusinessnumber/commonBCI inBU withOfficialphoneNumberId anddistinctEvolutioninstance provideridentities; samebusinessnumber acrossadapters.",
+    "checks": "ExactUUID+expectedgeneration validatedINSIDEexistingownertransactions/provider\u2192BU\u2192channel locks. Stalegeneration/foreignBUzeroexternalcalls, actualheldproviderresponse againstconcurrent lifecycle. Selectedadapteronly; siblinghistory/receipt/identity preserved. LegacycompatibleWA>2conflicts ratherthanslicing.",
+    "responseQualification": "Newdisconnect safe {channelId,connection:SafeItem|null,remoteCleanup}; retainedIGitemnonnull, existingWAdeletedbindingnull. No inventedpersistedgeneration/cleanupcertainty; actualcatalogrefresh."
+  },
+  "igLifecycleCases": [
+    "ExistingrealIGmapping+signedIN createsknownreceipt. Hold actualREAUTHORIZEcallbackexchange whilelocaldisconnectcommits. ReleaseHTTP; assertclean303, no latercandidatepromotion/credentialrestore/subscriptionPOST/currentreceipt. Countalready-dispatchedHTTP truthfully; do notassert zero forrequestheldbeforedisconnect.",
+    "Raceconfirm/subscriptionheldresponse versusdisconnectgenerationfence. KeepPId/BCI/channel/routes/messages/tombstones and exactcompletedconfirmation snapshots/history. Cancelonlyunfinished selectedattempts; generationguards alloldwriters, no oldreceipt reused.",
+    "Disconnected retainedchannel reauthorize exactsameaccount/appscope/BU/currentgeneration with absentcredentialCAS. Freshcredentialversion > maxtrulymappedhistory samebinding/account, notcandidate expectedversion; verifyactualdecryption usingnormalresolver verify-purpose whennewreceiptpending. Reattach SAMEPId, notnewresource/ownertransfer.",
+    "Beforefreshsignedreceipt, sendremainsunready. Actualnew signedIN atnewgeneration establishesreceiptandrouteexistingconversations. Oldmessages/ACK/localreceiptreaders unchanged. Liveconnectedreauth samegeneration retainsgenuinecurrentreceipt.",
+    "Wrongaccountcandidate/foreignBU/appscope/generation/concurrentchangedcredential failsbeforepromotion; pending/rejectedwrongaccountcannotrelabelcurrentaccount. PreserveglobalpriorPOST/uncertainty markers acrossallattempts/reconnect; UNKNOWN503 no secondPOST.",
+    "Durablebindingverify afterOAuthattemptTTL usescurrentadmin/session/resource+lease/cooldown andboundedownoperation; presentunknownobservationcannoteraseknownreceipt orpromoteunprovenreadiness. Requestbudget remains<=3/stage,10s/request,40sdeadline,60slease; not3requests/PIdlifetime."
+  ],
+  "realtimeCases": [
+    "Preserve signedwholebatchpreflight/max4peerworkers/dedup/resource-generation-originaltimestamp/contactAddress; routeverifiedeventthroughsharedIncomingService withinstagramInboundAt forwarded.",
+    "ActualnativeWSauthorized/foreignBU sessions. TwoactualIGaccounts/sameopaquepeer create distinctcontacts/conversations, oneaftercommit event/unread1 each. Replayexactresource/externalID yieldszero extraevent/message/unread/receiptmutation. DeterministicWSsettleping/ack beforeabsencecheck, no arbitrarysleep.",
+    "ActualIGsignedHTTP ingress zeroTypebotSQL/HTTP; realMetaWAcontrol withactivetrigger provesexpectedTypebotcalls/SQL. Startprovider countersafterOAuth; no peringressprofileHTTP. Reproven1000batch/replay<=15s afterregistrarwiring; do notreuseprior64pass asnewproof."
+  ],
+  "deliveryBoundary": "These nativeAPI tests do notreplace safeprojection/strictV2Reactcomposer/OAuthcleanreturn/realHTTPSbrowser/FRC/WAjourneys/CP5pcv-RLS/CP6physical/allreviews. WholeCP4 remainsmandatory; no backend-onlydelivery."
+}

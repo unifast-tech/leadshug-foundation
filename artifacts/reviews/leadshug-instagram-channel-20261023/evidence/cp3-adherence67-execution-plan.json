@@ -1,0 +1,71 @@
+{
+  "kind": "cp3-adherence67-canonical-execution-plan",
+  "reviewKind": "architecture_adherence",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "freshContext": true,
+  "canonicalRunner": "delphi-ai/tools/subagent_review_run.py",
+  "canonicalRunnerSha256": "36ea0185160cf660ae58a89dd2fbb0bd488d7a1634ee42831aa26e14a83afe77",
+  "isolateProjectContext": true,
+  "configuration": "Canonical runner has no effort argument. In-memory subprocess.run argv wrapper adds only documented codex exec --strict-config -c model_reasoning_effort=\"xhigh\". build_prompt/closed stdin/model/ephemeral/read-only/isolation/collection/turn.completed unchanged. No helper/executable/config edit.",
+  "lifecycle": "Both reviewers wait naturally; no time-based retry/package alteration. Terminal strict merge and root reconciliation before T/source thaw.",
+  "promptSizes": {
+    "a": {
+      "chars": 1043490,
+      "bytes": 1046716,
+      "package": {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-closed-package.md",
+        "sha256": "45078357ae00a9776eddc579fab1870ee3b9586bf9c99a72d1755701c9ae79ec",
+        "bytes": 1017715
+      },
+      "dispatch": {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-dispatch.md",
+        "sha256": "65a0b91f1d7cdafbb9308f9b4e06a06ede6672665e24e11daff39259101b9850",
+        "bytes": 28673
+      },
+      "sourceCount": 21
+    },
+    "b": {
+      "chars": 1032185,
+      "bytes": 1035531,
+      "package": {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-closed-package.md",
+        "sha256": "59656c15ca9dda112f718848e9652fe54b8df982994a331ab13e7b1d99a8d806",
+        "bytes": 1006530
+      },
+      "dispatch": {
+        "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-dispatch.md",
+        "sha256": "2600d1722477c16b09b610d902443042b01fe886726a6760d895ab2f2cfe2cde",
+        "bytes": 28673
+      },
+      "sourceCount": 21
+    }
+  },
+  "derivedCarryCorrection": {
+    "ids": [
+      "IG-CP2-ROOT-02",
+      "IG-SUBPROTO-01",
+      "IG-SUBREC-02",
+      "IG-SUBREC-03",
+      "IG-CP2-R1-04",
+      "IG-CP2-R1-06",
+      "IG-OAUTH-SESSCOMP-01",
+      "IG-CP3-ROOT-03",
+      "IG-CP3-A-02",
+      "IG-CP3-A46-01",
+      "IG-CP3-B46-01",
+      "F-B338F932",
+      "F-B67948FF",
+      "F-82E76A38",
+      "F-175B5680",
+      "IG-CP3-FIX62-01",
+      "IG-CP3-FIX62-02",
+      "IG-CP3-TIME64-01"
+    ],
+    "originalSourceDispositionsPreserved": true,
+    "closedOriginalFindingsNotReopenedForNewA46Aliases": true,
+    "canonicalSchemaValidated": true
+  },
+  "authority": "authority-cp3-adherence67.json",
+  "routing": "routing-cp3-adherence67.json"
+}

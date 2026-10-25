@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp3-adherence67a-fresh-no-context"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Reconcile this result with the terminal complementary lane B result and root freeze checks. The inspected final-fence repair and native credential-pin correction have source and packaged behavioral support; do not infer closure of complementary harness/clock findings from this lane alone. Preserve the later TODO's qualified CP2 source18 resolutions rather than reopening older ledger entries automatically. Complete all approved CP4 consumers, resolve primary own-subscription observation, and satisfy browser/ALL/performance/security/TQA/cutover/final and separately approved physical-runtime gates. Retain pending privacy and UTF-8 proposals without applying their unapproved changes."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-EDFAB452",
+      "severity": "high",
+      "title": "Required primary own-subscription observation remains unproved",
+      "rationale": "The recorded follow-up remains IG-SUBPROTO-01 together with IG-SUBREC-03. The governing TODO and current package explicitly leave the Instagram Login GET envelope, returned ID namespace, visibility and completeness unresolved. The subscribed_apps response manufactured by helpers.ts cannot establish those external protocol facts. Durable UNKNOWN and prevention of repeated mutation preserve safety but do not satisfy the approved own-account observation requirement. This is an existing delivery blocker, not a regression inferred from API66.",
+      "suggested_action": "Retain both findings until primary evidence establishes the supported observation contract and its implementation is proved. Preserve UNKNOWN and the no-repeat mutation fence; do not infer conclusive absence, guessed ID equality or Facebook Page semantics from synthetic responses.",
+      "reviewer_labels": [
+        "cp3-adherence67a-fresh-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-SUBPROTO-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-DF879DDB",
+      "severity": "high",
+      "title": "Complete CP4 consumers and later delivery gates remain open",
+      "rationale": "The recorded follow-up is complete CP4 under SCOPE-07, DOD-05/06/07 and VAL-04/05, with preparation29 providing non-authoritative planning only. The package explicitly retains missing paginated connection lifecycle and reactivation, qualified safe display, strict V2 React composer and asynchronous context fences, shared Incoming/realtime publication, and actual HTTPS browser/freshness/CI proof. Inspected thread projections still use legacy contact presentation, and replyOptions still derives an account label from the latest authorization attempt without successful mapped-account qualification. These are acknowledged CP4 obligations, not newly introduced repair54 defects. API66 does not fulfill them or the remaining assurance and physical-runtime gates; no backend-only delivery exception exists.",
+      "suggested_action": "Keep ROOT-03 open in this TODO. Complete the approved producer/consumer and lifecycle work, prove native realtime and real-backend browser behavior, and finish the remaining gates before declaring delivery. Preserve the exact OAuth middleware admission and pending human proposal boundaries.",
+      "reviewer_labels": [
+        "cp3-adherence67a-fresh-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-03"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

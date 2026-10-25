@@ -1,0 +1,61 @@
+Selected literal lines from API66 raw log; NOT the full raw log. RawSHA256 9ac52e007e774f18c7bb3049f7bb442b2cf1e2cc4a315f641fb7f9b846f66d91; selection only, no rewritten values.
+
+276:  Test Files  39 passed (39)
+277:       Tests  426 passed (426)
+279:    Duration  4.44s (transform 17.78s, setup 0ms, collect 37.42s, tests 2.48s, environment 10ms, prepare 4.22s)
+521: ST04_CREDENTIAL_PIN {"validationSucceeded":true,"credentialUpdateWaited":true,"claimPid":275,"rotationPid":296,"rotationBlockedByClaim":true,"claimInitialSucceeded":true,"credentialVersionAdvanced":true,"postsDeltaWhilePinned":0,"postsDelta":0,"outMessagesDelta":0,"sendStatus":409,"finalState":"REJECTED"}
+525:  ✓ test/initial-message.e2e-spec.ts (26 tests) 28984ms
+553: [IG-BATCH-PHASE]{"phase":"initial-started","updates":1000}
+556: [IG-BATCH-PHASE]{"phase":"initial-completed","updates":1000,"elapsedMs":5139.459}
+559: [IG-BATCH-PHASE]{"phase":"replay-started","updates":1000}
+562: [IG-BATCH-PHASE]{"phase":"replay-completed","updates":1000,"elapsedMs":3348.078}
+644:  ✓ test/instagram-cp2.e2e-spec.ts (29 tests) 24227ms
+652:    ✓ Instagram CP2 public and authenticated boundaries > rechecks natural signed-session expiry after the real attempt UPDATE wait with an equal-duration live control 3846ms
+721:  ✓ test/dispatch-admission.e2e-spec.ts (22 tests) 15977ms
+740:    ✓ ordinary/initial dispatch admission interlock (PostgreSQL) > rolls back the whole initial completion on a real P2002 race, exact-reads back, and retries one local transaction 559ms
+745: CP2-SESSION-CLOCK timing {
+746:   controlDurationMs: 2026.1543339999998,
+747:   expiredDurationMs: 2505.825527,
+748:   signedDeltaMs: 479.67119300000013,
+749:   absDeltaMs: 479.67119300000013,
+750:   actualNativeWaiterSeen: true,
+751:   currentStillBlocked: true,
+752:   sessionExpired: true
+753: }
+755:  ✓ test/instagram-cp2-residual.e2e-spec.ts (12 tests) 12233ms
+756:    ✓ Instagram CP2 residual BFF and PostgreSQL proofs > CP2-SESSION-CLOCK residual: natural expiry after a short real user-row wait blocks exchange while a matched live session succeeds 5006ms
+765:  ✓ test/instagram-cp3-authorization-fences.e2e-spec.ts (16 tests) 13246ms
+766:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary Instagram reply after a completed real reauthorization rotates its credential 1195ms
+767:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary WhatsApp reply after real channel disconnection at the held final boundary 753ms
+768:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an initial WhatsApp send after real channel disconnection at the held final boundary 634ms
+769:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary reply when the real grant is revoked after claim at the held final boundary 920ms
+770:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary reply when the real signed session expires before its dispatch deadline 908ms
+771:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks initial dispatch when a real signed session expires after claim at the held final boundary 621ms
+772:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks initial dispatch when the real grant is revoked after claim at the held final boundary 618ms
+773:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > keeps the matched live-grant control eligible through the same held boundary 883ms
+774:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > keeps the matched live-session control eligible for an initial send through the held boundary 644ms
+775:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > serializes a final Instagram dispatch before a real credential rotation waiting on its pinned owner 1079ms
+776:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an ordinary provider POST when the signed session expires after the final actor query commits 936ms
+777:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > keeps an ordinary dispatch eligible when the same final actor transaction commits with a live session 887ms
+778:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > blocks an initial provider POST when the signed session expires after the final actor query commits 646ms
+779:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > keeps an initial dispatch eligible when the same final actor transaction commits with a live session 634ms
+780:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > serializes an ordinary WhatsApp POST before a real disconnect waiting on the final actor transaction 760ms
+781:    ✓ CP3 current BFF authorization at the provider boundary (PostgreSQL) > records a confirmed initial WhatsApp receipt when disconnect commits after the pinned POST 682ms
+869:  ✓ test/instagram-cp3-v1-cutover.e2e-spec.ts (1 test) 1781ms
+926: CP2_MAPPING_LIVE_CLOCK {"expiresInSeconds":75,"actualLifetimeMs":75000,"remainingAtQueueMs":74890,"remainingBeforeReleaseMs":72686,"remainingAtCompletionMs":72553,"holdDurationMs":2203.822053,"elapsedMs":2394.9263789999995,"holderDurationMs":2398.5210469999993,"waiterObservedBeforeRelease":true}
+927:  ✓ test/instagram-cp2-commit-fences.e2e-spec.ts (6 tests) 19208ms
+934: CP2_CALLBACK_LIVE_CLOCK {"acquiredAt":"2026-10-25T00:39:18.341Z","expiresAt":"2026-10-25T00:40:33.341Z","actualLifetimeMs":75000,"remainingAtQueueMs":74956,"remainingBeforeReleaseMs":72754,"remainingAtCompletionMs":72746,"waitDurationMs":2202.5184530000006,"elapsedMs":2282.652436999999,"waiterObservedAtQueue":true,"waiterObservedBeforeRelease":true}
+935:  ✓ test/instagram-cp2-final-clock.e2e-spec.ts (9 tests) 20021ms
+945:  ✓ test/instagram-cp3-routing.e2e-spec.ts (2 tests) 4581ms
+999:  ✓ test/instagram-cp2-finalization.e2e-spec.ts (4 tests) 2466ms
+1004:  ✓ test/instagram-cp2-binding.e2e-spec.ts (4 tests) 2572ms
+1036:  ✓ test/instagram-cp3-query-boundaries.e2e-spec.ts (5 tests) 9040ms
+1065:  ✓ test/instagram-cp3-csv-boundaries.e2e-spec.ts (1 test) 1534ms
+1097:  ✓ test/instagram-cp3-whatsapp-ingress.e2e-spec.ts (3 tests) 1624ms
+1099:  ✓ test/instagram-cp3-locks.e2e-spec.ts (1 test) 1803ms
+1100:    ✓ Instagram CP3 qualified dispatch locks (native PostgreSQL) > serializes canonical formatted WhatsApp and same-account Instagram peers while keeping another account scope independent 776ms
+1178:  ✓ test/instagram-cp2-recovery.e2e-spec.ts (1 test) 1028ms
+1219:  ✓ test/instagram-cp3-accepted-facts.e2e-spec.ts (4 tests) 3826ms
+1300:  Test Files  55 passed (55)
+1301:       Tests  597 passed (597)
+1303:    Duration  591.05s (transform 9.63s, setup 271ms, collect 93.13s, tests 487.88s, environment 9ms, prepare 3.06s)

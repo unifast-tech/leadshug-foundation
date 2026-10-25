@@ -1,0 +1,202 @@
+{
+  "kind": "owned67+66documentationcheckpoint-before68test",
+  "files": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-frozen-manifest.json",
+      "bytes": 243279,
+      "sha256": "45b4a86b3109bc8f018bec0ec6fcacb8d4455baf0b1416d56133c38c27ca4c7b"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-before.json",
+      "bytes": 707,
+      "sha256": "664ea6252890c3f0d87dfddd4fb241abfc0bfbadae9207cfe901affa1831e925"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-api.log",
+      "bytes": 228825,
+      "sha256": "9ac52e007e774f18c7bb3049f7bb442b2cf1e2cc4a315f641fb7f9b846f66d91"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-after.json",
+      "bytes": 532,
+      "sha256": "34847e8ea7d5183a47549519a81e3dcbe2b905f20bfaf42ca121a84f745198ef"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-result.json",
+      "bytes": 4302,
+      "sha256": "dbab289b5cc21a72d530531170512dc7a09c1040938a3531bd080e889b955ed6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-root-reconciliation.json",
+      "bytes": 4929,
+      "sha256": "c9c9fcef9aadf36711451bcb264f0d98dd4429f4b5d88fad3178c54c65710437"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-review-excerpt.txt",
+      "bytes": 7025,
+      "sha256": "e0cf363f4577873bf7f34e4273b476bf3d50da161a9ec6ec58c48c90414c9bca"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-coverage-preparation.json",
+      "bytes": 11657,
+      "sha256": "3a7bdbb54ce2fab9cc78c9a46a1aafa261f27e2c2667ab7aecfc082bd29150f7"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-native-fixture67-preparation.json",
+      "bytes": 4894,
+      "sha256": "3178f30e529eca8a481b91c303e7751a24a832af55114beb2bd8bcb084122240"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser67-config-qualification.json",
+      "bytes": 3053,
+      "sha256": "042f232c137130ee92d0eccf8dec27b104a3b8e6b90b39216688a55f45c6e5dc"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp3-adherence67.json",
+      "bytes": 1010,
+      "sha256": "83ea2fffbfe67558b6db7f143a2a62986761521dfd2513f07d214218ebaa0e10"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp3-adherence67.json",
+      "bytes": 870,
+      "sha256": "672f59f3bb5e28edd8e21d597c83f249915045410830eca06c20ec0190abe885"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-coverage.json",
+      "bytes": 20307,
+      "sha256": "69a38845f423b86338d5c37d3ae669b61ec854d62ecfcdffcfe76ac9cfb745ac"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-execution-plan.json",
+      "bytes": 2860,
+      "sha256": "853c64e91c917195fc9101054dc79231750beccd659039be3145ba0273eacc8d"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-frozen-manifest.json",
+      "bytes": 247074,
+      "sha256": "8a3289d893be6cfac769d406b54c21d68816f1fd17b373721787b84786165318"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-root-reconciliation.json",
+      "bytes": 3775,
+      "sha256": "85ded22a90063b8003a04cdc68571a10f5595305b8d3f75a99531eecfdfc4496"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-root-adjudication.json",
+      "bytes": 4393,
+      "sha256": "408d63b46383766e41115020567b6dbba0e75c1f9a888f295533cadfde5f8f52"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-cp4-test68.json",
+      "bytes": 930,
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-cp4-test68.json",
+      "bytes": 870,
+      "sha256": "672f59f3bb5e28edd8e21d597c83f249915045410830eca06c20ec0190abe885"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-native-test68-handoff.json",
+      "bytes": 3580,
+      "sha256": "f751605c54dcd38b1351a9cd4db1d2316d723644853ecee3e9fa349a92314acc"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-package.json",
+      "bytes": 14550,
+      "sha256": "a29d86e929f460341b9b56132fa6c37f67b733c335dea6627a28c4099adad196"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-closed-package.md",
+      "bytes": 1017715,
+      "sha256": "45078357ae00a9776eddc579fab1870ee3b9586bf9c99a72d1755701c9ae79ec"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-dispatch.json",
+      "bytes": 34073,
+      "sha256": "4dc99a5d23534be7860106602e5355ba7505afde7288b008f00171e64dd14c08"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-dispatch.md",
+      "bytes": 28673,
+      "sha256": "65a0b91f1d7cdafbb9308f9b4e06a06ede6672665e24e11daff39259101b9850"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-raw.json",
+      "bytes": 7287,
+      "sha256": "6d30eb3627476a3c62acfd5d4f85e62db083519903f8abfe5008cc137a8dbf29"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-events.jsonl",
+      "bytes": 7807,
+      "sha256": "5f3db0b3c9b2e45cabf3753fce74f6bf1a56157994a3a83eb55948effe016b55"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-stderr.log",
+      "bytes": 1608,
+      "sha256": "5fa64c157ebc70d1733e2caf8f58663e88bff699e18e120ebec6d9a8b1a0ddab"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-merge.json",
+      "bytes": 4590,
+      "sha256": "e8ccf73192c1ddb6d2482fc070cb4de3210d26da83aa538f5e76ff037e7f920f"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67a-merge.md",
+      "bytes": 9504,
+      "sha256": "50eea03861381a499adf67c5ffda7f5e9e394283b130b010e58b61ac6f77cadf"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-package.json",
+      "bytes": 14554,
+      "sha256": "1d41270ed6ab0bae7c6470195d991cff15be811e04e5e833504bc2a911b01687"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-closed-package.md",
+      "bytes": 1006530,
+      "sha256": "59656c15ca9dda112f718848e9652fe54b8df982994a331ab13e7b1d99a8d806"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-dispatch.json",
+      "bytes": 34073,
+      "sha256": "db9e1111f53a21a5e2820205c909dc15603a43b837e8ac4ba243c8bf4e981a2c"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-dispatch.md",
+      "bytes": 28673,
+      "sha256": "2600d1722477c16b09b610d902443042b01fe886726a6760d895ab2f2cfe2cde"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-raw.json",
+      "bytes": 8574,
+      "sha256": "a5c2428d92488e2afee261ee4f6b3a037f1f200d372d59657d506ca36fa122e6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-events.jsonl",
+      "bytes": 9096,
+      "sha256": "c332b0763cc7c5f91c3e0a39f111c76d93f247a0d604a9f81e23659812e7a81d"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-stderr.log",
+      "bytes": 1608,
+      "sha256": "3feb950c430c5852237d4d9eb8ae9bc40c492ef0a8852dbdbf47048e4431d488"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-merge.json",
+      "bytes": 4613,
+      "sha256": "b07aeb8068f319479486e7e59ebc9b17d48fbd954aa0d7693f128568f1dfa245"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-merge.md",
+      "bytes": 10715,
+      "sha256": "80ef3898a5b831907d0bbedb939e18ef2d29e59f08bebf17f33e2cb8258452d4"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 309164,
+      "sha256": "8531e88c828e0102d9dcc11f8f41ccc6d3e048702f4abd3f801e1e7775fba84c"
+    }
+  ],
+  "count": 39,
+  "policy": "Stage only these exact root-owned Foundation paths and this manifest; preserve all unrelated differences/old untracked artifacts. No product/root index mutations. Raw API log and canonical rendered closed-file-set/dispatch/merge Markdown preserve bytes, scoped whitespace check exceptions only as necessary; all remaining JSON/T normal diffcheck."
+}

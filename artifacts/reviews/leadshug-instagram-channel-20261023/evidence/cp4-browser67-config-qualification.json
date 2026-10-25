@@ -1,0 +1,44 @@
+{
+  "kind": "CP4 browser67 actual configuration qualification",
+  "status": "Read-only publicsource preparation duringAPI66, no runtime/runner/sourceedit/test oracceptance. Do notmutateprotectedglobalconfigs.",
+  "readset": [
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 16785,
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c"
+    },
+    {
+      "path": "web-app/src/config.ts",
+      "bytes": 1952,
+      "sha256": "ca30d02d04774b79d6e62715c83c49dd23f1db02f0b49ec6781634acbf09befb"
+    },
+    {
+      "path": "web-app/public/config.js",
+      "bytes": 444,
+      "sha256": "1ad17fefa4173ed847cabd79e7fdc1b262fa19ea4ff33c3ef435e141275fb532"
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "bytes": 1865,
+      "sha256": "8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 12867,
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "bytes": 5483,
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200"
+    }
+  ],
+  "actualFacts": [
+    "WebAPI_BASE comesfrompublicconfig.js; existingpreviewconfig sets apiUrl empty, so BFF requests usecurrentorigin. HTTPSfrontdoor can route /api,/health,/ws toownrealchild3102 BEFOREassets/configproxy4173, preservingactualbuiltconfig/bundle. No config.ts/publicconfig.js/Vite/Playwrightglobal edit orinjectedconfigneeded.",
+    "SessionService reads COOKIE_SAMESITE and normalizesNone; NonealreadyforcesSecure without NODE_ENVproduction. SetCOOKIE_SAMESITE=None ONLYownedHTTPSchild; preserveparentHTTP3100/4173 env/behavior. No needproduction-mode sideeffects orprotectedSessionService change.",
+    "Currentbrowser-server CORS andWEB_ORIGIN hardcodeHTTP4173; HTTPSchild mustselectexactHTTPS4174 valuesinsameownedharness branch. Existingrawbodyparser/actualNest/Realtime remain; childsameguardedtestPGneverreset/migrate."
+  ],
+  "frcHow": "Delay an actualcompleted realBFFresponse atownedtestproxy/controlboundary without changingstatus/headers/body. NoBFF/session/Prisma/WSroute stubs; SQL/authorization/domainworkactuallyexecutes. OnlyexternalproviderHTTP/authorizationdocument synthetic. ActualA\u2192B\u2192A intentfence/draftrevision/doubleclick/latefailure/reload/storageunavailable mustbeobserved beforeclaimingconsumerproof.",
+  "httpsProof": "Per-specnativeHTTPSbrowsercontext withephemeralcert trustexception; realSecure/HttpOnly/SameSiteNonecookie andactual303/querycleanup/no-store/no-referrer withPGattemptfacts. ActualHTTPSservedbundle/hash/currentcompiledchild sourcefreshness required. Selfsignedtrustexception/sameoriginproxy areNOTproductionTLS/cross-originCORSproof.",
+  "scope": "Existingadmittedbrowser-server.cjs +instagramE2E/freshness paths only inlaterexacthandoff, aftercurrentfullAPI/freshadherence. ProtectApp.tsx/globalPlaywright/config.ts/publicconfig.js/Vite/SessionService. RetainallWAjourneys."
+}

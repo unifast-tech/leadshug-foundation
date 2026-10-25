@@ -1,0 +1,55 @@
+# PACED Subagent Review Merge: architecture_adherence
+
+## Merge Identity
+- **Artifact kind:** `subagent_review_merge`
+- **Authoritative:** `false`
+- **Edit policy:** `derived_merge_packet`
+- **Dispatch path:** `/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-dispatch.json`
+- **Review count:** `1`
+- **Highest finding severity:** `high`
+
+## Axis Summary
+- **Performance:** `mixed`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `acceptable`
+- **Operational fit:** `mixed`
+
+## Recommended Paths
+- `Reconcile both terminal adherence67 results and the exact frozen inputs before closing findings. Lane B supports closure of B46-01 and the specific A-02 harness residual, and supports the faithful clock-fixture repairs for FIX62-02 and TIME64-01. Require complementary source/test inspection before closing A46 and its aliases or FIX62-01. Then proceed with complete CP4 within this TODO, retaining the primary-observation blocker and all later gates. Preserve the current character limit, pending privacy/UTF-8 decisions and recorded evidence qualifications; no redesign or broader implementation exception is indicated.`
+
+## Merged Findings
+### F-C276C6F1 [high] Required own-account subscription observation remains unaccepted
+- **Reviewers:** cp3-adherence67b-fresh-no-context
+- **Category:** `operational_fit`
+- **Formalizable hint:** `partial`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Retain both findings as open until supported primary protocol evidence and corresponding implementation/proof establish the approved observation contract. Preserve UNKNOWN and the no-repeat fence. Do not infer conclusive absence from omission, transplant Facebook Page semantics or introduce guessed ID equivalence; provider investigation remains subject to its existing authorization boundary.
+- **Rationale:** The recorded follow-up is IG-SUBPROTO-01 together with IG-SUBREC-03. The governing TODO still leaves the Instagram Login GET envelope, returned ID namespace, own-app visibility and completeness unresolved. helpers.ts supplies a synthetic subscribed_apps envelope; that fixture cannot establish the provider protocol. Durable UNKNOWN and prevention of repeated mutation preserve safety but do not fulfill the required own-account observation. This existing release blocker is unchanged by API66.
+
+### F-F0C1311A [high] Complete CP4 consumers remain mandatory delivery blockers
+- **Reviewers:** cp3-adherence67b-fresh-no-context
+- **Category:** `operational_fit`
+- **Formalizable hint:** `partial`
+- **Candidate rule level:** `project`
+- **Candidate rule id:** `n/a`
+- **Suggested action:** Keep ROOT-03 open and implement the complete CP4 producer/consumer work in this TODO, with native lifecycle/realtime and real-backend browser evidence. Complete ALL and the remaining performance, security, TQA, cutover, final-review and separately approved runtime gates before claiming delivery.
+- **Rationale:** The recorded follow-up is complete CP4 under the TODO's Frontend / Consumer Matrix and cp4-readonly-preparation29-root-qualified.json. Paginated connection lifecycle, verify/disconnect/reactivation, qualified account/peer display, strict V2 React composition and draft/context fences, shared Incoming/realtime ingress, and actual HTTPS browser/freshness/CI proof remain missing. Inspected conversation projections still expose legacy contact presentation, and replyOptions still derives labels from raw WABA information or the latest authorization username without successful mapping qualification. These are acknowledged planned CP4 obligations, not newly discovered CP3 regressions. Native callback tests do not close the remaining gateway/browser confidentiality proof, and API66 does not authorize backend-only acceptance.
+
+## Reviewer Summaries
+### cp3-adherence67b-fresh-no-context
+- **Assessment:** No new material CP3 defect identified in affected lane B. The inspected changes support the approved architecture; functional delivery remains incomplete because the recorded primary-protocol and CP4 obligations remain open. Read all 21 embedded source bodies, the supplied governing TODO and all 13 evidence bodies without tools or external context. Manifest hashes were not independently recomputed. The full API66 raw log was not enclosed; assessment uses the supplied reconciliation and literal excerpt. Complementary lane A and the final root freeze reconciliation remain necessary. The 33 prior unchanged body reviews are carried evidence, not fresh reads here.
+
+Obligation coverage: (1) Channel retains sendMessage/supportedKinds, and business send callers use the abstract operation policy. The harness now detects the specific OfficialChannelWindowPolicy and namespace OfficialEligibilityPolicy dependencies previously missed, while retaining abstract-dispatch and address-validation controls. Actual DI composition is carried forward. (2) Exact V2 parsing, captured tuples, selected-route lookup and fingerprints remain present. The final sender now performs transactional context/policy/actor validation followed by synchronous session and temporal checks after COMMIT. The pin owner, actor implementation, adapters and serialization test bodies require complementary lane A; this lane makes no atomic database-plus-HTTP claim. (3) Ordinary sends preserve the captured qualified address for shared acceptance and UNKNOWN diagnostics, with distinct blocked, refused, accepted and uncertain outcomes and no external retry. (4) Canonical identity resolution and matching blocking/nonblocking peer-lock keys are present. Complete provider-to-peer-to-conversation ordering and the P2002 test body are complementary or carried coverage. API66 reports the preserved count-three/nine-oracle case passing; no independently printed scalar or fresh inspection of that test is claimed. (5) B46 recipient qualification is repaired: initial options require one canonical WhatsApp PERSON identity before channel or credential reads. Genuine WhatsApp positives and the mixed-BU Instagram negative are retained. Operation policies preserve official templates, qualified windows and Instagram human textual replies only; the approved 1000-character rule remains normative. (6) Exact V1 parsing and local-only known-receipt recovery remain separate from new V2 dispatch. Accepted-context validation does not require current credential usability; complete historical state proofs are carried or complementary. (7) WhatsApp discovery retains its bounded sentinel, selected lookups remain scoped, Typebot rejects Instagram before trigger/session work, and history remains WhatsApp-qualified. CSV pages internal reads while preserving full ordered output; output-size memory remains the explicitly approved limitation. Public API and legacy BU projection coverage is carried forward. (8) Enclosed ingress tests preserve signed raw-body, complete-preflight, 1000-update, oversize, replay and zero-effect assertions. Scheduler ordering, four-worker and failure-drain source coverage is carried unchanged; API66 records initial/replay durations of 5139.459/3348.078 ms. (9) The two 75-second positive fixtures use genuine returned acquisition/expiry facts, conservative DB/local margins, observed native waiters, full 2200 ms holds and unchanged 4500 ms bounds. The 62-second negatives remain. Fixture65 preserves natural session expiry and the strict 750 ms comparison while adding an actual matched hold. Unit60 now invokes the validation callback required by the sender contract without removing its ordering assertions. The initial credential-pin test body is in lane A, so its full oracle cannot be independently verified here. Seven newer authorization controls remain explicitly post-production evidence, without a retroactive test-first claim. (10) Complete CP4, primary observation, ALL, remaining performance/concurrency, assurance, cutover and separately approved physical-runtime gates remain mandatory. API66's reported 426 unit and 597 E2E passes establish neither those gates nor feature acceptance.
+- **Recommended path:** `Reconcile both terminal adherence67 results and the exact frozen inputs before closing findings. Lane B supports closure of B46-01 and the specific A-02 harness residual, and supports the faithful clock-fixture repairs for FIX62-02 and TIME64-01. Require complementary source/test inspection before closing A46 and its aliases or FIX62-01. Then proceed with complete CP4 within this TODO, retaining the primary-observation blocker and all later gates. Preserve the current character limit, pending privacy/UTF-8 decisions and recorded evidence qualifications; no redesign or broader implementation exception is indicated.`
+- **Performance:** `mixed`
+- **Elegance:** `acceptable`
+- **Structural soundness:** `acceptable`
+- **Operational fit:** `mixed`
+- **Findings:**
+  - [high] IG-CP3-ROOT-03 Complete CP4 consumers remain mandatory delivery blockers: The recorded follow-up is complete CP4 under the TODO's Frontend / Consumer Matrix and cp4-readonly-preparation29-root-qualified.json. Paginated connection lifecycle, verify/disconnect/reactivation, qualified account/peer display, strict V2 React composition and draft/context fences, shared Incoming/realtime ingress, and actual HTTPS browser/freshness/CI proof remain missing. Inspected conversation projections still expose legacy contact presentation, and replyOptions still derives labels from raw WABA information or the latest authorization username without successful mapping qualification. These are acknowledged planned CP4 obligations, not newly discovered CP3 regressions. Native callback tests do not close the remaining gateway/browser confidentiality proof, and API66 does not authorize backend-only acceptance.
+  - [high] IG-SUBPROTO-01 Required own-account subscription observation remains unaccepted: The recorded follow-up is IG-SUBPROTO-01 together with IG-SUBREC-03. The governing TODO still leaves the Instagram Login GET envelope, returned ID namespace, own-app visibility and completeness unresolved. helpers.ts supplies a synthetic subscribed_apps envelope; that fixture cannot establish the provider protocol. Durable UNKNOWN and prevention of repeated mutation preserve safety but do not fulfill the required own-account observation. This existing release blocker is unchanged by API66.
+
+## Exact Next Step
+Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.
+

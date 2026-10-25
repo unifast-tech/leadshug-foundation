@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67b-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp3-adherence67b-fresh-no-context"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "mixed",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Reconcile both terminal adherence67 results and the exact frozen inputs before closing findings. Lane B supports closure of B46-01 and the specific A-02 harness residual, and supports the faithful clock-fixture repairs for FIX62-02 and TIME64-01. Require complementary source/test inspection before closing A46 and its aliases or FIX62-01. Then proceed with complete CP4 within this TODO, retaining the primary-observation blocker and all later gates. Preserve the current character limit, pending privacy/UTF-8 decisions and recorded evidence qualifications; no redesign or broader implementation exception is indicated."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-C276C6F1",
+      "severity": "high",
+      "title": "Required own-account subscription observation remains unaccepted",
+      "rationale": "The recorded follow-up is IG-SUBPROTO-01 together with IG-SUBREC-03. The governing TODO still leaves the Instagram Login GET envelope, returned ID namespace, own-app visibility and completeness unresolved. helpers.ts supplies a synthetic subscribed_apps envelope; that fixture cannot establish the provider protocol. Durable UNKNOWN and prevention of repeated mutation preserve safety but do not fulfill the required own-account observation. This existing release blocker is unchanged by API66.",
+      "suggested_action": "Retain both findings as open until supported primary protocol evidence and corresponding implementation/proof establish the approved observation contract. Preserve UNKNOWN and the no-repeat fence. Do not infer conclusive absence from omission, transplant Facebook Page semantics or introduce guessed ID equivalence; provider investigation remains subject to its existing authorization boundary.",
+      "reviewer_labels": [
+        "cp3-adherence67b-fresh-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-SUBPROTO-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-F0C1311A",
+      "severity": "high",
+      "title": "Complete CP4 consumers remain mandatory delivery blockers",
+      "rationale": "The recorded follow-up is complete CP4 under the TODO's Frontend / Consumer Matrix and cp4-readonly-preparation29-root-qualified.json. Paginated connection lifecycle, verify/disconnect/reactivation, qualified account/peer display, strict V2 React composition and draft/context fences, shared Incoming/realtime ingress, and actual HTTPS browser/freshness/CI proof remain missing. Inspected conversation projections still expose legacy contact presentation, and replyOptions still derives labels from raw WABA information or the latest authorization username without successful mapping qualification. These are acknowledged planned CP4 obligations, not newly discovered CP3 regressions. Native callback tests do not close the remaining gateway/browser confidentiality proof, and API66 does not authorize backend-only acceptance.",
+      "suggested_action": "Keep ROOT-03 open and implement the complete CP4 producer/consumer work in this TODO, with native lifecycle/realtime and real-backend browser evidence. Complete ALL and the remaining performance, security, TQA, cutover, final-review and separately approved runtime gates before claiming delivery.",
+      "reviewer_labels": [
+        "cp3-adherence67b-fresh-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-ROOT-03"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

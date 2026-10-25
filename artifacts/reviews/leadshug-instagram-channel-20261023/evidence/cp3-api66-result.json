@@ -1,0 +1,96 @@
+{
+  "candidate": "cp3-api66",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exit_code": 0,
+  "terminal": "pass",
+  "log": {
+    "path": "cp3-api66-api.log",
+    "bytes": 228825,
+    "sha256": "9ac52e007e774f18c7bb3049f7bb442b2cf1e2cc4a315f641fb7f9b846f66d91"
+  },
+  "stages": {
+    "parity_guard": "pass",
+    "prisma_generate": "pass",
+    "migrations": "31/31 applied",
+    "lint": "pass",
+    "build": "pass",
+    "unit": {
+      "files": "39/39",
+      "tests": "426/426",
+      "status": "pass"
+    },
+    "e2e": {
+      "files": "55/55",
+      "tests": "597/597",
+      "status": "pass"
+    }
+  },
+  "failures": [],
+  "assertion_reachability": {
+    "initial_message_tests": "26 passed; credential pin through DB commit 774ms and BU readiness pin 782ms",
+    "authorization_fence_tests": "16 passed",
+    "instagram_credential_rotation_serialization": "passed 1079ms",
+    "whatsapp_disconnect_controls": "ordinary POST before disconnect 760ms; initial confirmed ACK after disconnect commit 682ms",
+    "cp2_strict_natural_session_clock": "passed with unchanged <250ms assertion",
+    "cp2_batch_1000": {
+      "phase_markers": [
+        "{\"phase\":\"initial-started\",\"updates\":1000}",
+        "{\"phase\":\"initial-completed\",\"updates\":1000,\"elapsedMs\":5139.459}",
+        "{\"phase\":\"replay-started\",\"updates\":1000}",
+        "{\"phase\":\"replay-completed\",\"updates\":1000,\"elapsedMs\":3348.078}"
+      ],
+      "post_phase_count_replay_malformed_oversize_echo_read_assertions": "case passed 8513ms"
+    },
+    "p2002_rollback_exact_readback_retry": "passed 559ms; full assertion case passed, including native count-three and nine oracles",
+    "cp2_residual_suite": "12/12 passed; final session-clock case passed 5006ms",
+    "dispatch_lock_groups": "same-account Instagram, independent account, and formatted WhatsApp all passed; case 776ms",
+    "ack_tests": "4/4 passed",
+    "query_tests": "5/5 passed",
+    "csv_tests": "1/1 passed",
+    "final_clock_tests": "9/9 passed"
+  },
+  "timings": {
+    "cp2_session_clock_block": [
+      "controlDurationMs: 2026.1543339999998,",
+      "expiredDurationMs: 2505.825527,",
+      "signedDeltaMs: 479.67119300000013,",
+      "absDeltaMs: 479.67119300000013,",
+      "actualNativeWaiterSeen: true,",
+      "currentStillBlocked: true,",
+      "sessionExpired: true"
+    ],
+    "cp2_mapping_live_clock": "CP2_MAPPING_LIVE_CLOCK {\"expiresInSeconds\":75,\"actualLifetimeMs\":75000,\"remainingAtQueueMs\":74890,\"remainingBeforeReleaseMs\":72686,\"remainingAtCompletionMs\":72553,\"holdDurationMs\":2203.822053,\"elapsedMs\":2394.9263789999995,\"holderDurationMs\":2398.5210469999993,\"waiterObservedBeforeRelease\":true}",
+    "cp2_callback_live_clock": "CP2_CALLBACK_LIVE_CLOCK {\"acquiredAt\":\"2026-10-25T00:39:18.341Z\",\"expiresAt\":\"2026-10-25T00:40:33.341Z\",\"actualLifetimeMs\":75000,\"remainingAtQueueMs\":74956,\"remainingBeforeReleaseMs\":72754,\"remainingAtCompletionMs\":72746,\"waitDurationMs\":2202.5184530000006,\"elapsedMs\":2282.652436999999,\"waiterObservedAtQueue\":true,\"waiterObservedBeforeRelease\":true}",
+    "batch_phase_markers": [
+      "{\"phase\":\"initial-started\",\"updates\":1000}",
+      "{\"phase\":\"initial-completed\",\"updates\":1000,\"elapsedMs\":5139.459}",
+      "{\"phase\":\"replay-started\",\"updates\":1000}",
+      "{\"phase\":\"replay-completed\",\"updates\":1000,\"elapsedMs\":3348.078}"
+    ],
+    "credential_pin_case": "774ms",
+    "ig_rotation_case": "1079ms",
+    "wa_ordinary_case": "760ms",
+    "wa_initial_ack_case": "682ms"
+  },
+  "postflight": {
+    "candidate": "cp3-api66",
+    "postflight": "pass",
+    "counts": {
+      "frozen_sources": 261,
+      "bound_inputs": 830,
+      "preservation_rows": 35,
+      "root_gitlinks": 3
+    },
+    "source_mismatches": [],
+    "bound_input_mismatches": [],
+    "preservation_mismatches": [],
+    "observed_root_index": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "errors": []
+  },
+  "qualification": "Synthetic canonical validation passed; this is not provider or checkpoint/feature acceptance evidence."
+}

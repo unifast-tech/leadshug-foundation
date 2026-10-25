@@ -1,0 +1,42 @@
+{
+  "kind": "cp4-native-test68-single-writer-handoff",
+  "authority": "Approved ST-IG-03v1.3; authority-cp4-test68/routing-cp4-test68 GO; adherence67 terminal/root exact. Test-only, not new WHAT.",
+  "profile": "Operational / Coder executor",
+  "writer": "instagram_repair44",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "topology": "primary-checkout-single-writer",
+  "allowedWrites": [
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+  ],
+  "immutableBaseline": {
+    "manifest": "cp3-adherence67-frozen-manifest.json",
+    "sources": 261,
+    "preservations": 35,
+    "rootIndex": 3
+  },
+  "preparations": [
+    "cp4-native-fixture67-preparation.json",
+    "cp4-wa-bridge65-root-qualification.json",
+    "cp4-ig-lifecycle65-root-qualification.json"
+  ],
+  "requiredTests": [
+    "Actual Nest/PG/current session/grants, only external HTTP synthetic. First approvedcatalog200 intentionally exposes missingroute404 as causalRED. No passingexpect404, mocks of BFF/DB/domain, skip or source changes.",
+    "Native21OAuth-confirm accounts with3actualADMIN actors x7attempts respecting10/actor/30BU; default20+1,limits1and50,stablecursor/malformed/crossBU/authordering/no duplicate/zeroHTTPandmutation/<=8actualdomainSQL/page, selectedcurrentdisplaynotrawIDs/candidates.",
+    "ExactUUID+generation WAowner controls underactualprovider->BU->channel locks, foreignBU/stalegeneration/selectedsibling/heldprovider race. SeparateverifiedWAbusiness/commonBCI/differentproviderIDs fixture. Legacycompatiblecatalog>2mustconflictnottruncate.",
+    "NativeIG verify after expiredOAuth TTL,currentactor/grant/session/gen/creds/resourcelease+10scooldown/bounded1GEToperation,UNKNOWN503 safeobservation/noPOST; knowncurrentacceptedreceiptretained. Max3requests/STAGE not/PIdlifetime.",
+    "NativeIGdisconnect retainschannel/PId/BCI/routes/messages/completedconfirmations/knownfacts,bumpgen/clearcredential/currentreceipt/cancelonlyunfinished selectedattempts. Actual heldcallback/confirm/subscription cannotrestore/promotion/POST afterlocaldisconnect. AlreadydispatchedheldHTTPcountedtruthfully.",
+    "NativeabsentcredentialREAUTHORIZE exactsameaccount/app/BU/gen,SAMEPId,freshversion>maxtrulymappedhistory,normalresolver verify-purposedecrypt; nonewCONNECT/transfer/newresource. Newgenrequiresfreshsignedreceipt,oldACKhistorypreserved; livesamegenreauthretainsgenuinecurrentreceipt.",
+    "Wrongaccount/pending/rejected candidate cannotrelabelcurrentusername. PreserveglobalpriorPOSTuncertainty throughallattempts/reconnect;UNKNOWNnotpermissionforsecondPOST."
+  ],
+  "routineDto": {
+    "catalog": {
+      "connections": "safe localUUID/type/generation/status/display{platform,accountLabel,whatsappPhone,instagramUsername}/identityVerified/providerConnectionState/receiptVerified",
+      "nextCursor": "opaque local cursor/null"
+    },
+    "disconnect": "{channelId:localUUID,connection:SafeConnection|null,remoteCleanup:PENDING|CONFIRMED}; retainedIGnonnull;deletedWA null; noinventedcleanup"
+  },
+  "errors": "T774:401/knownBU403/foreignBU404;payload400afterauth;context-operation409;actualbudget-cooldown429+RetryAfter;UNKNOWN503. CSRF forPOST. No token/rawID/payload errors.",
+  "forbidden": "No tests/build/runner yet. No production/helper/previousspec edits, Git/private/env/runtime/Meta HTTP/dependencies/thresholdreduction/retry/skip. Rootinspect/serializevalidator afterterminal. Stop and report genuineunresolveddecision, do not silently widen.",
+  "report": "terminal exactpath/hash/bytes/scenario coverage/helpers borrowed read-only; tests NOTRUN; root owns docs."
+}

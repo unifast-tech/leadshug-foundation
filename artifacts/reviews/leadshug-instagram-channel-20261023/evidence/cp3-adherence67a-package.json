@@ -1,0 +1,213 @@
+{
+  "kind": "closed-current-affected-CP3-source-adherence67-a",
+  "status": "Full source after API66 root reconciliation, prospective fresh review; no acceptance",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "sha256": "e2cb984a5c7b928712817399d211d53eec263c9bd6afb6c60d654b8b3b06d217",
+    "bytes": 306161
+  },
+  "foundationFrozenAuthorityCommit": "841d749ecc530759e0fda2750d00b675bed9513b",
+  "requiredSourceBodies": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "sha256": "14cc63c095022ce7890a43a1ea6613d4be7dd582c6cfb28e86b45aab29e0795a",
+      "bytes": 50850
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "sha256": "ac6859204f25a215f17cabd125c494599124f22c81845c9dccdd811cc05847ab",
+      "bytes": 49834
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "sha256": "f0ea9891bcfc6f9bacc2a157a7b35b75dc74e347d06250cec91c7974fa95da9d",
+      "bytes": 5620
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "sha256": "702c49ee462610aa3a9fdef0c003f4b108209dad76ea03ae1dbcf8e2cc9c38ac",
+      "bytes": 22396
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "sha256": "55220d272312d68f5bb379a12c0f9f54350ab233696a2dc071b753c14c09eff8",
+      "bytes": 64678
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf",
+      "bytes": 13235
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee",
+      "bytes": 9602
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630",
+      "bytes": 9525
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200",
+      "bytes": 5483
+    },
+    {
+      "path": "api-app/src/domain/access/scope.ts",
+      "sha256": "412f68eb157328855c87cb86b6b89cc1c267eee7068dc59c0abbe085074db26d",
+      "bytes": 5701
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7",
+      "bytes": 2390
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526",
+      "bytes": 2375
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34",
+      "bytes": 2211
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26",
+      "bytes": 3900
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5",
+      "bytes": 2815
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a",
+      "bytes": 73878
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "sha256": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f",
+      "bytes": 46758
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "sha256": "4fc5ce0f7b8d70f6ad960c36d836809bb80943a5bfec0d3d4f3dbecd47a1d386",
+      "bytes": 46124
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979",
+      "bytes": 34866
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "sha256": "1c47d314fd333a8826a121a9a593eeb54e0d156af2a0f4ade494dfee3250f131",
+      "bytes": 27690
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "sha256": "639ffaea60923fcfb87544dbbccf307dee6a09d1d6cc98ce48d9e7fa0a8a8a3f",
+      "bytes": 128746
+    }
+  ],
+  "requiredSourceCount": 21,
+  "requiredEvidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46-root-adjudication.json",
+      "sha256": "56bc6fe372e9bfda183e5cd45b13d56bc0d04f1370102036802080fa5e98b39a",
+      "bytes": 3703
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46a-raw.json",
+      "sha256": "d6bd798c4dfd1c0afadc67c81fd13dcc0f88c7d385bdc14d20e47c71bc4bebc2",
+      "bytes": 7301
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence46b-raw.json",
+      "sha256": "e0bc9ca5ee93a9f40370c06e1b1609641f6bb8531e97931c1b09f56e1f38cf08",
+      "bytes": 9994
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-adherence67-coverage.json",
+      "sha256": "69a38845f423b86338d5c37d3ae669b61ec854d62ecfcdffcfe76ac9cfb745ac",
+      "bytes": 20307
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-source54-root-reconciliation.json",
+      "sha256": "c5eed50972a7e1585846f5db00d77d2bcf7c7c7e76ba3440387ee90cc0bbe6c0",
+      "bytes": 3969
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture63-root-reconciliation.json",
+      "sha256": "bafb5af9e48cb66c7a1e07128522441008339b9bc27ef3569e2ed1599f1ce7e7",
+      "bytes": 2150
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture65-root-reconciliation.json",
+      "sha256": "628bc511e891bce3825b02fafab3a544bdc941c6298f0105f57b5e9d6ef81d8b",
+      "bytes": 1233
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-residual-fixture62-opinion-raw.json",
+      "sha256": "cc62fdf17157f84d4ca2940c1f2920088e3e19aa4940258947f5266917ee2c35",
+      "bytes": 10997
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-red53-root-reconciliation.json",
+      "sha256": "55e648c2215491bf41a4047dc3d4f4e035374c4eeebae8e0c1ec07a7864e38c7",
+      "bytes": 2426
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-readonly-preparation29-root-qualified.json",
+      "sha256": "9f6c36ffd9cb42aaf62a52feb27b5c8d2041a9df689cb6f657dd8be3021a1e01",
+      "bytes": 3063
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-result.json",
+      "sha256": "dbab289b5cc21a72d530531170512dc7a09c1040938a3531bd080e889b955ed6",
+      "bytes": 4302
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-root-reconciliation.json",
+      "sha256": "c9c9fcef9aadf36711451bcb264f0d98dd4429f4b5d88fad3178c54c65710437",
+      "bytes": 4929
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api66-review-excerpt.txt",
+      "sha256": "e0cf363f4577873bf7f34e4273b476bf3d50da161a9ec6ec58c48c90414c9bca",
+      "bytes": 7025
+    }
+  ],
+  "mandatoryObligations": [
+    "Channel abstract sendMessage/supportedKinds with actual DI; business send/policy callers depend on abstract operation policy/contract, concrete provider protocol isolated; no growing generic plugin framework or hidden concrete dispatch switch/fallback.",
+    "Strict V2 new writers capture current immutable route/business/provider/contact address/credential generation/version/fingerprint before external send; selected route never silently falls back or borrows another account/lastIN. TwoIGaccounts/samepeer remain distinct; route/account stale denial precedes external POST.",
+    "Qualified captured address flows unchanged to knownACK and UNKNOWN diagnostic local owner; one shared OutboundService/admission/MessageAcceptance; accepted/blocked/refused/uncertain semantics never fabricate success or retry external uncertainty.",
+    "Shared canonical contact proof and provider identity→peer advisory→conversation lock order; real WA verified ingress creates route, legacy presentation preserved while canonical peer governs equality. Compare newP2002 causal test to actual owner order; no DB/domain mocks, counters or assertions weakened.",
+    "Operation-specific policy and qualified timestamps; official text24h from qualified actualIN, approvedtemplate firstsend outsidewindow, nonofficial text policy; IG only inbound-originated textual24h, no templates/prospecting/groups/Typebot accidental. Keep CURRENT1000characters normative pending humanUTF8 change.",
+    "Historical V1 accepted facts and exact key/generation/account tuple replay local-only after present credential removal/rotation; no historical provider redispatch or mutation of stored fingerprints/deadlines/receipts. Legitimate NEW V2 sends remain eligible after permitted oldslot release.",
+    "APIv1/account_id/phone, Typebot, Consultar/list/drilldown/CSV, legacyBU projection remain WA-only and bounded; never treatIGopaquepeer as phone or BU.phone as authority; noN+1/whole-history/per-rowprovidercalls, nativePCV limits unchanged.",
+    "Bounded1000/8MiB signedIG ingress completepreflight, max4 independentpeer workers ordered withinpeer, anomalous sameaccount/samemessage/differentpeer originalflatserial preservesfirstwinner. Failure stopsnewwork/drainsstarted writes, no200lostwork; no globalqueue or cached stale resource fences.",
+    "Performance/elegance/structure/operationalfit under actual inspected code and measured proof: reject scatteredconditions, duplicated ownership/metadata/admission, unnecessary layers/queries, retry/fallback/constraint bypass; report remaining risks without inventing benchmark/runtime pass.",
+    "All CP4 consumers and runtime/assurance obligations remain mandatory. Identify current missing consumers and keep them open within approved delivery; this review cannot accept backend-onlyfeature or waive them."
+  ],
+  "reviewPart": "a",
+  "focus": "Current coherent last provider tuple/actor-session fence after real COMMIT, product54/58, A46/HOW47, native mutation-first/serialization and transparent fixture63 oracles, abstract provider adapters and lifecycle fit.",
+  "wholeGate": "Complementary A21+B21 full current source bodies; union35 +33 disjoint unchanged actually-reviewed35/46 carried exact =68. All18 changed/new since46 freshly enclosed. Both strict terminal results plus root freeze reconciliation required, no peer read inference. WholeCP4 and later gates remain mandatory within same approved delivery.",
+  "validationQualification": "API66 full canonical command exactly once:31 migrations/lint/build/426unit39files +597E2E55files passed. Root matched261source/T/830inputs/35preservations/3gitlinks/rawhash. Selected literal log excerpt enclosed; full228825-byte raw log NOT enclosed/read by this reviewer. Native63 tests preserve actual encrypted rotation/decryption/liveness and exact409 BLOCKED zeroPOST/OUT after real committed versionchange. Two actual75sec positives preserve75000 lifetime, native waiters/full2200hold/4500bounds/>60sec DB-local margins, all negative tests unchanged. Fixture65 adds real matchedhold after natural session expiry; unchanged750ms tolerance now actual479.671ms, later no-effect/303 assertions reached. PriorAPI64 derived report correction honest provenance, not another run. Seven new authorization controls were authored AFTER production54; do not claim retroactive test-first. Original3A46+B46 causalRED53 predates54. No real provider/browser/ALL proof.",
+  "frontendConsumerMatrix": "FULL current TODO Frontend / Consumer Matrix enclosed. ALL CP4 connections/lifecycle/shared safe display/strictV2 React composer/realtime Incoming/real HTTPS browser remain missing and mandatory in same approved delivery. Known release blocker IG-CP3-ROOT-03; zero waiver, no backend-only acceptance. Preparation29 evidence is non-authoritative planning only.",
+  "remainingOpen": "Primary own-subscription GET envelope/ID namespace/completeness unresolved (IG-SUBPROTO-01/SUBREC-03); UNKNOWN is honest fail-closed, not fulfilled observation. Human proposals UTF8-bytes and protectedprivacy remain pending. OAuth middleware v2 is already human-admitted/applied12, native proof passes66, actualHTTPS/browser remains open. Complete CP4/CP5/CP6/ALL/security/TQA/cutover/final/physical realruntime later separately approved plan mandatory.",
+  "outputRequirements": "Return canonical architecture_adherence JSON perdispatch. Inspect ALL enclosed current fullsource bodies and evidence; explicitly cover all10obligations and all5axes performance/elegance/structural/operational/architecture. Accurately scope positions toaffectedlane and carriedforwardproof. Flag newreal defects or missedfailuremodes, distinguish knownplannedCP4gaps fromcurrentCP3defects. No invented historicalpasses/peerreads, no tooling/files/network. No softened thresholds/fixtureworkarounds accepted merelybecause GREEN. Report any current material gap without trusting GREEN alone. Original resolved findings stay closed absent regression, new aliases assessed at changed locus. Inspect all enclosed full bodies and all10 obligations/5axes, distinguish current repaired CP3 defects from mandatory not-yet-implemented CP4. This is an in-progress affected adherence gate, not full delivery acceptance.",
+  "reviewExecution": {
+    "canonicalRunner": "delphi-ai/tools/subagent_review_run.py",
+    "model": "gpt-6.1-sol",
+    "reasoningEffort": "xhigh",
+    "configurationOnlyArgvInjection": true,
+    "plan": "cp3-adherence67-execution-plan.json"
+  },
+  "governingTodoRead": "FULL exact current TODO body enclosed, not selected ranges",
+  "foundationCommitQualification": "Pushed HEAD before current owned documentation; exact frozen TODO/source/evidence hashes authoritative, no clean-tree claim."
+}

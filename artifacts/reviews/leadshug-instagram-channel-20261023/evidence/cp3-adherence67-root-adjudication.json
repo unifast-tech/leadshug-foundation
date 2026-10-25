@@ -1,0 +1,107 @@
+{
+  "kind": "root-adjudicated-complementary-current-cp3-adherence67",
+  "status": "No new material CP3 defect; affected repairs closed, whole delivery incomplete",
+  "reconciliation": "cp3-adherence67-root-reconciliation.json",
+  "closures": [
+    {
+      "id": "IG-CP3-A46-01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "IG-CP3-B46-01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "IG-CP3-A-02",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "F-B338F932",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "F-B67948FF",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "F-82E76A38",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "F-175B5680",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "IG-CP3-FIX62-01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "IG-CP3-FIX62-02",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    },
+    {
+      "id": "IG-CP3-TIME64-01",
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "fix in this TODO",
+      "status": "closed affected repair by API66 and complementary current adherence67; original severity retained"
+    }
+  ],
+  "qualifiedPriorCp2Closures": [
+    "IG-CP2-ROOT-02",
+    "IG-SUBREC-02"
+  ],
+  "priorQualification": "Original temporal/acquisition-lifecycle defects already resolvedqualified by source18/API18/affectedR5. Do not reopen from older stale promotion-table text or derived Integrated extraction. API66 and67 do not accept wholeCP2.",
+  "remainOpen": [
+    {
+      "ids": [
+        "IG-CP3-ROOT-03"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "complete all CP4 in this TODO; no backend-only waiver"
+    },
+    {
+      "ids": [
+        "IG-SUBPROTO-01",
+        "IG-SUBREC-03"
+      ],
+      "resolution": "Integrated",
+      "classification": "release-blocker",
+      "routing": "resolve primary own-observation contract and faithful implementation/proof in this TODO"
+    }
+  ],
+  "sourceSequenceQualification": "7newauth controls afterproduction54, original3A46+B46causalRED53before54; no retrotestfirst. Fixture63/65 preserve thresholds and native facts.",
+  "pendingHuman": [
+    "UTF8bytes proposal",
+    "protected privacy HTML proposal"
+  ],
+  "next": "End67freeze after this root reconciliation. Serialize CP4 native test-first connections/lifecycle then source, shared safe display/realtime, React strictV2 and realHTTPSbrowser, fullmandatoryCP5/CP6/ALL/security/TQA/cutover/final/runtime later approved plan. No product/private/runtime/Meta permission expansion."
+}

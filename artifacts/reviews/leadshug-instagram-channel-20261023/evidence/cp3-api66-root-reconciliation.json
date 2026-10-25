@@ -1,0 +1,116 @@
+{
+  "kind": "cp3-api66-root-reconciliation",
+  "allFrozenExact": {
+    "sources": 261,
+    "todo": true,
+    "positiveBoundInputs": 830,
+    "preservationRows": 35,
+    "rootGitlinks": 3
+  },
+  "log": {
+    "path": "cp3-api66-api.log",
+    "bytes": 228825,
+    "sha256": "9ac52e007e774f18c7bb3049f7bb442b2cf1e2cc4a315f641fb7f9b846f66d91"
+  },
+  "correctedResultSha256": "dbab289b5cc21a72d530531170512dc7a09c1040938a3531bd080e889b955ed6",
+  "exitCode": 0,
+  "passedStages": {
+    "parity_guard": "pass",
+    "prisma_generate": "pass",
+    "migrations": "31/31 applied",
+    "lint": "pass",
+    "build": "pass",
+    "unit": {
+      "files": "39/39",
+      "tests": "426/426",
+      "status": "pass"
+    },
+    "e2e": {
+      "files": "55/55",
+      "tests": "597/597",
+      "status": "pass"
+    }
+  },
+  "failures": [],
+  "reached": {
+    "initial_message_tests": "26 passed; credential pin through DB commit 774ms and BU readiness pin 782ms",
+    "authorization_fence_tests": "16 passed",
+    "instagram_credential_rotation_serialization": "passed 1079ms",
+    "whatsapp_disconnect_controls": "ordinary POST before disconnect 760ms; initial confirmed ACK after disconnect commit 682ms",
+    "cp2_strict_natural_session_clock": "passed with unchanged <250ms assertion",
+    "cp2_batch_1000": {
+      "phase_markers": [
+        "{\"phase\":\"initial-started\",\"updates\":1000}",
+        "{\"phase\":\"initial-completed\",\"updates\":1000,\"elapsedMs\":5139.459}",
+        "{\"phase\":\"replay-started\",\"updates\":1000}",
+        "{\"phase\":\"replay-completed\",\"updates\":1000,\"elapsedMs\":3348.078}"
+      ],
+      "post_phase_count_replay_malformed_oversize_echo_read_assertions": "case passed 8513ms"
+    },
+    "p2002_rollback_exact_readback_retry": "passed 559ms; full assertion case passed, including native count-three and nine oracles",
+    "cp2_residual_suite": "12/12 passed; final session-clock case passed 5006ms",
+    "dispatch_lock_groups": "same-account Instagram, independent account, and formatted WhatsApp all passed; case 776ms",
+    "ack_tests": "4/4 passed",
+    "query_tests": "5/5 passed",
+    "csv_tests": "1/1 passed",
+    "final_clock_tests": "9/9 passed"
+  },
+  "actualClockTelemetry": {
+    "ST04_CREDENTIAL_PIN": {
+      "validationSucceeded": true,
+      "credentialUpdateWaited": true,
+      "claimPid": 275,
+      "rotationPid": 296,
+      "rotationBlockedByClaim": true,
+      "claimInitialSucceeded": true,
+      "credentialVersionAdvanced": true,
+      "postsDeltaWhilePinned": 0,
+      "postsDelta": 0,
+      "outMessagesDelta": 0,
+      "sendStatus": 409,
+      "finalState": "REJECTED"
+    },
+    "CP2_MAPPING_LIVE_CLOCK": {
+      "expiresInSeconds": 75,
+      "actualLifetimeMs": 75000,
+      "remainingAtQueueMs": 74890,
+      "remainingBeforeReleaseMs": 72686,
+      "remainingAtCompletionMs": 72553,
+      "holdDurationMs": 2203.822053,
+      "elapsedMs": 2394.9263789999995,
+      "holderDurationMs": 2398.5210469999993,
+      "waiterObservedBeforeRelease": true
+    },
+    "CP2_CALLBACK_LIVE_CLOCK": {
+      "acquiredAt": "2026-10-25T00:39:18.341Z",
+      "expiresAt": "2026-10-25T00:40:33.341Z",
+      "actualLifetimeMs": 75000,
+      "remainingAtQueueMs": 74956,
+      "remainingBeforeReleaseMs": 72754,
+      "remainingAtCompletionMs": 72746,
+      "waitDurationMs": 2202.5184530000006,
+      "elapsedMs": 2282.652436999999,
+      "waiterObservedAtQueue": true,
+      "waiterObservedBeforeRelease": true
+    }
+  },
+  "matchedResidualClock": [
+    "controlDurationMs: 2026.1543339999998,",
+    "expiredDurationMs: 2505.825527,",
+    "signedDeltaMs: 479.67119300000013,",
+    "absDeltaMs: 479.67119300000013,",
+    "actualNativeWaiterSeen: true,",
+    "currentStillBlocked: true,",
+    "sessionExpired: true"
+  ],
+  "rootActualRead": "Raw426/597summary/noFAIL, all26initial-message/12residual/16auth/finalclock9/mapping6/nativequalifiedlocks/P2002/ACK4/query5/CSV1 andbatch phase actualrows. Allsource assertions inpassedcases reached; no independentnumericP2002 scalar beyondpassedcount3/nineoracles.",
+  "reportQualification": "Root recomputed actualpersistedraw9ac52 andresultdbab; no acceptance from unverifiedintermediatehash. Numericdurationsfromactual66rows, no64failuremetadata carried.",
+  "excerpt": {
+    "path": "cp3-api66-review-excerpt.txt",
+    "bytes": 7025,
+    "sha256": "e0cf363f4577873bf7f34e4273b476bf3d50da161a9ec6ec58c48c90414c9bca",
+    "scope": "Selected literalrawlines, notfullrawreadclaimforreviewers."
+  },
+  "status": "66fullAPI GREEN onexactsource, freezeendsafterrootmatch. Freshcurrentaffectedarchitectureadherence67 requiredbeforeCP4sourcehandoffs. NoCP3/fullfeatureacceptance. CompleteCP4/primary/human/CP5/6/ALL/security/TQA/cutover/final/physicalremain.",
+  "sequenceQualification": "Sevennewauthorization-firstcontrolsauthoredafterproduction54; originalthreeA46+B46causalRED53andninepriorbodypreservation intact. No retrotest-first claim."
+}
