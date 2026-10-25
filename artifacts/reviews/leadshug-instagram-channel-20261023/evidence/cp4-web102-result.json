@@ -1,0 +1,47 @@
+{
+  "kind": "CP4 Web102 canonical result",
+  "outcome": "pass",
+  "scope": "web syntax/type/build/unit target only",
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "exitCode": 0,
+  "elapsedSeconds": 68,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web102-web.log",
+    "bytes": 9653,
+    "sha256": "49a0b0a2a4d419253f7cc4dc91cb2a495c226b398c4c4faab8d3e4e93988b96d"
+  },
+  "stages": {
+    "apiPrismaGenerate": "passed (runner setup)",
+    "webTypeScript": "passed (`tsc -b`)",
+    "webViteBuild": "passed (63 modules; 4.73s)",
+    "webUnit": "8 files, 70 tests passed (679ms)",
+    "apiBuild": "not run by Web target",
+    "apiUnitAndIntegration": "not run by Web target",
+    "browser": "not run by Web target"
+  },
+  "firstDecisiveFailure": null,
+  "cleanup": {
+    "validationContainer": "stopped and removed",
+    "validationNetwork": "removed",
+    "validationVolumes": "all nine listed validation volumes removed"
+  },
+  "postRunFrozenVerification": {
+    "frozenFiles": 328,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 349650,
+      "sha256": "99b357910d7cfdcef7b907d18edd48b1e0287c6213408792a0b9a2b60743e704"
+    },
+    "boundInputs": 1096,
+    "preservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "outcome": "pass",
+    "errors": []
+  }
+}

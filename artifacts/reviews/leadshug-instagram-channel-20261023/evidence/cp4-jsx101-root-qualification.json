@@ -1,0 +1,9 @@
+{
+  "kind": "CP4 JSX101 root qualification",
+  "oneCharacterInsertionReversesExactlyTo99Preimage": true,
+  "sourceCount": 328,
+  "other327SourcesExact": true,
+  "inheritedPreservationsAndExceptionsUnchanged": true,
+  "rootIndexExact": true,
+  "limits": "Syntax normalization source-only; Web compiler and nativebrowser proof still required. Complete API100 proof remains for unchanged API source only."
+}

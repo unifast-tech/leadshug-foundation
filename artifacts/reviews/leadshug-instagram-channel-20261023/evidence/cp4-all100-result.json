@@ -1,0 +1,48 @@
+{
+  "kind": "CP4 ALL100 canonical result",
+  "outcome": "failed",
+  "acceptance": "not accepted",
+  "command": "bash scripts/test-channels-local.sh all",
+  "invocations": 1,
+  "exitCode": 1,
+  "elapsedSeconds": 810,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all100-all.log",
+    "bytes": 234002,
+    "sha256": "352b08d5d36c37c1c93c56acb45dbd7fa79993a568a28df186697d66cc1c3627"
+  },
+  "stages": {
+    "apiLint": "passed",
+    "apiBuild": "passed",
+    "apiUnit": "40 files, 435 tests passed (4.61s)",
+    "apiIntegration": "60 files, 616 tests passed (640.28s)",
+    "webBuild": "failed at TypeScript parse error",
+    "browser": "not reached",
+    "instagram-cp4-window-config.e2e-spec.ts": "3/3 passed",
+    "instagram-cp4-initial-recipient.e2e-spec.ts": "2/2 passed"
+  },
+  "firstDecisiveFailure": "web-app build: src/telas/Inbox.tsx(643,442): error TS1005: ) expected",
+  "cleanup": {
+    "validationContainer": "stopped and removed",
+    "validationNetwork": "removed",
+    "validationVolumes": "all nine listed validation volumes removed"
+  },
+  "postRunFrozenVerification": {
+    "frozenFiles": 328,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 347615,
+      "sha256": "553072247d3834f86c0531bea4945cfc02b3bd4e1ad25a41ac5866a8818cf598"
+    },
+    "boundInputs": 1083,
+    "preservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "outcome": "pass",
+    "errors": []
+  }
+}

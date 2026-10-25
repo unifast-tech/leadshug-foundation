@@ -1,0 +1,10 @@
+{
+  "kind": "Channel103 independent root static qualification",
+  "reportedHashExact": true,
+  "fourNavigationLinesReverseExactlyToPreimage": true,
+  "other327SourceFilesExact": true,
+  "sourceCount": 328,
+  "preservationAndExceptionsUnchanged": true,
+  "rootIndexExact": true,
+  "limits": "Tests/build/lint NOT RUN for103; currentWeb102pass/currentAPI100pass doesnotprove newbrowsernavigation. FullbrowserandfinalALL/remaininggates open."
+}

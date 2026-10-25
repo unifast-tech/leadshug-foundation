@@ -1,0 +1,26 @@
+{
+  "kind": "CP4 static99 source-only corrections after UI98 terminal",
+  "authority": "Already-admitted source/test surfaces; no new behavior/path waiver",
+  "baseline": "cp4-source98-terminal-manifest.json",
+  "owned": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "obligations": [
+    {
+      "id": "99-ASSERTION-SYNTAX",
+      "change": "Second policy unit test puts contextual `as unknown as OfficialChannelWindowPolicy` after newline. Keep it on same expression line as closing brace; no assertion/literal/behavior change. Static parse risk only, no compiler failure claimed."
+    },
+    {
+      "id": "99-REACT-KEYS",
+      "change": "Inbox ordinary composer and OrdinaryRecovery in same sibling Fragment both use the identical actor/BU/conversation/generation/navigation key. Give recovery a distinct stable kind-prefixed key in all branches. Keep composer same key/type/position across uncertainty, and all tuple fences. Do not mount a different composer or change recovery deadline/admission; no duplicated sibling keys."
+    },
+    {
+      "id": "99-IG-PROVIDER-MODE",
+      "change": "UI98 correctly moves UNKNOWN after accepted/waves but leaves provider sendMode unknown when later sending independent accountB expected201. Explicitly set synthetic external HTTP provider mode accepted before Bsend; preserve UNKNOWN A uncertainty/no-retry, all10A+1B effect rows, Bsafe routing, original nativePG/response bodyhash oracles. This is fixture setup, not fakeBFF/provider bypass."
+    }
+  ],
+  "limits": "Single writer; exact three paths only. NO Git commands/status,tests/build/lint/npm/docker/network/provider/runtime/private/env/discovery/worktrees/copies/goals/Foundation writes. Source-only complete patch/exact hashes; tests NOT RUN.",
+  "next": "Root qualifies all328known sources/protected/index then one canonical current ALL. All human/primary/CP5/CP6/reviews/physical proof open."
+}

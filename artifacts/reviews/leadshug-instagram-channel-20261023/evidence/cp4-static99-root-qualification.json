@@ -1,0 +1,10 @@
+{
+  "kind": "CP4 static99 root qualification",
+  "threeReportedHashesExact": true,
+  "otherKnownSourcesExact": 325,
+  "sourceCount": 328,
+  "immutablePreserved": 34,
+  "approvedExceptionCandidatesUnchanged": true,
+  "rootIndexExact": true,
+  "limits": "Source-only; tests/build/lint NOT RUN. Executor reported failure locating AGENTS despite root-established local AGENTS; root relies on exact admitted handoff and independent source/preservation verification, not a readiness claim."
+}

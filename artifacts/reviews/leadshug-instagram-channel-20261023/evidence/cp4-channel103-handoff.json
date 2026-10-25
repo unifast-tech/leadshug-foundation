@@ -1,0 +1,15 @@
+{
+  "kind": "CP4 channel mixed-wave navigation103 source-only handoff",
+  "baseline": "cp4-source101-terminal-manifest.json",
+  "owned": [
+    "web-app/e2e/channel-transport.spec.ts"
+  ],
+  "expectedSha256": "bcc35141110b354a0edf38f863994a7a03e9c9b23eebcf779517e6356ac817f8",
+  "sourceFacts": [
+    "OutboundService successful ordinary send assigns conversation statusIN_SERVICE (line838+); allthree seeded conversations startQUEUED.",
+    "Inbox trocarBu preserves selectedaba; the mixedwave round2/4 currently tries toclick accepted mainwhileQUEUED and round3 tries queuedotherBUwhileIN_SERVICE aftercorrectingmainselection."
+  ],
+  "change": "In ONLY five-wave test existing round1/2-or4/3 branches, explicitly click Na fila before queuedsecondary/otherBU and Em atendimento before acceptedmain (after BU select and before conversation click). Use current actual visible button labels from Inbox ABAS. Preserve all current5wavesx20/formlatch/onePOST/effect/PGaudit/UNKNOWNdraft readonly/nativeproxy/status/bodyhash, routes/context counts, and original30s. No new route/data/clock change.",
+  "limits": "Singlewriter one alreadyadmittedspec; no tests/build/lint/npm/docker/network/provider/runtime/private/env/Gitcommands/discovery/worktree/copy/goals/Foundation writes. Read exact local absoluteAGENTS, no parent/backups. Source-only exacthash/bytes/report, testsNOTRUN.",
+  "next": "Rootqualifies328sources then ONE full canonicalbrowser104; Web102passedcurrentproduct/70unit, API100passedcurrentAPI/435unit616E2E, finalcompleteALL/CP5/CP6/primary/humanassurance remain."
+}

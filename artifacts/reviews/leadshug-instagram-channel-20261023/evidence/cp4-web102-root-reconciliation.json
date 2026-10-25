@@ -1,0 +1,46 @@
+{
+  "kind": "Web102 independent root reconciliation",
+  "frozenSourcesExact": 328,
+  "fullTodoExact": true,
+  "boundInputsExact": 1096,
+  "immutableRowsExact": 34,
+  "threeExceptionsUnchanged": true,
+  "rootIndexExact": true,
+  "fourOutputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web102-before.json",
+      "bytes": 1452,
+      "sha256": "a0963dd290d30c4f80decaabd0afb335d3ef8ef0ab25cf3a0e6d3aa6c9f01578"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web102-web.log",
+      "bytes": 9653,
+      "sha256": "49a0b0a2a4d419253f7cc4dc91cb2a495c226b398c4c4faab8d3e4e93988b96d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web102-after.json",
+      "bytes": 1777,
+      "sha256": "fd25c2d9aa5884482b6dd93b3b725eabc20ad7c93454b2d0e49a5742d0cc6498"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web102-result.json",
+      "bytes": 1683,
+      "sha256": "edb5677d4d07187ddd4bfa345162ae2389cfe4e8b620cc982aa3a548bd15af41"
+    }
+  ],
+  "canonicalInvocations": 1,
+  "exitCode": 0,
+  "actual": {
+    "parityProbes": 26,
+    "prismaGeneratePrerequisite": "PASS",
+    "WebTscVite": "PASS63modules4.73s",
+    "WebUnit": "70/70 tests8/8files679ms",
+    "cleanup": "Owned disposable container/nine volumes/network removed"
+  },
+  "notRun": [
+    "API build/unit/integration",
+    "browser",
+    "real runtime/provider"
+  ],
+  "disposition": "102 freeze ends after independent match. Bounded one-path CT103 source fixture navigation repair then complete native browser proof/current finalALL and remaininggates mandatory."
+}

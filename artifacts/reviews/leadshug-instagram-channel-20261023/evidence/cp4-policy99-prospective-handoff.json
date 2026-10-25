@@ -1,0 +1,11 @@
+{
+  "kind": "Policy unit syntax99 prospective source-only handoff",
+  "state": "Queued only; do not dispatch or write until UI98 terminal/root-qualified",
+  "owned": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts"
+  ],
+  "expectedPreimageSha256": "d0eceb92ab61fe2f324c123ee1e8dcce56ed07471d80fc3f5386a1997c6bc666",
+  "change": "In second test, keep contextual type assertion `as unknown as OfficialChannelWindowPolicy` on the same expression line as closing object brace, matching the first test; avoid possible ASI parse ambiguity. No literal, assertion, fixture, behavior or coverage changes.",
+  "limits": "Source-only one already-admitted inbox test path; no tests/build/lint/npm/docker/network/runtime/provider/private/Git commands/worktrees/copies/goals. Root records actual patch/hash, never infer a compiler failure or pass from static concern.",
+  "next": "Terminal/root qualify then current complete canonical ALL."
+}

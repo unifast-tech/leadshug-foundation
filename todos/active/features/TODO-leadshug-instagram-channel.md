@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Browser93 terminal/root-reconciled:64/90Playwright passed,26failed. Serialized causal source/fixture repairs and current complete canonical proof are required. Privacy/UTF-8 companions remain pending human validation; timeline88 was withdrawn as unnecessary; primary/CP5/CP6/assurance/real gates remain open.
+- **Next exact step:** API100 passes435unit/616integration; Web102 passes tsc/Vite/70unit after exact JSX101 correction. Channel103 navigation source is terminal/root-qualified; run exactly one frozen whole-browser104 and reconcile actual native journeys. FinalcurrentALL/primary/pendinghuman/CP5/CP6/assurance/real gates remain open.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1996,3 +1996,35 @@ Rootmatchedsix95/95acandidatehashes/320otherknownsources/34immutable rows/rootin
 ### Policy97a terminal — whole UI98 source handoff
 
 Root independently matched six97/97a candidate hashes,322 other known sources,328 total public sources,34 immutable rows,three approved exception candidates and exact root index. `evidence/cp4-policy97a-root-qualification.json` records static-only qualification; tests/build/lint not run. `evidence/cp4-ui98-handoff.json` dispatches one fresh Operational/Coder routine executor on nine exact already-admitted Web paths for canonical initial-peer qualification, persisted official window policy parsing, common durable uncertain recovery, fenced versioned error ownership and complete native browser sequencing. No other source writer, no Git commands, no protected timeline/start/telas rewrite, no execution/private/runtime/Meta authority. All current complete validation and remaining human/primary/CP5/CP6/independent assurance/physical gates stay open.
+
+
+### UI98 terminal — three bounded static99 corrections
+
+Root matched nine UI98 reported hashes,319 other known source paths,328 public sources,34 immutable rows,three admitted exception candidates and root index. `evidence/cp4-ui98-root-byte-qualification.json` records source-only provenance. Root static review found duplicate sibling composer/recovery React keys, retained unknown fake provider mode before later independent B accepted-send oracle, and the97 unit type-assertion newline risk. `evidence/cp4-static99-handoff.json` serializes one routine source writer across only three already-admitted paths, preserving every assertion, effect count, deadline, tuple and protected regression. No execution or acceptance claimed. Complete current canonical ALL follows terminal qualification; pending human/primary/CP5/CP6/assurance/physical gates remain.
+
+
+### Static99 terminal — complete canonical ALL100 freeze
+
+Root matched three99 candidate hashes and325 other known sources,328 total public sources,34 immutable rows,three exact approved exception candidates and exact root index. Static99 preserved assertions/effects and corrected source/test expression keys and fake provider setup only; tests/build/lint not run. All source writers terminal. Freeze328 source files,full current TODO,positive public canonical inputs,preservations/root index for exactly ONE `bash scripts/test-channels-local.sh all` invocation100. Fresh routine validator owns only four unique100 before/rawlog/after/result artifacts; no source/T/input edits,retries,autofix,filtering,private/operational/runtime/Meta/provider/Git expansion. Actual canonical owned synthetic builds/dependency setup/disposable PG and cleanup permitted. Root independently reconciles all frozen bytes,actual reachability/output hashes before thaw; failure does not authorize source edits until reconciliation. Current whole API/Web/Playwright, not selected green proof, remains required. All pending human/primary/CP5/CP6/independent assurance/physical gates retained; no acceptance claimed.
+
+
+### ALL100 terminal/root reconciled — JSX101 correction
+
+`evidence/cp4-all100-root-reconciliation.json` independently matches328sources/fullT/1083positiveinputs/34immutable rows/threeexceptions/rootindex/fouroutputs. ExactlyONEcanonicalALL exited1: parity26,31migrations/APIlint/build,435unit40files and616integration60files passed. Both new95/97 native suites pass allfivecases. Web tsc stopped at Inbox.tsx643:442 TS1005 missing close parenthesis; Webunit/browser NOTREACHED. Owned disposable cleanup completed.100freeze ends after rootmatch. Sole JSX101 writer owns only Inbox.tsx under `evidence/cp4-jsx101-handoff.json`, balancing syntax without semantic/key/state changes. Then canonicalWeb102; completecurrentALL/nativebrowser/primary/human/CP5/CP6/allassurance/physical gates remain, no acceptance.
+
+99 memory-only provenance later confirmed an out-of-lane broad workspace filename search and reading a backup instruction document instead of local AGENTS. Root retains exact3delta/325otherknownsource qualification and does not claim absence of private path enumeration. No retroactive permission; all following lanes require exact absolute local AGENTS and no discovery. No unrelated content read otherwise or Git mutation was reported.
+
+
+### JSX101 terminal — canonical Web102 freeze
+
+Root reversal proves exactly one close-parenthesis insertion restores the99preimage,327 other public sources/protected candidates/root index unchanged. `evidence/cp4-jsx101-root-qualification.json` records static-only provenance. All writers terminal. Freeze328sources/fullcurrentT/positiveinputs for exactlyONE `bash scripts/test-channels-local.sh web` invocation102 to qualify currentWebcompiler/unit correction; this target doesnotrun APIintegration orbrowser and cannotreplace finalcurrentALL/nativejourney gates. Validator onlyfourunique102outputs; no source/T/input writes,retry/autofix/private/runtime/Meta/Git expansion. Root reconciles actualstageproof/bytes beforethaw. All remaining human/primary/CP5/CP6/independentassurance/physical gates remain.
+
+
+### Web102 terminal/root reconciled — faithful mixed-wave navigation103
+
+Root matched328sources/fullT/1096positiveinputs/34immutable/threeexceptions/rootindex/fouroutputs. ExactlyONEcanonicalWeb102 exit0: parity26,Prisma prerequisite,tsc/Vite63modules4.73s,70unit8files679ms PASS. API/build/integration/browser notrun inwebtarget; API100 unchanged-source proof retained withoutclaimingfullALLcurrentpass.102freeze ends afterrootmatch. Staticcurrent source shows acceptedordinary assignsIN_SERVICE and BUchange preservesaba; mixedwave newcontexts mustselect actual Na fila/Em atendimento tabbeforeclicking queuedsecondary/otherBU versusacceptedmain. Sole103writer owns only already-admitted channel-transport.spec.ts per `evidence/cp4-channel103-handoff.json`, preserving5x20/allcounters/30s andnativeoracles. Thenwholebrowser104/currentALL/primary/human/CP5/CP6/assurance/realgates remain.
+
+
+### Channel103 terminal — complete canonical browser104 freeze
+
+Root reversal proves exactly four tab-navigation lines restore original98transport spec,327other source files/protected candidates/rootindex unchanged. `evidence/cp4-channel103-root-qualification.json` records source-only qualification. All writers terminal. Freeze328sources/fullcurrentTODO/positive publicinputs/34immutable/threeexceptions/rootindex for exactlyONE `bash scripts/test-channels-local.sh browser` invocation104. Validator owns onlyfourunique104before/rawlog/after/result outputs. Preserve all90scenarios,currentnativeHTTPS/fetchDI/rawWSS/realBFF/PG/providerHTTPboundary/responsehashes; no skips,threshold/timeout/assertion edits,retry/autofix,source/T/inputwrites,private/operational/runtime/Meta/Git expansion. Root matchesactualreached/unreachedoracles/allbytes beforethaw. Browser target buildsAPI/migratesdisposablePG/buildsWeb/executesALLPlaywright; APIunit/integration/Webunit notpartofthis target. API100/Web102proofscopedtocurrentunchangedcode, not a finalcurrentALL pass. Allprimary/pendinghuman/CP5/CP6/independentassurance/physicalgates remain.

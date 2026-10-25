@@ -1,0 +1,31 @@
+{
+  "kind": "Current complete canonical validation prospective plan",
+  "state": "NOT DISPATCHED; UI98 sole writer active. No freeze or test invocation authority from this prospective artifact.",
+  "prerequisites": [
+    "UI98 terminal with complete nine-path report; no product writer active",
+    "Root static qualification of full328 public source candidates,34immutable rows,three exact approved exceptions and exact3rootgitlinks",
+    "Resolve any concrete source defects before freeze; no stale completion inference",
+    "Record current full TODO and positive canonical runner inputs with exact byte/hash in new frozen manifest",
+    "Authority/routing guards GO for separate routine implementation-validation executor"
+  ],
+  "command": "bash scripts/test-channels-local.sh all",
+  "invocations": 1,
+  "stages": [
+    "Canonical disposable namespace preflight, public dotenv masks,26 CI-parity mutation probes",
+    "Install locked dependencies; Prisma Client generation,31 migrations on disposable PostgreSQL, schema status",
+    "API lint,build,ALL unit and ALL E2E (including new95/97 and repaired86)",
+    "Web tsc/Vite build and ALL unit tests",
+    "ALL90 or current admitted Playwright scenarios, native HTTPS fixture/current rawWSS/actual clients and PG, protected existing suites unchanged",
+    "Canonical owned disposable cleanup even on failure"
+  ],
+  "invariants": [
+    "No source/TODO/positive input writer while frozen",
+    "Only four unique before/rawlog/after/result output artifacts for validator",
+    "No retries,autofix,test filtering,changed timeouts,skips or synthetic BFF/domain responses",
+    "No real dotenv/private files or operational DB/log/process/environment/volume/tunnel/Meta/provider access",
+    "No Git commands except exactly scoped3rootgitlink read by validator; no mutations",
+    "Native fixture HTTP fakes must deny unexpected external requests; actual client/service,BFF,transaction,websocket and response capture remain"
+  ],
+  "reporting": "Report actual command exit, exact stage counts/durations and reached versus unreached assertions; failure causes only if proven. Root independently matches all frozen inputs/output hashes before thaw. No fullfeature acceptance from a partial/failed run.",
+  "laterGates": "Primary own-subscription read, pending reviewed UTF8/privacy human admissions, CP5 performance/RLS/BCI/FRC and independent adherence/security/TQA/cutover/final, CP6 concrete reviewed runtime plan+approval and realDM/reply/restart+bothWA regressions remain."
+}

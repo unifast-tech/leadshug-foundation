@@ -1,0 +1,18 @@
+{
+  "kind": "Owned docs103 formatting qualification",
+  "exactOwnedStagedPaths": 40,
+  "authoredWhitespaceExit": 0,
+  "generatedRawLogs": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all100-all.log",
+      "sha256": "352b08d5d36c37c1c93c56acb45dbd7fa79993a568a28df186697d66cc1c3627",
+      "whitespaceExit": 2
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web102-web.log",
+      "sha256": "49a0b0a2a4d419253f7cc4dc91cb2a495c226b398c4c4faab8d3e4e93988b96d",
+      "whitespaceExit": 0
+    }
+  ],
+  "policy": "Raw canonical logs preserved verbatim; only their generated whitespace excluded from strict author checks. No source/root index mutation, no feature acceptance."
+}

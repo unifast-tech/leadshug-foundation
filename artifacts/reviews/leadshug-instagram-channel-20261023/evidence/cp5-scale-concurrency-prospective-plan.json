@@ -1,0 +1,60 @@
+{
+  "kind": "CP5 prospective faithful scale and concurrency evidence plan",
+  "state": "Prepared only; serialize source writer after UI98 and current canonical qualification. Does not claim execution or relax approved T851-854.",
+  "authority": "Already-approved ST-IG-03 v1.3 test surfaces; no runtime/private/provider authority.",
+  "sourcesRead": [
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "TODO sections851-854",
+    "prior read-only planning94"
+  ],
+  "candidateOwnedNew": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "fixture": {
+    "tenants": 2,
+    "businessUnits": 2,
+    "conversationsPerBu": 10000,
+    "instagramAccountsPerBu": 12,
+    "waBusinessResourcesPerBu": 1,
+    "waAdaptersPerResource": 2,
+    "identity": "Use actual OAuth callback/confirmation and encrypted credential owners for24 accounts;6 legitimate authorized actors (3perBU,4accounts/actor) stay within actor10/hour andBU30/hour. No budget bypass or createdAt rewrite.",
+    "bulk": "Chunked750-row native PG seeding for20k canonical contacts/identities/conversations/routes referencing actual scoped account owners and current credentials; maintain unique relation and current-resource original IN proof. No per-row externalHTTP/crypto transaction.",
+    "foreignScope": "Both tenants have real current grants; all lookup/list/options negative scope checks operate on same20k cohort."
+  },
+  "EPS": {
+    "samples": "5warmup then5roundsx20 clients for each actual ID lookup/reply-options/list50 class; retain100latencies/class and deterministic percentile calculation",
+    "bounds": {
+      "lookupP95Ms": 1000,
+      "replyOptionsP95Ms": 1000,
+      "list50P95Ms": 2000,
+      "domainQueriesPerPageMax": 8,
+      "externalHttpRequests": 0
+    },
+    "oracles": [
+      "Assert exact IDs/cardinality/cursor/next-page/no mixedBU ownership, not only response200",
+      "Native query events count full domain page query; no request-specific contamination. Capture authoritative actual query/parameters for EXPLAIN JSON with index/noN+1 and correct cohort cardinality",
+      "Record hardware CPU/memory,Node/Prisma/Postgres versions,actual disposable DB image, sample count/p95/query counts within synthetic runner; never operational introspection"
+    ]
+  },
+  "BCI": {
+    "durableOwners": "Five waves20 same-key/same-payload OAuth and first-send requests; one durable claim/POST/acceptance per wave, mismatched payload409. Real PG barriers and actual services/HTTPfake; notransactionmock.",
+    "ingress": "20 concurrent signed replays ofsameevent \u2192onepersistedmessage/unread increment; wrongsignature/crossscope no effects.",
+    "resourceClaims": "20 concurrent distinct BU/adapter claims on one provider resource \u2192one committed owner, explicit conflicts and no orphan ownership.",
+    "ordinary": "Keep existing ordinary\u2192ordinary concurrency; assert single-use each claim and initial\u2194ordinary exclusion, no global single ordinary admission or postterminalrequest-key replay promise. Unknown/accepted local-only recovery neverreposts."
+  },
+  "RLS": {
+    "rounds": 5,
+    "concurrentReaders": 20,
+    "concurrentSignedMessages": 20,
+    "sameCohort": true,
+    "oracles": [
+      "Zero unexpected errors/deadlocks/pending blockers",
+      "Exact isolation,resource/routes,message/unread/dedup/provider effects and existing read budgets aftereveryround",
+      "One1000-text-update signedbatch accepts ALL <=15000ms (monotonic measure); fullreplay0neweffects. No cap/slice/drop orpartial200."
+    ]
+  },
+  "FRC": "Complete native HTTPS Playwright UI98/current all evidence remains required: A-B-A/inverseorder/doubleclick/popupcancel/reload/storageunavailable/other-account-IN withopen draft. Do not replacewithbackend/unit checks.",
+  "proof": "Only canonical disposable runner after terminal source and explicit current source/input freeze; no selectedgreen substitute. Separate actual artifact JSON from plannednumbers. Failure preserves originalbudgets and requires causal correction.",
+  "remaining": "Current complete ALL, primarySUBPROTO01, pendingUTF8/privacyhumanadmissions, independentaudit/security/TQA/cutover/final and approved CP6 realproof unwaived."
+}

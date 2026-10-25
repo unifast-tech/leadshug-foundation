@@ -1,0 +1,12 @@
+{
+  "kind": "CP4 JSX101 source-only handoff",
+  "baseline": "cp4-source99-terminal-manifest.json",
+  "owned": [
+    "web-app/src/telas/Inbox.tsx"
+  ],
+  "expectedSha256": "c71996588dbd2de65b0b637348606a03508be6df8ef2998850581b3eed79a77e",
+  "evidence": "Canonical ALL100:31migrations/APIlintbuild/435unit/616E2E passed, Web tsc TS1005 at643:442; root frozen input/output reconciliation complete and100 thawed.",
+  "change": "Balance existing JSX conditional renderer: the `: (aberta.messages.length === 0 && startOptionsLoading` branch opened a parenthesis which is not closed before the final JSX expression }. Add the missing close parenthesis after the final Fragment. Preserve every condition/component key/position/handler/alert/policy and all other bytes where possible. No behavior redesign, no other files.",
+  "limits": "One source writer, source-only; NO tests/build/lint/npm/docker/network/provider/runtime/private/env/Git/discovery/worktree/copy/goals/Foundation writes. Read exact absolute AGENTS.md only; never parent search/backups. Report exact patch/bytes/hash, tests NOT RUN.",
+  "next": "Root qualifies328sources then one canonical Web102 to expose compiler/unit issues before whole native browser/ALL gates, no partial acceptance."
+}

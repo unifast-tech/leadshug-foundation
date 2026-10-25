@@ -1,0 +1,57 @@
+{
+  "kind": "CP4 ALL100 independent root reconciliation",
+  "frozenSourcesExact": 328,
+  "fullTodoExact": true,
+  "positiveBoundInputsExact": 1083,
+  "immutableRowsExact": 34,
+  "threeExceptionCandidatesExact": true,
+  "rootIndexExact": true,
+  "fourOutputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all100-before.json",
+      "bytes": 1523,
+      "sha256": "9ad66dc34120383b7b61288af01d27281eb125526dc19a41e6215f658655adf8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all100-all.log",
+      "bytes": 234002,
+      "sha256": "352b08d5d36c37c1c93c56acb45dbd7fa79993a568a28df186697d66cc1c3627"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all100-after.json",
+      "bytes": 1906,
+      "sha256": "6c03dd8a5bc5f2e6ddbd4f785d71d66f15c9643845930f593fbd9c84444a99d9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all100-result.json",
+      "bytes": 1780,
+      "sha256": "ba1a822b75981862124d71dd244a0178fed90c44a631573fea827ad7bcd61bad"
+    }
+  ],
+  "canonicalInvocations": 1,
+  "canonicalExitCode": 1,
+  "actual": {
+    "parityMutationProbes": 26,
+    "migrations": 31,
+    "apiLintBuild": "PASS",
+    "apiUnit": {
+      "files": 40,
+      "passed": 435,
+      "failed": 0
+    },
+    "apiIntegration": {
+      "files": 60,
+      "passed": 616,
+      "failed": 0,
+      "durationSeconds": 640.28
+    },
+    "newWindowConfig": 3,
+    "newInitialRecipient": 2,
+    "WebBuild": "FAIL tsc TS1005 at Inbox.tsx643:442 missing close parenthesis",
+    "WebUnit": "NOT REACHED",
+    "Playwright": "NOT REACHED",
+    "cleanup": "Owned synthetic validation container/nine volumes/network removed"
+  },
+  "disposition": "100 freeze ends after this independent root match. Sole bounded source101 JSX correction then canonical Web syntax/type/unit proof; complete current ALL/native browser and all later gates remain required. No feature acceptance.",
+  "incident99": "Executor memory-only clarified unrelated workspace filename enumeration and reading a backup engineering instructions file despite exact-path lane; no unrelated-file content reads otherwise or Git mutation reported. Root independently qualified exact3productdelta/325otherknownsources/protected/index. No private-access absence claim or retroactive authority; future lanes exact absolute AGENTS/no discovery."
+}

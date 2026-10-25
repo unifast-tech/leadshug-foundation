@@ -1,0 +1,10 @@
+{
+  "kind": "CP4 UI98 root byte qualification before static review",
+  "nineReportedHashesExact": true,
+  "otherKnownSourcesExact": 319,
+  "sourceCount": 328,
+  "immutablePreserved": 34,
+  "approvedExceptionCandidatesUnchanged": true,
+  "rootIndexExact": true,
+  "limits": "Tests/build/lint NOT RUN; static semantic review and one unit syntax normalization remain before canonical ALL."
+}
