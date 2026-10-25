@@ -1,6 +1,6 @@
 {
   "kind": "CP5 serialized source-only operational handoff prepared for dispatch after Web105 terminal qualification",
-  "state": "Prepared, NOT dispatched; no code writer authorization concurrent with Web105 or canonical freeze.",
+  "state": "Prepared, NOT dispatched; sole sourcewriter currently native107. Dispatch only after terminal/rootqualified current source and no frozen canonical lane.",
   "authority": "Already-approved ST-IG-03 v1.3 test surfaces; no runtime/private/provider authority.",
   "sourcesRead": [
     "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
@@ -75,7 +75,10 @@
     "api-app/prisma/schema.prisma",
     "api-app/vitest.config.e2e.ts",
     "scripts/test-channels-local.sh",
-    "scripts/check-channels-ci-parity.py"
+    "scripts/check-channels-ci-parity.py",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/src/domain/channels/business-resource-ownership.ts"
   ],
   "requirements": [
     "One faithful new native Nest/PostgreSQL spec, no changes to existing tests or production/config. Test runner already includes test/**/*.e2e-spec.ts and canonical all auto-executes it; no parity/runner change needed.",
@@ -87,5 +90,15 @@
     "All20k cohorts remain present during samecohort RLS read+IN bursts and1000batch/replay. Do not clear DB between measured classes to reduce cohort; cleanup after suite only. Separate extra owned synthetic resourceclaim contexts allowed within same fixture/test, never operational BUs.",
     "If a threshold/fixture/schema/service question blocks exact implementation, report concrete public source evidence; do not guess/relax or silently mark pass. Entire expected suite must be implemented; no todo/skipped/conditionalgreen placeholders."
   ],
-  "limits": "Single sourcewriter after root dispatch only. New exact admitted test path only. Root owns Foundation. No tests/build/lint/npm/Node/docker/network/provider/runtime/Meta/private/.env/process/volumes/Git commands/broad discovery/worktree/copy/goals. Read exact R/AGENTS and named instructions, manifest positive public paths. Do not alter source while validator freezes. Report candidate bytes/hash, full obligation mapping, testsNOTRUN."
+  "limits": "Single sourcewriter after root dispatch only. New exact admitted test path only. Root owns Foundation. No tests/build/lint/npm/Node/docker/network/provider/runtime/Meta/private/.env/process/volumes/Git commands/broad discovery/worktree/copy/goals. Read exact R/AGENTS and named instructions, manifest positive public paths. Do not alter source while validator freezes. Report candidate bytes/hash, full obligation mapping, testsNOTRUN.",
+  "existingActualEvidenceReuse": {
+    "initial5x20": "api-app/test/initial-message.e2e-spec.ts:446 existing five waves20request realNest/PG/heldprovider port effect/intent/message oracles passed in ALL100, unchanged source. Rerun full current ALL and bind exacthash/casename; do not duplicate merely to addcount. Existing validshape mismatch409/recovery/initialordinaryexclusion cases must remain and be mapped honestly.",
+    "ordinary": "Current dispatch-admission native suites and transportbrowser5x20 preserve ordinary concurrency/singleuse,initialexclusion and retainedUNKNOWN. Do not promise globalordinaryidempotency or replace native existingproof.",
+    "newMissing": "New spec must implement20k two-tenant EPS/RLS including1000batch, OAuthfive20requestwaves and20resourceclaims, plus concurrent20sameeventreplay over ownedcohort. Existing proof can satisfy unchanged subobligations only after full current rerun, never as waiver of missing workloads."
+  },
+  "implementationNotes": [
+    "Actual OAuth existing20create pattern in residual254 and20confirm nativeHTTPbarrier in binding128 can be extendedfivewaves withactor0initial4+5=9attempt/hour andBU12+5=17, noquota bypass/createdAt rewrite. Setup24accounts remains6legitimateactors4each.",
+    "Original2tenant20kdata mustremain throughoutEPS/RLS; resourceclaimextra synthetic pendingcontexts may be later/nonmeasurement but never mutateoperational DB. MixedWAproviderids versus provedphone distinguish physicalproviderowner andbusinessidentity globalclaim; read actualowners/schema/tests beforechoosing faithful20wayroute, no invented invalid fixtures.",
+    "Measure each workload actually, preserve p95/budget/noHTTP/index/zeroerror/deadlock/dedup assertions. No conditionalskip/errorcatchpass or settingdatabaseplanner off. New setupbudget canbe justified/bounded without changingoldtimeouts or15sbatchthreshold."
+  ]
 }

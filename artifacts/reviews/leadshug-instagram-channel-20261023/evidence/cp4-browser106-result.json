@@ -1,0 +1,174 @@
+{
+  "kind": "CP4 Browser106 canonical result",
+  "outcome": "failed",
+  "acceptance": "not accepted",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "invocations": 1,
+  "exitCode": 1,
+  "elapsedSeconds": 1217,
+  "playwright": {
+    "tests": 90,
+    "passed": 88,
+    "failed": 2,
+    "duration": "16.3m",
+    "workers": 1,
+    "slowTestFile": "e2e/message-templates.spec.ts (12.6m)"
+  },
+  "suiteCounts": {
+    "channel-transport": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "instagram-channel": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1
+    },
+    "start-conversation": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0
+    },
+    "telas": {
+      "total": 20,
+      "passed": 20,
+      "failed": 0
+    },
+    "timeline": {
+      "total": 16,
+      "passed": 15,
+      "failed": 1
+    },
+    "message-templates": {
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "number-onboarding": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0
+    }
+  },
+  "stages": {
+    "runnerPreflight": "passed",
+    "apiPrismaGenerate": "passed",
+    "apiBuild": "passed",
+    "apiMigrations": "31 applied successfully",
+    "webTypeScript": "passed (`tsc -b`)",
+    "webViteBuild": "passed (63 modules; 1.52s)",
+    "playwright": "90 tests, 1 worker; 88 passed, 2 failed; 16.3m",
+    "apiUnit": "not run by browser target",
+    "apiIntegration": "not run by browser target",
+    "webUnit": "not run by browser target",
+    "firstDecisiveFailure": "Playwright: native Instagram reauthorization page.goBack failed with net::ERR_ABORTED; frame may have been detached"
+  },
+  "failures": [
+    {
+      "test": "e2e/instagram-channel.spec.ts:204",
+      "name": "native Instagram HTTPS and BFF browser journey",
+      "duration": "13.1s",
+      "reached": [
+        "fixture freshness setup, seed and login/secure-cookie assertions",
+        "account A OAuth authorization request and successful callback/confirmation",
+        "attempt status MAPPED_PENDING_RECEIPT, SUBSCRIBED, subscriptionRequests=1",
+        "reauthorization authorize request observed with response_type=code"
+      ],
+      "failure": "page.goBack at line 234 failed with `net::ERR_ABORTED; maybe frame was detached?` while waiting for navigation until load.",
+      "unreached": [
+        "return URL assertion, reload and cancellation flow",
+        "account B authorization and account isolation",
+        "forged credential boundary checks",
+        "post-inbound provider receipt verification",
+        "Inbox WSS connection and account-scoped inbound frames",
+        "Instagram replies and held native HTTPS response/body hash/client counters",
+        "recovery and operator scope"
+      ]
+    },
+    {
+      "test": "e2e/timeline.spec.ts:205",
+      "name": "130-message multi-round timeline recovery",
+      "duration": "6.3s",
+      "reached": [
+        "recovery wait ended with pending-update banner absent"
+      ],
+      "failure": "Role=alert count remained 1; expected 0, received 1 after 5s at line 223. Playwright output did not include the alert text.",
+      "unreached": [
+        "audit request and final message-ID equality assertion"
+      ]
+    }
+  ],
+  "nativeInstagramOracles": {
+    "reached": [
+      "freshness beforeAll passed",
+      "fixture seed and secure session login",
+      "synthetic Instagram authorize/callback: response parameter assertions and BFF callback 303, no-store and no-referrer assertions",
+      "account confirmation and one expected attempt: MAPPED_PENDING_RECEIPT/SUBSCRIBED/1",
+      "reauthorization request reached intercepted Instagram authorize endpoint and response_type=code assertion passed",
+      "initial provider observation after subscription verification: connected=true, routes=0, qualifiedInbound=0, providerIdentity=true, receiptVerifiedAt=null"
+    ],
+    "unreached": [
+      "cancel authorization and confirm CANCELLED attempt",
+      "second account connect and cross-account separation",
+      "forged wrong-credential exchange/subscription/send checks",
+      "signed inbound for A/B and account-scoped raw WSS events",
+      "provider receipt verification after inbound qualification",
+      "native Instagram message replies",
+      "held HTTPS acceptance/uncertainty response, body hash and client counters",
+      "recovery and operator-scope oracles"
+    ]
+  },
+  "cleanup": {
+    "validationContainerStopped": true,
+    "validationContainerRemoved": true,
+    "validationNetworkRemoved": true,
+    "removedValidationVolumes": [
+      "leadshug_channels_validation_channels_web_workspace",
+      "leadshug_channels_validation_leadshug_pg_data",
+      "leadshug_channels_validation_leadshug_arquivos",
+      "leadshug_channels_validation_channels_web_node_modules",
+      "leadshug_channels_validation_channels_api_workspace",
+      "leadshug_channels_validation_channels_playwright_cache",
+      "leadshug_channels_validation_validation_pg_data",
+      "leadshug_channels_validation_channels_api_node_modules",
+      "leadshug_channels_validation_channels_npm_cache"
+    ],
+    "volumeCount": 9
+  },
+  "postRunFrozenVerification": {
+    "frozenFiles": 328,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 355299,
+      "sha256": "d85540e1ff8c51acba025892f6838763b5daaabb8733f4c5bcc5cee6dcfc798c"
+    },
+    "boundInputs": 1131,
+    "preservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "outcome": "pass",
+    "errors": []
+  },
+  "evidenceFiles": {
+    "before": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-before.json",
+      "bytes": 1572,
+      "sha256": "6fabd1c79f7ba952a544e620dc7951736b16f4c52242c82243b6ad7f85b62fcf"
+    },
+    "log": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-browser.log",
+      "bytes": 83864,
+      "sha256": "d3f4f354e91bddd5e95bc6dca5f233fac3b7d5d59eb12a4122083248b3cfc139"
+    },
+    "after": {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-after.json",
+      "bytes": 6299,
+      "sha256": "320b825d6cdfa781230e0ac7b64bebec8a3a6daf80dde0acb8b006f7c619074e"
+    }
+  }
+}

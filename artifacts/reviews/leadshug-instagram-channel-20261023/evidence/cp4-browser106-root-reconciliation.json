@@ -1,0 +1,74 @@
+{
+  "kind": "Browser106 independent root reconciliation",
+  "frozenSourcesExact": 328,
+  "fullTodoExact": true,
+  "positiveInputsExact": 1131,
+  "immutableRowsExact": 34,
+  "threeExceptionsExact": true,
+  "rootIndexExact": true,
+  "fourReportedOutputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-before.json",
+      "bytes": 1572,
+      "sha256": "6fabd1c79f7ba952a544e620dc7951736b16f4c52242c82243b6ad7f85b62fcf"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-browser.log",
+      "bytes": 83864,
+      "sha256": "d3f4f354e91bddd5e95bc6dca5f233fac3b7d5d59eb12a4122083248b3cfc139"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-after.json",
+      "bytes": 6299,
+      "sha256": "320b825d6cdfa781230e0ac7b64bebec8a3a6daf80dde0acb8b006f7c619074e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-result.json",
+      "bytes": 6584,
+      "sha256": "dee350694ca5412d2e732c5dc6a95a1dbcdb5ad6d8c82e5cdb265017f4a76b9d"
+    }
+  ],
+  "actual": {
+    "invocations": 1,
+    "exit": 1,
+    "parity": 26,
+    "APIbuild": "PASS",
+    "migrations": "31/schema current",
+    "WebTscVite": "PASS",
+    "Playwright": {
+      "total": 90,
+      "passed": 88,
+      "failed": 2,
+      "minutes": 16.3
+    },
+    "suiteCounts": {
+      "transport": "3/3",
+      "start": "14/14",
+      "screens": "20/20",
+      "timeline": "15/16",
+      "templates": "25/25",
+      "onboarding": "11/11",
+      "instagram": "0/1"
+    },
+    "cleanup": "Owned container/ninevolumes/network removed"
+  },
+  "failed": [
+    {
+      "id": "BR106-IG-EXTERNAL-NAV",
+      "actual": "page.goBack net::ERR_ABORTED/maybe frame detached line234 after reauthorization external request observed; request event doesnotprove externaldocument committed.",
+      "reached": "AccountA callback303/confirm200/MAPPED_PENDING_RECEIPT/SUBSCRIBED/1; providerGET/POST each1; connectedtrue/routes0/IN0/receiptNULL verified.",
+      "unreached": "Cancellation/accountB/credentialboundary/realIN/receipt/WSS/replies/held/races/operator."
+    },
+    {
+      "id": "BR106-RECONNECT-ALERT",
+      "actual": "Protectedtimeline205 pendingbanner gone but1rolealert, expected0; text unavailable. Finalaudit/IDequality/unread unreached.",
+      "staticGap": "Parentinitial start-options catch stores current epoch, not captured requeststart epoch; delayed failure after real reconnect can suppress retry. This source gap is NOT proof of actual residual alert body/cause."
+    }
+  ],
+  "notRun": [
+    "APIunit/E2E",
+    "separateWebunit",
+    "realruntime/provider"
+  ],
+  "disposition": "106freeze ends after rootmatch; serialize admitted source/native diagnostic completion107. No acceptance/waiver; remaining gates unchanged."
+}

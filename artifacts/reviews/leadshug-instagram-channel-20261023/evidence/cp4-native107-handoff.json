@@ -1,0 +1,32 @@
+{
+  "kind": "CP4 serialized107 native sequencing and factual reconnect diagnosis",
+  "authority": "Approved ST-IG-03 v1.3 existing consumer/test/safe-runner paths; Browser106 terminal/root reconciled all328sources/1131inputs/protections/index. No private/operational/runtime/Meta authority.",
+  "baseline": "cp4-source105b-terminal-manifest.json",
+  "profile": "Operational/Coder React/Vite and source-only Operational/DevOps Docker runner handoff; sole product/tooling writer",
+  "owned": [
+    "web-app/e2e/instagram-channel.spec.ts",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/src/telas/Inbox.tsx",
+    "scripts/test-channels-local.sh"
+  ],
+  "required": [
+    {
+      "id": "107-IG-NAV",
+      "change": "At native IG reauthorization request, request event doesnotprove externaldocument committed. Wait for actual fulfilled www.instagram.com/oauth/authorize document URL AND exact synthetic waiting paragraph before native page.goBack. Do not swallow net::ERR_ABORTED or replace back withgoto; preserve native cancellation/reload/storageabsence flow. Register actual cancelPOST wait beforeclick and await200/finished before persistedattemptread (same sequencing asconfirm105); no fake BFF. Preserve ALL original2accounts/samepeer/10A+1Beffects/120s/10.5scooldowns/actualclients/rawWSS/IN/receipt/heldnativebodyhash/5x20/UNKNOWN/operatororacles."
+    },
+    {
+      "id": "107-PARENT-EPOCH",
+      "change": "Parent initial start-options GET currently captures ownalert/readintent but catch records metadataReconnectEpochRef.current atfailuretime. Capture epoch at REQUESTSTART and recordthatfailedread epoch, so failure delivered afterrealreconnect doesnotconsume thatreconnect andstranderror. Keep boundedrealepochretry/actorBUconversationgenerationnavigationlatestread fences, samecomposer/draft/selection, parentversionalert/SENDpriority. Do not blindlyclearallerrors or declareactualtimelinecause withoutalerttext."
+    },
+    {
+      "id": "107-NATIVE-REGRESSION",
+      "change": "Add meaningful new CT browser regression, original30sbudget, for delayed start-options networkfailure after actualsameactorBUconversation WSreconnect. Use real BFF/PG+current signedIN fromcanonicalseed, actual HTTPS4174 cookie/native /ws plainJSON/welcome/reconnect; register/hold ONLY first relevant start-options browserrequest, create real CDP offline/online window, await new realWSopen/welcome, THEN abort originalheldnetworkrequest. Later GET mustcontinue toactual BFF, notfakeDTO. Assert actualonefreshsuccessfulretry, no residualalert (compare actualallTextContents to[] so failuresdiagnostic), unchangedqualifiedcontext and usablecomposer/currenttypedraft asapplicable, no send/provider effect; no sleeps masquerading asreconnect/no exposed internalepoch/no fakeWS/BFF. Finallycleanup heldroute/CDP/listeners so no cross-test contamination. Existing90tests/oracles/budgets remain. Testregression separately fromuncertainsend policies; no actualsend needed."
+    },
+    {
+      "id": "107-FAILURE-CONTEXT",
+      "change": "Canonical runner container loses Playwright error-context beforecleanup, so finalrolealertbody unknown. In browser branch ONLY, install POSIX sh EXIT diagnostic trap immediately before existing standalone mandatory npm run test:tela -- --trace off. Preserve ORIGINAL exit status, no retry/filter/threshold/autofix, no replacing mandatorycommand or hostcleanup trap. On failure read ONLY TWO fixed knownsynthetic contextpaths relative/workspace/web-app/test-results: instagram-channel-Instagra-e3dee-recovery-and-operator-scope/error-context.md and timeline-timeline-da-inbox-fcb4b-agens-em-mais-de-uma-rodada/error-context.md. Emit ONLY matching accessible `- alert:` lines, cap4096bytes perpath; fixed marker. No glob/discovery/fulltrace/cookies/URLs/bodies/env/private/logs/otherpaths, no changedassertions/reporters. Allsourceartifacts builtinsidecanonicalowneddisposable runner. Success no diagnostic. This is test-only actualfailurevisibility, NOT permission for host operational reads. Check current paritychecker source to keep all26mandatorymutationguards intact; testsnotrun bywriter."
+    }
+  ],
+  "readiness": "Previously established and recorded; do not rerun broad/private context probes. Load exact R/AGENTS, governing main/profile/workflows, fullcurrentT, change-ui-boundary and environment-readiness methods; exact canonical execution owner already scripts/test-channels-local.sh disposable namespace.",
+  "limits": "Only FOUR named existing admitted paths, one writer; no Gitcommands/discovery/parent backups/worktrees/copies/Foundationwrites/tests/build/lint/npm/docker/network/provider/runtime/private/.env/operationalprocess/volumes/goals. Sourceonly. Preserve allother328sources and34immutable/3exceptions/rootindex. Report hashes/bytes andcompleteobligationmapping/testsNOTRUN. Rootqualifies beforecurrentcanonicalfullvalidation."
+}

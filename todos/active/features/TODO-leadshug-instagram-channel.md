@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Web105/105a/105b terminal/root-qualified328sources; run exactlyONE whole canonical browser106 with all90native scenarios, frozen sources/currentTODO/publicinputs/protections/rootindex. Root reconcile actual results before CP5 source/currentfullALL and remaining gates.
+- **Next exact step:** Native107/107a/107b terminal/root-qualified329sources (328APIWeb+rootrunner); run exactlyONE whole canonical browser108 with all91native scenarios, frozen sources/currentTODO/publicinputs/protections/rootindex. Reconcile actual complete output before further CP4/CP5/full-feature work.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -40,7 +40,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** Browser104 root independently matches328sources/fullT/1111positiveinputs/34immutable/threeexceptions/rootindex/fouroutputs. ONEcanonicalbrowser exit1:26parity/APIbuild/31migrations/Webbuild PASS;85/90Playwright in17.8m, owned cleanup complete. Later Instagram oracles remain unreached after confirmation read race; no feature acceptance.
+- **Last confirmed truth:** Browser106 root matches328sources/fullT/1131publicinputs/34immutable/threeexceptions/rootindex/fouroutputs. Onecanonicalbrowser:88/90passed16.3m; APIbuild/31migrations/Webbuild passed, ownedcleanup completed. IG accountA authorization/subscription passed then external goBack aborted before cancel/accountB/IN/WSS/replies; timeline retained1alert without observedtext. No featureacceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -2048,3 +2048,18 @@ Source review confirms actual3option readiness/exactEvolutiontuple, posthold fin
 ### Web105b terminal — complete canonical browser106 freeze
 
 Root independently matches final composer17097bytes/cfda342fc8d0d8b3ffdab8f8b393bb7f8da4557d1bb8f6c4e87230d19cfb7f62,327otherknownsources,328total,34immutable/threeexceptions/rootindex. `evidence/cp4-web105b-root-qualification.json` is static-only; no test pass inferred. All sourcewriters terminal. Freeze328sources/fullcurrentTODO/positive publicinputs/protections/rootindex for exactlyONE `bash scripts/test-channels-local.sh browser` invocation106; validator owns onlyfourunique106outputs and canonical disposable runtime/build/cleanup, no source/T/input mutation/retry/autofix/filter/assertion/timeout/threshold change/private/operational/Meta/Git expansion. All90Playwright nativejourneys remain, no selectedgreen substitute. Root independently matches actual outputs/reached-unreachedoracles before thaw. API100/Web102 evidence scoped unchangedcode; finalcurrentALL/primary/pendinghuman/CP5/CP6/independentassurance/realgates stayopen.
+
+
+### Browser106 terminal/root reconciled — faithful native107 completion
+
+`evidence/cp4-browser106-root-reconciliation.json` independently matches all frozenbytes/actualoutputs:88/90Playwright, CT3/3/start14/14/screens20/20/models25/25/onboarding11/11 and timeline15/16/IG0/1. IG accountA native callback/confirm/subscription/initialobservation passed; externalreauthorization request event preceded committednavigation and goBack aborted, lateroraclesunreached. Timeline alerttext remainsunobserved, finalaudit/IDequalityunreached. Parentrequest failurecurrent-epoch attribution is independentlyconfirmed staticgap, not assertedactualalertcause. `evidence/cp4-native107-handoff.json` serializes one sourcewriter on exactly fouralreadyadmittedpaths (React/Playwright plus source-onlyDocker runner handoff): awaitactualexternaldocument/cancelPOST, capturefailedreadstartepoch, addnative delayed-failure/reconnect regression and bounded fixedsynthetic error-alert extraction preservingcanonicalexit/cleanup/all90priororacles. No realruntime/private/Meta/Git/testexecution expansion. Rootqualifies before canonicalproof; CP5/currentfullALL/pendinghuman/primary/CP6/assurance/physicalgatesretained.
+
+
+### Prepared CP5 evidence reuse and dependency research limits
+
+`evidence/cp5-scale-source-handoff-prepared.json` remains undispatched while native107 owns source. Existing exact initial-message five20requestwaves and ordinary concurrency/exclusion proofs can be reused only with exactcurrenthashes/fullcurrent rerun; no duplicatecasecount or waiver of missing20k/OAuth5waves/resourceclaims/RLS1000batch. New source still needed for those workloads. `evidence/dependency-primary-readonly106-preliminary.json` records bounded primary advisory/version research after Web102 npm summary: actual applicability/exactaudit reconstruction/formal security remain open; no dependency edit or securityclearance. Research used publiclockfiles/maintainerpages only, no operational/runtime/credentialaccess.
+
+
+### Native107/107a/107b terminal — complete browser108 freeze
+
+Root independently matches finalfourreportedhashes,325otherAPIWebsources,1125otherpriorboundinputs,34immutable/threeexceptions/rootindex. `evidence/cp4-native107b-root-qualification.json` records source-only qualification. Staticreview corrected nested shellquote/diagnosticcap order, first-load nonexistentcomposer assumption, and forced actualoffline sockettraffic/WSS target; no testexecution inferred. New30sregression covers delayedfailedmetadataafteractualreconnect; all90priororacles/budgets retained. All sourcewriters terminal. Freeze329sources (328APIWeb+changedrootrunner),fullcurrentTODO,positivepublicinputs/protections/rootindex for exactlyONE `bash scripts/test-channels-local.sh browser` invocation108. Validator owns fourunique108outputs andcanonicalowneddisposablebuild/test/cleanup only; current91Playwright, no retry/filter/autofix/timeout/assertion/threshold/source/T/inputmutation/private/operational/Meta/Git expansion. Boundedfixedsyntheticalertcontext trap preserves originalstatus and cleanup. Rootmatchesactualreached/unreached/results beforethaw; no assumedalertcause or nativeIGacceptance. RemainingcurrentALL/CP5/primary/pendinghuman/CP6/independentassurance/physicalgatesstaymandatory.

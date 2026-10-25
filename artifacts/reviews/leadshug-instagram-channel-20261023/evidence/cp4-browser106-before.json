@@ -1,0 +1,32 @@
+{
+  "kind": "CP4 Browser106 before snapshot",
+  "recordedAtUtc": "2026-10-25T09:11:29.510570+00:00",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-frozen-manifest.json",
+  "manifestSha256": "79e83b923b45129b026b5e4316e3ee7787efd0697d0b17d0cde8f699c972bdfb",
+  "command": "bash scripts/test-channels-local.sh browser",
+  "invocations": 1,
+  "verification": {
+    "frozenFiles": 328,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 355299,
+      "sha256": "d85540e1ff8c51acba025892f6838763b5daaabb8733f4c5bcc5cee6dcfc798c"
+    },
+    "boundInputs": 1131,
+    "preservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "outcome": "pass"
+  },
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-browser.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser106-result.json"
+  ],
+  "runnerStarted": false
+}

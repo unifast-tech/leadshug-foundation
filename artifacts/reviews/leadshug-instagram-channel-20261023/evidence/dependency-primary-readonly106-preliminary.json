@@ -1,0 +1,66 @@
+{
+  "state": "Read-only primary-source planning during frozen Browser106; NOT formal security clearance, NOT exact npm audit reconstruction; no dependency changes.",
+  "versions": {
+    "web": {
+      "vite": "5.4.21",
+      "vitest": "2.1.9",
+      "esbuild": "0.21.5",
+      "rollup": "4.62.4"
+    },
+    "api": {
+      "vite": "5.4.21",
+      "vitest": "2.1.9",
+      "@vitest/coverage-v8": "2.1.9",
+      "@nestjs/core": "11.2.1",
+      "express": "5.2.1",
+      "multer": "2.2.0"
+    }
+  },
+  "facts": [
+    {
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-5xrq-8626-4rwp",
+      "published": "2026-05-19",
+      "affected": "vitest<3.2.5 and4.0.0..<4.1.0",
+      "fixed": "3.2.5/4.1.0",
+      "scope": "Vitest UI/API exposed or UI/browser Windows; current locked2.1.9 version matches, need formal actual execution-surface applicability."
+    },
+    {
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-p63j-vcc4-9vmv",
+      "published": "2026-07-08",
+      "package": "@vitest/browser",
+      "fixed": "4.1.10/3.2.7/5.0.0-beta.6",
+      "scope": "Browser Mode provider filesystem commands; package not yet verified in locks; Playwright runner is separate from Vitest Browser Mode."
+    },
+    {
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-g8mr-85jm-7xhm",
+      "published": "2026-06-01",
+      "package": "@vitest/browser",
+      "affected": ">=3.0.0<=3.2.4;>=4.0.0<=4.1.7;5betas",
+      "scope": "Exposed Browser Mode API/CDP; do not conflate with separate playwright test."
+    },
+    {
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-p9ff-h696-f583",
+      "published": "2026-04-06",
+      "affected": "6.0.0..6.4.1;7.0.0..7.3.1;8.0.0..8.0.4",
+      "scope": "Dev server fetchModule WS; primary version range doesn't name5.4.21, cannot assert affected based third party."
+    },
+    {
+      "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99",
+      "published": "2025-02-08",
+      "affected": "<=0.24.2",
+      "fixed": ">=0.25.0",
+      "scope": "esbuild serve feature CORS, locked0.21.5matches; actual builder versus serve applicability needed."
+    },
+    {
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-9crc-q9x8-hgqq",
+      "published": "2025-02-04",
+      "scope": "Old2025RCE patched2.1.9; do not misclassify as current2026critical."
+    },
+    {
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-93m4-6634-74q7",
+      "published": "2025-10-20",
+      "scope": "Old2025Windowsbackslash fixed5.4.21; no automatic findingcurrentversion."
+    }
+  ],
+  "next": "After freeze, optionally persist bounded derived primary research receipt for formal security lane with actual source config/current locks; no waiver/no unrequested upgrade."
+}
