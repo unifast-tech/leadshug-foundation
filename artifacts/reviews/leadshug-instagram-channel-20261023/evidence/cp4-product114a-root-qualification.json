@@ -1,0 +1,43 @@
+{
+  "kind": "114a independent terminal root source qualification",
+  "candidates": [
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 10584,
+      "sha256": "17cc8111c0250d6da1aba192e2d401d38a464f8fef248a34262dbecfc6e71bee"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14243,
+      "sha256": "468f82be6ecd00de459702de5e0863c83069431a23179ddc26c36f6756575c79"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90997,
+      "sha256": "deb98b8fb4e74e6f03b5109ee03dccfb1a53d1366cbbcb9abd742b67e54f5067"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69022,
+      "sha256": "9edfaa7c1e16fbaf5f7911398312ba2d0346dccd3af097c71e40cc48f134d2d7"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 37646,
+      "sha256": "9a424967cbbde502cf04f0b24018d3915f4ff7f351d87941c9b63957a955d5da"
+    }
+  ],
+  "otherKnownSourcesExact": 325,
+  "totalSources": 330,
+  "immutableRowsExact": 34,
+  "approvedExceptionCandidatesExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticCorrections": [
+    "Acquisition cleanup scope capturesaccount beforecommit and exacttoken helper handles postcommitrejection withoutclobbering successor",
+    "UUIDEvolution canonicalproductmodule admission andmatchednativeboth-route controls",
+    "Lastcompletedmappedusername metadata retains exactowner/appscopeproof withoutcredentialread",
+    "Native newproof literals corrected<=30chars; disconnectedprovenidentitypreserved alongsideblockedreadiness; actualresourcecooldown naturally honored"
+  ],
+  "qualification": "Source-only, no compiler/nativeperformance/schema acceptance. A01/A02/A03 remainopen untilactualnativeproof/freshreview. Nextgateway115 and appropriatecanonicalAPI116 beforeWeb117/currentALL."
+}

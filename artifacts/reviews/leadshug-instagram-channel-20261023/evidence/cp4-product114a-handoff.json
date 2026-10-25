@@ -1,0 +1,15 @@
+{
+  "kind": "114a source-only faithful native/staticcompletion",
+  "owned": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "requirements": [
+    "New reauthorization username disconnect_account_a_reauthorized exceeds Instagram30-char username contract/safeprojector; use validshortliteral consistently.",
+    "Disconnected identityVerified remains original proven ownNumberVerified/epoch, while statusDISCONNECTED/receiptNULL/credentialabsence preventsend. New unexecuted oracle false is incompatible with unchanged canonical source; assert preserved provenidentity, not alterproducttoerasetrust.",
+    "A03 immediate same-account reauthorization must honor retained actual10s resource cooldown; add bounded natural clockwait before confirm/reauthorize, no timestamp rewrite. Existing current fixture pattern in cp4connections usesactualtimestamp.",
+    "Indent verification actorTransaction acquisition work inside newtry to matchblockscope, formatonlyno semantic/provider/fence alteration."
+  ],
+  "basis": "cp4-product114-root-static-review.json",
+  "limits": "Same solewriter. Allother328currentpublicpaths frozen; preserve114A01/A02/A03 repairs/actualbarriers/oldassertions. Correctonlynewneverexecutedfalseoracle/literal/clockwait andtryindent. No sourceoutside2paths/docs/runtime/test/build/lint/Node/npm/docker/env/private/provider/Meta/Git/status/diff/worktree/copy. Reportterminal2hashes/testsNOTRUN. Remaininggatesunwaived."
+}

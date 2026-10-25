@@ -1,0 +1,45 @@
+{
+  "kind": "Exact owned114aqualification and115ready docs",
+  "rows": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 378818,
+      "sha256": "02087d9fdf4d35ae13f72833ad18225d6b8ede287c959e0c71c87e5f2a2cd941"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-product114-root-static-review.json",
+      "bytes": 2320,
+      "sha256": "58fa064f0123ca3c4fd731eb0b24f4641a0c3b0377dfaa4e8ab62bc5ab758f01"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-product114a-handoff.json",
+      "bytes": 1523,
+      "sha256": "88a647eaab26f4e032bd26a491f136e8d95904532902f0bb8553efaed24150bd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-product114a-root-qualification.json",
+      "bytes": 1932,
+      "sha256": "6fedb7d70680589bbd9c562007dc3e62b6e8b30463d8c87213eb5c3e0b63b75c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source114a-terminal-manifest.json",
+      "bytes": 61003,
+      "sha256": "1c06392fe2d457bf7ab91cfce5c32b5e75a7c11b2e2b30986d912a8155a2bbec"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-gateway115-handoff.json",
+      "bytes": 4590,
+      "sha256": "45b771be94078b6d34e4c3c1b60c43e6cf23d5546a878081d62b507201f61083"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-gateway115.json",
+      "bytes": 870,
+      "sha256": "a798446a5eac588bc4be8204921f10bef1197c006d845579f893972f35a4da6a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-gateway115.json",
+      "bytes": 930,
+      "sha256": "9b01c282075dd3432b9f1bb886150c4de1c5525b4aec5571ad8a3695dd6fbca0"
+    }
+  ]
+}

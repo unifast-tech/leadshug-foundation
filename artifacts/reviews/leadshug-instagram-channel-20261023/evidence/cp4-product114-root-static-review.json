@@ -1,0 +1,42 @@
+{
+  "kind": "114 sourcecandidate independent root static review; NOT readyforvalidation",
+  "candidatesExact": [
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 10584,
+      "sha256": "17cc8111c0250d6da1aba192e2d401d38a464f8fef248a34262dbecfc6e71bee"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14243,
+      "sha256": "468f82be6ecd00de459702de5e0863c83069431a23179ddc26c36f6756575c79"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90917,
+      "sha256": "afb4ca2f1a73fe1b327216494a2fc5968100ee708cbe14c82919eb4a870c2cbe"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69022,
+      "sha256": "9edfaa7c1e16fbaf5f7911398312ba2d0346dccd3af097c71e40cc48f134d2d7"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 37117,
+      "sha256": "fb44df7ff93e0362effbc447809d82d4102d46c29456ceaa1baded0314894d4a"
+    }
+  ],
+  "otherSourcesExact": 325,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "corrections": [
+    "New reauthorization username disconnect_account_a_reauthorized exceeds Instagram30-char username contract/safeprojector; use validshortliteral consistently.",
+    "Disconnected identityVerified remains original proven ownNumberVerified/epoch, while statusDISCONNECTED/receiptNULL/credentialabsence preventsend. New unexecuted oracle false is incompatible with unchanged canonical source; assert preserved provenidentity, not alterproducttoerasetrust.",
+    "A03 immediate same-account reauthorization must honor retained actual10s resource cooldown; add bounded natural clockwait before confirm/reauthorize, no timestamp rewrite. Existing current fixture pattern in cp4connections usesactualtimestamp.",
+    "Indent verification actorTransaction acquisition work inside newtry to matchblockscope, formatonlyno semantic/provider/fence alteration."
+  ],
+  "qualification": "A01 realCOMMIT/shortsignedsession/successor queuedrow-CAS/nativecontrol source present; successorclock_timestamp+60modelsnewsuccessorlease, not originalexpiry manipulation. Actualnativeproof stillunrun; sourceonlycausalreview."
+}

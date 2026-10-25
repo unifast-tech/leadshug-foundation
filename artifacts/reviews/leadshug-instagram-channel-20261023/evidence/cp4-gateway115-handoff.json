@@ -1,0 +1,56 @@
+{
+  "kind": "Prepared115 actual gateway boundary source handoff",
+  "state": "READY foroneexplicitrootserializeddispatch;114aterminal/rootqualified, no activewriter",
+  "finding": "IG-ADHERENCE111D-01",
+  "profileHandoff": "Operational / Coder with explicit source DevOps overlay for three root gateway/runner/parity files; no operational runtime work",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "ownedExisting": [
+    "docker/local-gateway.conf.template",
+    "scripts/test-channels-local.sh",
+    "scripts/check-channels-ci-parity.py"
+  ],
+  "preimages": [
+    {
+      "path": "docker/local-gateway.conf.template",
+      "bytes": 1822,
+      "sha256": "6d4563cc5f5823bdb1177f350c942dc2472fc70133aef5b177fa4b57c5c9f1a0"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13912,
+      "sha256": "c6fb288eb65de144d0dadef4a40a29c3ebea43b32f625016aa0caef9229f8b2f"
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "bytes": 30521,
+      "sha256": "0dee14bf5a860e9cde852181168392af24f603be925ad0e8053ddd3f30650238"
+    }
+  ],
+  "ownedNew": [
+    "api-app/test/instagram-gateway-boundary.e2e-spec.ts"
+  ],
+  "readOnlyInputs": [
+    "api-app/test/helpers.ts",
+    "api-app/src/infra/http/body-parsers.ts",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/vitest.config.e2e.ts",
+    "docker-compose.channels.yml",
+    ".github/workflows/ci.yml",
+    "api-app/test/instagram-lifecycle.e2e-spec.ts",
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+  ],
+  "requirements": [
+    "Preserve gateway default2m and all existing API/Meta/otherwebhook semantics/redactedlogging. Add exact effective Instagram slash/nonslash locations with8m bodyceiling and existingupstream/proxyheaders/timeouts, avoiding broadprefix/regex priority mistake.",
+    "Install nginx in same canonical disposable runner apt package list; update exact parity expectations/selftest faithfully, no weakened guard. CurrentCI calls thisrunner, compose has readonlyrootmount; no compose/CI/package/lock/npmdependency edits needed. If concrete topology differs reportroot beforeexpansion.",
+    "New nativeE2E starts realNest/PG with existing helpers and genuineOAuthowner/credential/subscription. Use installednginxbinary as owned disposable child, actualpublicgatewaytemplate read withinrunner, temp isolatedprefix/events/httpwrapper and runtimeephemerallisten/APIupstream/webupstream substitutions only. Preservebodylimit, proxybehavior and logredaction. No mockNginx or borrowedrealgateway.",
+    "Valid rawJSON rootpadding is supported by actualcontroller: acceptedoneactualtext event plus ASCIIpadding allows exactbodybytes whileHMAC signsentireoriginalrawbytes. Both /webhooks/instagram and /webhooks/instagram/ accept valid >2MiB andexact8MiB. Prove message/contact/conversation/route/resource/BU/unread association and signedingressacceptance. Signedvalid8MiB+1 returns413 atNginx (safe upstream_status absent), no changed domain facts/receipt/unread/providerrequests/realtime. Other /webhooks/meta >2MiB remains413 beforeupstream. Also preserve actualwrongHMAC belowlimit rejection/zeroeffects using realapp; do not claimpositiveingress for invalidbody.",
+    "Observe actualsafeNginx status/upstream_status to distinguish proxy versusapplicationrejection, neverprint body/signature/OAuthquery/token. Use safe logs/stdout privatefixturecapture and bounded assertions. Versions/tempfiles/processes fromownedchild only, no hostprocess/env/socket/operational introspection.",
+    "Native fixture unconditional finally closesNGINX/Nest/anyheldnetwork and removes only its owntempprefix; setup failurecleanup mandatory. Start waits actualhealth throughgateway withboundedreadiness, no blindsleep/permissiveskip. Existingtimeout/budgets/scenarios unchanged; explicit bounded newtesttimeout allowed for8MiB transfer/setup.",
+    "Only exactfour sourcepaths; no helpers/schema/CI/compose/otherproducer/otherexistingtests/Framework/Foundation changes. Static only now, no npm/Node/build/lint/test/docker/network/provider/Meta/Git/status/diff/private/env/processinspection/worktree/copy. Rootauthorizes canonicalexecution separately afterterminal/sourcequalification. Report bytes/SHA andall boundarytestcases, testsNOTRUN."
+  ],
+  "remaining": "All111A/111D fixes/nativeproof/currentALL/CP5/affectedreviews/primary/pendinghuman/security/TQA/cutover/final/CP6realproof remain unwaived.",
+  "baseline": "cp4-source114a-terminal-manifest.json",
+  "source114Qualified": "cp4-product114a-root-qualification.json"
+}
