@@ -1,0 +1,20 @@
+{
+  "kind": "Exact owned115/117prepared docs",
+  "rows": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 377355,
+      "sha256": "68b75848b008550ba39cf25257450d7d4613080a49ef3d5f90971d02b46009d4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-gateway115-handoff-prepared.json",
+      "bytes": 4474,
+      "sha256": "805f4d9cd0a29dc17e5e09ba14c6666a7f822db1909847dc9754596e33ee210e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web117-handoff-prepared.json",
+      "bytes": 7844,
+      "sha256": "29a39d1d4d493ac4cd00b0411aea5d8d8f10c7c4df639d5781d7be6233428b6b"
+    }
+  ]
+}

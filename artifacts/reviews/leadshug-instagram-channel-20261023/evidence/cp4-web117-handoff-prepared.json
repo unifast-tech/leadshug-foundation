@@ -1,0 +1,98 @@
+{
+  "kind": "Prepared117 complete Web recovery/pagination/Unicode/draft source handoff",
+  "state": "PREPARED ONLY; root finalizes preconditions after114/115 terminal qualification; no Webwriter now",
+  "profile": "Operational / Coder",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "ownedExisting": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/src/instagramState.ts",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/src/telas/Numeros.tsx",
+    "web-app/src/componentes/NovaConversa.spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/e2e/instagram-channel-freshness.ts"
+  ],
+  "preimages": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 38708,
+      "sha256": "e97067746b0d565a4a30bbbfc4e9f7712f503b694b792a96ce4e9a56154c6f77"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 42465,
+      "sha256": "6ff9410e0c87e11368cbfa313f4657a5c8fd734e19fce0d128c28b5bac165ecf"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 14414,
+      "sha256": "c44738909300e4f43a623026927dd4b876595f5de53f594928e64d323099a08d"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 17097,
+      "sha256": "cfda342fc8d0d8b3ffdab8f8b393bb7f8da4557d1bb8f6c4e87230d19cfb7f62"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 7603,
+      "sha256": "e917cb075577be514d55450345e1730fd04c53881523d6bf6705cf1237d6ddf3"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 11031,
+      "sha256": "bd6ac5c4a49c9d40c49357cf88fa0d4f29a017b961ddd9774635ea4bb497cce9"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3086,
+      "sha256": "4d1802ef080986be3ef8570a270f78af32fd9e1cb61ffb1a3cc3dcbc5d8342e2"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 6611,
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 35078,
+      "sha256": "088ac6f8acefdbd2e3d24ed42265bb80fdf238db5385e614b07e2cae3468029b"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 25946,
+      "sha256": "a89da16b910d34670240700a348535f6c29754d14025e91bae45947ca326ed5d"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel-freshness.ts",
+      "bytes": 6659,
+      "sha256": "533e8186eb7314f51432bba876fc8afb20086dfd0032d94ca06b00536095ef46"
+    }
+  ],
+  "readOnlyInputs": [
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/browser-server.cjs",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/src/api.ts",
+    "web-app/e2e/start-conversation.spec.ts",
+    "web-app/e2e/timeline.spec.ts"
+  ],
+  "requirements": [
+    "D02 consume existing BFF total/pagina/temMais andbounded50pages in Inbox: explicit accessible previous/next or continuation, exactactor/BU/filter/navigation readownership, loading/error/refresh/currentpage behavior. Preserve activeconversation/thread/drafts andpoll/WSS semantics; no wholehistory load/infinitefanout/phoneAPIInstagram. Native signed55+IGconversations/actualBFFPG prove access afterfirst50, correctlabels/IDs and scope/filterreset/staleresponsedenial.",
+    "D03 currentfailed start-options remains unresolved, composer sendblocked even if reply-options succeeds andnonemptythread. Actionable explicitretry/currentactualreconnect read preservesdraft/selection andoldsenderror ownership. Native realactiveadmission + intentionalmetadatafailure proves blockedzeroPOST, thencurrent-successfulrecovery only. Do not guess protectedtimelinealertcause oreditprotectedtimeline/start/screen tests.",
+    "D04 allocate one admission-read ticket atREQUESTSTART for parent and every PrimeiraMensagem/OrdinaryRecovery publisher. Carry actor/BU/conversation/generation/navigation/ticket untilcompletion; no completion-order promotion. Relevantactionboundaryinvalidatespriorreads. Preserve backend authoritativeadmission/recipient/window decisions. Native hold ACTUALBFF response, newer observation/action, releaseolderoriginalstatus/body unchanged, prove no obsolete publication/controls/send. No fabricatedBFFpayload or unit-onlyreplacement.",
+    "D05 OrdinaryRecovery lifetime keyed by exact admission.id pluscurrentactor/BU/conversation/navigation. Replacementduringheldaction resets busy/riskcheckbox/notice/error fornewadmission whileoldresponse/finally cannotclearnewstate. Preservemultipleordinaryadmissions/globalinitialexclusion andnoexternalretry. Native twoactualadmissions/replacement, fresh riskconfirmation required, zeroextraPOST.",
+    "D06 capture exact actor/BU/operation/binding/generation/requestkey/body BEFOREcreationPOST. On uncertain/lostcreationresponse provide explicit recover with SAME idempotent key/body andthen safeattemptread; no automaticnewkey/request or authredirect until successfulcurrentobservation. Best-effort safe sessionmetadata retention plus in-memory fallback, actor/context isolation andhoneststorageunavailable behavior; no credentials/OAuthstate/token in storage/logs. Backend SessionMismatch/expiry/cancelledstates remainhonest, no false recovery. Native route.fetch actualdurablePOST thenlostresponse, explicitsamekeyrecovery →sameattempt/no extra durablecreation/provider sideeffect; preserveexisting storageunavailable/callbackcanceltests. If reloadwhenallstorageunavailable requires newserverroute or impossibleguarantee, reportroot rather thaninventendpoint/claimexactlyonce.",
+    "D07 existing contract is1000IG/4096WA UnicodeCODEPOINTS. Remove conflicting nativeUTF16maxLength and useconsistentcodepointbound in existingdraftowner/interactiveinput, preservingIME/selection/draftrevisionfences. Unit+native supplementary-plane1000/1001IG and4096/4097WA boundary, notASCIIonly. Pending1000UTF8byteproposal remains UNAPPLIED.",
+    "D08 replace whole-retained-indexcopy/scan onkeystroke/one-secondtick with boundedconversation-scoped existingdraftowner/keyedupdates, preservealloldbindingsactor/BU/conversation/route/channel/generation/fingerprint/revision andexplicitpreviousdraftrestore; no pruning/eviction/data loss/orgenericframework. Representative10000retaineddraftcohort tests measureactualtyping/update/querybehavior plusoldrevisionclearandactorisolation; reportmeasurements not inventedfrontendSLO. Componentmustconsume actualowner, not parallelunused helper.",
+    "Preserveall91existingnativecases/oracles/timeouts andfullIGjourney/realHTTPS/rawnativesocket/BFF/PG/providerHTTPfakes/heldreplyhash/current-sourcefreshness. Newnative cases separatefromoldlongtest; ownboundedtimeouts may be explicit, oldtimeouts/counters/assertions neverrelaxed. Playwrightroute.fetch may hold/abort actualresponse with exactbody/status, no mockedbusiness endpoints ordomain/PGimplementation. If existingfixture lacks essential capability, reportexactneededpath/diff beforerequestingwriteexpansion; read-only browser-server/timelinefixtures now.",
+    "Only listedadmittedpaths, Foundationrootowned. No product/backend/helper/fixture/server/runner/lock/env/private/Meta/runtime/Git/discovery edits or npm/Node/build/lint/test/docker/network commands. Source-only, reportterminalhashes/perfindingnativetestmapping/openquestions. APIcontroller onlyread-only; preserveexistingpubliccontract."
+  ],
+  "remaining": "CurrentfullALL/nativebrowser/actualCP5/independentallaffectedreviews/primary/human/security/TQA/cutover/final/CP6approvedrealproof mandatory; no authoredtestpass."
+}

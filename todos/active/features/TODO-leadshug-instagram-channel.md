@@ -2159,3 +2159,12 @@ With113a writer terminal and no live review/validator freeze, root may dispatch 
 | IG-ADHERENCE111D-06 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-07 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-08 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+
+
+### Prepared gateway115 and Web117 — no parallel source authorization
+
+Read-only planning established the actual gateway proof can use the existing readonly /workspace root bind and CI canonical ALL command. No compose/CI change is needed. Prepared evidence/cp4-gateway115-handoff-prepared.json limits the next source lane to exact8MiB Instagram slash/nonslash gateway locations, nginx package in the canonical disposable runner, matching parity check, and new native Instagram gateway spec with valid signed paddedbody/actualNest/PG ownership and no-effects rejection. Default2MiB for other routes is preserved. Source-only Coder/DevOps handoff; no physicalgateway/container/service access or testexecution now.
+
+Prepared evidence/cp4-web117-handoff-prepared.json concretizes seven remaining111D consumer repairs and native/unit proof on eleven alreadyadmitted Web paths. It preserves all91existing nativecases and budgets, supports >50conversations through boundedexistingBFFpagination, shares request-start admission readownership, blocks unresolved metadata, resets peradmission recovery, recovers exactuncertaincreationkey/body, respects current codepointlimits, and scopes draftstoragework. Nativeproof must hold/abort actualBFFresponses and inspect realPG/provider effect boundaries; no fakebusinesspayloads or backend-only acceptance. No newserverroute, helper/fixture/runner/otherpathwrite is inferred. Concrete neededexpansion returns to root beforeedit; all unavailable-storage limitations muststayhonest.
+
+Both plans are prepared only:114 is the solecodewriter,115 follows its terminal/rootqualification, Web117 follows explicitserializeddispatch (with116 reserved for appropriate backendvalidation). No overlapping sourcewriters, no late human/private/runtime authority, no source-only pass or deliveryclaim. FullcurrentALL and all remaininggates staymandatory.
