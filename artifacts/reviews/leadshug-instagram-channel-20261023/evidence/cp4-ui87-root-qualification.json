@@ -1,0 +1,40 @@
+{
+  "kind": "UI87 root source qualification",
+  "changedFiles": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 31153,
+      "sha256": "51e91c37a05c70e176f2da515f63b5c87eb266d957f01d4c4f81a2f254429b2c"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3086,
+      "sha256": "4d1802ef080986be3ef8570a270f78af32fd9e1cb61ffb1a3cc3dcbc5d8342e2"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 7043,
+      "sha256": "de1d3e61b027231f18503c16295b62d7cc9cd8e4f62038174c9b42e921fdf805"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 9343,
+      "sha256": "8e72c0290b7adc4f0cd361c96c03daa93eea1f75cdb85983bca4b0d5628550b3"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 14454,
+      "sha256": "8bc121431f746a444b5d376bda51a88300c67d84664844de95f034efb663d4b4"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 13481,
+      "sha256": "a62ab3d783427e13f465ac16f74297f5ede5f76127caa26ea0b275a24ae1249b"
+    }
+  ],
+  "other317SourcesExact": true,
+  "preserved34RowsExact": true,
+  "rootIndexExact": true,
+  "tests": "NOTRUN since87; prior84build/unit proves earlier source only",
+  "staticLimits": "Scoped prior drafts/read-only manual copy, labels/actor clocks/fixed copy statically qualified only. Native races/build/type/runtime require current tests."
+}

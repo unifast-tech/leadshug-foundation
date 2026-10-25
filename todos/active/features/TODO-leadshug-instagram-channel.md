@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API80 completed:433unit and604/611E2E pass. Repair81 qualified projection/lifecycle/fixture failures; prepare reviewed protected-template EPS-selector admission while authorizedwork continues. Then complete strictV2React/HTTPSbrowser andalllatergates.
+- **Next exact step:** UI87/display86 source qualified; run canonical Web90 once, then implement native HTTPS browser89 and obtain consolidated current ALL proof. Exact timeline88 companion awaits human admission; primary/CP5/CP6/assurance/real gates remain open.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1891,3 +1891,52 @@ User validated the reviewed test-only selector adjustment. `evidence/template-ep
 ### CP4 React83 whole consumer handoff
 
 Root matched exact EPS82 candidate and 265 other source bytes, 34 immutable preservation rows/3 bounded exceptions/root gitlinks. No current test pass is claimed. Sole fresh routine Operational/Coder now owns only the 7 existing +4 new exact React paths in `evidence/cp4-react83-handoff.json`; all other known API/Web bytes preserved by `cp4-react83-preimages.json`. This is the already approved whole CP4 consumer: common connection catalog, full-navigation Instagram lifecycle, strict V2 composer, qualified draft/revision/action fences and preserved WhatsApp flows. Source work proceeds while consolidated API proof is open; no runtime/provider/private/dependency/global-config authority. Root reconciles terminal source before canonical web/API/browser proof; all primary/CP5/CP6/assurance/physical gates remain mandatory.
+
+Human readiness update: user confirmed another Instagram account is available for the later assisted real DM/reply proof. This confirms resource availability only; it does not authorize credential access, provider/runtime changes or execution of the physical proof before the later approved plan.
+
+### React83 terminal — bounded static correction83a
+
+Root matched 5 existing owned changes plus4 new files and314 other existing source bytes; no test ran. The derived83 receipt key `other310ExistingSourcesExact` miscounts the denominator; the actual323 terminal rows and per-file checks are retained, and this sentence corrects that count. `evidence/cp4-react83-root-static-qualification.json` records six concrete consumer defects: WA draft truncation, unknown/unavailable V2 options, ACK/reopening revision fence, stale list/outer callback/legacy display fallback, connection action ownership and hidden ordinary-admission recovery. Sole83a writer remains within the original7existing+4new React paths to correct these already-approved requirements; no threshold/source/runtime/protocol expansion. Then one canonical web84 before browser fixture implementation; all consolidated proof and later gates retained.
+
+React83a terminal root qualification matched all6 reported hashes/317 other known source bytes/root index. Three residual static defects in `evidence/cp4-react83a-root-qualification.json` require a final bounded83b pass only in pure state/spec and reply composer: one-option explicit-refresh selection, actual current-binding rather than captured-closure ACK comparison, and qualified known-policy window validation. Current build/unit proof remains unexecuted; no assertions or backend behavior weakened. Then one canonical web84.
+
+### React83b terminal — canonical Web84 freeze
+
+Root matched all3 reported terminal hashes/320 other known source bytes, 34 immutable inherited rows/3 bounded exceptions and3 root gitlinks. `evidence/cp4-react83b-root-qualification.json` binds actual323 source files. Static fixes do not prove compiler/unit/browser behavior. All writers are terminal. Freeze these323 sources, full current TODO and positively enumerated public inputs for exactly ONE `bash scripts/test-channels-local.sh web` invocation84; validator writes only four unique84 outputs, no source/T/input mutation or retries/autofix/private/operational runtime/Meta access or Git beyond exact3-root-gitlink read. Root reconciles real raw output and before/after invariants before thaw. Native HTTPS browser fixture/source work follows; current full API/ALL, primary protocol/CP5/CP6/all assurance/real proof stay mandatory.
+
+### Web84 actual terminal — consolidated ALL85
+
+Root independently matched323sources/fullT/998positiveinputs/34immutable rows/root index and all4 outputs. Exactly one canonical Web84 exited0:26 parity mutation probes rejected, prerequisite Prisma Client generated, tsc/Vite built63modules in1.35s,66/66unit tests across8files passed in717ms. API lint/unit/migration/E2E and browser/HTTPS were NOTREACHED by targetweb. `evidence/cp4-web84-root-reconciliation.json` records strict limits; no component/native race/feature acceptance follows.
+
+Web84 freeze ends after root reconciliation. All writers remain terminal. Next freeze the same current323 sources/full updatedT/positive inputs for exactly ONE canonical `bash scripts/test-channels-local.sh all` invocation85. This obtains current full API proof for81/82 and actual current baseline Web/browser behavior before faithful fixture/HTTPS implementation. Preserve every original assertion/index/budget/cardinality; no retry/autofix or source/T/input writes until terminal/root reconciliation. Browser fixtures and required native Instagram HTTPS journey remain to implement, no backend-only/partial delivery or stale proof reuse. All primary/CP5/CP6/assurance/real gates remain mandatory.
+
+### ALL85 actual terminal — faithful display86 snapshot comparison
+
+Root independently matched323sources/fullT/1006publicinputs/34immutable rows/3exceptions/root index and4 outputs. Exactly one canonical ALL exited1:26 parity probes/31migrations/schema/lint/build PASS;433unit39files PASS;610/611E2E,57/58files PASS,648.18s. Connections suite11/11 including catalog/lifecycle and realtime1/1 PASS; qualified WA display PASS. Sole failure is new display spec287: flat10-field Prisma row compared against13-field expanded-include object. Source and raw diff establish incompatible fixture shapes, not scalar route mutation or product projection fault. Later ambiguous-graph assertions/Web/browser remain UNREACHED.
+
+`evidence/cp4-all85-root-reconciliation.json` records actual reached/unreached facts.85freeze ends after root reconciliation; sole86 writer owns only new admitted display spec to capture full flat original route snapshots before lifecycle and compare full flat current rows later. No fuzzy oracle/assert removal/policy/budget change. Then continue already-admitted UI/native HTTPS/browser fixture work with fullproof open; next consolidated validation covers corrections plus new native consumer. Full current API/ALL/browser, primaryprotocol, CP5/CP6/all assurance/real gates remain mandatory.
+
+
+### Display86 terminal — UI87 source correction
+
+Root qualified exact four snapshot edits by reversal to85 preimage,322other sources/34immutable rows/root index exact; no new test run. `evidence/cp4-display86-root-qualification.json` records limits. Sole routine UI87 executor owns only original11 React paths to make official/nonofficial labels distinct, preserve accessible scoped stale/recovery drafts, isolate actor bootstrap/read ownership, and preserve fixed safe outbound failure messages. These satisfy already-approved consumer requirements; no new protocol, policy, protected test or runtime authority. Native HTTPS/browser work follows; all current consolidated and later gates remain mandatory.
+
+
+### Timeline88 exact companion proposal — not applied
+
+`evidence/timeline-window88-proposal.json` and exact diff prepare only two positive official browser scenarios for actual current signed IN prerequisite;14Oct histories, all assertions/IDs/counters/30s bound stay intact. The protected strict-path test remains unchanged pending fresh focused critique and explicit human validation. Reviewed files/T frozen during critique; disjoint original11 UI87 paths may continue. This introduces no product policy/runtime authority; actual fixture and consolidated proof remain required.
+
+
+Timeline88 fresh focused critique reached turn.completed and strictmerge with no findings. Root matched all8frozen inputs; `evidence/timeline-window88-root-review-reconciliation.json` records bounded GO and mandatory actual signed fixture contract. Reviewed test remains original36e51ccf; exact application requires human path validation. Review freeze ends; disjoint admitted UI/browser work continues without fullfeature acceptance.
+
+
+### UI87 terminal — canonical Web90 freeze
+
+Root matched6reported hashes/317other source bytes/34immutable rows/root index. Statically qualified distinct adapters, same-actor/BU/conversation prior-draft review without auto-copy, actor-owned bootstrap/list clocks and fixed safe failure copy. Source correction does not prove browser races. All writers terminal. Freeze323sources/fullT/positive inputs for exactlyONE canonical `bash scripts/test-channels-local.sh web` invocation90. Validator owns four unique90outputs only; no source/T/input writes/retries/private/runtime/Meta/Git expansion. Root reconciles terminal proof before browser89 sole writer; fullAPI/ALL/primary/human/CP5/CP6/assurance/real obligations retained.
+
+
+### Web90 terminal — native browser89 implementation
+
+Root matched323sources/fullT/1012inputs/34immutable rows/root index/fouroutputs. ExactlyONE canonicalWeb90 exit0:26parityprobes,Prisma prerequisite,tsc/Vite63modules1.40s,68unit8files698ms PASS. API/E2E/browser NOTREACHED. Install summary reported9dependency vulnerabilities among106packages; security lane must qualify applicability before delivery, no dependency mutation inferred.90freeze ends after reconciliation.
+
+`evidence/cp4-browser89-handoff.json` admits sole routine writer only browser-server/timeline-fixtures, channel-transport/start-conversation existing specs and two new Instagram spec/freshness files. Actual ownedNest3102+TLS4174/nativePG/session/BFF/WS; fakeexternalHTTP/document only, productionGETnull/UNKNOWNunchanged; ownedproxy holds actual completed BFF responses without fabrication. QualifiedWA ownership/currentIN fixtures preserve every oldhistory/oracle. Protectedtimeline88 remains unmodified pending human. No globalconfig/helper/productAPI/privacy/UTF8/runtime/private/Meta/Git expansion. Root reconciles terminal source before canonical browser/ALL; all later gates remain mandatory.

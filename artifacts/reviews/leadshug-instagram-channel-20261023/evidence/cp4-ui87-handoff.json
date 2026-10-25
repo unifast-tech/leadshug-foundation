@@ -1,0 +1,62 @@
+{
+  "kind": "Already-admitted React UI87 source corrections",
+  "profile": "Operational/Coder react",
+  "authority": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "allowedWrites": [
+    "web-app/src/api.ts",
+    "web-app/src/api.spec.ts",
+    "web-app/src/telas/Numeros.tsx",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/CadastroNumero.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/componentes/NovaConversa.spec.ts",
+    "web-app/src/instagramState.ts",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx"
+  ],
+  "preimageManifest": "cp4-source86-terminal-manifest.json files (all323 current sources)",
+  "readAuthority": {
+    "sourceFiles": "Only exact files enumerated cp4-react83-preimages.json and four new owned paths after creation; no directory traversal/search/Git inventory. Exact-file rg allowed.",
+    "docs": [
+      "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "foundation_documentation/project_constitution.md",
+      "foundation_documentation/modules/integrations-and-channels.md",
+      "foundation_documentation/modules/inbox-and-conversations.md",
+      "foundation_documentation/modules/identity-and-tenancy.md",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react83-preimages.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react-next-root-preparation.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react79-prospective-boundary.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser80-plan-root-adjudication.json"
+    ],
+    "governance": [
+      "AGENTS.md",
+      "delphi-ai/main_instructions.md",
+      "delphi-ai/profiles/operational_coder.md",
+      "delphi-ai/workflows/react/change-ui-boundary-method.md",
+      "delphi-ai/workflows/docker/effort-selection-method.md",
+      "delphi-ai/config/agent_role_routing.json"
+    ]
+  },
+  "findings": [
+    {
+      "id": "UI87-01",
+      "fix": "Use friendly distinct WhatsApp oficial / WhatsApp n\u00e3o oficial labels in connection cards and reply options. Same business number/accountLabel can be shared. Instagram label unchanged, unknown neutral; never raw UUIDs/legacy contact fallback."
+    },
+    {
+      "id": "UI87-02",
+      "fix": "Retain accessible draft text when a route generation/fingerprint becomes stale or ordinary admission causes recovery. Provide an explicit read-only prior-draft review/copy path scoped to SAME actor/BU/conversation; no automatic transfer into a new binding, no send before current binding review. Existing full-tuple/revision ACK clearing remains. Avoid exposing drafts to a different actor or account."
+    },
+    {
+      "id": "UI87-03",
+      "fix": "Inbox actor bootstrap and list reads currently share listaIntent: old-BU list can invalidate a new actor business-unit response, with old state retained. Separate bootstrap ownership and synchronously fence actor changes/clear old BU scope; include actual actor dependencies for callbacks. Numeros carregar [] must capture actor intent and refuse late old actor responses/errors/busy effects; keyed child alone is insufficient. Preserve A/B/A/navigation/list/recovery algorithms."
+    },
+    {
+      "id": "UI87-04",
+      "fix": "Preserve safe known failure copy: generic failed ordinary send shows Falha ao enviar mensagem.; EXTERNAL_MESSAGE_ID_MISSING/evidence ACK_WITHOUT_ID shows fixed accepted-without-external-ID warning plus check before retry. Never arbitrary provider response. Preserve exact draft, native current start-options/recovery consultation and no blind resend."
+    }
+  ],
+  "requirements": "Correct these source-qualified usability/isolation defects in original 11 owned paths only. Add meaningful pure/API tests where natural. Do not touch pending UTF8/privacy policy or protected e2e. Retain test selectors/semantics, every original timeline algorithm and WhatsApp first-message flow. Static writer validation only; canonical tests root-delegated later. No automatic selecting alternate route or automatic copying stale draft.",
+  "forbidden": "No other writes (including Foundation), tests/build/lint/runner/runtime/network/provider/tunnels/realMeta/private/.env/process/Git/worktree/branches/dependencies/configs/privacy/App modifications. No directory rg/glob or inventory outside enumerated public paths. If exact source gap requires another path, report it first. Root owns docs and later canonical validation; no writer/validation overlap.",
+  "completion": "All owned changes terminal; return each changed/new path bytes SHA256, observable decisions and remaining concrete gaps. Tests deliberately NOTRUN by writer; no passing claims. No persistent goals."
+}

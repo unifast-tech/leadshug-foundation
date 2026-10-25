@@ -1,0 +1,1619 @@
+{
+  "files": [
+    {
+      "path": "api-app/.env.example",
+      "bytes": 3565,
+      "sha256": "5ae334bc61c924eb44b61c89c0e6127be7e410ea571ab2ffe180fab949452a66"
+    },
+    {
+      "path": "api-app/Dockerfile",
+      "bytes": 2504,
+      "sha256": "188a83953c950d65f3fd5b3d428382cafc88e42efa0776c95fb4ba49b54d0a15"
+    },
+    {
+      "path": "api-app/eslint.config.mjs",
+      "bytes": 569,
+      "sha256": "7019e4dbc557cfb5425f6d9e11e75846c55268f442592b9bce4f7c1e3e21d1b1"
+    },
+    {
+      "path": "api-app/nest-cli.json",
+      "bytes": 223,
+      "sha256": "4f3595ef15ab569316b8bc91f8bfa33adccb3f3b1a082a39851c4bfc8ad60651"
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+    },
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260818125556_nucleo_v1_tenancy_identidade_atendimento/migration.sql",
+      "bytes": 9362,
+      "sha256": "680ff78cf5c8dab2bc5ec51688b83252bb86d214e8af7817356ee125ed47daa4"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821175101_modulos_e_marca_por_mantenedora/migration.sql",
+      "bytes": 234,
+      "sha256": "fe2155893de7a9ade15493617e36e77e299bcffc9b86ec19ad813a15bfd1c6bc"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821180000_tres_papeis_owner_admin_atendente/migration.sql",
+      "bytes": 928,
+      "sha256": "ecf379d151e2f73ff1b81baef00c27561b2b9f1acc885599144603541987b7f7"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821190000_setor_e_proveniencia_do_grant/migration.sql",
+      "bytes": 2354,
+      "sha256": "968394573271ce426d3011db774ce9a219750dc5822f251fdea291e588d12d59"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821190500_concessao_de_setor_e_fato_proprio/migration.sql",
+      "bytes": 858,
+      "sha256": "176c7664c7c1458f0e06beb33f21359db72511e6cd20f1da5fb63b7eec50cdbf"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821200000_historico_de_atividades/migration.sql",
+      "bytes": 2069,
+      "sha256": "3a87e44c2cc8a3a7f91fc59819bae065e9a1f1eeacfc28685710e8d5d7e18a75"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821210000_wizard_de_onboarding/migration.sql",
+      "bytes": 894,
+      "sha256": "013d4428d36afe752966762ae8a2d6195032d88c57ab9d18b2c147df21865735"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260821220000_preserva_modulo_ja_em_uso/migration.sql",
+      "bytes": 1086,
+      "sha256": "a33a51234e7097f95e10452c3652b33e9e5c5c1b488a4545404222711d5abec5"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260824122559_perfil_do_proprio_usuario/migration.sql",
+      "bytes": 69,
+      "sha256": "5f14615eef62afaa05be2f6e1a144667c30e4c2f618f899ade8c108c7ae9a80e"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260824125224_arquivos_logo_e_avatar/migration.sql",
+      "bytes": 162,
+      "sha256": "4a8bb54855ff5de7c89632df84f92c5589ffd99cd9e8c5001a080d01f7c121d1"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260824125227_arquivos_dono/migration.sql",
+      "bytes": 572,
+      "sha256": "864ced863cd894f7df333f16a6eaafe0870d72f263c18600b7cf4985e5c8120a"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260824125334_avatar_e_do_usuario_nao_da_bu/migration.sql",
+      "bytes": 283,
+      "sha256": "297f051ce252e4e6abc6b7dde2ded19a126c5db074e74c29b937ef7787f0cfa8"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260824161138_convite_e_recuperacao_de_senha/migration.sql",
+      "bytes": 934,
+      "sha256": "a46e62f79cd2e0f4d818bada129caf89f800fc372d963da4bbac6b9e597229c3"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260827170000_cor_secundaria/migration.sql",
+      "bytes": 76,
+      "sha256": "01d41f5e3772b4278b41511b2a7efbb39bd76a62e31f67b2a4967de4e6357380"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260831130000_cores_primarias_por_tema/migration.sql",
+      "bytes": 265,
+      "sha256": "03cecfbf50ed896fed322d63dbb1fea40126685b9193d08e677a4e598c5b4e30"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260901120000_typebot_bots_and_triggers/migration.sql",
+      "bytes": 1736,
+      "sha256": "62188240b4f2f7db65a3f2e8d45cf866b5c22311225782a669bf6389d517a8a9"
+    },
+    {
+      "path": "api-app/prisma/migrations/20260901130000_typebot_sessions/migration.sql",
+      "bytes": 847,
+      "sha256": "47fa9f58f4b89cf038eda3cf54cd576d3ab4cd3b2e54be1f7474c94a2f43f795"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015120000_number_onboarding_foundation/migration.sql",
+      "bytes": 6681,
+      "sha256": "55d84f5eef1b9b9e9a22891695812e522fe4e405041341218984507426ef0946"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015130000_number_onboarding_provider_resource_ownership_immutable/migration.sql",
+      "bytes": 880,
+      "sha256": "a6fa9ad9e99a0b55ed5d9e86b99d42b603b404c13f41f97ac718e6443f29a3fe"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015140000_number_onboarding_channel_operation_fence/migration.sql",
+      "bytes": 270,
+      "sha256": "e484edd01e78133bcaf23f12fb47e44e92cba44a89b29803eff1530b103bc496"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261015150000_number_onboarding_managed_cleanup/migration.sql",
+      "bytes": 837,
+      "sha256": "27a07435e3327f004ad8d46cd4c18eec57b89ce3cdbf51c39631b248555214ad"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261016160000_number_onboarding_current_channel_identity_index/migration.sql",
+      "bytes": 126,
+      "sha256": "aadefab2ce66f3484661e66fdf918f5e295926bf9b89b0af4c3e2c8c5c78b740"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261020170000_message_inbound_window_index/migration.sql",
+      "bytes": 212,
+      "sha256": "586e709e07736eca0908ab5dcc668cf0e0b317189b4c963b361399848a3c9710"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021130000_message_template_drafts/migration.sql",
+      "bytes": 4453,
+      "sha256": "3feab40fed1c9be1bac9e43464fd587d57693424c4b3012d8c4b8536661d51dd"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261021150000_message_template_operations/migration.sql",
+      "bytes": 12940,
+      "sha256": "2822bff860b5aa3476e7614f6a5d5515520dfd8e40708767d1bc4c5bfe2d991d"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022140000_initial_message_orchestration/migration.sql",
+      "bytes": 343,
+      "sha256": "a8b26d5dfc7eb8f658cf703cee0f1f6061b5afa2ad84ca0f37cd4baec9d68437"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022150000_initial_message_admissions/migration.sql",
+      "bytes": 3851,
+      "sha256": "41df36b473c3163e9e29ea1cc6c12df3376994081698be83c83e50a812e3922a"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261022160000_initial_message_inbox_order/migration.sql",
+      "bytes": 398,
+      "sha256": "60e7f76b8ccbee5e51dd939bdf126eeecaa1b1c1871f393a4363add94274a544"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023180000_instagram_adapter_type/migration.sql",
+      "bytes": 245,
+      "sha256": "32208cc03faafa9e56c9c9a08dfab5c6342d4dd96a68b19e5c853c64c947f5cf"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql",
+      "bytes": 19101,
+      "sha256": "2f8a134b837fb67c78e5f9b47bf7d0f26ddedb77f5a3da1b855751987df29ceb"
+    },
+    {
+      "path": "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+      "bytes": 3987,
+      "sha256": "56fa3232606291fcb457dfca8696d0a5e952bc87c46562594c4bc883ac6c15bc"
+    },
+    {
+      "path": "api-app/prisma/migrations/migration_lock.toml",
+      "bytes": 131,
+      "sha256": "bc487c02c71ad9cae8694647129e3ea7f32b1fe7007d0a6ced064e51022cd3fb"
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "bytes": 51597,
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d"
+    },
+    {
+      "path": "api-app/src/app.module.ts",
+      "bytes": 1857,
+      "sha256": "a59880adc1bd8250fdbf5d52637fc38fe3177a2615e1b25389716946da7ad420"
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "bytes": 2390,
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7"
+    },
+    {
+      "path": "api-app/src/domain/access/require-role.ts",
+      "bytes": 1142,
+      "sha256": "1281da1ad31748e2bd78bffdf2962376d3413c7b37cfe6102448710cc7d7ce61"
+    },
+    {
+      "path": "api-app/src/domain/access/role.spec.ts",
+      "bytes": 1996,
+      "sha256": "7d5400e3af84896ba021aa220908ad7ac995f2f0af1405cf53c72f5ef7a6a8d8"
+    },
+    {
+      "path": "api-app/src/domain/access/role.ts",
+      "bytes": 1776,
+      "sha256": "ec92764e75c52b754e430355d196137ca90de89b4c5ed6f3fb49a05da10e1b42"
+    },
+    {
+      "path": "api-app/src/domain/access/scope.spec.ts",
+      "bytes": 7356,
+      "sha256": "e3386d1e27d27c38ebbf8f3c06222c50c0cd5d164c29437ec83fcafbf14919c3"
+    },
+    {
+      "path": "api-app/src/domain/access/scope.ts",
+      "bytes": 5701,
+      "sha256": "412f68eb157328855c87cb86b6b89cc1c267eee7068dc59c0abbe085074db26d"
+    },
+    {
+      "path": "api-app/src/domain/acesso/convites.service.ts",
+      "bytes": 5266,
+      "sha256": "089931bcf9acd7b3807364e9b7eefbbbcfa14c41e649a3f87e74ca81cb83d211"
+    },
+    {
+      "path": "api-app/src/domain/acesso/limite-de-recuperacao.service.ts",
+      "bytes": 1242,
+      "sha256": "9661ebd71ab182f177743295bd15d1e857970025587c7a8c8566c9c43532ae16"
+    },
+    {
+      "path": "api-app/src/domain/acesso/tokens.service.ts",
+      "bytes": 4032,
+      "sha256": "00f5f240ba10ad2a0178e4c583ac4e6f04fb07b8a3fc7e55c58ab5ce6702c180"
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "bytes": 5953,
+      "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.spec.ts",
+      "bytes": 3766,
+      "sha256": "eda02a1bf69f40eb07309184adad8d2f1862f563c33afa03fb1657991d29faf1"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.ts",
+      "bytes": 3663,
+      "sha256": "b5f4ab6a5e7386fda28e4b1b0622918dfda8506da5ee2ad60b983e8c93f1c40a"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "bytes": 4021,
+      "sha256": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 9525,
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-provider-readiness.ts",
+      "bytes": 831,
+      "sha256": "8e47f5c0a0ad5f667c58212dbad3f15b84379d24a3d5d99cd4f1886e5dcca816"
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "bytes": 49088,
+      "sha256": "af62baafba5ee04657ac07ed1461f1841017dd3b523051aacefef55df8dbe0b7"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90997,
+      "sha256": "805759928260a6bfb80e2247aff3b2b5136e6135009b19fb32feb1febd40b06e"
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "bytes": 44938,
+      "sha256": "6f256430f609eed1a2fae72493268bf028135e0b8e6d34016c95ae0fef951631"
+    },
+    {
+      "path": "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+      "bytes": 920,
+      "sha256": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512"
+    },
+    {
+      "path": "api-app/src/domain/channels/safe-redaction.spec.ts",
+      "bytes": 971,
+      "sha256": "b35f2c689ee22cf0f8ebe50b4979ca7e25a708e0bd6930c93c376fbf57a3ff6a"
+    },
+    {
+      "path": "api-app/src/domain/channels/safe-redaction.ts",
+      "bytes": 2705,
+      "sha256": "704539c0a9aabd17dd5fc19826f5079da816c2bc5e22d438b8672662b9998606"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 12318,
+      "sha256": "e14cce0eb51ba98b05fa15dc6776680313f46898b13d0ef50b0d3f3070f78813"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-initial-message.spec.ts",
+      "bytes": 22801,
+      "sha256": "46d9c0806eb418401dfbd2e538e78b2ee24e8d674a3962fb88802ecb5923a5fa"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+      "bytes": 1973,
+      "sha256": "7c29336e78bd91e52ab585afc218fe74a723fee486c07e277fbd06dfec72a435"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13235,
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf"
+    },
+    {
+      "path": "api-app/src/domain/historico/atividades.service.ts",
+      "bytes": 2752,
+      "sha256": "9a081318375268d76839a83502d194bb12bfc1fb619a3cb6badab80c425d4609"
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "bytes": 9059,
+      "sha256": "b615202e95174055d345b407f7a955b7800fa46830bd5e70378c3ef5db6b7653"
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "bytes": 9843,
+      "sha256": "943e18f61e04be50c72419a7e7989795e155d0d96e30ff90bf74f2d9d8516c26"
+    },
+    {
+      "path": "api-app/src/domain/historico/registro.service.ts",
+      "bytes": 2691,
+      "sha256": "3826c4b841af898c4824fc53b64249f17f929157ac60769fb72336574d5d9c32"
+    },
+    {
+      "path": "api-app/src/domain/identity/identity.service.ts",
+      "bytes": 4159,
+      "sha256": "e839d6be1e2f1a5e1db681e742c31f5de0efb3a224cb1013ae81a21e8caf8e3a"
+    },
+    {
+      "path": "api-app/src/domain/identity/login-attempt.service.ts",
+      "bytes": 1912,
+      "sha256": "979b1c873319d3d8142e4aeb13c71f502c332c7dda862c0ae758948e763d34fa"
+    },
+    {
+      "path": "api-app/src/domain/identity/password.service.spec.ts",
+      "bytes": 1809,
+      "sha256": "3ec4ae1217e76e8191fb713f762c2041e588e1e88bbfb2dd0ef913a9a58289f1"
+    },
+    {
+      "path": "api-app/src/domain/identity/password.service.ts",
+      "bytes": 1985,
+      "sha256": "6aecadaf5295c909d8f399b38d78c72b5aed90b72a0aea68fe39a648bf371d0e"
+    },
+    {
+      "path": "api-app/src/domain/identity/usuarios.service.ts",
+      "bytes": 9791,
+      "sha256": "ff82f54a7aa6e495c5ce20626e88221fc20f4474a5ec84ff2f257b081f803364"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 9602,
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.spec.ts",
+      "bytes": 2077,
+      "sha256": "e20eaefd11256c8ca9f2156560ac23a1478f333b3932e865d1d52666cbd78692"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "bytes": 5700,
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.spec.ts",
+      "bytes": 1395,
+      "sha256": "6587b7b53ac5ce9726f8c8bcf48cce47efbc2ede8b0f7bf9fe3113026a7ab848"
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "bytes": 5620,
+      "sha256": "f0ea9891bcfc6f9bacc2a157a7b35b75dc74e347d06250cec91c7974fa95da9d"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+      "bytes": 5231,
+      "sha256": "1e2e797f83fe12d4609b0f1d6cb05b982b70baf492861da24368d9496a2ee606"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "bytes": 3439,
+      "sha256": "76ec095570fcacaa5bc48aabd30ab31adc9387bf399cf046fd9d8a1889528700"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 10463,
+      "sha256": "71312450799a964ef6057330fdcdddaa0a98246e2caef4b0ad305ffa98412e6a"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "bytes": 15247,
+      "sha256": "db2a52ba256592ba4a7a7f55a64b73c4188ed48b1d72c192b8f1baefb60d0809"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 49834,
+      "sha256": "ac6859204f25a215f17cabd125c494599124f22c81845c9dccdd811cc05847ab"
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.spec.ts",
+      "bytes": 1015,
+      "sha256": "eb1ca83e588c58382a332aee0fdda200f3eb6cb5f8c0cbd430e9790623393ec0"
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "bytes": 9192,
+      "sha256": "91a7ae76b8f514cf283148b51b4476a9dd8ee77313df8b898f8f367bce81fe22"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 8705,
+      "sha256": "79dc13cc0e56d3d547448a3269b0849ae559cd5108ba751598f4f43094384e31"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "bytes": 8151,
+      "sha256": "0995526bb84c7f7363a8f7d0cf56fbca782a98ee9563e58e115fd228b9f25730"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.spec.ts",
+      "bytes": 662,
+      "sha256": "faedadd6fdf05bf445b846e89dd17c608b0cc3599e3463c89f6338f6febad72f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.spec.ts",
+      "bytes": 5150,
+      "sha256": "c783e835575ab8cf89af5524e0f02402956975f80faecf6b9d1467c1a8a0bdf0"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message-template-renderer.ts",
+      "bytes": 5657,
+      "sha256": "a5ce98823c8f0a4480386bc755e392b5f6287107cbfc0ad13ad50c06bc234ecf"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "bytes": 7671,
+      "sha256": "2e50bc9b6d5d744511e7e8d1de9c2ac4f9c41f596bf3624aef3d5ceaeaaff667"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24692,
+      "sha256": "78692d58fa91d9ad15e3a72da27554b179dcbe42f7514d2f08d1b68a05a55b64"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+      "bytes": 5479,
+      "sha256": "72d71a92eabb9b0a83d6a280f853b036ebeaf15a8c0bd1ceff34723757ef6ad9"
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 27690,
+      "sha256": "1c47d314fd333a8826a121a9a593eeb54e0d156af2a0f4ade494dfee3250f131"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 30740,
+      "sha256": "d4e1d705b33c3ceedc0efef39ebc24b93319c719aae20160d6b86ecc8c0d00d6"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50850,
+      "sha256": "14cc63c095022ce7890a43a1ea6613d4be7dd582c6cfb28e86b45aab29e0795a"
+    },
+    {
+      "path": "api-app/src/domain/inbox/timeline-pagination.spec.ts",
+      "bytes": 1373,
+      "sha256": "a4c128981c7d3a0e93ba51de17392a34320e89f78098e5ed383532011ff6bb4d"
+    },
+    {
+      "path": "api-app/src/domain/inbox/timeline-pagination.ts",
+      "bytes": 2469,
+      "sha256": "d2cb9e533c8741f34babb1cef0a771878ae488474a3162e844a2f1d4d3acd6af"
+    },
+    {
+      "path": "api-app/src/domain/integration/api-key.service.spec.ts",
+      "bytes": 727,
+      "sha256": "41ef8944d57caec1a6db7bc7c0c05c9e4936a7cb5992bf45f26ecd646df3c976"
+    },
+    {
+      "path": "api-app/src/domain/integration/api-key.service.ts",
+      "bytes": 2125,
+      "sha256": "bde94ae81c4a17c4cf6cb8b28d8e9d2cdb22feb1def06848f6f125e8018917c5"
+    },
+    {
+      "path": "api-app/src/domain/integration/outbound-webhook.service.ts",
+      "bytes": 1851,
+      "sha256": "fdc13f9aadcc8f0e9c566643b7da08cf7cb0aec63c821ef98025e4f2a3baee1b"
+    },
+    {
+      "path": "api-app/src/domain/integration/rate-limit.service.spec.ts",
+      "bytes": 1096,
+      "sha256": "88e910431be104406fb84c375ddc83153755a9d7b4a81a9c098b0b7cfd2cbb12"
+    },
+    {
+      "path": "api-app/src/domain/integration/rate-limit.service.ts",
+      "bytes": 1558,
+      "sha256": "0579e073c05f57f9a87cf0f96f0301d01661957bea2490140c1e63566686503f"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.spec.ts",
+      "bytes": 7219,
+      "sha256": "9a60549d1c79d73889fd2d47b7ea3bb25b8a0bf140da805f64216decc6ff9d97"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-definition.ts",
+      "bytes": 9341,
+      "sha256": "1f28bfd19454b1e187b854c4f2e9785b59e7726032c20f82d62460d87401203c"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-draft.service.ts",
+      "bytes": 29240,
+      "sha256": "429a078fb48d5a66601d83883275dcc12cea659692e463e94a17d41d5cdf0713"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.dependencies.spec.ts",
+      "bytes": 3510,
+      "sha256": "a03a567e5b96a348b4ab40bb18282a555d30ad3533e6efb929c5d2f2614c82b2"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.spec.ts",
+      "bytes": 2963,
+      "sha256": "ddf581459b66bf0eb26ec710ded050f45713e5dd5317066cea574dacf57a68bc"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-management.ports.ts",
+      "bytes": 4562,
+      "sha256": "c7ed169d87a4224f82f8d1abe109bfa02b913bb2cb63303fc6477673f45ed693"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-observation.service.ts",
+      "bytes": 39343,
+      "sha256": "41c7c640fd31ca0759d0d88647e24c74787597dcf75fd8a3c773fe6e02965488"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-submission.service.ts",
+      "bytes": 63540,
+      "sha256": "a2b8b33ecfb0af165c2b94b50703d18a364d5b64ef581bbdd7659325bc631709"
+    },
+    {
+      "path": "api-app/src/domain/message-templates/template-transaction-boundary.ts",
+      "bytes": 978,
+      "sha256": "ea3e0550ad5c82b263391dbfb3dae6b9e8656d219f18aa0d7c55cd5668722123"
+    },
+    {
+      "path": "api-app/src/domain/painel/painel.service.ts",
+      "bytes": 2281,
+      "sha256": "d916a08d748336f2f17af8204504707c49db7396642c2c79067a6f71be68609d"
+    },
+    {
+      "path": "api-app/src/domain/produto/modulos.service.ts",
+      "bytes": 3094,
+      "sha256": "1283ac1879467c3ebb079daaf29bfd5cda9f0ca02fd45a1b3f8ec865c7d5544e"
+    },
+    {
+      "path": "api-app/src/domain/produto/onboarding.service.ts",
+      "bytes": 6966,
+      "sha256": "3b643a474a51b4ef0050f520d5059067897572843317e4a632cf0e37a6228c5e"
+    },
+    {
+      "path": "api-app/src/domain/setor/setor.service.ts",
+      "bytes": 12971,
+      "sha256": "d8cb22d68452d1ab9ea9daa69fe9660d867612f81db8e9e9a7fb34a6e56cda84"
+    },
+    {
+      "path": "api-app/src/domain/tenancy/tenancy.service.ts",
+      "bytes": 10923,
+      "sha256": "c9348f86f1f2bcfd4af3f9bd3e91cb5218d81cf13098989b5f6ea64acbb41398"
+    },
+    {
+      "path": "api-app/src/health/health.controller.ts",
+      "bytes": 890,
+      "sha256": "92bdd3eeecdd69ed564e7089a910e6d6d667e55e3f6f3965898911e575b98b20"
+    },
+    {
+      "path": "api-app/src/health/health.module.ts",
+      "bytes": 474,
+      "sha256": "9ce204c0535a897d545388170bcb6e308716d70a16074fbe94330787c8a95489"
+    },
+    {
+      "path": "api-app/src/infra/arquivos/armazenamento.ts",
+      "bytes": 4798,
+      "sha256": "de7a13259b03599c709b9c0097a4ddc84d07990f1a48ceb7f2aca86a826416a6"
+    },
+    {
+      "path": "api-app/src/infra/config/modulos.spec.ts",
+      "bytes": 5203,
+      "sha256": "57d60337ce3564e071b019e127ab6d409759eea8ae77e2d45095e4fea877928e"
+    },
+    {
+      "path": "api-app/src/infra/config/modulos.ts",
+      "bytes": 5134,
+      "sha256": "fd1ccabf7bee088f230a12d773c56a5d41fc07642d04262b55a6497a7b9c2a03"
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "bytes": 2011,
+      "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d"
+    },
+    {
+      "path": "api-app/src/infra/http/origens.ts",
+      "bytes": 1275,
+      "sha256": "db66c02e2ce21f725d445e6c4137a1d8462ffd85827a1cf4a211850e502c79b8"
+    },
+    {
+      "path": "api-app/src/infra/prisma/banco-atrasado.filter.ts",
+      "bytes": 1823,
+      "sha256": "e4329ef4ccc2b91596afe82137286dbb7328f64ceec786440f28c7b8e45b0eba"
+    },
+    {
+      "path": "api-app/src/infra/prisma/migracoes.ts",
+      "bytes": 1346,
+      "sha256": "d416bab2e0c7cdaef7313b92195a1d58b18ac665afb86d3b1e05ffad0bd7ae62"
+    },
+    {
+      "path": "api-app/src/infra/prisma/prisma.module.ts",
+      "bytes": 219,
+      "sha256": "14d19dcd7848e4d134cd9eaa205818d5e0302123a5fc5ea2440d358a39f2fd25"
+    },
+    {
+      "path": "api-app/src/infra/prisma/prisma.service.ts",
+      "bytes": 393,
+      "sha256": "8c6034455186bfc6497b329f94af7c867fb6f28b9226d54db5716a907db6e200"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.spec.ts",
+      "bytes": 5306,
+      "sha256": "dbb215e931a5856269b07057ce74c7af7ee66c4947961fbf1a01f903f3c7f4fb"
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "bytes": 5483,
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200"
+    },
+    {
+      "path": "api-app/src/integrations/channels/account-reference.ts",
+      "bytes": 424,
+      "sha256": "da2b4572b07477407f9adf08c30c3876d10f92ae157cfadb3b8bdc5fc99d0d24"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "bytes": 454,
+      "sha256": "199603f2211f3c29aafa2aa69adc5a65a3d4f7ddd5dd0647f3e4df90e0788d03"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "bytes": 1003,
+      "sha256": "1b2f99236d1a2d76e662384191c2d68835b3d331199111babb52334a26ee5de6"
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "bytes": 3312,
+      "sha256": "2bf7b4d9c99e412125c9b59f0ac32cffaf6f5e870622e94baa814755942493ac"
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 2211,
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34"
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "bytes": 2375,
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526"
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 3900,
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64132,
+      "sha256": "7477a507570cfe27d050e9d19d67c9e6c25c3d289cc939092f89ba61f3d765ba"
+    },
+    {
+      "path": "api-app/src/integrations/email/email.client.spec.ts",
+      "bytes": 3954,
+      "sha256": "ea88b5a7243aec296b461ffe612b41ba40f141b8608e81e071f605ee659ce2c5"
+    },
+    {
+      "path": "api-app/src/integrations/email/email.client.ts",
+      "bytes": 2629,
+      "sha256": "95d89c14c2022a0ff9ea87e2acc173f319abfe766875156999cd55e347dc934a"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "bytes": 9665,
+      "sha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "bytes": 8014,
+      "sha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+      "bytes": 6073,
+      "sha256": "3a8676acdead9b9eebe9e18c1525c98d41a2f8b11c112da07100cac07a59901b"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "bytes": 8596,
+      "sha256": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+      "bytes": 1692,
+      "sha256": "3864f476790507972a241fdd0842d5d5a5be5a03fa9394134b0330f24f416f50"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "bytes": 2815,
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram.module.ts",
+      "bytes": 425,
+      "sha256": "93d8eff59bd7284967d8a608eb0df7cb30d1759f36d003800e53c01cd0c65eba"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.module.ts",
+      "bytes": 595,
+      "sha256": "aabfb344eab0b244772f0a2a8066dbae71bb24973a0a498c69af676c17f0acdd"
+    },
+    {
+      "path": "api-app/src/integrations/message-templates/template-management.resolver.ts",
+      "bytes": 4910,
+      "sha256": "1d26d05183645def5b0ef4ba317f7d024b3a08c610c910593a35308309e99e00"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.spec.ts",
+      "bytes": 4339,
+      "sha256": "0467fbad2f0b8666491d93b6efb0b648037fde08ee0655ffb4500747e68fd057"
+    },
+    {
+      "path": "api-app/src/integrations/meta/initial-message.client.ts",
+      "bytes": 11410,
+      "sha256": "e21efb3df6910c0b740afec40da919542f672302429217268fdb56c282446721"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.spec.ts",
+      "bytes": 22687,
+      "sha256": "6b42b44577e2c06ae73fb0525dac10b99f7364a04e2c04184dc303c6d47872b8"
+    },
+    {
+      "path": "api-app/src/integrations/meta/message-template.client.ts",
+      "bytes": 21888,
+      "sha256": "8dff223f7a97632cf228800cdbbb12ce6f5b151efc5fa30411d03e5ec3280cb5"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.spec.ts",
+      "bytes": 38572,
+      "sha256": "d7e76f5c392afab1638363d3c851f8ce8c5223ff27c64801a79fdc8ec00d5e7a"
+    },
+    {
+      "path": "api-app/src/integrations/meta/meta.client.ts",
+      "bytes": 17388,
+      "sha256": "9f954f6c1c2bd10030f5eed0cb42e493d6e480106bcfc3f44977cb97a716d34f"
+    },
+    {
+      "path": "api-app/src/integrations/typebot/typebot.client.spec.ts",
+      "bytes": 2562,
+      "sha256": "1d78eaa3e63fa27550be7a74bb59dca841bb738db46ced76cd41136648231e74"
+    },
+    {
+      "path": "api-app/src/integrations/typebot/typebot.client.ts",
+      "bytes": 3195,
+      "sha256": "fe5c461b56d9c363953ba301129b3e78b0f3f408c510e0ac03ce8ec2c96ab873"
+    },
+    {
+      "path": "api-app/src/main.spec.ts",
+      "bytes": 1630,
+      "sha256": "082a0836f57481e22d2c2dd655f65cca40d008016561e49543b82b8e3430dc5b"
+    },
+    {
+      "path": "api-app/src/main.ts",
+      "bytes": 5963,
+      "sha256": "05ff096cdcf67a8a153736264ed46a7faf9f5c0f45325c2d3fed95188fb2b1ad"
+    },
+    {
+      "path": "api-app/src/realtime/realtime.module.ts",
+      "bytes": 394,
+      "sha256": "c8ed324d8e8861fe9b97538161639aedade82420a55d53bb25b9d27441029139"
+    },
+    {
+      "path": "api-app/src/realtime/realtime.service.ts",
+      "bytes": 4686,
+      "sha256": "69d43aa7b694fa744819823f7e24071c250b390ad54d09446b2f2c797a7f3829"
+    },
+    {
+      "path": "api-app/src/rotinas/agendador.service.ts",
+      "bytes": 2049,
+      "sha256": "b639a996ce541ace79c139cd525229367f198dac2aa769ba0dfa8b0194dcbec2"
+    },
+    {
+      "path": "api-app/src/rotinas/expurgo-de-webhook.rotina.ts",
+      "bytes": 2073,
+      "sha256": "b0cac2efff44dc5f3b652f0a3f384c9e8cf4801f31319442b13454963b2951a6"
+    },
+    {
+      "path": "api-app/src/rotinas/rotina-periodica.ts",
+      "bytes": 5043,
+      "sha256": "71a72d85b993a99c317a962f3b3477129cf265ac3ec54c9f092c3c704d3dc06c"
+    },
+    {
+      "path": "api-app/src/rotinas/rotinas.module.ts",
+      "bytes": 531,
+      "sha256": "44c7a4949922e7194fc0584381c0d7606517a05ae5179274a50e1cb1b59fac44"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/arquivos.controller.ts",
+      "bytes": 2245,
+      "sha256": "4c5119ee8aa8c77cffa72b5ac0d0b4a98db872c8784dfc037fa5937a32210d65"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/atividades.controller.ts",
+      "bytes": 1998,
+      "sha256": "71b8f699c7ff2a0884d4f4e6c999470769ee8d21e123e86b181c985f84f86b3c"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/auth.controller.ts",
+      "bytes": 7275,
+      "sha256": "1cd884fe1a716d82b67ffbcc1a4c6cbcf237a30111a6bd0a2a92c48ad7d32381"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 6980,
+      "sha256": "173eab1e78c69d1bee25544833ddcba6f22f6efb0f82c79e5d8fa7d0dc990f1c"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "bytes": 9860,
+      "sha256": "136a0c71e5d6a9e9038c1dedca1c406aeeea431a133a41902b33c94751db4a56"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22627,
+      "sha256": "c9544b159c1aaeb984c94bf20726b0da1416a95afb2c213f5e6a7181f8c2b516"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/historico.controller.ts",
+      "bytes": 4057,
+      "sha256": "3bab5868bfabde5d37be8b4d2579c8dc417307904d53c743c8a7ce522526b84a"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+      "bytes": 5938,
+      "sha256": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/integracao.controller.ts",
+      "bytes": 11352,
+      "sha256": "d060c6fec31f188950193a163ddf7093f9613c65e0e8d27ca597b09c2b6c2bdb"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/integracao.typebot.spec.ts",
+      "bytes": 1925,
+      "sha256": "38cf0dd1746b00e6d7ec110e549fe29fad24e9fd8f4554465877f756a242af6b"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "bytes": 10911,
+      "sha256": "e3e2db03e3b301235e78cb800217fc3b01b5bd44e4b309c3f40930ea93b4df06"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/message-templates.controller.ts",
+      "bytes": 11822,
+      "sha256": "0e0449a80852a4513f626d0df7b1a5bb17b034eeceb50f53842fb91454ff4491"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/number-registrations.controller.ts",
+      "bytes": 5003,
+      "sha256": "c57797667ff26a4ea74aa939e4972a8cd8f442c9beafa166b1bdf808e19c236e"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/onboarding.controller.ts",
+      "bytes": 2153,
+      "sha256": "beb15af03cdeec8a5202ec0dff529c41fb991b4b874bd10ee3e4cd684c478240"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/painel.controller.ts",
+      "bytes": 798,
+      "sha256": "3894286559507f9fcae0ddedf3f66cdd879e4871d4a5f835855aa4a33458fa3d"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "bytes": 6683,
+      "sha256": "3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/setores.controller.ts",
+      "bytes": 4741,
+      "sha256": "b94cdefcf0c28accd0c0fdf9088ba695bb10a7bd434d6732bab9bd32c71d0558"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/usuarios.controller.ts",
+      "bytes": 4345,
+      "sha256": "09a4125968a55021ecb9942d1466fbc80ff61fc71f69995dc231c814ce7cb846"
+    },
+    {
+      "path": "api-app/src/surfaces/internal/internal.module.ts",
+      "bytes": 1098,
+      "sha256": "6fbb35d40890862af9cfdc1b8b87f7ebd2b2e8d0e256f454f68a1053eef34f04"
+    },
+    {
+      "path": "api-app/src/surfaces/internal/mantenedoras.controller.ts",
+      "bytes": 1624,
+      "sha256": "35359bd6185a43ca148fba1dfb7edc048f25d7890e377602c8f2222d78924c77"
+    },
+    {
+      "path": "api-app/src/surfaces/internal/service-credential.middleware.ts",
+      "bytes": 1391,
+      "sha256": "b2db1b715a65995d8a21b3da296de93930292cc6bd23f72b4cba24d6cdfe093b"
+    },
+    {
+      "path": "api-app/src/surfaces/public/api-key.middleware.ts",
+      "bytes": 1274,
+      "sha256": "f76cd8854c8145c4b456e8c9d2d1ab000c17bc5278af76997745b5696edd9877"
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "bytes": 17887,
+      "sha256": "05d0b10a275579d24be8a9654a19436bef5dbfb49a090def83eec3e03ddd4ce6"
+    },
+    {
+      "path": "api-app/src/surfaces/public/public.module.ts",
+      "bytes": 1208,
+      "sha256": "00a96d54fde7061f61f4ddf2b9cef836a02ad77ca29b62ea422695b9d8f90ef8"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "bytes": 10030,
+      "sha256": "91d7d098ac77368b67537025e1169484fecd6acaf9f609bd272bbee60ea0071c"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.spec.ts",
+      "bytes": 8717,
+      "sha256": "95a65f42662cc8d9eadc752b39bac54390f184d26535c2b554df49274e6e71bd"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.ts",
+      "bytes": 1950,
+      "sha256": "dc1801e9935c4db6e9648e7d4a00d84303b5cad7a98539d6c4f84fa8c2923986"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10218,
+      "sha256": "6caeefd575ec00a76d23ad4a4327e00156a12b6a9163063285fb06a233b5ec88"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "bytes": 7195,
+      "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "bytes": 1209,
+      "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f"
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "bytes": 21056,
+      "sha256": "433d34c0a8e484880a8be83fc56c11bb844d5f493bd6057f23b48be9a3b1bd6f"
+    },
+    {
+      "path": "api-app/test/arquivos.e2e-spec.ts",
+      "bytes": 5457,
+      "sha256": "892a39c0749d190e867a154e345f6f8f7b0b196534fdb7d87578c0f4577bf3ed"
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "bytes": 42283,
+      "sha256": "392d5dcd19747ffbf941b798e34e1989c54bcb22be0723dcd35530a67aac3cff"
+    },
+    {
+      "path": "api-app/test/banco-atrasado.e2e-spec.ts",
+      "bytes": 2681,
+      "sha256": "49c6aad018109cba22ab46352823197d2fd4fddae3a72f36386d8e63844aec45"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 12867,
+      "sha256": "02354237e3c0c5f8d918f65cbb833270e2ce02469cfe3e926e3a6790abc106dc"
+    },
+    {
+      "path": "api-app/test/canais.e2e-spec.ts",
+      "bytes": 6455,
+      "sha256": "a0a09f0cf84ce5883bbc51a0e448e85f644354dc6a44a519b780a877ac9e7551"
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "bytes": 42854,
+      "sha256": "23c420a6f2abd9a0d818bc057953f259dd8bc51a0c29dcc3881d019c06c589b7"
+    },
+    {
+      "path": "api-app/test/cobertura-do-catalogo.e2e-spec.ts",
+      "bytes": 3189,
+      "sha256": "74bc6f01986dbc895a9fbc2add01f2403d896b0ecbd3633bb676ebab9ef59080"
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "bytes": 15997,
+      "sha256": "eb4aeed1202f4528d3b7a0c09b7162c5a4873fef43ceb80f6ee6dc67d75a8846"
+    },
+    {
+      "path": "api-app/test/convites.e2e-spec.ts",
+      "bytes": 10725,
+      "sha256": "cab83877449c2bc9e2cafaf2f825b783063b4992ee09c68063838c4332d70031"
+    },
+    {
+      "path": "api-app/test/cross-tenant.e2e-spec.ts",
+      "bytes": 6583,
+      "sha256": "681cb81ceaefe9974ff8051f42196cbd68f60f25f200679d25b402f392f1a170"
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "bytes": 58517,
+      "sha256": "b67794d5d9327e517f27620292e71fa3d9986d0f6aa259c59a07052497e6a5d5"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34866,
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979"
+    },
+    {
+      "path": "api-app/test/historico-atividades.e2e-spec.ts",
+      "bytes": 7919,
+      "sha256": "529cfad68489bcb6b2d1368505d58f9c4f1e2a18deac8074b86b0204d7f427b1"
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "bytes": 8491,
+      "sha256": "2053df9de7e420b853cd41d457f0cdeb90d183b6fe4c423e98831c29e22c8453"
+    },
+    {
+      "path": "api-app/test/identidade.e2e-spec.ts",
+      "bytes": 9104,
+      "sha256": "691b89858fb34bb2bbc97465895f61abcc43bb02c5200a9b74b74334201da1f6"
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 128746,
+      "sha256": "639ffaea60923fcfb87544dbbccf307dee6a09d1d6cc98ce48d9e7fa0a8a8a3f"
+    },
+    {
+      "path": "api-app/test/instagram-consumer-boundaries.e2e-spec.ts",
+      "bytes": 15961,
+      "sha256": "12d57362ff6601f0bc5ce2c601d5d4bd15d6bbe4608a2d0be59cf0d92e07e805"
+    },
+    {
+      "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+      "bytes": 12534,
+      "sha256": "aacc8d2f85aeabb866fdf571128def005bb4739d091a4e364c74d2b4a6e3eaf6"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+      "bytes": 17866,
+      "sha256": "a9c78f4bc9b29b77d0dafee12b742763cb8e25a7617bc3fe8d6cd2f1230d77ce"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 25333,
+      "sha256": "f0f0909e176f1ed886d8452378f68825ceb773f41f17da41a658ea0d1d760def"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 23454,
+      "sha256": "925439af70ab60d1ae0992e5516edea340f247a45dd1ed7f6de7c128221807e5"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+      "bytes": 19779,
+      "sha256": "223739cd8cd4a529203cd8e686b297f2e51c53147be35b5916f1f353e99d3fe5"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+      "bytes": 8663,
+      "sha256": "a75d9687f300486c9acf9ed38587f9fa507fcaeecd11588af5530e631cb1f856"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "bytes": 57287,
+      "sha256": "5f2d3da6b64ee64953f04ff927011ef04a8606b9213d29e9a0e79ae752065164"
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "bytes": 119339,
+      "sha256": "69f6169edca760112793bf6dcfdf129e71b0031065fc423dc723fb7b184b9d1a"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts",
+      "bytes": 7663,
+      "sha256": "b7688a717a42e73b5bc8955204b9ad5beb5e98b7232b7cb3311a8032bf556488"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 46124,
+      "sha256": "4fc5ce0f7b8d70f6ad960c36d836809bb80943a5bfec0d3d4f3dbecd47a1d386"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "bytes": 14963,
+      "sha256": "311609e3e03a3ad3088e82035cc0a53fde3822abd346617d0566988aea548795"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+      "bytes": 14422,
+      "sha256": "e571b7438a4ef88a5645ba14b32c457357c00e1e557d2dcb85b9ad44e9bbbfb4"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 16237,
+      "sha256": "b537817fa46e54ac05a3798155be3629a7fb9039c2821bbc1e313b2e8b5904dd"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "bytes": 21532,
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "bytes": 32002,
+      "sha256": "efe52d6fb58ccd2781c8e6d07b2a3bc467bc83e6b962a03a5014b5ff759191b9"
+    },
+    {
+      "path": "api-app/test/instagram-cp3-whatsapp-ingress.e2e-spec.ts",
+      "bytes": 14450,
+      "sha256": "5ddac42e0edcee85534ebc5831792a188930d35e0605ce9fe77c15db3353a510"
+    },
+    {
+      "path": "api-app/test/instagram-identity.e2e-spec.ts",
+      "bytes": 14863,
+      "sha256": "675eca8c4fd68c77f7d4bcc01be0d4d84fde21cf843bbea298cc9a4346282b53"
+    },
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "bytes": 74447,
+      "sha256": "5f39011d9c542438d7b2b94dd71fba15b726b1ffd3eb1d65f5ec09270a454f97"
+    },
+    {
+      "path": "api-app/test/instagram-migration.e2e-spec.ts",
+      "bytes": 27927,
+      "sha256": "4deae0c82e317688c1217d230ce2d98215d783434c35ec19137937438d8618ec"
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts",
+      "bytes": 7030,
+      "sha256": "8bea752ff32271ea857d9e23289a258e93acd310c1d29edc4ec208c53552cd28"
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session.e2e-spec.ts",
+      "bytes": 8096,
+      "sha256": "99f980ee88a4665c0c8f1ef9ac522dac3ce8ecc6054a1f8df5dc482c7a1bd761"
+    },
+    {
+      "path": "api-app/test/message-template-bff.e2e-spec.ts",
+      "bytes": 29434,
+      "sha256": "e0212463856dace44908e3762aa206d1ed86deeb95ebbdc926a354d1518902e4"
+    },
+    {
+      "path": "api-app/test/message-template-drafts.e2e-spec.ts",
+      "bytes": 14814,
+      "sha256": "1a7367fc0a97fb9f727276b38186cddb796fc965ce4a9ec9e1078603670f2996"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "bytes": 178445,
+      "sha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+    },
+    {
+      "path": "api-app/test/modulos.e2e-spec.ts",
+      "bytes": 8567,
+      "sha256": "2a6b2540dcbb2e1de61d3d03e444ec201c2ed740646255c00166d4af7ed17ee4"
+    },
+    {
+      "path": "api-app/test/number-onboarding-bci.e2e-spec.ts",
+      "bytes": 14452,
+      "sha256": "779ad4f9f201ef366cd66c2692098957290a15857179d2a5b249415aef1c7bbd"
+    },
+    {
+      "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+      "bytes": 7196,
+      "sha256": "8b9ef40da121a967540f149f44ec2f59f518d658069049ad02fbe61818fa6924"
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "bytes": 83275,
+      "sha256": "ec3d8cfd9733ef968bd00303aea68e22eba82a827118a94e50e570aae19c122f"
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "bytes": 6703,
+      "sha256": "836aeda3eed8ae0a934ef36ad6eb37ce81673e734a429accdbf4b2fb3628ddc7"
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "bytes": 45175,
+      "sha256": "d88fc37e462a73ae938bafee14e3b6d784c4d9287319db41f4a857688220f235"
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "bytes": 19830,
+      "sha256": "fedd146246546100fc0ac2fe2293b18a1835a44343873123383109b339dffe11"
+    },
+    {
+      "path": "api-app/test/onboarding.e2e-spec.ts",
+      "bytes": 7494,
+      "sha256": "fad7b377724d903c5c3faccba6eb81e1881da4fb59744b9a686a85cca68d4d24"
+    },
+    {
+      "path": "api-app/test/painel.e2e-spec.ts",
+      "bytes": 2933,
+      "sha256": "910975e63b3ee48a983107a9aaf4906924a103f6b353481f03dccfb934d64237"
+    },
+    {
+      "path": "api-app/test/realtime.e2e-spec.ts",
+      "bytes": 6059,
+      "sha256": "cf9335f7bfefecf708d69ab966533bf3b65ed7cc5615533691f7f2a841275422"
+    },
+    {
+      "path": "api-app/test/rotinas.e2e-spec.ts",
+      "bytes": 4328,
+      "sha256": "b86f5a13a3946a3ea12a06ec0b20b9c05075bd3fb5b69249cda76e5082313c9b"
+    },
+    {
+      "path": "api-app/test/setores.e2e-spec.ts",
+      "bytes": 17500,
+      "sha256": "8eec2be051aa9d71116b57b84ff5c3e863aca2005f61782c33ea87bd868cd203"
+    },
+    {
+      "path": "api-app/test/setup-env.ts",
+      "bytes": 795,
+      "sha256": "bfb97c57f39e252868b544437c6bf3128efa70613e5a7765d0aefb52f5b6a849"
+    },
+    {
+      "path": "api-app/test/surfaces.e2e-spec.ts",
+      "bytes": 3713,
+      "sha256": "5b90e539e15859990f9aead1ad1307f8cf3683f92c8d65e73d465f8fd2ab2c22"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 41305,
+      "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb"
+    },
+    {
+      "path": "api-app/test/usuarios.e2e-spec.ts",
+      "bytes": 9055,
+      "sha256": "a16677d4cc7669057c4ba07aa114505dabf995d8b5d28fa7e0b39f46e8167a34"
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "bytes": 28380,
+      "sha256": "06d3cf3317a7e35baaf9f9131adb7edde5764bbbba644467be1e5aadd6c6ae24"
+    },
+    {
+      "path": "api-app/tsconfig.build.json",
+      "bytes": 102,
+      "sha256": "44e82cf32b2bd7cfdb7c4d9ca48ab13101f6ff66349578545d2c229ef55cbca6"
+    },
+    {
+      "path": "api-app/tsconfig.json",
+      "bytes": 760,
+      "sha256": "5a8a8b3e2e00213a8cdd3877ecb7347944b689875a989cd3bbe2effef64816cc"
+    },
+    {
+      "path": "api-app/vitest.config.cov.ts",
+      "bytes": 1094,
+      "sha256": "d204d2a30bbec1ff347f5e9896abbb93ec270f0006f6914de30253841c3d6e90"
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "bytes": 683,
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff"
+    },
+    {
+      "path": "api-app/vitest.config.ts",
+      "bytes": 414,
+      "sha256": "a5f2d4d79de1112776f0586e3b647487fe6961e89b2790c19f6a2ed9165924d5"
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "bytes": 12865,
+      "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 54746,
+      "sha256": "5e2643c3417c8b899eac40c4cf671921988eee1200aa8070b87a9fefcddf9b1d"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+      "bytes": 19222,
+      "sha256": "e77142d62cd6ac7e3726353653aed7a39e96afb82f589149113349a5befb3b1c"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 29015,
+      "sha256": "45a35baead3b8c2b1a0a40b9693d16bcb0b7e59754c90816e52bb57836b022ab"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 10370,
+      "sha256": "f13fdea0822c601a552b93575d5249980aef9839e1b59277ebd6dcdcbf6c1a60"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14864,
+      "sha256": "667ec21d2a44e54e9adcbb0abd1db72583776105a57b2e2bb2c8eaed1d3d74e6"
+    },
+    {
+      "path": "web-app/Dockerfile",
+      "bytes": 1262,
+      "sha256": "b3fb2e04dc033ec8977926c93eb8cec36bf44f6351652bdb2f739325e4be19d4"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 12369,
+      "sha256": "6960a14dbd30f317253ae577196bc62c252c0446b5c75885b82d08f1753b3542"
+    },
+    {
+      "path": "web-app/e2e/message-templates.spec.ts",
+      "bytes": 171505,
+      "sha256": "95b6c55145dbd40b8aff0e59484781bf1450eb3f174b1f7ce2ee7dbf9474d68f"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding-freshness.ts",
+      "bytes": 5059,
+      "sha256": "880b49f8fa428568692b92a883dd00c5ce76214b1f2db5b35cafb9b0553ed9ad"
+    },
+    {
+      "path": "web-app/e2e/number-onboarding.spec.ts",
+      "bytes": 45103,
+      "sha256": "47fdb27c0b592dfe8df31b8ad1be219d96720abdc00660bc15f6b2c03096f31b"
+    },
+    {
+      "path": "web-app/e2e/start-conversation.spec.ts",
+      "bytes": 79126,
+      "sha256": "95143e86de9ffec726a95f015f24d8f7dc580f1be92a098a4cbbbb33c34c8284"
+    },
+    {
+      "path": "web-app/e2e/telas.spec.ts",
+      "bytes": 25041,
+      "sha256": "ee4911de7148eebee35d5ddcc7d9bbbcc6faf051f0ea3f415e338d6809bb9d59"
+    },
+    {
+      "path": "web-app/e2e/timeline-freshness.ts",
+      "bytes": 8499,
+      "sha256": "3a06fb36e3a9bcf20a12cd8201da2daa3b567775f15e2be5f068e97e840d7f53"
+    },
+    {
+      "path": "web-app/e2e/timeline.spec.ts",
+      "bytes": 47526,
+      "sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e"
+    },
+    {
+      "path": "web-app/index.html",
+      "bytes": 596,
+      "sha256": "0adc005d98f50e7ddc59280f062b1acd36a6a6e794347677b03bb72032dc341a"
+    },
+    {
+      "path": "web-app/package-lock.json",
+      "bytes": 78215,
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f"
+    },
+    {
+      "path": "web-app/package.json",
+      "bytes": 701,
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "bytes": 5773,
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "web-app/public/config.js",
+      "bytes": 444,
+      "sha256": "1ad17fefa4173ed847cabd79e7fdc1b262fa19ea4ff33c3ef435e141275fb532"
+    },
+    {
+      "path": "web-app/src/App.tsx",
+      "bytes": 12285,
+      "sha256": "2d9f3b3d03658a8d6d6132986346f3be8f36a2582faca29285b3d46c9920307e"
+    },
+    {
+      "path": "web-app/src/EnvioDeImagem.tsx",
+      "bytes": 2163,
+      "sha256": "23dabf408b9a42f823b645f5cff7f4381a24088c387b4c2b276181cd8626c0d8"
+    },
+    {
+      "path": "web-app/src/Erro.tsx",
+      "bytes": 1545,
+      "sha256": "72920e0bccd28660e93413d9c422b47c222f2fcfa27d69535dcd609b9b203c0c"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 10884,
+      "sha256": "b58aaa05f61fd86dec85f27b7ae38f39f0ce6220f8bdc849defa07dfe1b357c1"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20545,
+      "sha256": "224667ec238a483ec1000c2ee782809f8b5bd3aa7b7d69ec596568cf15d4ecdd"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.lifecycle.spec.ts",
+      "bytes": 3960,
+      "sha256": "a340c48e30c712cafecb1d35fe20bd3841c46e2dfbda21645fc8ef3ed6977834"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.lifecycle.ts",
+      "bytes": 6020,
+      "sha256": "5c60a8fc7456c82a7d782b3484ba447bda826e65bf93a9175a991dc50be254a3"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.spec.ts",
+      "bytes": 1513,
+      "sha256": "9c2581c1886d108c4c153d485fd77f017805c2e3b813a9536d21d0296f2a1ecb"
+    },
+    {
+      "path": "web-app/src/cadastroNumero.ts",
+      "bytes": 9708,
+      "sha256": "584401ed8ab1ce1d53950998e85765a35d55d7ac4961286924f98e4132edcb6b"
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "bytes": 43742,
+      "sha256": "01d32acef1dea7eacbc1e341abe6593e3fe7296268466f56fa3292530d7e754b"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 6611,
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 40678,
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd"
+    },
+    {
+      "path": "web-app/src/config.ts",
+      "bytes": 1952,
+      "sha256": "ca30d02d04774b79d6e62715c83c49dd23f1db02f0b49ec6781634acbf09befb"
+    },
+    {
+      "path": "web-app/src/estilo.css",
+      "bytes": 11062,
+      "sha256": "a86305e2303f640345c07d2b9f7ed9274b328d7459e714225e7f05885255809a"
+    },
+    {
+      "path": "web-app/src/main.tsx",
+      "bytes": 301,
+      "sha256": "42d0c9e45f19eb88f8cdbfd81343004becacf4b47c248f4d03d52bb9f951b9f3"
+    },
+    {
+      "path": "web-app/src/telas/Consultar.tsx",
+      "bytes": 7114,
+      "sha256": "b65ce0320a082df811796ca66c73990fd57512ee123802fd2123f8dfad90fd89"
+    },
+    {
+      "path": "web-app/src/telas/DefinirSenha.tsx",
+      "bytes": 3821,
+      "sha256": "7b3a3eeafe8af2f315d299cc40f612568a5216b9d99a5a52b50925cffbc466cd"
+    },
+    {
+      "path": "web-app/src/telas/Historico.tsx",
+      "bytes": 4448,
+      "sha256": "a950e2571adc86cf5a390f7602ae2193d4b0de45d1c1f5b7640697308d398414"
+    },
+    {
+      "path": "web-app/src/telas/IdentidadeVisual.tsx",
+      "bytes": 2531,
+      "sha256": "2b9720d7eaf3b0ef078ee6827d3d7fb3c93aa0b4c209662fbf143468c51cefa2"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 31153,
+      "sha256": "51e91c37a05c70e176f2da515f63b5c87eb266d957f01d4c4f81a2f254429b2c"
+    },
+    {
+      "path": "web-app/src/telas/Integracao.tsx",
+      "bytes": 4158,
+      "sha256": "66e87b87fbd35596fe064079be121c25f0d942c1b50b6b3b239fe765493fa59b"
+    },
+    {
+      "path": "web-app/src/telas/Login.tsx",
+      "bytes": 2946,
+      "sha256": "3b62a752d0e4f71679dab3427862884bb8ebc5863d16d240a0c84d1d0b1ce923"
+    },
+    {
+      "path": "web-app/src/telas/Modelos.spec.ts",
+      "bytes": 26616,
+      "sha256": "123e1b345342bdba0d1e9de07886c5116fd21c66d92d77a9fd814478142adf52"
+    },
+    {
+      "path": "web-app/src/telas/Modelos.tsx",
+      "bytes": 58744,
+      "sha256": "ec5410d1e38a5dd963fe48d3ba715697d9c49cd574875c784fa8e6300275771c"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3086,
+      "sha256": "4d1802ef080986be3ef8570a270f78af32fd9e1cb61ffb1a3cc3dcbc5d8342e2"
+    },
+    {
+      "path": "web-app/src/telas/Painel.tsx",
+      "bytes": 3161,
+      "sha256": "7b678b29d8467dd8c22c4d8fa3667483b157c1495fb23b1368a34c48b2c6fdb2"
+    },
+    {
+      "path": "web-app/src/telas/Perfil.tsx",
+      "bytes": 4001,
+      "sha256": "f425279d3598d14a609050d960b8848447afc3bace89fc0761f1cec2f045df0f"
+    },
+    {
+      "path": "web-app/src/telas/Setores.tsx",
+      "bytes": 3970,
+      "sha256": "94280910f7ba31bd964350fe513d3d492b7e56b4a09931c29b9d727c8a734472"
+    },
+    {
+      "path": "web-app/src/telas/TrocarSenha.tsx",
+      "bytes": 1572,
+      "sha256": "c9079fd57f8d28d61e313152f53dd85fbc48f74ea09a2bfbbdb88ed8a85df31f"
+    },
+    {
+      "path": "web-app/src/telas/Typebot.tsx",
+      "bytes": 4342,
+      "sha256": "1088336e7ca1cfe29ff7a3dfdad66ec630d550f08387fc937cddb607fcc2ceee"
+    },
+    {
+      "path": "web-app/src/telas/Usuarios.tsx",
+      "bytes": 8335,
+      "sha256": "3fc7c7a17004e17b9788c0d9f89083aa954893a60ab57827e6dd55a1bf882b18"
+    },
+    {
+      "path": "web-app/src/telas/Wizard.tsx",
+      "bytes": 8319,
+      "sha256": "edbd2bb875874eb4bbd5dccdfc7a50e297e070ca9b16eeead771a1853327d2d1"
+    },
+    {
+      "path": "web-app/src/tempoReal.spec.ts",
+      "bytes": 3349,
+      "sha256": "378a97ce29c6382f6a7ae9018121ed99ef2733a2b1c8f01c3889074611fa7dd5"
+    },
+    {
+      "path": "web-app/src/tempoReal.ts",
+      "bytes": 2512,
+      "sha256": "118ceedc40649eb8b7ddfa44eee7824224994bf383dc9b51e496f80236da0fcf"
+    },
+    {
+      "path": "web-app/src/timeline.test.ts",
+      "bytes": 959,
+      "sha256": "16d1f1a12d20935e399e4b23e4d93de7047f9015dfd5a65ee6093d0645c38fd4"
+    },
+    {
+      "path": "web-app/src/timeline.ts",
+      "bytes": 604,
+      "sha256": "0bfd7d287f93c8c6393718f3f05cd9c248ce50311758bf9995e6ba80b5cd9311"
+    },
+    {
+      "path": "web-app/src/vite-env.d.ts",
+      "bytes": 261,
+      "sha256": "6436117a885784b650c7d4fa2e8701fac64f15196680a65ad4072973063c9b8f"
+    },
+    {
+      "path": "web-app/tsconfig.json",
+      "bytes": 355,
+      "sha256": "d36535ca0c646e7ed37314db1f0ee01ed900d2ac45bb21af936e0294d0625200"
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "bytes": 1865,
+      "sha256": "8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 7043,
+      "sha256": "de1d3e61b027231f18503c16295b62d7cc9cd8e4f62038174c9b42e921fdf805"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 9343,
+      "sha256": "8e72c0290b7adc4f0cd361c96c03daa93eea1f75cdb85983bca4b0d5628550b3"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 14454,
+      "sha256": "8bc121431f746a444b5d376bda51a88300c67d84664844de95f034efb663d4b4"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 13481,
+      "sha256": "a62ab3d783427e13f465ac16f74297f5ede5f76127caa26ea0b275a24ae1249b"
+    }
+  ]
+}

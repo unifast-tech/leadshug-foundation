@@ -1,0 +1,19 @@
+{
+  "kind": "Exact protected timeline test companion proposal",
+  "status": "PENDING fresh critique and explicit human path validation; NOT APPLIED",
+  "path": "web-app/e2e/timeline.spec.ts",
+  "originalBytes": 47526,
+  "originalSha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e",
+  "candidateBytes": 48546,
+  "candidateSha256": "f280eae2172f2875f3b8a778c09ccd734a191687732737bda06e94dbaace343a",
+  "exactDiff": "timeline-window88-proposed.diff",
+  "reason": "Two positive official free-text browser cases rely only on14Oct history; production qualified official policy always requires actual original inbound timestamp within24h. Existing seed requiresWindow=false is not authority. Timeline source is outside strict expected paths.",
+  "changes": [
+    "Preserve every historical row/ID/count/timestamp and every original assertion. Add genuinely current signed inbound through existing actual Meta webhook only in two positive reply scenarios.",
+    "Pending already-admitted fixture implementation must validate conversationId belongs to synthetic fixture/owned phone, derive real fixture peer and stamp actual current original timestamp. No arbitrary destination/URL or direct Message insert.",
+    "Four-row draft test now observes fifth genuine inbound explicitly, refreshes native reply options, then retains original pending ACK/new draft/author assertions.",
+    "Switch test keeps251/80/80 original histories, adds one actual IN per involved conversation, retains all50-page destination snapshots and30s bound. Add only returned otherBuPhoneNumberId type."
+  ],
+  "unchanged": "All original assertions, pagination/cursor/unread/scroll/recovery/race counts, timeouts, no policy override or future timestamp, no source product changes. Full current canonical browser/ALL proof required after exact application.",
+  "implementationAuthority": "NONE until human validation. Independent UI87 writes only disjoint React source. Runtime/primary/private/protected global surfaces remain forbidden."
+}

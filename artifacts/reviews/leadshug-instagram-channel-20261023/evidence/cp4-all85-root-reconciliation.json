@@ -1,0 +1,55 @@
+{
+  "kind": "Root ALL85 terminal reconciliation",
+  "all323SourcesExact": true,
+  "fullTodoExact": true,
+  "all1006PositiveInputsExact": true,
+  "immutable34RowsExact": true,
+  "rootIndexExact": true,
+  "fourOutputsMatchedReportedHashes": true,
+  "actual": {
+    "invocations": 1,
+    "canonicalExitCode": 1,
+    "parityMutationsRejected": 26,
+    "migrationsApplied": 31,
+    "schemaCurrent": true,
+    "lintBuild": "passed",
+    "apiUnit": {
+      "passed": 433,
+      "failed": 0,
+      "files": 39,
+      "seconds": 4.39
+    },
+    "apiE2E": {
+      "passed": 610,
+      "failed": 1,
+      "filesPassed": 57,
+      "filesFailed": 1,
+      "total": 611,
+      "seconds": 648.18
+    },
+    "cp4ConnectionsSuite": "11/11 passed including catalog and lifecycle",
+    "cp4Realtime": "1/1 passed",
+    "cp4Display": "1/2 passed; qualified WhatsApp projection passed"
+  },
+  "actualFailure": {
+    "file": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+    "line": 287,
+    "received": "10 scalar Prisma route fields",
+    "expected": "same10 fields +3 expanded nested relations",
+    "rootSourceQualification": "routesA/B were read with include conversation/contactIdentity/businessIdentity; late findUnique has no include. Comparing these objects cannot assert row immutability faithfully. Actual diff differs only missing nested relation objects; no scalar route mutation established.",
+    "classification": "fixture comparison shape mismatch, not proof of a product projection defect",
+    "repair": "Capture fresh flat Prisma route snapshots immediately after qualifying sharedA/B, before later lifecycle/read actions; compare exact entire flat rows to these original snapshots. Preserve all 10 scalar fields, existing25+25namespace/peer and all other relation/BCI/read-only/SQL/HTTP/privacy oracles. No toMatchObject/assertion removal/index/budget relaxation."
+  },
+  "reachedBeforeFailure": [
+    "50 signed IN/25 per account and separate shared-peer contact/conversation identities",
+    "paged20/20/10 +full50, strict8SQL/zeroDML/zeroHTTP",
+    "safe list/thread/options/current credential usernames and wrong-account rejection",
+    "exact versioned context metadata/privacy",
+    "second test qualified WhatsApp identity/recipient display"
+  ],
+  "unreached": [
+    "later ambiguous graph assertions after line287",
+    "Web build/unit and browser/HTTPS in targetALL"
+  ],
+  "next": "Thaw one new admitted display spec for faithful flat snapshots86. Then already-approved consumer/native HTTPS fixture continuation with current fullproof open, consolidating next validation after actual corrections. No need repeat full suite solely before independent admitted source work. Full current API/ALL/browser/primary/CP5/6/assurance/physical gates stay mandatory."
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "Root Web84 terminal reconciliation",
+  "all323SourcesExact": true,
+  "fullTodoExact": true,
+  "all998PositiveInputsExact": true,
+  "immutable34RowsExact": true,
+  "rootIndexExact": true,
+  "fourOutputsMatchedReportedHashes": true,
+  "actual": {
+    "canonicalInvocations": 1,
+    "exitCode": 0,
+    "parityMutationsRejected": 26,
+    "prismaClientGenerationPrerequisite": "passed",
+    "webBuild": "tsc and Vite passed,63modules/1.35s",
+    "webUnitTests": {
+      "passed": 66,
+      "failed": 0,
+      "files": 8,
+      "durationSeconds": 0.717
+    }
+  },
+  "unreached": [
+    "API lint/unit/migrations/E2E",
+    "Browser/HTTPS",
+    "real provider/runtime"
+  ],
+  "limitations": "Build/unit only; component/native race, recovery, OAuth reload and all fullAPI/ALL/browser/primary/CP5/6/assurance/physical gates remain open.",
+  "next": "Freeze consolidated current323+public inputs for ONE canonical ALL85 before qualified fixture/native HTTPS implementation. Actual API80 failures repaired81/82 need current full proof, and original browser fixtures may expose native legacy contract gaps; no stale counts reused."
+}

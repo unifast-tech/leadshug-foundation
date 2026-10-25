@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 334017,
+      "sha256": "7c269c9f24469299c200f831ac80ce64cc690c7197266f4df669a3a35f79d488"
+    },
+    {
+      "path": "web-app/e2e/timeline.spec.ts",
+      "bytes": 47526,
+      "sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 41305,
+      "sha256": "4fe47383dc0e2921db8ff08fd3235d083f1c419bd0c570123c5fe6cee3ce63fb"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "bytes": 5700,
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 9602,
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee"
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "bytes": 5953,
+      "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-proposal.json",
+      "bytes": 2029,
+      "sha256": "3929e391b9f2eaf475ff0ff9030cec530b027062754e720cdbdb760dd581fca7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-proposed.diff",
+      "bytes": 2216,
+      "sha256": "cd3feeb836f113fb276e717f5c0e1bc4a434e8d5fbf52f772f320fbbae2a5f38"
+    }
+  ]
+}

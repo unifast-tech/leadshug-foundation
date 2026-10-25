@@ -1,0 +1,32 @@
+--- a/web-app/e2e/timeline.spec.ts
++++ b/web-app/e2e/timeline.spec.ts
+@@ -10,7 +10,7 @@
+   return response.json() as Promise<{
+     email: string; password: string; userId: string; businessUnitId: string; conversationId: string;
+     otherConversationId: string; otherBusinessUnitId: string; otherBuConversationId: string;
+-    phoneNumberId: string; expectedIds: string[];
++    phoneNumberId: string; otherBuPhoneNumberId: string; expectedIds: string[];
+   }>;
+ }
+ 
+@@ -636,6 +636,10 @@
+ 
+   test('mescla envio real com autoria e mantém o novo draft digitado durante o envio', async ({ page, request }) => {
+     const fixture = await abrirTimeline(page, request, 4);
++    await triggerIncoming(request, { phoneNumberId: fixture.phoneNumberId, conversationId: fixture.conversationId, id: 'timeline-draft-current-window', text: 'entrada atual para responder' });
++    await expect(page.locator('.bolha')).toHaveCount(5);
++    await page.getByRole('button', { name: 'Atualizar opções', exact: true }).click();
++    await expect(page.getByPlaceholder('Escreva uma resposta')).toBeEnabled();
+     let liberado!: () => void;
+     let capturado!: () => void;
+     const pronta = new Promise<void>((resolve) => { capturado = resolve; });
+@@ -716,6 +720,9 @@
+     const populateOtherBu = await request.post(`${FIXTURES}/burst`, { data: { conversationId: outraBu, count: 80, createdAt: Date.now() - 10_000 } });
+     expect(populateSecondary.status()).toBe(201);
+     expect(populateOtherBu.status()).toBe(201);
++    await triggerIncoming(request, { phoneNumberId: fixture.phoneNumberId, conversationId: fixture.conversationId, id: 'timeline-switch-main-current-window', text: 'entrada atual principal' });
++    await triggerIncoming(request, { phoneNumberId: fixture.phoneNumberId, conversationId: secundaria, id: 'timeline-switch-secondary-current-window', text: 'entrada atual secundária' });
++    await triggerIncoming(request, { phoneNumberId: fixture.otherBuPhoneNumberId, conversationId: outraBu, id: 'timeline-switch-other-bu-current-window', text: 'entrada atual outra BU' });
+ 
+     const holdRequest = async (conversationId: string, method: 'POST' | 'GET', fail = false) => {
+       let release!: () => void;

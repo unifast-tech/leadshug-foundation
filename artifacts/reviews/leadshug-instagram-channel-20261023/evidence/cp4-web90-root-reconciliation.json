@@ -1,0 +1,12 @@
+{
+  "kind": "Web90 root reconciliation",
+  "sources323Exact": true,
+  "fullTodoExact": true,
+  "bound1012InputsExact": true,
+  "preservation34RowsExact": true,
+  "rootIndexExact": true,
+  "all4OutputsMatchReportedHashes": true,
+  "actual": "ONE canonical web exit0;26parityprobes/Prisma prerequisite PASS;tsc+Vite63modules1.40sPASS;68/68Webunit8files698msPASS",
+  "unreached": "API lint/unit/migration/E2E, browser/HTTPS; no runtime/provider/feature acceptance",
+  "installOutput": "npm reported9vulnerabilities5moderate2high2critical among106packages; no separate audit performed; security lane must qualify applicable dependency risk before delivery, no automatic dependency mutation."
+}

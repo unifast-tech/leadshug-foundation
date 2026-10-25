@@ -1,0 +1,12 @@
+{
+  "kind": "Immutable raw/generated evidence formatting qualification",
+  "observed": "git diff --cached --check exit2 only in exact5raw/generated files",
+  "preserved": [
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all85-all.log",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-dispatch.md",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-merge.md",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-proposed.diff",
+    "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-review-package.md"
+  ],
+  "rationale": "Natural raw log whitespace, deterministic generated EOF lines and unified-diff blank context markers are byte-bound evidence. Altering would invalidate review/input hashes. No product or authored normative text formatting failure; remaining exact staged paths require strict diffcheck."
+}

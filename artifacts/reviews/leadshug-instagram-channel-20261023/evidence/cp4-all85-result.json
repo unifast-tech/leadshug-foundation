@@ -1,0 +1,151 @@
+{
+  "kind": "cp4-all85-result",
+  "scenario": "ST-IG-03 consolidated canonical ALL disposable synthetic validation",
+  "canonicalCommand": "bash scripts/test-channels-local.sh all",
+  "invocations": 1,
+  "canonicalExitCode": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all85-all.log",
+    "bytes": 235623,
+    "sha256": "8f5256477b25d64ab31f5820763df52069c1e7160eb49df044e8a672d5ef1378",
+    "lineCount": 1414
+  },
+  "stages": {
+    "runnerSetup": "completed; canonical disposable synthetic runner and cleanup completed",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": true,
+      "guard": "channels-ci-parity-v1",
+      "mutationsRejected": 26,
+      "outerWrapperControlsPresent": true
+    },
+    "apiPrismaClientGeneration": {
+      "reached": true,
+      "passed": true
+    },
+    "apiPrismaMigrateDeploy": {
+      "reached": true,
+      "passed": true,
+      "migrationsFound": 31,
+      "allMigrationsApplied": true,
+      "databaseSchemaUpToDate": true
+    },
+    "apiLint": {
+      "reached": true,
+      "passed": true,
+      "evidence": "runner proceeded to API build and unit tests"
+    },
+    "apiBuild": {
+      "reached": true,
+      "passed": true,
+      "evidence": "runner proceeded to API unit tests"
+    },
+    "apiUnitTests": {
+      "reached": true,
+      "passed": 433,
+      "failed": 0,
+      "testFilesPassed": 39,
+      "testFilesFailed": 0,
+      "totalTests": 433,
+      "durationSeconds": 4.39
+    },
+    "apiE2ETests": {
+      "reached": true,
+      "passed": 610,
+      "failed": 1,
+      "testFilesPassed": 57,
+      "testFilesFailed": 1,
+      "totalTests": 611,
+      "totalTestFiles": 58,
+      "durationSeconds": 648.18
+    },
+    "webBuildAndUnitTests": {
+      "reached": false,
+      "reason": "API E2E suite exited nonzero and canonical ALL runner stopped before Web stage"
+    },
+    "browserOrHTTPS": {
+      "reached": false,
+      "reason": "canonical ALL runner stopped after API E2E failure; no browser stage evidence"
+    }
+  },
+  "actualFailure": {
+    "file": "test/instagram-cp4-display.e2e-spec.ts",
+    "test": "Instagram CP4 safe conversation display > projects two same-peer IG accounts safely across a real 50-row paged inbox and current credential mapping",
+    "decisive": "Prisma conversationRoute relation assertion at line 287 expected a 13-key nested record including `businessIdentity`, `contactIdentity`, and `conversation`; actual returned 10 keys with relation IDs/scope fields but no nested relation objects.",
+    "classification": "observed E2E contract assertion mismatch; root cause not established by this validation"
+  },
+  "actualPassedTotals": {
+    "migrationsApplied": 31,
+    "apiUnitTestsPassed": 433,
+    "apiUnitTestFilesPassed": 39,
+    "apiE2ETestsPassed": 610,
+    "apiE2ETestFilesPassed": 57
+  },
+  "actualFailedTotals": {
+    "apiUnitTestsFailed": 0,
+    "apiE2ETestsFailed": 1,
+    "apiE2ETestFilesFailed": 1,
+    "webTestsReached": false,
+    "browserTestsReached": false
+  },
+  "durations": {
+    "apiUnitSuiteSeconds": 4.39,
+    "apiE2ESuiteSeconds": 648.18
+  },
+  "cp4BehavioralReachability": {
+    "catalogAssertion": {
+      "reached": true,
+      "passed": true,
+      "observed": "approved catalog 200 assertion passed"
+    },
+    "connectionsLifecycle": {
+      "cases": 11,
+      "passed": 11,
+      "failed": 0,
+      "reachedAndPassed": [
+        "exact WhatsApp UUID operations",
+        "captured selected UUID after disconnect and generation-one replacement",
+        "legacy type-only operation with >2 fixture rows",
+        "durable binding after OAuth expiry",
+        "disconnect during held reauthorization callback",
+        "in-flight subscription/disconnect race",
+        "absent-credential same-account reattach",
+        "live same-generation reauthorization",
+        "wrong-account reauthorization",
+        "global prior-POST uncertainty fence"
+      ]
+    },
+    "safeDisplay": {
+      "cases": 2,
+      "passed": 1,
+      "failed": 1,
+      "failure": "shared-peer 50-row projection route assertion expected nested businessIdentity/contactIdentity/conversation relations; actual persisted route returned flattened relation IDs/scope fields without nested relation objects"
+    },
+    "realtime": {
+      "cases": 1,
+      "passed": 1,
+      "failed": 0,
+      "observed": "account-scoped accepted messages, BU socket scope, and Typebot WhatsApp-only assertions passed"
+    },
+    "webV2AndBrowserFreshness": {
+      "reached": false,
+      "reason": "API E2E failure caused canonical ALL runner to stop before Web and browser stages"
+    }
+  },
+  "postflight": {
+    "checksPassed": 1367,
+    "checksFailed": 0,
+    "sourceCount": 323,
+    "todoChecked": true,
+    "boundInputCount": 1006,
+    "immutablePreservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "canonical cleanup observed; synthetic validation postgres container, disposable volumes and network removed",
+  "limitations": [
+    "Canonical ALL exits nonzero on one API E2E assertion; Web build/unit and browser/HTTPS stages were not reached.",
+    "The observed relation-shape mismatch is recorded without asserting a source/product root cause.",
+    "The CP4 catalog, all 11 connections lifecycle tests, realtime test, and one of two safe display tests passed; no whole-feature acceptance claim is made."
+  ]
+}

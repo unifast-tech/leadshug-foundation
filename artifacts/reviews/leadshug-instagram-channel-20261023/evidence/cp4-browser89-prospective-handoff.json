@@ -1,0 +1,41 @@
+{
+  "kind": "Prospective browser89 exact source handoff; dispatch only after Web90 terminal/root reconciliation",
+  "status": "PREPARATION ONLY; no writer GO yet",
+  "profile": "Operational/Coder nestjs react vite postgresql prisma docker; routine gpt-6-luna medium",
+  "allowedWrites": [
+    "api-app/test/browser-server.cjs",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/e2e/start-conversation.spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "web-app/e2e/instagram-freshness.ts"
+  ],
+  "readAuthority": "Exact323 paths in cp4-source87-terminal-manifest.json only plus named currentT/modules/governance/Ebrowser67/80/83adjudication/thishandoff. No directory discovery/Git inventory/private files. Read production sources directly before fixture use.",
+  "nativeTopology": {
+    "existing": "Keep actual parentNest3100/fixture3101/Vite4173 and global Playwright/config/publicconfig/App/sessionservice byte unchanged. No dependencies/global ports changes.",
+    "owned": "Inside admitted browser-server.cjs only, guarded dedicated DB/ownedchildflag spawn second realNest3102 and ephemeralTLS4174 frontdoor, same guarded dedicatedPG, no reset/migration inchild. Actual AppModule/bodyparsers/Prisma/sessions/realtime/InstagramHttpClient/MessagingClient remain. Exact childWEB_ORIGINHTTPS4174,CORSexactHTTPS4174,COOKIE_SAMESITE=None so actual session emitsSecure/HttpOnly/SameSiteNone.",
+    "frontdoor": "Route /api,/health,/ws to3102 BEFORE asset/config catchall4173. PreserveHost/Origin/Cookie/Location/status/headers/body and actualWS upgrade. Health readiness/ownedshutdown/childcleanup/certcleanup. Fixed childtarget only. No arbitrary outbound proxy/user URL.",
+    "scopeLimit": "Selfsignedper-specignoreHTTPSErrors and sameoriginproxy are not productionTLS/crossoriginCORS proof."
+  },
+  "providerBoundary": {
+    "onlyFakes": "External HTTP bytes for allowlisted www.instagram.com authorization document, api.instagram.com OAuth token, graph.instagram.com token/me/subscribed_apps/messages. globalfetch adaptation in harness only, actual production clients/normalizers/owner services/DB retained. Block unexpected IG requests, scoped fakecode/token/account mapping, do not log token/code/state outside synthetic proof.",
+    "primaryLimit": "Production subscribedFields always returnsnullUNKNOWN. Do NOT override class method or fake ownGET interpretation, ID namespaces/empty absence. FirstactualPOSTsuccess and actualsignedIN establish first flow; verify may honestlyUNKNOWN. LostPOSTack/GETunknown must never trigger secondPOST.",
+    "signedInbound": "Fixture posts genuine HMACsigned rawIGupdates with timestampmilliseconds/currentaccount+peer tofixedowned3102/webhooks/instagram. No directMessage/route/window insert to claimreceipt. Actual WS/nativeBFF must display. Wrongsignature/stale/outofscope/accountcross-target controls no effects."
+  },
+  "waRegression": {
+    "ownership": "Generate fake-provider-owned business phones independently ofBU.phone. Seed native existing claimWhatsAppBusinessResource transaction per provedchannel/provider; one durableWA identity/BU, bothadapters share it and a single immutableConversationRoute perpeer/conversation. Preserveallprevious IDs/history/timestamps/unread/pagination cardinality and onboarding/template/firstsend flows. EvolutionownerJid sameprovedbusinessphone, not recipient.",
+    "currentInbound": "Existing /incoming adds actual originaltimestampseconds onlyfornewactualIN. If conversationId supplied, validate fixtureConversationIds + exact BU/provider-owned phone/businessidentity/canonicalpeer before anyeffect, derivepeer fromfixture, rejectmismatch404/400zeroeffect. ReturnotherBuPhoneNumberId alreadypresent. Never rewritehistory/futureclock/requiresWindow=false bypass.",
+    "e2e": "Only admitted channel-transport/start-conversation spec if needed: preserveeveryexistingassert/20retrigger/5wave/PGcounter/nativeunknown/draft/A-B-A oracle. Replace superseded latest-originimplicitchoice with actual explicit strictV2adapterselect; establishgenuinesignedcurrentIN beforepositiveofficialfree-text, observe addedIN honestly. Unknownoutcome needs explicitcurrentstateconsult/recovery, noblindresend/artificialrelease/cooldownclock change.",
+    "protectedTimeline": "web-app/e2e/timeline.spec.ts NOT admitted pending human. Do not edit. timeline88 proposal describes pending exact prerequisite adjustments; alloldoracles retained."
+  },
+  "newBrowserProof": [
+    "ActualHTTPS built UI login; productionSecureHttpOnlySameSiteNonecookie and actualOAuthfullnavigation externaldocumentfake\u2192actualcallback303/no-store/referrer-no-referrer/cleanURL with nativePGattemptfacts; confirm/save/reload fromcanonicalserverstate, no BFFfulfil stub.",
+    "Connect twoIGaccounts in sameWA BU and samepeertext acrossaccounts; actualsignedDM/WS/list/thread/options/reply throughoneOutboundService, captured providerrequest exactaccount+peer and nativePGroute/author/counts. Receiptpending before actualsignedIN, actualreceipt afterward; no phone-derivedIGdisplay/initialDM.",
+    "Use owned HTTPSproxy to hold delivery AFTER actualBFFcompleted status/headers/body, controls fixed syntheticresource. NewFRC must not route.fulfill BFF or stubsession/Prisma/WS. Record status/header/bodyhash before/afterdelivery and real committed effects.",
+    "Cover A\u2192B\u2192A/inverse completions, sameactorBUaccount draftrevision/newtyping thenoldACK, lateUNKNOWN/failure, actualsingleflight5waves\u00d720triggers with nativecounterevidence; no lateerror/clear/unlock or POST towrongdestination.",
+    "Connect/cancel/reauthorize/reload/storageunavailable/UNKNOWNsubscription/expiredwindow/operatorread-only and accessisolation nativeUI states, provider-effectcount/replayexact, noautomaticPOST/drafttransfer/fallback. Do not claim helper-only cases prove component/native races."
+  ],
+  "freshness": "New admitted instagram-freshness.ts must be invoked by new actualspec (not globalconfig). Verify servedHTTPSJS exact currentdist hash, activechildcompiledNest relevantsource/artifacthash and realguardedDB migrationcount; Node22/PG16/currentpositivepublicinventory. No private/env/source broadsearch or operationalprocess inspection. Attest actualownedchild, not merelyparent3100. Existing freshnessglobal unchanged.",
+  "forbidden": "No productAPI/schema/policy/client/session/globalconfig/privacy/UTF8 changes, no timeline.spec writes, no Foundationwrites, no tests/build/lint/runner/actualnetwork/private/env/operational/Meta/tunnel/Git/branches/worktrees/deps. Do not create another APIhelper. RootownsT/evidence; codewrites serialized after90only.",
+  "completion": "Terminalallownedpaths bytes/hash/exactnewfilelist, nativebehavior coverage and concretegaps; no passing test/runtimeclaims. Rootqualifies and runs canonical browser/ALL afterwards."
+}

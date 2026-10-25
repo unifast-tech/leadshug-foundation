@@ -1,0 +1,17 @@
+{
+  "kind": "Root qualification of display86 exact full-row snapshot correction",
+  "exactReversalRestores85Preimage": true,
+  "changedPaths": [
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "other322SourcesExact": true,
+  "preserved34RowsExact": true,
+  "rootIndexExact": true,
+  "terminalFile": {
+    "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+    "bytes": 29015,
+    "sha256": "45a35baead3b8c2b1a0a40b9693d16bcb0b7e59754c90816e52bb57836b022ab"
+  },
+  "tests": "NOT RUN; ALL85 previous610/611; correction requires current consolidated proof",
+  "limits": "No inference of scalar product mutation or completed ambiguity/browser assertions."
+}

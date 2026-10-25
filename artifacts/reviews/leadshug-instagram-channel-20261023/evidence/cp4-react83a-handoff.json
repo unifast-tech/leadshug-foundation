@@ -1,0 +1,99 @@
+{
+  "kind": "Exact already-admitted React83a source correction",
+  "profile": "Operational/Coder react",
+  "authority": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "allowedWrites": [
+    "web-app/src/api.ts",
+    "web-app/src/api.spec.ts",
+    "web-app/src/telas/Numeros.tsx",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/CadastroNumero.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/componentes/NovaConversa.spec.ts",
+    "web-app/src/instagramState.ts",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx"
+  ],
+  "preimageManifest": "cp4-react83-root-static-qualification.json terminalFiles",
+  "readAuthority": {
+    "sourceFiles": "Only exact files enumerated cp4-react83-preimages.json and four new owned paths after creation; no directory traversal/search/Git inventory. Exact-file rg allowed.",
+    "docs": [
+      "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "foundation_documentation/project_constitution.md",
+      "foundation_documentation/modules/integrations-and-channels.md",
+      "foundation_documentation/modules/inbox-and-conversations.md",
+      "foundation_documentation/modules/identity-and-tenancy.md",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react83-preimages.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react-next-root-preparation.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-react79-prospective-boundary.json",
+      "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser80-plan-root-adjudication.json"
+    ],
+    "governance": [
+      "AGENTS.md",
+      "delphi-ai/main_instructions.md",
+      "delphi-ai/profiles/operational_coder.md",
+      "delphi-ai/workflows/react/change-ui-boundary-method.md",
+      "delphi-ai/workflows/docker/effort-selection-method.md",
+      "delphi-ai/config/agent_role_routing.json"
+    ]
+  },
+  "findings": [
+    {
+      "id": "REACT83-01",
+      "paths": [
+        "web-app/src/instagramState.ts",
+        "web-app/src/componentes/InstagramReplyComposer.tsx"
+      ],
+      "fact": "updateDraft always truncates1000, but ordinary WA accepts4096; changeText displays4096 then stores1000. Restoring loses authorized WA draft text.",
+      "fix": "Store bounded caller text faithfully or parameterize channel policy; IG1000characters unchanged. Add WA long-draft restore + IG boundary cases."
+    },
+    {
+      "id": "REACT83-02",
+      "paths": [
+        "web-app/src/instagramState.ts",
+        "web-app/src/componentes/InstagramReplyComposer.tsx"
+      ],
+      "fact": "V2 validator accepts arbitrary channelOrigin/policy strings and render treats any nonIG asWA. Send gate omits available/supportedKinds; refresh preserves stale selected string.",
+      "fix": "Validate exact known origin/policy compatible pairs and text contract; unknown fails closed. Send AND typing gate require current option available/support text/window/context. Always expose explicit refresh, invalidate/block stale binding on context/readiness/UNKNOWN errors until explicit current-options review, retaining draft. Never auto retry/resend. Friendly reason for unavailable candidates."
+    },
+    {
+      "id": "REACT83-03",
+      "paths": [
+        "web-app/src/componentes/InstagramReplyComposer.tsx",
+        "web-app/src/telas/Inbox.tsx"
+      ],
+      "fact": "ACK always setText empty even if captured revision was superseded; textarea disabled pending prevents meaningful new-typing case. Composer key lacks parent navigation generation, so reopening same ID does not create new child intent.",
+      "fix": "Key actual composer by monotonic parent navigation generation; scope all outcomes to captured nav/fulltuple/revision. Allow draft revision changes while request pending and clear only exact captured revision in store AND current textbox. Synchronous latch remains one POST; late finally cannot clear/unlock newer work."
+    },
+    {
+      "id": "REACT83-04",
+      "paths": [
+        "web-app/src/telas/Inbox.tsx"
+      ],
+      "fact": "carregarLista still accepts only matching BU/filter IDs; A1/B2/A3 can apply late A1. Initial BU load lacks unmount/actor fencing. NovaConversa outer onOpened unguarded. Safe display still falls back to legacycontact when DTO absent.",
+      "fix": "Monotonic navigation/list-request and actor fences including stale errors/finally; A/B/A actual list/recovery/initial callbacks. Keep preserved timeline algorithms. Neutral display when unavailable, never rawcontact fallback. IG initial prohibition uses qualified platform/namespace, not legacy selectedwindoworigin. Scope new-conversation callbacks to current captured intent."
+    },
+    {
+      "id": "REACT83-05",
+      "paths": [
+        "web-app/src/componentes/InstagramConnections.tsx",
+        "web-app/src/telas/Numeros.tsx"
+      ],
+      "fact": "Callback effect catch lacks ticket fence; deferred action continuation checks only mounted; shared load/action intent can leave busy stuck after refresh; boolean late finally is not action-owned. disconnect/verify union observation access also lacks type narrowing. Unknown connection type renderedWA; BU-is-number comment/BU.phone heading remain.",
+      "fix": "Separate navigation/action ownership from read request sequencing or coherent single-owner clocks. Fence every catch/deferred/onChanged/finally and ticket-owned release, restore progress on all paths. Proper result narrowing. Guard all mutations including advance for admin. Unknown type neutral read-only; BU operation language, own number comes qualified connection display. No action/id/provider protocol changes."
+    },
+    {
+      "id": "REACT83-06",
+      "paths": [
+        "web-app/src/componentes/InstagramReplyComposer.tsx",
+        "web-app/src/telas/Inbox.tsx"
+      ],
+      "fact": "Ordinary reply outcome catch only sets error; parent start-options is not refreshed, so native SENDING/UNCERTAIN admission/recovery can remain hidden and same textbox remains sendable.",
+      "fix": "Preserve actual safe admission recovery: refresh actual local start-options after ordinary outcome with captured navigation fence; show existing OrdinaryRecovery where native admission says active/uncertain. Block fresh send while outcome unconfirmed until explicit consultation. Never guess from transport status or replay provider send; retain exact draft and follow actual server facts."
+    }
+  ],
+  "requirements": "All original React83 required behavior remains. Correct actual static defects; add meaningful owned pure/API tests for unknown origin/policy, unavailable gate, WA4096 draft retention/restoredrevision+oldACK/newtyping and stale outcomes. Root only source-static evidence; tests NOTRUN. Do not claim mirror/helper-only tests prove component/native races; browser mandatory.",
+  "forbidden": "No other writes (including Foundation), tests/build/lint/runner/runtime/network/provider/tunnels/realMeta/private/.env/process/Git/worktree/branches/dependencies/configs/privacy/App modifications. No directory rg/glob or inventory outside enumerated public paths. If exact source gap requires another path, report it first. Root owns docs and later canonical validation; no writer/validation overlap.",
+  "completion": "All owned changes terminal; return each changed/new path bytes SHA256, observable decisions and remaining concrete gaps. Tests deliberately NOTRUN by writer; no passing claims. No persistent goals."
+}

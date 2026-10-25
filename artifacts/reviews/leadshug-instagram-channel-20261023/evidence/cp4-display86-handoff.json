@@ -1,0 +1,28 @@
+{
+  "kind": "CP4 display86 exact fixture comparison handoff",
+  "goal": "Correct actual ALL85 incompatible ORM row vs expanded-relation equality while preserving complete immutable row oracle",
+  "profile": "Operational/Coder routine gpt-6-luna medium",
+  "allowedWrites": [
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "preimage": {
+    "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+    "bytes": 28761,
+    "sha256": "b7ea313865cc24b8b896481c252d712d3d5d8b4268a77c8ae9bab178cec896f6"
+  },
+  "readAuthority": [
+    "api-app/test/instagram-cp4-display.e2e-spec.ts",
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all85-root-reconciliation.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all85-result.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-all85-all.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-display86-handoff.json"
+  ],
+  "required": [
+    "Immediately after sharedA/sharedB are proven, before all later lifecycle/read actions, capture BOTH original flat persisted ConversationRoute rows by exact id using Prisma findUniqueOrThrow.",
+    "Late two deep toEqual comparisons must compare current full flat row with corresponding original full flat snapshot. Preserve every scalar field and every pre-existing other assertion/scenario, 50 signed IN/25+25, relational qualification, strict8SQL perpage, zeroHTTP/crypto/DML, namespaces, wrongcandidate/credentialVersion labels, ambiguity/WA expectations.",
+    "These are setup snapshot reads outside measured action windows. No business code/schema/index/query policy changes, no fuzzy partial matching, no removing asserts.",
+    "No tests/build/lint/runner/Git/private/env/process/runtime/provider/network/search or other file writes. Root owns T/evidence."
+  ],
+  "completion": "Return terminal exact bytes/hash and exact small diff rationale; tests deliberately not run."
+}

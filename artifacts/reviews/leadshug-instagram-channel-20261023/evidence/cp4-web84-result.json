@@ -1,0 +1,106 @@
+{
+  "kind": "cp4-web84-result",
+  "scenario": "ST-IG-03 canonical disposable synthetic Web validation",
+  "canonicalCommand": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "canonicalExitCode": 0,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web84-web.log",
+    "bytes": 9525,
+    "sha256": "89420a3dba95d7e4de304be5c87e81b6e6f6fa3be68b132c475e60a9e84b28df",
+    "lineCount": 156
+  },
+  "stages": {
+    "runnerSetup": "completed; canonical disposable synthetic runner and cleanup completed",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": true,
+      "guard": "channels-ci-parity-v1",
+      "mutationsRejected": 26
+    },
+    "apiPrismaGeneratePrerequisite": {
+      "reached": true,
+      "passed": true
+    },
+    "webBuild": {
+      "reached": true,
+      "passed": true,
+      "command": "tsc -b && vite build",
+      "modulesTransformed": 63,
+      "durationSeconds": 1.35
+    },
+    "webUnitTests": {
+      "reached": true,
+      "passed": 66,
+      "failed": 0,
+      "testFilesPassed": 8,
+      "testFilesFailed": 0,
+      "totalTests": 66,
+      "durationSeconds": 0.717,
+      "files": [
+        {
+          "file": "src/timeline.test.ts",
+          "passed": 2
+        },
+        {
+          "file": "src/cadastroNumero.spec.ts",
+          "passed": 3
+        },
+        {
+          "file": "src/cadastroNumero.lifecycle.spec.ts",
+          "passed": 4
+        },
+        {
+          "file": "src/instagramState.spec.ts",
+          "passed": 11
+        },
+        {
+          "file": "src/tempoReal.spec.ts",
+          "passed": 6
+        },
+        {
+          "file": "src/componentes/NovaConversa.spec.ts",
+          "passed": 5
+        },
+        {
+          "file": "src/telas/Modelos.spec.ts",
+          "passed": 15
+        },
+        {
+          "file": "src/api.spec.ts",
+          "passed": 20
+        }
+      ]
+    },
+    "apiLintOrUnitTests": {
+      "reached": false,
+      "reason": "the `web` target did not run the API lint or unit suites"
+    },
+    "apiMigrationsOrE2E": {
+      "reached": false,
+      "reason": "not part of the canonical Web target"
+    },
+    "browserOrHTTPS": {
+      "reached": false,
+      "reason": "not part of the canonical Web target"
+    }
+  },
+  "actualFailedTotals": {
+    "webUnitTestsFailed": 0,
+    "webTestFilesFailed": 0
+  },
+  "postflight": {
+    "checksPassed": 1359,
+    "checksFailed": 0,
+    "sourceCount": 323,
+    "todoChecked": true,
+    "boundInputCount": 998,
+    "immutablePreservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "canonical runner cleanup observed; validation postgres container, disposable volumes and network removed",
+  "limitations": [
+    "This proves only the canonical Web build and unit suite; no browser, HTTPS, API E2E, migration, or provider/runtime behavior was exercised."
+  ]
+}
