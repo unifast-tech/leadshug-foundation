@@ -1,9 +1,9 @@
 {
   "kind": "Prospective fresh affected-source adherence preparation111, NOT dispatched",
-  "state": "Await CP5source110 terminal+rootqualification and current actual validation evidence; refresh exactfullT/hashes before closedpackages. No gatepass or live reviewer.",
+  "state": "A RUNNING on immutable33source/fullT/closedpacket; B/C/D unlaunchedprospective; Eready17bodyclosedpacket. 86freshunique+54qualifiedexactcarry areplannedfullunion, no actualpeer-reading claim.",
   "basis": "Current329positiveknownsource manifest, exactpublicinitialbaseline hashes, actual67terminalcoverage qualifiedbycurrenthash, exact6publicroottoolingpaths; noGit/private discovery.",
-  "currentFreshUnique": 85,
-  "currentFreshBodyBytes": 1818665,
+  "currentFreshUnique": 86,
+  "currentFreshBodyBytes": 1886383,
   "carriedActuallyReviewedExactUnique": 54,
   "carriedExactRows": [
     {
@@ -469,9 +469,29 @@
           "path": "api-app/test/instagram-oauth-session.e2e-spec.ts",
           "bytes": 8096,
           "sha256": "99f980ee88a4665c0c8f1ef9ac522dac3ce8ecc6054a1f8df5dc482c7a1bd761"
+        },
+        {
+          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+          "bytes": 83275,
+          "sha256": "ec3d8cfd9733ef968bd00303aea68e22eba82a827118a94e50e570aae19c122f"
+        },
+        {
+          "path": "api-app/test/atendimento.e2e-spec.ts",
+          "bytes": 42283,
+          "sha256": "392d5dcd19747ffbf941b798e34e1989c54bcb22be0723dcd35530a67aac3cff"
+        },
+        {
+          "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+          "bytes": 19830,
+          "sha256": "fedd146246546100fc0ac2fe2293b18a1835a44343873123383109b339dffe11"
+        },
+        {
+          "path": "api-app/test/browser-server.cjs",
+          "bytes": 24159,
+          "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340"
         }
       ],
-      "bytes": 205490
+      "bytes": 375037
     },
     "c-compatibility-scale": {
       "rows": [
@@ -479,11 +499,6 @@
           "path": "api-app/test/api-publica.e2e-spec.ts",
           "bytes": 21056,
           "sha256": "433d34c0a8e484880a8be83fc56c11bb844d5f493bd6057f23b48be9a3b1bd6f"
-        },
-        {
-          "path": "api-app/test/atendimento.e2e-spec.ts",
-          "bytes": 42283,
-          "sha256": "392d5dcd19747ffbf941b798e34e1989c54bcb22be0723dcd35530a67aac3cff"
         },
         {
           "path": "api-app/test/channel-transport.e2e-spec.ts",
@@ -541,19 +556,9 @@
           "sha256": "8b9ef40da121a967540f149f44ec2f59f518d658069049ad02fbe61818fa6924"
         },
         {
-          "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
-          "bytes": 83275,
-          "sha256": "ec3d8cfd9733ef968bd00303aea68e22eba82a827118a94e50e570aae19c122f"
-        },
-        {
           "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
           "bytes": 6703,
           "sha256": "836aeda3eed8ae0a934ef36ad6eb37ce81673e734a429accdbf4b2fb3628ddc7"
-        },
-        {
-          "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
-          "bytes": 19830,
-          "sha256": "fedd146246546100fc0ac2fe2293b18a1835a44343873123383109b339dffe11"
         },
         {
           "path": "api-app/test/painel.e2e-spec.ts",
@@ -606,15 +611,10 @@
           "sha256": "3a8676acdead9b9eebe9e18c1525c98d41a2f8b11c112da07100cac07a59901b"
         }
       ],
-      "bytes": 462868
+      "bytes": 317480
     },
     "d-web-native-tooling": {
       "rows": [
-        {
-          "path": "api-app/test/browser-server.cjs",
-          "bytes": 24159,
-          "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340"
-        },
         {
           "path": "api-app/test/message-template-management.e2e-spec.ts",
           "bytes": 178445,
@@ -721,10 +721,21 @@
           "sha256": "7dd8af0fd26706697cdc1eee0ebbe71af4d69e9b3d5d0f0b2bb86ba8c3fe8429"
         }
       ],
-      "bytes": 614145
+      "bytes": 589986
+    },
+    "e-cp5-native": {
+      "rows": [
+        {
+          "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+          "bytes": 67718,
+          "sha256": "8be3fe1f7275b549a7d747980ff05cf7a3bfe488492794bca164f7b2a84b0045"
+        }
+      ],
+      "bytes": 67718,
+      "context": "ActualEclosedpackage17fullbodies includes16sharedproduction/helper/schema contexts, dedupglobalcoverage. EcompleteCP5 ownerreview current67k fixture beforeactualproof."
     }
   },
-  "pendingNewSource": "CP5newtestaddedONLYafteractualterminal; include inCwith allcompletedworkload assertions and fullcurrentcanonicalproof, not prospectivepass.",
+  "pendingNewSource": "110a nowterminal/rootcandidatequalified67k, explicitlyassignednew E; no testsrun.",
   "dependencies": "Fullrelevantproducer/consumerowner bodies overlapwherecapacityallows; sourcebodycoverageunion countedonce. Dnativefixturesboth+allWeb+roottooling and protectedtemplate178kselectorcompanion need <=1MB; ifwholecompleteclosedpromptoverlimit repartitionwithadditionalcompletecomplementarylane BEFOREdispatch, neverafterlivewait.",
   "commonPackage": "FULLcurrentTODO exactbytes, all10canonicalobligations/5axes/fullFrontendConsumerMatrix; actualcurrentvalidation reached/unreached facts and scopedpriorALL100/Web102; primary/human/CP6knownopenzero-waiver; current terminalreviewreceipts and hashqualifiedcarry. Reviewer explicitly inspects ALL included fullsourcebodies and nopeerreadclaim.",
   "rubricCorrection": "Replace stale67windowclause with preserved official persistedrequiresWindow=false exception; trueofficialqualifiedcurrent24h,IGstrict24h,EVOfalse. Distinguishimplementedconsumer from actualnativeevidence stillpending; no sourceonlyacceptance.",
@@ -735,5 +746,6 @@
     "measure": "Actualcanonicalbuild_prompt onFULLdispatch+closedpackage prelaunch, bothwithinlimit"
   },
   "partitionRefinement": "Before anydispatch, dependency unit companion moved A→C to allow A fullcurrent schema/ownership/credential/window context withinclosed1MiB. All85freshsourcesretainedonce; no livepacket changed.",
-  "prelaunchRepartition": "ActualclosedpromptAwas1075976bytes>1048576 BEFOREreviewlaunch. Move sixfullunitcompanionbodies A→C (33993bytes), all85freshsourcepaths retained. Noreviewer running or interrupted, no normative/rubric/body omission. CompletecurrentAPI schema/ownership/credential/window context preserved inA."
+  "prelaunchRepartition": "ActualclosedpromptAwas1075976bytes>1048576 BEFOREreviewlaunch. Move sixfullunitcompanionbodies A→C (33993bytes), all85freshsourcepaths retained. Noreviewer running or interrupted, no normative/rubric/body omission. CompletecurrentAPI schema/ownership/credential/window context preserved inA.",
+  "partitionRefinementAfterALaunch": "Only undispatchedB/C/D/E refined to preserve coherentcompletepackets under1MiB; no A source/T/package/evidence rows changed. Alloriginal85freshpaths retained+oneCP5newtest."
 }
