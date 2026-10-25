@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-residual-fixture62-opinion-dispatch.json",
+  "review_kind": "architecture_opinion",
+  "review_count": 1,
+  "reviewer_labels": [
+    "cp3-residual-fixture62-fresh-no-context"
+  ],
+  "highest_finding_severity": "high",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "strong_positive",
+    "structural_soundness": "strong_positive",
+    "operational_fit": "acceptable"
+  },
+  "recommended_paths": [
+    "Modify only api-app/test/initial-message.e2e-spec.ts, api-app/test/instagram-cp2-commit-fences.e2e-spec.ts and api-app/test/instagram-cp2-final-clock.e2e-spec.ts. Keep production, shared helpers, configuration and the sixteen authorization controls unchanged.\n\n1. In the credential-pin scenario, transparently delegate every validator argument and preserve its actual result. Retain the pause after successful native validation while its transaction holds credential protection, start the real encrypted rotation, and prove the rotation is actually blocked by that transaction. Add a case-local transparent observation of claimInitial: await the real claim transaction, then pause its successful return before finalProviderFence can begin. Release validation, await the actual rotation commit, verify the exact version/encrypted replacement and live unrelated authorization/deadline facts, then release the post-claim observation. Require zero message POSTs, zero new OUT messages, exact 409 CHANNEL_CONTEXT_CHANGED/BLOCKED and a released REJECTED intent with no external receipt. Preserve the original selected tuple and immutable claim deadline. This establishes the required order without relying on which promise the test awaits first.\n\n2. For the two failed live controls, use a named synthetic expires_in of 75 seconds through the existing real HTTP parsing/exchange path. Change only mapping-live and callback-margin-live, including their labels, lifetime assertions and the mapping helper's narrow literal type. Keep every 62-second negative unchanged and retain the separately passing 65-second subscription control. Seventy-five seconds supplies fifteen seconds beyond the unchanged product margin; its adequacy must be demonstrated by actual checkpoint measurements. Require positive queue headroom sufficient for the unchanged 4.5-second bounded continuation, actual liveness before release and through successful final persistence. Do not substitute a larger number for these checks.\n\nPreparation before issuance is a viable optimization for the mapping case, whose trigger setup currently follows candidate acquisition. It is not the preferred repair: it requires splitting or reordering setup, and the callback case already prepares its barrier before issuance. Keeping 65 seconds therefore does not have an established sufficient timing envelope for both failures. A genuinely longer positive response is the simpler faithful fixture choice.\n\n3. Record provider lifetime, actual acquiredAt/expiresAt facts, queue and release margin, observed PostgreSQL waiter, monotonic hold duration and bounded completion. The fake longTokenIssuedAt is boundary evidence, not automatically the product acquisition instant. For the callback, a case-local observation may transparently delegate the real exchangeCode call and retain its unchanged returned clock facts; verify those facts against the eventual persisted candidate. Use database time and Date.now consistently with the product's conservative clock checks, and performance.now for elapsed duration. Preserve the real 2.2-second wait, ordinary 5-second transaction budgets and all existing 4.5-second holder/operation bounds. Give the callback live control the corresponding measured completion bound rather than leaving that comparison implicit.\n\n4. After the test-only writer is terminal, reconcile the exact three-file delta against API61, preserving the other 258 source paths, 35 preservation rows, three index references and every unrelated case/assertion. Record the HOW qualification without changing normative WHAT. Freeze the candidate, governing TODO and inputs, then run one separate complete canonical bash scripts/test-channels-local.sh api invocation with no concurrent edits, retries or autofix. It must execute every previously unreached assertion as well as all regressions. Report any failed fixture precondition or duration bound as a failure; do not skip, refresh credentials or retry until GREEN.\n\n5. Reconcile terminal evidence and obtain fresh affected-source adherence carrying prior complete review coverage. Preserve the post-production authoring qualification for the seven newer authorization controls; this repair creates no retroactive test-first claim. Primary own-subscription GET/SUBREC03, privacy and UTF8 human proposals, complete CP4 consumers, CP5/6, ALL, performance/concurrency, security, TQA, cutover, final review and separately approved runtime proof remain open."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-0839B108",
+      "severity": "high",
+      "title": "The credential-pin oracle conflates claim protection with final dispatch authorization",
+      "rationale": "The test successfully demonstrates protection during claim validation, but then requires a stale-credential POST after releasing that protection and allowing rotation. DOD-03, IG-ARCH-R1-01 and integrated HOW47 require a rotation committed before final authorization to prevent dispatch. API61's printed zero POST, zero OUT, 409 and REJECTED observations are consistent with that requirement, although the later formal assertions were not reached. The spy also drops expectedCredentialExpiresAt and expectedRecipientRef, weakening the native validation it claims to observe. Finally, awaiting rotation before awaiting the response does not itself prove rotation committed before the sender's final observation.",
+      "suggested_action": "Forward a typed Parameters tuple unchanged to the bound validator, or explicitly forward tx, expected, selected, expectedCredentialExpiresAt and expectedRecipientRef in their actual order. Return the real result and propagate real errors. Gate only this case's successful claim return after its actual transaction has committed, allowing the already queued rotation to commit before final authorization proceeds. Correlate native blocking evidence with the actual rotation and claim transaction rather than reporting a constant waited=true. Assert exact priorVersion+1, correctly sealed replacement persistence and unchanged generation/ownership. Then require zero message POST delta, zero OUT delta, status 409, code CHANNEL_CONTEXT_CHANGED, outcome BLOCKED, state REJECTED, externalMessageId null and slotReleasedAt present. Because claim succeeded, preserve dispatchDeadlineAt equal to the original lease deadline; do not assert a pre-claim null deadline. Remove this scenario's 201/503 alternatives and accepted-receipt branches. Restore both observations and drain pending operations in finally. Do not rewrite the BU-pin, accepted-local-completion or other cases, and do not require a particular internal final-validator call if an earlier final-boundary check correctly rejects the committed change.",
+      "reviewer_labels": [
+        "cp3-residual-fixture62-fresh-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-FIX62-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-4C7D2B82",
+      "severity": "medium",
+      "title": "The failed live controls lack demonstrated headroom at the decisive clock boundaries",
+      "rationale": "A 65-second credential has only five seconds of usable age under the approved 60-second margin. That age includes acquisition-to-queue work and the actual queued wait, not merely the requested 2.2-second pause. API61 establishes that both positive fixtures crossed the margin; it does not establish an OS cause or a product temporal defect. Moving setup before issuance can reduce mapping preparation age, but the callback barrier is already installed before issuance. The governing TODO fixes verified expiry provenance and the safety margin, not a 65-second positive fixture. A longer verified positive lifetime therefore remains routine HOW provided boundary-denial and timing criteria remain intact.",
+      "suggested_action": "Use the scoped 75-second positive fixtures described in the recommendation and verify expiresAt-acquiredAt equals the actual response lifetime. For positives, measure actual remaining lifetime at queue, immediately before release and successful completion; require it to exceed 60000ms at every required checkpoint. At queue, demonstrate more than the unchanged 4500ms continuation budget beyond that margin. Preserve the actual PostgreSQL UPDATE wait before and after the full 2200ms hold, monotonic duration measurements, strict completion/holder bounds, exact statuses, audit counts, promotion or rollback facts, candidate preservation/clearing, ownership counts and provider counters. Keep 62-second negatives eligible at queue and crossed before release. Preserve all session, deadline, TTL, cancellation, successor-holder and cleanup controls. The subscription negative that combines shortened deadlines with credential-margin crossing must retain that combined qualification. If any live checkpoint or bound fails, report the failure without assuming a finite expiry buffer guarantees liveness under arbitrary suspension. Fake clocks, expiry rewrites, retries, broader status sets or relaxed product/validation thresholds would change or weaken the approved semantics and are not approved by this opinion.",
+      "reviewer_labels": [
+        "cp3-residual-fixture62-fresh-no-context"
+      ],
+      "source_finding_ids": [
+        "IG-CP3-FIX62-02"
+      ],
+      "category": "tests",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

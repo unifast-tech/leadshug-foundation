@@ -1,0 +1,6 @@
+{
+  "kind": "Prospective CP4 WA fixture qualification",
+  "status": "Preparation only; no source/runtime authority or test result.",
+  "clarification": "Approved BU invariant remains at most one durable proved WhatsApp business number, with official and Evolution bindings allowed for that same business resource. UUID bridge sibling tests must distinguish provider resources/adapters while preserving that same proved business number; do not seed two distinct WhatsApp business numbers in one BU.",
+  "otherRequirements": "Captured exact id/type/generation enforced inside existing owner; catalog legacy WA max2/take3 detects conflict and never returns silently truncated arbitrary subset. Foreign BU/resource remains denied. No new framework or authority."
+}

@@ -1,0 +1,72 @@
+{
+  "kind": "cp3-api61-root-reconciliation",
+  "date": "2026-10-24",
+  "sourceRowsExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 776,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "bytes": 230767,
+    "sha256": "f30288b9c9d7ec768b634839164d27734d08873818e551272ba9f9318ddfae00"
+  },
+  "exitCode": 1,
+  "passed": {
+    "units": 426,
+    "unitFiles": 39,
+    "e2e": 594,
+    "e2eFiles": 52,
+    "migrations": 31,
+    "lint": true,
+    "build": true
+  },
+  "totalE2E": 597,
+  "failures": [
+    {
+      "case": "initial-message claim pins credential through database commit in independently seeded Meta template journey",
+      "assertion": "expected response status one of [201, 503], got 409",
+      "frame": "test/initial-message.e2e-spec.ts:1166:30",
+      "later_unreached": [
+        "provider POST count +1",
+        "final intent state assertions"
+      ]
+    },
+    {
+      "case": "CP2 commit-fences matched live control across equal 2.2s wait",
+      "assertion": "expected crossedMargin to equal false; got true",
+      "frame": "test/instagram-cp2-commit-fences.e2e-spec.ts:185:29",
+      "later_unreached": [
+        "queued-writer wait and barrier release",
+        "final mapping/subscription assertions"
+      ],
+      "qualification": "measurement/fixture failure; no product temporal conclusion"
+    },
+    {
+      "case": "CP2 final-clock matched live candidate margin through final UPDATE wait",
+      "assertion": "after 2.2s pause, actual margin 59424ms expected >60000ms",
+      "frame": "test/instagram-cp2-final-clock.e2e-spec.ts:324:51",
+      "later_unreached": [
+        "attempt-writer barrier and final UPDATE assertions"
+      ],
+      "qualification": "measurement/fixture failure; no product temporal conclusion"
+    }
+  ],
+  "reached": {
+    "authorization_fences": "16/16 passed; includes original three A46 mutation-first cases, six prior controls, and seven new authorization-first controls",
+    "IG_credential_rotation_serialization": "passed actual final dispatch before real credential rotation waiting on pinned owner; 1071ms",
+    "WA_disconnect_controls": "ordinary and initial disconnect cases passed; ordinary POST before disconnect and confirmed initial receipt after disconnect commit after pinned POST",
+    "CP2_natural_session_strict_250ms": "passed; case duration1476ms",
+    "CP2_batch": "initial1000 updates 5069.755ms; replay1000 3383.446ms; complete case8481ms passed, including later assertions",
+    "native_dispatch_lock_groups": "same-account IG, independent-account, formatted WA all passed; 728ms test case",
+    "P2002": "real P2002 rollback/exact-readback/retry test passed (537ms); test name and full assertions passed, log does not emit a standalone conflict-count scalar",
+    "accepted_local_facts": "4/4 passed",
+    "query_boundaries": "5/5 passed",
+    "CSV": "1/1 passed",
+    "final_clock": "8/9 passed; one live-margin assertion failed"
+  },
+  "rootInspection": {
+    "initialCredentialPin": "Native commit pin and actual encrypted credential update completed; zeroPOST/outgoing messages,409 and REJECTED intent printed before old positive assertion failed. The preexisting case assumes a send after claim even if rotation wins before newly coherent final authorization. Need preserve pin proof and assert exact current last-boundary BLOCKED semantics, not permit a stale POST or broaden statuses. Its resolver spy also drops new expiry/recipient validation args; forward all actual args.",
+    "twoLiveTimingControls": "Both actual65second live tokens crossed60second safety margin during same real2.2s wait; finalclock observed59424ms. Later wait/final mapping oracles unreached. No OS cause, product temporal bug, capacity or weaker threshold inferred. Need faithful live fixture and actual expiry evidence; preserve negative62s crossing, realPGwait2.2s,60sproductmargin,4.5s bounds and all state/counter assertions. A prospective HOW opinion will assess setup alignment vs genuine live-token headroom without invented expiry/Datefake/criteria relaxation."
+  },
+  "status": "61 terminal freeze ends after root reconciliation. Product remains fixed and behavior16auth/query5/ACK4/CSV/native locks/batch proven for this exactcandidate; completeAPI notGREEN. No CP3 or feature acceptance. Focused fixture HOW62 before bounded repairs, then fullAPI/freshaffectedadherence and completeCP4/latergates."
+}

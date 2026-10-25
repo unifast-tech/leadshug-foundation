@@ -1,0 +1,17 @@
+{
+  "kind": "cp4-primary-protocol-research64-root-qualified",
+  "status": "Research only; blocker IG-SUBPROTO01/SUBREC03 remains open. No runtime call, source edit, test result or acceptance.",
+  "executor": "instagram_test48 terminal read-only, routing-cp4-primary-protocol-research64.json GO",
+  "sources": [
+    "https://www.postman.com/meta/instagram/documentation/6yqw8pt/instagram-api?entity=request-23987686-3fe78620-2258-44b6-893f-42d76c7200d7",
+    "https://www.postman.com/meta/instagram/folder/6raa77c/instagram-api-with-instagram-login"
+  ],
+  "confirmed": "Official primary collection supports Instagram Login and permission names; prior primary receipt supports account-level POST. Current getter UNKNOWN remains honest.",
+  "unresolved": [
+    "GET support/exact envelope for graph.instagram.com/{professionalUserId}/subscribed_apps",
+    "Returned object ID namespace and own-app identification",
+    "Exhaustiveness and whether emptydata conclusively proves own-app absence"
+  ],
+  "rootQualification": "Failure to retrieve documentation or omission is not evidence of unsupported endpoint. Do not infer FacebookPage semantics, substitute MetaAppID/IGClientID, promote UNKNOWN or waive complete recovery.",
+  "laterProbe": "Only after separately reviewed concrete runtime plan and human approval: controlled own account, same legitimate InstagramLogin token, exactversion/path/status/redactedJSON, independently known successful ownPOST and granted permissions. Read-only GET result alone does not establish unknown identity/completeness semantics."
+}

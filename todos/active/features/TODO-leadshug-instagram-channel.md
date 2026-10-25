@@ -35,7 +35,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** Source54 e correções restritas56 estão prontas; API55 parou no lint antes de build/testes. Root conferiu os deltas e preservou os nove casos anteriores. Próxima prova é uma execução completa API57, seguida de revisão de fonte afetada; API45 permanece evidência histórica.
+- **Why this state now:** API61 passou426unit e594/597E2E, incluindo todos16auth/native e cenários de lote/locks/ACK/query/CSV. Opinião62 integrou HOW test-only para três falhas residuais; writer63v2 terminou3testes, produto+258fontes preservados e corpos não relacionados comparados; API64 completa é a próxima prova. Próximas provas são API64 completa e revisão afetada fresca, seguidas de todoCP4; nenhuma entrega parcial está aceita.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
@@ -289,6 +289,7 @@ Linhas por critério exato; evidência futura permanece planned, sem alegação 
 | Dependency | Why It Matters | Status (`unknown|healthy|degraded|failing|rate-limited|stale`) | Last Verified | Verification Method | Adjustment / Workaround |
 | --- | --- | --- | --- | --- | --- |
 | Conta profissional e acesso humano | autorização/prova real | healthy | 2026-10-24, declaração humana | conta adicionada, sem token de teste gerado | não é teste de API/token; geração aguarda plano apropriado |
+| Segunda conta Instagram para DM/resposta | prova física CP6 | healthy | 2026-10-24, declaração humana | usuário confirmou outra conta disponível | disponibilidade humana apenas; roles/permissões/DM real e runtime não configurados nem validados por esta declaração |
 | Opção Instagram no app existente | reutilização da instalação | healthy | 2026-10-23, declaração humana | usuário consultou o painel | não comprova configuração/Advanced Access |
 | Documentação Meta detalhada | OAuth/assinatura/expiração/eligibilidade | healthy | 2026-10-23 | leitura direta pública200 de Business Login, get-started, Messaging e Webhooks; hashes no receipt primário | 429da ferramenta web foi observação anterior, não limite corrente; conta real continua unknown |
 | Conta/app/API Instagram efetivos | campos, permissões e entrega | unknown | n/a | nenhuma API/segredo consultados | gates próprios, sem copiar WABA/SDK WhatsApp |
@@ -608,6 +609,8 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-EVOCOMP-03 | low | release-blocker | correct proposal wording before validation | exact subject and absence contract must be clear to approving user; small same-artifact correction | proposal resolved r2; implementation not admitted | evolution-observation-companion-critique-r2-result.json |
 | IG-EVOCOMP-R2-01 | medium | release-blocker | fence late failure mutation in same admitted caller/test paths | same-attempt recovery must retain later holder facts after lease takeover; inherited catch is not a new adapter regression | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
 | IG-CP1-ROOT-R7-01 | medium | release-blocker | revalidate authorization before provider-error fact mutation in same admitted paths | live DB lease does not replace post-call session/grant revalidation; same existing lifecycle contract, no new middleware scope | closed by r3/current full API | evolution-observation-companion-critique-r3-result.json; cp1-caller-r7-full-api-green.json |
+| IG-CP3-FIX62-01 | high | release-blocker | fix in this TODO | Exact nativeoracle correction inside approved existing test path | open; test-only63/currentproof required | opinion62/rootadjudication; no newWHAT |
+| IG-CP3-FIX62-02 | medium | release-blocker | fix in this TODO | Verified livefixture headroom inside approved testHOW | open; measuredfixture63/currentproof required | opinion62/rootadjudication; no thresholdwaiver |
 
 | IG-CP2-ROOT-01 | medium | release-blocker | fix in this TODO | accurate persisted budget backoff under SCOPE-04/VAL-03 | closed original defect by CP2 r1; persisted actor/BU backoff assertions; no pre-fix causal RED inferred | adherence-cp2-r1-result.json; prior evidence retained |
 | IG-CP2-ROOT-02 | high | release-blocker | fix in this TODO | current post-HTTP lease fence under SCOPE-04/VAL-03 | open; source16 clocks proved; residual finalmapping and mapped preHTTP attemptTTL | adherence-cp2-r4-result.json; cp2-r4-root-adjudication.json |
@@ -1698,3 +1701,48 @@ Terminal57freeze ended. Source54 had required actorDispatchFence on local-only r
 ## CP3 repair58 terminal — complete API59 preparation
 
 Root independently reversed the exact single type-member move to57hash and verified260other sources unchanged. Paired session/grant fence is now required on actual sendInitial; historical local-only reconcileInitial preserves its prior signature. This is an unexecuted type-wiring correction, not a behavior proof. All writers terminal. Next freeze261sources/thisTODO/positiveinputs for exactly one complete API59; root reconciles terminal bytes/reachability and then fresh affected adherence. No source/T/input edits or retries during validation. Complete CP4 and all primary/human/later gates remain mandatory.
+
+## CP3 API59 unit boundary — test-only fixture60
+
+Root matched261sources/T/763positiveinputs/35preservations/3gitlinks and log18780bytes SHA92536402e8dac5dd2ff29b254245974a2dc278562c5eea7308b7ab8baf51483f. Parity26/generate/31migrations/schema/lint/build passed;425/426units. One ordering unit overrides claimOrdinary to returntrue without executing actual validate callback; original captured claim context stays absent and the final fence correctly blocks. E2E and every native timing/lock/ACK/query/batch assertion were not reached.
+
+Terminal59freeze ended. `evidence/cp3-fixture60-handoff.json` authorizes only this existing unit mock to invoke validate with its existing syntheticTX/context and return eligibility. Preserve every trace/order/recipient/settlement assertion; no production fallback or other source mutation. Root reconciliation precedes complete API61 and fresh affected adherence. AllCP4/primary/human/latergates remain mandatory; no checkpoint/feature acceptance.
+
+## CP3 fixture60 terminal — complete API61 freeze
+
+Root independently reversed exactly the targeted unit transaction destructuring/validator invocation to59hash and verified260other sources unchanged. All prior assertions and product source remain intact; no passing result is inferred. All writers terminal. Freeze261sources/thisTODO/positiveinputs for exactly ONE complete canonical API61. Only four unique61outputs writable by validator; no edits/retries/autofix/private/runtime/Meta/Git. Root terminal reconciliation and fresh affected adherence precede allCP4; primary/human/latergates remain unwaived.
+
+## CP3 API61 reached proof — three residual test observations
+
+Root matched261sources/T/776positiveinputs/35preservations/3gitlinks and log230767bytes SHAf30288b9c9d7ec768b634839164d27734d08873818e551272ba9f9318ddfae00. Parity26/generate/31migrations/schema/lint/build and426unit39files passed;594/597E2E,52/55files,584.69s. All16auth cases passed, including3A46mutation-first/sixold/sevennew genuinePG serialization/clock controls. Query5/ACK4/CSV1/native3lockgroups/P2002testwithcount3+nineoracles/strict250msnaturalSession passed. Lote1000 initial5069.755ms/replay3383.446ms/full8481ms and subsequent assertions passed. No independent numeric P2002 scalar was printed; the case and its assertions passed.
+
+Three failures remain, with later assertions unreached. Existing initial-message claim-pin test proved credential update waited and then committed, zeroPOST/zeroOUT/409/REJECTED, but expected a stale POST201or503 after claim. Final coherent authorization now must deny rotation committed before its observation; retain realpin proof and correct exact oracle without weakening product. Its spy must forward all current validation arguments. Two65second live-token controls actually crossed the60second safety margin during their real2.2s wait (one measured59424ms remaining); no OS cause or product time violation is inferred. Need fixture HOW preserving genuine expires_in evidence, negative62second crossing, realPG2.2s waits,60sproductmargin/4.5sbounds/allstateasserts.
+
+All lanes terminal;61freeze ended. No source writer yet. Obtain focused independent architecture opinion62 on faithful residual fixture/oracle HOW before bounded source changes; then completeAPI and fresh affected adherence. Source16authsuccess is exactcandidate proof, not completeAPI/CP3/feature acceptance. CompleteCP4, primaryGET/SUBREC03, pending human proposals and allCP5/6/ALL/assurance/realruntime remain mandatory.
+
+## CP3 opinion62 integrated — test-only residual63
+
+Fresh no-context canonicalgpt-6.1-sol/xhigh HOWopinion is terminal/turn.completed/strictmerge valid. Root matched261sources/T/inputs/35preservations/3gitlinks. `evidence/cp3-residual-fixture62-root-adjudication.json` integrates two findings without product changes or criteria waiver. API61 remains594/597; opinion is not source adherence or TQA.
+
+Credential-pin test must preserve realnativeclaim protection and correlate actual blockedrotator/claimPIDs; hold only the successful real claim return after its COMMIT, let queued real encryptedrotation commit, then permit final authorization. Require exact409/BLOCKED/zeroPOST/zeroOUT/REJECTED/released/no receipt and preserved capturedtuple/originaldeadline; forward allactualvalidatorargs. Awaiting promises alone did not prove this ordering.
+
+Only two failed matched-live fixtures use actualHTTPexpires_in75seconds and measure verified acquisition/expiry, conservativeDB/localqueue margin>60000+4500, release/successmargin>60000, real2.2sPGwait and unchanged4.5s/default5sTXbounds. Keep all62second negatives and passing65secondsubscriptioncontrol unchanged. Reducedpositiveboundaryproximity is explicit; unchangednear-marginnegativeproof andallcriteria remain. This is routinefixtureHOW insideapprovedpaths, not newWHAT or relaxedsafety. No artificialexpiry/Datefake/retries/skip or promise thatfinitebufferguaranteesliveness underarbitrarypause.
+
+62freeze ended afterrootreconciliation. Solewriter63 owns only3testpaths undercp3-residual-fixture63-handoff.json, product+258otherpaths immutable. No runner whilewriter. Root reconciles terminalchanges before exactlyone completeAPI64 and fresh affected adherence. CompleteCP4/primary/human/CP5/6/ALL/assurance/realruntime remainmandatory.
+
+| Finding ID | Resolution | Usefulness | Formalizable | Scope | Backlog / Rule Target | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-CP3-FIX62-01 | Integrated | useful | yes | project | n/a | Preserve actualnativeclaim pin and correct exact laterdispatchdenial; transparentfullargs and postclaimcommittedrotation ordering; opinion62/rootadjudication. |
+| IG-CP3-FIX62-02 | Integrated | useful | partial | project | n/a | Genuinelive75seconds only2positives withmeasuredheadroom; allnegativeproof/wait/safety/timebounds retained; noOS/productclaim. |
+
+## CP3 fixture63 inspection — bounded completion before any run
+
+Root matched only3admitted test changes and258other sources exact61. Routine independent read-only inspection confirms remaining HOW gaps: live expiry checks use onlylocalDate and sample before awaitedwaiter; actualhold measurement and guaranteedcallbackspy restoration incomplete. Nativeclaim ordering/PIDs/tuple are present, but explicit liveunrelatedcauses and normalresolver decryption/unchangedownermapping are still needed. No tests/build executed and no new product defect inferred.
+
+`evidence/cp3-residual-fixture63-v2-handoff.json` keeps same3test-onlypaths and integrated62criteria. Solewriter completes realDB/localclock samples afterwaiter and atcompletion, actual2200hold/4500bounds, transparentobserver cleanup and nativecausalfacts. Product/258others/negative62/passing65 remain immutable. Root inspection/reconciliation precedes exactlyonecompleteAPI64; no freeze/run untilwriterterminal. Fresh affected adherence and completeCP4/primary/human/latergates remain mandatory.
+
+## CP3 fixture63 v2 terminal — complete API64 freeze
+
+Root independently matched3terminalhashes/258unchangedsources. Removing onlytargetedscenario/imports/helpers restores unrelatedsourcebodies exact61;62negative mapping oracles and allotherclock/session/TTL/cancel/successor scenarios remain. Actual3changes and qualifications in `evidence/cp3-fixture63-root-reconciliation.json`. No product change, tests/build NOTRUN. Both positives now prove real75lifetime/DB-localqueue-release-completion margins and measured full2200hold/unchanged4500bounds; nativeactual encryptedrotation and liveunrelatedcauses are asserted before finaldispatchgate. Finalclock helper has noholderdurationaccessor, contrarytoroutineinspection; no invented API.
+
+Allwriters terminal. Freeze261sources/thisTODO/positiveinputs/35preservations/3rootgitlinks for exactlyONEcompletecanonical API64. Validator onlyfourunique64outputs; no source/T/inputwrites/retries/autofix/private/runtime/Meta/Git. Root reconciles terminalbytes/reachedassertions then fresh affectedadherence65; allCP4/primary/human/CP5/6/ALL/assurance/physicalobligations remain. No CP3/fullfeatureacceptance.

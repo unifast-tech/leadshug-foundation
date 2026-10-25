@@ -1,0 +1,18 @@
+{
+  "kind": "Root-qualified read-only CP4 realtime preparation62",
+  "status": "Preparation only; no source write, test run, source handoff or acceptance. Current opinion62 freeze intact.",
+  "sourceHow": [
+    "InstagramWebhookController keeps raw-signature/full-envelope preflight/resource-owner/gen/timestamp/scheduleInstagramIngress max4/peer ordering/drain semantics. Replace only per-event direct MessageAcceptance.accept with existing IncomingService.registrar.",
+    "Add optional instagramInboundAt?: Date|null to existing MensagemRecebida and forward unchanged to acceptance. Pass exact server-derived contactAddress/resource/channel/generation/pairingEpoch/externalId and original timestamp, never rederive from browser or delivery time.",
+    "WebhooksModule already provides IncomingService and Typebot; ChannelTransportModule exports common acceptance/outbound; global RealtimeModule exports RealtimeService. No new publisher/owner/framework or RealtimeService source admission needed.",
+    "Incoming registrar publishes only creationWinner after transactional accept. Preserve replay/no unread increment/no duplicate websocket event. Typebot IG guard remains before first SQL/HTTP."
+  ],
+  "testHow": [
+    "New admitted test/instagram-cp4-realtime.e2e-spec.ts: realNest+PG, ligar realHTTPserver, nativecookieWSauthorized+foreignBU. Two real synthetic OAuthaccounts, same opaquepeer \u2192 distinct conversations/contacts, one event per newmessage, unread1each.",
+    "Actual signed IG HTTP ingress, exact replay messageID, zero duplicate message/unread/receipt mutation/WS and foreignBUzero. Establish event listener before ingress and deterministic native socket settle/ping or acknowledgement before negative count assertions, not arbitrary sleep proving absence.",
+    "Collect actual Typebot SQL query events around ingress plus fakeHTTPcounters; IG zero SQL/HTTP. Real signed MetaWA control with active trigger proves expected Typebot SQL/fakecall still works. Provider HTTP counters start after OAuth, ingress no provider I/O.",
+    "Reprove max1000 batch<=15s and allsignature/preflight/generation/dedup/receipt/WAregressions with current changedsource; oldAPI61passdoesnottransfer."
+  ],
+  "descriptionCorrection": "The direct registrar Typebot guard test is in instagram-consumer-boundaries.e2e-spec.ts and should stay accurately labelled. The now-stale signed Instagram journey bypasses IncomingService note is actually in instagram-consumer-isolation.e2e-spec.ts, not the boundaries file. Later handoff must include those exact existing admitted test paths only as required and preserve scenarios/asserts.",
+  "remaining": "All other CP4connections/safeprojection/composer/realHTTPSbrowser, CP5/6/ALL/formalprimary/human/runtime gates remain mandatory. Not a consumer waiver."
+}

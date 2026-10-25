@@ -1,0 +1,35 @@
+{
+  "kind": "cp3-residual-fixture63-test-only-handoff",
+  "writePaths": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 122472,
+      "sha256": "f35e939d81f537458b08e91ab9a98632bd4f614892f86fbf1632dda8ce95ed17"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 22906,
+      "sha256": "4d402c4a3e7e26e44d7a5ef209ee3554e09009727abf1e01dd907d73f22c5951"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 20270,
+      "sha256": "5d8db81210461b4a85ad5533649a73cf882a678e7527818c73f0ff5b0ef4255a"
+    }
+  ],
+  "readManifest": "cp3-residual-fixture62-opinion-frozen-manifest.json",
+  "readOpinion": "cp3-residual-fixture62-opinion-raw.json",
+  "rootAdjudication": "cp3-residual-fixture62-root-adjudication.json",
+  "authority": "ExistingapprovedSTIG03v1.3; only testHOW inside3admittedpaths. Production+other258sources frozen. No newWHAT/threshold relax or interface/private/runtime authority.",
+  "tasks": [
+    "Test-only threepaths. NativeMeta claimpin case forwards allvalidatorargs, observes trueclaimTXcommit then holds successfulreturn beforefinalfence; queued actualencryptedrotationmustcommit and be verifiedbeforefinalreturn. CorrelateactualrotatorPID blocked byactualclaimPID/currentdatabase. Exact409CHANNEL_CONTEXT_CHANGED/BLOCKED,zeroPOST/OUT,REJECTED/released/no externalreceipt, originalselectedtupleanddeadline preserved. No stalePOSTexpectation/statusset; othercases unchanged.",
+    "Only two failed live positives change real synthetic HTTP expires_in65\u2192named75 seconds; preserve negative62 and independently passing subscription65. Prove returned expiry-acquisition75000, actual queue margin>60000+4500, before-release and successfulcompletion margin>60000 usingconservative realDB/localclock; retain real2200msnativewait and4500bounds/default5sTX/counters/state/audits. No expiryrewrite/Datefake/thresholdrelax/retry.",
+    "CapturecallbackexchangeCode actualreturned clockfacts via transparentcase-localtypeddelegate, return originalunchanged; verify persistedcandidate exacttimestamps. ProviderlongTokenIssuedAt isboundaryevidence notassumedproductacquisition. Reportactualsafeclock/headroom/durations only, no tokens."
+  ],
+  "constraints": [
+    "Only named credential-pin scenario and failed mapping-live/callback-margin-live controls; minimum necessary narrow fixturetype/lifetime constants. Preserve allunrelatedscenarios/asserts/counters/62negatives/passing65subscription/session/TTL/cancel/successor/cleanup. No broader helper edits or productchange.",
+    "RealPG/HTTPfake boundary only, no Prisma/lifecycle/policy resultmock. Case-localtransparentobservation permitted afterrealclaimcommit, nativepid capture fromsameTX; no productionTXheld across testpostclaimgate.",
+    "Use exacttypeddelegates Parameters/ReturnType or allactualargs; do not drop expiry/recipient. Propagate realerrors. Restore everyspy and release/drainpendingwrites/sends in finally evenonassertfailure.",
+    "No tests/build/runner/Git/docs/private/runtime/Meta/goals/discovery. RootownsT/evidence; reportall3hashbytes+NOTRUN, exact decisions/lifetime/headroom measurement and changedcase scope. Root inspect/reverseunrelatedbodies then exactlyonefullAPI64."
+  ]
+}

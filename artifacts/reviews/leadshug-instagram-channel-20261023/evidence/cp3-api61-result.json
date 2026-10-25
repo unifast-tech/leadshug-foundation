@@ -1,0 +1,97 @@
+{
+  "candidate": "cp3-api61",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exit_code": 1,
+  "log": {
+    "path": "cp3-api61-api.log",
+    "bytes": 230767,
+    "sha256": "f30288b9c9d7ec768b634839164d27734d08873818e551272ba9f9318ddfae00",
+    "complete_stdout_stderr": true
+  },
+  "stages": {
+    "parity_guard": "passed; 26 mutation rejects",
+    "canonical_validation_project": "started and cleaned up by runner",
+    "prisma_client_generation": "passed (6.19.3)",
+    "migrations": "31/31 applied",
+    "schema_current": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unit": {
+      "files_passed": 39,
+      "tests_passed": 426,
+      "tests_failed": 0,
+      "duration": "4.78s"
+    },
+    "e2e": {
+      "files_passed": 52,
+      "files_failed": 3,
+      "files_total": 55,
+      "tests_passed": 594,
+      "tests_failed": 3,
+      "tests_total": 597,
+      "duration": "584.69s"
+    }
+  },
+  "failures": [
+    {
+      "case": "initial-message claim pins credential through database commit in independently seeded Meta template journey",
+      "assertion": "expected response status one of [201, 503], got 409",
+      "frame": "test/initial-message.e2e-spec.ts:1166:30",
+      "later_unreached": [
+        "provider POST count +1",
+        "final intent state assertions"
+      ]
+    },
+    {
+      "case": "CP2 commit-fences matched live control across equal 2.2s wait",
+      "assertion": "expected crossedMargin to equal false; got true",
+      "frame": "test/instagram-cp2-commit-fences.e2e-spec.ts:185:29",
+      "later_unreached": [
+        "queued-writer wait and barrier release",
+        "final mapping/subscription assertions"
+      ],
+      "qualification": "measurement/fixture failure; no product temporal conclusion"
+    },
+    {
+      "case": "CP2 final-clock matched live candidate margin through final UPDATE wait",
+      "assertion": "after 2.2s pause, actual margin 59424ms expected >60000ms",
+      "frame": "test/instagram-cp2-final-clock.e2e-spec.ts:324:51",
+      "later_unreached": [
+        "attempt-writer barrier and final UPDATE assertions"
+      ],
+      "qualification": "measurement/fixture failure; no product temporal conclusion"
+    }
+  ],
+  "full_failure_bodies_and_stacks": "\u23af\u23af\u23af\u23af\u23af\u23af\u23af Failed Tests 3 \u23af\u23af\u23af\u23af\u23af\u23af\u23af\n\n FAIL  test/initial-message.e2e-spec.ts > initial message BFF journey > covers claim pins credential through its database commit in an independently seeded Meta template journey\nAssertionError: expected [ 201, 503 ] to include 409\n \u276f test/initial-message.e2e-spec.ts:1166:30\n    1164|               buId_actorId_idempotencyKey: { buId: businessUnitId, act\u2026\n    1165|             } })).state })}\\n`);\n    1166|           expect([201, 503]).toContain(response.status);\n       |                              ^\n    1167|           expect(postsAfter).toBe(postsBefore + 1);\n    1168|           const final = await prisma.initialMessageIntent.findUniqueOr\u2026\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[1/3]\u23af\n\n FAIL  test/instagram-cp2-commit-fences.e2e-spec.ts > Instagram CP2 commit fences > final mapping live control promotes and subscribes once across the equal 2.2-second wait\nAssertionError: expected true to be false // Object.is equality\n\n- Expected\n+ Received\n\n- false\n+ true\n\n \u276f mappingCase test/instagram-cp2-commit-fences.e2e-spec.ts:185:29\n    183|       const crossed = await prisma.instagramAuthorizationAttempt.findU\u2026\n    184|       const crossedMargin = crossed.credentialExpiresAt!.getTime() - D\u2026\n    185|       expect(crossedMargin).toBe(!shouldMap);\n       |                             ^\n    186|       expect(await waitForQueuedWriter(barrier.holderPid, 'UPDATE')).t\u2026\n    187|       barrier.release();\n \u276f test/instagram-cp2-commit-fences.e2e-spec.ts:210:112\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[2/3]\u23af\n\n FAIL  test/instagram-cp2-final-clock.e2e-spec.ts > Instagram CP2 final operation and credential clocks > matched live candidate margin remains valid through the same final UPDATE wait\nAssertionError: expected 59424 to be greater than 60000\n \u276f test/instagram-cp2-final-clock.e2e-spec.ts:324:51\n    322|       expect(actualCredentialExpiry - Date.now()).toBeGreaterThan(60_0\u2026\n    323|       await pause(2_200);\n    324|       expect(actualCredentialExpiry - Date.now()).toBeGreaterThan(60_0\u2026\n       |                                                   ^\n    325|       expect(await waitForAttemptWriter(barrier.blockerPid)).toBe(true\u2026\n    326|       barrier.release();\n\n\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af\u23af[3/3]\u23af\n\n Test Files  3 failed | 52 passed (55)\n      Tests  3 failed | 594 passed (597)\n   Start at  23:32:18\n   Duration  584.69s (transform 9.86s, setup 266ms, collect 93.14s, tests 481.55s, environment 9ms, prepare 3.04s)",
+  "reached_assertions": {
+    "authorization_fences": "16/16 passed; includes original three A46 mutation-first cases, six prior controls, and seven new authorization-first controls",
+    "IG_credential_rotation_serialization": "passed actual final dispatch before real credential rotation waiting on pinned owner; 1071ms",
+    "WA_disconnect_controls": "ordinary and initial disconnect cases passed; ordinary POST before disconnect and confirmed initial receipt after disconnect commit after pinned POST",
+    "CP2_natural_session_strict_250ms": "passed; case duration1476ms",
+    "CP2_batch": "initial1000 updates 5069.755ms; replay1000 3383.446ms; complete case8481ms passed, including later assertions",
+    "native_dispatch_lock_groups": "same-account IG, independent-account, formatted WA all passed; 728ms test case",
+    "P2002": "real P2002 rollback/exact-readback/retry test passed (537ms); test name and full assertions passed, log does not emit a standalone conflict-count scalar",
+    "accepted_local_facts": "4/4 passed",
+    "query_boundaries": "5/5 passed",
+    "CSV": "1/1 passed",
+    "final_clock": "8/9 passed; one live-margin assertion failed"
+  },
+  "unreached_or_unproven": {
+    "three_failed_E2E_cases": "subsequent per-case assertions after first failure are unreached",
+    "P2002_numeric_count": "case passed but an independent numeric count was not printed in log",
+    "release_or_acceptance": "not claimed"
+  },
+  "freeze_postflight": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 776,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "scope": "one full canonical local synthetic API validation only; no acceptance or release claim"
+}

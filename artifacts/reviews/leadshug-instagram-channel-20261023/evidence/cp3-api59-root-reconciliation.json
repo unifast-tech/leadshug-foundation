@@ -1,0 +1,17 @@
+{
+  "kind": "cp3-api59-root-reconciliation",
+  "sourceRowsExact": 261,
+  "todoExact": true,
+  "boundInputsExact": 763,
+  "preservationRowsExact": 35,
+  "rootGitlinksExact": 3,
+  "log": {
+    "bytes": 18780,
+    "sha256": "92536402e8dac5dd2ff29b254245974a2dc278562c5eea7308b7ab8baf51483f"
+  },
+  "exitCode": 1,
+  "reached": "Parity26/generate/31migrations/schema/lint/build passed;425/426units,38/39files.",
+  "failure": "One OutboundService ordering unit mock overrides claimOrdinary to returntrue without invoking input.validate, so original persisted selectedContext was never captured; final fence blocks. Source owner correctly refuses missing original claim tuple.",
+  "unreached": "All E2E, including16authnative, timing, batch, peerlocks/P2002/query/CSV/ACK/finalclock. No such behavior proof for59.",
+  "next": "Terminal freeze59 ends. Bounded test-only60 fixes exactly this mock to execute actual validate callback with existing syntheticTX/context and return eligibility. Preserve every trace/counter/recipient/settlement assert and productionbytes. Root reconcile then completeAPI61; fresh affected source adherence thereafter. No acceptance."
+}

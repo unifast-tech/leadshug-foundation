@@ -1,0 +1,10 @@
+{
+  "kind": "cp3-fixture60-root-reconciliation",
+  "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+  "bytes": 30740,
+  "sha256": "d4e1d705b33c3ceedc0efef39ebc24b93319c719aae20160d6b86ecc8c0d00d6",
+  "reverseExact59": "26de049c4c134fdc2dfefc6bff085523d3ce5e583a995cf92f91dfd4e1012376",
+  "other260SourcesExact": true,
+  "scope": "Exactly existing tx destructuring and validator delegation in one ordering unit, all assertions/traces/counters unchanged. No product edit.",
+  "status": "NOTRUN, solewriterterminal; completeAPI61 next; allremaininggatesmandatory."
+}

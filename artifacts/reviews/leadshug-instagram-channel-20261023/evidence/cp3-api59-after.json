@@ -1,0 +1,22 @@
+{
+  "candidate": "cp3-api59",
+  "postflight": "pass",
+  "counts": {
+    "source_rows": 261,
+    "source_mismatches": 0,
+    "bound_input_rows": 763,
+    "bound_input_mismatches": 0,
+    "preservation_rows": 35,
+    "preservation_mismatches": 0,
+    "root_gitlinks": 3,
+    "root_index_exact": true,
+    "errors": []
+  },
+  "log": {
+    "path": "cp3-api59-api.log",
+    "bytes": 18780,
+    "sha256": "92536402e8dac5dd2ff29b254245974a2dc278562c5eea7308b7ab8baf51483f",
+    "complete_stdout_stderr": true
+  },
+  "errors": []
+}

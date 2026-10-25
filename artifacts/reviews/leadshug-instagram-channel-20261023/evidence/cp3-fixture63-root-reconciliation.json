@@ -1,0 +1,41 @@
+{
+  "kind": "cp3-fixture63-v2-root-reconciliation",
+  "changed": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 128746,
+      "sha256": "639ffaea60923fcfb87544dbbccf307dee6a09d1d6cc98ce48d9e7fa0a8a8a3f"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 25333,
+      "sha256": "f0f0909e176f1ed886d8452378f68825ceb773f41f17da41a658ea0d1d760def"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 23454,
+      "sha256": "925439af70ab60d1ae0992e5516edea340f247a45dd1ed7f6de7c128221807e5"
+    }
+  ],
+  "other258SourcesExact61": true,
+  "productCodeUnchanged": true,
+  "unrelatedBodyComparisons": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "unrelatedBodiesExact61": true
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "unrelatedBodiesExact61": true
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "unrelatedBodiesExact61": true
+    }
+  ],
+  "clockHow": "Only2live positives genuineHTTP75 lifetime/actualreturnedacquisition/expiry. RealDB/localmax samples queue>64500, afteractualwaiter immediatelybeforerelease>60000, completion>60000; monotonic full2200hold and unchanged4500bounds/default5000TX. Mapping62negative eligibility/crossing/state/counts retained; allothercases including65subscription exact61.",
+  "nativeHow": "Realallargsvalidator/actualclaimPID-blockedrotatorPID; postactualCOMMIT successfulclaimgate; realencryptedrotationcommits/decrypts,owner/channel/grant/BU/session/originaldeadlinefacts before release; exact409/BLOCKEDzeroPOST/OUT/REJECTED/released/noexternalreceipt andselectedtuple/deadline retained. Allspies/gatesdrainedfinally.",
+  "inspectionQualification": "Finalclock has no holderDuration accessor; none invented. TypedclockFactsbox and publicNestDI used; originalexchangeCoderestored even cleanupfailure.",
+  "tests": "NOTRUN; nobehavioracceptance.",
+  "next": "ExactlyonefullAPI64 thenfreshcurrentaffectedadherence; completeCP4/primary/human/CP5/6/allassurance/realproof mandatory."
+}

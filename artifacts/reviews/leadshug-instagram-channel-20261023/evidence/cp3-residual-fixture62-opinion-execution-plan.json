@@ -1,0 +1,33 @@
+{
+  "kind": "cp3-residual-fixture62-opinion-execution-plan",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "canonicalRunner": "delphi-ai/tools/subagent_review_run.py",
+  "canonicalRunnerSha256": "36ea0185160cf660ae58a89dd2fbb0bd488d7a1634ee42831aa26e14a83afe77",
+  "configuration": "In-memory subprocess.run argv wrapper adds only documented codex exec --strict-config -c model_reasoning_effort=\"xhigh\"; canonical build_prompt, closedstdin, model, isolatedproject/read-only/ephemeral/collection unchanged. No executable/config/helper change.",
+  "promptChars": 853378,
+  "promptBytes": 856317,
+  "derivedCarryCorrection": {
+    "ids": [
+      "IG-CP2-ROOT-02",
+      "IG-SUBPROTO-01",
+      "IG-SUBREC-02",
+      "IG-SUBREC-03",
+      "IG-CP2-R1-04",
+      "IG-CP2-R1-06",
+      "IG-OAUTH-SESSCOMP-01",
+      "IG-CP3-ROOT-03",
+      "IG-CP3-A-02",
+      "IG-CP3-A46-01",
+      "IG-CP3-B46-01",
+      "F-B338F932",
+      "F-B67948FF",
+      "F-82E76A38",
+      "F-175B5680"
+    ],
+    "originalSourceDispositionsPreserved": true,
+    "closedOriginalFindingsNotReopenedForNewA46Aliases": true,
+    "canonicalSchemaValidated": true
+  },
+  "lifecycle": "Wait naturally while running; no interruption/replacement/package alteration based on time. Strictschema merge after terminal turn.completed; no approval or waiver inferred."
+}

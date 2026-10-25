@@ -1,0 +1,37 @@
+{
+  "kind": "cp3-fixture63-root-inspection-before-v2",
+  "changes": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 125998,
+      "sha256": "1a52144c723e01e647759519326e4e025e35a02540d02eb8d3acbc9bb8d73780"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 24037,
+      "sha256": "78f5505ce9a021cf29ee257cd6c94e289b25977fff11d348ace1e11143acdc43"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 22796,
+      "sha256": "5c996889114da17e1673003f986f2e06a62122a0ced7263d16fcf1137374cc7b"
+    }
+  ],
+  "other258SourcesExact61": true,
+  "tests": "NOTRUN",
+  "findings": [
+    "Two live positives use Date.now only; conservative actual DB/local clock required at queue, immediately before release after waiter check, and completion. Actual monotonic hold duration needed.",
+    "Callback cleanup must restore transparent exchangeCode delegate even if barrier cleanup throws. Capture clock facts only with sound async-box typing.",
+    "Credential-pin case ordering and PID correlation implemented. Add normal resolver decryption of genuinely rotated credential plus unchanged owner/channel/BU/grant/session/original deadline liveness before releasing successful claim return."
+  ],
+  "bounds": "Existing waitForBlockedQuery default is8000ms, so new native PID loop8000 is preserved bound, not relaxation. Other bounds and all62negative/passing65subscription cases remain immutable.",
+  "status": "Not fully ratified HOW yet. Same three test paths may receive bounded completion; no product changes or test acceptance.",
+  "independentRoutineInspection": "instagram_test48 terminal read-only agrees. No tests/edits; not formal TQA/adherence.",
+  "additionalInspection": "Callback live control must assert actual barrier holder bound if actual helper exposes duration, preserving4500 threshold. Clock samples must conservatively include elapsed query-return time if DB time sampled earlier than return.",
+  "inspectorCorrection": "Root directly read final-clock installAttemptBarrier: returns blockerPid/blocker/release/cleanup only. Contrary to routine inspector claim, no holderDurationMs accessor exists; no helper/property invented. Existing default5000TX preserved; mapping holder4500 and positive measuredhold/request4500 retained.",
+  "v2CompletionBeforeRunner": [
+    "Typed property observation box avoids TS closure-local null-to-never narrowing.",
+    "Positive-only monotonic hold loop ensures actual full2200ms with unchanged minimum/bounds; negative62 singlepause unchanged.",
+    "Native claim final DBclock/signedsession/deadline liveness immediately after normal decryption and before releasing postclaimgate."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "cp3-fixture60-single-unit-claim-callback",
+  "writePaths": [
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 30641,
+      "sha256": "26de049c4c134fdc2dfefc6bff085523d3ce5e583a995cf92f91dfd4e1012376"
+    }
+  ],
+  "readManifest": "cp3-api59-frozen-manifest.json",
+  "rootProof": "cp3-api59-root-reconciliation.json",
+  "task": "Only reserves an ordinary owner before preflight and claims it only at final provider boundary case: destructure existing setup tx and make overridden claimOrdinary actually await input.validate(tx,context) and return its eligible boolean, like setup default. Keep trace push claim and all existing asserts/counters/recipient/settlement. Do not inject captured tuple through product fallback, no blind true. No other tests/source changes, tests/build/runner/docs/Git/private/runtime/Meta/goals. Return terminal hashbytes/NOTRUN."
+}

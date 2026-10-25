@@ -1,0 +1,39 @@
+{
+  "kind": "cp3-residual-fixture62-root-adjudication",
+  "status": "HOW integrated; no source/test/feature acceptance",
+  "all261TodoInputs35Preservations3GitlinksExact": true,
+  "canonicalTurnCompleted": true,
+  "strictSchemaMergePassed": true,
+  "sourceCount": 11,
+  "findings": [
+    {
+      "id": "IG-CP3-FIX62-01",
+      "severity": "high",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "scope": "project",
+      "classification": "release-blocker",
+      "route": "fix in this TODO",
+      "state": "open; test-only63 implementation/proof pending"
+    },
+    {
+      "id": "IG-CP3-FIX62-02",
+      "severity": "medium",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "scope": "project",
+      "classification": "release-blocker",
+      "route": "fix in this TODO",
+      "state": "open; test-only63 implementation/proof pending"
+    }
+  ],
+  "ratifiedHow": [
+    "Test-only threepaths. NativeMeta claimpin case forwards allvalidatorargs, observes trueclaimTXcommit then holds successfulreturn beforefinalfence; queued actualencryptedrotationmustcommit and be verifiedbeforefinalreturn. CorrelateactualrotatorPID blocked byactualclaimPID/currentdatabase. Exact409CHANNEL_CONTEXT_CHANGED/BLOCKED,zeroPOST/OUT,REJECTED/released/no externalreceipt, originalselectedtupleanddeadline preserved. No stalePOSTexpectation/statusset; othercases unchanged.",
+    "Only two failed live positives change real synthetic HTTP expires_in65\u2192named75 seconds; preserve negative62 and independently passing subscription65. Prove returned expiry-acquisition75000, actual queue margin>60000+4500, before-release and successfulcompletion margin>60000 usingconservative realDB/localclock; retain real2200msnativewait and4500bounds/default5sTX/counters/state/audits. No expiryrewrite/Datefake/thresholdrelax/retry.",
+    "CapturecallbackexchangeCode actualreturned clockfacts via transparentcase-localtypeddelegate, return originalunchanged; verify persistedcandidate exacttimestamps. ProviderlongTokenIssuedAt isboundaryevidence notassumedproductacquisition. Reportactualsafeclock/headroom/durations only, no tokens.",
+    "Tradeoff: positiveshave lessboundaryproximity, unchanged62negativesretaindecisivecrossing. NormativeWHAT fixesverifiedprovenance/60margin andnativewait/bounds, not65fixture. Therefore routineHOW insideadmittedpaths, not a waiver/newWHAT or userapproval. Anyfailedheadroom/timingpreconditionremainsfailed withoutskip/retry."
+  ],
+  "qualifications": "API61 remains594/597, laterfailedassertsunreached. Sevennewauthcontrolsafterproduct provenance retained. This is focusedarchitectureopinion notTQA/fulladherence; completeAPI/currentaffectedadherence/allCP4/primary/human/latergates remain."
+}

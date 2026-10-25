@@ -1,0 +1,39 @@
+{
+  "kind": "cp3-residual-fixture63-v2-test-only-completion",
+  "authority": "Same existing approved ST-IG-03 v1.3 and integrated opinion62 HOW; no new WHAT or new test-path admission. Root inspection exposed missing measurement/cleanup/provenance details before any run.",
+  "writePaths": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 125998,
+      "sha256": "1a52144c723e01e647759519326e4e025e35a02540d02eb8d3acbc9bb8d73780"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 24037,
+      "sha256": "78f5505ce9a021cf29ee257cd6c94e289b25977fff11d348ace1e11143acdc43"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 22796,
+      "sha256": "5c996889114da17e1673003f986f2e06a62122a0ced7263d16fcf1137374cc7b"
+    }
+  ],
+  "readManifest": "cp3-residual-fixture62-opinion-frozen-manifest.json",
+  "additionalReadPaths": [
+    "api-app/src/domain/channels/channel-credential-resolver.ts",
+    "api-app/src/infra/session/session.service.ts",
+    "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts"
+  ],
+  "tasks": [
+    "Only two targeted live positives: query actual PostgreSQL clock_timestamp at queue, last immediately-before-release after confirming actual waiter, and successful completion. Use max(real DB timestamp, Date.now()) for conservative remaining lifetime. Preserve actual75000ms returned lifetime, >64500queue, >60000release/completion, real2200ms hold, existing4500completion/holder and default5000TX limits; record monotonic actual hold, not only requested delay. Keep62negative and passing65subscription behavior/assertions unchanged. Minimal helper local to tests permitted; no product/fakeclock/expiryrewrite/retry/skip/softened limits.",
+    "Callback case: transparent Parameters/ReturnType delegate must return actual unchanged candidate. Retain only actual acquiredAt/expiresAt safe facts in typed observation box, no token diagnostics. Restore original exchangeCode even when barrier cleanup throws using robust nested finally. Use public actual DI client if available instead of private-property casting; inspect only declared owner wiring if needed.",
+    "Credential pin only: preserve current full-arg delegation, real transaction PID correlation and successful post-COMMIT claim return gate. Verify priorGeneration/business/resource ownership/current channel mapping unchanged after actual encrypted rotation; normal ChannelCredentialResolver.resolve decryption proves synthetic rotated value. Before releasing final claim return assert actual signed session valid and sameactor, actor/grant/BU live, original lease/deadline not expired using actual DB/local time. Preserve exact409code/outcome,zeroPOST/OUT,REJECTED/released/noexternalreceipt, selectedtuple/originaldeadline. No new arbitrary timing thresholds.",
+    "Cleanup every spy/gate/pending real operation robustly even assertion failure. No held production transaction across postclaim gate. Only named three scenarios/minimal necessary imports/constants/helpers; preserve all other scenario bodies and assertions."
+  ],
+  "constraints": [
+    "Single writer44; no tests/build/runner/Git/docs/env/private/runtime/Meta/goals/broad discovery. Root owns all T/evidence. Other258sources and all product code immutable.",
+    "Report exact decisions, all3hashes/bytes, NOTRUN. Root independently inspect and compare unrelated bodies then exactlyone complete API64. No acceptance."
+  ],
+  "profile": "Operational / Coder executor; root Strategic / CTO-Tech-Lead docs/orchestration only",
+  "routing": "routing-cp3-residual-fixture63-v2.json"
+}

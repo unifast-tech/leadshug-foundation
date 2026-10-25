@@ -1,0 +1,109 @@
+{
+  "kind": "closed-residual-fixture62-HOW-opinion",
+  "reviewKind": "architecture_opinion",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 295598,
+    "sha256": "ba97e45be2d785933403a72e9cdd4d768405f5a40d503652f68a79e328b92d71"
+  },
+  "requiredSourceBodies": [
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 122472,
+      "sha256": "f35e939d81f537458b08e91ab9a98632bd4f614892f86fbf1632dda8ce95ed17"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 22906,
+      "sha256": "4d402c4a3e7e26e44d7a5ef209ee3554e09009727abf1e01dd907d73f22c5951"
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 20270,
+      "sha256": "5d8db81210461b4a85ad5533649a73cf882a678e7527818c73f0ff5b0ef4255a"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50850,
+      "sha256": "14cc63c095022ce7890a43a1ea6613d4be7dd582c6cfb28e86b45aab29e0795a"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64678,
+      "sha256": "55220d272312d68f5bb379a12c0f9f54350ab233696a2dc071b753c14c09eff8"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 73878,
+      "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a"
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34866,
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979"
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 49834,
+      "sha256": "ac6859204f25a215f17cabd125c494599124f22c81845c9dccdd811cc05847ab"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24692,
+      "sha256": "78692d58fa91d9ad15e3a72da27554b179dcbe42f7514d2f08d1b68a05a55b64"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13235,
+      "sha256": "aa6485060287910d586d17b8cbffe2f194b1b3a29fb71c697f27e0b78c28ffbf"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 9602,
+      "sha256": "9812de537d5e5f0c84ae9b824b7343f8dfd9f63dfa0520f6da9a7063d2d13eee"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api61-root-reconciliation.json",
+      "bytes": 4408,
+      "sha256": "31a7b1a8f1e14a18f1852f6b0de08d3658030a3ad263362a08a9b2ca446af7ec"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-api61-result.json",
+      "bytes": 7079,
+      "sha256": "7637ad9e233831d2f832638db7e5f0de8852561e5a3f3edeb51034266fa29496"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-source54-root-reconciliation.json",
+      "bytes": 3969,
+      "sha256": "c5eed50972a7e1585846f5db00d77d2bcf7c7c7e76ba3440387ee90cc0bbe6c0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-root-adjudication.json",
+      "bytes": 3360,
+      "sha256": "a379dc9e663ed19c831717de7a02f0d17591edd9854b4dc79b4c3c138fe9ee9f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-final-fence47-opinion-raw.json",
+      "bytes": 15374,
+      "sha256": "82a4ab9ac6fa185b7513d52cd814ad11e10f392dc6fa78dbfcc8ebbee7de0573"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-repair58-root-reconciliation.json",
+      "bytes": 443,
+      "sha256": "50c178bbccb9edd716e1e27537ff5e00f3f39dd7d56b47f09d8fbff68a309530"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp3-fixture60-root-reconciliation.json",
+      "bytes": 576,
+      "sha256": "63d6d06ecad108738c3672bbd3419e3dca76209843895f39569fa712a4ce8fe9"
+    }
+  ],
+  "question": "Choose the simplest faithful HOW for three residual API61 test failures inside the existing approved WHAT. This is an architecture_opinion about test observation/fixture faithfulness, not a whole source-adherence acceptance or a test-quality gate waiver. No product/code edits or external protocol assumptions are authorized by this opinion.\n1. Existing initial-message credential-pin case pauses the REAL claim validator while its transaction has credential pins, observes an actual queued encrypted credential rotation, releases validation, waits for that rotation to commit, then still expects one provider POST and201or503. New common finalProviderFence revalidates original credential tuple coherently after claim commit. API61 printed native pin true/actual version advance/zeroPOST/zeroOUT/409/REJECTED before the old positive assertion failed. Assess the faithful exact oracle: preserve native commit pin and real rotation, but a rotation committed before final authorization should block; no stale credential POST, broad status set or source fallback. Its resolver spy currently delegates only3args while actual validator takes captured expiry/recipient too; specify correct transparent observation forwarding and how to prove native earlier pin and exact later denial without rewriting other cases. Existing16authcontrols cover real authorization-first serialization and mutation-first denial and all passed, but do not use them as permission to weaken this case.\n2. Two live positive clock controls use actual provider expires_in65 while their negative controls use62 and wait a real2.2s in native PostgreSQL UPDATE queues. API61 live controls actually crossed the unchanged60s safety margin (one remaining59424ms) before final oracles. Do not infer OS cause or a product temporal bug from that. Preserve genuine provider expiry evidence and native waits; do not use Datefake, DB expiry rewrite, arbitrary assertions/status alternatives, test retry or relaxation of product60s/2.2s waits/4.5s holder/operation thresholds. Need a valid matched-live fixture that remains actually live at required checkpoints, alongside unchanged actual62s negative crossing. Assess whether aligning fixture preparation before credential issuance can faithfully retain65s, or using a genuinely longer verified expires_in for only matched live positive controls is routine fixture HOW while preserving near-boundary denial and all behavioral criteria. Do not blindly increase a number to make GREEN; identify the actual causal boundary and matched variable, exact invariants/measurements and limits. If any change would alter normative WHAT or acceptance semantics, flag it instead of silently approving. We must preserve all clock-negative/session/deadline controls, counters, real locks, cleanup and strict bounds. A stronger synchronized measured fixture is acceptable if minimal and faithful, not a new framework.\nSpecify the minimal exact source/test paths and ordered implementation/validation plan. Recommend keeping production unchanged unless a concrete defect is proven. Remaining primary GET protocol and human privacy/UTF8 proposals, complete CP4 consumers, CP5/6 and all assurance/runtime gates stay open. This review cannot turn API61 partial594/597 into GREEN. Return strict canonical JSON perdispatch, all five positions and clear recommendation, no tools/network/files.",
+  "frontendConsumerMatrix": "Full current approvedTODO enclosed. AllCP4connection/safeprojection/composer/realtime/nativeHTTPSconsumers remain NOTimplemented and mandatory, no backend-only acceptance. Review bounded to residual testHOW before further source; complete feature still required.",
+  "proofQualification": "API61 singlecompletecanonicalrun, exact261/T/776/35/3 rootproof;426units and594/597E2E. All16auth/5query/ACK4/CSV/native3lockgroups/P2002asserts/strict250naturalSession/batch passed. Three failedcase laterasserts unreached; fullsourcecurrent. New7positivecontrols authoredafterproduction; primary3A46+B46RED53 precededproduction, no retrotest-first claim.",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "execution": "Freshcanonicalclosedstdin runner, isolatedprojectcontext, explicitargv-only strictCLIeffortconfiguration as47. Nohelper/source/config changes. Waitnaturallyuntilterminal."
+}
