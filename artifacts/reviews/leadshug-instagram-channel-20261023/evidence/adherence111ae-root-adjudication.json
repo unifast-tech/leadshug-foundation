@@ -1,0 +1,206 @@
+{
+  "kind": "Root classification of ten fresh111A/E findings",
+  "reviews": [
+    "adherence111a-raw.json",
+    "adherence111e-raw.json"
+  ],
+  "findings": [
+    {
+      "finding_id": "IG-ADHERENCE111A-01",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Durable verification can strand its binding lease after commit",
+      "rationale": "verifyConnection awaits actorTransaction before entering its try/finally. That transaction commits the provider-resource lease, while actorTransaction performs another signed-session check after the awaited commit. If the session expires across commit, the await rejects before binding is assigned and before cleanup becomes active. The original lease remains until its 60-second expiry despite zero provider requests, blocking subsequent verification or credential promotion. This is the new CP4 verification path; the resolved subscribeAfterMapping acquisition repair remains closed.",
+      "suggested_action": "Extend the exact-original-token cleanup lifecycle around verification acquisition itself, including rejection after a committed claim. Preserve successor leases and subscription-dispatch history. Prove natural signed-session expiry across an actual PostgreSQL commit with a matched live control and immediate original-holder cleanup.",
+      "affected_paths": [
+        "api-app/src/domain/channels/instagram-authorization.service.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "New verifyConnection awaits acquisition before try/finally; actorTransaction checks session after real commit. Prior subscribeAfterMapping cleanup stays closed."
+    },
+    {
+      "finding_id": "IG-ADHERENCE111A-02",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "UUID Evolution verification bypasses the existing product-module gate",
+      "rationale": "The existing :tipo/verify controller calls modulos.exigir for NAO_OFICIAL before invoking ChannelsService.verificar. The new UUID verification path calls that same service without this check, and ChannelsService contains no equivalent module guard. An ADMIN with an existing Evolution binding can therefore reach provider verification and trust updates through the UUID endpoint while the tenant's unofficial-channel module is disabled. SCOPE-03 and DOD-07 require preservation of existing WhatsApp contracts; UUID addressing does not authorize removing this capability restriction.",
+      "suggested_action": "Apply the existing unofficial-channel module admission to UUID verification before provider work, while preserving actor authorization and exact-binding checks. Add native enabled/disabled controls showing equivalent enforcement on both verification surfaces and zero provider calls when disabled.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channel-connections.service.ts",
+        "api-app/src/surfaces/bff/channels.controller.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Existing tipo verify gates canalNaoOficial; exact UUID service currently lacks equivalent gate."
+    },
+    {
+      "finding_id": "IG-ADHERENCE111A-03",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Disconnecting Instagram removes its known readable account label",
+      "rationale": "Both display queries recover account_username only through a completed attempt matching the currently joined credential version and generation. disconnectConnection deletes that credential and increments generation, so the retained, proven username becomes unavailable to the projector. Multiple disconnected accounts consequently return the same generic Instagram accountLabel despite retained ownership and authorization evidence. This conflicts with SCOPE-07/DOD-06 and the catalog contract requiring a readable account alongside its local UUID, particularly when choosing a connection for reauthorization.",
+      "suggested_action": "Project the last proven account label independently of current credential usability, retaining exact BU, channel, immutable resource and app-scope association checks. Verify that two disconnected accounts retain distinguishable known labels through catalog reload and reauthorization without exposing credentials or changing readiness.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channel-display.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Both display queries require current credential; disconnect deletes it, despite retained completed account proof."
+    },
+    {
+      "finding_id": "IG-CP5-111E-01",
+      "severity": "high",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Resource-claim telemetry references an undeclared identifier",
+      "rationale": "The resource-claim case declares and asserts unsettledClaimsAtRelease, but its final JSON log uses the undeclared shorthand unsettledClaimsAtBarrierRelease. This is a static identifier error and would also throw ReferenceError if the spec were transpiled without type checking. Even successful ownership assertions cannot complete this case as written. The supplied qualification explicitly records no compilation or execution.",
+      "suggested_action": "Bind the telemetry property to the actual observed unsettledClaimsAtRelease value. Preserve the assertion of twenty unsettled calls and execute the corrected case through canonical validation.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Root inspected current CP5 code and supplied schema against concrete finding; preserve all approved workload/effect/latency assertions."
+    },
+    {
+      "finding_id": "IG-CP5-111E-02",
+      "severity": "high",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The batch identity assertion places peer fields on the wrong Prisma model",
+      "rationale": "The 1000-message case passes externalPeerId, namespace and scopeReference inside conversationRoutes.some. The enclosed schema defines these fields on ContactIdentity, while ConversationRoute has contactScopeReference and businessScopeReference. The argument is incompatible with ConversationRouteWhereInput and would be rejected by Prisma at runtime if type checking were bypassed. This blocks the per-peer assertion before the latency and replay proof can finish.",
+      "suggested_action": "Place the peer namespace, scope and externalPeerId predicates on the outer ContactIdentity filter. Use conversationRoutes.some for the exact expected route ID, conversation, BU and business identity, preserving all 1000 association assertions.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+        "api-app/prisma/schema.prisma"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Root inspected current CP5 code and supplied schema against concrete finding; preserve all approved workload/effect/latency assertions."
+    },
+    {
+      "finding_id": "IG-CP5-111E-03",
+      "severity": "high",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The retained-cohort guard rejects legitimate messages added by earlier cases",
+      "rationale": "assertRetainedCohort labels its message count original_in but counts every qualifying Instagram IN message, without restricting it to the original seeded messages. The replay case intentionally adds one message, then calls this guard expecting exactly 10000 messages per BU. On the intended successful behavior, BU A instead has 10001. Subsequent resource, RLS and batch cases encounter the same failing entry guard. This defeats the required six independent workloads over one retained cohort.",
+      "suggested_action": "Track the original message IDs or external IDs and count only those in the preservation guard. Retain exact conversation/route preservation checks and separately assert each workload's additional message and unread effects. Do not reset the cohort between cases.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Root inspected current CP5 code and supplied schema against concrete finding; preserve all approved workload/effect/latency assertions."
+    },
+    {
+      "finding_id": "IG-CP5-111E-04",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The PostgreSQL waiter observer can queue behind the claims it must observe",
+      "rationale": "The holder, twenty claim transactions and pg_stat_activity polling all use the same Prisma pool. With at most twenty-one connections, the holder and blocked contenders can occupy every connection while remaining claim acquisitions precede the observer in the pool queue. The observer then cannot establish the required waiter evidence until finally releases the holder, which occurs only after observation fails. The package supplies no guaranteed spare observer capacity. Counting submitted unsettled calls honestly accommodates pool queuing, but does not resolve this observation dependency.",
+      "suggested_action": "Use an independently connected synthetic PostgreSQL observer or otherwise guarantee observer capacity before launching all twenty claims. Preserve twenty genuine pending claim invocations, numeric observed waiters, one winner, nineteen ownership conflicts and unconditional draining; do not solve this by reducing contention or extending timeouts.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Root inspected current CP5 code and supplied schema against concrete finding; preserve all approved workload/effect/latency assertions."
+    },
+    {
+      "finding_id": "IG-CP5-111E-05",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The spec introduces hard query caps beyond the recorded page-budget contract",
+      "rationale": "The governing TODO's fixture70 resolution explicitly preserves at most eight domain queries per conversation page while keeping options/thread query counts as telemetry with no N+1. measureRequest applies the eight-query assertion to lookup and reply-options as well as list pages, and the RLS companion imposes it on thread requests again. These additional hard gates are not established by that resolution or the frozen lookup/options latency thresholds.",
+      "suggested_action": "Apply the approved eight-query cap to list pages. Preserve lookup/options p95 limits, actual query telemetry and concrete bounded-query/no-N+1 protection without silently introducing new numeric acceptance limits. Any intended additional hard cap needs explicit contract reconciliation.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+        "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "T851 plus explicit fixture70 clarification at T1805: eight domain queries per LIST PAGE; options/thread telemetry/noN+1, p95 preserved. Root110 wrongly broadened this to all request classes; repair is contract reconciliation before any execution, not waiver."
+    },
+    {
+      "finding_id": "IG-CP5-111E-06",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Zero-provider-HTTP assertions omit supported provider boundaries",
+      "rationale": "EPS records only instagramFake.calls, and establishes that baseline after the isolated request probes and initial list/plan request. Meta and Evolution calls during EPS would escape its no-HTTP oracle. Replay, RLS and batch check Instagram and Meta but omit evolutionFake.providerCalls. The approved zero-external-HTTP and ingress isolation protections cover the shared system, so these counters can report success despite an unintended WhatsApp provider call.",
+      "suggested_action": "Capture Instagram, Meta and Evolution counter baselines before the relevant read or ingress workloads, including isolated EPS probes and warmups, and assert unchanged counters afterward. Preserve expected OAuth/setup calls outside those measurement intervals.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+        "api-app/test/helpers.ts"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Root inspected current CP5 code and supplied schema against concrete finding; preserve all approved workload/effect/latency assertions."
+    },
+    {
+      "finding_id": "IG-CP5-111E-07",
+      "severity": "medium",
+      "category": "performance",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The index protection oracle enforces only incidental route index use",
+      "rationale": "The EPS case captures a real display-query plan, but only requires that each named table have some index and that some conversation_routes scan use an index. Every table's primary-key index satisfies the availability test. Peer/owner plan entries are merely logged, and a route-count lateral subquery can satisfy the route assertion even if another important scan regresses. This does not enforce the recorded source110a correction for qualified peer/owner/route lookup plans, bounded predicates and cardinality.",
+      "suggested_action": "Capture the actual relevant peer and owner lookup SQL as well as the route/display SQL, retain original parameters, and add workload-appropriate assertions for qualifying index definitions, bounded predicates and plan cardinality. Allow justified sequential scans on the small owner cohort; do not force the planner or claim all joins must use indexes.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-scale-source110a-static-review.json"
+      ],
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "classification": "release-blocker",
+      "routing": "fix in same approved TODO",
+      "status": "open; source correction and native proof required",
+      "rootEvidence": "Root inspected current CP5 code and supplied schema against concrete finding; preserve all approved workload/effect/latency assertions."
+    }
+  ],
+  "remaining": "All ten open; earlier closures remain; currentALL/browser/primary/human/security/TQA/cutover/final/CP6 physical gates unwaived."
+}

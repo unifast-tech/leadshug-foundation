@@ -1,0 +1,12 @@
+{
+  "kind": "Freshadherence111A terminal independent root reconciliation",
+  "frozenRowsExact": 44,
+  "sourceFullBodiesExact": 33,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "toolItems": [],
+  "strictMerge": "PASS",
+  "scope": "RuntimeAonly; otherB/C/D/E/currentALL/remaininggatesopen; no wholefeatureadherence or deliveryacceptance",
+  "reviewPosition": null,
+  "findingCount": 3
+}

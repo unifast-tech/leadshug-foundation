@@ -1,0 +1,32 @@
+{
+  "kind": "Sole source113 faithful CP5 proof correction",
+  "profile": "Operational / Coder",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "baseline": "cp5-source110a-terminal-manifest.json",
+  "todo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 369356,
+    "sha256": "5536964c92f990a6e856dd992192bc7296334875afcadb9bc6cdc362ff89f105"
+  },
+  "readFirst": [
+    "adherence111e-raw.json",
+    "adherence111ae-root-adjudication.json",
+    "cp5-all112-result.json",
+    "cp5-scale-contract-resolution109.json"
+  ],
+  "requirements": [
+    "Correct all seven reported lint errors without suppression/autofix/runtime execution. Correct E01 actual telemetry binding, E02 ContactIdentity versus ConversationRoute model predicates with exact route/business/BU/account checks for all1000.",
+    "E03 retain original seeded message IDs/externalIds and qualify retained-cohort guard exclusively to originals, preserve exact20k conversations/routes and separately all added workloads effects; no DBreset between cases.",
+    "E04 connect a separate synthetic PrismaClient observer before launching20claims; implicit same runner-owned datasource, no env read/log or topology/config edits. Disconnect in unconditional finally after holder release+allclaims settle. Preserve twenty genuine unsettled invocations/numericactualPGwaiter/onewinner19conflicts/noorphan. Do not extend timeouts/reducecontention.",
+    "E05 approved <=8domainqueries only list pages, lookup/options/thread actual count telemetry plus concrete bounded-query/noN+1 shape protection; existing p95 and list cap unchanged. Root prior instruction universal8 was wrong against Tfixture70; no source weakening of approvedtest.",
+    "E06 snapshot Instagram/Meta/Evolution counters before ALL EPS probes/warmups/measurement and ingress/replay/RLS companion probes/batch workloads, assert eachunchanged withsetupOAuth calls outside measurement.",
+    "E07 capture real relevant peer and owner lookup SQL as well as route/display from actual BFF consumers/queryevents; retain boundparams, EXPLAIN ANALYZE/BUFFERS/JSON, assert appropriate compound/unique index definitions, qualified predicates and plan cardinality. Small24owner sequential scans may be correct; reportactualplans, never force planner or inventlookup SQL for purportedactualconsumer. Existing route incidental index alone insufficient.",
+    "Preserve full6cases/20kcohort/24realOAuth/5x20EPSandOAuth/20resourceclaims/replay/RLS5x20+20/all1000<=15s/replayeffects, zeroHTTP and actualperrequestproof. No mocks of domain/PG/transaction implementation, direct budget mutation, skips or unapproved thresholds.",
+    "Only named new spec source writes, no other files, helpers/schema/runner/product/Foundation/Git/worktree/copy/private/.env/process/runtime/network/npm/Node/tests/build/lint/format commands. Read static positive public manifest paths as needed; exact R/AGENTS and named instructions. Report terminal bytes/hash and per-finding source mapping, tests NOTRUN. Concrete unsolved questions report; never guess/pass."
+  ],
+  "qualification": "All112 and E frozen snapshots root-reconciled; no writer live. Root owns docs. No actual performance/source acceptance inferred."
+}

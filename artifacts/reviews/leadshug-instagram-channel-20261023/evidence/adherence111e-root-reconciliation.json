@@ -1,0 +1,12 @@
+{
+  "kind": "Fresh111E independent root terminal reconciliation",
+  "frozenRowsExact": 27,
+  "sourceFullBodiesExact": 17,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "toolItems": [],
+  "strictMerge": "PASS",
+  "assessment": "changes_required",
+  "findings": 7,
+  "qualification": "Scoped static CP5 proof-owner review only; ALL112 terminated at lint before tests. E freeze ends after this exact check, all sourcewriters terminal."
+}

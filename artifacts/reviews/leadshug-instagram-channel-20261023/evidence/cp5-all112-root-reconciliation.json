@@ -1,0 +1,59 @@
+{
+  "kind": "ALL112 independent root terminal reconciliation",
+  "sourceFilesExact": 330,
+  "fullTodoExact": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 363390,
+    "sha256": "6be092877ad840d3eff798baf8d3d62fea2b0e566135dd2ce09f810798a57968"
+  },
+  "boundInputsExact": 1185,
+  "preservationExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-before.json",
+      "bytes": 1533,
+      "sha256": "750e8510e0e242fdf00825946ae83878ff54d6baf4088f2344ac4f9d05b8ce3e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-all.log",
+      "bytes": 14705,
+      "sha256": "ccab3b37d3bba3ea9e2e2e8f64812f18420457db9a997e0a81749198cfa0fdfa"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-after.json",
+      "bytes": 1809,
+      "sha256": "63ec0b216d544bb9b328fa2f777f12f02ec0ca473f86dc0f9bc596d7edba4970"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-result.json",
+      "bytes": 3333,
+      "sha256": "4469cd0ac16478d5b5604c0fe8d0ce6c5c0923f61658d77322807f5f886a81db"
+    }
+  ],
+  "actualOutcome": {
+    "API dependency install": "completed",
+    "Prisma client generation": "passed; Prisma Client v6.19.3 generated in 306ms",
+    "PostgreSQL": "31/31 migrations applied; subsequent schema check reported up to date",
+    "API ESLint": "failed with 7 errors in new test file"
+  },
+  "unreached": {
+    "API build": "not reached",
+    "API unit tests": "not reached",
+    "API E2E/integration tests": "not reached",
+    "web typecheck/Vite build": "not reached",
+    "web unit tests": "not reached",
+    "Playwright/browser (91 planned)": "not reached; 0 browser tests executed"
+  },
+  "cleanup": {
+    "postgresContainer": "stopped and removed",
+    "network": "removed",
+    "ownedVolumes": "all nine listed volumes removed"
+  },
+  "qualification": "Natural exit1 at lint; no test pass inferred. Validator freeze reconciled; overlapping E review freeze still active."
+}

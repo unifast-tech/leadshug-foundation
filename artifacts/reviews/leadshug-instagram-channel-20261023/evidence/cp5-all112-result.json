@@ -1,0 +1,88 @@
+{
+  "kind": "CP5 ALL112 canonical validation result",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-frozen-manifest.json",
+  "manifestSha256": "c5eda68f270c2634ed76ca0e6ee6ae11c6cbb43288da2a0746489f014da2e8e9",
+  "command": "bash scripts/test-channels-local.sh all",
+  "invocations": 1,
+  "exitCode": 1,
+  "termination": "natural after API lint failure; canonical owned cleanup completed",
+  "latency": "approximately 35 seconds from command launch to terminal exec response; no internal runner timestamps were emitted",
+  "reachedStages": {
+    "API dependency install": "completed",
+    "Prisma client generation": "passed; Prisma Client v6.19.3 generated in 306ms",
+    "PostgreSQL": "31/31 migrations applied; subsequent schema check reported up to date",
+    "API ESLint": "failed with 7 errors in new test file"
+  },
+  "unreachedStages": {
+    "API build": "not reached",
+    "API unit tests": "not reached",
+    "API E2E/integration tests": "not reached",
+    "web typecheck/Vite build": "not reached",
+    "web unit tests": "not reached",
+    "Playwright/browser (91 planned)": "not reached; 0 browser tests executed"
+  },
+  "failure": {
+    "file": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "errors": [
+      {
+        "line": 64,
+        "rule": "prefer-const",
+        "symbol": "accountsByBu"
+      },
+      {
+        "line": 66,
+        "rule": "prefer-const",
+        "symbol": "cookiesByBu"
+      },
+      {
+        "line": 67,
+        "rule": "prefer-const",
+        "symbol": "rowsByBu"
+      },
+      {
+        "line": 68,
+        "rule": "prefer-const",
+        "symbol": "originalRowsByBu"
+      },
+      {
+        "line": 580,
+        "rule": "prefer-const",
+        "symbol": "confirmations"
+      },
+      {
+        "line": 708,
+        "rule": "no-useless-assignment",
+        "symbol": "actualWaiters"
+      },
+      {
+        "line": 709,
+        "rule": "no-useless-assignment",
+        "symbol": "unsettledClaimsAtRelease"
+      }
+    ],
+    "summary": "7 problems (7 errors, 0 warnings); lint output notes four errors potentially fixable with --fix, but no autofix was run."
+  },
+  "postflight": "pass: all 330 frozen source files, TODO exact bytes/SHA256, all 1,185 bound inputs, 34 preservation rows, 3 approved exception candidates/current frozen candidate hashes, and exact root-index gitlinks matched.",
+  "cleanup": {
+    "postgresContainer": "stopped and removed",
+    "network": "removed",
+    "ownedVolumes": "all nine listed volumes removed"
+  },
+  "artifacts": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-before.json",
+      "bytes": 1533,
+      "sha256": "750e8510e0e242fdf00825946ae83878ff54d6baf4088f2344ac4f9d05b8ce3e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-all.log",
+      "bytes": 14705,
+      "sha256": "ccab3b37d3bba3ea9e2e2e8f64812f18420457db9a997e0a81749198cfa0fdfa"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all112-after.json",
+      "bytes": 1809,
+      "sha256": "63ec0b216d544bb9b328fa2f777f12f02ec0ca473f86dc0f9bc596d7edba4970"
+    }
+  ]
+}

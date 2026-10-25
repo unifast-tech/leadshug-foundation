@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP5source110a terminal/root-candidate-qualified330sources, no testsrun; complete fresh affected-source architecture reviews and freeze next canonical full ALL. Actual native recovery/Instagram/20k workload acceptance and all remaininggates stayopen.
+- **Next exact step:** ALL112 lint failure root-reconciled; fresh111A/E terminal with ten open findings. Serialize faithful CP5source113 fixes, then admitted product corrections/native proofs and complete current validation/reviews. All remaining gates stay open.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -659,6 +659,17 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | F-B67948FF | high | release-blocker | fix in this TODO | preserve signed-session fence after new awaitedCOMMIT | closed affected repair by API66/current complementary adherence67 | cp3-api66-root-reconciliation.json; cp3-adherence67-root-adjudication.json |
 | F-82E76A38 | high | release-blocker | fix in this TODO | causal mutation-first and actualPG serialization proof of sameapprovedfence | closed affected repair by API66/current complementary adherence67 | cp3-api66-root-reconciliation.json; cp3-adherence67-root-adjudication.json |
 | F-175B5680 | medium | release-blocker | fix in this TODO | clarify existing local orderingpoint; never atomicDB+HTTP claim | closed affected repair by API66/current complementary adherence67 | cp3-api66-root-reconciliation.json; cp3-adherence67-root-adjudication.json |
+| IG-ADHERENCE111A-01 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-ADHERENCE111A-02 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-ADHERENCE111A-03 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-01 | high | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-02 | high | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-03 | high | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-04 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-05 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-06 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-CP5-111E-07 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -2087,3 +2098,27 @@ Source110 candidate was not accepted: `evidence/cp5-scale-source110a-static-revi
 ### Source110a terminal candidate — independent review and executable proof still open
 
 `evidence/cp5-source110a-root-qualification.json` matches new67718byte/hash and329knownsourcepaths/protections/index; `evidence/cp5-source110a-terminal-manifest.json` seals330sources. Sixsequential nativecases shareone20kcohort setup; codecorrects helpercapture/DTO/HTTPsteps/trustedtimestamps/individualqueryandlatencyoracles/ownerbarriers/finally/RLS/batch. This is sourcequalification only, not compiler/schema/performance/concurrency acceptance. Fresh complementarysourceadherence/currentcanonicalALL/actualbrowseralert/primary/human/CP6/assurance/realproof remain mandatory. RuntimeA closedpackage111A may be reviewed concurrently with canonical disposable execution onlywhile its33source/fullT/evidence bytesremainexact; no source orTmutations until relevantfreeze terminal.
+
+
+### Fresh111A/E and ALL112 terminal — source113 faithful CP5 corrections
+
+ALL112 independently reconciled330sources/fullT/1185positiveinputs/34immutable/threeexceptioncandidates/rootindex/fouroutputs. One canonical ALL exited1 at API lint after31migrations; seven new-spec lint errors, all build/unit/integration/Web/browser tests UNREACHED. Owned synthetic cleanup complete. Both fresh closed reviews terminated naturally, strict merge and exact frozen-source/T reconciliation passed: A three product findings, E seven proof-owner findings. All ten are Integrated/useful/project/release-blocker in same TODO, open for repair/native proof; no peer-lane/full-feature acceptance. Earlier subscription acquisition closure stays closed; A01 concerns new verify acquisition.
+
+Root corrects its source110 instruction: T851 eight-domain-query cap applies to list pages. Existing fixture70 explicitly makes options/thread counts telemetry/noN+1; source113 must preserve lookup/options p95 and bounded/query-shape protection without introducing an unapproved universal cap. This fixture has never executed, so no passing/failing approved threshold is waived. Other CP5 counts, list<=8, 20k retention, 5x20 concurrency, zero-provider-HTTP, exact ownership/effects and15s fullbatch remain strict.
+
+`evidence/cp5-proof113-handoff.json` serializes one source-only Operational/Coder on the admitted new CP5 spec only: lint7, telemetry identifier, correct Prisma association, exact original-cohort guard, independent observer capacity, original page-budget policy, all-provider counter coverage and genuine indexed peer/owner/route evidence. No production/other-test/helper/schema/runner changes or tests/private/operational/Meta/Git authority. Root qualifies terminal bytes before another writer or canonical execution. Product A corrections and complete B/C/D/focused E reviews follow; primary/human/CP6/security/TQA/cutover/final/real gates remain mandatory.
+
+#### Fresh111A/E Finding Resolution Ledger
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-ADHERENCE111A-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-ADHERENCE111A-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-ADHERENCE111A-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-04 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-05 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-06 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
+| IG-CP5-111E-07 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111ae-root-adjudication.json; current admitted source/proof repair; still open |
