@@ -1,0 +1,22 @@
+{
+  "kind": "113a terminal independent root source qualification",
+  "candidate": {
+    "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "bytes": 83106,
+    "sha256": "7a722e4aacbf1788050059a7822db79ab3b842cd5927f3d9643c37ad124529cc"
+  },
+  "otherSourceFilesExact": 329,
+  "preservationRowsExact": 34,
+  "approvedExceptionCandidatesExactAgainstFrozenSources": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticCorrections": [
+    "All7lint and7Efindings source corrections present; no execution inferred",
+    "Original20k message IDs/route/resource association distinct from subsequentload messages",
+    "Independent connected observer/finally holder+claims settle and disconnect",
+    "List-only <=8 cap, counts and bounded timeline shape telemetry forotherrequests",
+    "Allthreeprovider counters and actualBFF query/parameter/plan evidence",
+    "Sorted exact1000unread replay pairs/cardinality; realpeer/owner bindings/rootplan rows; guardedoriginalexternalID"
+  ],
+  "remaining": "Currentcompiler/schema/actualCP5/index/performance proofs unvalidated; newA product andDWeb findings remainopen."
+}

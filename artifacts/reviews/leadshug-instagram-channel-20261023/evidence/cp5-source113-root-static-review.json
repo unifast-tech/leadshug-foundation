@@ -1,0 +1,19 @@
+{
+  "kind": "113 terminal source candidate independent root static review; NOT accepted for execution yet",
+  "candidate": {
+    "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "bytes": 81636,
+    "sha256": "8fcb99e83e60f9b96e484a1e518421a827d0d8de0f778287b7f962b7b8bff464"
+  },
+  "otherSourceFilesExact": 329,
+  "preservationRowsExact": 34,
+  "approvedExceptionsExactAgainstFrozenSources": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "findings": [
+    "New batch unread replay array uses findMany without orderBy then array equality; compare sorted identity/value pairs or Maps, preserve each1000exact unread value and exact row cardinality.",
+    "Strengthen E07 real captured reply-options peer/owner lookup: current expected contact identity/business identity IDs are known but not checked against original boundparams; some(fieldname) checks are satisfied by unscoped SELECTcolumns. Assert actual qualified WHERE bindings and root plan cardinality for exact route/peer/owner query, allowing honest small-owner sequential scan.",
+    "Assign originalExternalId using known requested externalId or explicit nonnull assertion proof after actual acceptance, rather than nullable Prisma field into string contract. No runtime/compileclaim."
+  ],
+  "next": "Same solewriter113a exactnewfile only; no test dispatch until correction terminal qualification. D review fullT/source freeze unaffected."
+}

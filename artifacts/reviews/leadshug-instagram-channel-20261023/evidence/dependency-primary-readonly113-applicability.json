@@ -1,0 +1,118 @@
+{
+  "kind": "Additional primary dependency applicability research113; preliminary, not security audit or clearance",
+  "scope": "Read-only explicit public lock/config/runner/Dockerfile and three maintainer advisories; no installed dependency inventory, runtime/env/provider/private access or code changes.",
+  "inputs": [
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+    },
+    {
+      "path": "web-app/package.json",
+      "bytes": 701,
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "web-app/package-lock.json",
+      "bytes": 78215,
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f"
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "bytes": 1865,
+      "sha256": "8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2"
+    },
+    {
+      "path": "api-app/vitest.config.ts",
+      "bytes": 414,
+      "sha256": "a5f2d4d79de1112776f0586e3b647487fe6961e89b2790c19f6a2ed9165924d5"
+    },
+    {
+      "path": "api-app/vitest.config.e2e.ts",
+      "bytes": 683,
+      "sha256": "ff76a3b94de4649d18f0f824a24bb45428afcbb751a872a6841a2e388f45f8ff"
+    },
+    {
+      "path": "web-app/Dockerfile",
+      "bytes": 1262,
+      "sha256": "b3fb2e04dc033ec8977926c93eb8cec36bf44f6351652bdb2f739325e4be19d4"
+    },
+    {
+      "path": "api-app/Dockerfile",
+      "bytes": 2504,
+      "sha256": "188a83953c950d65f3fd5b3d428382cafc88e42efa0776c95fb4ba49b54d0a15"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13912,
+      "sha256": "c6fb288eb65de144d0dadef4a40a29c3ebea43b32f625016aa0caef9229f8b2f"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 24159,
+      "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340"
+    }
+  ],
+  "lockedTopLevelVersions": {
+    "api-app": {
+      "vitest": {
+        "version": "2.1.9",
+        "dev": true
+      },
+      "vite": {
+        "version": "5.4.21",
+        "dev": true
+      },
+      "esbuild": {
+        "version": "0.21.5",
+        "dev": true
+      }
+    },
+    "web-app": {
+      "vitest": {
+        "version": "2.1.9",
+        "dev": true
+      },
+      "vite": {
+        "version": "5.4.21",
+        "dev": true
+      },
+      "esbuild": {
+        "version": "0.21.5",
+        "dev": true
+      }
+    }
+  },
+  "advisories": [
+    {
+      "id": "GHSA-5xrq-8626-4rwp",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-5xrq-8626-4rwp",
+      "primaryFacts": "Maintainer lists <3.2.5 and4.0.0..<4.1.0 affected, fixed3.2.5/4.1.0. Impact requires exposed Vitest API/UI or VitestUI/BrowserMode on Windows. Arbitrary script execution is relevant when API write/rerun surface is exposed.",
+      "versionMatch": true,
+      "staticApplicabilityInference": "Current declared scripts run vitest run, API environment node, no declared VitestUI/api.host/browser config. Playwright --ui is a different runner. Canonical validation uses Linux disposable Node22 containers. This is evidence against this specific exposed-UI path in the approved runner, not proof of all dependency safety. API runtime Dockerfile omitsdev; Web runtime image servesbuiltstatic files withnginx.",
+      "disposition": "Formal security reviewer must adjudicate exact attack-surface and remaining dependency risk; no root waiver."
+    },
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99",
+      "primaryFacts": "Maintainer identifies esbuild serve defaultCORS issue in <=0.24.2, fixed>=0.25.0. A running esbuild serve endpoint allows malicious websites to read served content.",
+      "versionMatch": true,
+      "staticApplicabilityInference": "Selected project scripts invoke Vite build/preview and Vitest run, no direct esbuild serve command in inspectedpublicscripts. Vite using esbuild transforms is not itself proof of esbuild serve exposure. Dependencies and all security attack paths not audited by this boundedread.",
+      "disposition": "Keep exact serve-path applicability for formal review; no assumed production exploit or clearance."
+    },
+    {
+      "id": "GHSA-8g5g-mxqh-grgj",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-8g5g-mxqh-grgj",
+      "primaryFacts": "Maintainer advisory published2026-10-21 specifically affects Vite6.4.4 and fixes6.4.5; concerns exposed Vite devserver filesystem deny bypass after incomplete6branchbackport.",
+      "versionMatch": false,
+      "staticApplicabilityInference": "Locked top-level Vite5.4.21 is not in this advisory stated affected range. Do not misreport this as evidence all Vite5 advisories are patched.",
+      "disposition": "This exact advisory range does not establish a defect in current5.4.21. Other Vite advisories/audit unresolved."
+    }
+  ],
+  "remaining": "Actual npm summary9vulnerabilities is not reconstructed by these3advisories. Formal current dependency inventory/security/wholefeature checks remain required. No updates/approvals/dependency/runtime decisions inferred."
+}

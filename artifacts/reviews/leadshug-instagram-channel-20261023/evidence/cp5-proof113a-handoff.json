@@ -1,0 +1,13 @@
+{
+  "kind": "Sole113a static completion in same admitted CP5spec",
+  "owned": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "basis": "cp5-source113-root-static-review.json",
+  "requirements": [
+    "New batch unread replay array uses findMany without orderBy then array equality; compare sorted identity/value pairs or Maps, preserve each1000exact unread value and exact row cardinality.",
+    "Strengthen E07 real captured reply-options peer/owner lookup: current expected contact identity/business identity IDs are known but not checked against original boundparams; some(fieldname) checks are satisfied by unscoped SELECTcolumns. Assert actual qualified WHERE bindings and root plan cardinality for exact route/peer/owner query, allowing honest small-owner sequential scan.",
+    "Assign originalExternalId using known requested externalId or explicit nonnull assertion proof after actual acceptance, rather than nullable Prisma field into string contract. No runtime/compileclaim."
+  ],
+  "limits": "No other source/docs changes or tests/build/lint/npm/Node/Docker/runtime/private/env/network/Meta/Git/status/diff/discovery/worktree/copy. Preserve all113 E01-E07 fixes and everyworkload/counter/latency/return assertion. DfullT frozen; root ownsdocs. Report terminalbytes/SHA andtestsNOTRUN."
+}

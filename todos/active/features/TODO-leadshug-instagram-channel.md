@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** ALL112 lint failure root-reconciled; fresh111A/E terminal with ten open findings. Serialize faithful CP5source113 fixes, then admitted product corrections/native proofs and complete current validation/reviews. All remaining gates stay open.
+- **Next exact step:** CP5source113a terminal/root-qualified, source-only; serialize prepared product114 then Web/gateway repairs for111D. Complete fresh affected reviews/currentALL/nativeproof and all remaining gates before acceptance.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -669,6 +669,14 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-CP5-111E-05 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
 | IG-CP5-111E-06 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
 | IG-CP5-111E-07 | medium | release-blocker | fix in this TODO | admitted source/proof defect in current integration | open; source and native proof required | adherence111ae-root-adjudication.json |
+| IG-ADHERENCE111D-01 | high | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-02 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-03 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-04 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-05 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-06 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-07 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-08 | low | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 
 
 ## TODO Closeout Disposition
@@ -2129,3 +2137,25 @@ Root corrects its source110 instruction: T851 eight-domain-query cap applies to 
 `evidence/cp4-product114-handoff.json` prepares only five existing admitted paths for the three111A product defects: verification acquisition original-token cleanup with realCOMMIT session-expiry controls; canonical module admission on UUIDEvolutionverify with enabled/disabled equivalence; lastproven metadata-only Instagram labels across disconnect/reauthorization. Rootdispatch is conditional on113terminal/sourcequalification; no simultaneous sourcewriters and no newruntime/private/Meta authority. No controller/helper/schema or protectedtest expansion; report any concrete missingpath beforeedit. Every existing assertion/budget/fence remains.
 
 Independent complementary Web/tooling review111D may run while113/114 source work is serialized, only because its FULL source bodies and fullcurrentT/evidence remain immutable and disjoint from those writers. Root must not mutate any111D frozen path or thisTODO until its naturalterminal/exactreconciliation. New derived terminal/qualification artifacts are permitted; no peer-reading, executedbrowser or finalfeatureacceptance inferred. Current fullALL/nativeInstagram and all remaining assurance/primary/human/CP6physical gates remain open.
+
+
+### Source113a qualified; fresh111D terminal; serialized product114 ready
+
+Root independently matches final CP5spec83106bytes/SHA7a722e4a,329otherknownsources/34immutable/threeexceptioncandidates/rootindex; evidence/cp5-source113a-root-qualification.json and terminal330source manifest bind source-only completion. Tests/lint/build remain NOTRUN. Seven111E corrections are authored, still require execution/freshreview; no compiler/plan/performance acceptance. New static repairs preserve exact per-ID replay comparison, current scoped query bindings and original-message identity.
+
+Fresh closed111D terminated naturally; strictmerge and33frozenrows/fullT/23fullsourcebodies exactrootreconciled. Eight new findings are Integrated/useful/project/release-blocker in thisTODO: specific8MiB Instagram gateway ceiling; Inbox list continuation; failed admission metadata blocked; one request-start clock across publishers; recovery keyed by admissionID; recover uncertain OAuthcreation with samekey/body; approved Unicode code-point limits; conversation-scoped draft lookup/update. No previouslycloseddefect reopened. Browser-server fullbody is not claimedreviewed byD; complementaryB owns it.
+
+With113a writer terminal and no live review/validator freeze, root may dispatch exactly prepared five-path evidence/cp4-product114-handoff.json under currentauthority/routing GO. No source114writer until root sends explicitdispatch. Following serialized Web/gateway correction115 will concretize eightD defects and nativeproof within alreadyadmitted surfaces; no actualruntime/private/provider/Meta permission inferred. FullcurrentALL and actual20k/nativebrowser/primary/pendinghuman/security/TQA/cutover/final/approvedCP6physical gates remain mandatory.
+
+#### Fresh111D Finding Resolution Ledger
+
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| IG-ADHERENCE111D-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-03 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-04 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-05 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-06 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-07 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE111D-08 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |

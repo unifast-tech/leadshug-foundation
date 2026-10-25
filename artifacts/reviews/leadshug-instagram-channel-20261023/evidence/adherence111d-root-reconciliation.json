@@ -1,0 +1,12 @@
+{
+  "kind": "Fresh111D terminal independent root reconciliation",
+  "frozenRowsExact": 33,
+  "sourceFullBodiesExact": 23,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "toolItems": [],
+  "strictMerge": "PASS",
+  "assessment": "changes_required",
+  "findings": 8,
+  "qualification": "D only, no peer-source inspection/nativepass/wholefeatureacceptance. D freeze ends after exactrootcheck. Source113a solewriter remains onlynewCP5spec."
+}

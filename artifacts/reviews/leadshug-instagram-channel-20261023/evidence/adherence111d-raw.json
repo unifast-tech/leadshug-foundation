@@ -1,0 +1,124 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence111d-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-internal-no-context-111D",
+  "overall_assessment": "changes_required",
+  "recommended_path": "Repair the findings within the approved TODO, preserve existing policy exceptions and recovery invariants, and obtain native behavioral coverage followed by current canonical ALL/browser validation. Keep the recorded primary-protocol, assurance, human-admission and CP6 gates open. This complementary review covers enclosed bodies; the browser-server implementation is represented only by metadata and cannot be independently certified here. No previously closed finding is reopened.",
+  "performance_position": "mixed",
+  "elegance_position": "mixed",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-ADHERENCE111D-01",
+      "severity": "high",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The channel gateway rejects valid Instagram webhook bodies above 2 MiB",
+      "rationale": "The frozen contract permits Instagram webhook bodies up to 8 MiB and requires that ceiling specifically at the parser and gateway. The enclosed gateway sets client_max_body_size 2m for the server, while /webhooks/ has no Instagram override. Valid bodies between 2 and 8 MiB therefore receive 413 before reaching authenticated ingress. The native HTTPS browser harness does not establish this Nginx boundary.",
+      "suggested_action": "Apply the approved 8 MiB ceiling specifically to the effective Instagram webhook paths while preserving other route limits. Exercise the actual disposable gateway with valid bodies above 2 MiB, at the permitted boundary, and above 8 MiB; verify rejection produces no domain effects.",
+      "affected_paths": [
+        "docker/local-gateway.conf.template"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-02",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Inbox discards conversation-list continuation",
+      "rationale": "The producer returns total, pagina and temMais and accepts pagina/limite. Inbox requests only the default page, retains only conversations, and renders no continuation control. Once a filter contains more than 50 conversations, older Instagram conversations cannot be reached through this consumer. Instagram also has no approved phone-based Consultar alternative. This leaves the declared Inbox pagination consumer incomplete.",
+      "suggested_action": "Consume the existing bounded pagination contract with actor/BU/filter/navigation ownership and explicit continuation controls. Preserve page-size and query budgets, and prove access beyond the first 50 conversations through the real BFF and PostgreSQL.",
+      "affected_paths": [
+        "web-app/src/telas/Inbox.tsx",
+        "api-app/src/surfaces/bff/conversations.controller.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-03",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Failed admission metadata can enable the ordinary composer",
+      "rationale": "When start-options fails, Inbox sets startOptionsFor to the current conversation but leaves startOptions null. For a nonempty conversation, startOptionsLoading then becomes false and the final rendering branch mounts an unblocked InstagramReplyComposer. A successful reply-options read can enable sending although the initial/ordinary admission state remains unknown. Backend fences may refuse the request, but the consumer has bypassed its required admission-state protection and recovery presentation.",
+      "suggested_action": "Keep admission metadata explicitly unresolved after failure and retain a blocked send surface with an actionable refresh/reconnect path. Enable the appropriate composer or recovery controls only after a current successful start-options observation. Add native coverage with an existing active admission and a failed metadata read.",
+      "affected_paths": [
+        "web-app/src/telas/Inbox.tsx"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-04",
+      "severity": "medium",
+      "category": "structural_soundness",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Admission-state publishers do not share request-start ordering",
+      "rationale": "Parent start-options requests capture startOptionsIntent before awaiting, but PrimeiraMensagem.reloadOptions and OrdinaryRecovery.refresh publish through receiveOptions without that ticket. receiveOptions increments the parent clock when the response arrives. An older held recovery read can therefore overwrite a newer observation or invalidate a newer request still in flight. Actor, navigation and conversation checks do not prevent this same-context stale publication, which can hide a newer admission or restore obsolete recovery state.",
+      "suggested_action": "Allocate admission-read ownership when each request starts and require every publisher to carry that ownership through completion. Invalidate preceding reads at the relevant action boundary. Prove that an older actual BFF response cannot overwrite a newer admission observation or enable sending.",
+      "affected_paths": [
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/src/componentes/NovaConversa.tsx"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-05",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Ordinary recovery state survives replacement of its admission",
+      "rationale": "Inbox keys OrdinaryRecovery by actor/BU/conversation/navigation but omits admission.id. When another ordinary admission becomes selected, the component increments actionOwner without resetting busy, confirmRisk or notices. If replacement occurs during an outstanding action, the stale finally refuses to clear busy, leaving the new admission's controls disabled. A checked risk confirmation can also carry from the previous admission. Multiple ordinary admissions are expressly preserved by the approved concurrency contract.",
+      "suggested_action": "Bind the recovery component's state lifetime to admission.id, or explicitly reset all admission-owned state on replacement while retaining stale-result fencing. Test replacement during a held recovery response and require a fresh risk confirmation for the replacement admission.",
+      "affected_paths": [
+        "web-app/src/telas/Inbox.tsx",
+        "web-app/src/componentes/NovaConversa.tsx"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-06",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Uncertain authorization creation has no usable recovery path",
+      "rationale": "InstagramConnections.begin generates its creation key inside the request and retains neither that key nor the creation intent after a lost response. It sets creationUncertain, permanently disabling connection and reauthorization actions for the mounted component. Atualizar conexões only reads catalog/capabilities and cannot recover the attempt or clear this state. Reloading loses the uncertainty and generates a different key. The instruction to consult the attempt is therefore unactionable precisely when the response containing its ID was lost.",
+      "suggested_action": "Retain the actor/BU/binding-qualified creation key and body before dispatch. Provide explicit recovery through replay of that same idempotent creation request, then consult the returned safe attempt ID. Clear uncertainty only after a conclusive observation. Cover a response lost after durable creation without creating another attempt.",
+      "affected_paths": [
+        "web-app/src/componentes/InstagramConnections.tsx"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-07",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Textarea maxlength reduces the approved Unicode character limits",
+      "rationale": "The controller and draft helpers count Unicode code points using Array.from or spread syntax, but the reply textarea also applies HTML maxLength, which counts UTF-16 code units. Consequently, users can enter only 500 supplementary-plane characters under Instagram's 1000 setting, and only 2048 under WhatsApp's 4096 setting. This reduces both current character contracts independently of the unapplied UTF-8-byte proposal; the enclosed boundary tests use ASCII and miss the discrepancy.",
+      "suggested_action": "Make interactive input enforce the existing code-point limits consistently with the server and draft owner. Preserve Instagram 1000 characters and WhatsApp 4096 characters. Add native supplementary-plane input and boundary coverage without applying the pending byte-limit proposal.",
+      "affected_paths": [
+        "web-app/src/componentes/InstagramReplyComposer.tsx",
+        "web-app/src/instagramState.spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE111D-08",
+      "severity": "low",
+      "category": "performance",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "Typing copies the entire retained draft index",
+      "rationale": "Each changeText call invokes updateDraft, which spreads every retained draft, and then Object.assign copies that entire result back into the module-global store. Prior-draft rendering also scans the global store, including on the composer's one-second clock updates. Since records remain across conversations and binding revisions, active typing and rendering costs grow with accumulated session history. This is a static complexity finding; no measured latency failure is established.",
+      "suggested_action": "Use keyed updates and conversation-scoped lookup within the existing draft owner while preserving approved prior-binding draft access and revision fences. Measure the resulting behavior with a representative retained-draft cohort before asserting frontend performance acceptance.",
+      "affected_paths": [
+        "web-app/src/componentes/InstagramReplyComposer.tsx",
+        "web-app/src/instagramState.ts"
+      ]
+    }
+  ]
+}
