@@ -1,0 +1,40 @@
+{
+  "kind": "Native109/109a independent root static qualification",
+  "reportedFourExact": [
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 24159,
+      "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13912,
+      "sha256": "c6fb288eb65de144d0dadef4a40a29c3ebea43b32f625016aa0caef9229f8b2f"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 25946,
+      "sha256": "a89da16b910d34670240700a348535f6c29754d14025e91bae45947ca326ed5d"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 35078,
+      "sha256": "088ac6f8acefdbd2e3d24ed42265bb80fdf238db5385e614b07e2cae3468029b"
+    }
+  ],
+  "otherSourcesExact": 325,
+  "otherBoundInputsExact": 1141,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "cp5NewTestAbsent": true,
+  "staticCorrections": [
+    "explicitUTF8 synthetic externaldoc plusliteralreadiness preserved",
+    "actualnativeWSS-only fixedheader control andindependentcleanup;canonicaloneworker avoidsparallelfixturecrossdrop",
+    "heldfirstGET crossesactualsocketclose/reconnect beforefailedrelease",
+    "awaitedroutecallback completion; correctfailure()?.errorText narrowcancellationevidence",
+    "same2fixedsyntheticdiagnosticpaths/bounded4096 rolealertattribute extraction preservesexit/cleanup"
+  ],
+  "testsRun": false,
+  "next": "Serialize missing CP5 newtest source; completewholecanonicalproof and actualalert investigation remain."
+}

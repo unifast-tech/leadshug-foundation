@@ -1,0 +1,77 @@
+{
+  "kind": "Browser108 independent root reconciliation",
+  "frozenSourcesExact": 329,
+  "fullTodoExact": true,
+  "positiveInputsExact": 1146,
+  "immutableRowsExact": 34,
+  "threeExceptionsExact": true,
+  "rootIndexExact": true,
+  "fourReportedOutputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser108-before.json",
+      "bytes": 1572,
+      "sha256": "14e6f613fe876940de99c4e499155f276d26898aff89561a6a9f3b5f5cdd09bb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser108-browser.log",
+      "bytes": 86091,
+      "sha256": "acb03153f89dfabb4c3d78018d0105bbe67d4cb96267a19f5818f938d8775446"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser108-after.json",
+      "bytes": 2348,
+      "sha256": "b9e20ae9df07b30c1fc5e0830866ac138905d731f5fd7fb3851fe1a1dadd59af"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser108-result.json",
+      "bytes": 5100,
+      "sha256": "0accd905bdf3567662d3bb736a3dd79fae7863a85b691eee185f45667502e9ed"
+    }
+  ],
+  "actual": {
+    "invocations": 1,
+    "exit": 1,
+    "Playwright": {
+      "total": 91,
+      "passed": 88,
+      "failed": 3,
+      "minutes": 16.5
+    },
+    "stages": {
+      "apiPrismaGenerate": "pass",
+      "apiBuild": "pass",
+      "postgresMigrations": "31/31 applied successfully",
+      "webTypecheck": "pass",
+      "viteBuild": "pass; 63 modules; 1.57s",
+      "playwright": "91 tests; 88 passed; 3 failed; 16.5m; one worker",
+      "apiUnitTests": "not in browser target; not run",
+      "apiIntegrationOrE2ETests": "not in browser target; not run",
+      "standaloneWebUnitTests": "not in browser target; not run"
+    },
+    "cleanup": {
+      "containerStoppedAndRemoved": true,
+      "networkRemoved": true,
+      "allNineListedOwnedVolumesRemoved": true
+    }
+  },
+  "failed": [
+    {
+      "test": "e2e/channel-transport.spec.ts:223:3 — repete opções após uma falha atrasada atravessar uma reconexão real do socket",
+      "decisiveAssertion": "after initial connected socket was established and offlineIncoming returned status 200 with body status 200, expect.poll(() => closedSockets.size) expected 1 but received 0 after 5s (line 289); reconnect-connectedSockets>1 and option retry assertions unreached",
+      "additionalError": "route.abort: Route is already handled! at line 264",
+      "oracleReachability": "BFF initial offline incoming response reached; expected socket-close and reconnect assertions failed/unreached."
+    },
+    {
+      "test": "e2e/instagram-channel.spec.ts:204:3 — proves account isolation, native callback/receipt/reply, held responses, recovery, and operator scope",
+      "decisiveAssertion": "after reauthorization request with response_type=code and waitForURL to /oauth/authorize succeeded, exact synthetic page text “Autorização sintética aguardando retorno.” was not found (5s) at line 235",
+      "oracleReachability": "Initial account A connect and subscription observations passed (MAPPED_PENDING_RECEIPT/SUBSCRIBED/1; provider subscription GET/POST once; connected=true, routes=0, qualifiedInbound=0, providerIdentity=true, receiptVerifiedAt=null). Reauthorization URL/navigation reached. page.goBack, cancel POST, account B, forged credential checks, receipt-after-inbound, WSS inbound, replies/held HTTPS response+hash/counters, recovery/operator assertions unreached."
+    },
+    {
+      "test": "e2e/timeline.spec.ts:205:3 — reconecta sem evento posterior e recupera 130 mensagens em mais de uma rodada",
+      "decisiveAssertion": "after pending-update banner disappeared, getByRole(alert) expected count 0, received 1 after 5s at line 223",
+      "oracleReachability": "130-message recovery reached alert check; audit and final message-ID equality assertions unreached. Runner emitted two CHANNELS_TEST_FAILURE_ALERT_CONTEXT markers with no diagnostic payload or “- alert:” text; alert body is unobserved."
+    }
+  ],
+  "alertDiagnostic": "Two fixed generated context files existed; filter emitted markers only. Alert body remains UNKNOWN; no causal inference or acceptance.",
+  "disposition": "108freeze ends after this independent match. Serialize admitted native harness/UI repair109; protected timeline/start/telas and pending UTF8/privacy proposals remain unmodified. No delivery claim; all required later gates remain."
+}

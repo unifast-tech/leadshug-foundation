@@ -1,0 +1,44 @@
+{
+  "blocked": true,
+  "context": {
+    "allowed_roles": "routine-executor",
+    "client": "codex",
+    "contract_id": "delphi.agent-role-routing.v1",
+    "contract_path": "/mnt/c/Unifast/delphi-ai/config/agent_role_routing.json",
+    "exception_in_effect": false,
+    "exception_reason": "",
+    "execution_topology": "primary-checkout-single-writer",
+    "expected_efforts": "medium",
+    "expected_models": "gpt-6-luna",
+    "max_concurrent_writers": 1,
+    "proof_mode": "declared",
+    "required_lane": "executor",
+    "selected_effort": "xhigh",
+    "selected_model": "gpt-6.1-sol",
+    "selected_model_family": "routine_executor",
+    "selected_role": "formal-reviewer",
+    "surface": "implementation-validation",
+    "waiver_in_effect": false,
+    "waiver_reference_present": false,
+    "worktree_authorization": "not-authorized",
+    "worktree_authorization_reference_present": false
+  },
+  "outcome": "delegate-required",
+  "violations": [
+    {
+      "code": "ROLE-MISMATCH",
+      "message": "Surface `implementation-validation` requires role(s) routine-executor, but selected role is `formal-reviewer`.",
+      "resolution": "Route the action to routine-executor, or use an approved explicit exception if the contract allows it."
+    },
+    {
+      "code": "MODEL-MISMATCH",
+      "message": "Selected model `gpt-6.1-sol` does not match the expected routing model(s) for `codex` on `implementation-validation`.",
+      "resolution": "Use one of: gpt-6-luna."
+    },
+    {
+      "code": "EFFORT-MISMATCH",
+      "message": "Selected effort `xhigh` does not match the expected effort tier for `implementation-validation`.",
+      "resolution": "Use one of: medium."
+    }
+  ]
+}

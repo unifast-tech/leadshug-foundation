@@ -1,0 +1,29 @@
+{
+  "kind": "CP5 read-only planning ambiguities resolved against existing canonical consumer/schema",
+  "authority": "Execution detail within approved normative IG-ARCH-R1-04, no new API/threshold/scope/permission",
+  "native109State": "sole sourcewriter active; this document grants NO concurrent source dispatch",
+  "readOnlyPlanner": "instagram_native107 terminal read-only; no edits/tests/runtime/Git",
+  "actualSourceReferences": [
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/channels/business-resource-ownership.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/test/helpers.ts",
+    "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+    "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+    "api-app/test/initial-message.e2e-spec.ts"
+  ],
+  "resolutions": {
+    "consumerPaths": {
+      "idLookup": "GET /api/bff/conversations/:id/messages?limite=50&marcarLida=false (actual scoped UI thread-open lookup; no write/read acknowledgement)",
+      "options": "GET /api/bff/conversations/:id/reply-options (actual scoped UI selected route options)",
+      "list50": "GET /api/bff/business-units/:buId/conversations?limite=50&pagina=1 and actual pagina=2; assert total/pagina/temMais/50 exact scoped IDs and disjoint orderednextpage. Existing BFF list uses page pagination, not cursor; do not invent new route/cursor or use WhatsApp-only public-v1."
+    },
+    "queryQualification": "Measure actual full BFF consumer requests; isolate native query event slice per request for per-page<=8 domain queries. Concurrent reads yield aggregate query events, never divide aggregate by20 to hide one expensive page. If actual existing consumer exceeds preservedbudget record failure/causal required implementation; do not silently substitute narrower directservice call. p95 values and all100samples/class preserved.",
+    "currentIngressSeed": "Perform actual OAuth and actual signed original text IN per each24 account resource, assert durable ownership/route/current credential/receipt. Bulk synthetic seed20k canonical conversation/contact/identity/route AND original IN Message rows in chunks750, with IDs/namespace/scope/immutableFK fields and current-provider qualifying evidence cloned from those native accepted templates. Each measured conversation must have its own current-resource original IN row, not route-only. This is declared synthetic fixture construction, not a claim20k HTTPingress. Actual5bursts20/1000batch/20sameeventreplay still exercise full signedHTTPingress.",
+    "resourceClaims": "One logical provider-PROVED WhatsApp phone/business identity contested20ways. Use20 legitimate staged candidate channel+provideridentity pairs in distinct extra synthetic BUs, alternating official/Evolution, each with distinct actualprovideridentity/externalidentifier satisfying schema. Same proved phone comes from fixed provider observation boundary, not BU.phone/requestauthority. Actual claimWhatsAppBusinessResource in real PG transactions creates one committed BusinessChannelIdentity/owningBU;19crossBU RESOURCE_OWNED conflicts andnoorphanlinks. Native PG barrier/waiter proof andfinallyrelease/settle. One ProviderResourceIdentity cannot be reassigned across BUs; do not violate unique(provider,externalResourceId) or immutableowner to fabricate contention. SameBU official/Evolution compatibility remains separately proven.",
+    "oauthBudget": "6 existing legitimate actors total,3/BU,4initialaccounts/actor. Five fresh OAuth ATTEMPTS on existing actor0 use4+5=9/hour andBU12+5=17/hour. No extra actors needed and no createdAt/quota/deadline rewrite."
+  },
+  "preserved": "All2x10k cohort/24account/WAdualadapter/5x20samples and OAuth/20resourceclaims/20replays/5RLSrounds20+20/1000updates15s/replay/noHTTP/noN+1/indices/sourceFRC/wholecurrentALL/assurance/primary/realproof remain. Existinginitial5x20 reused onlyexacthash/currentfullALL. No plannednumber reportedactualpass.",
+  "next": "After109terminal/rootqualification, refreshpreparedCP5 handoff baseline/publicpositiveinputs and dispatch exactlyone newtest writer. No operational/private/Meta/provider/tunnel authority."
+}

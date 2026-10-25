@@ -1,0 +1,16 @@
+{
+  "kind": "CP5source110a root candidate qualification",
+  "newReportedExact": {
+    "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "bytes": 67718,
+    "sha256": "8be3fe1f7275b549a7d747980ff05cf7a3bfe488492794bca164f7b2a84b0045"
+  },
+  "otherKnownSourcesExact": 329,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "sourceCorrectionStatus": "Reportedallsource110astaticcorrections; nativecompiler/schema/budgets/wholeproofnotexecuted. Fullsourceeligiblefreshreview not acceptedproduct.",
+  "remaining": "CurrentwholeALL/actualnativealert/currentIGjourney/completeEPSBCIRLS/primaryhumanCP6securityTQAcutoverfinalphysicalproof.",
+  "note": "20realconcurrentclaims independentpending calls+actualPGwaiter numeric withpool limitation, exactowner19conflict/finallysettle remains toexecute."
+}

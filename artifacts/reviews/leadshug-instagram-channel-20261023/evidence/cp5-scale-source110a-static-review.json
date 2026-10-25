@@ -1,0 +1,24 @@
+{
+  "kind": "Root source110 candidate static review; NOT terminal qualification",
+  "candidateReported": {
+    "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "bytes": 53495,
+    "sha256": "cd686a2013aa7f46f10ae9d433e96ae5f5872969bcbd1d4b033c4a961e4fc837"
+  },
+  "rootRead": "Wholecandidate publicsource and named actual BFF controller/helpers/client/schema; source-only, no compiler/runtime evidence",
+  "disposition": "Single samefile executor110a completing corrections before any canonical invocation. RootdidNOTqualify candidate as passing. Other329sources remain read-only.",
+  "requiredCorrections": [
+    "Enableexistingrealquerycapture subirApp(undefined,true), nonvacuousqueryevents; actualDTOconversations, notconversas",
+    "ActualshortPOST1/longGET1/meGET1; distinctsynthetictokens/authrefs peraccount/wave andencryptedownershipassertions",
+    "All20kcohort/setup sharedbeforeAll; separatefullworkloadnativecases, so EPS failuredoesnoterase BCI/RLS execution. Nodefaultbudget/globalconfig/oldtest changes",
+    "Full perpage matchingBFF querybudget probes, not oneprofile/firstBU oraggregate divided20; preservefull100latencies/class andp95",
+    "RLS baselinebeforeall40jobs, exactperID/conversation/resource/unread/route/dedup/noproviderEffects/currentreadbudgets eachround",
+    "20submittedunsettled realclaims plus >=1actualPGwaiter, emitnumericcount, finallyreleaseANDsettleholder/allclaims evenassertfails",
+    "Deadlockdelta0 overownedworkload, no statsreset/assumedglobal0",
+    "1000batch exactunread+1000/everyIDassociation/fullreplayzeroeffects, hard15s preserved",
+    "Staticnewtype/unusedlocals consistency; no compile/testsclaimed",
+    "BulkoriginalMessage mustcarry trusted officialInboundAt mapped from acceptedInstagramtimestamp; createdAt alone doesnotqualify24h. All sampledreplyoptions assertavailable/open andcurrentresource.",
+    "Capture actualpeer/owner/routeBFF SQL+params/nativeplans/cardinality/boundedpredicate/indexavailability, notrouteonly; noforcedplanner or fabricatedallindexuse on24rowownerfixture."
+  ],
+  "next": "Terminalnewfile/rootknownsources/protection/index qualification; mandatoryfreshindependentreview+canonicalcurrentproof; no deliveryclaim or waiver."
+}

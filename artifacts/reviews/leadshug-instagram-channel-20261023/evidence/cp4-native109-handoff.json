@@ -1,0 +1,46 @@
+{
+  "kind": "Native109 serialized source-only operational handoff",
+  "profile": "Operational / Coder with source-only test Docker runner overlay",
+  "authority": "Current approved ST-IG-03v1.3 existing exact admitted test/runner paths; Browser108 independently reconciled and thawed.",
+  "baseline": "cp4-browser108-frozen-manifest.json",
+  "rootReconciliation": "cp4-browser108-root-reconciliation.json",
+  "owned": [
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 35002,
+      "sha256": "b3694f5ab1151fe304fee51eab3c92fbc21ac68acae2b90d573a83f4e888ad69"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 25996,
+      "sha256": "70d888497aa7ba1179482ed3787003f0d89be75c8dbca007b4b7e47a8916aa3d"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 22973,
+      "sha256": "19b5d51ea27fe61bf959f9ab73f740d426d6791f4b0962ab0c3749d6571f732a"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13818,
+      "sha256": "bb128d39381862d864c306cd03d68cd169a08579255ffe9e91d8c8397ece7251"
+    }
+  ],
+  "inputPolicy": "Read exact root AGENTS/main/profile and relevant react/test/source-only environment workflow; full current TODO; positive named manifest public paths only. No discovery/private/.env real/Git commands/operational introspection. .env.example public allowed.",
+  "tasks": [
+    "IG synthetic waitingHandler body currently nonASCII without meta charset. Add explicit UTF8 document declaration/contentType, preserve exact waiting paragraph+actual committed navigation+back/cancel response and every later native oracle. Do not replace with weaker URL-only readiness.",
+    "Add fixed-purpose test-only POST close control at owned HTTPS frontdoor for ONLY actual upgraded raw WSS connections. Track/remove those sockets independently of ordinary HTTP sockets; require fixed synthetic fixture header; return exact count and close actual socket transports. No production endpoint/service change. Preserve provider/body-hash frontdoor controls. Ensure cleanup drains set.",
+    "New CT regression ONLY: replace unreliable CDPoffline simulation with that native server-side rawWSS drop. Initial signedIN/realwelcome/held first actualGET remain. Assert at least initial exactone handshake, actual close, second scopedwelcome, then release held firstGET as failure and assert one actualBFF metadata retry200/exact2requests/preserved context/draft/zeroPOST orOUT/noalert. Do not drop normal HTTP or cancel firstGET before laterhandshake. Remove nowunneeded offlineIncoming/CDP from NEW regression; original3CT scenarios/oracles untouched. Use awaited finally route-release/completion before unroute, handle cancelled route only with concrete cancellation evidence, never blanketcatchpass.",
+    "Root runner bounded diagnostic currently matches literal - alert: and misses attributed ARIA snapshot lines. Match the rolealert line with possible attributes; print at most4096bytes from each SAME TWO fixed generated synthetic error-context files, optionally bounded adjacent text to capture nested text. No globs/fullfile/stdout dump/privatepaths. Preserve mandatory invocation count/fullsuite/nonzeroexit/outercleanup and nested shell quoting."
+  ],
+  "preserve": [
+    "329source files exceptexact4owned",
+    "fullTODO/rootFoundation owned byroot",
+    "34immutable/3approvedexceptions/root3gitlinks",
+    "all prior native assertions/timeouts/providerPGcounters/heldstatusbodyhash",
+    "pending UTF8outbound/privacy proposals unapplied",
+    "productionmetadata logic unchanged until actualalert known"
+  ],
+  "forbidden": "No tests/build/npm/Node/Docker/network/runtime/Meta/provider calls/Git/goals/worktrees/auxcheckouts/copies; no other source/config/test/T/evidence edits. Static code reasoning only.",
+  "report": "Terminal exact4path bytes/SHA256, concise obligation map, concrete concerns; testsNOTRUN. Root will qualify no other knownsource change. If contract unclear report without widening scope."
+}

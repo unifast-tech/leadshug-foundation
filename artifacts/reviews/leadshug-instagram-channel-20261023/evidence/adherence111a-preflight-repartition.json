@@ -1,0 +1,17 @@
+{
+  "kind": "Objectiveprelaunchpackagebounds correction",
+  "beforeUtf8Bytes": 1075976,
+  "limit": 1048576,
+  "movedCompleteSourceBodiesToC": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+    "api-app/src/domain/inbox/contact-identity.spec.ts",
+    "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+    "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+    "api-app/src/integrations/evolution/evolution.client.spec.ts",
+    "api-app/src/integrations/instagram/instagram-http.client.spec.ts"
+  ],
+  "allFreshBodiesStill85": true,
+  "allTenObligationsAndFiveAxesAndFullTUnchanged": true,
+  "reviewerLaunched": false,
+  "noLivePacketAlteration": true
+}

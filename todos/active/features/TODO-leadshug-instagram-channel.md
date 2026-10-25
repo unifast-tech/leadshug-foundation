@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Native107/107a/107b terminal/root-qualified329sources (328APIWeb+rootrunner); run exactlyONE whole canonical browser108 with all91native scenarios, frozen sources/currentTODO/publicinputs/protections/rootindex. Reconcile actual complete output before further CP4/CP5/full-feature work.
+- **Next exact step:** CP5source110a terminal/root-candidate-qualified330sources, no testsrun; complete fresh affected-source architecture reviews and freeze next canonical full ALL. Actual native recovery/Instagram/20k workload acceptance and all remaininggates stayopen.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** Browser104 actual85/90Playwright,5fail; API100435unit/616integration and Web10270unit passed within scoped unchanged sources. Remaining native workflow/recovery defects require admitted consumer/test correction; no current whole ALL or native Instagram acceptance.
+- **Why this state now:** Browser108 actual88/91Playwright,3fail; native109/109a is source-only qualified. API100435unit/616integration andWeb10270unit are prior scoped evidence. NewCP5fixture110a source corrections are terminal/root-hash-qualified but unexecuted; independentcode review/currentwholeALL/nativeInstagram/recovery proof and remaininggates stillopen.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** Browser106 root matches328sources/fullT/1131publicinputs/34immutable/threeexceptions/rootindex/fouroutputs. Onecanonicalbrowser:88/90passed16.3m; APIbuild/31migrations/Webbuild passed, ownedcleanup completed. IG accountA authorization/subscription passed then external goBack aborted before cancel/accountB/IN/WSS/replies; timeline retained1alert without observedtext. No featureacceptance.
+- **Last confirmed truth:** Browser108 root matches329sources/fullT/1146publicinputs/34immutable/threeexceptions/rootindex/fouroutputs. Onecanonicalbrowser:88/91passed16.5m; APIbuild/31migrations/Webbuild passed, ownedcleanup completed. CT actualwelcome passed but CDP offline neverclosedWSS; IG externalnavigation passed but literal waitingparagraph missing; protectedtimeline retained1unobservedalert. No featureacceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -2063,3 +2063,27 @@ Root independently matches final composer17097bytes/cfda342fc8d0d8b3ffdab8f8b393
 ### Native107/107a/107b terminal — complete browser108 freeze
 
 Root independently matches finalfourreportedhashes,325otherAPIWebsources,1125otherpriorboundinputs,34immutable/threeexceptions/rootindex. `evidence/cp4-native107b-root-qualification.json` records source-only qualification. Staticreview corrected nested shellquote/diagnosticcap order, first-load nonexistentcomposer assumption, and forced actualoffline sockettraffic/WSS target; no testexecution inferred. New30sregression covers delayedfailedmetadataafteractualreconnect; all90priororacles/budgets retained. All sourcewriters terminal. Freeze329sources (328APIWeb+changedrootrunner),fullcurrentTODO,positivepublicinputs/protections/rootindex for exactlyONE `bash scripts/test-channels-local.sh browser` invocation108. Validator owns fourunique108outputs andcanonicalowneddisposablebuild/test/cleanup only; current91Playwright, no retry/filter/autofix/timeout/assertion/threshold/source/T/inputmutation/private/operational/Meta/Git expansion. Boundedfixedsyntheticalertcontext trap preserves originalstatus and cleanup. Rootmatchesactualreached/unreached/results beforethaw; no assumedalertcause or nativeIGacceptance. RemainingcurrentALL/CP5/primary/pendinghuman/CP6/independentassurance/physicalgatesstaymandatory.
+
+
+### Browser108 terminal/root reconciled — native109 deterministic transport/UTF8 diagnostics
+
+`evidence/cp4-browser108-root-reconciliation.json` independently matches329sources/fullT/1146positiveinputs/34immutable/threeexceptions/rootindex/fouractualoutputs. Exactlyone canonicalbrowser ran91tests:88pass/3fail; APIbuild/31migrations/Webtsc/Vite pass, allownedcleanup complete. CT initialrealWSSwelcome passed, but CDPoffline plus actualsignedIN did not closeexistingWSS (0vs1), so delayed-failure/reconnect proof unreached; failurecleanup also hit routealreadyhandled. IG actualexternalnavigation passed but exactnonASCIIparagraph absent; body charset omission is a concrete fixture gap, not yet runtime-proven cause. Protectedtimeline pendingbanner cleared then1alertremained; fixedcontext diagnostic emittedmarkerswithoutpayload, actualalerttext remainsUNKNOWN. No acceptance, skip or relaxedassertion.
+
+Serialize one sourcewriter through `evidence/cp4-native109-handoff.json` on exactly four already-admitted test/runner paths: explicit UTF8 document metadata for synthetic externalpage; test-only owned rawWSS close control so actualsocket close/reconnect crosses a held HTTPread without CDP aborting it; awaited routecallback cleanup; broaden bounded role-alert extraction for actual ARIA snapshot attributes. Preserve all original90scenarios/91currentoracles/timeouts/provider+PG counters/heldreplyhash and productioncode. No operational/private/runtime/provider/Meta/Git/testing authority. Rootqualifies terminalsource before CP5 source dispatch and later canonicalvalidation. Parent/child metadata behavior staysunchanged until actualalert evidence; no guessed productfix. PendinghumanUTF8limit/privacy, primaryprotocol, fullALL/CP5/CP6/independentassurance/physicalproof remain mandatory.
+
+
+### Native109/109a qualified — missing CP5 source110
+
+`evidence/cp4-native109a-root-qualification.json` independently matches finalfourreportedhashes,325otherknownsources/1141otherpreviouspositiveinputs/34immutable/threeexceptions/rootindex; `evidence/cp4-source109a-terminal-manifest.json` seals329paths. Correct UTF8 document, real ownedWSS drop and narrowlytyped cancellation cleanup/rolealert attributes are source-only, testsNOTRUN; protectedtimeline alert stillUNKNOWN. Current90priornativeoracles/91currenttests remain, no pass inferred.
+
+`evidence/cp5-scale-contract-resolution109.json` resolves prepared implementation questions against actual BFF/UI/schema: ID-open/messages read-only and exactreply-options; existinglist50 page1/page2 (no inventedcursor/APIv1Instagram); originalIN row perbulkconversation from actualsigned24account templates; commonprovider-PROVEDWA businessphone identity contested20ways acrossdistinctstagedproviderIDs/BUs, not illegal sharedproviderowner row. Realconcurrency/perpagequeries/noHTTP/20kcohort/p95/15sbatch limits stayexact. Existinginitial5x20 proof may be reused onlyexacthash/currentfullALL.
+
+Serialize one source-only OperationalCoder through `evidence/cp5-scale-source110-handoff.json`, new `api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts` only. Fullnormative IG-ARCH-R1-04 applies. No tests/build/runtime/provider/private/Git/otherfile edits; source-onlyfixture construction is not an actualloadproof. Rootqualifies completionbeforecurrentcanonicalALL and independentreview. Allunmetnative/primary/human/CP6/assurance/realproof obligations remain; no partialdelivery or waiver.
+
+
+Source110 candidate was not accepted: `evidence/cp5-scale-source110a-static-review.json` records actual helper/DTO/HTTP-method mismatches and missing per-page/per-round/finally assertions. Same new-file executor completes110a before root qualification or test dispatch. All workload sizes, thresholds, exact native effects and no-runtime/private boundaries remain unchanged.
+
+
+### Source110a terminal candidate — independent review and executable proof still open
+
+`evidence/cp5-source110a-root-qualification.json` matches new67718byte/hash and329knownsourcepaths/protections/index; `evidence/cp5-source110a-terminal-manifest.json` seals330sources. Sixsequential nativecases shareone20kcohort setup; codecorrects helpercapture/DTO/HTTPsteps/trustedtimestamps/individualqueryandlatencyoracles/ownerbarriers/finally/RLS/batch. This is sourcequalification only, not compiler/schema/performance/concurrency acceptance. Fresh complementarysourceadherence/currentcanonicalALL/actualbrowseralert/primary/human/CP6/assurance/realproof remain mandatory. RuntimeA closedpackage111A may be reviewed concurrently with canonical disposable execution onlywhile its33source/fullT/evidence bytesremainexact; no source orTmutations until relevantfreeze terminal.
