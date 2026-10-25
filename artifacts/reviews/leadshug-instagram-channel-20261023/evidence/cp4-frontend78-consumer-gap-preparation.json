@@ -1,0 +1,22 @@
+{
+  "kind": "CP4frontend78 read-only consumer qualification",
+  "status": "PREPARATION ONLY during frozen API78. No source mutation or new runtime authority.",
+  "actualReadSources": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/telas/Numeros.tsx",
+    "web-app/src/api.ts",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts"
+  ],
+  "qualifiedGap": {
+    "problem": "Full-navigation REAUTHORIZE loses in-memory captured channel/generation. Current get(actor,id) safe DTO includes operation/BU/account/status but omits local channelId and expectedGeneration; confirm requires captured generation for REAUTHORIZE. UI must not reconstruct authority by username/BUphone/catalogfirst.",
+    "proposedHOW": "Later same-admitted owner get DTO adds only safe local channelId and original expectedGeneration (nullable for CONNECT). Native preconfirm GET asserts exactattempt localfields after actual callback and foreignsession rejection/no secrets; no providerHTTP. UI GET obtains serverattempt binding; actor/sessions remain current. No source change during API78freeze.",
+    "notScopeExpansion": "Existing approved OAuth attempt resume consumer; no new endpoint, providerprotocol, grant, credentials, remote routing or DB migration. Exact next source/test handoff required."
+  },
+  "idempotency": "Current Instagram create/confirm keys UUID-only. UI can use attempt UUID itself as stable per-attempt confirmation key after full navigation/reload. No nonUUID prefixedkey; create randomUUID once per explicitintent. Confirmation must not generate fresh key on uncertain retry.",
+  "UIHOW": "Follow cp4-react-next-root-preparation.json and actual current schemaVersion2 reply-options. Scope all async effects to monotonic navigation/request intent; safe DTOs presentation only. Draft full tuple/revision; synchronous peraction in-flight; no auto resend/cross-account fallback. ExistingWAinitial/template/recovery preserved.",
+  "proof": "Actual implementation/unit/browser proof still missing, not acceptance. Full CP4/CP5/CP6 obligations unchanged."
+}

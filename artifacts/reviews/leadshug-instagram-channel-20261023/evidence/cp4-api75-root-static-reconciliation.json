@@ -1,0 +1,110 @@
+{
+  "kind": "CP4API75terminal-root-boundary-and-static-qualification",
+  "files": [
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "bytes": 49088,
+      "sha256": "af62baafba5ee04657ac07ed1461f1841017dd3b523051aacefef55df8dbe0b7"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 89324,
+      "sha256": "7d3e661b29233c66e443353b8c801588b8b6a82b4c5c0870610fa2fa0a258a0f"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 10346,
+      "sha256": "d7294c9a885217ba85dc25a062c977769c66e1a69437d791ecacd604a2c6d217"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 8705,
+      "sha256": "79dc13cc0e56d3d547448a3269b0849ae559cd5108ba751598f4f43094384e31"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64132,
+      "sha256": "7477a507570cfe27d050e9d19d67c9e6c25c3d289cc939092f89ba61f3d765ba"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "bytes": 9860,
+      "sha256": "136a0c71e5d6a9e9038c1dedca1c406aeeea431a133a41902b33c94751db4a56"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 6980,
+      "sha256": "173eab1e78c69d1bee25544833ddcba6f22f6efb0f82c79e5d8fa7d0dc990f1c"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22491,
+      "sha256": "574679d3ad9300295c3cdeb92867158c7ce5661ba51ca66fb0d0853f51b0acee"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10218,
+      "sha256": "6caeefd575ec00a76d23ad4a4327e00156a12b6a9163063285fb06a233b5ec88"
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "bytes": 9059,
+      "sha256": "b615202e95174055d345b407f7a955b7800fa46830bd5e70378c3ef5db6b7653"
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "bytes": 9843,
+      "sha256": "943e18f61e04be50c72419a7e7989795e155d0d96e30ff90bf74f2d9d8516c26"
+    },
+    {
+      "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+      "bytes": 12534,
+      "sha256": "aacc8d2f85aeabb866fdf571128def005bb4739d091a4e364c74d2b4a6e3eaf6"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 9460,
+      "sha256": "fbf97f1d20284ee29808b0d257f0aad31c7b5af8be95a24a83c94667a11dfafa"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 10471,
+      "sha256": "db47de67bae50b2c7c7ea021fd6578be1f161cdfa4e78646beac2d790b9b1278"
+    }
+  ],
+  "knownOther252SourcesExact": true,
+  "consumerTestOnlyExactCommentChangeReverseProved": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "execution": "NOTRUN",
+  "scopeQualification": "Only positive known source set and named2newfiles checked; no broadprivate/newfileinventory or productGit. Do not claim exhaustiveworkingtreeinventory.",
+  "staticFindings": [
+    {
+      "id": "IG-CP4-75-01",
+      "fact": "Bothdisplayqueries reference a.status/a.subscription_state outside lateral a, butlateral selects onlyusername/mapped_credential_version/professional_user_id. RealSQLcolumnprojection isinvalid; no SQLrun yet.",
+      "fix": "Eliminate unselected outerreferences; qualify durablemappedcurrentversion/actualgeneration/account once inlateral, independent of OAuthTTL and external subscription outcome; never borrow pending/unmappedcandidate."
+    },
+    {
+      "id": "IG-CP4-75-02",
+      "fact": "Durableverify shortcuts alreadyreceived CURRENT withzeroGET, contradicting nativeknownreceiptGET/UNKNOWN oracle and approvedHOW. UNKNOWNerror also lacks safeconnection because service doesnotcatch/project it.",
+      "fix": "RemovealreadyReceivedshortcut; preserveknownreceiptandrunoneboundedGET+samelease/cooldown. ReturnUNKNOWN503withsafecurrentconnection viaorchestratorafterliveactor/gen revalidation. NoPOST orreadinesschanges."
+    },
+    {
+      "id": "IG-CP4-75-03",
+      "fact": "WAverify response lacks top-levelchannelId required by nativecurrentUUID control.",
+      "fix": "AddlocalchannelId toverify success result alongsideconnection/observation."
+    },
+    {
+      "id": "IG-CP4-75-04",
+      "fact": "DisplaySQL joins platform/scopes but omits explicitidentity namespace and IGcontactscope==businessscope qualification.",
+      "fix": "UseactualnativeWHATSAPP businessnamespace/BU and PERSON/GROUP recipientnamespace/BU grammar, IGbothINSTAGRAM_LOGIN scopes exactsamecurrent app/account. Retaininvalidrouteneutrality, notdropinvalidrowsandchoosefirst. No arbitrarypubliclabels/dispatcheffects."
+    },
+    {
+      "id": "IG-CP4-75-05",
+      "fact": "Newverify expiration checks useexpiry>now, unlike required60s safetymargin.",
+      "fix": "Applyactual60s margin inclaim/currentownerbeforeeachrequest; keepbudget/lease/actor fences andknownreceiptfacts."
+    }
+  ],
+  "notAFinding": "Root initiallysuspectednewhelperDIcycle, thenreadactualconstructors: Conversations/Resolver instantiatehelper fromexistingPrisma, onlyBFF-ownedConnectionsinjectsregisteredhelper. No DIcycle asserted; nounnecessarymodulechange.",
+  "next": "Same solewriter75a 3exactfiles staticrepairsbeforefirstfullAPI76; testoraclesimmutable."
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "CP4 API78 root actual reconciliation",
+  "all266SourcesCurrentTF647Inputs35Preservations3IndexExact": true,
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api78-before.json",
+      "bytes": 415805,
+      "sha256": "06c034f2c20bb66c28828fe41dc4b20067a471fd25d3d36749ceda15b2fdd6b5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api78-api.log",
+      "bytes": 18810,
+      "sha256": "3821ba742ba8cbc2adda7e2ab9231a285b5564092bc3f648f4c6936a37dd2696"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api78-after.json",
+      "bytes": 419832,
+      "sha256": "957aea94bad1c293a7d5bdb3954b79e0306b8bf9f816fb81bdba474d796f826f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api78-result.json",
+      "bytes": 3132,
+      "sha256": "c2577902cf13806dbb31b1c8b8e5b46fa70ac8695f3d22b3050c37dcfe38318f"
+    }
+  ],
+  "actualProof": "26 parity mutation rejects/31migrations/schema current/lint/build passed. Unit425/426 across39files; dependency AST scanner false-positives safe data identifiers instagramUsername andinstagramInboundAt. E2E NOTREACHED.",
+  "diagnosis": "concreteName prefixregex /i also scans metadata field identifier keys/accesses. Neither flagged consumer imports/provider-tokens/directclients/concretedispatch. No architecture coupling inferred from these metadata fields.",
+  "next": "Narrow AST metadata property classification plus genuine coupling controls; preserve old negative cases. Add safe serverattempt binding metadata for fullnavigation reauth with nativeasserts. ThenonefullAPI80 beforewholeUI."
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "CP4API75a-static-repair-handoff",
+  "authority": "Sameapproved14path75scope, rootterminal/staticreceipt; actual73causalRED retained. No runtime/test/source scope expansion.",
+  "allowedWrites": [
+    "api-app/src/domain/channels/channel-display.ts",
+    "api-app/src/domain/channels/channel-connections.service.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts"
+  ],
+  "sourcePreimages": "cp4-api75-terminal-source-manifest.json; allother263files immutable",
+  "findings": "Applyall5 concrete IG-CP4-75-01..05 in cp4-api75-root-static-reconciliation.json. No newDI/modulefix (root checked actualconstructors, nocycle).",
+  "displayHOW": "Lateral selectonlymappedusername/account/currentversion qualifiedinside, avoidunselectedouterstatus/subscription refs. Durablemapping, not externalSUBSCRIBED or10minTTL, qualifiesknownusername; matchactualcurrentgen. Explicitnative namespaces+scopes forbusiness/peer andcurrentprovider/channelassociation; invalidroutes neutral, notfilteredaway tochoosefirst. QueryallSQL<=8/zeroDML stays.",
+  "verifyHOW": "RemovezeroGET alreadyReceived branch; currentknownreceiptstillmustperformoneboundedread andUNKNOWN503 peradmittedHOW/currenttests, preservingchannelstate/receipt. Enforce60smargin inclSQL livefence; noPOST. CatchonlyspecificUNKNOWN atConnectionsorchestratorAFTERleasefinally, reauthorizeactor/exactgen, attachsafeconnection andthrow503. Othererrorspropagate intact. Addtop-levelchannelIdtosuccessDTO. RetryAfter429unchanged.",
+  "constraints": "No other source/helper/test/T/docs/config/Prisma/module/writer changes. No runs/build/lint/Git/status/inventory/private/env/runtime/provider/network. Rootownsdocs. Finishall5andreporthashbytes plusactuallimits; rootthenfreezeonecanonicalFULLAPI76."
+}

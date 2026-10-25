@@ -1,0 +1,12 @@
+{
+  "kind": "projection77 root qualification",
+  "sourceCount": 266,
+  "changed": {
+    "path": "api-app/src/domain/channels/channel-display.ts",
+    "bytes": 14440,
+    "sha256": "dba3edec19d889bf826553199fa6c2e508f11e5dfe6fdb495344682f60d3e228"
+  },
+  "other265Exact": true,
+  "staticReview": "Only equivalent codepoint filtering, cc.generation grouping and one fully qualified WAroute/distinct adapter cardinality. No test or budget changes; runtime correctness unproven.",
+  "next": "One full canonical API78."
+}

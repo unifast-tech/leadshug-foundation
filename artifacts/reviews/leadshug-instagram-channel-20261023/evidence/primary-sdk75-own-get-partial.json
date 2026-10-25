@@ -1,0 +1,33 @@
+{
+  "kind": "Additionalofficial-primarySDKGETevidence-notfullprotocol",
+  "date": "2026-10-25",
+  "retrieval": "PublicHTTPS officialMetaGithub only, memoryreads; no checkedoutSDK/dependency/sourcecopy oractualprovider/credential/runtime",
+  "facts": [
+    {
+      "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/facebook_business/adobjects/iguserforigonlyapi.py",
+      "bytes": 35377,
+      "sha256": "460975555c05a1e59e793eb511184d3ae5a2632e98d90d724ec1b3e03cea5a0a",
+      "observed": "OfficialgeneratedIGUserForIGOnlyAPI exposesget_subscribed_apps, methodGET, edge/subscribed_apps, targetAbstractCrudObject. ItalsohasPOSTandDELETE; no mutationauthorized."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/facebook_business/adobjects/igusersubscribedappsdata.py",
+      "bytes": 1041,
+      "sha256": "7430e85117ea1501b93d1916440e6edf18456d94d6c37ee859269b4ed23ec008",
+      "observed": "Officialgeneratedtype has app_id:string andsubscribed_fields:list<string>. ThisclassisNOTreferencedbytheobservedIGOnlyget_subscribed_apps method, so doNOTinferexactwireenvelopefromit."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/facebook_business/apiconfig.py",
+      "bytes": 296,
+      "sha256": "0dd4561d332606a38ac3276cbb9d9c6ccbd7fe915a119d9558123d83632b4afd",
+      "observed": "SDKconfigurationdeclaresAPIv26.0/SDKv26.0.2."
+    }
+  ],
+  "qualifiedAdvance": "Thepreviouslookupof iguser.py alone missedseparateIGOnlyclass. GETedge now haspositiveprimarySDKsupport, unlike mereabsenceofdocs. Narrowstheuncertainty; doesnotsettlefullprotocol.",
+  "stillUnproved": [
+    "ExactIGLoginwireenvelope andmandatoryfields",
+    "Meaning/namespace app_id orid comparedtoInstagramclientversusMetaapp",
+    "Ownappvisibility andcompletepagination/emptyabsence semantics",
+    "Actualinstallationpermissions/accountgrant andliveGETbehavior"
+  ],
+  "disposition": "IG-SUBPROTO01 remainsOPEN. No sourcechange, guessedIDequality, emptyabsenceinference, repeatedPOST, orproviderprobe. FollowAPI75existingUNKNOWNcontract unchanged; laterboundedreviewedprobe/primaryclarificationstillrequired."
+}

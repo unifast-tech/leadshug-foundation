@@ -1,0 +1,87 @@
+{
+  "kind": "CP4wholeReact-prospective79-boundary",
+  "status": "PREPARATION ONLY; not dispatched/authorized sourcehandoff. CurrentAPI78freeze forbids allsourcewrites. Rootqualifies actual78terminal beforeexactdispatch.",
+  "profile": "Sole Operational/Coder routine gpt-6-luna medium; root owns Foundation docs. No sourcewriter/runner overlap.",
+  "candidateExistingPaths": [
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 16785,
+      "sha256": "7c80a2e738655c5b54382e2805d5e8e808b80e25af283ca90402e932a3d3794c",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 9776,
+      "sha256": "9712bf3c1409754f3d802f7364cb5756d92762177a0ecc01f7f09120cd38aee9",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3177,
+      "sha256": "22cf5877d6336e4c22b8650402c5913b064278b9ba639e20e10f9a80c00fc791",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 25560,
+      "sha256": "66658161c7c74610288bf6c92583b616bacc1ada0fced27af01997ed22481737",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "bytes": 43466,
+      "sha256": "9afbe4f419dcf4b5133f8103a0082b6eaa32837aaaf307ffbc61489c50f8cb78",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 40678,
+      "sha256": "2702cae2c4d913d511e33ca8d305ecc03d7ee56f34623877058865d884aa1bdd",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 6611,
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757",
+      "frozenSourceKnown": false
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 88836,
+      "sha256": "1d40f2007b7926d082e89684f5d7455fd0cc4016ee67d4752d4248af2d38d9d3",
+      "frozenSourceKnown": true
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 52254,
+      "sha256": "a9e7acb45a6bb629efe0a18f0ad9aea87ee25dec58126f989d10ede302b968ac",
+      "frozenSourceKnown": true
+    }
+  ],
+  "candidateNewPaths": [
+    {
+      "path": "web-app/src/instagramState.ts",
+      "currentlyAbsent": true
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "currentlyAbsent": true
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "currentlyAbsent": true
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "currentlyAbsent": true
+    }
+  ],
+  "scope": "EntireapprovedCP4consumer, notbackend-only. Need exact source/testhandoff and actual browser proof.",
+  "producerDTOGap": "cp4-frontend78-consumer-gap-preparation.json; serverGET safe localbinding metadata for full-navigation reauthorization. Nativeassert before actualconfirm; foreignscope/secretabsence preserved. No DB/config/protocolchange.",
+  "implementationHOW": "cp4-react-next-root-preparation.json and actual current fullsource DTOs. UI stable common catalog under existing /numeros, manual20<=50pagination, explicit continuation, ATENDENTEread/adminmutations. Existing guidedWA preserved. StrictV2replyoptions beforetyping, explicitchoice whenmultiple, fulltuple+revisiondrafts, monotonicA-B-Arequestfence, synchronousperactionlatch; no derivingroutefrompresentation/latest/legacycontact.",
+  "ordinaryRecovery": "Keep real localadmissions/start-options and acceptedresultrecovery. Every onOptions/onComplete callback scoped tocapturednavigationintent, not onlymatchingIDs. Reopening sameconversation is newintent. Child remount/key and outer guards preventlatecallbacks/finallyclearingnewwork.",
+  "OAuthHOW": "Fullnavigation to server-supplied authorizationURL via window.location; neverSDKinline/copytoken. Callbackreads only safeUUID/errorallowlist and synchronously replaceState cleanquery. SafeattemptUUID/BUhint maypersist, storageunavailable gracefully; serverget resolvesboundBU/channel/gen, noautochangeselectedBU fromlateattempt. CurrentkeygrammarUUIDonly: perattemptid itself canstableconfirmkey, one randomUUID percreateintent. Stale/UNKNOWN leavefacts/draft; no externalPOSTrepeat.",
+  "consumerProof": "Meaningfulpurestateunitcases forA1/B2/A3 withsameIDs/restoredrevision/oldACK/newtyping/changedtuple/doubleclick/malformedV2/failclosed. Browsermustexerciseactualcomponent/nativeBFF/PG/WS, nottest-onlymodel orBFFstubs.",
+  "browserPhase": "Separateexact source/testhandoff afterUIstatic/nativeproof, or test-firstbrowserphase precedingUI when currentAPI qualified. Only admitted test/browser-server.cjs,e2e/instagram*.spec.ts,*freshness paths plusjustified existingWAfixtures; protectApp/Playwrightglobal/Vite/publicconfig/privacy/SessionService/deps. HTTPSHOW in cp4-browser67-config-qualification.json.",
+  "forbidden": "No gitproduct/rootindexmutation, worktrees, newdeps/configs, .env/private/runtime/tunnel/Meta/device. Current1000characterpolicy/privacyprotected unchanged pendinghumanproposals. Do not independentlyexpandAPIprotocol/owner/outbound/initial contracts."
+}

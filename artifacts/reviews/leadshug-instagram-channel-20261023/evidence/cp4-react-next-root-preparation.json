@@ -1,0 +1,33 @@
+{
+  "kind": "CP4React-strictV2-prospective-root-HOW",
+  "status": "PREPARATION ONLY; no source authorization or implementation evidence. Dispatch only after API75 terminal/root/canonical validation and exact frontend preimages.",
+  "scope": "Existing Numeros/Inbox/API/CadastroNumero/NovaConversa plus admitted Instagram-named components/purestate/specs; protected App.tsx/globalPlaywright/Vite/publicconfig/privacy remainunchanged.",
+  "sharedConnections": [
+    "Keep existing /numeros/menu path. Numeros renders common safe catalog cards by localUUID, platform/account/state/realreceipt; no raw provider IDs or BU.phone display authority. Preserve guided WA onboarding and suppress only duplicate legacycardview through explicit optional prop ifneeded.",
+    "Manual bounded pages20<=50 perBU, explicit continuation, no automatic all-page or provider fanout. Ordinaryread ATENDENTE; admin actions onlyADMIN/OWNER withsafe unavailable reason. Unknown futurechannel type getsneutral readlabel, never implicitWA fallback.",
+    "Instagram-specific fullnavigation OAuth create/connect/reauthorize/status/confirm/cancel/verify/disconnect with capturedBU/id/gen and monotonicintent. Do notautochangeBU basedonlateattempt. Aftercallback read onlysafeUUID/error hint, history.replaceState cleanquery, serverstatus fetch; token/state/code neverbrowserstorage/log/bundle. Storageunavailable safe; onlysafeattemptUUID/BUhint maypersist.",
+    "Pendingreceipt !=ready;503UNKNOWN preservesknownfacts andexplainssafely, no automaticPOSTretry. Localdisconnect/remotePENDING distinctfriendlycopy, no infrastructurelease/hash/implementation IDs inuserflow."
+  ],
+  "composer": [
+    "Fetch andvalidate schemaVersion2 reply-options for selectedBU/conversation beforetyping; route/channel/gen/fingerprint captured, displayDTO presentationonly. Neverderivepeer fromlegacycontact/labels/username. Multiplequalifiedroutes needexplicitselection, no first/latest fallback.",
+    "Use pure admitted src/*instagram*.ts state plus meaningfulunitcases. Maintain monotonic navigation/requestintent covering A->B->A, optionsfetches/send/initialrecovery callbacks. EqualityofIDs alone insufficient; ignorelate async effects includingfinally/error.",
+    "Draft per fullqualifiedtuple and revision, preserveonswitch/window/credential/context change/409/UNKNOWN; nevercopydrafttoanotherroute/newgeneration implicitly. Restoringdraftonnewintent givesnewrevision so earlierACK cannotclear newlyrestored text. Clearonly exactcapturedrevisionafteraccepted outcome.",
+    "Synchronous in-flight ref/map blocksdoubleclickbeforeReactrerender. Scope toactualcurrentbinding/action; latecompletion cannotunlockdifferentaction/clearnewdraft or triggerauto resend. Serverordinary->ordinary concurrency remains ascontract; no newglobal request-keypromise.",
+    "Backgroundeventfromanotheraccount/sharedopaquepeer refresheslist, doesnotselectaccount/changecapturedroute/draft. Freshoptionsinvalidatedgeneration/window blocksenduntilexplicitreview. Neverauto resendonfetch/reconnect/error.",
+    "Keep existing timeline pagination/recovery/claim/close and WAinitialtext/approvedtemplates/OrdinaryRecovery. Initial/start-options maystillreadsharedadmissions forIG (localonly), but no IGinitial/prospecting/templates UI. Scope every recovery onOptions callback tocurrentintent too."
+  ],
+  "unitProof": [
+    "A1/B2/A3oldAresolve ignored even matchingIDs",
+    "draft A/Bretention, restoredrevisionprotectedfromoldACK",
+    "newroute/gen/fingerprint neverborrowdraft; unknown/stalefailsclosed",
+    "doubleclick synchronoussingleflight; acceptedcapturedrevisionclear; lateerror/ACKnewrevisionpreserve",
+    "malformed/unknownV2 schemas unavailable, no legacyfallback"
+  ],
+  "browserProofMandatory": [
+    "Freshactualbundle+realcompiledNest/PostgreSQL, realbrowserHTTPS4174frontdoor+4173assets/configproxy+3102backendchild. /api,/health,/ws routedbackendBEFOREassets; publicconfigapiUrl emptyusesactualorigin, doNOTinjectconfig/fakeBFF/session/Prisma/WS. PreserveHost/Origin/Cookie/Location and WS.",
+    "Only providerHTTP/authorizationdocument fake. Ephemeralcert+perspectrustexception; HTTPSchildonly COOKIE_SAMESITE=NoneforcesSecure without NODE_ENVproduction, exactHTTPS WEB_ORIGIN/CORS. ParentHTTP3100/4173unchanged. No global Playwright/Vite/App/publicconfig mutation.",
+    "ActualSecureHttpOnlySameSiteNonecookie/303/querycleanup/nativeDBfacts/freshcompiledbundle-childhash. Selfsignedsameoriginproxy doesnotproveproductionTLS/crossoriginCORS.",
+    "FRC delay actualcompletedBFFresponse atownedproxy/control preservingbody/status/headers; actualA/B/A/doubleclick/latefailure/newtyping/storageunavailable/reload/otheraccountinbound; realbackend nativecounts/timeline/destination no wrongPOST. PreserveWAonboarding/initialtext/template/respond/recoveryjourneys."
+  ],
+  "validation": "After source terminal/root, canonicalweb/browser+fullcurrentproof, no runtime/Meta/realprivate authority. Thisprospectiveartifact isnot anexecutedtest, sourcehandoff, gatepass or featureacceptance."
+}

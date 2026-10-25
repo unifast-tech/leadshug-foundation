@@ -1,0 +1,99 @@
+{
+  "kind": "cp4-api78-result",
+  "scenario": "ST-IG-03 complete API canonical disposable synthetic validation",
+  "canonicalCommand": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "canonicalExitCode": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api78-api.log",
+    "bytes": 18810,
+    "sha256": "3821ba742ba8cbc2adda7e2ab9231a285b5564092bc3f648f4c6936a37dd2696",
+    "lineCount": 330
+  },
+  "stages": {
+    "runnerSetup": "completed; canonical disposable synthetic runner started and cleaned up its owned resources",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": true,
+      "guard": "channels-ci-parity-v1",
+      "mutationsRejected": 26,
+      "outerWrapperControlsPresent": true
+    },
+    "prismaClientGeneration": {
+      "reached": true,
+      "passed": true
+    },
+    "prismaMigrateDeploy": {
+      "reached": true,
+      "passed": true,
+      "migrationsFound": 31,
+      "allMigrationsApplied": true,
+      "databaseSchemaUpToDate": true
+    },
+    "apiLint": {
+      "reached": true,
+      "passed": true,
+      "evidence": "runner proceeded to build"
+    },
+    "apiBuild": {
+      "reached": true,
+      "passed": true,
+      "evidence": "runner proceeded to API unit tests"
+    },
+    "apiUnitTests": {
+      "reached": true,
+      "passed": 425,
+      "failed": 1,
+      "testFilesPassed": 38,
+      "testFilesFailed": 1,
+      "totalTests": 426,
+      "durationSeconds": 4.73
+    },
+    "apiE2ETests": {
+      "reached": false,
+      "passed": 0,
+      "failed": 0,
+      "reason": "unit suite failed and canonical runner stopped before E2E"
+    }
+  },
+  "actualFailure": {
+    "class": "API unit test failure",
+    "file": "src/domain/channels/transport/channel-dependencies.spec.ts",
+    "test": "common outbound dependency boundary > keeps provider clients and dispatch inside channel adapters",
+    "line": 149,
+    "assertion": "expect(violations).toEqual([])",
+    "expected": [],
+    "received": [
+      "/workspace/api-app/src/domain/inbox/conversations.service.ts: provider token or client reference",
+      "/workspace/api-app/src/domain/inbox/incoming.service.ts: provider token or client reference"
+    ]
+  },
+  "actualPassedTotals": {
+    "migrationsApplied": 31,
+    "unitTestsPassed": 425,
+    "unitTestFilesPassed": 38
+  },
+  "actualFailedTotals": {
+    "unitTestsFailed": 1,
+    "unitTestFilesFailed": 1,
+    "e2eTestsReached": false
+  },
+  "durations": {
+    "apiUnitSuiteSeconds": 4.73
+  },
+  "postflight": {
+    "checksPassed": 951,
+    "checksFailed": 0,
+    "sourceCount": 266,
+    "todoChecked": true,
+    "boundInputCount": 647,
+    "preservationRows": 35,
+    "approvedExceptions": 2,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "canonical runner cleanup observed in raw log; validation postgres container, volumes, and network removed",
+  "limitations": [
+    "API lint and build passed, but one API unit dependency-boundary assertion failed.",
+    "E2E and all CP4 catalog/lifecycle/projection/realtime behavioral assertions were not reached."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "CP4 projection77 exact source repair",
+  "allowedWrites": [
+    "api-app/src/domain/channels/channel-display.ts"
+  ],
+  "preimage": {
+    "path": "api-app/src/domain/channels/channel-display.ts",
+    "bytes": 13636,
+    "sha256": "84b36bbfa5e80e0c42590f9c1161a421b9d22b9f7cddc381e2b5d9dfcc72dba9"
+  },
+  "requiredRepairs": [
+    "Actual76 lint: safeLabel equivalent codepoint control-character filtering; no suppression/configchange.",
+    "SQL conversations CASE references cc.generation; include inGROUP BY or remove redundantouterreference onlywithsame inside durableproof. Reviewallactualreferences.",
+    "One valid WAroute can join OFICIAL andNAO_OFICIAL channels ofsamebusiness, peer andnative namespaces. Do notcomparejoinedrowcounttoroutecount. Permit <=2 distinctvalidWAadaptertypes withfullyproven rows/singleimmutable route+business+contact; unknown/missing/duplicate sameadapter/ambiguousgraph neutral. IG exactlyonecurrentchannel; twoaccountgraph neutral. Nofirst/latest/readyfilterchoosesidentity."
+  ],
+  "readAuthority": "266 exact publicsource paths from cp4-api76-frozen-manifest.json plus currentT/rootdocs explicit. No broadinventory.",
+  "forbidden": "Anyotherwrites, tests/build/lint/runtime/provider/network/Git/private/env access. No testchanges/budgetrelaxation. Rootownsevidence/T.",
+  "next": "Terminal report bytes/hash/actualdiff rationale; rootfreezeoneFULLAPI78 thenwholeCP4frontend."
+}

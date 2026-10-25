@@ -31,7 +31,7 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API73 trouxe RED causal com426unit/141E2E passando e12falhas novas qualificadas. Corrigir fielmente fixtures74 e então implementar todoCP4API75; depois ReactV2/HTTPSbrowser e todos os gates restantes. Depois completar catálogo/lifecycle/projeções/realtime, ReactV2 e HTTPSbrowser, sem entrega parcial; todos os gates posteriores permanecem obrigatórios.
+- **Next exact step:** API78 passedlint/build/425of426unit, ASTguard falselyclassifiesmetadata. Repair79 narrowguard+safeOAuthresumeDTO/nativeasserts, thenONEFULLAPI80. Complete strictV2React/HTTPSbrowser andalllatergates remainrequired.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
@@ -1835,3 +1835,29 @@ Root independently matched264sources/T/620positiveinputs/35preservations/3gitlin
 Root independently reversedexact74edits tobothknownpreimages;262othersources/35preservations/3gitlinksexact. Connections52254bytesSHAa9e7acb45a6bb629efe0a18f0ad9aea87ee25dec58126f989d10ede302b968ac; display28761bytesSHAb7ea313865cc24b8b896481c252d712d3d5d8b4268a77c8ae9bab178cec896f6. Only4authorizedfaithfulcorrections; strict8allSQL/WITH/auth/zeroDML/timings preserved. No rerun/retroclaimeveryoracleRED; actual73catalog/realtimeRED governsnextsourcehandoff.
 
 `evidence/cp4-whole-api75-handoff.md` andexactsourceboundary serializeonesoleOperational/Coderroutinewriter14paths(12existing+2new), allother264sources/tests preservedexceptconsumer-isolationcommentonly. EntireAPIcatalog/UUIDWAbridge/IGdurableverify-disconnect-reauthorize/sharedsafedisplay/boundedjoinedlist/commonIncoming realtime+audit together; no parallelIGstatemachine/providerprotocolguess. SeparatefullAPIafterterminal; thenstrictV2React+actualHTTPSbrowser. Allprimary/human/CP5/CP6/assurance/realgatesremainopen; no backend-onlydelivery. No tests/private/runtime/provider/Git in75sourcewriter.
+
+### CP4 API75/75a terminal — complete API76 freeze
+
+Root independently matched266knownsources:75aonly3admittedrepairs/263exact75terminalbytes,35preservations/3rootgitlinks exact. Five static findings corrected underexisting75boundary; no test/build/lint/runtime/provider execution bywriter. `evidence/cp4-api75a-root-qualification.json` records actualterminalhashes andlimits. PrimaryownGETfullprotocolstillOPEN despiteprimarySDKpositiveGETedgeevidence; no namespace/envelope/absenceguess implemented.
+
+Allwriters terminal. Freeze266sources/FULLcurrentT/positivepublicinputs/35preservations/3rootgitlinks for exactlyONE completecanonicalAPI76. Validator onlyfouruniqueoutputs; no source/T/inputwrite/retry/autofix/private/env/operationalruntime/Meta/Git exceptexactroot3gitlinkread. Root reconciles actualrawresults andstrictquery/lateoraclereachability; 66/73counts never reused as76proof. ThencompleteCP4strictV2React+actualHTTPSbrowser andallCP5/6/assurance/realgatesremainmandatory; no backend-onlydelivery.
+
+### CP4 API76 terminal — projection repair77
+
+Root independently matched266sources/FULLT/634positiveinputs/35preservations/3gitlinks andallfour76outputs. ExactlyoneFULLcanonical invocation exited1atlint: no-control-regex channel-display.ts199.31migrations/generate/schema current passed; build/unit/E2E NOTREACHED, nobehavioralCP4proof. Freeze76ended afterrootreconciliation.
+
+Solewriter77 onlychannel-display.ts: equivalentcontrolcharacterfilter withoutlintdisable, SQL cc.generation grouping, validoneWAroute/two-distinctadapters samebusiness/peer display (missing/ambiguous/duplicateprovidergraphremainsneutral). Thesearestaticproductdefects, nottestpolicyrelaxation; no test/thresholdchange. RootqualifiesterminalbeforeoneFULLAPI78; allstrictV2React/HTTPSbrowser/primary/human/CP5/6/assurance/physicalgatesremainmandatory.
+
+### CP4 projection77 terminal — API78 freeze
+
+Root independently matchedonlychannel-display.ts14440bytesSHAdba3edec19d889bf826553199fa6c2e508f11e5dfe6fdb495344682f60d3e228and265otherexactsources/3gitlinks. Equivalentlintfilter/grouping/validtwoadapterWAprojectiononly; alltests/strictbudgets preserved. No runtimebehavior claimed. Allwriters terminal; exactlyONEFULLcanonicalAPI78under266sources/currentT/positiveinputfreeze, fouroutputs only, noretry/autofix/private/runtime/Meta/Gitexpansion. Actual78prooftobereconciled beforewholeReactV2/HTTPSbrowser; alllatergates remainmandatory.
+
+### CP4 API78 terminal — qualified boundary/resume repair79
+
+Root independently matched266sources/FULLT/647positiveinputs/35preservations/3gitlinks andallfour78outputs. ExactlyoneFULLcanonical invocation:26paritymutations/31migrations/schema current/lint/build PASS,425/426unit39files, oneASTdependencyguardfalsepositive on instagramUsername/instagramInboundAt metadatafields; E2E NOTREACHED. Originalallnegativecouplingtestsremainrequired.
+
+78freezeendedafterrootreceipt. Sole79writer3admittedpaths: narrowguardpropertymetadatarecognitionwithpositive/negativecontrols (notblanketidentifierexemption); safeOAuthgetDTOlocalchannelId/originalexpectedGeneration forfullnavigationreauth, plusnativepreconfirmGETbinding/privacyasserts. No newendpoint/grant/providerprotocol/DB/deps/runtimeauthority. Existingassertions/thresholds/snapshots preserved. RootqualifiesterminalthenoneFULLAPI80, thenentireReactV2/HTTPSbrowser/alllatergates.
+
+#### Source79 read-boundary incident
+
+Solewriter selfreported recursive rg overentireevidencedirectory ratherthannamedpositiveinputs; outputtruncated/exitunknown, no privatecontent/value visiblyobserved perreport. Rootdidnotreplay/enumerateresults orinfervalueexposure. `evidence/cp4-source79-read-boundary-incident.json` recordscontainment/limits. Laneconfinedagain toexact3sourcewrites/namedinputs; terminalhashreconciliationrequired, futureimplementationfreshboundedroutine. No expandedprivate/runtime/providerauthority.

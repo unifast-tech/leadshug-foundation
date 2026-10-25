@@ -1,0 +1,91 @@
+{
+  "kind": "cp4-api76-result",
+  "scenario": "ST-IG-03 complete API canonical disposable synthetic validation",
+  "canonicalCommand": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "canonicalExitCode": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api76-api.log",
+    "bytes": 13936,
+    "sha256": "a44711c524e04b4924f1f757109a14b6d7edc937299e05f7ffa0a040b67a0b3c",
+    "lineCount": 248
+  },
+  "stages": {
+    "runnerSetup": "completed; canonical disposable synthetic runner started and cleaned up its owned resources",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": false
+    },
+    "prismaClientGeneration": {
+      "reached": true,
+      "passed": true
+    },
+    "prismaMigrateDeploy": {
+      "reached": true,
+      "passed": true,
+      "migrationsFound": 31,
+      "allMigrationsApplied": true,
+      "databaseSchemaUpToDate": false
+    },
+    "apiLint": {
+      "reached": true,
+      "passed": false,
+      "errors": 1,
+      "diagnostic": {
+        "file": "src/domain/channels/channel-display.ts",
+        "line": 199,
+        "column": 43,
+        "rule": "no-control-regex",
+        "message": "Unexpected control character(s) in regular expression: \\x00, \\x1f"
+      }
+    },
+    "apiBuild": {
+      "reached": false,
+      "reason": "runner stopped after lint failure"
+    },
+    "apiUnitTests": {
+      "reached": false,
+      "passed": 0,
+      "failed": 0,
+      "reason": "runner stopped after lint failure"
+    },
+    "apiE2ETests": {
+      "reached": false,
+      "passed": 0,
+      "failed": 0,
+      "reason": "runner stopped after lint failure"
+    },
+    "behavioralAssertions": {
+      "reached": false,
+      "reason": "lint failed before build and tests; no API behavioral assertion was executed"
+    }
+  },
+  "actualFailure": {
+    "class": "API lint failure before build/test stages",
+    "failedTests": [],
+    "lintErrorCount": 1,
+    "source": "src/domain/channels/channel-display.ts:199:43",
+    "rule": "no-control-regex",
+    "message": "Unexpected control character(s) in regular expression: \\x00, \\x1f"
+  },
+  "actualPassedTotals": {
+    "migrationsApplied": 31,
+    "unitTests": 0,
+    "e2eTests": 0
+  },
+  "postflight": {
+    "checksPassed": 938,
+    "checksFailed": 0,
+    "sourceCount": 266,
+    "todoChecked": true,
+    "boundInputCount": 634,
+    "preservationRows": 35,
+    "approvedExceptions": 2,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "canonical runner cleanup observed in raw log; validation postgres container, volumes and network removed",
+  "limitations": [
+    "The API validation is lint-blocked; this run provides no API unit/E2E or CP4 behavioral evidence.",
+    "No catalog, lifecycle, projection, realtime, or late-oracle assertion was reached."
+  ]
+}

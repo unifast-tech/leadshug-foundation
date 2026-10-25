@@ -1,0 +1,36 @@
+{
+  "kind": "API76 root actual qualification",
+  "immutablePublicFactsExact": 901,
+  "preservationsExact": 35,
+  "rootIndexExact": true,
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api76-before.json",
+      "bytes": 409545,
+      "sha256": "4a91d953d2a2bf3f5c8e7ab160f2088fa44950dc6647932cb5aea04cd2be3216"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api76-api.log",
+      "bytes": 13936,
+      "sha256": "a44711c524e04b4924f1f757109a14b6d7edc937299e05f7ffa0a040b67a0b3c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api76-after.json",
+      "bytes": 410024,
+      "sha256": "31a493fc342a0901efdd4d58bba6db75b00f1a294351eae5714731ad59580dfa"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api76-result.json",
+      "bytes": 2854,
+      "sha256": "34ba66e213b0dd7b5c5fbd538fc12a1b0fb8d657fd8774de9f0cb0742dc55d7a"
+    }
+  ],
+  "actualResult": "31 migrations/generate/schema current passed; lint no-control-regex channel-display.ts199 failed. Build/unit/E2E NOTREACHED, no behavioral proof.",
+  "next": "Repair same admitted single source: lint equivalent control filter, missing SQL grouping column, valid WA two-adapter projection. All existing tests/budgets preserved. One fullAPI78 after terminal/root.",
+  "derivedMetadataCorrections": {
+    "originalResultPreserved": true,
+    "channelsCiParityGuard.passed": true,
+    "prismaMigrateDeploy.databaseSchemaUpToDate": true,
+    "basis": "Actual raw canonical parity JSON26success plus literal Database schema is up to date!; original parser false fields incorrect. No additional invocation."
+  }
+}

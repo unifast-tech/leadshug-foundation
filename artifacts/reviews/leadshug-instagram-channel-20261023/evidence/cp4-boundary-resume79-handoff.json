@@ -1,0 +1,35 @@
+{
+  "kind": "CP4 source79 exact routine repair",
+  "allowedWrites": [
+    "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 10281,
+      "sha256": "45b98948ea0600a29537bb4546ad8f25e43bfea4a3248e5b912ab60b139e10f3"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 88836,
+      "sha256": "1d40f2007b7926d082e89684f5d7455fd0cc4016ee67d4752d4248af2d38d9d3"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 52254,
+      "sha256": "a9e7acb45a6bb629efe0a18f0ad9aea87ee25dec58126f989d10ede302b968ac"
+    }
+  ],
+  "authority": "ExistingapprovedT src/domain/channels/** and native test/*instagram*; actual78falsepositive plusqualifiedfullnavigation consumer gap, no WHAT/strictpath expansion.",
+  "required": [
+    "Guard: classify ONLY exact metadata properties instagramUsername/instagramInboundAt in actual property key/signature/access positions as data, not provider reference. Retain all original negativecases/realconsumerasserts and all other rules. Not globalnameexemption. Add meaningful positives for typed data/object key/access plus negatives demonstrating same text used as import/type/injection/bare client/reference or directsendreceiver stillblocked; trueproviderimports/clients remainblocked. No escaping/renamingproductfields to evadeguard.",
+    "OAuthget safeDTO includes localchannelId and ORIGINAL expectedGeneration fromattempt row, nullableCONNECT. Preserve current actor/session/BUchecks and all existingfields; never external accountId/code/state/token/lease/credential inDTO. Neededfull-navigationREAUTHORIZE confirm usesexactcapturedgeneration; no username/firstchannelreconstruction.",
+    "Native authorize helper actualpreconfirmGET aftercallback verifies localbinding/generation for CONNECT/REAUTHORIZE andabsence ofcandidate/token/state/privatefields; foreignsession/tenant/actor stilldeniedbyexistingchecks. PreserveactualOAuthHTTP/barriers/confirmkeys/bodies/budgets/lateoracles. No provider calls inGET. KeygrammarUUIDonly (no prefixedkeys); UI laterstableconfirmkeymayuseattemptUUID."
+  ],
+  "immutable": "Other263 sourcepaths, all other testcases/assertions/thresholds, schema/deps/privatefiles, RootGitindex.",
+  "readAuthority": "Exactpublicpositivepaths cp4-api78-frozen-manifest.json pluscurrentT+cp4-frontend78-consumer-gap-preparation.json+thishandoff.",
+  "forbidden": "No test/build/lint/runtime/provider/network/Git/private/env commands, no Foundation writes, nootherpaths. Rootownsevidence/T.",
+  "next": "Terminalhashbytes/exactdiffqualifiedbyroot, thenONEFULLAPI80. AllCP4frontend/browser/latergatesremainmandatory."
+}

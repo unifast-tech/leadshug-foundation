@@ -1,0 +1,27 @@
+{
+  "kind": "CP4API75a-root-qualification",
+  "sourceCount": 266,
+  "changed": [
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 88836,
+      "sha256": "1d40f2007b7926d082e89684f5d7455fd0cc4016ee67d4752d4248af2d38d9d3"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 10370,
+      "sha256": "f13fdea0822c601a552b93575d5249980aef9839e1b59277ebd6dcdcbf6c1a60"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 13636,
+      "sha256": "84b36bbfa5e80e0c42590f9c1161a421b9d22b9f7cddc381e2b5d9dfcc72dba9"
+    }
+  ],
+  "otherSourcesExact": 263,
+  "preservationsExact": 35,
+  "rootIndexExact": true,
+  "staticReview": "All five requested repairs applied. SQL lateral fields selected and mapped/current namespace scopes checked; receipt does not bypass one read; specific UNKNOWN safe DTO after owner finally and current actor/binding check; WA channelId; 60-second credential margin. Runtime correctness not yet established.",
+  "notRun": "No build/lint/test/runtime/provider operation by writer or root qualification.",
+  "next": "One FULL canonical API76, then all strict V2 React/HTTPS browser and later gates; no backend-only acceptance."
+}
