@@ -1,0 +1,17 @@
+{
+  "kind": "113f independent natural-terminal root reconciliation",
+  "frozenRowsExact": 26,
+  "fullCurrentSourceBodies": 17,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-CP5-111E-07"
+  ],
+  "qualification": "Focused source review only; six native CP5 cases/source113a never executed; ALL112 stopped at lint. No fullfeature or checkpoint acceptance."
+}

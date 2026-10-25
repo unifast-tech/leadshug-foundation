@@ -678,6 +678,8 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-ADHERENCE111D-07 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-08 | low | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 
+| IG-ADHERENCE114F-01 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | open; native proof and fresh review required | adherence113f114f-root-adjudication.json |
+| IG-ADHERENCE114F-02 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | open; native proof and fresh review required | adherence113f114f-root-adjudication.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -2159,6 +2161,8 @@ With113a writer terminal and no live review/validator freeze, root may dispatch 
 | IG-ADHERENCE111D-06 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-07 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE111D-08 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
+| IG-ADHERENCE114F-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence113f114f-root-adjudication.json; still open |
+| IG-ADHERENCE114F-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence113f114f-root-adjudication.json; still open |
 
 
 ### Prepared gateway115 and Web117 — no parallel source authorization
@@ -2175,3 +2179,13 @@ Both plans are prepared only:114 is the solecodewriter,115 follows its terminal/
 Root independently matched five final114/114a candidate hashes,325otherknownpaths/330totalpublicsources/34immutable/threeexceptioncandidates/rootindex; evidence/cp4-product114a-root-qualification.json and cp4-source114a-terminal-manifest.json bind source-only provenance. Nativecode now models actualCOMMIT/sessionexpiry, queuedsuccessorCAS andsame-durationlivecontrol; UUIDmodule controls and retainedaccountlabels are authored. Staticcorrection uses valid<=30charusername, preserves provenidentitydespitedisconnectedreadiness and honorsactual10scooldown. No tests/build/lint/nativeproof acceptance;111A staysopen for execution/freshreview.
 
 Gateway115 four-path evidence/cp4-gateway115-handoff.json is ready only for explicitrootdispatch;114writerterminal. Fresh focused A/E reviews may run read-only on current complete affectedAPI/CP5/native bodies/fullT while115 modifies only disjoint gateway/runner/parity/newgatewaytest. Any reviewer freezes its exactfullT/sources/evidence untilnaturalterminal/rootmatch. Source117 Webpaths likewise muststaydisjoint from activeAPIreviewfreeze and may start only afterallpriorwriters and anyfullvalidationfreeze terminal/rootmatch. RootmayprepareNEWderivedproof/qualification artifacts without changing frozenpaths. CompleteB/C and changedWeb/gatewayfreshreviews/currentALL/nativeCP5/primary/human/assurance/CP6physical gates remain mandatory.
+
+
+### Focused113f/114f terminal and gateway115 source qualification
+
+Both fresh focused reviews ended naturally, strict merged and independently matched all26 frozen rows each,17 full current source bodies each and full TODO; no tools used.113f retains IG-CP5-111E-07: emitted rows do not bound scan work, and lateral route-count index use cannot substitute for the main access.114f finds IG-ADHERENCE114F-01 lazy successor contender and IG-ADHERENCE114F-02 loss of completed account label after permitted cancellation. All remain Integrated/useful/project/release-blocker under this TODO, without reopening historical closed work.
+
+Gateway115 is terminal and root-matched on four exact admitted paths: exact slash/nonslash Instagram8m locations with default2m, canonical runner/parity nginx dependency, and real public-template Nginx/Nest/PG boundary fixture.333 positive sources (330prior plus2root-tooling paths and1new native spec), unchanged protected inputs/rootindex; source-only, no compiler/native pass. No active review freeze remains. Serialize source118 on CP5 spec, CP4 connections spec, channel display projector and CP4 display spec only to finish the three focused findings. Preserve actual queued contender/CAS, completed immutable owner evidence, exact scope/app/BU/resource fencing, original20k cohort/list<=8/p95/batch thresholds and every prior oracle. No tests/runtime/private/env/provider/Meta/Git authority to writer; root qualifies before one canonical API116 proof. Web117/currentALL/full reviews/primary/human/CP6/security/TQA/cutover/final obligations stay mandatory.
+
+
+Source118 samewriter completion additionally admits exactly the already-admitted `api-app/test/instagram-gateway-boundary.e2e-spec.ts` to assert original115 receipt/readiness/provider-owner no-effect requirements. `evidence/cp4-gateway118-snapshot-completion.json` keeps all8MiB/2MiB/slash/signature/realNginx assertions, adds durable synthetic channel/owner state and exact provider counters; no new runtime or product scope. Safe `upstream_status=-` is causal no-app-request evidence, not a direct WebSocket measurement. Five paths total; one sourcewriter and no other mutations.

@@ -1,0 +1,50 @@
+{
+  "kind": "Sole source118 focused findings repair",
+  "state": "READY after113f114f natural terminal/rootqualification and115terminal; all writers/reviews terminal",
+  "profile": "Operational / Coder",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/src/domain/channels/channel-display.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 83106,
+      "sha256": "7a722e4aacbf1788050059a7822db79ab3b842cd5927f3d9643c37ad124529cc"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69022,
+      "sha256": "9edfaa7c1e16fbaf5f7911398312ba2d0346dccd3af097c71e40cc48f134d2d7"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14243,
+      "sha256": "468f82be6ecd00de459702de5e0863c83069431a23179ddc26c36f6756575c79"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 37646,
+      "sha256": "9a424967cbbde502cf04f0b24018d3915f4ff7f351d87941c9b63957a955d5da"
+    }
+  ],
+  "baseline": "cp4-source115-terminal-manifest.json",
+  "readOnly": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/test/helpers.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/domain/inbox/conversations.service.ts"
+  ],
+  "requirements": [
+    "114F01: start real successor Prisma executeRaw before waiter observation by immediate handled promise consumption; ensure rejection observed and unconditional request/drain/barrier cleanup. Preserve actual PG UPDATE waiter, original lease cleanup and successor-CAS assertions, natural signed expiration/cooldown and exact provider/history state.",
+    "114F02: preserve metadata from completed mapped authorization when permitted cancel changes status CANCELLED, with exact BU/channel/current resource/business identity/appscope ownership proof and readable username sanitization. No readiness/credential/session/dispatch authority change; rejected or cancelled uncompleted candidate cannot label. Both channel and conversation batch projections consistent/no perrow queries/decrypt. Extend native actual twoOAuth account catalog/list/thread proof through postconfirm cancellation, unchanged readiness/provider counters/scope controls. Authorization cancel service remains readonly; repair projection to use completed mapped evidence.",
+    "113F07: distinguish actual main r route access from rr lateral route count and use real captured EXPLAIN ANALYZE nodes, aliases/predicates/index definitions and actual work (loops, removed filter/recheck rows, returned rows) to reject whole20k route/peer scans. Existing SQL + original params, actual list/thread/options consumers, scoped WHERE bindings all retained. Allow justified small owner SeqScan. No forceplanner, invented universalquerycap, unrelated numeric gate or latency threshold change. Preserve20k originalcohort, all6cases/5x20/1000batch/counters and existing exact telemetry.",
+    "Exactly four owned files, static only. No Foundation/docs/other product/test/tool edits; no Git/status/diff/discovery/private/env/process/operational/Meta/network/npm/Node/lint/build/tests/Docker/worktree/copies. Read exact R/AGENTS/instructions/profile/T and exact referenced public inputs. Root owns all docs and canonical validation. If additional path needed report before mutation. Report bytes/SHA and testsNOTRUN."
+  ],
+  "remaining": "All canonical current native/API/Web/browser/ALL, complete fresh reviews, protocol/human/security/TQA/cutover/CP6 obligations unwaived."
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence114f-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-no-context-adherence114f"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "unknown",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Repair both gaps within this TODO and obtain current native regression evidence, followed by canonical ALL validation. Preserve historical closures and keep the recorded primary-protocol, browser, CP5 assurance and separately approved CP6 physical-proof obligations open."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-A46C8045",
+      "severity": "medium",
+      "title": "The successor UPDATE remains lazy while its waiter is observed",
+      "rationale": "The new verification test assigns prisma.$executeRaw directly to successorUpdate, then awaits waitForResourceWaiter(..., 'UPDATE'). $executeRaw returns a lazy PrismaPromise; assignment does not execute it. Its first consumption occurs after the waiter assertion or in finally, which releases the COMMIT barrier first. The intended queued successor therefore cannot be observed, and this branch cannot prove successor preservation required by IG-ADHERENCE111A-01.",
+      "suggested_action": "Start the real UPDATE immediately by attaching a handled promise continuation before polling. Preserve the queued PostgreSQL update, exact-token assertions and unconditional cleanup, then execute the expiry, successor and live-control cases.",
+      "reviewer_labels": [
+        "fresh-no-context-adherence114f"
+      ],
+      "source_finding_ids": [
+        "IG-ADHERENCE114F-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    },
+    {
+      "finding_id": "F-154196BB",
+      "severity": "medium",
+      "title": "Cancellation still hides a completed account's proven label",
+      "rationale": "cancel accepts MAPPED_PENDING_SUBSCRIPTION and MAPPED_PENDING_RECEIPT even when confirmationState is COMPLETED. It changes status to CANCELLED while retaining the mapped resource and active credential. Both display queries require the completed attempt's status to remain one of those two mapped states. Cancelling an account's sole completed attempt therefore replaces its known username with generic Instagram labels despite retained ownership and proof. This is a residual gap in A03's last-proven-label requirement under SCOPE-07/DOD-06.",
+      "suggested_action": "Preserve completed mapped label evidence through permitted cancellation using the exact BU, channel, immutable resource and app-scope checks. Add native catalog/list/thread coverage for cancellation after confirmation, including multiple distinguishable accounts and unchanged readiness.",
+      "reviewer_labels": [
+        "fresh-no-context-adherence114f"
+      ],
+      "source_finding_ids": [
+        "IG-ADHERENCE114F-02"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

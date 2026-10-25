@@ -1,0 +1,19 @@
+{
+  "kind": "Source118 samewriter gateway snapshot completion",
+  "state": "READY single118writer only; no review/runtime freeze active",
+  "ownedAdditional": [
+    "api-app/test/instagram-gateway-boundary.e2e-spec.ts"
+  ],
+  "preimage": {
+    "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+    "bytes": 22697,
+    "sha256": "030d694939dc3e01158b0a54d8eb91dcb3bfb9c1b9b62fc4af1942cba398f0b8"
+  },
+  "basis": "115handoff alreadyrequires no receipt/domain/provider changes on rejectedrequests; current gateway snapshot counts domain tables but lacks channel/owner state. Exact sourcepath alreadyadmitted by T native test glob. No human scope expansion.",
+  "requirements": [
+    "Add exact channel durable receipt/readiness/generation/provider-connection state and provider-resource state to snapshot before rejectedrequest loop, assert unchanged aftereachgateway413 andwrongHMAC401. Public synthetic ownedfixture/Prismaonly, no operationalvalues/logs.",
+    "If common3providerfake counters have exact exportedcanonicalowners use zero-delta counters for IG/Meta/Evolution around ingress so no unintended cross-provider sideeffects. Never fabricateproviderobservations.",
+    "Do not addnewWSSfixture merely tocountgatewayeffects: actualNginx413 upstream_status=- proves no apprequest for overlimit. State directdomain/providerobservations separatelyfrom this causal inference, no claim directWebSocket measurement. Existing8MiB/exact2MiB/slash/signature/nativeOAuth/cleanup/logproof preserved.",
+    "Thisadds exactlyoneadmittedsourcepath tocurrent118 ownership after4corechanges; one writer serialized. No test/lint/build/Node/npm/Docker/Git/private/env/runtime/network/provider/Meta/docs/otherfile writes. Reportterminalall5paths bytes/SHA and testsNOTRUN."
+  ]
+}

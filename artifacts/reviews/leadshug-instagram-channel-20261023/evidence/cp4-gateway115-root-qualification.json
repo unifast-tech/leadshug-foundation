@@ -1,0 +1,31 @@
+{
+  "kind": "115 independent terminal root source qualification",
+  "candidates": [
+    {
+      "path": "docker/local-gateway.conf.template",
+      "bytes": 2089,
+      "sha256": "02224cf2e1984b061c9995ce05257da7ee73dccd9eaa14a245ce2b1aa23adaf6"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13918,
+      "sha256": "1ab8c3da8e7d05d7c25057356fa3802a3671a86288798e87140d9b8f86ede06b"
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "bytes": 30527,
+      "sha256": "edb1dc40535a78d97a6267ea1d7781e9441a5d9be3da11ee6148fed126bc7d7d"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 22697,
+      "sha256": "030d694939dc3e01158b0a54d8eb91dcb3bfb9c1b9b62fc4af1942cba398f0b8"
+    }
+  ],
+  "otherKnownSourcesExact": 329,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Public template exact slash/nonslash Instagram8m; default2m. Canonical runner/parity install nginx. New native fixture renders actual template, owns loopback Nginx child and Nest/PG/OAuth, signs exact body bytes and reads safe upstream statuses. Compiler/runtime/native proof pending; no accepted delivery."
+}

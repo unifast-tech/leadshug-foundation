@@ -1,0 +1,84 @@
+{
+  "kind": "Focused113f114f root finding adjudication",
+  "frozenSourceReviewsQualified": [
+    "adherence113f-root-reconciliation.json",
+    "adherence114f-root-reconciliation.json"
+  ],
+  "source115Qualified": "cp4-gateway115-root-qualification.json",
+  "contractCheck": "Approved proof must start genuine contender and preserve successor CAS. Last completed owner-qualified account metadata survives operational states/cancellation without authorizing readiness. CP5 retained20k indexed lookup protection must count actual scan work, not emitted rows alone. Existing list-only eight-query cap and latency thresholds unchanged.",
+  "findings": [
+    {
+      "source": "adherence114f-raw.json",
+      "finding": {
+        "finding_id": "IG-ADHERENCE114F-01",
+        "severity": "medium",
+        "category": "tests",
+        "formalizable_hint": "yes",
+        "candidate_rule_level": "project",
+        "title": "The successor UPDATE remains lazy while its waiter is observed",
+        "rationale": "The new verification test assigns prisma.$executeRaw directly to successorUpdate, then awaits waitForResourceWaiter(..., 'UPDATE'). $executeRaw returns a lazy PrismaPromise; assignment does not execute it. Its first consumption occurs after the waiter assertion or in finally, which releases the COMMIT barrier first. The intended queued successor therefore cannot be observed, and this branch cannot prove successor preservation required by IG-ADHERENCE111A-01.",
+        "suggested_action": "Start the real UPDATE immediately by attaching a handled promise continuation before polling. Preserve the queued PostgreSQL update, exact-token assertions and unconditional cleanup, then execute the expiry, successor and live-control cases.",
+        "affected_paths": [
+          "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+        ]
+      },
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "classification": "release-blocker",
+      "routing": "same approved TODO; current admitted source/proof obligations",
+      "status": "open; source repair plus native execution and fresh review required"
+    },
+    {
+      "source": "adherence114f-raw.json",
+      "finding": {
+        "finding_id": "IG-ADHERENCE114F-02",
+        "severity": "medium",
+        "category": "operational_fit",
+        "formalizable_hint": "yes",
+        "candidate_rule_level": "project",
+        "title": "Cancellation still hides a completed account's proven label",
+        "rationale": "cancel accepts MAPPED_PENDING_SUBSCRIPTION and MAPPED_PENDING_RECEIPT even when confirmationState is COMPLETED. It changes status to CANCELLED while retaining the mapped resource and active credential. Both display queries require the completed attempt's status to remain one of those two mapped states. Cancelling an account's sole completed attempt therefore replaces its known username with generic Instagram labels despite retained ownership and proof. This is a residual gap in A03's last-proven-label requirement under SCOPE-07/DOD-06.",
+        "suggested_action": "Preserve completed mapped label evidence through permitted cancellation using the exact BU, channel, immutable resource and app-scope checks. Add native catalog/list/thread coverage for cancellation after confirmation, including multiple distinguishable accounts and unchanged readiness.",
+        "affected_paths": [
+          "api-app/src/domain/channels/channel-display.ts",
+          "api-app/src/domain/channels/instagram-authorization.service.ts",
+          "api-app/test/instagram-cp4-display.e2e-spec.ts"
+        ]
+      },
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "classification": "release-blocker",
+      "routing": "same approved TODO; current admitted source/proof obligations",
+      "status": "open; source repair plus native execution and fresh review required"
+    },
+    {
+      "source": "adherence113f-raw.json",
+      "finding": {
+        "finding_id": "IG-CP5-111E-07",
+        "severity": "medium",
+        "category": "performance",
+        "formalizable_hint": "partial",
+        "candidate_rule_level": "project",
+        "title": "Whole-cohort scans can still satisfy the revised index oracle",
+        "rationale": "The revised EPS case captures genuine SQL, parameters and qualifying index definitions, but its scan assertions still permit the original incidental-index weakness. routeScans.some can be satisfied by the indexed rr route-count lateral subquery while the main r lookup scans the retained cohort. Actual Rows measures emitted rows per loop: a scan filtering 20000 rows down to one or fifty can satisfy every <=50 assertion, and the reply-options root Actual Rows=1 checks have the same limitation. Rows removed, loop counts and the identity of the main access node are not checked. Consequently, the harness can pass a whole-cohort route or peer scan despite the approved bounded-query/index protection. This is a protection-harness gap, not evidence that current runtime plans regress.",
+        "suggested_action": "Retain E07 as open. Distinguish the main route access from the lateral count access and validate the relevant access predicates, index usage and scan work, including loops and rows removed, for the large route/peer cohort. Continue allowing justified sequential scans of the small owner cohort. Preserve existing latency thresholds and the list-only eight-query cap; do not force planner settings or introduce unrelated numeric gates. Validate the resulting assertions against actual canonical execution.",
+        "affected_paths": [
+          "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+        ]
+      },
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "partial",
+      "ruleLevel": "project",
+      "classification": "release-blocker",
+      "routing": "same approved TODO; current admitted source/proof obligations",
+      "status": "open; source repair plus native execution and fresh review required"
+    }
+  ],
+  "notReopened": "Historical subscription acquisition findings stay closed. New114F cancellation edge is residual111A03;113F07 remains same open111E07.",
+  "noAcceptance": true
+}

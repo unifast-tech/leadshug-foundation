@@ -1,0 +1,43 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence114f-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-no-context-adherence114f",
+  "overall_assessment": "changes_required: The enclosed acquisition cleanup and UUID module admission align with the approved architecture. Two material gaps remain: the successor regression does not start its database contender before observing it, and completed-attempt cancellation still removes retained account labels. These are static findings; no execution or hash verification is claimed.",
+  "recommended_path": "Repair both gaps within this TODO and obtain current native regression evidence, followed by canonical ALL validation. Preserve historical closures and keep the recorded primary-protocol, browser, CP5 assurance and separately approved CP6 physical-proof obligations open.",
+  "performance_position": "unknown",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-ADHERENCE114F-01",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The successor UPDATE remains lazy while its waiter is observed",
+      "rationale": "The new verification test assigns prisma.$executeRaw directly to successorUpdate, then awaits waitForResourceWaiter(..., 'UPDATE'). $executeRaw returns a lazy PrismaPromise; assignment does not execute it. Its first consumption occurs after the waiter assertion or in finally, which releases the COMMIT barrier first. The intended queued successor therefore cannot be observed, and this branch cannot prove successor preservation required by IG-ADHERENCE111A-01.",
+      "suggested_action": "Start the real UPDATE immediately by attaching a handled promise continuation before polling. Preserve the queued PostgreSQL update, exact-token assertions and unconditional cleanup, then execute the expiry, successor and live-control cases.",
+      "affected_paths": [
+        "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE114F-02",
+      "severity": "medium",
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Cancellation still hides a completed account's proven label",
+      "rationale": "cancel accepts MAPPED_PENDING_SUBSCRIPTION and MAPPED_PENDING_RECEIPT even when confirmationState is COMPLETED. It changes status to CANCELLED while retaining the mapped resource and active credential. Both display queries require the completed attempt's status to remain one of those two mapped states. Cancelling an account's sole completed attempt therefore replaces its known username with generic Instagram labels despite retained ownership and proof. This is a residual gap in A03's last-proven-label requirement under SCOPE-07/DOD-06.",
+      "suggested_action": "Preserve completed mapped label evidence through permitted cancellation using the exact BU, channel, immutable resource and app-scope checks. Add native catalog/list/thread coverage for cancellation after confirmation, including multiple distinguishable accounts and unchanged readiness.",
+      "affected_paths": [
+        "api-app/src/domain/channels/channel-display.ts",
+        "api-app/src/domain/channels/instagram-authorization.service.ts",
+        "api-app/test/instagram-cp4-display.e2e-spec.ts"
+      ]
+    }
+  ]
+}
