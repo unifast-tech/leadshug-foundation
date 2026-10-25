@@ -1,0 +1,82 @@
+{
+  "kind": "cp4-api148-after",
+  "timestampUtc": "2026-10-25T15:15:14.961885+00:00",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-frozen-manifest.json",
+  "manifestSha256": "8be48a7455fb1fd5ce8acbc23065f0a215fc8edb2b57e3a06fdf001ca5652f3b",
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "sourceCount": 333,
+  "allSourceBytesAndSha256Matched": true,
+  "positiveInputCount": 1230,
+  "allPositiveInputBytesAndSha256Matched": true,
+  "todo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 420659,
+    "sha256": "c0f722abb0c4696809dffd27df9bc7eb724fab3a03ed73e859ff4716119ce4fc"
+  },
+  "protectedCount": 34,
+  "allProtectedSha256Matched": true,
+  "approvedExceptionCount": 4,
+  "approvedExceptions": [
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "candidateSha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "candidateSha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "candidateSha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753"
+    }
+  ],
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "runnerExitCode": 1,
+  "runnerNaturalTermination": true,
+  "runnerDurationObservedSeconds": 63.3,
+  "durationBasis": "observed single command session lifetime through natural exit; approximate",
+  "stages": {
+    "canonicalGuard": "reached/passed",
+    "sourceBindAndPublicDotenvMask": "reached/passed",
+    "prismaMigrations": "reached/passed (31 migrations; database up to date)",
+    "apiLint": "reached/passed",
+    "nestBuild": "reached/passed",
+    "apiUnit": "reached/failed (40 files; 39 passed, 1 failed; 453 tests: 452 passed, 1 failed; 4.66s)",
+    "apiInstagramHttpDeadlineTests": "reached/passed (3 tests in InstagramHttpClient boundary file)",
+    "apiE2E": "not reached in focused api-instagram target",
+    "webBuildAndUnit": "outside target; not reached",
+    "browser": "outside target; not reached"
+  },
+  "firstDecisiveFailure": {
+    "stage": "focused API unit tests",
+    "file": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "test": "common outbound dependency boundary > keeps provider clients and dispatch inside channel adapters",
+    "line": 170,
+    "expected": "[]",
+    "received": [
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: provider injection token or client type",
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: concrete eligibility policy import",
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: provider token or client reference"
+    ]
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-api.log",
+    "bytes": 18996,
+    "sha256": "d0b080f30375dcbe7f06352810a51bbd27bc92f1fb41ac412bef31eb1c7e80eb"
+  }
+}

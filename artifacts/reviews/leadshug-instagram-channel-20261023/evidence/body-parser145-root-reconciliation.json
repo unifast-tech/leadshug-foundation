@@ -1,0 +1,16 @@
+{
+  "kind": "Independent145 naturalterminal planningcritique root reconciliation",
+  "frozenRowsExact": 19,
+  "fullSourceBodiesExact": 6,
+  "fullTodoExact": true,
+  "currentSourcesExact": 333,
+  "rootIndexExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "findings": [],
+  "qualification": "Planningcandidateonly; no runtime/security/performance/featureclearance. Protectedlock unchanged, stillrequires explicithumanadmission. Separatelyreviewedchildcrashregression andallprimarysecurity/fullALLgates remain."
+}

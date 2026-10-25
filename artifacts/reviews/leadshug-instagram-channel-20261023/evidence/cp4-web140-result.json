@@ -1,0 +1,75 @@
+{
+  "kind": "cp4-web140-result",
+  "timestampUtc": "2026-10-25T14:47:09.429404+00:00",
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "exitCode": 1,
+  "naturalTermination": true,
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "scope": "scoped Web compiler/build/unit validation only; no API/native/browser/full-ALL/feature acceptance claim",
+  "runnerDurationObservedSeconds": 52.6,
+  "reachedStages": [
+    "canonical guard checks",
+    "source binds and public dotenv masks",
+    "Prisma client generation",
+    "Web TypeScript compilation (failed)"
+  ],
+  "unreachedStages": [
+    "Vite production build",
+    "Web unit tests",
+    "API units/E2E (outside target)",
+    "browser (outside target)",
+    "full ALL target"
+  ],
+  "webTestFilesPassed": 0,
+  "webTestsPassed": 0,
+  "webTestFilesFailed": 0,
+  "webTestsFailed": 0,
+  "firstDecisiveFailure": {
+    "stage": "Web TypeScript build",
+    "file": "web-app/src/componentes/NovaConversa.tsx",
+    "line": 366,
+    "column": 73,
+    "diagnostic": "TS18047: attemptError is possibly null"
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "frozenState": {
+    "sources": 333,
+    "positiveInputs": 1217,
+    "protectedRows": 34,
+    "approvedExceptions": 4,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 412900,
+      "sha256": "0b0cc3f6a52622b10e093940577cbc909f49075b340168ad767021bf384f2a28"
+    },
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-before.json",
+      "bytes": 261287,
+      "sha256": "c2e0d510462cadde6b31ba38d42ad3c97d6c439319588b5522bba0320706f989"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-web.log",
+      "bytes": 8651,
+      "sha256": "75c284c66046ae6e5c78862545cb89b653b68f4bd33fb9dea85b95e91c17c69a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-after.json",
+      "bytes": 3018,
+      "sha256": "e0616576c9b9789484e1b7397d8f74776d58348722ef711478d1ddc733708e20"
+    }
+  ]
+}

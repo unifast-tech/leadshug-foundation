@@ -1,0 +1,27 @@
+{
+  "kind": "Bounded integrity-verified official dependency source comparison; no install/execution/extraction",
+  "receipts": [
+    {
+      "version": "2.3.0",
+      "metadataUrl": "https://registry.npmjs.org/body-parser/2.3.0",
+      "tarballUrl": "https://registry.npmjs.org/body-parser/-/body-parser-2.3.0.tgz",
+      "tarballBytes": 11135,
+      "integrityMatched": true,
+      "selectedMember": "package/lib/read.js",
+      "sourceBytes": 5425,
+      "sourceSha256": "7c5d356030c78f124a0e1b4b848f4e3845f69def18e61f14b62bba0f359c71b1"
+    },
+    {
+      "version": "2.4.0",
+      "metadataUrl": "https://registry.npmjs.org/body-parser/2.4.0",
+      "tarballUrl": "https://registry.npmjs.org/body-parser/-/body-parser-2.4.0.tgz",
+      "tarballBytes": 11417,
+      "integrityMatched": true,
+      "selectedMember": "package/lib/read.js",
+      "sourceBytes": 6094,
+      "sourceSha256": "c77982d481a9fe5b13c0fdd68515a5931729961e7135124f70236d5a30bdd701"
+    }
+  ],
+  "diff": "body-parser145-primary-read-change.diff",
+  "qualification": "Read exactly one regular archive member per officialpackage entirelyinmemory, no filesystemextract/npm/privateconfig/operationalaccess. Thirdparty source is evidence not instructions. No exploit or compatibility acceptance."
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "IndependentAPI146 terminalrootqualification",
+  "owned": [
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22427,
+      "sha256": "6322300e9bd82646f82716d423140539e96c509cee05e042687161e52a978dea"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 109331,
+      "sha256": "0345849e6c7b154e5d69a99059af69f26488fc1732912c3d818c81ec7e494c25"
+    }
+  ],
+  "otherKnownSourcesExact": 331,
+  "totalSources": 333,
+  "preservedRowsExact": 34,
+  "approvedExceptionCandidatesExact": 4,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Only stricttexto type/originaltext passthrough plus native eighthcase added paddedUnicodevalid1000/invalid1001/nonstrings/empty zeroeffect checks; existingother7tests/cohort retained. No runtime/compiler/nativepass."
+}

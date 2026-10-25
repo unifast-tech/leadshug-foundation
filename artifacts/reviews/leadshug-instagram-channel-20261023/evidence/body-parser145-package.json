@@ -1,0 +1,80 @@
+{
+  "kind": "Fresh no-context critique of protected-lock minimal security proposal145",
+  "reviewKind": "critique",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 415916,
+    "sha256": "5588d48e6f820fc6bfa055aa5113c2cec628a988dea0a811f358bfd2e541c463"
+  },
+  "sourceBodies": [
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+    },
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "bytes": 2011,
+      "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d"
+    },
+    {
+      "path": "api-app/src/main.ts",
+      "bytes": 5963,
+      "sha256": "05ff096cdcf67a8a153736264ed46a7faf9f5c0f45325c2d3fed95188fb2b1ad"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 24159,
+      "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 26011,
+      "sha256": "aec0aef965e1c1cda60b0095d0492fe8b9abe3a9104153694c46e472b17fdf48"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-proposal-prepared.json",
+      "bytes": 2350,
+      "sha256": "2436d8b0854217763cf11e082df07e5d17257a6be60ddcc838bc857641648f44"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-proposed-lock.diff",
+      "bytes": 1644,
+      "sha256": "57391eb6c2623839c08beb25799f070567977e0f3475b1d0592b843a572f9236"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-registry-metadata.json",
+      "bytes": 1426,
+      "sha256": "27ec9832b14f8f71376eade2e4f806b4420f7761e5e86fb7ff49c3ee5c0909b6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-applicability.json",
+      "bytes": 1219,
+      "sha256": "6e84b2e889afcebbb5193c29c9c03af5fa5fd26d2fc9769ad040e82b7ca0e8fd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-root-reconciliation.json",
+      "bytes": 2007,
+      "sha256": "ded6276437a95de9fad98f06ac21eae9d5293c7983371db698905edf176fae2c"
+    }
+  ],
+  "sourceRendering": "CompleteLF-rendered source bodies with originalbyte/hash bindings; productlockremainsoriginalCRLF and unapplied.",
+  "boundary": "Planning critique only, not implementation authorization or fullfeature/securitygate. No tools, edits, network, exploit, process launch or package installation. Exact protectedlock exception notyet humanadmitted; API/Web implementation current but fullALL/native/security/TQA/CP6 remain.",
+  "rubric": [
+    "Assess exact body-parser2.3.0 primary version/default-inflate applicability without inventing local exploitation. Confirm proposed2.4.0 fixes describedadvisory and no disablingcompressedinput behavior is introduced.",
+    "Inspect complete public lock graph and exacttwo-node diff against officialregistrymetadata; allparentsemverranges/resolvednode dependencies/engines/integrity/reusednestedcontenttype/iconvlite/root manifest must remain coherent. No directdependency/override/majorupgrade or unrelatednode churn. Candidate CRLF/currentpreimage strictlybound.",
+    "Challenge whether requirement to seek explicithumanadmission for protectedlock is correctlyscoped and whether allnecessaryadmitted source work/candidate is concrete/reviewable. Approvalcannotbeassumed.",
+    "Challenge validationplan: canonicalnpmci/build/API/Web/native sharedparser/HMAC/size/WA regressions afteradmission, no unsupported securityclearance frommetadataversions. Safe controlled crash reproduction remainsunperformed and must not killmain testworker/operationalservices; do not pretend an absenttest exists.",
+    "Explicit performance/elegance/structural soundness/operational-fit positions. Avoid insecure parserworkarounds, broad dependencyupdates or platformwaivers. Report concrete deficiencies in candidate orreviewplan; distinguish knownremainingwholefeaturegates from newproposal defects."
+  ],
+  "output": "Canonical strict critiqueJSON only, exactdispatchJSONpath. No extra top-levelfields/tools. Exact proposal accepted or concrete findings with minimal faithful remediation, not a general dependencyrewrite."
+}

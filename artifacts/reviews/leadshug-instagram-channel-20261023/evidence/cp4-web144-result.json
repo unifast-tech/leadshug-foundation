@@ -1,0 +1,71 @@
+{
+  "kind": "cp4-web144-result",
+  "timestampUtc": "2026-10-25T14:51:33.472440+00:00",
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "exitCode": 0,
+  "naturalTermination": true,
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "scope": "scoped Web build/unit validation only; no API/native/browser/full-ALL/feature acceptance claim",
+  "runnerDurationObservedSeconds": 55.0,
+  "reachedStages": [
+    "canonical guard checks",
+    "public source bind and dotenv mask checks",
+    "Prisma Client generation",
+    "Web TypeScript and Vite production build (63 modules, 1.39s)",
+    "Web Vitest (8 files, 73 tests passed, 712ms)"
+  ],
+  "unreachedOrOutOfScope": [
+    "API units",
+    "API E2E",
+    "browser suite",
+    "full ALL target"
+  ],
+  "counts": {
+    "webTestFilesPassed": 8,
+    "webTestsPassed": 73,
+    "webTestFilesFailed": 0,
+    "webTestsFailed": 0
+  },
+  "firstDecisiveFailure": null,
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "frozenState": {
+    "sources": 333,
+    "positiveInputs": 1223,
+    "protectedRows": 34,
+    "approvedExceptions": 4,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 414197,
+      "sha256": "be16dc6c97aa5122047051f67b9b5a9fab186d63f880824dc6bb5534e83c0071"
+    },
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-before.json",
+      "bytes": 262455,
+      "sha256": "231a77bf1e1543e5d1f9ec5802d928508c565b1b4e11764e488e02ec6f447c27"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-web.log",
+      "bytes": 9854,
+      "sha256": "5ce72cd7bad79f23b62ad52fc93db886617a5174232288f71285f4491a65788c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-after.json",
+      "bytes": 2830,
+      "sha256": "1f113a15bc5f19c47ac8dc6119e564345f8bba447620cd2524817606ab1746db"
+    }
+  ]
+}

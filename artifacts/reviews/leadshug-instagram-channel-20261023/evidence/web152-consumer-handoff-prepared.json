@@ -1,0 +1,42 @@
+{
+  "kind": "Sole Web152 current browser isolation/precise oracle/unmount continuation repair",
+  "state": "PREPARED; wait for solelock153 terminal/rootqualification and rootREADY/guards before sourcewrite",
+  "owned": [
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "api-app/test/timeline-fixtures.cjs"
+  ],
+  "preimages": [
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 17961,
+      "sha256": "261e6046b11a7c0d86ce944a46e2b7b1ef6e3d6201e418b482333be7fefc716e"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42925,
+      "sha256": "220547407477b729e163ab25e61520b44232cbed0649fc6d33af588796c6f6e2"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 70289,
+      "sha256": "65454d8abf9b8507da857b28cd088ce453fa4e54c2ec127c1f633cca0d563480"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 61831,
+      "sha256": "f564bd3e9d39629fc4e5fe1e5f8c3e743212c3cb531fd6472dda53b2a9fd1959"
+    }
+  ],
+  "adjudication": "adherence150-api148-root-adjudication.json",
+  "requirements": [
+    "Fix mounted/request-start ownership completely: explicit composer refreshOptions must recheck mounted and captured optionsIntent immediately after awaited onOutcomeNeedsReview, BEFORE replyOptionsGET. Inbox beginStartOptionsRead and startOptionsTicketIsCurrent must reject !mounted.current, cleanupinvalidates outstandingreadowner. Keep allactor/BU/conversation/navigation/generation/action/selection/version fences and147readstartepoch corrections; do not addfallback/requestretry/framework.",
+    "Fix nativevalidbyte loop initialvisibility anchor: eliminate preceding broad .bolha.hasText lookup; same actual201UUID bubble handlesvisibility and strict firstchild textContent equality. All6valid/7invalidcases/providertrace/zeroeffects/deadlines remain, no differenttestpayload to evade ambiguity. Root147b claimcorrection isrecorded; exactassertionanchor fixesit.",
+    "Isolate independentIGbrowsercase resources without deletingDB/history or weakening durablecrossBUownership. The existing /seed may accept a fixed includeInstagram:true flag (not arbitraryaccount IDs); serverderives two unique account IDs/grantcodes/validusernames for its newlycreatedBU, returns a typed scoped Instagramfixture descriptor. Existing providergrants register only those server-generatedresources. Samecase A/B remain stable, differentcases distinct under sameconfiguredapp. No staticreuse acrossfreshBU; no global currentaccount variable, teardownownershipreset, arbitrarycalleraccount/peer injection or newendpoint.",
+    "Update Fixture type/connectAccount/signedIncoming/negativecredentialproof/all nativeexpectedaccountID/code/username references to explicit currentfixture descriptor. Pass scopedfixture through helpers; no mutablemodulecurrentaccount. Incomingprovider whitelist derives registeredseededresources and retains fixedknown peer set/55pagepeers/accountA-vsB asymmetry. Preserve samepeer acrossA/B withincase, mismatchedrecipient/sig/crosscredential refusals, revokedoperator/pre-receiptUNKNOWN, all oldruntimeoracles. Default seed behavior for otherWA files unchanged; includeInstagram flag only controls extra fakegrant/descriptor. No extra production identitywrite: realOAuth/BFF persistsownership.",
+    "Keep existingcalls/effects/messageRequests shapes and semantics and previousobservations. Counterassertions must remain exactwithin-case: filter by currentserver-generated account IDs or use genuinebefore/afterbaseline when appropriate, retain originalwithin-casenumbers/orderedA/B effects and onedeliberatePOSTeach; never raise arbitrarybudgets/droporacles/resetglobalDB or fakeoutcomes. Realproviderstate observations remainfromactualauthorizedHTTP requests. Per-case default sendmode must be controlled explicitly ratherthan leaking previousunknownmode; no arbitraryfakebusinesscallback.",
+    "Add actualheldexplicit-refresh/navigation scenario: after validconnectedA composer, hold its parentstart-optionsGET with actualupstreamresponse/status/body/hash. Navigate to a different currentconversation B, observeactualBmetadata currentaccepted. Release/consume exactAresponse through existingroutepattern; prove oldA starts NO followupreply-optionsGET/no messagePOST and cannot invalidate/publishovercurrentB. No fabricatedBFFresponse/DBmutation/fixedsleep substitutes; await complete realresponses/taskbarriers and releasecleanlyfinally. Preserve alloriginaltimeouts/negative/provider/assertions; route/admissionoutcome remainsreal.",
+    "Only4ownedpaths; do notedit protectedtimeline/ASTscanner/unit151/lock153/runner/config or otherfiles. No tests/build/lint/npm/Node/Docker/Git/Foundation/privateenv/operational/Meta/provider/tunnel access. Report any additional source dependency beforeedit, exactterminalhashes and authoredprooflimits; rootqualifies beforecanonicaltests/freshreviews/allgates."
+  ]
+}

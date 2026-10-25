@@ -1,0 +1,74 @@
+{
+  "kind": "Independent root API138a exact terminal source qualification",
+  "owned": [
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 13081,
+      "sha256": "6cd8589109750b4527b6245e23f1696523ff5d34ddb0c56e53fa51cc95e120f1"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13348,
+      "sha256": "a17a79b6ae3696d78ff9d2d535f2c8358f38a502251acd9a5f62ec37b2bf6ce2"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64931,
+      "sha256": "f471323ec2241858f7cd29fd600c8f9fcfc0cb4b85fa7e448b87ec597f22fa9c"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 51286,
+      "sha256": "fab58ed1280bb0adbe0ba4ea76d407a9be8c39d13c76c5fe0d380e540c8281f4"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22392,
+      "sha256": "cb65e8517550efed88b2fc399c10652a09c0e2f36c33f479f673f8471e23588c"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "bytes": 2937,
+      "sha256": "55de4eda7ec4915c941b23d28b529db27daac64dd1938caaa43fc1c2e94e2065"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+      "bytes": 4618,
+      "sha256": "42da9078934de65282b78e02da5cfd989b82ab52ba57e035a39140f41c534c7d"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 32471,
+      "sha256": "b2ad4b85685c830e6eeabc63d17f78240fb1549c9f8cfb6681a072df9bbf0ea3"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+      "bytes": 3136,
+      "sha256": "dae15dc1401a60dd73d285af7d7e2df43fe8b669423b1e12657d7882161d7006"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 108326,
+      "sha256": "e902080681e8bfe227821fffebf30922d1ee565ae76f87dad7ea4bf2b4d032a5"
+    }
+  ],
+  "otherKnownSourcesExact": 323,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 4,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "descriptor": {
+    "field": "textConstraint",
+    "INSTAGRAM": {
+      "unit": "UTF8_BYTES",
+      "max": 1000
+    },
+    "OFICIAL_NAO_OFICIAL": {
+      "unit": "UNICODE_CODE_POINTS",
+      "max": 4096
+    }
+  },
+  "staticAssessment": "Resolved abstractpolicy constrains pre-reservation send; BFF coarseshared4096 check removes concreteorigin query; byteclientdefense and directempty guard before work. Strictunit fixture corrected. Authorednative eighthcase afterEPS andbeforelaterworkloads, not afteralltests. All7priorcases/unicodeinbound/cohort retained in source, executionpending.",
+  "remaining": "Web139 exactDTO/byteUI/draft/nativeconsumer next, then canonicalWeb/fullALL+freshaffectedAPI/consumer/security/TQA/primary/cutover/final/CP6. No actualnative/compiler/sourceacceptance."
+}

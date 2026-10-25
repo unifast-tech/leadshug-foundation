@@ -1,0 +1,18 @@
+{
+  "kind": "Independent exact human-admitted153 lock candidate qualification",
+  "owned": [
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+    }
+  ],
+  "otherKnownSourcesExact": 332,
+  "preservedRowsExact": 34,
+  "approvedExceptionCandidatesExact": 5,
+  "rootIndexExact": true,
+  "reviewedDiffReverseReconstructsExactOriginal": true,
+  "originalCRLFPreserved": true,
+  "testsRun": false,
+  "qualification": "Only exact two-node reviewed diff; all other graph bytes preserved by reverse originalhash. No npmci/runtime/compression/security acceptance. Current canonical compatibility and reviewed parserchild proof remain."
+}

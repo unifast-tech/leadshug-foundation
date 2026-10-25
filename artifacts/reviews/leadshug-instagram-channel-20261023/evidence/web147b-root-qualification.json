@@ -1,0 +1,27 @@
+{
+  "kind": "Independent Web147 and exactbubble supplement terminal qualification",
+  "owned": [
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 61831,
+      "sha256": "f564bd3e9d39629fc4e5fe1e5f8c3e743212c3cb531fd6472dda53b2a9fd1959"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 70289,
+      "sha256": "65454d8abf9b8507da857b28cd088ce453fa4e54c2ec127c1f633cca0d563480"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42925,
+      "sha256": "220547407477b729e163ab25e61520b44232cbed0649fc6d33af588796c6f6e2"
+    }
+  ],
+  "otherKnownSourcesExact": 330,
+  "totalSources": 333,
+  "preservedRowsExact": 34,
+  "approvedExceptionsExact": 4,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Both ordinary refresh and manual retry capture request-start reconnect epoch under current ticket. Authored actual socket/heldGET/abort/recovery case retains real uncertainty/no extra POST. Bytecase checks original padded1000/1001 input, actual providertrace and message UUID-specific raw DOM content, avoiding normalized hasText ambiguity. Existing fixtureeffects/calls remain unchanged; new synthetic-only trace resets normally. No native/compiler/API/runtime acceptance."
+}

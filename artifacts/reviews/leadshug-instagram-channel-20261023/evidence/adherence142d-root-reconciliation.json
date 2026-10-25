@@ -1,0 +1,20 @@
+{
+  "kind": "Independent142D naturalterminal strictmerge root reconciliation",
+  "frozenRowsExact": 34,
+  "fullSourceBodiesExact": 15,
+  "fullTodoExact": true,
+  "currentSourcesExact": 333,
+  "rootIndexExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-ADHERENCE142D-01",
+    "IG-ADHERENCE142D-02"
+  ],
+  "qualification": "142D01 duplicate142A01;142D02 residual111Drecovery. Actualsourceonly, native/currentALL/CP6 notproven; all142/145 nowterminal/rootmatched andsource/T maythaw only boundedauthorizedrepairs."
+}

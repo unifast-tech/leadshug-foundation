@@ -1,0 +1,23 @@
+{
+  "kind": "Prepared security dependency exception candidate; NOT admitted/applied",
+  "state": "PREPARED for independent critique before human admission; no package/lock/product changes made",
+  "advisory": "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828",
+  "installed": "body-parser2.3.0 matches maintainer affected >=2.0.0 <2.4.0; public sharedparser calls have default inflate enabled",
+  "risk": "Unauthenticated compressed request trailing bytes can cause decoder error after response; static version/config match only, no local exploit has been run and no operational crash claimed",
+  "proposedPath": "api-app/package-lock.json",
+  "preimage": {
+    "bytes": 305491,
+    "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+  },
+  "candidate": {
+    "bytes": 305491,
+    "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+  },
+  "diff": "body-parser145-proposed-lock.diff",
+  "lineEnding": "Original CRLF must be retained; proposal diff rendered LF only.",
+  "delta": "Resolve body-parser2.4.0 and qs6.16.1 only. Existing nested content-type2.1.0 and iconv-lite0.7.3 already satisfy new requirements. No direct package.json change, override, dependency-range widening, parser behavior/workaround or other node update.",
+  "preservation": "Continue original HMAC/rawbody/content-type/size/compression behavior; no inflate:false workaround or WA parser changes. All unchanged dependency nodes/root manifests retained. npm ci and canonical tests after human admission, not before.",
+  "validation": "Independent public-lock graph/range/integrity critique, then exact candidate/humanadmission if sound. After application run canonical all including parser/native signed and sharedWA regressions. Meaningful crash regression needs safe child/isolation design reviewed; do not kill testworker/operationalAPI or authorize adhoc attack now.",
+  "limits": "Addresses this concrete body-parser advisory only; other dependency advisories and fullsecurity gate remain. No exploit/securityclearance/dependencyallclear claim. Exactlock is protected; explicithumanapprovalrequired before productmutation.",
+  "qualification": "Official unauthenticated JSON metadata selected only public dependency graph; no npm/npmrc/env/privateconfig read, no packagecode execution."
+}

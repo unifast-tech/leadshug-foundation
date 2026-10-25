@@ -1,0 +1,18 @@
+{
+  "kind": "Sole API151 contract-only outbound unit fixture repair",
+  "state": "READY after148/150 allnaturalterminals/rootmatch",
+  "owned": [
+    "api-app/src/domain/inbox/outbound.service.spec.ts"
+  ],
+  "preimage": {
+    "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "bytes": 32471,
+    "sha256": "b2ad4b85685c830e6eeabc63d17f78240fb1549c9f8cfb6681a072df9bbf0ea3"
+  },
+  "baseline": "cp4-source-web147b-terminal-manifest.json",
+  "requirements": [
+    "Remove direct concrete InstagramEligibilityPolicy import/instantiation from outboundconsumer unit. Use existing ChannelEligibilityPolicy contract-only unitdouble configurable with typed textConstraint and, ifneeded, generic origin; no copied providerpolicy algorithm, aliasing/dynamicrequire/nameevasion or newframework. The unitproves commonOutbound honors resolved1000UTF8constraint before reserve/claim/send; actualproviderpolicy coveredinownpolicyunit/nativeBFF. Keep ASCII/accent/emoji/empty andeveryotherunitassertion.",
+    "Preserve channel-dependencies.spec.ts exactly: do not exclude.spec files, remove/relaxpatterns/negativecases/pathinventory/assertions. Do not hideconcrete coupling by alias or moving into newhelper. Keep productioncode untouched.",
+    "Onlyoneownedunitpath. No tests/build/lint/npm/Node/Docker/Git/Foundation/env/private/runtime/Meta/provider/tunnel access. Report exactterminalbytes/hash/minimalfixturedesign andstop. RootvalidatescurrentAPI afterotherwriters/freeze; no sourcepass inferred."
+  ]
+}

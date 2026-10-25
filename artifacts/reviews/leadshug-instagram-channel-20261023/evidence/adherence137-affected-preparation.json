@@ -2,7 +2,7 @@
   "kind": "Prospective fresh affected architecture adherence after sole134",
   "state": "PREPARED ONLY, no reviewer dispatched or sourcebody frozen. New review follows terminal133D and actual material134repair, not reduction of a running package.",
   "basis": "adherence134-coverage-preparation.json independently deduplicates143 exact-current actual body receipts at source130 + three explicit rootinputs; four134ownedpaths must be requalified/reviewed afterterminal.",
-  "scope": "Current remaining111D04 first-send authoritative-attempt ownership, actual producer/consumer shape, native consecutive recovery proof and all original invariants. FullT/alltenobligations/allfiveaxes/fullconsumerMatrix. Existing143unique body coverage retained via exact current hash receipts; no sum overlap, no unrelated closed finding reopening.",
+  "scope": "Current remaining111D04 first-send authoritative-attempt ownership, actual producer/consumer shape, native consecutive recovery proof and all original invariants. FullT/alltenobligations/allfiveaxes/fullconsumerMatrix. Existing143unique body coverage retained via exact current hash receipts; no sum overlap, no unrelated closed finding reopening. Actualauthenticated Me.id producer used only for exactsynthetic snapshot key proof is included in full.",
   "candidateFullBodies": [
     "web-app/src/componentes/NovaConversa.tsx",
     "web-app/src/telas/Inbox.tsx",
@@ -11,8 +11,9 @@
     "web-app/src/api.ts",
     "api-app/src/surfaces/bff/conversations.controller.ts",
     "api-app/src/domain/inbox/initial-message.service.ts",
-    "api-app/test/timeline-fixtures.cjs"
+    "api-app/test/timeline-fixtures.cjs",
+    "api-app/src/surfaces/bff/me.controller.ts"
   ],
-  "preflight": "Build new complete prospective8body/fullT packet only after134terminal/rootqualification, retain exact raw133D finding and rootadjudication/135actualproof/relevant prior132knownunrun. Actualcanonicalprompt chars/UTF8 both<=1048576 before launch, canonicalclosedstdin/freshgpt6.1solxhigh/strictmerge/naturalterminal/rootmatch. If dependency needed add fullbody beforelaunch; never reduce running package.",
+  "preflight": "Build new complete prospective9body/fullT packet only after134terminal/rootqualification, retain exact raw133D finding and rootadjudication/135actualproof/relevant prior132knownunrun. Actualcanonicalprompt chars/UTF8 both<=1048576 before launch, canonicalclosedstdin/freshgpt6.1solxhigh/strictmerge/naturalterminal/rootmatch. If dependency needed add fullbody beforelaunch; never reduce running package.",
   "gateBoundary": "Affected-review evidence only, not wholefeature/native/ALL/security/TQA/primary/human/cutover/final/CP6 waiver."
 }

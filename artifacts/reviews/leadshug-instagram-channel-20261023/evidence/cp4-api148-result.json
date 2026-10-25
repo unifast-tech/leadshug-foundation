@@ -1,0 +1,77 @@
+{
+  "kind": "cp4-api148-result",
+  "timestampUtc": "2026-10-25T15:15:20.242172+00:00",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "naturalTermination": true,
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "scope": "focused API Instagram validation only; no Web/browser/full-ALL/feature/protocol/security/CP6 acceptance claim",
+  "runnerDurationObservedSeconds": 63.3,
+  "reachedStages": [
+    "canonical guard and public bind/mask checks",
+    "31 migrations checked; database up to date",
+    "API ESLint passed",
+    "Nest build passed",
+    "focused API unit suite: 40 files, 453 tests; 39 files/452 tests passed, 1 file/test failed (4.66s)"
+  ],
+  "unreachedOrOutOfScope": [
+    "API E2E",
+    "Web build/unit",
+    "browser suite",
+    "full ALL target"
+  ],
+  "instagramHttpDeadlineTests": "3 passed within focused API suite",
+  "firstDecisiveFailure": {
+    "stage": "focused API unit tests",
+    "file": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "test": "common outbound dependency boundary > keeps provider clients and dispatch inside channel adapters",
+    "line": 170,
+    "expected": "[]",
+    "received": [
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: provider injection token or client type",
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: concrete eligibility policy import",
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: provider token or client reference"
+    ]
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "frozenState": {
+    "sources": 333,
+    "positiveInputs": 1230,
+    "protectedRows": 34,
+    "approvedExceptions": 4,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 420659,
+      "sha256": "c0f722abb0c4696809dffd27df9bc7eb724fab3a03ed73e859ff4716119ce4fc"
+    },
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-before.json",
+      "bytes": 263848,
+      "sha256": "c1860aae831a6f2501f98addda51139c91c77e7210bc239cdd477d33aca3013f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-api.log",
+      "bytes": 18996,
+      "sha256": "d0b080f30375dcbe7f06352810a51bbd27bc92f1fb41ac412bef31eb1c7e80eb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-after.json",
+      "bytes": 3675,
+      "sha256": "6e2c3747b922965eac8b0314dca3c0c93f0b2fd536c021f0ab66aa0b9447920d"
+    }
+  ]
+}

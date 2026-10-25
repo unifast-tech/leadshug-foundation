@@ -1,0 +1,27 @@
+{
+  "kind": "Explicit human admission of exact restricted API dependency lock candidate",
+  "date": "2026-10-25",
+  "questionItemId": "[request_user_input_async,call_be9c9e47ca7f4929b4fe90f4ce9d946d,0]",
+  "answer": "Validar atualiza\u00e7\u00e3o restrita",
+  "approvedPath": "api-app/package-lock.json",
+  "preimage": {
+    "bytes": 305491,
+    "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+  },
+  "candidate": {
+    "bytes": 305491,
+    "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+  },
+  "diff": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-proposed-lock.diff",
+    "bytes": 1644,
+    "sha256": "57391eb6c2623839c08beb25799f070567977e0f3475b1d0592b843a572f9236"
+  },
+  "review": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-root-reconciliation.json",
+    "bytes": 595,
+    "sha256": "903b71b53a6f8a5d1bafeba5b80c72fab3159c5849be06d14eaac3505a532783"
+  },
+  "scope": "Only body-parser2.3.0\u21922.4.0 and requiredqs6.15.3\u21926.16.1, originalCRLF/order retained, otherpackage nodes/directmanifest unchanged. Explicit upstreamsource caveat and postadmission compatibility/security plan retained.",
+  "noOtherAuthority": "No broad upgrade, runtime/Meta/provider/privateenv/Git permissions. Separate alreadyadmitted canonicaldisposable tests only."
+}

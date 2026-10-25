@@ -1,0 +1,55 @@
+{
+  "kind": "Independent Web140 naturalterminal root reconciliation",
+  "sourcesExact": 333,
+  "boundInputsExact": 1217,
+  "fullTodoExact": true,
+  "preservationRowsExact": 34,
+  "approvedExceptionCandidatesExact": 4,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-before.json",
+      "bytes": 261287,
+      "sha256": "c2e0d510462cadde6b31ba38d42ad3c97d6c439319588b5522bba0320706f989"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-web.log",
+      "bytes": 8651,
+      "sha256": "75c284c66046ae6e5c78862545cb89b653b68f4bd33fb9dea85b95e91c17c69a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-after.json",
+      "bytes": 3018,
+      "sha256": "e0616576c9b9789484e1b7397d8f74776d58348722ef711478d1ddc733708e20"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web140-result.json",
+      "bytes": 2621,
+      "sha256": "116db79ac9bdfeecf1b68ef79dafedd078cd2850a785c0f87a72388ddfde32e1"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "naturalExitCode": 1,
+  "firstDecisiveFailure": {
+    "stage": "Web TypeScript build",
+    "file": "web-app/src/componentes/NovaConversa.tsx",
+    "line": 366,
+    "column": 73,
+    "diagnostic": "TS18047: attemptError is possibly null"
+  },
+  "unreached": [
+    "Vite production build",
+    "Web unit tests",
+    "API units/E2E (outside target)",
+    "browser (outside target)",
+    "full ALL target"
+  ],
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "scope": "Compiler RED only, no test behavior RED/GREEN/native/API/ALL inference. Current source may thaw only for bounded onepath guard repair, then fresh Web143 freeze."
+}

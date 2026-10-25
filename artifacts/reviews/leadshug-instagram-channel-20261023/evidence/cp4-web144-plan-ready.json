@@ -1,0 +1,28 @@
+{
+  "kind": "Current Web144 after Web140 compiler RED onepath qualified repair",
+  "state": "READY after sole Web143 exactterminal/rootqualification; no writer/reviewer active",
+  "profile": "Operational / Coder implementation-validation",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-web.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-result.json"
+  ],
+  "policy": "One naturalterminal canonical invocation onprincipalcheckout. Freezequalifiedcurrentknown333sources/fullT/positivepublicinputs/34preservations/4exceptions/policyv1.4/rootthreegitlinks. Fouruniqueoutputs only; actualreached/unreached/firstfailure/cleanup rootmatchedbeforethaw. No source/T/input/private/env/operational/Meta/provider/tunnel/Git writes, nofilter/retry/autofix/skip/timeout/assertion/threshold/dependency weakening. No completedfeature/primary/humanruntime/security/TQA/cutover/final/CP6claim.",
+  "dependencies": [
+    "web143-null-guard-root-qualification.json",
+    "authority-web144-ready.json",
+    "routing-web144-ready.json"
+  ],
+  "supersededPreparedOnly": [
+    "Web135",
+    "ALL136",
+    "review137"
+  ],
+  "qualification": "API138a/nativebyte/source134brecovery/byteUI authored notexecuted. Old131PASS onlysource130; no current pass inferred.",
+  "freeze": "cp4-web144-frozen-manifest.json"
+}

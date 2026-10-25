@@ -1,0 +1,35 @@
+{
+  "kind": "Independent exact human-admitted privacy138 source qualification",
+  "owned": {
+    "path": "web-app/public/privacidade.html",
+    "bytes": 13913,
+    "sha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753"
+  },
+  "otherKnownSourcesExact": 332,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": [
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "candidateSha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "candidateSha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "candidateSha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753"
+    }
+  ],
+  "rootIndexExact": true,
+  "testsRun": false,
+  "authorization": "human-byte-privacy138-admission.json",
+  "review": "privacy-instagram-companion-critique-merge.json",
+  "staticParity": "Rootmatchesexacthumanapprovedcandidate. ExecutorreadpositiveOAuth/exchange/crypto/BUingress/humanwindow/Typebotexclusion owners; no new legal/retention/readinessclaim.",
+  "remaining": "No publishing/runtime/legalcertification; serializeAPI/Webbyteimplementation then currentcanonicalALL/freshreviews/primary/security/TQA/cutover/final/CP6."
+}

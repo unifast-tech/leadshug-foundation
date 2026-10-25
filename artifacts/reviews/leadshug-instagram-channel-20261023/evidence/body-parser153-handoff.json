@@ -1,0 +1,23 @@
+{
+  "kind": "Sole153 exact human-admitted API lock application",
+  "state": "READY;151terminal/rootqualified, allvalidators/reviewers/writers terminal",
+  "owned": [
+    "api-app/package-lock.json"
+  ],
+  "preimage": {
+    "bytes": 305491,
+    "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+  },
+  "candidate": {
+    "bytes": 305491,
+    "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+  },
+  "diff": "body-parser145-proposed-lock.diff",
+  "admission": "body-parser153-human-admission.json",
+  "baseline": "cp4-source-api151-terminal-manifest.json",
+  "policy": "inherited-public-preservation-v1.5.json",
+  "requirements": [
+    "Apply only exactreviewed two-node candidate to APIpackage-lock, preserveoriginalCRLF/propertyorder/license/engines/funding/allothernodes/directmanifest untouched. Do not npmupdate/install or resolve a newer graph. Referenceofficialmetadata receipt alreadyfrozen; no additional network/package execution.",
+    "Verify original and candidate hashes exactly; same305491bytes. Only oneownedpubliclock. No source/otherpackage/fixture/test/runtime/config/privateenv/operational/Meta/provider/tunnel/Git/Foundation writes or tests/build/lint/npm/Node/Docker. Report terminalhash andstop. No security/compatibilitypass inferred; canonicaltests and safechildprotocol later."
+  ]
+}

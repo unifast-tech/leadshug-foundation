@@ -1,0 +1,34 @@
+{
+  "kind": "Independent root source134 terminal qualification",
+  "owned": [
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 53347,
+      "sha256": "d347f5a152c24d3f736fdf96b0eb5e1b0ec331b2e221f4d6de3873ca329a3825"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42728,
+      "sha256": "70a1baa38fc333377a64836116e74adb2e57f176b6d641be72350400f6123c9d"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 58954,
+      "sha256": "3041bc486130644272bf9014d35eda1cc21e70c3c9127caa9520c97e0d4c1cb8"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 8233,
+      "sha256": "aad650b70982f8771011e3e273c2c30e19f8e1426d62808773fa29be89d2675e"
+    }
+  ],
+  "otherKnownSourcesExact": 329,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Source-only scope/terminal qualification; actual compile/unit/native/fullALL/fresh affected review pending.",
+  "limitation": "Independent same-mounted healthy parent-null UI trigger absent; production-used selector unit branch is authored, actual A/B native is extended without navigation/oldassertion reduction. No artificial trigger or native-parent claim.",
+  "remaining": "CurrentWeb135/fresh137/fullALL136/primary/human/security/TQA/cutover/final/CP6 required, no delivery acceptance."
+}

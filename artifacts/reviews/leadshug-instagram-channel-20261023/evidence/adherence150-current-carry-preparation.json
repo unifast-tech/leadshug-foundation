@@ -1,0 +1,1226 @@
+{
+  "kind": "Deduplicated actual current fullbody receipt carry after142 and146/147",
+  "exactCurrentUnique": 139,
+  "staleMaterialChangedUnique": 5,
+  "rows": [
+    {
+      "path": ".env.example",
+      "bytes": 1467,
+      "sha256": "7dd8af0fd26706697cdc1eee0ebbe71af4d69e9b3d5d0f0b2bb86ba8c3fe8429",
+      "actualFullBodyReceipts": [
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 4049,
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5",
+      "actualFullBodyReceipts": [
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "api-app/.env.example",
+      "bytes": 3565,
+      "sha256": "5ae334bc61c924eb44b61c89c0e6127be7e410ea571ab2ffe180fab949452a66",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023180000_instagram_adapter_type/migration.sql",
+      "bytes": 245,
+      "sha256": "32208cc03faafa9e56c9c9a08dfab5c6342d4dd96a68b19e5c853c64c947f5cf",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/prisma/migrations/20261023190000_instagram_identity_routes/migration.sql",
+      "bytes": 19101,
+      "sha256": "2f8a134b837fb67c78e5f9b47bf7d0f26ddedb77f5a3da1b855751987df29ceb",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/prisma/migrations/20261024100000_instagram_authorization_attempts/migration.sql",
+      "bytes": 3987,
+      "sha256": "56fa3232606291fcb457dfca8696d0a5e952bc87c46562594c4bc883ac6c15bc",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/prisma/schema.prisma",
+      "bytes": 51597,
+      "sha256": "6fb1db37c44cb601e86afd441175ec14e94ec00f37616e4a5b7a915feceb3b8d",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence119b",
+        "adherence119c",
+        "adherence122g",
+        "adherence129e",
+        "prior67-qualified54carry",
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/access/access.service.ts",
+      "bytes": 2390,
+      "sha256": "2ef3761a138d7c8c386c5ddb4bf2a2000c960328789834bde5e12135a1ea66e7",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/access/scope.ts",
+      "bytes": 5701,
+      "sha256": "412f68eb157328855c87cb86b6b89cc1c267eee7068dc59c0abbe085074db26d",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/business-resource-ownership.ts",
+      "bytes": 5953,
+      "sha256": "72d47b7d2031f19b7bdf5bf2a2a1077753fa43a8b85af73c1552f65e73b2b1a8",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence119b",
+        "adherence129e",
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 10584,
+      "sha256": "17cc8111c0250d6da1aba192e2d401d38a464f8fef248a34262dbecfc6e71bee",
+      "actualFullBodyReceipts": [
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-crypto.ts",
+      "bytes": 3663,
+      "sha256": "b5f4ab6a5e7386fda28e4b1b0622918dfda8506da5ee2ad60b983e8c93f1c40a",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.spec.ts",
+      "bytes": 4021,
+      "sha256": "a60d142fcc335de43c5a697d9f7758f722883a1725c824dd0a4b4f0a2f7fb03b",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-credential-resolver.ts",
+      "bytes": 9525,
+      "sha256": "34f25985091f0c0873b682bc3d27f7eb0cde95a56e5b74497afdc541f79f7630",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence129e",
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14299,
+      "sha256": "6fbbd96f8a19dffe298ff98dd730943b88fd87bb5583e1b7587420a1c5a67ff4",
+      "actualFullBodyReceipts": [
+        "adherence122g",
+        "adherence129e"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-provider-readiness.ts",
+      "bytes": 831,
+      "sha256": "8e47f5c0a0ad5f667c58212dbad3f15b84379d24a3d5d99cd4f1886e5dcca816",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "bytes": 49088,
+      "sha256": "af62baafba5ee04657ac07ed1461f1841017dd3b523051aacefef55df8dbe0b7",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90997,
+      "sha256": "deb98b8fb4e74e6f03b5109ee03dccfb1a53d1366cbbcb9abd742b67e54f5067",
+      "actualFullBodyReceipts": [
+        "adherence119b",
+        "adherence122g",
+        "adherence129e"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/number-registration.service.ts",
+      "bytes": 44938,
+      "sha256": "6f256430f609eed1a2fae72493268bf028135e0b8e6d34016c95ae0fef951631",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/receipt-attempt-convergence.ts",
+      "bytes": 920,
+      "sha256": "ca8cb841fab2574866c3508ab41aa0a269608a20658db18840b2b89f0c281512",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+      "bytes": 12318,
+      "sha256": "e14cce0eb51ba98b05fa15dc6776680313f46898b13d0ef50b0d3f3070f78813",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel-operation-context.spec.ts",
+      "bytes": 1973,
+      "sha256": "7c29336e78bd91e52ab585afc218fe74a723fee486c07e277fbd06dfec72a435",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13348,
+      "sha256": "a17a79b6ae3696d78ff9d2d535f2c8358f38a502251acd9a5f62ec37b2bf6ce2",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "bytes": 9059,
+      "sha256": "b615202e95174055d345b407f7a955b7800fa46830bd5e70378c3ef5db6b7653",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "bytes": 9843,
+      "sha256": "943e18f61e04be50c72419a7e7989795e155d0d96e30ff90bf74f2d9d8516c26",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+      "bytes": 4618,
+      "sha256": "42da9078934de65282b78e02da5cfd989b82ab52ba57e035a39140f41c534c7d",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 13081,
+      "sha256": "6cd8589109750b4527b6245e23f1696523ff5d34ddb0c56e53fa51cc95e120f1",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-window-policy.ts",
+      "bytes": 5700,
+      "sha256": "46dfcf887f2ad4ed0670664186e918816699e6541d1670aa9c32ac79a193e43e",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence129e",
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.spec.ts",
+      "bytes": 1395,
+      "sha256": "6587b7b53ac5ce9726f8c8bcf48cce47efbc2ede8b0f7bf9fe3113026a7ab848",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/contact-identity.ts",
+      "bytes": 6641,
+      "sha256": "d7534db897eaad2dc7f01cc3957bb8042d915e662a93e7eb10d0baedcecc971c",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.spec.ts",
+      "bytes": 5231,
+      "sha256": "1e2e797f83fe12d4609b0f1d6cb05b982b70baf492861da24368d9496a2ee606",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversation-start.service.ts",
+      "bytes": 3439,
+      "sha256": "76ec095570fcacaa5bc48aabd30ab31adc9387bf399cf046fd9d8a1889528700",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 10463,
+      "sha256": "71312450799a964ef6057330fdcdddaa0a98246e2caef4b0ad305ffa98412e6a",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence129e",
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.spec.ts",
+      "bytes": 15247,
+      "sha256": "db2a52ba256592ba4a7a7f55a64b73c4188ed48b1d72c192b8f1baefb60d0809",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 49834,
+      "sha256": "ac6859204f25a215f17cabd125c494599124f22c81845c9dccdd811cc05847ab",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.spec.ts",
+      "bytes": 1015,
+      "sha256": "eb1ca83e588c58382a332aee0fdda200f3eb6cb5f8c0cbd430e9790623393ec0",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/historico.service.ts",
+      "bytes": 9192,
+      "sha256": "91a7ae76b8f514cf283148b51b4476a9dd8ee77313df8b898f8f367bce81fe22",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 8705,
+      "sha256": "79dc13cc0e56d3d547448a3269b0849ae559cd5108ba751598f4f43094384e31",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence129e"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.typebot.integration.spec.ts",
+      "bytes": 8151,
+      "sha256": "0995526bb84c7f7363a8f7d0cf56fbca782a98ee9563e58e115fd228b9f25730",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.spec.ts",
+      "bytes": 7671,
+      "sha256": "2e50bc9b6d5d744511e7e8d1de9c2ac4f9c41f596bf3624aef3d5ceaeaaff667",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24910,
+      "sha256": "1090943b53ac7efa25fd66fd00a2628fca5434c06407d4d3c9f9f95a05211db6",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.spec.ts",
+      "bytes": 5479,
+      "sha256": "72d71a92eabb9b0a83d6a280f853b036ebeaf15a8c0bd1ceff34723757ef6ad9",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/message-acceptance.service.ts",
+      "bytes": 27690,
+      "sha256": "1c47d314fd333a8826a121a9a593eeb54e0d156af2a0f4ade494dfee3250f131",
+      "actualFullBodyReceipts": [
+        "adherence111e",
+        "adherence129e",
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 32471,
+      "sha256": "b2ad4b85685c830e6eeabc63d17f78240fb1549c9f8cfb6681a072df9bbf0ea3",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 51286,
+      "sha256": "fab58ed1280bb0adbe0ba4ea76d407a9be8c39d13c76c5fe0d380e540c8281f4",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/domain/produto/modulos.service.ts",
+      "bytes": 3094,
+      "sha256": "1283ac1879467c3ebb079daaf29bfd5cda9f0ca02fd45a1b3f8ec865c7d5544e",
+      "actualFullBodyReceipts": [
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "bytes": 2011,
+      "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/src/infra/session/session.service.ts",
+      "bytes": 5483,
+      "sha256": "884618471c7cc58c037f04d20c790979409bbbcfc2fe61b34312b2625b28e200",
+      "actualFullBodyReceipts": [
+        "adherence122g",
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/account-reference.ts",
+      "bytes": 424,
+      "sha256": "da2b4572b07477407f9adf08c30c3876d10f92ae157cfadb3b8bdc5fc99d0d24",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-factory.ts",
+      "bytes": 454,
+      "sha256": "199603f2211f3c29aafa2aa69adc5a65a3d4f7ddd5dd0647f3e4df90e0788d03",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-adapter-registry.ts",
+      "bytes": 1003,
+      "sha256": "1b2f99236d1a2d76e662384191c2d68835b3d331199111babb52334a26ee5de6",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/channel-transport.module.ts",
+      "bytes": 3312,
+      "sha256": "2bf7b4d9c99e412125c9b59f0ac32cffaf6f5e870622e94baa814755942493ac",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/evolution-channel.ts",
+      "bytes": 2211,
+      "sha256": "6a41ef2f3b0ee9e5c6b381d54faf48b0b2c672e52751f8be1480ad01cb178a34",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/instagram-channel.ts",
+      "bytes": 2375,
+      "sha256": "ed53f4eb0119ec6187c115e5816412d0cd2ef00213d83f341efd8640bac5f526",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry",
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/meta-channel.ts",
+      "bytes": 3900,
+      "sha256": "99a9ca01a57527a76de54cdbdf8b49f65b5dcceb1a71abce883d1845c6cd8f26",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64931,
+      "sha256": "f471323ec2241858f7cd29fd600c8f9fcfc0cb4b85fa7e448b87ec597f22fa9c",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "bytes": 9665,
+      "sha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "bytes": 8014,
+      "sha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674",
+      "actualFullBodyReceipts": [
+        "adherence111a"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.spec.ts",
+      "bytes": 6073,
+      "sha256": "3a8676acdead9b9eebe9e18c1525c98d41a2f8b11c112da07100cac07a59901b",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-http.client.ts",
+      "bytes": 8596,
+      "sha256": "0a38a8fb164a27b92c3f6c357eb3bd4a529b012206bb4bd5fe4d7ccec13c0287",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111e",
+        "adherence119b",
+        "adherence122g",
+        "adherence129e"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+      "bytes": 3136,
+      "sha256": "dae15dc1401a60dd73d285af7d7e2df43fe8b669423b1e12657d7882161d7006",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "bytes": 2937,
+      "sha256": "55de4eda7ec4915c941b23d28b529db27daac64dd1938caaa43fc1c2e94e2065",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram.module.ts",
+      "bytes": 425,
+      "sha256": "93d8eff59bd7284967d8a608eb0df7cb30d1759f36d003800e53c01cd0c65eba",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 6980,
+      "sha256": "173eab1e78c69d1bee25544833ddcba6f22f6efb0f82c79e5d8fa7d0dc990f1c",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "bytes": 9860,
+      "sha256": "136a0c71e5d6a9e9038c1dedca1c406aeeea431a133a41902b33c94751db4a56",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+      "bytes": 5938,
+      "sha256": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "bytes": 10954,
+      "sha256": "83bd733e32d0aa8807a3c6a9954aedd7bed6b94ee9d34b5fcff6ce741b2d15d8",
+      "actualFullBodyReceipts": [
+        "adherence111a",
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/bff/session.middleware.ts",
+      "bytes": 6683,
+      "sha256": "3106e6c8c512457878c6d1368fa924ef14688ca1204d274b084d94974dd662b5",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/public/conversations.controller.ts",
+      "bytes": 17887,
+      "sha256": "05d0b10a275579d24be8a9654a19436bef5dbfb49a090def83eec3e03ddd4ce6",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/evolution.controller.ts",
+      "bytes": 10030,
+      "sha256": "91d7d098ac77368b67537025e1169484fecd6acaf9f609bd272bbee60ea0071c",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.spec.ts",
+      "bytes": 8717,
+      "sha256": "95a65f42662cc8d9eadc752b39bac54390f184d26535c2b554df49274e6e71bd",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram-ingress-scheduling.ts",
+      "bytes": 1950,
+      "sha256": "dc1801e9935c4db6e9648e7d4a00d84303b5cad7a98539d6c4f84fa8c2923986",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10700,
+      "sha256": "6d23eb3998d9c106ff1a6a1eec7cef88e6cab1994b1a9c7295e98d2e082f5133",
+      "actualFullBodyReceipts": [
+        "adherence129e",
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/meta.controller.ts",
+      "bytes": 7195,
+      "sha256": "261bf12e6ef021e00d90000a714ff54c66e3753f85d287a95015035fb584518f",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/webhooks.module.ts",
+      "bytes": 1209,
+      "sha256": "8fc09e2844fd002c18793d194be8ac471d75811b71ce24038a9948e27e5fb48f",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/api-publica.e2e-spec.ts",
+      "bytes": 21056,
+      "sha256": "433d34c0a8e484880a8be83fc56c11bb844d5f493bd6057f23b48be9a3b1bd6f",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/atendimento.e2e-spec.ts",
+      "bytes": 42283,
+      "sha256": "392d5dcd19747ffbf941b798e34e1989c54bcb22be0723dcd35530a67aac3cff",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 24159,
+      "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340",
+      "actualFullBodyReceipts": [
+        "adherence119b",
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "api-app/test/channel-transport.e2e-spec.ts",
+      "bytes": 42854,
+      "sha256": "23c420a6f2abd9a0d818bc057953f259dd8bc51a0c29dcc3881d019c06c589b7",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/conversation-start.e2e-spec.ts",
+      "bytes": 15997,
+      "sha256": "eb4aeed1202f4528d3b7a0c09b7162c5a4873fef43ceb80f6ee6dc67d75a8846",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/dispatch-admission.e2e-spec.ts",
+      "bytes": 58517,
+      "sha256": "b67794d5d9327e517f27620292e71fa3d9986d0f6aa259c59a07052497e6a5d5",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/helpers.ts",
+      "bytes": 34866,
+      "sha256": "6fb12605a0db3c1a44dacefb355349ed05f500582106334e8b43487aedada979",
+      "actualFullBodyReceipts": [
+        "adherence111e",
+        "adherence119b",
+        "adherence119c",
+        "adherence122g",
+        "adherence129e",
+        "prior67-qualified54carry",
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/test/historico-atividades.e2e-spec.ts",
+      "bytes": 7919,
+      "sha256": "529cfad68489bcb6b2d1368505d58f9c4f1e2a18deac8074b86b0204d7f427b1",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/historico.e2e-spec.ts",
+      "bytes": 8491,
+      "sha256": "2053df9de7e420b853cd41d457f0cdeb90d183b6fe4c423e98831c29e22c8453",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/initial-message.e2e-spec.ts",
+      "bytes": 128746,
+      "sha256": "639ffaea60923fcfb87544dbbccf307dee6a09d1d6cc98ce48d9e7fa0a8a8a3f",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-consumer-boundaries.e2e-spec.ts",
+      "bytes": 15961,
+      "sha256": "12d57362ff6601f0bc5ce2c601d5d4bd15d6bbe4608a2d0be59cf0d92e07e805",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+      "bytes": 12534,
+      "sha256": "aacc8d2f85aeabb866fdf571128def005bb4739d091a4e364c74d2b4a6e3eaf6",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2-binding.e2e-spec.ts",
+      "bytes": 17866,
+      "sha256": "a9c78f4bc9b29b77d0dafee12b742763cb8e25a7617bc3fe8d6cd2f1230d77ce",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+      "bytes": 25333,
+      "sha256": "f0f0909e176f1ed886d8452378f68825ceb773f41f17da41a658ea0d1d760def",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2-final-clock.e2e-spec.ts",
+      "bytes": 23454,
+      "sha256": "925439af70ab60d1ae0992e5516edea340f247a45dd1ed7f6de7c128221807e5",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2-finalization.e2e-spec.ts",
+      "bytes": 19779,
+      "sha256": "223739cd8cd4a529203cd8e686b297f2e51c53147be35b5916f1f353e99d3fe5",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2-recovery.e2e-spec.ts",
+      "bytes": 8663,
+      "sha256": "a75d9687f300486c9acf9ed38587f9fa507fcaeecd11588af5530e631cb1f856",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2-residual.e2e-spec.ts",
+      "bytes": 57287,
+      "sha256": "5f2d3da6b64ee64953f04ff927011ef04a8606b9213d29e9a0e79ae752065164",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp2.e2e-spec.ts",
+      "bytes": 119339,
+      "sha256": "69f6169edca760112793bf6dcfdf129e71b0031065fc423dc723fb7b184b9d1a",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-accepted-facts.e2e-spec.ts",
+      "bytes": 7663,
+      "sha256": "b7688a717a42e73b5bc8955204b9ad5beb5e98b7232b7cb3311a8032bf556488",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-authorization-fences.e2e-spec.ts",
+      "bytes": 46124,
+      "sha256": "4fc5ce0f7b8d70f6ad960c36d836809bb80943a5bfec0d3d4f3dbecd47a1d386",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-csv-boundaries.e2e-spec.ts",
+      "bytes": 14963,
+      "sha256": "311609e3e03a3ad3088e82035cc0a53fde3822abd346617d0566988aea548795",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+      "bytes": 14422,
+      "sha256": "e571b7438a4ef88a5645ba14b32c457357c00e1e557d2dcb85b9ad44e9bbbfb4",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+      "bytes": 16237,
+      "sha256": "b537817fa46e54ac05a3798155be3629a7fb9039c2821bbc1e313b2e8b5904dd",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-routing.e2e-spec.ts",
+      "bytes": 21532,
+      "sha256": "fb01016fbce4294ba68c1223c14fc05c184255ab388bf6688e92d702d29ee823",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-v1-cutover.e2e-spec.ts",
+      "bytes": 32002,
+      "sha256": "efe52d6fb58ccd2781c8e6d07b2a3bc467bc83e6b962a03a5014b5ff759191b9",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp3-whatsapp-ingress.e2e-spec.ts",
+      "bytes": 14450,
+      "sha256": "5ddac42e0edcee85534ebc5831792a188930d35e0605ce9fe77c15db3353a510",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69817,
+      "sha256": "ebdcf5520be52c735ddc07e815316edfce768fe5e6e39ec92529a1816c417162",
+      "actualFullBodyReceipts": [
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 41853,
+      "sha256": "6cc2f1f4f015042ff10d6e923d57496c7a59a1870895ef4413133761195737f2",
+      "actualFullBodyReceipts": [
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp4-initial-recipient.e2e-spec.ts",
+      "bytes": 11431,
+      "sha256": "88c9dc3a8d848085ed30280a20a1d332e22225c67c416ca785534ca072feb5f8",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+      "bytes": 19222,
+      "sha256": "e77142d62cd6ac7e3726353653aed7a39e96afb82f589149113349a5befb3b1c",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp4-window-config.e2e-spec.ts",
+      "bytes": 12011,
+      "sha256": "ce67fe5404d062b986df8756ae56208d93d808e0da7a4d94fd07c55f3921518d",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 26011,
+      "sha256": "aec0aef965e1c1cda60b0095d0492fe8b9abe3a9104153694c46e472b17fdf48",
+      "actualFullBodyReceipts": [
+        "adherence122g"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-identity.e2e-spec.ts",
+      "bytes": 14863,
+      "sha256": "675eca8c4fd68c77f7d4bcc01be0d4d84fde21cf843bbea298cc9a4346282b53",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-lifecycle.e2e-spec.ts",
+      "bytes": 74447,
+      "sha256": "5f39011d9c542438d7b2b94dd71fba15b726b1ffd3eb1d65f5ec09270a454f97",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-migration.e2e-spec.ts",
+      "bytes": 27927,
+      "sha256": "4deae0c82e317688c1217d230ce2d98215d783434c35ec19137937438d8618ec",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session-infrastructure.e2e-spec.ts",
+      "bytes": 7030,
+      "sha256": "8bea752ff32271ea857d9e23289a258e93acd310c1d29edc4ec208c53552cd28",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-oauth-session.e2e-spec.ts",
+      "bytes": 8096,
+      "sha256": "99f980ee88a4665c0c8f1ef9ac522dac3ce8ecc6054a1f8df5dc482c7a1bd761",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "bytes": 178445,
+      "sha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a",
+      "actualFullBodyReceipts": [
+        "adherence111d"
+      ]
+    },
+    {
+      "path": "api-app/test/number-onboarding-caller-scoping.e2e-spec.ts",
+      "bytes": 7196,
+      "sha256": "8b9ef40da121a967540f149f44ec2f59f518d658069049ad02fbe61818fa6924",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/number-onboarding-flow.e2e-spec.ts",
+      "bytes": 83275,
+      "sha256": "ec3d8cfd9733ef968bd00303aea68e22eba82a827118a94e50e570aae19c122f",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/number-onboarding-message-acceptance.e2e-spec.ts",
+      "bytes": 6703,
+      "sha256": "836aeda3eed8ae0a934ef36ad6eb37ce81673e734a429accdbf4b2fb3628ddc7",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+      "bytes": 45175,
+      "sha256": "d88fc37e462a73ae938bafee14e3b6d784c4d9287319db41f4a857688220f235",
+      "actualFullBodyReceipts": [
+        "prior67-qualified54carry"
+      ]
+    },
+    {
+      "path": "api-app/test/number-onboarding-typebot.e2e-spec.ts",
+      "bytes": 19830,
+      "sha256": "fedd146246546100fc0ac2fe2293b18a1835a44343873123383109b339dffe11",
+      "actualFullBodyReceipts": [
+        "adherence119b"
+      ]
+    },
+    {
+      "path": "api-app/test/painel.e2e-spec.ts",
+      "bytes": 2933,
+      "sha256": "910975e63b3ee48a983107a9aaf4906924a103f6b353481f03dccfb934d64237",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/setores.e2e-spec.ts",
+      "bytes": 17500,
+      "sha256": "8eec2be051aa9d71116b57b84ff5c3e863aca2005f61782c33ea87bd868cd203",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "api-app/test/webhooks.e2e-spec.ts",
+      "bytes": 28380,
+      "sha256": "06d3cf3317a7e35baaf9f9131adb7edde5764bbbba644467be1e5aadd6c6ae24",
+      "actualFullBodyReceipts": [
+        "adherence119c"
+      ]
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "bytes": 21180,
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235",
+      "actualFullBodyReceipts": [
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "docker/local-gateway.conf.template",
+      "bytes": 2089,
+      "sha256": "02224cf2e1984b061c9995ce05257da7ee73dccd9eaa14a245ce2b1aa23adaf6",
+      "actualFullBodyReceipts": [
+        "adherence122g",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "bytes": 30527,
+      "sha256": "edb1dc40535a78d97a6267ea1d7781e9441a5d9be3da11ee6148fed126bc7d7d",
+      "actualFullBodyReceipts": [
+        "adherence122g",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13918,
+      "sha256": "1ab8c3da8e7d05d7c25057356fa3802a3671a86288798e87140d9b8f86ede06b",
+      "actualFullBodyReceipts": [
+        "adherence122g",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 61087,
+      "sha256": "cbda0b78e5694eca442cf006ba56e786470967ea8f89528cf24865fc0784e5a4",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/e2e/instagram-channel-freshness.ts",
+      "bytes": 6659,
+      "sha256": "533e8186eb7314f51432bba876fc8afb20086dfd0032d94ca06b00536095ef46",
+      "actualFullBodyReceipts": [
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "bytes": 13913,
+      "sha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 10884,
+      "sha256": "b58aaa05f61fd86dec85f27b7ae38f39f0ce6220f8bdc849defa07dfe1b357c1",
+      "actualFullBodyReceipts": [
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20705,
+      "sha256": "cc6a76a62c5ef18627cfd2e0ba409831877a84dc24b210c669ea0a14f9f03006",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "bytes": 43742,
+      "sha256": "01d32acef1dea7eacbc1e341abe6593e3fe7296268466f56fa3292530d7e754b",
+      "actualFullBodyReceipts": [
+        "adherence111d",
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 23291,
+      "sha256": "85f0f8069bf1b5065153b7c9d598b6eeed34468e53e150a1e6292ccc3193f2d1",
+      "actualFullBodyReceipts": [
+        "adherence133d"
+      ]
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 17961,
+      "sha256": "261e6046b11a7c0d86ce944a46e2b7b1ef6e3d6201e418b482333be7fefc716e",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 7888,
+      "sha256": "9adfaf2b892c92a7610010d2f10bb01c10d34377fc8c1d2acc9ae7955d2a6987",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 53371,
+      "sha256": "e32927dae15a53e8f959ce691b5b4198546abd688c568ed03abf49a575a5af6c",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 16496,
+      "sha256": "c7ff3f6e5cd34bb32418e60ce709e590611884c852fbd643624e468dccb00ce9",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 10332,
+      "sha256": "ac0d64357ba36a2e95a0d7fe1f82b007bdbf439c6c8ccb5b6478fc3937289b7f",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3102,
+      "sha256": "57d9294ff2895eb022097df595279ddea3be8a31243fdf83434ff71b0ca2c261",
+      "actualFullBodyReceipts": [
+        "adherence133d"
+      ]
+    }
+  ],
+  "staleRows": [
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22392,
+      "sha256": "cb65e8517550efed88b2fc399c10652a09c0e2f36c33f479f673f8471e23588c",
+      "actualFullBodyReceipts": [
+        "adherence142a",
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 108326,
+      "sha256": "e902080681e8bfe227821fffebf30922d1ee565ae76f87dad7ea4bf2b4d032a5",
+      "actualFullBodyReceipts": [
+        "adherence142a"
+      ]
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 61513,
+      "sha256": "fedf301625858352821aa5afcc66335bc321f5fd7a1fc2c7a23ad99e914ea58e",
+      "actualFullBodyReceipts": [
+        "adherence133d",
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 61909,
+      "sha256": "b5981cf06d3703e21d01b1f0e6c3a902a9ba7fd1475512e4b283174c4311bf0b",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42728,
+      "sha256": "70a1baa38fc333377a64836116e74adb2e57f176b6d641be72350400f6123c9d",
+      "actualFullBodyReceipts": [
+        "adherence142d"
+      ]
+    }
+  ],
+  "terminalReceipts": [
+    "adherence142a-root-reconciliation.json",
+    "adherence142d-root-reconciliation.json",
+    "adherence134-coverage-preparation.json"
+  ],
+  "qualification": "Actual bodyinspection only; changes_required not sourceacceptance. Current5material146/147bodychanges requirefresh150, no sum overlaps or whole333featureacceptance."
+}

@@ -6,7 +6,7 @@ ST-IG-03 — Conectar Instagram e atender DMs na mesma BU dos WhatsApps
 ## Artifact Identity
 - **Artifact type:** `tactical_execution_contract`
 - **Artifact status:** In-Progress
-- **Contract version:** 1.3 — APROVADO em2026-10-23; implementação governada, sem ativação real autorizada.
+- **Contract version:** 1.3 + aditivo limitado UTF-8/privacy de2026-10-25 — APROVADO; implementação governada, sem ativação real autorizada.
 - **Template:** copiado de `delphi-ai/templates/todo_template.md` em2026-10-23; seções aplicáveis preenchidas abaixo.
 
 ## Context
@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Apply sole Web134 first-send attempt-state ownership repair after133D/Web131 reconciliation; qualify source then current canonical Web/fullALL and fresh affected review.
+- **Next exact step:** Exactlock153 rootqualified; sole Web152 per-case account isolation/UUID locator/unmount fences, then currentcanonicalvalidation and remainingassurance.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** Web131 compiler/build/71unit passed; fresh133D identifies remaining first-send attempt-state ownership under unresolved D04. Repair134 stays within admitted consumers/native/unit companions; current API125/129E source support remains, nativeEPS/fullALL pending.
+- **Why this state now:** Web134b remaining first-send repair is sourcequalified/notrun; human now admitted outboundUTF8numeric correction and exactprivacyHTML. Serialize source first, then current canonicalcompiler/native/fullALL;129E remains sourcecoverage for unchangedAPI125 until newdelta.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
-- **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** Web131 naturallyexit0: TypeScript/Vite and8files71unit pass,333sources/1206inputs/fullT/protections/rootindex/outputsexact and cleanup complete.133D naturalterminal strictmerge/rootmatched33rows/23fullbodies; one concrete residual first-send recovery finding maps to open111D04. No native/currentALL/feature acceptance.
+- **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals explicitly admitted2026-10-25, implementationpending; primary own-subscription observation remains unresolved, no gate waiver.
+- **Last confirmed truth:** Web144 naturallyexit0: TypeScript/Vite and8files73unit pass,333sources/1223inputs/fullT/protections/rootindex/outputsexact/cleanup. Fresh142A/D terminal: originaltext boundary + residualreconnectepoch defect require146/147.145exactdependencycandidate critique clear, pendinghumanadmission/runtimeproof. No native/currentALL/feature acceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -95,6 +95,7 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | root | web-app | M | projeção de submódulo, índice não pode ser alterado |
 | root | foundation_documentation | M | projeção documental, índice preservado |
 | API | prisma/schema.prisma | M | identidade, contato, rota e OAuth |
+| API | package-lock.json | M | Exact human-admitted body-parser2.4.0 + requiredqs6.16.1 security candidate only; body-parser153-human-admission.json/preservationv1.5 bind exactCRLF hashes |
 | API | prisma/migrations/*_instagram_*/migration.sql | A,?? | migração versionada delimitada, sem reset |
 | API | src/domain/channels/** | A,M,?? | conexões, identidade empresarial, credenciais e contratos Channel |
 | API | src/domain/inbox/** | A,M,?? | contato/rota, política, aceitação e recuperação |
@@ -138,6 +139,7 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | Web | src/*instagram* | A,?? | estado puro e testes do fluxo |
 | Web | src/api.ts | M | DTOs seguros e rota esperada |
 | Web | src/api.spec.ts | M | contratos/erros seguros |
+| Web | public/privacidade.html | M | Exact human-admitted Instagram privacy diff only; human-byte-privacy138-admission.json and preservationv1.4 bind source/candidate hashes |
 | Web | src/cadastroNumero* | M | lifecycle WhatsApp preservado |
 | Web | src/componentes/NovaConversa.spec.ts | M | rascunho/fences/política |
 | Web | e2e/instagram*.spec.ts | A,?? | jornada browser completa |
@@ -216,7 +218,6 @@ Baselines Git não representam checkout limpo: `artifacts/reviews/leadshug-insta
 | API | .local-files/** | any | dados privados |
 | Web | .env | any | segredo privado |
 | Web | .env.testing | any | segredo privado |
-| API | package-lock.json | any | nenhum pacote novo é necessário para HTTP/crypto |
 | Web | package-lock.json | any | nenhum SDK novo no browser |
 | Foundation | todos/completed/features/TODO-leadshug-start-conversation-by-contact.md | any | preservar prova anterior |
 
@@ -672,7 +673,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-ADHERENCE111D-01 | high | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 | IG-ADHERENCE111D-02 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-03 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
-| IG-ADHERENCE111D-04 | medium | release-blocker | fix in this TODO | approved current-attempt and request-start ownership; residual133D01 same owner | open; source134 then native/fullALL/fresh review | adherence133d-root-adjudication.json; original adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-04 | medium | release-blocker | fix in this TODO | approved current-attempt/request-start ownership; residual133D01 and142D02 same owner | open; source134/147 then native/fullALL/fresh review | adherence142-security145-root-adjudication.json; original adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-05 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-06 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-07 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
@@ -690,6 +691,11 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-ADHERENCE127D-02 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
 | IG-ADHERENCE127D-03 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
 | IG-ADHERENCE127D-04 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
+| IG-ADHERENCE142A-01 | medium | release-blocker | fix in this TODO | approved exact UTF8 text boundary; alias142D01 | open; source146/147 then native/fullALL/fresh review | adherence142-security145-root-adjudication.json |
+| IG-SECURITY145-01 | high | release-blocker | fix in this TODO after protectedlock admission | current public parser dependency static primary applicability; no local exploit claimed | open; exactcandidate awaiting humanvalidation and compatibility/security proof | body-parser145-user-ready.json; adherence142-security145-root-adjudication.json |
+| IG-ADHERENCE150D-01 | medium | release-blocker | fix in this TODO | independent browser case account ownership isolation | open; source152 then complete native suite | adherence150-api148-root-adjudication.json |
+| IG-ADHERENCE150D-02 | medium | release-blocker | fix in this TODO | precise UUID-bound paddedtext oracle; no broad preliminary locator | open; source152 then native proof | adherence150-api148-root-adjudication.json |
+| IG-API148-UNIT-01 | low | release-blocker | fix in this TODO | concrete policy imported by contract-only outbound unit fixture | open; source151 then canonicalAPI | cp4-api148-root-reconciliation.json; adherence150-api148-root-adjudication.json |
 | IG-WEB126-TYPE-01 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
 
 ## TODO Closeout Disposition
@@ -780,6 +786,7 @@ Somente análise pública e guards documentais antes da aprovação. Depois: run
 - **Approved by:** usuário desta conversa, em2026-10-23, resposta explícita `APROVADO` ao contrato Instagram v1.3.
 - **Approval reference:** artifacts/reviews/leadshug-instagram-channel-20261023/evidence/approval-execution-cp1.json; hash do pacote apresentado e baseline revisada preservados nesse receipt.
 - **Approval scope:** SCOPE-01..08, D-01..10, DOD/VAL e cláusulas normativas v1.3; implementação API/Web, documentação e validação descartável sintética exclusivamente nos caminhos admitidos. Não autoriza arquivos privados/dados reais, ativação local, Meta/envios externos, Git de produto, gitlinks, worktrees/cópias, produção ou App Review; plano runtime próprio continua obrigatório.
+- **Bounded renewed approval2026-10-25:** `Validar as duas propostas` admits outboundInstagram<=1000UTF8bytes and exactprivacyHTML; `evidence/human-byte-privacy138-admission.json` binds reviewedproposals/hashes. No other boundary changed.
 - **Renewed approval trigger:** mudança material de WHAT/decisões/validação/escopo ou qualquer caminho não admitido.
 
 
@@ -823,11 +830,11 @@ Todos os endpoints BFF resolvem tenant pela sessão e BU pelos grants atuais; AD
 | GET /api/bff/conversations/:id/reply-options | ATENDENTE+; sem provider HTTP | rotas/vínculos da conversa, capacidades e política locais com versão/fingerprint. Conteúdo é autorizado antes da consulta. |
 | POST /api/bff/conversations/:id/messages (existente, ampliado) | ATENDENTE+, CSRF; text e routeId/channelId/expectedGeneration/contextFingerprint | captura rota e destinatário server-side, passa pelo único OutboundService/admissões; contexto obsoleto409, sem enviar. Ack remoto e persistência local seguem resultados existentes. |
 
-O único endpoint BFF de resposta continua POST /api/bff/conversations/:id/messages, com texto e contexto de rota obrigatório no cliente atualizado. Instagram aceita1..1000caracteres, WhatsApp mantém4096e seu parser/envelope atual; não reduzir o limite do WhatsApp por causa da nova plataforma. A resposta ordinária preserva concorrência entre replies existentes e claims single-use, com exclusão entre primeiro envio e reply, sem novo subsistema de request-key. O cliente impede duplo clique da mesma ação e não repete automaticamente envio incerto. Não criar POST /reply concorrente nem duplicar sender. A projeção de leitura devolve IDs locais/display, separando telefone WhatsApp e username Instagram; atualizar React/fixtures/expectativas no mesmo contrato. API v1/account_id e telefone continuam WhatsApp-only: filtrar accounts/canais/conversations e resolver messages/claim/release/post por identidade WhatsApp. Conta sem WhatsApp não aparece como número nulo usável no contrato legado. Typebot e webhook OUT não recebem Instagram por acidente.
+O único endpoint BFF de resposta continua POST /api/bff/conversations/:id/messages, com texto e contexto de rota obrigatório no cliente atualizado. Instagram aceita texto não vazio de até1000bytes em UTF-8; WhatsApp mantém4096caracteres e seu parser/envelope atual; não reduzir o limite do WhatsApp por causa da nova plataforma. A resposta ordinária preserva concorrência entre replies existentes e claims single-use, com exclusão entre primeiro envio e reply, sem novo subsistema de request-key. O cliente impede duplo clique da mesma ação e não repete automaticamente envio incerto. Não criar POST /reply concorrente nem duplicar sender. A projeção de leitura devolve IDs locais/display, separando telefone WhatsApp e username Instagram; atualizar React/fixtures/expectativas no mesmo contrato. API v1/account_id e telefone continuam WhatsApp-only: filtrar accounts/canais/conversations e resolver messages/claim/release/post por identidade WhatsApp. Conta sem WhatsApp não aparece como número nulo usável no contrato legado. Typebot e webhook OUT não recebem Instagram por acidente.
 
 ### Limites de produto e confiança
 
-- Instagram textual inicialmente entre1e1000caracteres; WhatsApp mantém4096e o envelope/parser atual. Novas rotas OAuth de payload pequeno limitam16KiB; não aplicar esse limite ao reply WhatsApp. Webhook Instagram até8MiB com no máximo1000updates por POST, conforme limite de batch documentado. Parser/gateway aplicam8MiB somente nessa rota; demais limites permanecem. Excedentes413antes de efeitos, sem slice/drop silencioso. Batch com falha parcial usa o mesmo replay/dedup das entradas já confirmadas; não retornar200para trabalho perdido.
+- Resposta textual Instagram inicialmente não vazia e com até1000bytes em UTF-8; WhatsApp mantém4096caracteres e o envelope/parser atual. Novas rotas OAuth de payload pequeno limitam16KiB; não aplicar esse limite ao reply WhatsApp. Webhook Instagram até8MiB com no máximo1000updates por POST, conforme limite de batch documentado. Parser/gateway aplicam8MiB somente nessa rota; demais limites permanecem. Excedentes413antes de efeitos, sem slice/drop silencioso. Batch com falha parcial usa o mesmo replay/dedup das entradas já confirmadas; não retornar200para trabalho perdido.
 - OAuth/troca de code, inscrição e send: um dispatch por claim, timeout10s/request e no máximo3requests externos por etapa administrativa; HTTP fora da transação. Máximo10tentativas de autorização/ator/hora e30/BU/hora persistentes. verify/advance usam lease por vínculo e cooldown10s; listagens não chamam provider.
 - Token nunca no bundle, URL de retorno, docs, logs, histórico, eventos ou erros. Variáveis públicas exemplificam INSTAGRAM_CLIENT_ID, INSTAGRAM_CLIENT_SECRET, INSTAGRAM_WEBHOOK_APP_SECRET, INSTAGRAM_WEBHOOK_VERIFY_TOKEN, INSTAGRAM_API_VERSION e redirect/origin permitidos; os propósitos e a origem dos segredos seguem o contrato primário abaixo, sem fallback automático a META_APP_SECRET.
 - Credential expiry vem do expires_in verificado na troca obrigatória curta→longa, armazenado com instante de aquisição e margem de60spara bloquear uso perto da expiração. Reautorização explícita renova a concessão; nada é chamado permanente. Nenhum cron/refresh automático ou token manual global nesta entrega.
@@ -2306,3 +2313,80 @@ One canonical Web131 naturally exited0: current TypeScript/Vite63modules and8fil
 Fresh133D naturalterminal/strictmerge/rootmatch covers23completecurrentconsumer/native/tooling/controller bodies, fullT/alltenobligations/fiveaxes/consumerMatrix and33frozenrows. IG-ADHERENCE133D-01 is Integrated/useful/project/release-blocker, deduplicated into unresolved111D04: consulted presentation, recovered fallback and risk checkbox can retain A after legitimate release and new B within one mounted conversation; accepted parent null does not independently retire fallback. Exact rationale and contract checks are in `evidence/adherence133d-root-adjudication.json`. No original closed finding reopened or unrelated new scope.
 
 Serialize sole Operational/Coder Web134 through `evidence/cp4-web134-handoff.json` on four already admitted consumer/native/unit paths. Source/frozeninputs are now thawed only after both terminal rootqualifications. Scope local recovery facts and consent to exact authoritative current attempt, preserve uncertain send/idempotency semantics, and prove consecutive A/B plus accepted parent-null retirement with actual BFF responses and naturaldeadlines. No source/runtime/provider/Meta/private/Git expansion or tests in writer. Root sourcequalification precedes current Web/fullALL and fresh affected review. All other D/native/EPS/primary/human/security/TQA/cutover/final/CP6 gates remain; no feature acceptance.
+
+
+### Web134b qualified and explicit human UTF-8/privacy admission — new consolidated candidate
+
+Root matches all4revisedterminalhashes,329otherknownsources,34previouspreservations/threeexceptions/rootgitlinks in `evidence/cp4-web134b-root-qualification.json`. Actual B POST key/body and exact actor/BU/conversation synthetic storage entry are compared at three causal native barriers; this is authored/notexecuted. The selector unit covers the production-used accepted-options retirement branch only; it makes no live-storage retention claim. No independent same-mounted healthy parent-null native trigger is available under current UI; no artificial trigger added.
+
+User explicitly validated both reviewed UTF-8 and privacy proposals in2026-10-25 (`evidence/human-byte-privacy138-admission.json`). Only the two normative outbound numeric clauses and contradictory module wording change; inbound1000codepoints/8MiB/1000updates and WhatsApp4096/currentwindowfalseexception stay. ExactprivacyHTML candidate is now admitted under active `evidence/inherited-public-preservation-v1.4.json`:34inheritedpreservedrows unchanged/fouradmittedexceptions; no other protectedpath released. Privacy was already in333knownpublicsources but outside expectedmutationpaths, not in34preservationrows. Exactpolicy version24October is the reviewed version date, appliedlater without claiming earlier publication. Actual data-flow parity and originalsourcehash verified before a solewriter applies it. No legalcertification/runtimepublication authority.
+
+The late timeline88 test-path approval is received and reconciled in `evidence/timeline-window88-late-approval138-adjudication.json`. Its stale proposal assumed universal24h and was withdrawn97; no needlessfixturechange or weakenedfalse-windowregression is applied. Actualtimeline alertcause remains unknown pending canonicalbrowser evidence.
+
+PreparedWeb135/ALL136/affected137 remain UNEXECUTED and are superseded as nextexecution candidates by the newly admitted byte/privacy source delta; historical131PASS remains scopedsource130. Prepare exact sole API byte-owner design and serialize productwriters; root documentation only. Then freeze consolidatedsources/fullT/publicinputs/currentpolicy/rootindex for currentcanonical Web/fullALL and freshaffected adherence carrying deduplicated143prior full-body receipts, including all changedowners. All primary/security/TQA/pcv/cutover/final/CP6realproof gates remain; no partialdelivery.
+
+
+### Exact privacy138 source applied — sole API byte138 next
+
+`evidence/privacy138-root-qualification.json` matches approvedHTML13913bytes/SHA6f0d8f1d,332otherknownsources/all34preservations/fourexceptions/rootindex; fullsource manifest is `cp4-source-privacy138-terminal-manifest.json`. Exactreviewedstaticcandidate applied after currentdataflow/sourcehash check; no tests/publishing/runtime/legalcertification.
+
+API138 read-only ownerdesign uses existing abstractoperationpolicy textconstraint, realreply-options projection and commonOutbound pre-reservation validation, with client defense-in-depth; no growingconcretebranch/newChannelmethod. Serialize solewriter on10existingadmittedAPI/sourceunit/nativepaths through `evidence/api-byte138-handoff.json`. Native exactASCII/accent/emoji bounds must reject before effects and preserveexactvalidpayload. Inbound1000codepoints/8MiB/1000updates and allWA4096/windowexceptions/original20kcohort/7CP5cases remain. Web139 consumes the samepolicy afterAPIterminal; no tests duringwriters. CurrentWeb/fullALL/freshaffectedAPI+consumer and allmandatoryassurance/primary/CP6 remain.
+
+
+### API138a terminal qualified — serialize Web139 same-policy byte consumer
+
+Root matches10APIterminalhashes/323otherknownsources/34preservations/fourexceptioncandidates/rootgitlinks in `evidence/api-byte138a-root-qualification.json`;333knownsources are sealed by `cp4-source-api138a-terminal-manifest.json`. Existingabstractpolicy owns strict `textConstraint`: Instagram `{unit:UTF8_BYTES,max:1000}`, WhatsApp `{unit:UNICODE_CODE_POINTS,max:4096}`. Actualresolvedpolicy validates before ordinaryreservation/claim; BFF uses coarse4096withoutconcreteoriginquery, client checksbytes beforeexternaldispatch. DirectOutbound empty/whitespace is rejected before resolution/reservation, strictunitfixturetypecorrected. Nativeeighthcase is authored afterEPS/beforelaterworkloads, alloriginal7cases/oracles/cohort and inboundUnicode stay. No tests/RED/GREEN/runtimeacceptance inferred.
+
+Serialize soleWeb139 on5alreadyadmittedDTO/state/unit/composer/nativepaths via `evidence/web-byte139-handoff.json`. Consume exactserverconstraint, preservewholebyte-invalidIGdraft, actionablefeedback/blockedsubmit, same-ownerrestore/review and exactvalidpayload; keepWA4096canonicalclamp and all134b/ordinary/ticketfences. No otherpath/runtime/private/Git expansion. Then rootqualify and run currentcanonicalWeb140/fullALL141, freshaffectedAPI+consumer142 carrying prior143unique bodyreceipts. All primary/security/TQA/performance/cutover/final/CP6realproof remain; no featureacceptance.
+
+### Web139 terminal qualified — current canonical Web140 next
+
+`evidence/web-byte139-root-qualification.json` matches5terminalpaths/328otherknownsources/all34preservations/fourexceptions/rootindex; `cp4-source-web139-terminal-manifest.json` seals333sources. DTO strictly accepts actual server textConstraint, IGdrafts remain whole in sameowner, render/submit use UTF8 and reject malformedUnicode; WA4096 and recovery134b preserved. Authored native5valid/6invalid boundaries retain realBFF/provider/payload checks; not executed. Freeze currentcanonicalWeb140 for one compiler/build/unit command only, no API/native/fullALL acceptance inferred. Follow with freshaffectedAPI/consumer142 and fullALL141, all remaining primary/security/TQA/performance/cutover/final/CP6 gates.
+
+### Web140 compiler RED root-qualified — onepath Web143 guard repair
+
+One canonicalWeb140 naturalexit1 at `NovaConversa.tsx:366:73` TS18047 (`attemptError` possiblynull). Rootmatched333sources/fullT/1217inputs/34preservations/4exceptions/rootgitlinks/fouroutputs/ownedcleanup in `evidence/cp4-web140-root-reconciliation.json`. Prisma generation/guard/binds passed; Vite/Webunits/API/native/fullALL unreached. Optionalchain equality could compare undefined to undefined while bothattempt/error absent, so the nonnull guard is a real render safety correction, not diagnostic suppression. Serialize solewriter Web143 on only `web-app/src/componentes/NovaConversa.tsx`; explicitly narrow attemptError before message dereference, preserve attempt scoping/no fallback/other recovery logic. No tests during source write. Then independentrootqualification/currentcanonicalWeb144 and affected142/fullALL141; allothergatesremain.
+
+### Web143 exactnonnull guard terminal — currentcanonical Web144
+
+`evidence/web143-null-guard-root-qualification.json` matches53371bytes/SHAe32927da and332otherknownsources/protections/index. Exactly explicit `attemptError !== null` beforeIDcomparison/dereference; no suppression/otherchange. Sourceonly until onecanonicalWeb144 compiler/build/unit run; Web140 RED retained and no nativepass claimed.
+
+### Current Web144 PASS root-qualified — complementary affected142 reviews
+
+One canonicalWeb144 naturalexit0: TypeScript/Vite63modules1.39s and8files73Webunits712ms passed. Rootmatched333sources/fullT/1223positiveinputs/34preservations/4exceptions/rootgitlinks/fouroutputs/ownedcleanup in `evidence/cp4-web144-root-reconciliation.json`. No currentAPI/nativebrowser/ALL or feature acceptance inferred. Fresh complementary142A/API and142D/consumer fullbody reviews retain all10obligations/5axes/fullConsumerMatrix and currentexact124untouched of143prioruniqueactualbodyreceipts;19materialchanged bodies must be refreshed, not summedoverlap. FullALL141 remains prepared/unrun until affectedreviews qualify.
+
+### Concrete dependency security candidate145 — protected lock unchanged
+
+Maintainer GHSA-27r3-jxmh-p828 published22October applies to installedbody-parser2.3.0 and current shared Expressparsers with defaultinflate. This is exactversion/config match, not an executedexploit or claimedoperationalcrash. Prepared `evidence/body-parser145-proposal-prepared.json` and exact `body-parser145-proposed-lock.diff` resolve onlybody-parser2.4.0 plus its requiredqs6.16.1 withinexistingparentranges, preservingoriginalCRLF and allothernodes. No package/lock/parser/product update is applied or authorized. Review exactpubliclockgraph/primarymetadata/config and candidate before seeking humanadmission for protectedlock. No inflate:false behavioralworkaround or globaldependencyupgrade; fullsecuritygate and allotheradvisories remain open. Controlledcrashregression design remains separately reviewed/disposable; do not attackoperationalAPI/testworker or infer proof frommetadata.
+
+### Fresh142A/142D and protectedlock145 terminal — serialize exacttext146 then recovery147
+
+Allthree freshno-context reviews naturallyterminated/strictmerged withfrozenfullT/fullsourcebodies/333sources/index rootmatched.142A15bodies reports oneoriginaltext boundary defect;142D15bodies repeatsit (142D01 alias142A01) and finds post-send epoch failuretime attribution (142D02 sameunresolved111D04). Resolution evidence/adherence142-security145-root-adjudication.json: Integrated/useful/project/release-blocker; no duplicate142D ledgerrows or closedunchangedfinding reopened. Correct earlier138handoff excessive trim-preservation instruction: trim may checkemptiness, originalvalidstring must reachpolicy/provider unchanged underapprovedexactpayload clause. SharedV2shape/authorder/WA4096/parser/window/transport stay; no neworiginbranch/normalizerframework. API146 owns2admittedBFF/nativepaths; Web147 follows withpaddedbyte/native and actualpostsendGET heldacrossrealreconnect/failure/currentrecovery, same singlewriter. Tests remain unexecuted untilsourcequalification/currentcanonicalvalidation.
+
+145critique haszeromaterialproposalfindings; rootclassified exactprimaryversion/config applicability as IG-SECURITY145-01 (staticrisk, not localexploit). Hashboundtwo-nodeCRLF-preserving candidate isreviewable in body-parser145-user-ready.json; explicitprotectedlockadmission wasrequested asynchronously, notassumed. Continue alreadyadmitted146/147 whilepending. Safecontrolledchildcrashregression stillneeds preparation/review, otheradvisories/fullsecurity/primary/TQA/cutover/final/CP6 remain.
+
+### API146 originaltext terminal qualified — sole Web147 consumer/reconnect proof
+
+Root matched2sourcehashes/331otherknownsources/all34preservations/4exceptioncandidates/index in evidence/api146-original-text-root-qualification.json;333sources sealed by cp4-source-api146-terminal-manifest.json. BFF strictstring/nonempty-originaltext and shared4096guard retained; nativeeighthcase nowauthors paddedUnicode1000exact/1001zeroeffect, fivenonstrings400 and whitespaceempty400 with unchangedsnapshots. Notexecuted. SoleWeb147 owns Inbox.tsx +instagram-channel.spec.ts +alreadyadmitted timeline-fixtures.cjs only: requeststartepoch forpostsend/explicitretry withcurrentticketfences; actualheldpostsendread acrossrealreconnect/failure recoversmetadata exactlyonce andkeepsuncertainadmissionblocked/noextraPOST. Extend realbytecase withpaddedstrings/exactprovidertrace. Existingfixtureeffects/calls/outcomes remain byte-logicalsame; only bounded syntheticmessage-text observation inexistingstate response, resetnormally, no secret/rawprovider/body retention and no newendpoint. Source/native assertions notpasses; fullALL andaffectedreview stillmandatory. Protectedlock145 awaitshumanadmission.
+
+### Web147b terminal qualified — current focusedAPI148 and affected150 next
+
+Root independently matched3ownedsourcehashes/330otherknownsources/34preservationrows/4exceptioncandidates/rootgitlinks; evidence/web147b-root-qualification.json and cp4-source-web147b-terminal-manifest.json seal333sources. Actual201UUID selects an exactDOMmessage and raw content equality, avoiding ambiguous normalizedsubstring success for paddedtext. Fixturetrace comes only from actualsyntheticauthorizedproviderbody; oldeffects/calls/outcomes unchanged. Postsend/manualretry epoch is capturedatreadstart; authorednative holds post-sendGET acrossrealconnected/closed/newconnectedBU frames before abort and exactlyone200recovery, with preserved draft/uncertainadmission/noextraPOST. No nativepass inferred.
+
+While protectedlock145 explicitadmission ispending, run one canonical api-instagram target148 to expose currentAPI/compiler/unit/nativeIG regressions before fullALL; no dependency update inferred. Fresh complementary150 affectedAPI/consumer reviews may read immutable fullsource/T while this disposablevalidator runs, with no source/T writes until allnaturalterminals/rootreconciliation. FullALL, currentcompletebrowser, primary/security/TQA/performance/cutover/final/approvedCP6 remainmandatory. Do notapply lockcandidate without explicitanswer.
+
+### ActualAPI148 RED and fresh150 terminal — sole unit151 then consumer152
+
+API148 onecanonicalapi-instagram naturalexit1:31migrations up-to-date, lint/Nestbuild passed, focusedunits452/453 in39/40files. Actual ASTdependencytest reports3violations from new concretepolicyimport/reference in outbound.service.spec.ts; E2E/currentEPS/nativebrowser unreached. Rootmatched333sources/1230inputs/fullT/34preservations/4exceptions/index/fouroutputs/cleanup in cp4-api148-root-reconciliation.json. Preserve scanner andallnegativeassertions; configure a contract-only unitpolicy double in onealreadyadmittedunitpath, with realconcretepolicy proof stayinginitsownunit/nativeowners.
+
+150A15fullbodies no_material_findings confirms146sourcecorrection;150D15fullbodies accepts147epochsource but finds two browserprotection defects and residual111D04unmount continuation. Bothfreshreviews naturalterminal/strictmerge/rootmatched. Rootresolution evidence/adherence150-api148-root-adjudication.json integrates all asuseful/project/release-blocker, canonical111D04 remainsdeduplicated. Rootcorrects147b overclaim: UUID/rawassertion wasadded but oldnormalizedhasText stillranfirst; no ambiguityremoval isproven until152replaces its visibilityanchor. Independentcases need unique server-seeded fakeaccount/grant identities, not DBcleanup/crossBUconstraintweakening; allwithin-case twoaccount/samepeer and exactcounters remain. Composerchecks mounted/currentticket immediatelyafterawaitedparent beforefollowupGET; parentticketallocation/publication rejectsunmounted andcleanupinvalidates owner. Actualheldresponse/navigation provesnoobsoletefollowupread orpublishing. Serialize onepath151 then4path152, no testsduringwriters. No lock145/private/runtime/provider permission inferred.
+
+### API151 qualified and human protectedlock admission153 — onepath exact candidate
+
+API151 soleunit terminal32151bytes/SHA5be9f1e4 matched332othersources/34preservations/4exceptions/index. ContractPolicy double depends only on abstract policy, preserving assertions and exactASTscanner; no runtimepass inferred.
+
+User explicitly answered “Validar atualização restrita” for145 exactlockcandidate. evidence/body-parser153-human-admission.json binds original305491bytes/SHAd1e45274 and candidate305491bytes/SHAad3bf58e, exactrevieweddiff and naturalterminal independentcritique. Active policyv1.5 retains all34preservations and prior4exceptions plusfifthexactlockexception. OnlyAPIpackage-lock moves fromdeny-any to exactadmittedM; Weblock/directmanifests/othernodes remainprotected. Sole153writer applies only reviewedtwo-node candidate, preservingCRLF/order and verifyingcandidatehash beforestop; no npmupdate/install/execution duringwrite. Rootqualifies then serializesconsumer152. Currentcanonicalcompatibility/compressedinput and independentlyreviewedsafechild149/securityproof remainmandatory; minorupstreamcharset/options/conditionalzstd behavior isnot falselyclaimedequivalent. No actualMeta/private/operational/deploy/Git authority.
+
+### Exactlock153 terminal qualified — serialize Web152
+
+Rootmatched reviewedcandidate APIlock305491bytes/SHAad3bf58e,332otherknownsources/all34preservations/5exceptioncandidates/index in body-parser153-root-qualification.json. Reversing only exactrevieweddiff inRAM reconstructs originalCRLF lockSHAd1e45274, provingothergraphbytesunchanged. No packageexecuted/compatibility/security claim. cp4-source-lock153-terminal-manifest.json seals333sources/policyv1.5. SoleWeb1524alreadyadmittedpaths via web152-consumer-handoff-ready.json nowmayrepair case-specific fakeaccountidentity, UUID-onlyvisibility and mountedcontinuation. CurrentcanonicalAPI/Web/native/fullALL andfreshaffected/primary/security/TQA/performance/cutover/final/CP6 remainmandatory.

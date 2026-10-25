@@ -1,0 +1,66 @@
+{
+  "kind": "Explicit human bounded byte-limit and privacy admission",
+  "date": "2026-10-25",
+  "questionItemId": "[request_user_input_async,call_56dafda51a424a62b68c553c06d6f047,0]",
+  "answer": "Validar as duas propostas",
+  "inputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/instagram-text-byte-limit-ready.json",
+      "bytes": 1375,
+      "sha256": "26546e796e91fbec991017a103d8ed3ccc262261d1e97a663d2084e7e00f95b4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/instagram-text-byte-limit-proposal-v1.json",
+      "bytes": 4768,
+      "sha256": "9e87ae8c3ef338a9665e8423e6dee6f51cedbd89b8a11fb15394c8055a7507e5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/text-byte-limit-critique-result.json",
+      "bytes": 2284,
+      "sha256": "37ec6bb6e796dd785172b5e42ebd3df8be4f72264aed627c5bc26c61f9407664"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/text-byte-limit-critique-merge.json",
+      "bytes": 1298,
+      "sha256": "183ba93ce1365321d8ded1015444c4691c8911d461c12d6ad39a33f3ea3a7e37"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/privacy-instagram-companion-ready.json",
+      "bytes": 1292,
+      "sha256": "34322e1359c6e83b97ab657289d773c81ed2b1220230d8342006207726085069"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/privacy-instagram-companion-proposal.json",
+      "bytes": 2612,
+      "sha256": "1d2c3af15c5c52e649e4c08f0e636a721a6a029da7e5c613a6d6645f920336c4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/privacy-instagram-companion-proposal.diff",
+      "bytes": 9369,
+      "sha256": "0773d973c69c9586778eeabed76eb320af0cdd8d35b0f6a32370fae046b54117"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/privacy-instagram-companion-critique-result.json",
+      "bytes": 2501,
+      "sha256": "b7e6480279daaa549acf47384648e92871e9e5fc0542aa90c581f1b26051fa11"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/privacy-instagram-companion-critique-merge.json",
+      "bytes": 1667,
+      "sha256": "df03be10c61931eb9732c2e3d2678cd869dffd35a1f9450987a06084b79346d5"
+    }
+  ],
+  "scope": [
+    "Replace only outboundInstagram1000characters by nonempty<=1000UTF8bytes, UI/API/client beforedispatch, preserve validtext/no truncation/splitting and all inbound/WAwindow/4096 contracts. ExistingadmittedAPI/Web consumers/native/unit paths only.",
+    "Apply exactreviewed onefile privacyHTML diff after sourcehash/dataflowrecheck; same institutionalcontact/legal/retention/security, no publishing/operationalpermission."
+  ],
+  "sourceBefore": {
+    "path": "web-app/public/privacidade.html",
+    "bytes": 12865,
+    "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+  },
+  "privacyCandidateSha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753",
+  "privacyDateQualification": "Version24October is the reviewed/authored policy version; applying on25October does not assert an earlier publication/runtime activation. Exact candidate retained.",
+  "reviewStatus": "Both fresh independent critiques terminal/strictmerged/no findings before userapproval; current implementationproof stillpending.",
+  "noOtherAuthority": "No actualenv/private/Meta/provider/runtime/tunnel/DB/deploy/productGit/gitlink/worktree or other scope authority. All main gates remain."
+}

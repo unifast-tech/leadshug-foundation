@@ -1,0 +1,45 @@
+{
+  "kind": "Authoritative root current142/145 finding adjudication after allnaturalterminals",
+  "basis": [
+    "adherence142a-root-reconciliation.json",
+    "adherence142d-root-reconciliation.json",
+    "body-parser145-root-reconciliation.json"
+  ],
+  "rows": [
+    {
+      "id": "IG-ADHERENCE142A-01",
+      "aliases": [
+        "IG-ADHERENCE142D-01"
+      ],
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "reason": "Approved exactvalidtext and no cutting require originalstring before resolvedpolicy. Earlier138handoff preserveexistingtrim wording was too broad; empty-check trim stays, valid-string coercion/trimming does not. Preserve sameV2schema/route/auth order and sharedWA4096/parser/window/transport; no newconcreteoriginbranch or policyframework.",
+      "repair": "API146 twoadmittedpaths + Web147nativepaddedtextproof; then currentcanonicalAPI/Web/fullALL/freshaffectedreview"
+    },
+    {
+      "id": "IG-ADHERENCE142D-02",
+      "canonical": "IG-ADHERENCE111D-04",
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "reason": "Same unresolved request-start recovery ownership; post-send catch observes failuretimeepoch instead of readstartepoch. Do not duplicate originalledger. Captureepoch at eachpublisher readstart with currentticket fences, native heldpostsend GET acrossrealreconnect then fail/recover exactlyonce.",
+      "repair": "SoleWeb147 after API146terminal"
+    },
+    {
+      "id": "IG-SECURITY145-01",
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "reason": "Maintainer primary affectedversion/currentdefaultinflation exactstaticmatch, fresh145critique no candidatetroubles; not demonstratedlocalexploit. Protectedlockexacttwonodecandidate requires humanadmission and currentcanonicalcompatibility/separatereviewedsafecrashproof beforesecurityclosure.",
+      "repair": "body-parser145-user-ready.json awaitingasynchumanvalidation; protectedlockunchanged"
+    }
+  ],
+  "remaining": "Source139/143 compiler/units PASS144 only; allcurrentAPI/native/fullALL/security/TQA/primary/cutover/final/CP6 remain. No live142/145reviews, allfrozenrows/source/T reconciled beforethisadjudication."
+}

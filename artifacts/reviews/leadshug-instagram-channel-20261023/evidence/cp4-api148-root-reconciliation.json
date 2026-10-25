@@ -1,0 +1,65 @@
+{
+  "kind": "Independent current API148 naturalterminal root reconciliation",
+  "sourcesExact": 333,
+  "boundInputsExact": 1230,
+  "fullTodoExact": true,
+  "preservationRowsExact": 34,
+  "approvedExceptionsExact": 4,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-before.json",
+      "bytes": 263848,
+      "sha256": "c1860aae831a6f2501f98addda51139c91c77e7210bc239cdd477d33aca3013f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-api.log",
+      "bytes": 18996,
+      "sha256": "d0b080f30375dcbe7f06352810a51bbd27bc92f1fb41ac412bef31eb1c7e80eb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-after.json",
+      "bytes": 3675,
+      "sha256": "6e2c3747b922965eac8b0314dca3c0c93f0b2fd536c021f0ab66aa0b9447920d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-result.json",
+      "bytes": 3090,
+      "sha256": "bffefb48f6da817e3c330c74656941cf750ecb028017ccd22ce75dce2380846a"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "naturalExitCode": 1,
+  "passed": [
+    "31 migrations checked/database up to date",
+    "API ESLint",
+    "Nest build",
+    "452 of453 units,39 of40 files, three InstagramHTTP deadline cases"
+  ],
+  "firstDecisiveFailure": {
+    "stage": "focused API unit tests",
+    "file": "api-app/src/domain/channels/transport/channel-dependencies.spec.ts",
+    "test": "common outbound dependency boundary > keeps provider clients and dispatch inside channel adapters",
+    "line": 170,
+    "expected": "[]",
+    "received": [
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: provider injection token or client type",
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: concrete eligibility policy import",
+      "/workspace/api-app/src/domain/inbox/outbound.service.spec.ts: provider token or client reference"
+    ]
+  },
+  "unreachedOutOfScope": [
+    "API E2E",
+    "Web build/unit",
+    "browser suite",
+    "full ALL target"
+  ],
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "qualification": "Concretefixturepolicy in new outboundunit violates existing ASTboundary; do not weaken scanner/assertion. Use contract-only configurable unitdouble while retaining actual concretepolicy proof in its own policytests/nativeBFF. No E2E/currentEPS/native/browser/ALL acceptance; 150review frozenfullT/sources stilllive, no source/T thaw untilterminal/rootmatch."
+}

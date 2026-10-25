@@ -1,0 +1,15 @@
+{
+  "kind": "Sole Web143 bounded current compiler and render safety repair",
+  "state": "READY after Web140 naturalterminal/rootqualification",
+  "owned": [
+    "web-app/src/componentes/NovaConversa.tsx"
+  ],
+  "preimage": {
+    "path": "web-app/src/componentes/NovaConversa.tsx",
+    "bytes": 53347,
+    "sha256": "d347f5a152c24d3f736fdf96b0eb5e1b0ec331b2e221f4d6de3873ca329a3825"
+  },
+  "baseline": "cp4-source-web139-terminal-manifest.json",
+  "proof": "cp4-web140-root-reconciliation.json",
+  "requirement": "visibleAttemptError currently uses attemptError?.attemptId === attempt?.id ? attemptError.message : null. Bothnull makes undefined equality true and deref null; explicitly require nonnull attemptError before equality/deref. Do not nonnull-assert or cast/suppress TypeScript. Preserve qualified currentattempt errors and all recovery/freshness/risk/snapshot/ticket logic. Onlyoneownedpath; no tests/build/npm/Node/Docker/runtime/private/env/Meta/Git/Foundation writes. Report exactterminalhash then stop. RootcanonicalWeb144/freshreview/fullALL later."
+}

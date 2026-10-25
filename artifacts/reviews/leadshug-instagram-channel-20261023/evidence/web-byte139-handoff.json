@@ -1,0 +1,63 @@
+{
+  "kind": "Sole Web139 human-admitted route-policy byte limit consumer",
+  "state": "READY after API138aterminal/rootqualification; allwriters/validators/reviewers terminal. Explicitrootdispatch starts solewriter.",
+  "profile": "Operational / Coder React/Vite nativeBFF",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "web-app/src/api.ts",
+    "web-app/src/instagramState.ts",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20545,
+      "sha256": "224667ec238a483ec1000c2ee782809f8b5bd3aa7b7d69ec596568cf15d4ecdd"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 8877,
+      "sha256": "fa5f86c23900a89a088a13b41c98077053240ac4ce8a3dd21521abd1ad19cd97"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 13829,
+      "sha256": "14a67e61d48e6a7835155ab079a97a75dff44f64c11cc5d6feaa4debc9ad2f6a"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 16881,
+      "sha256": "d891883e9c8150c35eb3cd6e68923dcd7aa9ed32ec72b9627329d38ea9d562d1"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 55524,
+      "sha256": "00b9dd22b4a39ebe72ae72ee1bf617ad0e85b7b8a141cf5b6642408d3f2f3031"
+    }
+  ],
+  "admission": "human-byte-privacy138-admission.json",
+  "baseline": "cp4-source-api138a-terminal-manifest.json",
+  "policy": "inherited-public-preservation-v1.4.json",
+  "actualServerDescriptor": {
+    "field": "textConstraint",
+    "INSTAGRAM": {
+      "unit": "UTF8_BYTES",
+      "max": 1000
+    },
+    "OFICIAL_NAO_OFICIAL": {
+      "unit": "UNICODE_CODE_POINTS",
+      "max": 4096
+    }
+  },
+  "requirements": [
+    "Type and strictlyparse actual server textConstraint with exactkeys/unit/literalmax and permittedorigincombination, missing/malformedfailclosed. Clientneverpostsdescriptor/lengthasauthorization, onlyexistingroute tuple/text. Preservestrictallotherfields/schema/owner/freshness. ActualAPI138source alreadyqualified; no APIwrite.",
+    "Composer uses selectedoption actualconstraint for measurement/eligibility bothrender andhandlerbeforePOST. ForIGretain exactfulltext whenbyte-overlimit, show safe actionablemessage askingtoshorten, do nottruncate/split/normalize/editvalidunicode; no newcapacity/initialIGsend. Use production-used helper ininstagramState ifneeded, TextEncoderactualUTF8 plusrejectmalformedUTF16 consistentserver, no replacement disguisedaspreservation. Existingtrim semantics remain. No origin-basedgrowingdispatchswitch/framework.",
+    "PreserveinvalidIGdraft/revision across relevant existingroute/actor/account/context reload/review ownership paths. CurrentchangeTextclamps1000codepoints and restoredefaults4096; replaceIGclipping with untruncatedsamecurrentdraftowner storage (e.g explicituncappedoption), retainWAdefault4096codepointclamp andexisting10kconversation index/no-prune/actorisolation/key/revision. Do not create second draftstore or newendpoint/storageauthority.",
+    "Meaningfulunits cover exactAPI shape accepted/rejectedorigin/unit/max, bytes ASCII1000/1001/500é/501é/250emoji/251emoji plusmixed/threebyteoptional andmalformedUTF16; actual productionhelper/draftowner used, notdisconnectedmirror. Preserveall oldasserts unless explicitlynumericIGoutboundassert superseded by newapprovedbytesrule; retaincausal intent with newassertions. Existing1000incomingcodepoint logic unchanged.",
+    "Actualnative signedIGingress/realBFF/PG/providerfake boundary: existingpeer/account route; exactvalidbyteceiling payloadsdelivered/persisted unchanged withonePOSTperdeliberateaction; invalidwholetext staysinput, disabledsend, directrealBFFtamperedoverlimit400/TEXTO_LONGO withzeronewprovider/admission/messages. Nofakebusinessreply/DBmutation/testendpoint/fixtureserverchange. Currentoldoutbound1001emoji truncation expectation must change to preservewholeinvaliddraft/blockedpost, maintaining admission/recoveryoracles. Incoming1000emoji/1000eventscope staysoriginal. Newseparateboundedcase allowed; oldthresholds/timeouts/counters not relaxed.",
+    "KeepALLcurrentfirstsend134b/ordinaryA-B recovery/ticket/route/account/freshness/version/policy/window flags,IG24h only, trustedofficialrequiresWindow=false and WA4096unicode proof unchanged. No protectedtimelinefile, privacyfile, otherReactsource/runner/config/deps/private/env/operational/Meta/network/Git/Foundation writes, no tests/build/lint/npm/Node/Docker. Only5ownedpaths. Neededalreadyadmittedcompanion must bereportedbeforeedit. Rootqualifies terminalbytes/fullscope beforecurrentWeb140/fullALL141/freshaffected142API+consumer/security/TQA/primary/cutover/final/CP6; no authored-test pass."
+  ]
+}

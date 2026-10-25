@@ -1,0 +1,26 @@
+{
+  "kind": "Prepared safe parser149 security regression protocol",
+  "state": "PREPARED for independent critique before source addition. User admitted exactlock153, now applied/rootqualified; no prepatch crash run was performed. Current protocol tests patched behavior only, and must not claim causal RED or old local crash.",
+  "governingTodo": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+  "ownedSourceCandidate": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+  "primary": [
+    "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828",
+    "https://raw.githubusercontent.com/expressjs/body-parser/v2.4.0/test/json.js"
+  ],
+  "purpose": "Verify the concrete compressed trailing-byte crash boundary and compressed-input compatibility without terminating the Vitest worker or touching an operational service. Reuse the actual compiled configurarBodyParsers in a dedicated child, not a copied parser.",
+  "proposedTestProtocol": [
+    "A source-owned integration test spawns one isolated Node child at a time using process.execPath inside the existing canonical disposable container. The child requires project express and compiled dist/infra/http/body-parsers.js, uses that exact middleware config, binds only127.0.0.1:0 and reports a bounded typed ephemeralport via IPC. No domain/Prisma/session/provider mock is claimed as fullAPI proof; this is parser-boundary proof only. No extra files or npm dependency.",
+    "Test normal valid gzip JSON and gzip form inputs through the shared JSON/urlencoded middleware, plus the existing16KiB OAuth-route JSON and8MiB Instagram-route raw parsers. Assert status, exact decoded logical payload and rawBody digest from actual capture. Keep payloads small and do not change any existing size/timeout/HMAC/runtime assertions. Existing actualNest/gateway tests continue to prove auth/HMAC/business effects separately.",
+    "Use a bounded deflate or gzip valid frame plus one trailingzero marker, with an advertised HTTP Content-Length that also reserves at most100KiB of remaining padding. The child downstream handler reports actual parser completion over IPC before the parent releases the trailingbytes. It waits for the original HTTP request to finish before responding; no mocked parsing or arbitrary sleep. This exercises decoder cleanup/drain after successful parse, not a large body/memory stress.",
+    "After trailing-byte delivery, require a complete bounded200 response with exact expected logical payload/rawBody digest and a subsequent healthy request handled by the same child. Record child exit/signal/errors if it terminates. A healthy pre-attack compressed control is mandatory so startup/path/module errors cannot be mislabeled vulnerability RED.",
+    "The unpatched current2.3.0 run, if executed, must remain an actual failing regression: do not invert expected-success assertions or catch uncaughtException to fake survival. Distinguish an observed decoder-crash RED from any unrelated failure or inability to reproduce. After explicit lock admission/application the same scenario must pass naturally. No live/service attack, package substitution, ad-hoc host executor or modified production parser.",
+    "Parent observes bounded IPC/stdout/stderr only, retains no environment/credentials/processargs, limits response captures, and sets finite own-child/request watchdogs. Always closes owned sockets, awaits childexit and kills only its own child if needed in finally; no globallyscoped process/container cleanup. New test deadline may bound its own scenario only; never enlarge old deadlines or weaken counters.",
+    "Execution only through the existing canonical api-instagram/all runner, with positive public source masks and synthetic owned database/network/volumes. Separate executor after source terminal/rootqualification; no standalone Node execution or operationalenv inspection. FullALL after admitteddependency candidate and fullsecurity review are still mandatory."
+  ],
+  "minimality": "Use the already-admitted Instagram gateway integration file, its existing child-process/loopback support patterns and the actual shared parser owner. No new endpoint in the product/fixture, no runtimeconfig or dependency update is part of this test-only plan.",
+  "openQuestions": [
+    "Exact finish/drain IPC sequencing and whether default currentgzip/raw parsing reproduces the advisory must be established by actual canonical RED, not assumed from metadata.",
+    "Include all four actual configured parser paths or justify a representative path plus explicit compatibility checks; do not claim endpoint authentication/business proof from a parser-only child."
+  ],
+  "approvalBoundary": "Existing gateway test path is admitted by test/*instagram*.e2e-spec.ts and attack simulation required. Lock153 now explicitlyhumanadmitted/applied. No other runtime/package/private/Git authority. After critique/root-ready handoff only sourceauthoring, then canonicaldisposableexecution; no ad-hoc host attack."
+}

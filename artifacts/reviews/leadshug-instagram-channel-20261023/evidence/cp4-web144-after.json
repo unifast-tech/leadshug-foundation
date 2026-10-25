@@ -1,0 +1,68 @@
+{
+  "kind": "cp4-web144-after",
+  "timestampUtc": "2026-10-25T14:51:28.896763+00:00",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-frozen-manifest.json",
+  "manifestSha256": "30d93510e8eeb3dac19818f642ec041b11daaa98bdbdac6238dc6c8ffc0fbe60",
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "sourceCount": 333,
+  "allSourceBytesAndSha256Matched": true,
+  "positiveInputCount": 1223,
+  "allPositiveInputBytesAndSha256Matched": true,
+  "todo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 414197,
+    "sha256": "be16dc6c97aa5122047051f67b9b5a9fab186d63f880824dc6bb5534e83c0071"
+  },
+  "protectedCount": 34,
+  "allProtectedSha256Matched": true,
+  "approvedExceptionCount": 4,
+  "approvedExceptions": [
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "candidateSha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "candidateSha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "candidateSha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753"
+    }
+  ],
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "runnerExitCode": 0,
+  "runnerNaturalTermination": true,
+  "runnerDurationObservedSeconds": 55.0,
+  "durationBasis": "observed single command session lifetime to natural exit; approximate",
+  "stages": {
+    "canonicalGuard": "reached/passed",
+    "sourceBindAndPublicDotenvMask": "reached/passed",
+    "PrismaClientGeneration": "reached/passed",
+    "webTypeScriptAndViteBuild": "reached/passed (63 modules; Vite 1.39s)",
+    "webUnit": "reached/passed (8 files, 73 tests; Vitest 712ms)",
+    "apiUnit": "outside web target; not run",
+    "apiE2E": "outside web target; not run",
+    "browser": "outside web target; not run"
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-web.log",
+    "bytes": 9854,
+    "sha256": "5ce72cd7bad79f23b62ad52fc93db886617a5174232288f71285f4491a65788c"
+  }
+}

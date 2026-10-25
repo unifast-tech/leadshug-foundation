@@ -1,0 +1,18 @@
+{
+  "kind": "Current focused Instagram API148 validation",
+  "state": "READY after API146/Web147b exactterminal/rootqualification; no writers active",
+  "profile": "Operational/Coder implementation-validation",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-api.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-result.json"
+  ],
+  "freeze": "cp4-api148-frozen-manifest.json",
+  "policy": "One naturalterminal canonical invocation in principalcheckout and own disposable namespace only. Freeze333sources/fullT/publicpositiveinputs/34preservedrows/4exceptions/policyv1.4/root3gitlinks. No source/T/frozeninput/dependency/runner/config/Git/privateenv/operational/Meta/provider/tunnel changes or reads; no filters/retries/autofix/skip/assertion/threshold/timeout relaxation. Actualreached/unreached/firstfailure/counts/EPSplans/measurements/cleanup only. Other read-only currentreviews may run on sameimmutable sources/T. No fullALL/browser/feature/security/primary/CP6 acceptance inferred.",
+  "dependencyState": "Original api lock remains d1e45274;145 exactcandidate awaiting explicithumanadmission. This currentAPI validation does not release that separate securityblocker."
+}

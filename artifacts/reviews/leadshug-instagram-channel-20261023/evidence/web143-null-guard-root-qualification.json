@@ -1,0 +1,14 @@
+{
+  "kind": "Independent Web143 onepath qualification",
+  "owned": {
+    "path": "web-app/src/componentes/NovaConversa.tsx",
+    "bytes": 53371,
+    "sha256": "e32927dae15a53e8f959ce691b5b4198546abd688c568ed03abf49a575a5af6c"
+  },
+  "otherKnownSourcesExact": 332,
+  "preservedRowsExact": 34,
+  "approvedExceptionsExact": 4,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "scope": "Exactly explicit attemptError !== null guard, compiler and null/null render safety; all other behavior retained."
+}

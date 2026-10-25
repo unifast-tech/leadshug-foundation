@@ -1,0 +1,17 @@
+{
+  "kind": "Independent current adherence150a naturalterminal strictmerge root reconciliation",
+  "frozenRowsExact": 30,
+  "fullSourceBodiesExact": 15,
+  "fullTodoExact": true,
+  "currentSourcesExact": 333,
+  "rootIndexExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "no_material_findings",
+  "findingIds": [],
+  "qualification": "Sourcebody review only, no behavioral/native/currentALL acceptance. API148 nativeE2E not reached. All150reviews nowterminal/rootmatched; source/T maythaw only for admitted151/152repairs. Protectedlock145 explicitanswer remains pending."
+}

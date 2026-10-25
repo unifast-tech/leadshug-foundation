@@ -1,0 +1,59 @@
+{
+  "kind": "Independent current Web144 naturalterminal root reconciliation",
+  "sourcesExact": 333,
+  "boundInputsExact": 1223,
+  "fullTodoExact": true,
+  "preservationRowsExact": 34,
+  "approvedExceptionsExact": 4,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-before.json",
+      "bytes": 262455,
+      "sha256": "231a77bf1e1543e5d1f9ec5802d928508c565b1b4e11764e488e02ec6f447c27"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-web.log",
+      "bytes": 9854,
+      "sha256": "5ce72cd7bad79f23b62ad52fc93db886617a5174232288f71285f4491a65788c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-after.json",
+      "bytes": 2830,
+      "sha256": "1f113a15bc5f19c47ac8dc6119e564345f8bba447620cd2524817606ab1746db"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-result.json",
+      "bytes": 2471,
+      "sha256": "6fc716108b8e442b26d390b908a0580b3fb18f9e54864ec67a179d5f3ca20327"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "naturalExitCode": 0,
+  "passed": {
+    "typeScript": true,
+    "vite": {
+      "modules": 63,
+      "seconds": 1.39
+    },
+    "webUnits": {
+      "files": 8,
+      "tests": 73,
+      "milliseconds": 712
+    }
+  },
+  "unreachedOutOfScope": [
+    "API units",
+    "API E2E",
+    "browser suite",
+    "full ALL target"
+  ],
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "scope": "Current source compiler/build/unit PASS only; no native/API/fullALL/performance/security/human/CP6 acceptance. Web140 RED corrected143 without suppression."
+}

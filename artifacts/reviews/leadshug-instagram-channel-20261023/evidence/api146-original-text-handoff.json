@@ -1,0 +1,27 @@
+{
+  "kind": "Sole API146 original-text boundary correction",
+  "state": "READY after142/145 naturalterminals/rootmatch",
+  "owned": [
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22392,
+      "sha256": "cb65e8517550efed88b2fc399c10652a09c0e2f36c33f479f673f8471e23588c"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 108326,
+      "sha256": "e902080681e8bfe227821fffebf30922d1ee565ae76f87dad7ea4bf2b4d032a5"
+    }
+  ],
+  "baseline": "cp4-source-web143-terminal-manifest.json",
+  "adjudication": "adherence142-security145-root-adjudication.json",
+  "requirements": [
+    "Require typeof body.texto === string in existing strictV2 validation; nonstring400 REQUISICAO_INVALIDA after unchanged scope/auth ordering. Use trim only for emptiness and forward originalstring unchanged. Coarseshared4096Unicode envelope stays, actualresolvedpolicy before reservation/claim stays. No concreteoriginbranch/newpolicyframework/parser/window/transport/v1 changes.",
+    "Extend existing eighthCP5 actualBFF bytecase with exactvalidleading/trailing/whitespaceUnicode strings at1000bytes and1001bytepaddedinvalids. Validpersisted/providerpayload unchanged oneactualproviderPOST per deliberateaction. Invalidpadded/nonstring (number/bool/object/array/null) bodies400 with unchangedmessages/admissions/provider snapshot, no syntheticprovider/domain/DBmock. Emptywhitespace rejection retained. Exactall7othernativecases/cohort20k/metrics/deadlines/query/index/assertions retained. No newsourcepath/helper/testendpoint/fixture or lockwrite.",
+    "Only2ownedpaths, no tests/build/npm/Node/Docker/Git/Foundation/env/private/runtime/Meta/tunnel/operational access. Report terminalbytes/hash+minimalchangeandstop. Web147 follows separately; sourceauthored tests NOTpasses."
+  ]
+}

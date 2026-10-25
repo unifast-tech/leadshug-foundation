@@ -1,0 +1,29 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence142a-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh-internal-no-context-142a",
+  "overall_assessment": "changes_required",
+  "recommended_path": "Correct the BFF text boundary within this TODO, add boundary regressions, then obtain current API/full ALL evidence and fresh affected review. Preserve all recorded closures and remaining delivery gates.",
+  "performance_position": "mixed",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "acceptable",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-ADHERENCE142A-01",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "BFF transforms text before enforcing the approved byte constraint",
+      "rationale": "ConversationsController.responder uses String(body.texto).trim() before forwarding text to OutboundService. Consequently, 500 accented characters followed by one space comprise 1001 UTF-8 bytes but become 1000 bytes and can be dispatched instead of rejected. Valid text containing surrounding whitespace is also changed, and non-string payloads can become sendable text through coercion. This conflicts with the human-admitted preservation of valid text and the package's explicit exact-payload requirement. The new native byte case tests only unpadded strings and therefore misses this boundary defect. The shared policy and provider-client checks correctly validate the transformed value, so they cannot recover the original request.",
+      "suggested_action": "Require texto to be a string, use trim only to determine emptiness, and pass the original string unchanged to the abstract policy validation and sender. Add real BFF regressions proving that whitespace-padded over-limit requests produce zero reservations, claims and provider calls, valid whitespace-containing payloads reach the provider unchanged, and non-string values are rejected.",
+      "affected_paths": [
+        "api-app/src/surfaces/bff/conversations.controller.ts",
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ]
+    }
+  ]
+}

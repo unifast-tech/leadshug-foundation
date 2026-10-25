@@ -1,0 +1,84 @@
+{
+  "kind": "Sole API138 human-admitted outbound UTF8 limit implementation",
+  "state": "READY;134b/privacysource terminal/rootqualified; no validator/reviewer/writer active. Exactrootdispatch startssolewriter.",
+  "profile": "Operational / Coder NestJS/Prisma/PostgreSQL",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "admission": "human-byte-privacy138-admission.json",
+  "baseline": "cp4-source-privacy138-terminal-manifest.json",
+  "policy": "inherited-public-preservation-v1.4.json",
+  "owned": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+    "api-app/src/domain/channels/transport/channel.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+    "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+    "api-app/src/domain/inbox/outbound.service.spec.ts",
+    "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+      "bytes": 11484,
+      "sha256": "43995245677130d699128e91ee10c515564eb5b0910efec1257a65324f6854e3"
+    },
+    {
+      "path": "api-app/src/domain/channels/transport/channel.ts",
+      "bytes": 13273,
+      "sha256": "85d7c8223cb61bdab94c08575266625bc699bb4a85952f535215c14471ec2805"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64882,
+      "sha256": "675eed284a1623d5c235da9b1c1f977af7ea07581bb97231fcea128d2025b9f2"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.ts",
+      "bytes": 50886,
+      "sha256": "df4c49f903838cc2efd8171a40f0ebc866e9415c691ad4adde816662f62a0d86"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22627,
+      "sha256": "c9544b159c1aaeb984c94bf20726b0da1416a95afb2c213f5e6a7181f8c2b516"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.ts",
+      "bytes": 2815,
+      "sha256": "a5efd1ced025fa3822126cd4deada4ca5c31505edefa3cc71d85a475a9de28a5"
+    },
+    {
+      "path": "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+      "bytes": 3478,
+      "sha256": "beb3e5a338f6deefb05dc30d753171fdceb89dda08564e9d1209398c5d5e2172"
+    },
+    {
+      "path": "api-app/src/domain/inbox/outbound.service.spec.ts",
+      "bytes": 30740,
+      "sha256": "d4e1d705b33c3ceedc0efef39ebc24b93319c719aae20160d6b86ecc8c0d00d6"
+    },
+    {
+      "path": "api-app/src/integrations/instagram/instagram-messaging.client.spec.ts",
+      "bytes": 1692,
+      "sha256": "3864f476790507972a241fdd0842d5d5a5be5a03fa9394134b0330f24f416f50"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 104303,
+      "sha256": "d5be322462a379c9af9a8a4529b33c5c94c29f131e9115bd2e595000955398a0"
+    }
+  ],
+  "design": "Existing ChannelEligibilityPolicy owns a small readonly text-constraint descriptor; currentIG UTF8_BYTES1000 and WA Unicodecodepoints4096. Project actualresolvedpolicy into reply-options; commonOutbound validates samepolicy BEFORE reserve/claim. No newChannelmethod,originbranch inbusinesscaller or genericframework.",
+  "requirements": [
+    "Implement explicit currentpolicytextconstraint in existingabstractpolicy/transport types. Correctlydelegate configuredofficialfalsewindow behavior, existingtext/window/template semantics. No genericregistry/newframework/newHTTP; stable sameChannel/Outbound/Acceptance. Any neededpath beyond10must be reported beforeedit; originalTODO admittedpath routinecompanion may be added afterrootreview, protectedexceptions do notexpand.",
+    "CommonOutbound.send must reject invalidselectedpolicytext before reserveOrdinary/claim/providerHTTP for direct domaincallers too. Use actual resolvedimmutable operationpolicy/route; never trust clientdescriptor. Preserve existingtrim semantics and exactvalidresultstring, no normalization/cutting/splitting. BFF currentconcrete1000codepointcheck should become a coarse shared4096codepoint envelope/precheck, with exactconstraint owned byresolvedpolicy, ratherthan anothernewconcretebytebranch. Keep authz/404/bodyvalidation ordering/legacyWA/bodyenvelope unchanged. Error safe/actionable e.gTEXTO_LONGO and askshorter, not secretdata.",
+    "InstagramMessagingClient defense-in-depth checks actualUTF8bytes before beforeDispatch/fetch; bound1000bytes, not codepoints. It may conservatively reject malformedUTF16 ratherthan silentlyreplaceUnicode, but never normalize/changevalidtext. ExistingACK/UNKNOWN/10stimeouts/credential/finalfence semantics retained.",
+    "Add explicit textConstraint to realreply-optionsDTO from candidate resolvedpolicy, preserve noextraqueries/HTTP/list cardinality/performancebudgets/contextfingerprint semantics. Give root exactDTO and supportedenum/unit/range forWeb139. Browser validation remainspendingnextwriter; do notwriteWeb now.",
+    "Meaningful unit/native cases must distinguishASCII1000accepted/1001blocked;500é=1000accepted/501é=1002blocked;250fourbyteemoji=1000accepted/251=1004blocked. DirectcommonOutbound invalidity must produce zeroreservation/claim/provider calls, actualBFF/PG invalidnative leaves admissions/messages/provider counters unchanged. Validactualsent/persistedpayloadexact, singlePOST perdeliberateaction. Use existingqualifiedcohort route/peer/session/BFF, no newDBmutation/endpoint/helper/providerfakeglobalchange; separateboundednativecase allowed, retain original7CP5cases/cohort20k/originalmessages/unread/p95/query/loop/index/CPU-DB observations unchanged. No passingproof fromauthoredsource.",
+    "Preserve receivedDM codepoint1000/1001 contract and8MiB/1000updates/auth/batch/fourworkers; thisis outbound-only. PreserveWA4096codepoints and trustedofficialrequiresWindow=false regression, templates/initial/ordinaryrecovery/oldack/idempotency/finallease window invariants. No protectedtimelinechanges.",
+    "Only10owned publicAPIpaths. No Web/privacy/roottooling/config/package/deps/private/env/operational/Meta/provider/network/Git/worktree/copy/Foundation writes. No npm/Node/build/test/lint/Docker execution. Report exactchangedpaths+terminalbytes/SHA, causalproofmap/APIshape/limits/unexecutedstatus. Rootqualifies before serializedWeb139 then currentcanonicalWeb/fullALL/freshAPI+consumer/security/TQA/primary/cutover/final/CP6."
+  ]
+}

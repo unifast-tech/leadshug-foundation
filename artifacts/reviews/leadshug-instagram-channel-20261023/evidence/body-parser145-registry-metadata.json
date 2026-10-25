@@ -1,0 +1,46 @@
+{
+  "kind": "Unauthenticated official registry metadata, no package installed/executed",
+  "packages": [
+    {
+      "url": "https://registry.npmjs.org/body-parser/2.4.0",
+      "name": "body-parser",
+      "version": "2.4.0",
+      "dependencies": {
+        "qs": "^6.16.1",
+        "bytes": "^3.1.2",
+        "debug": "^4.4.3",
+        "type-is": "^2.1.0",
+        "raw-body": "^3.0.2",
+        "iconv-lite": "^0.7.3",
+        "http-errors": "^2.0.1",
+        "on-finished": "^2.4.1",
+        "content-type": "^2.1.0"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "dist": {
+        "tarball": "https://registry.npmjs.org/body-parser/-/body-parser-2.4.0.tgz",
+        "integrity": "sha512-Ifk1KcLrxaGt1occQagQNFNNOqRt1LFuehEnHHzB8Z6cRgIxRU1TBaiIsUiCdA+gy5PL7Y1IX31DNKkRmxtXjQ==",
+        "shasum": "337a76249270f83e450ad385a9606ca3b4a75c06"
+      }
+    },
+    {
+      "url": "https://registry.npmjs.org/qs/6.16.1",
+      "name": "qs",
+      "version": "6.16.1",
+      "dependencies": {
+        "side-channel": "^1.1.1",
+        "es-define-property": "^1.0.1"
+      },
+      "engines": {
+        "node": ">=0.6"
+      },
+      "dist": {
+        "tarball": "https://registry.npmjs.org/qs/-/qs-6.16.1.tgz",
+        "integrity": "sha512-5Px6J7rfHBAGUhNQ3es4YzcOdBBw0SDcVtThJml4RdnKw4tKs2epA0kPZ+K8X+WiHktT93RHVcQ/3ym5aTCgtg==",
+        "shasum": "0643e17993e551759c85078e1f0bc4b9fe908020"
+      }
+    }
+  ]
+}

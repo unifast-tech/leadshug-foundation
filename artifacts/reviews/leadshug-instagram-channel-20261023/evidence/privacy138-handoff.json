@@ -1,0 +1,23 @@
+{
+  "kind": "Sole exact human-admitted privacy138 source handoff",
+  "state": "READY;134bterminal/rootqualified; APIbyte138 planning is readonly. Explicitdispatchstartssoleproductwriter.",
+  "profile": "Operational / Coder, static public HTML",
+  "owned": [
+    "web-app/public/privacidade.html"
+  ],
+  "preimage": {
+    "path": "web-app/public/privacidade.html",
+    "bytes": 12865,
+    "sha256": "d0f72c588f0f014de46a327e34d6b26125ca115bc973b56bbb926cd8519e701d"
+  },
+  "candidateSha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753",
+  "patch": "privacy-instagram-companion-proposal.diff",
+  "admission": "human-byte-privacy138-admission.json",
+  "policy": "inherited-public-preservation-v1.4.json",
+  "requirements": [
+    "Read current T/explicit humanreceipt/exact proposal and diff/full current HTML. Verify existingdataflow matches approvedLogin/serverencryptedtokens/scopedBU/textinbound/humanreply/noIGautomation descriptions.",
+    "Apply exact reviewed onefilediff only, matching candidateSHA6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753. Policyversion24October is reviewedauthoredversion; applied25October doesnotclaim earlierpublication. No newdate or materialwording unless concrete mismatch reportedbeforediff.",
+    "Do not change legalbases/retention/rights/promises, scripts/forms/network/SDKs/CSP/referrer/noindex/staticstructure or institutionalcontact. No privacycompliance certification/publication/runtimeaccess.",
+    "Only exactHTML oneproductpath. NootherAPI/Web/runner/config/private/env/operational/Meta/network/Git/Foundation edits; no tests/build/npm/Node/Docker or runtime. Report exactsource/candidatebytes/SHA and paritychecks; sourcequalificationonly, allmainproofpending."
+  ]
+}

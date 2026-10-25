@@ -1,0 +1,59 @@
+{
+  "kind": "Independent root Web139 exact terminal qualification",
+  "owned": [
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20705,
+      "sha256": "cc6a76a62c5ef18627cfd2e0ba409831877a84dc24b210c669ea0a14f9f03006"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 10332,
+      "sha256": "ac0d64357ba36a2e95a0d7fe1f82b007bdbf439c6c8ccb5b6478fc3937289b7f"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 16496,
+      "sha256": "c7ff3f6e5cd34bb32418e60ce709e590611884c852fbd643624e468dccb00ce9"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 17961,
+      "sha256": "261e6046b11a7c0d86ce944a46e2b7b1ef6e3d6201e418b482333be7fefc716e"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 61909,
+      "sha256": "b5981cf06d3703e21d01b1f0e6c3a902a9ba7fd1475512e4b283174c4311bf0b"
+    }
+  ],
+  "otherKnownSourcesExact": 328,
+  "totalSources": 333,
+  "preservedRowsExact": 34,
+  "approvedExceptionsExact": [
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "bytes": 8014,
+      "sha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "bytes": 9665,
+      "sha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "bytes": 178445,
+      "sha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "bytes": 13913,
+      "sha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753"
+    }
+  ],
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Server textConstraint exactkeys/unit/max/origin pairing; same keyed owner explicitly retains whole IG invalid draft; production helper validates Unicode and actual UTF8; render/handler block before POST; authored native bounds have real BFF/provider effects and exact payload assertions. No execution inferred.",
+  "remaining": "Current canonical Web140/fullALL141, fresh affected API/consumer142, primary/security/TQA/performance/cutover/final/CP6."
+}

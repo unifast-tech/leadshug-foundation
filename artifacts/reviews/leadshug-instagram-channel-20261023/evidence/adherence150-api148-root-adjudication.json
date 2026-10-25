@@ -1,0 +1,48 @@
+{
+  "kind": "Root adjudication of current150 and actualAPI148",
+  "basis": [
+    "adherence150a-root-reconciliation.json",
+    "adherence150d-root-reconciliation.json",
+    "cp4-api148-root-reconciliation.json"
+  ],
+  "rows": [
+    {
+      "id": "IG-ADHERENCE150D-01",
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "evidence": "seed creates new BU/tenant and retains DB; fixed app/accountA/B authorize across cases, contradicting durablecrossBUownership. No cleanup was present. Use unique server-seeded caseaccount/grants, not deletion or ownership weakening."
+    },
+    {
+      "id": "IG-ADHERENCE150D-02",
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "evidence": "147b adds UUID/raw oracle but broadhasText assertion still executesfirst. Rootqualification falsely implied ambiguityremoved; correct by moving visibility entirely to UUID selector, not adding anotherfallback. Keep originalvalid/invalid/providerzeroeffect tests."
+    },
+    {
+      "id": "IG-ADHERENCE111D-04",
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "evidence": "Existing unresolvedread-start/ownership obligation. Childexplicitrefresh checkseligibility only afterstarting followupGET; parentbegin/current lackmounted. Need after-awaitedparent/BEFOREfollowup fence andparentunmountinvalidates readowner, heldactualresponse/navigation nofollowup proof."
+    },
+    {
+      "id": "IG-API148-UNIT-01",
+      "resolution": "Integrated",
+      "useful": true,
+      "formalizable": "yes",
+      "level": "project",
+      "classification": "release-blocker",
+      "evidence": "Actualcanonical148 RED: outbound.service.spec imports concreteInstagramEligibilityPolicy in abstractconsumer scope. Preserve AST scanner/pathinventory/negativecases. Testconsumer with configurableabstractcontract unitdouble; realconcretepolicy tests/native independently cover actualIGrule."
+    }
+  ],
+  "sourceAcceptance": "150A no_material_findings supports originaltextsource146; no nativeexecutionclosure. 150D confirms epoch147source but remainingdefects require152. API148 E2E unreached.145protectedlock remains pending explicitanswer.",
+  "rootErratum": "web147b-root-qualification staticAssessment overstated normalizedlocatorambiguityremoval; broadlegacyassertion remained beforeUUIDcheck. Preserve historical receipt and bind thiscorrection ratherthan rewriting reviewedinputs."
+}

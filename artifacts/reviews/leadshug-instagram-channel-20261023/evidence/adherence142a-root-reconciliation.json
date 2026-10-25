@@ -1,0 +1,19 @@
+{
+  "kind": "Independent142A naturalterminal strictmerge root reconciliation",
+  "frozenRowsExact": 31,
+  "fullSourceBodiesExact": 15,
+  "fullTodoExact": true,
+  "currentSourcesExact": 333,
+  "rootIndexExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-ADHERENCE142A-01"
+  ],
+  "qualification": "Sourcebodyinspection only; textboundary finding requires contractadjudication, no source/T thaw while142D/145 live; no acceptance/native/all/security waiver."
+}

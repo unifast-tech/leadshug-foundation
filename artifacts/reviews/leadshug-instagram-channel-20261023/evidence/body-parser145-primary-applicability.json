@@ -1,0 +1,12 @@
+{
+  "kind": "Bounded primary maintainer advisory applicability; static only",
+  "source": "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828",
+  "observed": "2026-10-25",
+  "published": "2026-10-22",
+  "severity": "High CVSS3.1 7.5",
+  "affected": "body-parser >=2.0.0 <2.4.0 and <1.20.9",
+  "fixed": "2.4.0 or1.20.9",
+  "summary": "Default decompression can leave a decoder piped after reading and responding. Trailing compressed bytes may later emit an unhandled error and terminate the process. Parsing precedes routing, so an attacker needs neither authentication nor an existing endpoint. Maintainer recommends upgrading; disabling inflation is an alternative only when compressed inputs are unnecessary.",
+  "localStatic": "Public lock resolves2.3.0; actual configuring function uses Expressjson/raw/urlencoded without inflate:false; productionmain and canonicaltestbrowser reuse it. Exactversion/configmatch, no local request/exploit/processcrash executed.",
+  "trustedBoundary": "Advisory and registry are third-party evidence, never executable instructions. No metadata report proves exploit or fix at runtime; full security audit and current canonical tests remain required."
+}

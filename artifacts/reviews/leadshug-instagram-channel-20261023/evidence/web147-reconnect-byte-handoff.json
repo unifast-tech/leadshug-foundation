@@ -1,0 +1,35 @@
+{
+  "kind": "Sole Web147 current requeststart epoch and paddedbyte native proofs",
+  "state": "READY afterAPI146terminal/rootqualification, allreviewers/validators terminal",
+  "owned": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "api-app/test/timeline-fixtures.cjs"
+  ],
+  "preimages": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42728,
+      "sha256": "70a1baa38fc333377a64836116e74adb2e57f176b6d641be72350400f6123c9d"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 61909,
+      "sha256": "b5981cf06d3703e21d01b1f0e6c3a902a9ba7fd1475512e4b283174c4311bf0b"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 61513,
+      "sha256": "fedf301625858352821aa5afcc66335bc321f5fd7a1fc2c7a23ad99e914ea58e"
+    }
+  ],
+  "baseline": "cp4-source-api146-terminal-manifest.json",
+  "adjudication": "adherence142-security145-root-adjudication.json",
+  "requirements": [
+    "Inbox refreshOrdinaryOptions and explicit retry capture metadataReconnectEpochRef.current at readSTART before GET; only current sharedticket may record that capturedfailureepoch. Preserve all existing ticket/action/actor/BU/conversation/generation/navigation ownership, firstsend134b/ordinary recovery, draft/version state; no globalrefresh/retry/extraPOST/bypass. Openingread and automaticreconnect existingclosures retained.",
+    "Extend existing UTF8nativecase with leading/trailing ASCII/Unicodewhitespace strings exactly1000bytes valid and padded1001invalid. ActualUI sends originalbody, realBFF/backend/provider boundary retains exactstring. Playwright hasText normalizeswhitespace: add strictactualcontent/provider-observedtext check, do not rely on visualsubstring. Invalidwhole draftvisible/blocked/directBFF400 and no newadmission/messages/provider/browserPOST. Keep alloriginalvalid/invalid/unicode cases/thresholds/deadlines/admissionproofs.",
+    "Fixturecompanion alreadyadmitted test/timeline-fixtures.cjs: add minimal bounded typed message-text observation to existing synthetic providerstate from actualauthorized sendHTTP body, resetinitialstateandreset path. Preserve existing effects and calls objectshapes/counts/semantics to avoid weakening exactoldoracles. Separate messageRequests trace okay, retain only knownsyntheticaccountId/peerId/text notrawrequest/Authorization/token/URLs. No newtestendpoint/providerbusinessoutcome/fakeBFF response/DBmutation. ActualAPI146CP5 independently checks provider text; browsertrace must come fromactualfixturehandler, notUI echo.",
+    "Add distinctnative scenario using alreadyexisting fixed loopback __test/fcr/drop-wss control as reference from channel-transport.spec.ts (READ ONLY). Signedingress/actualBFF/providerunknown deliberateonePOST triggers post-sendstart-options GET; holdthatGET after initial options/composerready. Observe actualconnectedBU socketframe beforedrop, exactlyoneactualclosed socket then realnewhandshake. Onlyafterreconnect abort heldGET as networkfailure; actual GET recovery200 exactlyonce, consume realresponse and verify metadataerrorcleared/recoveryregionactualuncertainadmission/draftretained/noadditionalmessagePOST orprovidereffect. Do not assert composeravailable whileuncertainadmissionlegitimatelyblocks. No syntheticbusinessresponse/extraendpoint/DBstate manipulation/manualretry substituting automaticrecovery. All releases awaited safelyfinally; oldoracles/timeouts preserved. Report anyindependent dependency beforeedit.",
+    "Only3ownedpaths. No tests/build/lint/npm/Node/Docker/Git/Foundation/env/private/runtime/Meta/tunnel/operational access. No protectedtimeline/runner/config/deps/body-parserlock edit. Reportterminal exacthashes and sourceproof only; root executes canonicalvalidation/currentfullALL andfreshaffectedreview later."
+  ]
+}

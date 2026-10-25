@@ -1,0 +1,69 @@
+{
+  "kind": "Human-validation-ready exact protectedlock security candidate",
+  "state": "AWAITING humanadmission; no product/lock/source changes applied",
+  "candidate": {
+    "bytes": 305491,
+    "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+  },
+  "preimage": {
+    "bytes": 305491,
+    "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+  },
+  "ownedProductPath": "api-app/package-lock.json",
+  "delta": "Resolve body-parser2.4.0 and qs6.16.1 only. Existing nested content-type2.1.0 and iconv-lite0.7.3 already satisfy new requirements. No direct package.json change, override, dependency-range widening, parser behavior/workaround or other node update.",
+  "lineEnding": "Original CRLF must be retained; proposal diff rendered LF only.",
+  "review": "Fresh no-context6.1solxhigh naturalterminal/strictmerge/rootmatch, zero material findings; performance unknown beforeexecution.",
+  "reviewEvidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-proposal-prepared.json",
+      "bytes": 2350,
+      "sha256": "2436d8b0854217763cf11e082df07e5d17257a6be60ddcc838bc857641648f44"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-proposed-lock.diff",
+      "bytes": 1644,
+      "sha256": "57391eb6c2623839c08beb25799f070567977e0f3475b1d0592b843a572f9236"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-registry-metadata.json",
+      "bytes": 1426,
+      "sha256": "27ec9832b14f8f71376eade2e4f806b4420f7761e5e86fb7ff49c3ee5c0909b6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-applicability.json",
+      "bytes": 1219,
+      "sha256": "6e84b2e889afcebbb5193c29c9c03af5fa5fd26d2fc9769ad040e82b7ca0e8fd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-raw.json",
+      "bytes": 1781,
+      "sha256": "9b2008a33bdc1de258e5eb3ede332ed4970efa6f7aa8fa33fa3c4e91d9ce3dd7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-merge.json",
+      "bytes": 1513,
+      "sha256": "d81faed7a64ffd62fde2922abfe43fa273e0a9777c85ea6ce9b5df1f69c5dd53"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-root-reconciliation.json",
+      "bytes": 595,
+      "sha256": "903b71b53a6f8a5d1bafeba5b80c72fab3159c5849be06d14eaac3505a532783"
+    }
+  ],
+  "plannedVerification": "Exactcandidate-only application after humanadmission, canonicalnpmci/ALL including API/Web/native/sharedHMAC/size/WA regressions and compressedcompatibility. Separate safe childcrashregression must beprepared/reviewed beforeexecution/securityclosure; no operationalAPI/Meta/private/Git authority.",
+  "approvalReason": "Governing TODO requires User validation: required on deviation and preserves package/lock paths; currentadmissions do notrelease thislock.",
+  "noOtherAuthority": "No broaddependencyupgrade/parserworkaround or rawenv/operational/Meta/tunnel/Git permissions. Otheradvisories/security/primary/TQA/cutover/final/CP6 remain.",
+  "upstreamSourceCaveat": "A later integrity-verified comparison of the official lib/read.js files confirms that 2.4.0 detaches/destroys the completed decoder and drains remaining request bytes. That upstream minor release also changes charset/options handling and conditionally adds zstd support; identical compression behavior is therefore an intent to verify, not an established fact. The exact two-node lock candidate and its hashes are unchanged. This source comparison was not enclosed in the earlier planning critique; no runtime security/compatibility pass is inferred.",
+  "additionalPrimaryEvidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-read-change.diff",
+      "bytes": 5097,
+      "sha256": "6203960c0665dea19f0271d830f27795b9399d304f03a0c37be0cf40dd15fd57"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-read-change-receipt.json",
+      "bytes": 1269,
+      "sha256": "ff97c67115d0bb4c41a9fc4acf95cbb51797e0ae5fbc466f7a9d5084d82b6195"
+    }
+  ]
+}

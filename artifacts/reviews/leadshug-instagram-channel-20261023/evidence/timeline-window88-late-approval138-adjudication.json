@@ -1,0 +1,27 @@
+{
+  "kind": "Reconcile late human test-path validation with already withdrawn obsolete premise",
+  "date": "2026-10-25",
+  "questionItemId": "[request_user_input_async,call_640d0eab583c4fd2aedeaac4d70991e7,0]",
+  "answer": "Validar ajuste pontual do teste",
+  "authorizationReceived": true,
+  "inputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-proposal.json",
+      "bytes": 2029,
+      "sha256": "3929e391b9f2eaf475ff0ff9030cec530b027062754e720cdbdb760dd581fca7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/timeline-window88-withdrawal97.json",
+      "bytes": 928,
+      "sha256": "3d2362eaa5830672c36d65cd2503b367bce153fc5fb91ea2655344cbca765c30"
+    }
+  ],
+  "source": {
+    "path": "web-app/e2e/timeline.spec.ts",
+    "bytes": 47526,
+    "sha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e"
+  },
+  "disposition": "Permission received; do not apply an unnecessary obsolete fixture candidate under the mistaken universal24h premise. Preserve current original false-window regression and await actual causal error evidence from canonicalbrowser. No path mutation performed or required by permission.",
+  "rationale": "The old proposal calls inheritedrequiresWindow=false non-authoritative. Currentcanonical policy explicitly preserves that trusted false exception; changing positivefixtures toaddIN would mask this requiredcoverage. Approval authorizes boundedwork, not a deliberate globalwindowpolicychange or weakenedtest. Latest actualtimeline alertcause remainsunknown, not provedmissingIN.",
+  "classification": "Existingwithdrawal/by-design-no-action for obsoletecandidate, no new scope finding or automaticpolicyoverride. If actual evidence requires a different protectedtest diff, prepare concrete proposal rather than apply stale candidate."
+}

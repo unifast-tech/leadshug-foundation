@@ -1,0 +1,85 @@
+{
+  "kind": "Fresh no-context critique of safe parser-only regression protocol149",
+  "reviewKind": "critique",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "governingTodo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 425211,
+    "sha256": "a22331283cc80e4c6b0a70f7f877a869367b0fafd8a49dd409d272a210cc17e7"
+  },
+  "sourceBodies": [
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "bytes": 2011,
+      "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 26011,
+      "sha256": "aec0aef965e1c1cda60b0095d0492fe8b9abe3a9104153694c46e472b17fdf48"
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+    },
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13918,
+      "sha256": "1ab8c3da8e7d05d7c25057356fa3802a3671a86288798e87140d9b8f86ede06b"
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "bytes": 21180,
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235"
+    }
+  ],
+  "requiredEvidence": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-regression-protocol-prepared.json",
+      "bytes": 5046,
+      "sha256": "97c4084d50cb3fe86ffb943cf9723a581d1fc7d3c1b9ae9cb34193cd837ae4f6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser153-human-admission.json",
+      "bytes": 1460,
+      "sha256": "356adcf72509461306ec3964937e82a6d064f8203675bcbf50b877d5318adf9d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser153-root-qualification.json",
+      "bytes": 733,
+      "sha256": "8a44afb11b7107213040dda5b80cc6b9462da660f3d7ed9bbc204b473375bff1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-applicability.json",
+      "bytes": 1219,
+      "sha256": "6e84b2e889afcebbb5193c29c9c03af5fa5fd26d2fc9769ad040e82b7ca0e8fd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-read-change.diff",
+      "bytes": 5097,
+      "sha256": "6203960c0665dea19f0271d830f27795b9399d304f03a0c37be0cf40dd15fd57"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-read-change-receipt.json",
+      "bytes": 1269,
+      "sha256": "ff97c67115d0bb4c41a9fc4acf95cbb51797e0ae5fbc466f7a9d5084d82b6195"
+    }
+  ],
+  "scope": "Planning only, no sourceedit/runtime/exploit/packageexecution authorized by critique. SoleWeb152 writer active on four disjoint React/IGbrowser/timelinefixture paths not enclosed. Enclosed sources/T/policy immutable untilnaturalterminal; do not inspect files or tools. FullcurrentT/securitydecision/allconsumer/gate obligations included.",
+  "sourceRendering": "CompleteLF-rendered source with originalbytes/hash binding; current package lock CRLF unmodified.",
+  "rubric": [
+    "Assess least-destructive faithful regression boundary: actual compiled shared parser function in isolated ownchild/loopback child-only shutdown, no Vitestworker or operationalAPI termination. Is fake Express wrapper honestly parser-only ratherthan fullauth/HMAC/domain proof?",
+    "Challenge payload/frame/trailingbytes/IPC/parsercompletion/drain sequencing against supplied primary technicalchange. Require healthy compressedcontrol first and complete200/exactrawbodylogicalpayload/subsequenthealth on the samechild; no arbitrarysleep/uncaughtException swallowing/timeouts as success. Distinguish processcrash from startup/module/client/path/parsefailures; no prepatchRED wasexecuted and nonecanbeinferred afterlock153 application.",
+    "Validate all configured JSON1MiB, OAuth16KiB, IGraw8MiB, urlencoded parser contexts and existing originalgatewayHMAC/size/business assertions remainintact. Keep testbounded inputs, finitechild/request watchdogs, bounded captures and awaitedowncleanup; no globallyscopedkill/cleanup/source/config changes.",
+    "Verify exactadmittedtestpath/canonicalrunner ownership andsource/testmethod parity. No copiedparser/providercode, privateenv/processargs logging, ad-hoc hostNode, realMeta/provider/tunnel/production attack or newendpoint allowed. Safeplannedchild process is onlycreated inside canonicaldisposableintegrationtest.",
+    "Explicit performance/elegance/structural/operational-fit positions. Report concrete causal/test-quality/safety or implementationplanning defects, not existing openwholefeaturegates as newdefects. If faithfulprotocol needsrefinement give minimalcompletecorrection before sourcewrite. Fullsecurity/TQA/native/ALL/primary/CP6 gates remain; test-onlypostpatchsurvival cannotprove oldversioncrashed or alladvisoriesfixed."
+  ],
+  "output": "Canonical strictcritiqueJSON only with exactdispatchJSONpath; no tools/files/network/edits. Reviewall enclosedsource/protocol. Freshreadonly no inheritedthread."
+}
