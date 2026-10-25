@@ -1,0 +1,83 @@
+{
+  "kind": "Browser104 independent root reconciliation",
+  "frozenSourcesExact": 328,
+  "fullTodoExact": true,
+  "positiveInputsExact": 1111,
+  "immutableRowsExact": 34,
+  "threeExceptionsExact": true,
+  "rootIndexExact": true,
+  "fourReportedOutputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser104-before.json",
+      "bytes": 1484,
+      "sha256": "10ab5ad39984612df3674c8b7db329211b8bfd22bc9591731d1c0b6298e4fa23"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser104-browser.log",
+      "bytes": 89491,
+      "sha256": "e101903fddbff9706a010696114eccb40440d6734b78b2b3cb8fc2477733df40"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser104-after.json",
+      "bytes": 7252,
+      "sha256": "8a5da8684157537ff91987621403ab1e6af99cfc74c0b0b3cae633eec98af647"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser104-result.json",
+      "bytes": 7484,
+      "sha256": "06af0c264796fa0453cf272d00d52df6f45a38dccb7d9eb14a0ce469626feee8"
+    }
+  ],
+  "canonicalInvocations": 1,
+  "exitCode": 1,
+  "actual": {
+    "parity": 26,
+    "APIbuild": "PASS",
+    "migrations": "31/schema current",
+    "WebTscVite": "PASS",
+    "Playwright": {
+      "total": 90,
+      "passed": 85,
+      "failed": 5,
+      "durationMinutes": 17.8
+    },
+    "onboarding": "11/11PASS",
+    "startConversation": "13/14PASS",
+    "timeline": "15/16PASS",
+    "models": "25/25PASS",
+    "cleanup": "Owned container/ninevolumes/networkremoved"
+  },
+  "failures": [
+    {
+      "id": "BR104-ROUTE-RESELECT",
+      "evidence": "CT88 line181 filldisabledafterA-B-A; current newcontext2options requires explicitselection. PreviouswaitForResponse pending fromnativeheldPOST.",
+      "qualification": "Do not restoreautomaticroutefallback. Repair admittedtest explicitchoice/ownedholdcleanup."
+    },
+    {
+      "id": "BR104-HELD-CONTAMINATION",
+      "evidence": "CT205 failsbeforewaves atfcrhold400; browser-server272-278 refuses alreadyheldConversationId. PreviousCT88 lackedfinallyrelease andfailedbeforerelease; fixtureIDvalid.",
+      "qualification": "No proof of5x20oracles reached. Preserveallcounts/nativeeffects, fixownedtestcleanup, no productionrecoverybypass."
+    },
+    {
+      "id": "BR104-CONFIRM-READ-RACE",
+      "evidence": "IG199 connectAccount123 seesCANDIDATE_READY/NOT_STARTED/0 afterbuttonclick. CurrenthelperimmediatelyreadsattemptwithoutawaitingactualconfirmPOST. OAuthcallback303/headers passed.",
+      "qualification": "Actualsuccessfulconfirmationresponse is NOTPROVED bybuttonclick. Rootcorrectsexecutorwording; awaitrealnativePOST/assert200 beforestate. LaternativeIGsubscription/receipt/WSS/reply/races/operatororaclesUNREACHED."
+    },
+    {
+      "id": "BR104-LEGACY-SEND-LABEL",
+      "evidence": "Protectedstart504line521 exactbuttonEnviar absent; currentproductEnviarresposta. NoPOST/uncertainrecoveryphase reached.",
+      "qualification": "Restorecompatibleactualproductlabel; updateonlyadmittednewtestlocators, protectedtestbyteexact. Keepcontact+attendant accessibletextcontiguous while retainingaccountidentity."
+    },
+    {
+      "id": "BR104-RECONNECT-ALERT",
+      "evidence": "Protectedtimeline205line223 onealertafterhistoryrecovered; finalIDequalityUNREACHED. Rootsourcefindsparentstart-optionserrorhasnoreconnectGETretry; childreplyoptionsalonealreadyretry.",
+      "qualification": "Alertbodynotcaptured; sourcegapandobservedfailure require faithful metadata-onlyrepair withlatestread/fullcontextfences, no resettingdraft/remount/clearingnewSENDerror."
+    }
+  ],
+  "notRun": [
+    "APIunit/E2E",
+    "separateWebunit",
+    "realruntime/provider"
+  ],
+  "disposition": "104freeze ends afterthisrootmatch; solefivepathWeb105source correction thencompletecurrentcanonicalproof/freshreview. No fullfeatureacceptance orwaiver; pendinghuman/primary/CP5/CP6/independentassurance/physicalgates retained."
+}

@@ -1,0 +1,177 @@
+{
+  "kind": "CP4 Browser104 after snapshot",
+  "recordedAtUtc": "2026-10-25T08:54:55.368767+00:00",
+  "verification": {
+    "frozenFiles": 328,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 351692,
+      "sha256": "dede8f7006bd1ae15f418559468c7d1c9d4c1203b37367add340e4dd557526f9"
+    },
+    "boundInputs": 1111,
+    "preservationRows": 34,
+    "approvedExceptions": 3,
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "outcome": "pass",
+    "errors": []
+  },
+  "runner": {
+    "command": "bash scripts/test-channels-local.sh browser",
+    "invocations": 1,
+    "startUtc": "2026-10-25T08:31:26Z",
+    "endUtc": "2026-10-25T08:53:16Z",
+    "elapsedSeconds": 1310,
+    "exitCode": 1,
+    "playwrightElapsed": "17.8m",
+    "playwrightTotal": 90,
+    "playwrightPassed": 85,
+    "playwrightFailed": 5,
+    "suiteCounts": {
+      "channel-transport": {
+        "total": 3,
+        "passed": 1,
+        "failed": 2
+      },
+      "instagram-channel": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1
+      },
+      "start-conversation": {
+        "total": 14,
+        "passed": 13,
+        "failed": 1
+      },
+      "telas": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0
+      },
+      "timeline": {
+        "total": 16,
+        "passed": 15,
+        "failed": 1
+      },
+      "message-templates": {
+        "total": 25,
+        "passed": 25,
+        "failed": 0
+      },
+      "number-onboarding": {
+        "total": 11,
+        "passed": 11,
+        "failed": 0
+      }
+    },
+    "stages": {
+      "runnerPreflight": "passed",
+      "apiPrismaGenerate": "passed",
+      "apiBuild": "passed",
+      "apiMigrate": "passed",
+      "webTypeScriptBuild": "passed (`tsc -b`)",
+      "webViteBuild": "passed (63 modules; 1.41s)",
+      "playwright": "90 tests, 1 worker; 85 passed, 5 failed; 17.8m",
+      "apiUnit": "not run by browser target",
+      "apiIntegration": "not run by browser target",
+      "webUnit": "not run by browser target",
+      "browserCoverage": "all 90 test cases reached; no tests skipped",
+      "firstDecisiveFailure": "Playwright suite reported 5 failed; first failure was channel-transport.spec.ts:88 A-B-A composer disabled at fill after route/BU return"
+    },
+    "failures": [
+      {
+        "test": "e2e/channel-transport.spec.ts:88",
+        "name": "A-B-A stale-response transport",
+        "result": "failed; 30.0s timeout",
+        "reached": "Selected Evolution route; initial send response and native HTTPS held reply reached; switched BU and returned to Cliente Timeline.",
+        "failure": "Composer remained disabled when filling after A-B-A reselection (line 181); response wait at line 158 timed out. Release, response body hash/counters and stale-draft oracle not reached."
+      },
+      {
+        "test": "e2e/channel-transport.spec.ts:205",
+        "name": "five real-send waves / twenty submits",
+        "result": "failed; 797ms",
+        "reached": "holdNativeReply setup request.",
+        "failure": "POST /__test/fcr/hold returned HTTP 400; helper expected 200. None of the five waves ran."
+      },
+      {
+        "test": "e2e/instagram-channel.spec.ts:199",
+        "name": "native Instagram HTTPS/BFF journey",
+        "result": "failed; 991ms",
+        "reached": "Freshness setup, fixture seed, login/secure cookie, synthetic OAuth authorize request, BFF callback HTTP 303 with no-store/no-referrer, confirmation click, attempts endpoint HTTP 200 and exactly one attempt.",
+        "failure": "Expected MAPPED_PENDING_RECEIPT, SUBSCRIBED, subscriptionRequests=1; actual CANDIDATE_READY, NOT_STARTED, subscriptionRequests=0 at connectAccount line 123."
+      },
+      {
+        "test": "e2e/start-conversation.spec.ts:504",
+        "name": "uncertain common send recovery",
+        "result": "failed; 150s timeout",
+        "reached": "Composer text fill and send-response wait registration.",
+        "failure": "Exact accessible button name Enviar was not found/enabled at line 521; no message POST/ambiguous-send response or real-deadline recovery oracle reached."
+      },
+      {
+        "test": "e2e/timeline.spec.ts:205",
+        "name": "130-message multi-round recovery",
+        "result": "failed; 6.3s",
+        "reached": "Pending-update notice was absent after recovery wait.",
+        "failure": "One role=alert remained (expected count zero; 5s timeout) at line 223; audit and final message-ID equality assertions were not reached."
+      }
+    ],
+    "nativeInstagramOracles": {
+      "reached": [
+        "freshness verification setup",
+        "synthetic fixture seed",
+        "login response 200 and secure HttpOnly SameSite=None cookie assertion",
+        "browser Instagram authorize URL parameter assertions",
+        "BFF OAuth callback 303 plus Cache-Control no-store and Referrer-Policy no-referrer assertions",
+        "confirmation UI and click",
+        "provider-attempt fixture endpoint 200 with exactly one attempt"
+      ],
+      "decisiveState": {
+        "expected": {
+          "status": "MAPPED_PENDING_RECEIPT",
+          "subscriptionState": "SUBSCRIBED",
+          "subscriptionRequests": 1
+        },
+        "actual": {
+          "status": "CANDIDATE_READY",
+          "subscriptionState": "NOT_STARTED",
+          "subscriptionRequests": 0
+        }
+      },
+      "unreached": [
+        "attempt secret-redaction assertion",
+        "connected-account card and in-progress UI",
+        "10.5s wait and native subscription GET verification",
+        "provider subscription POST count and receipt-before-verification observation",
+        "account B authorization and cross-account isolation",
+        "forged credential-boundary assertions",
+        "Inbox WSS connection and account-scoped incoming frames",
+        "Instagram native outbound replies",
+        "held native HTTPS accepted/uncertain reply response, body hash and client-state counters",
+        "recovery and operator-scope assertions"
+      ]
+    },
+    "cleanup": {
+      "validationContainerStopped": true,
+      "validationContainerRemoved": true,
+      "validationNetworkRemoved": true,
+      "removedValidationVolumes": [
+        "leadshug_channels_validation_leadshug_arquivos",
+        "leadshug_channels_validation_channels_api_workspace",
+        "leadshug_channels_validation_leadshug_pg_data",
+        "leadshug_channels_validation_channels_npm_cache",
+        "leadshug_channels_validation_channels_web_workspace",
+        "leadshug_channels_validation_channels_web_node_modules",
+        "leadshug_channels_validation_channels_api_node_modules",
+        "leadshug_channels_validation_channels_playwright_cache",
+        "leadshug_channels_validation_validation_pg_data"
+      ],
+      "volumeCount": 9
+    },
+    "logPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser104-browser.log",
+    "logBytes": 89491,
+    "logSha256": "e101903fddbff9706a010696114eccb40440d6734b78b2b3cb8fc2477733df40"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "CP5 serialized source-only operational handoff prepared for dispatch after Web105 terminal qualification",
+  "state": "Prepared, NOT dispatched; no code writer authorization concurrent with Web105 or canonical freeze.",
+  "authority": "Already-approved ST-IG-03 v1.3 test surfaces; no runtime/private/provider authority.",
+  "sourcesRead": [
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "TODO sections851-854",
+    "prior read-only planning94"
+  ],
+  "candidateOwnedNew": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "fixture": {
+    "tenants": 2,
+    "businessUnits": 2,
+    "conversationsPerBu": 10000,
+    "instagramAccountsPerBu": 12,
+    "waBusinessResourcesPerBu": 1,
+    "waAdaptersPerResource": 2,
+    "identity": "Use actual OAuth callback/confirmation and encrypted credential owners for24 accounts;6 legitimate authorized actors (3perBU,4accounts/actor) stay within actor10/hour andBU30/hour. No budget bypass or createdAt rewrite.",
+    "bulk": "Chunked750-row native PG seeding for20k canonical contacts/identities/conversations/routes referencing actual scoped account owners and current credentials; maintain unique relation and current-resource original IN proof. No per-row externalHTTP/crypto transaction.",
+    "foreignScope": "Both tenants have real current grants; all lookup/list/options negative scope checks operate on same20k cohort."
+  },
+  "EPS": {
+    "samples": "5warmup then5roundsx20 clients for each actual ID lookup/reply-options/list50 class; retain100latencies/class and deterministic percentile calculation",
+    "bounds": {
+      "lookupP95Ms": 1000,
+      "replyOptionsP95Ms": 1000,
+      "list50P95Ms": 2000,
+      "domainQueriesPerPageMax": 8,
+      "externalHttpRequests": 0
+    },
+    "oracles": [
+      "Assert exact IDs/cardinality/cursor/next-page/no mixedBU ownership, not only response200",
+      "Native query events count full domain page query; no request-specific contamination. Capture authoritative actual query/parameters for EXPLAIN JSON with index/noN+1 and correct cohort cardinality",
+      "Record hardware CPU/memory,Node/Prisma/Postgres versions,actual disposable DB image, sample count/p95/query counts within synthetic runner; never operational introspection"
+    ]
+  },
+  "BCI": {
+    "durableOwners": "Five waves20 same-key/same-payload OAuth and first-send requests; one durable claim/POST/acceptance per wave, mismatched payload409. Real PG barriers and actual services/HTTPfake; notransactionmock.",
+    "ingress": "20 concurrent signed replays ofsameevent →onepersistedmessage/unread increment; wrongsignature/crossscope no effects.",
+    "resourceClaims": "20 concurrent distinct BU/adapter claims on one provider resource →one committed owner, explicit conflicts and no orphan ownership.",
+    "ordinary": "Keep existing ordinary→ordinary concurrency; assert single-use each claim and initial↔ordinary exclusion, no global single ordinary admission or postterminalrequest-key replay promise. Unknown/accepted local-only recovery neverreposts."
+  },
+  "RLS": {
+    "rounds": 5,
+    "concurrentReaders": 20,
+    "concurrentSignedMessages": 20,
+    "sameCohort": true,
+    "oracles": [
+      "Zero unexpected errors/deadlocks/pending blockers",
+      "Exact isolation,resource/routes,message/unread/dedup/provider effects and existing read budgets aftereveryround",
+      "One1000-text-update signedbatch accepts ALL <=15000ms (monotonic measure); fullreplay0neweffects. No cap/slice/drop orpartial200."
+    ]
+  },
+  "FRC": "Complete native HTTPS Playwright UI98/current all evidence remains required: A-B-A/inverseorder/doubleclick/popupcancel/reload/storageunavailable/other-account-IN withopen draft. Do not replacewithbackend/unit checks.",
+  "proof": "Only canonical disposable runner after terminal source and explicit current source/input freeze; no selectedgreen substitute. Separate actual artifact JSON from plannednumbers. Failure preserves originalbudgets and requires causal correction.",
+  "remaining": "Current complete ALL, primarySUBPROTO01, pendingUTF8/privacyhumanadmissions, independentaudit/security/TQA/cutover/final and approved CP6 realproof unwaived.",
+  "profile": "Operational / Coder",
+  "baseline": "To be root-qualified Web105 terminal manifest before dispatch; new test absence must be verified by exact path only.",
+  "ownedNew": [
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "inputs": [
+    "Full current governing TODO, particularly normative pcv frozen contract",
+    "cp5-scale-concurrency-prospective-plan.json",
+    "cp4-source103-terminal-manifest.json for positive public source paths",
+    "api-app/test/helpers.ts",
+    "api-app/test/instagram-cp3-query-boundaries.e2e-spec.ts",
+    "api-app/test/instagram-cp3-locks.e2e-spec.ts",
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/test/initial-message.e2e-spec.ts",
+    "api-app/test/number-onboarding-pcv.e2e-spec.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/vitest.config.e2e.ts",
+    "scripts/test-channels-local.sh",
+    "scripts/check-channels-ci-parity.py"
+  ],
+  "requirements": [
+    "One faithful new native Nest/PostgreSQL spec, no changes to existing tests or production/config. Test runner already includes test/**/*.e2e-spec.ts and canonical all auto-executes it; no parity/runner change needed.",
+    "All workload numbers/thresholds in original normative contract remain; no declarations substituted for actual executable assertions. Setup may have justified bounded explicit timeout in this NEW spec only; existing limits and measured15s batch threshold unchanged.",
+    "Use actual owners/services/HTTP requests and fixed-purpose provider HTTP fake. Existing helpers available for legitimate grants; never reuse query-boundaries createdAt budget bypass. No quota/lease/deadline rewrite, transaction implementation mocks, synthetic credential shortcuts or fake BFF.",
+    "Performance query evidence separates individual page query counts from concurrent aggregate latency. Assert actual returned IDs/cardinality/cursor/context/scoping, exact unique-route association, no provider effects. Do not divide aggregate query count to hide a per-page N+1. EXPLAIN measured native SQL with actual synthetic bound parameters and realistic20k cohort; no force-index setting/optimizer disable.",
+    "Capture hardware/version evidence ONLY from inside canonical disposable runner; no host process/env or operational runtime inspection. Evidence console JSON labels actual sample counts/percentiles/query counts/plan facts, not plannednumbers.",
+    "BCI durable OAuth waves include actual same-key reservation/callback/confirmation behavior and exact single effect counters, differingpayload409. Firstsend existing native pattern may be reproduced with owned canonical fixture without modifying protected current files. Native PG waits/barriers with finallyrelease/settle, no mock transactions; all20requests genuinely in flight. Preserve original ordinary concurrency semantics, prove each claim single-use and initial-exclusion rather than falsely require a globalordinary lock.",
+    "All20k cohorts remain present during samecohort RLS read+IN bursts and1000batch/replay. Do not clear DB between measured classes to reduce cohort; cleanup after suite only. Separate extra owned synthetic resourceclaim contexts allowed within same fixture/test, never operational BUs.",
+    "If a threshold/fixture/schema/service question blocks exact implementation, report concrete public source evidence; do not guess/relax or silently mark pass. Entire expected suite must be implemented; no todo/skipped/conditionalgreen placeholders."
+  ],
+  "limits": "Single sourcewriter after root dispatch only. New exact admitted test path only. Root owns Foundation. No tests/build/lint/npm/Node/docker/network/provider/runtime/Meta/private/.env/process/volumes/Git commands/broad discovery/worktree/copy/goals. Read exact R/AGENTS and named instructions, manifest positive public paths. Do not alter source while validator freezes. Report candidate bytes/hash, full obligation mapping, testsNOTRUN."
+}

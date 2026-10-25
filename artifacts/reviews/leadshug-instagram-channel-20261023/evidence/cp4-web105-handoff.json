@@ -1,0 +1,41 @@
+{
+  "kind": "CP4 Web105 faithful browser correction handoff",
+  "profile": "Operational / Coder",
+  "scope": [
+    "react",
+    "vite",
+    "nestjs",
+    "postgresql",
+    "prisma",
+    "docker"
+  ],
+  "authority": "ST-IG-03 v1.3 current implementation; root matched Browser104 all frozen bytes and terminal outputs, freeze ended. No new functional direction.",
+  "baseline": "cp4-source103-terminal-manifest.json",
+  "owned": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "observed": "cp4-browser104-root-reconciliation.json: 85/90 actual Playwright pass, 5 failures. API100 435unit/616integration and Web102 70unit pass scoped unchanged code; no full current ALL pass.",
+  "obligations": [
+    {
+      "id": "105-HOLD",
+      "change": "CT88 return A has two routes; reselect same explicit Evolution route before fill after A-B-A, do not restore production auto fallback. Wrap all work after native hold acquisition in try/finally owned release. Preserve response wait/status/rawbodyhash/bodyread/old-response-new-draft oracle and original30s. The later CT205 hold400 is leftover heldConversationId from CT88, not signed incoming/phone data failure; no API fixture edits. Preserve 5x20 mixed waves/counts/effects/audit/UNKNOWN/read-only/native hashes and103 tab navigation."
+    },
+    {
+      "id": "105-CONFIRM",
+      "change": "Native IG connectAccount currently clicks Confirmar conta then races fixtureattempt read. Register actual POST /api/bff/instagram-authorizations/:id/confirm response wait beforeclick, await actual response/finished and assert200 then read persistedattempt. Buttonclick doesnotprove successfulconfirm. Preserve all OAuth303/cookies/realBFF/actualclients/PG/signedIN/rawWSS/2accounts-samepeer/120s/10.5scooldowns/10A+1B effects and all negative oracles; no fake BFF/delay."
+    },
+    {
+      "id": "105-LABEL",
+      "change": "Restore product submit actual accessible label Enviar (pending Enviando…) for existing protected start-conversation504 exact oracle; update only admitted CT/IG spec locators accordingly. Preserve contact+attendant contiguous accessible name on Inbox conversationbutton while retaining visible/accessibly readable business account identity (e.g meaningful aria-label recipient,attendant,account). Existing protected start/telas/timeline tests remain byteexact; no fake hidden duplicatebuttons."
+    },
+    {
+      "id": "105-READ-OWNERSHIP",
+      "change": "Parent Inbox initial start-options GET has no reconnect retry, child reply-options alone has it. Add bounded metadata-only parent retry on real reconnect/currentepoch after options error. Preserve composer instance/currentdraft/revision/explicitselection/state while pending; successful safeDTO clears only its own older options error never newer SEND or uncertainty. Share parent latest-read intent clock across initial/refresh/reconnect, invalidate stale GET when receiveOptions mutation publishes. Full actor/BU/conversation/generation/navigation fences; consider coherent child GET clock too if necessary. Do not invalidate actionclock/inflight send or clear/remount state just for metadata. Alertbody104 notcaptured, so do not fabricate exactalertcause. Keep one versioned parent alert and timeline544 SENDerror arbitration."
+    }
+  ],
+  "forbidden": "No other product paths, API/fixtures, protected legacy tests, configs, pending UTF8/privacy changes, goals, tests/build/lint/hostNode/npm/docker/network/runtime/provider/Meta/private/env/operational data. NO Git commands, no broad path discovery, no parent/backups, no worktree/copy. Read exact absolute local AGENTS and referenced governing instructions. Only positive public manifest/source reads. No Foundation writes. Sole sourcewriter; root owns docs.",
+  "result": "Complete source-only correction; exact four hashes/bytes and substantive report mapping obligations; tests NOTRUN. Root independent328source/protected/index qualification before separate canonical validation. Stop to report any additional path need, do not guess authority."
+}

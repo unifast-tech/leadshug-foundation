@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** API100 passes435unit/616integration; Web102 passes tsc/Vite/70unit after exact JSX101 correction. Channel103 navigation source is terminal/root-qualified; run exactly one frozen whole-browser104 and reconcile actual native journeys. FinalcurrentALL/primary/pendinghuman/CP5/CP6/assurance/real gates remain open.
+- **Next exact step:** Web105/105a/105b terminal/root-qualified328sources; run exactlyONE whole canonical browser106 with all90native scenarios, frozen sources/currentTODO/publicinputs/protections/rootindex. Root reconcile actual results before CP5 source/currentfullALL and remaining gates.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** Browser93 completed actual API/Web builds,31migrations and all90Playwright:64pass/26fail. Empty-WA initial-flow, pending WA projection, V1 fixture context and synthetic fetch DI capture require correction; remaining failures need causal triage. API85 remains433unit/610of611E2E; no current complete ALL or native Instagram acceptance.
+- **Why this state now:** Browser104 actual85/90Playwright,5fail; API100435unit/616integration and Web10270unit passed within scoped unchanged sources. Remaining native workflow/recovery defects require admitted consumer/test correction; no current whole ALL or native Instagram acceptance.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** Root independently reconciled Browser93 all325sources/fullT/1036positiveinputs/34immutable rows/3exceptions/rootindex/fouroutputs. ONEcanonicalbrowser exit1:builds/31migrations PASS;64/90Playwright passed,26failed in23.9m; cleanup complete. Native Instagram failed at OAuth exchange and later oracles were not reached. No current ALL/feature acceptance.
+- **Last confirmed truth:** Browser104 root independently matches328sources/fullT/1111positiveinputs/34immutable/threeexceptions/rootindex/fouroutputs. ONEcanonicalbrowser exit1:26parity/APIbuild/31migrations/Webbuild PASS;85/90Playwright in17.8m, owned cleanup complete. Later Instagram oracles remain unreached after confirmation read race; no feature acceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -2028,3 +2028,23 @@ Root matched328sources/fullT/1096positiveinputs/34immutable/threeexceptions/root
 ### Channel103 terminal — complete canonical browser104 freeze
 
 Root reversal proves exactly four tab-navigation lines restore original98transport spec,327other source files/protected candidates/rootindex unchanged. `evidence/cp4-channel103-root-qualification.json` records source-only qualification. All writers terminal. Freeze328sources/fullcurrentTODO/positive publicinputs/34immutable/threeexceptions/rootindex for exactlyONE `bash scripts/test-channels-local.sh browser` invocation104. Validator owns onlyfourunique104before/rawlog/after/result outputs. Preserve all90scenarios,currentnativeHTTPS/fetchDI/rawWSS/realBFF/PG/providerHTTPboundary/responsehashes; no skips,threshold/timeout/assertion edits,retry/autofix,source/T/inputwrites,private/operational/runtime/Meta/Git expansion. Root matchesactualreached/unreachedoracles/allbytes beforethaw. Browser target buildsAPI/migratesdisposablePG/buildsWeb/executesALLPlaywright; APIunit/integration/Webunit notpartofthis target. API100/Web102proofscopedtocurrentunchangedcode, not a finalcurrentALL pass. Allprimary/pendinghuman/CP5/CP6/independentassurance/physicalgates remain.
+
+
+### Browser104 terminal/root reconciled — faithful Web105 correction
+
+`evidence/cp4-browser104-root-reconciliation.json` independently matches all frozen bytes and actual outputs:85/90Playwright,5 failures. CT return-context needs explicit route reselection and owned finally-release; later hold400 is contamination, not incoming fixture evidence. IG confirm click did not prove native POST completion; await actual response before persisted read. Restore compatible Enviar/contact+attendant accessibility without editing protected tests. Parent metadata start-options needs bounded real-reconnect/current-read ownership preserving drafts/selection/send errors. `evidence/cp4-web105-handoff.json` serializes one routine Operational/Coder on exactly four already-admitted Web paths, source only. No source test execution/private/runtime/Meta/Git authority, no pending proposal application. Root independently qualifies all328sources/protections/index before canonical validation. Final current ALL/primary/pendinghuman/CP5/CP6/independent assurance/real gates remain mandatory.
+
+
+### Web105 terminal/root-qualified — narrow105a static completion
+
+Root independently matched four reported hashes/324 other known sources/34immutable/threeexceptions/rootindex and all328currentpaths; `evidence/cp4-web105-root-qualification.json` records source-only qualification. Actual confirmation POST sync/compatibleaccessibility/parentread ownership improved; no tests run. Static gaps remain: returned route options need actualDOM3-option readiness; fivewave holdcleanup starts too late to cover fill/send/pending errors; child metadata and explicit options GET clocks are separate. Same sole executor may complete only composer and transport spec per `evidence/cp4-web105a-handoff.json`, preserving all oracles/budgets/action fences. No scope/runtime/private/Meta/Git/test execution expansion. After terminal rootqualification, current canonical browser106 then later fullALL/CP5/remaininggates.
+
+
+### Web105a terminal — same-path reconnect epoch completion105b
+
+Source review confirms actual3option readiness/exactEvolutiontuple, posthold finally scope/listenercleanup and one child options-read clock independentofsend. Child reconnect guard still accepts any historical nonzeroepoch, allowing a new failure to retry without a new reconnect. Sole executor completes only existing composer with per-failed-read captured epoch/once-per-later-real-epoch fence, preserving draft/selection/review/action ownership. `evidence/cp4-web105a-root-static-review.json` does not claim a frozen currentcomposer while105b edits; finalall328/protection/index qualification follows terminalreport. No newpath/scope/test/runtime/private authority.
+
+
+### Web105b terminal — complete canonical browser106 freeze
+
+Root independently matches final composer17097bytes/cfda342fc8d0d8b3ffdab8f8b393bb7f8da4557d1bb8f6c4e87230d19cfb7f62,327otherknownsources,328total,34immutable/threeexceptions/rootindex. `evidence/cp4-web105b-root-qualification.json` is static-only; no test pass inferred. All sourcewriters terminal. Freeze328sources/fullcurrentTODO/positive publicinputs/protections/rootindex for exactlyONE `bash scripts/test-channels-local.sh browser` invocation106; validator owns onlyfourunique106outputs and canonical disposable runtime/build/cleanup, no source/T/input mutation/retry/autofix/filter/assertion/timeout/threshold change/private/operational/Meta/Git expansion. All90Playwright nativejourneys remain, no selectedgreen substitute. Root independently matches actual outputs/reached-unreachedoracles before thaw. API100/Web102 evidence scoped unchangedcode; finalcurrentALL/primary/pendinghuman/CP5/CP6/independentassurance/realgates stayopen.

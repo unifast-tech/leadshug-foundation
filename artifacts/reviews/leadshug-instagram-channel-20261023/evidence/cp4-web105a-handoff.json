@@ -1,0 +1,14 @@
+{
+  "kind": "Web105a narrow terminal-source followup",
+  "baseline": "cp4-source105-terminal-manifest.json",
+  "owned": [
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/e2e/channel-transport.spec.ts"
+  ],
+  "corrections": [
+    "Areturn explicit route: expect3options before evaluateAll, match currentroutebyadapterandselectedtuple; do not auto fallback inproduct.",
+    "Fivewave test: immediately after holdNativeReply enters try/finally covering all listener/wait/fill/click/pending/20submits/release/rawresponse/audit operations. Cleanup releaseshold even fill/pending fails, detaches listener and settles/catches observer waits without hiding primaryerror. Preserve30s/all5x20/oracles. ExistingfirstA-B-A cleanup also must cleanfetchinstrumentation/listeners ifabort where feasible withoutdroppingprimaryerror.",
+    "Composer GETownership: one dedicated options read clock across initial/explicitrefresh/reconnect. Separate from context/action intent so metadata GET neverinvalidates in-flight SEND. Fence old read success/failure/finally against latest read. Reconnect metadata never resets selection/draft/review or actions; explicitrefresh deliberate reselect/reviewsemantics preserved. Invalidate read clock on unmount/context. Prevent any stale metadata overwrite afterexplicitrefresh/selectioncurrenttuple."
+  ],
+  "limits": "Original Web105 fourpath boundary maintained; this followup onlytwo named. Nootherwrites/Gitcommands/discovery/tests/build/lint/npm/docker/network/runtime/private/Meta/goal/Foundationwrites. Complete sourceonly hashes/report/testsNOTRUN. Rootownsdocs."
+}
