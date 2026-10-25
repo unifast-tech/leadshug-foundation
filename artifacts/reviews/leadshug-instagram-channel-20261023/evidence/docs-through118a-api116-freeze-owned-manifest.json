@@ -1,0 +1,61 @@
+{
+  "kind": "Root owned Foundation only manifest through118a API116freeze",
+  "files": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source118-root-static-completion.json",
+      "bytes": 608,
+      "sha256": "ff8526dee244e70055f54b9ed887428219c06ae043af23dff97bff5f18a07ba7"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source118a-terminal-manifest.json",
+      "bytes": 61546,
+      "sha256": "af9db59396031f4f35ec3a2d98423015b5c817e1f2850c819f42cf6b349f5f56"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source118a-root-qualification.json",
+      "bytes": 1558,
+      "sha256": "0dd4abf74246b79a66feda5e5ee616476a596e2928c6f4801dd33e794539b4f2"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-plan.json",
+      "bytes": 1398,
+      "sha256": "0c9c9f12a0aaeb3edcd41c75e0567ab0548d4850838c9e7fe106bfb28c3478ff"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-frozen-manifest.json",
+      "bytes": 340053,
+      "sha256": "c2aae7e88a1892950d5c1927b867ecea1db898294e473cc9356e486e25193415"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-api116-ready.json",
+      "bytes": 870,
+      "sha256": "dca14935d54df5124603a9f421eb9d4d5f47e7e741c3018b62cd50cc9a68a11d"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-api116-ready.json",
+      "bytes": 941,
+      "sha256": "643dda3027cb2664208db1b82f42a4601584ef1967da2360ba6a426b63baf5b2"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-adherence119-ready.json",
+      "bytes": 964,
+      "sha256": "c3092e2bce53d0e79173bdeed8411978898f7a35a3760afc90b8f37464d78de6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web117-readonly-concrete-guidance.json",
+      "bytes": 2207,
+      "sha256": "5ba5b0822e9a401d404e6110f1f195037200c7495167bcc5546415a7155dd2cb"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/primary-subscription119-readonly-access-note.json",
+      "bytes": 1173,
+      "sha256": "e5219dcfebb93dabf5f513fb082cd889d2f3231b079cf8a2ba3b01bf78eb091e"
+    },
+    {
+      "path": "todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 383101,
+      "sha256": "cac29233deb8c3694da35776e014813f6124ed8dbc52541897554f919bf18d6a"
+    }
+  ],
+  "scope": "Commit exactunchangedfrozenT/sourcequalification/plans andnewderivedrouting/guidance/docs; no source/rootGit/privatefiles changes, source333frozen during API116/119B/C."
+}

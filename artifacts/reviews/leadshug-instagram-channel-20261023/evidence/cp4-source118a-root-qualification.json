@@ -1,0 +1,37 @@
+{
+  "kind": "Independent root terminal118a source qualification",
+  "candidates": [
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 87828,
+      "sha256": "c382942b7794bdc6f7de46ae59757c28f2b6ac7180c0c62d0758b29a17e2243c"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69247,
+      "sha256": "4295a591e926a7e0e21d177387f1b9d06e12a1e4ae35ff92ad5dfccf6b55b947"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14269,
+      "sha256": "568b07f91732d93ff7b7e5c86e95bfe7759047deefc0845ec81211284171552a"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 39319,
+      "sha256": "875e4b7251c403f5ea563390ed6da7fd7b3f5bff0ee9c9a612c991efe449a675"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 24867,
+      "sha256": "64e535d0c87145ce9930be813d51ccda9c4e31a6eb695d8c8b8474d8675a9970"
+    }
+  ],
+  "otherKnownSourcesExact": 328,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Eager successorUPDATE handledbeforePGwaiter; completed CANCELLED mapping label withunchangedowner/appscopeproof; actualalias/index/predicate/loops+removedscanwork protection; gatewaydurablechannel/resource snapshots and3providercounters. Rootcaughtmissinggatewayimports and118afixedtwoimports only. Native/compiler/currentALL/freshreviewstillrequired."
+}

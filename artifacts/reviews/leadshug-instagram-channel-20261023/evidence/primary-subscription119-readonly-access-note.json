@@ -1,0 +1,20 @@
+{
+  "kind": "Primary protocol readonly access note119",
+  "scope": "Documentation browsing only; no provider/account/token/runtime access",
+  "officialRequests": [
+    {
+      "url": "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/webhooks",
+      "outcome": "not accessible via web tool"
+    },
+    {
+      "url": "https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/messaging-api",
+      "outcome": "HTTP429 Too Many Requests"
+    },
+    {
+      "url": "https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/subscribed_apps",
+      "outcome": "not accessible via web tool"
+    }
+  ],
+  "search": "Official-domain searches returned no qualifying primary response-shape/appnamespace/completeness/emptyabsence contract. Third-party searchhits were not relied upon.",
+  "authority": "No protocoldecision/config/source/mock/positiveGET assertion changed. Existing UNKNOWN/failclosed/no speculativePOST preserved. Later separatelyreviewed/approved bounded actualresource query or authoritativeprimaryspec stillrequired; thisnote is not protocolproof."
+}

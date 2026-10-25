@@ -1,0 +1,14 @@
+{
+  "kind": "117 readonly concrete consumer implementation guidance",
+  "state": "PREPARED ONLY; no sourcewrites while API116/119B/C freezes active",
+  "basis": [
+    "cp4-web117-handoff-prepared.json",
+    "cp4-web117-fixture-scope-resolution.json"
+  ],
+  "readOnlyPlanner": "instagram_native109; no edits/execution",
+  "D04": "Extend existing Inbox startOptionsIntent ref into a shared requestSTART ticket allocator. Parent/reconnect plus PrimeiraMensagem.reloadOptions plus OrdinaryRecovery.refresh allocate immediately BEFOREGET, capture actor/BU/conversation/generation/navigation and publish only matchingcurrentticket/context. Completion neverincrementsclock. Send/reconcile/ack beginsinvalidatepriorreads synchronously; followingGET newticket. Existingcallback/refprops, no genericframework.",
+  "D05": "Key OrdinaryRecovery by admission.id +existingactor/BU/conversation/navigation; existingmount/actionowner fences reset replacementbusy/risk/notices/errors and blockoldfinally.",
+  "D08": "One existingdraftowner implementation in instagramState consumedby InstagramReplyComposer; fulltupleMap andactor/BU/conversationsecondaryindex. Keyedget/set/revisionclear andconversation-only priordrafts; no retainedhistoryscan/copy/tick or eviction. Preserve alltuple/revision/restore/actorboundaries. 10krepresentativeactualownercohort verifies behavior/boundedoperation counts and honestmeasurements, no inventedlatencySLO or mirror-only helpertest.",
+  "D06": "Numeros has eu.id, passactorId. Captureexact safe actor/BU/op/channel/generation/key/body beforePOST inref/state, optional sessionstorage secondary. Explicitrecover EXACTsamekey/body, thenactualGET/newcurrentcontextobservation; no automaticnewattempt/key/providerretry/redirectonuncertainty. No OAuthURL/state/code/token/credentialstorage. Same-mount fallbackmemory; fullreloadwithoutanybrowserstorage is physically unrecoverablewithcurrentAPI, explainhonestly; no newserverroute/exactlyonceclaim.",
+  "D02": "At explicitlaterrootdispatch, extend only admitted timeline-fixtures.cjs fixed55accountApeerallowlist, genuineHMACforwarding/actualNestPG; preservealloldaccountB/negative/countersemantics. No genericseedroute/arbitraryrecipient."
+}

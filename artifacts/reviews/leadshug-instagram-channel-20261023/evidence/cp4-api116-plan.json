@@ -1,0 +1,17 @@
+{
+  "kind": "Current canonical full API diagnostic execution116",
+  "state": "READY once rootdispatch; allsourcewriters/reviewsterminal",
+  "profile": "Operational / Coder implementation-validation; source readonly",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-api.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-result.json"
+  ],
+  "sourceManifest": "cp4-source118a-terminal-manifest.json",
+  "policy": "One canonical full API only, no filter/retry/edit/autofix/timing/assertion weakening. Current principal checkout readonlysource, actualowneddisposableDB/fakeproviders/build/test/cleanup. Private dotenv/operational data/Meta/network-provider/Gitwrite access forbidden; runner publicmasks only. Canonicalrunner fixed resourceinventory/teardown allowed. Exactroot3gitlink readonlyverification allowed. Record currentCP5/gatewaycases ifactuallyreached; finalWeb/browser/ALL/physicalgatesremainopen."
+}

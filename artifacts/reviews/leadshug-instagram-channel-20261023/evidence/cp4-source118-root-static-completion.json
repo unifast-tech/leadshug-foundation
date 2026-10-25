@@ -1,0 +1,10 @@
+{
+  "kind": "Root static118 source completion beforeexecution",
+  "qualification": "118 report received; sourceproof only",
+  "finding": "Gateway providerCallSnapshot uses exported metaFake/evolutionFake but helpers import lacks them; compiledefect staticallyconfirmed, no testexecution inferred.",
+  "routing": "same existing approved gateway native path; sole118a staticwriter addtwo namedimports only; allother118paths readonly.",
+  "owned": [
+    "api-app/test/instagram-gateway-boundary.e2e-spec.ts"
+  ],
+  "noNewAuthority": "No otheredit/testing/runtime/private/operational/provider/Meta/Git scope."
+}
