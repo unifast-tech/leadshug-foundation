@@ -1,0 +1,357 @@
+{
+  "kind": "cp4-api155-result",
+  "timestampUtc": "2026-10-25T16:16:53.331567+00:00",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 0,
+  "naturalTermination": true,
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "scope": "focused API Instagram target only; no Web/browser/full-ALL/feature/security/CP6 acceptance claim",
+  "reachedStages": [
+    "canonical guard and public source bind/mask checks",
+    "migrations: 31 applied/verified and database up to date",
+    "API ESLint passed",
+    "Nest build passed",
+    "API unit suite: 40 files/453 tests passed (4.63s)",
+    "focused Instagram E2E: 29 files/170 tests passed (563.59s)",
+    "CP5 scale/concurrency: 8 tests passed (281.395s)"
+  ],
+  "unreachedOrOutOfScope": [
+    "Web build/unit",
+    "browser suite",
+    "full ALL target"
+  ],
+  "firstDecisiveFailure": null,
+  "cp5Actual": {
+    "scaleConcurrencyTests": 8,
+    "eps": {
+      "cohort": {
+        "tenants": 2,
+        "businessUnits": 2,
+        "conversationsPerBu": [
+          10000,
+          10000
+        ],
+        "instagramAccountsPerBu": [
+          12,
+          12
+        ],
+        "waBusinessResourcesPerBu": 1,
+        "waAdaptersPerResource": [
+          "OFICIAL",
+          "NAO_OFICIAL"
+        ]
+      },
+      "samplesPerClass": 100,
+      "warmupRequestsPerClass": 5,
+      "rounds": 5,
+      "clientsPerRound": 20,
+      "p95Ms": {
+        "lookup": 86.06038499998976,
+        "replyOptions": 65.80883500000346,
+        "listPage1": 63.89342300000135,
+        "listPage2": 60.846114000014495
+      },
+      "thresholdsMs": {
+        "lookup": 1000,
+        "replyOptions": 1000,
+        "list50": 2000
+      },
+      "aggregateDomainQueries": 2800,
+      "externalProviderHttpCalls": 0,
+      "metaProviderCalls": 0,
+      "evolutionProviderCalls": 0,
+      "cohortRetained": true,
+      "planSummary": {
+        "BFF-list-page-route-display": [
+          {
+            "Node Type": "Bitmap Heap Scan",
+            "Relation Name": "conversations",
+            "Alias": "cv"
+          },
+          {
+            "Node Type": "Bitmap Index Scan",
+            "Index Name": "conversations_pkey",
+            "Index Cond": "(id = ANY ('<value>'::text[]))"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "conversation_routes",
+            "Alias": "r",
+            "Index Name": "conversation_routes_conversation_created_id_idx",
+            "Index Cond": "(conversation_id = cv.id)"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "conversation_routes",
+            "Alias": "rr",
+            "Index Name": "conversation_routes_conversation_created_id_idx",
+            "Index Cond": "(conversation_id = cv.id)"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "business_channel_identities",
+            "Alias": "b",
+            "Index Name": "business_channel_identities_bu_platform_idx",
+            "Index Cond": "((bu_id = r.bu_id) AND (platform = r.platform))"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "contact_identities",
+            "Alias": "ci",
+            "Index Name": "contact_identities_pkey",
+            "Index Cond": "(id = r.contact_identity_id)"
+          },
+          {
+            "Node Type": "Seq Scan",
+            "Relation Name": "bu_channels",
+            "Alias": "c"
+          },
+          {
+            "Node Type": "Seq Scan",
+            "Relation Name": "provider_resource_identities",
+            "Alias": "pri"
+          },
+          {
+            "Node Type": "Seq Scan",
+            "Relation Name": "instagram_authorization_attempts",
+            "Alias": "ia"
+          }
+        ],
+        "BFF-thread-peer-owner-display": [
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "conversations",
+            "Alias": "cv",
+            "Index Name": "conversations_id_bu_id_contact_id_key",
+            "Index Cond": "(id = '<value>'::text)"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "conversation_routes",
+            "Alias": "r",
+            "Index Name": "conversation_routes_conversation_created_id_idx",
+            "Index Cond": "(conversation_id = '<value>'::text)"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "conversation_routes",
+            "Alias": "rr",
+            "Index Name": "conversation_routes_conversation_created_id_idx",
+            "Index Cond": "(conversation_id = cv.id)"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "business_channel_identities",
+            "Alias": "b",
+            "Index Name": "business_channel_identities_bu_platform_idx",
+            "Index Cond": "((bu_id = r.bu_id) AND (platform = r.platform))"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "contact_identities",
+            "Alias": "ci",
+            "Index Name": "contact_identities_contact_id_bu_id_idx",
+            "Index Cond": "((contact_id = r.contact_id) AND (bu_id = r.bu_id))"
+          },
+          {
+            "Node Type": "Seq Scan",
+            "Relation Name": "bu_channels",
+            "Alias": "c"
+          },
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "provider_resource_identities",
+            "Alias": "pri",
+            "Index Name": "provider_resource_identities_current_channel_id_idx",
+            "Index Cond": "(current_channel_id = c.id)"
+          },
+          {
+            "Node Type": "Seq Scan",
+            "Relation Name": "instagram_authorization_attempts",
+            "Alias": "ia"
+          }
+        ],
+        "BFF-reply-options-route": [
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "conversation_routes",
+            "Alias": "conversation_routes",
+            "Index Name": "conversation_routes_conversation_created_id_idx",
+            "Index Cond": "(conversation_id = '<value>'::text)"
+          }
+        ],
+        "BFF-reply-options-peer": [
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "contact_identities",
+            "Alias": "contact_identities",
+            "Index Name": "contact_identities_contact_id_bu_id_idx",
+            "Index Cond": "((contact_id = '<value>'::text) AND (bu_id = '<value>'::text))"
+          }
+        ],
+        "BFF-reply-options-owner": [
+          {
+            "Node Type": "Index Scan",
+            "Relation Name": "business_channel_identities",
+            "Alias": "business_channel_identities",
+            "Index Name": "business_channel_identities_id_bu_id_key",
+            "Index Cond": "((id = '<value>'::text) AND (bu_id = '<value>'::text))"
+          }
+        ]
+      },
+      "runtime": {
+        "cpuCount": 16,
+        "totalMemoryBytes": 12501020672,
+        "nodeVersion": "v22.23.3",
+        "cpuModel": "AMD Ryzen 7 5700X 8-Core Processor",
+        "prismaVersion": "6.19.3",
+        "postgres": {
+          "version": "PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+          "server_version": "16.15 (Debian 16.15-1.pgdg13+2)"
+        }
+      },
+      "resourceSample": {
+        "scope": "Own Vitest test-worker process and the current owned synthetic validation database; samples bracket this EPS case, outside individual request timers and isolated query-count slices.",
+        "elapsedMs": 6935.7086439999985,
+        "processCpuUsageDeltaMicroseconds": {
+          "user": 8357699,
+          "system": 1987299
+        },
+        "processMemoryDeltaBytes": {
+          "rss": -29286400,
+          "heapTotal": -76259328,
+          "heapUsed": -86852912,
+          "external": 918327,
+          "arrayBuffers": 575134
+        },
+        "databaseCounterDeltas": {
+          "committedTransactions": 8641,
+          "rolledBackTransactions": 0,
+          "blocksRead": 12,
+          "blocksHit": 1604201,
+          "tuplesReturned": 7630569,
+          "tuplesFetched": 405390,
+          "tuplesInserted": 1,
+          "tuplesUpdated": 3,
+          "tuplesDeleted": 0,
+          "temporaryFiles": 4,
+          "temporaryBytes": 10835568,
+          "deadlocks": 0,
+          "conflicts": 0
+        },
+        "databaseSizeBytesBeforeAfter": [
+          120675351,
+          120675351
+        ]
+      }
+    },
+    "oauthWaves": [
+      {
+        "wave": 0,
+        "reservationRequests": 20,
+        "durableAttempts": 1,
+        "subscriptionPosts": 1
+      },
+      {
+        "wave": 1,
+        "reservationRequests": 20,
+        "durableAttempts": 1,
+        "subscriptionPosts": 1
+      },
+      {
+        "wave": 2,
+        "reservationRequests": 20,
+        "durableAttempts": 1,
+        "subscriptionPosts": 1
+      },
+      {
+        "wave": 3,
+        "reservationRequests": 20,
+        "durableAttempts": 1,
+        "subscriptionPosts": 1
+      },
+      {
+        "wave": 4,
+        "reservationRequests": 20,
+        "durableAttempts": 1,
+        "subscriptionPosts": 1
+      }
+    ],
+    "replay": {
+      "requests": 20,
+      "persistedMessages": 1,
+      "unreadBefore": 1,
+      "unreadAfter": 2,
+      "invalidSignatureStatus": 401
+    },
+    "resourceClaims": {
+      "contenders": 20,
+      "unsettledClaimsAtRelease": 20,
+      "actualPostgresWaiters": 7,
+      "winners": 1,
+      "resourceOwnedConflicts": 19,
+      "claimDeadlockDelta": 0
+    },
+    "rls": {
+      "rounds": 5,
+      "readP95Ms": 13.601916999963578,
+      "concurrentReadP95Ms": 91.56380699999863,
+      "pendingBlockers": 0,
+      "deadlockBaseline": 0,
+      "deadlockDelta": 0
+    },
+    "batch": {
+      "submitted": 1000,
+      "accepted": 1000,
+      "elapsedMs": 4800.451325000031,
+      "maximumMs": 15000,
+      "replayElapsedMs": 3640.2091310000396,
+      "replayAdditionalMessages": 0,
+      "replayAdditionalUnread": 0,
+      "cohortRowsRetained": 20000,
+      "batchUnreadBefore": 1007,
+      "batchUnreadAfter": 2007
+    }
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "frozenState": {
+    "sources": 333,
+    "positiveInputs": 1241,
+    "protectedRows": 34,
+    "approvedExceptions": 5,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 427726,
+      "sha256": "ab75821f3092bb8fd2f309a6e899ac570af241479458b01baa1046876c68f81a"
+    },
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ]
+  },
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-before.json",
+      "bytes": 266261,
+      "sha256": "e2081d47db419637019cbbd3bb44ea8f43044eb9aea0dacbf6225c55324dc9a6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-api.log",
+      "bytes": 212380,
+      "sha256": "18c91a06dc81f08aefb2962c27aa5ec1e818fd15b155240e82f9a8e21e4b78f9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-after.json",
+      "bytes": 12341,
+      "sha256": "2f46dc9af7125b95b05bd59aba72c64383ac64398d75da2e7123f664d7925bf0"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "Corrected canonical public alias-name inventory after153",
+  "supersedesCountsOnly": "dependency-primary154-bulk-reconciliation.json; originalrequest/response retained; aliases3 were keyed by localalias ratherthan registryname",
+  "url": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+  "httpStatus": 200,
+  "requestNames": 579,
+  "reportedNames": [
+    "@vitest/mocker",
+    "brace-expansion",
+    "deepmerge-ts",
+    "esbuild",
+    "fast-uri",
+    "js-yaml",
+    "multer",
+    "proxy-addr",
+    "react-router",
+    "source-map-js",
+    "tinypool",
+    "vite",
+    "vitest"
+  ],
+  "advisoryObjects": 46,
+  "canonicalAliasBindings": [
+    {
+      "lock": "api-app/package-lock.json",
+      "path": "node_modules/string-width-cjs",
+      "registryName": "string-width",
+      "version": "4.2.3"
+    },
+    {
+      "lock": "api-app/package-lock.json",
+      "path": "node_modules/strip-ansi-cjs",
+      "registryName": "strip-ansi",
+      "version": "6.0.1"
+    },
+    {
+      "lock": "api-app/package-lock.json",
+      "path": "node_modules/wrap-ansi-cjs",
+      "registryName": "wrap-ansi",
+      "version": "7.0.0"
+    }
+  ],
+  "bodyParserReported": false,
+  "qsReported": false,
+  "qualification": "Unauthenticated official public metadata only. Read only two admitted publiclocks. Names/versions canonicalized through explicitlocknode.name; no npm/npmrc/env/installedcode/private/runtime/lockmutation. Not npm metavulnerability totals, exploit proof, or securityacceptance.",
+  "sources": [
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+    },
+    {
+      "path": "web-app/package-lock.json",
+      "bytes": 78215,
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/dependency-primary154b-bulk-request.json",
+      "bytes": 23764,
+      "sha256": "760eb9748e57de69494ae8db6bc2260921e2bf2bc2d218187924f33f5528d737"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/dependency-primary154b-bulk-response.json",
+      "bytes": 14880,
+      "sha256": "10f35cd764f11d76b7019356044dd3b1fda27e28fe90217a61a8fe825d84142c"
+    }
+  ],
+  "duplicateRangeQualification": "46 registry objects include multiple affected semver branches for same advisory. Do not report46 unique vulnerabilities or npm meta-vulnerability totals."
+}

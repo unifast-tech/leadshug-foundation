@@ -1,0 +1,181 @@
+{
+  "state": "READY frozen affected fullsource/T architecture review; parallel API155 readonly",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "sourceBodyCount": 15,
+  "frozenRows": [
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24910,
+      "sha256": "1090943b53ac7efa25fd66fd00a2628fca5434c06407d4d3c9f9f95a05211db6"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22427,
+      "sha256": "6322300e9bd82646f82716d423140539e96c509cee05e042687161e52a978dea"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/me.controller.ts",
+      "bytes": 10954,
+      "sha256": "83bd733e32d0aa8807a3c6a9954aedd7bed6b94ee9d34b5fcff6ce741b2d15d8"
+    },
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 24159,
+      "sha256": "2cf42aa70a2e7d537e2e0083ea5b0f96ccd8999385349255ee0f3586a8e78340"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 62387,
+      "sha256": "14621fe0cdc785799e219da1a2d403b3c1cbc55a041f002c0f1633194a149a17"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence150-api148-root-adjudication.json",
+      "bytes": 2683,
+      "sha256": "dbb0eb8fca8d23725a089162b8a27462b2c5e79f315d550440a2be301da258fd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence150d-raw.json",
+      "bytes": 5271,
+      "sha256": "335d56a463fc72cae50299fc85b785c679c203b27dcf19f0895ecf05b10af51b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-closed-package.md",
+      "bytes": 933205,
+      "sha256": "69d0512bcc18e80a0572a03c845b099a32d6d029d14ac8fa400c25bce0a9b6b7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-dispatch.json",
+      "bytes": 51562,
+      "sha256": "31072ff674dfc10e57c602210aa3917f176de94fd35be59e296c62b4141b443a"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-dispatch.md",
+      "bytes": 41949,
+      "sha256": "ecd1cad6d878f68900bfd2cdca181a49e1c7fe642fdc75f591e04a51a7b87f01"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-package.json",
+      "bytes": 11204,
+      "sha256": "cf67d37c8e68d32f65afd8b679a07e165db2a2cba4ae7584f881828f11226e02"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-prompt-preflight.json",
+      "bytes": 88,
+      "sha256": "d3a54fdf8f68990659ee1eed261ee4a6077d3edbb1e3d92b994bbbbd057b20bd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/api151-abstract-unit-root-qualification.json",
+      "bytes": 716,
+      "sha256": "b7c70e27583212fc2b9deb3f10b6a9bfc264d2de3a05329547801b4238156e0c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-api155-ready.json",
+      "bytes": 871,
+      "sha256": "ae94cc7549ccd9991c1abcdf6c2de5f1a8c7120cfabafebe7258600111aa116c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser153-root-qualification.json",
+      "bytes": 733,
+      "sha256": "8a44afb11b7107213040dda5b80cc6b9462da660f3d7ed9bbc204b473375bff1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api148-root-reconciliation.json",
+      "bytes": 2867,
+      "sha256": "1aa69a2bd8931947306e267adb855d13128b50f03aa54962266ff74b55acf5c1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web144-root-reconciliation.json",
+      "bytes": 2007,
+      "sha256": "ded6276437a95de9fad98f06ac21eae9d5293c7983371db698905edf176fae2c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.5.json",
+      "bytes": 13202,
+      "sha256": "c989693387ce80626e46bf35fdee7d52a7d760fe8e4473a44364bb922d170af1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-adherence157-ready.json",
+      "bytes": 1010,
+      "sha256": "83ea2fffbfe67558b6db7f143a2a62986761521dfd2513f07d214218ebaa0e10"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/web152-consumer-handoff-ready.json",
+      "bytes": 5148,
+      "sha256": "de017394a5230bf99e765f0754bd5f6bc475bf4643505605984e9ae69801e2d4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/web152-root-qualification.json",
+      "bytes": 1681,
+      "sha256": "aa6ee2daa9a163ed9f7d210c4f95c96fe00714d20aefc63b739e77b372af2c83"
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 427726,
+      "sha256": "ab75821f3092bb8fd2f309a6e899ac570af241479458b01baa1046876c68f81a"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 61087,
+      "sha256": "cbda0b78e5694eca442cf006ba56e786470967ea8f89528cf24865fc0784e5a4"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 77849,
+      "sha256": "c32f3cb1f5e1b7666f05a852ce5472056e4837783f425fdc4f1d24315235ffed"
+    },
+    {
+      "path": "web-app/public/privacidade.html",
+      "bytes": 13913,
+      "sha256": "6f0d8f1d7b5cf0c5004638d1572814e0e40fbfe10aa48c8b2bac649f79179753"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20705,
+      "sha256": "cc6a76a62c5ef18627cfd2e0ba409831877a84dc24b210c669ea0a14f9f03006"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 18041,
+      "sha256": "5c00b976807579c006b8440f1ee27acf0fc40c0f8c603fedf9ecdaf71c6f0870"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 7888,
+      "sha256": "9adfaf2b892c92a7610010d2f10bb01c10d34377fc8c1d2acc9ae7955d2a6987"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 53371,
+      "sha256": "e32927dae15a53e8f959ce691b5b4198546abd688c568ed03abf49a575a5af6c"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 16496,
+      "sha256": "c7ff3f6e5cd34bb32418e60ce709e590611884c852fbd643624e468dccb00ce9"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 10332,
+      "sha256": "ac0d64357ba36a2e95a0d7fe1f82b007bdbf439c6c8ccb5b6478fc3937289b7f"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 43024,
+      "sha256": "3782fc9c880736de09cba9b3e250a7efd60d3ce355a1d1f4f23706a828c72b96"
+    }
+  ],
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "closedStdin": true,
+  "toolsAllowed": false,
+  "canonicalPrompt": {
+    "characters": 971343,
+    "utf8Bytes": 975482,
+    "limit": 1048576,
+    "passed": true
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "kind": "Refined parser156 deterministic postpatch regression protocol",
+  "state": "PREPARED; planning critique required before single-file source handoff",
+  "supersedesPlanning": "parser149-regression-protocol-prepared.json; preserve historical frozen bytes",
+  "ownedSourceCandidate": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+  "currentDependency": "Exact human-admitted lock153 body-parser2.4.0 and qs6.16.1 only; no package substitution/install outside canonical runner",
+  "evidenceLimits": {
+    "prepatchCrash": "NOTRUN",
+    "causalRed": "NOTRUN",
+    "claim": "If passing, actual patched parser compatibility/drain/survival only for exercised finite probes; no full API/HMAC/domain/advisory clearance"
+  },
+  "primary": {
+    "url": "https://raw.githubusercontent.com/expressjs/body-parser/v2.4.0/test/json.js",
+    "lines": "195-250",
+    "vectorFacts": [
+      "Content-Encoding:deflate; logical bytes UTF8 {\"a\":1}",
+      "first=concat(deflateSync(logical),single zero byte)",
+      "trailing=Buffer.alloc(1024), zero-filled",
+      "Content-Length exactly first.length+trailing.length",
+      "raw HTTP write(first); actual parser completion then client.end(trailing); downstream waits original request finish; complete200/exactpayload"
+    ],
+    "advisory": "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828",
+    "adaptation": "Own-child IPC replaces same-process upstream client closure; deflate vector follows maintainer test, not local old-version reproduction"
+  },
+  "childBoundary": [
+    "One owned child via process.execPath inside existing canonical disposable integration container; require actual compiled dist/infra/http/body-parsers.js and project express; mount configurarBodyParsers on Express app via existing compatible use contract, no copied middleware",
+    "Bind127.0.0.1:0 only; bounded IPC typed ready/parsed/closed/error; no operationalenv/processargs/logging; no extra dependencies/files/product endpoints",
+    "Parent registers exit/error/message listeners before request delivery; per-request opaque synthetic correlation ID, finite mailbox; parser reports correlation/path after middleware success and before response; never report parser completion from request input or timeout",
+    "Downstream registers end/aborted/error/prematureclose handling before IPC; if req.readableEnded&&req.complete respond immediately, otherwise await end with req.complete; prematureclose,abort,error fail. No uncaughtException or unhandledRejection swallowing",
+    "Own request agent:false, bounded response4096bytes, finite each-stage watchdog <=5s and whole scenario<=30s; no arbitrary sleeps or old budget relaxation",
+    "Success requires downstream health then graceful IPC close: stop accepting HTTP, await server.close then disconnect IPC, natural childexit0/no signal, stdout/stderr bounded; any forcedkill/watchdog/startup/path/module/parse failure FAILS. finally destroys only owned requests and terminates/awaits only its own lingering child, preserving original failure; cleanup termination can never satisfy success"
+  ],
+  "compatibilityContexts": [
+    {
+      "path": "/parser-compat/json",
+      "contentType": "application/json",
+      "logicalUtf8": "{\"a\":1}",
+      "body": {
+        "a": 1
+      },
+      "rawBody": "exact inflated logical Buffer bytes plus SHA256 from actual captureRaw"
+    },
+    {
+      "path": "/api/bff/business-units/parser-fixture/instagram-authorizations",
+      "contentType": "application/json",
+      "logicalUtf8": "{\"a\":1}",
+      "body": {
+        "a": 1
+      },
+      "rawBody": "exact inflated logical Buffer bytes plus SHA256 from actual captureRaw"
+    },
+    {
+      "path": "/webhooks/instagram",
+      "contentType": "application/json",
+      "logicalUtf8": "{\"a\":1}",
+      "body": "Buffer exact inflated logical bytes",
+      "rawBody": "exact inflated logical Buffer bytes plus SHA256 from actual captureRaw"
+    },
+    {
+      "path": "/parser-compat/form",
+      "contentType": "application/x-www-form-urlencoded",
+      "logicalUtf8": "profile[name]=Ana&active=true",
+      "body": {
+        "profile": {
+          "name": "Ana"
+        },
+        "active": "true"
+      },
+      "rawBody": "absent; hasOwnProperty false. No fake/wrapper capture or added productionverify"
+    }
+  ],
+  "sequence": [
+    "Start exact configured child; healthy GET200",
+    "For each4contexts sequentially: gzipSync(logical) complete healthy control →200 exactbody/per-context rawbody oracle",
+    "For each4contexts sequentially: prefix concat(deflateSync(same logical),zero), trailer1024zeroes, exactContentLength; start waiter before writeprefix; await write callback and actual correlated parsed IPC without releasingtrailer; assert child remainslive and request incomplete",
+    "Only after parsed IPC end(trailer). Await complete HTTP200/no aborted/prematureclose; exact per-context body/capture oracle; samechild GET200",
+    "After all8compressedrequests/control and health checks, request graceful close and await naturalexit0/no signal. Any missing barrier/vector incompatibility is actual test failure, never inferredvulnerabilityRED"
+  ],
+  "preserve": [
+    "All existing gateway8MiB/2MiB size/HMAC/domain/provider/zeroeffect/counters/deadlines untouched",
+    "No package/source edit outside one admitted integration path, no runner/config/productionparser changes",
+    "No runtime/private/Meta/provider/tunnel/Git authority",
+    "Execution only canonicalapi-instagram/all after writerterminal/rootqualification; completecurrentALL/security/TQA/primary/CP6 stillmandatory"
+  ],
+  "addresses": [
+    "IG-PARSER149-01",
+    "IG-PARSER149-02",
+    "IG-PARSER149-03"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "Root bounded original CP5 defect closure after actualcurrent155native proof",
+  "sourceReceipts": [
+    "adherence129e-root-reconciliation.json",
+    "adherence150a-root-reconciliation.json"
+  ],
+  "runtimeReceipt": "cp4-api155-root-reconciliation.json",
+  "closedOriginalFindings": [
+    "IG-CP5-111E-01",
+    "IG-CP5-111E-02",
+    "IG-CP5-111E-03",
+    "IG-CP5-111E-04",
+    "IG-CP5-111E-05",
+    "IG-CP5-111E-06",
+    "IG-CP5-111E-07",
+    "IG-ADHERENCE124E-01",
+    "IG-ADHERENCE124E-02"
+  ],
+  "qualification": "All eight nativeCP5cases actually passed current146source in canonicalapi-instagram155. Original source defects now supported by current completeaffectedsource reviews plus exercised counterpart. This does not close wholeEPS/BCI/RLS gates, dedicatedperformance/TQA/cutover/final, fullAPI/browser/ALL, initial-send reuse, primaryprotocol orphysicalCP6. No newtest/threshold/providerdata/private access.",
+  "specificProof": {
+    "E01": "actualclaims telemetry20unsettled/7PGwaiters/1winner/19conflicts completed",
+    "E02": "all1000qualified ContactIdentity/route association assertions completed before batch/replay output",
+    "E03": "same20k originalcohort retained across eightworkloads; no reset",
+    "E04": "independentobserver established actualpositive PGwaiters before holderrelease",
+    "E05": "source129E+150A keeps8query cap on listpages only; currentEPS completed",
+    "E06": "all3providerHTTP counters unchanged across actualread/ingress workloads",
+    "E07": "current actuallist/thread/options plans and peer/route indexed boundedwork assertions passed; smallowner seqscans allowed",
+    "124E01": "signednative1000supplementarycodepoints positive/1001wholebatchzeroeffects rejection passed",
+    "124E02": "workerCPU/memory + bracketedownedPGcumulative resource observations recorded in actualEPS; no perrequestattribution or new numericgate"
+  },
+  "actualCompact": {
+    "p95Ms": {
+      "lookup": 86.06038499998976,
+      "replyOptions": 65.80883500000346,
+      "listPage1": 63.89342300000135,
+      "listPage2": 60.846114000014495
+    },
+    "batch": {
+      "submitted": 1000,
+      "accepted": 1000,
+      "elapsedMs": 4800.451325000031,
+      "maximumMs": 15000,
+      "replayElapsedMs": 3640.2091310000396,
+      "replayAdditionalMessages": 0,
+      "replayAdditionalUnread": 0,
+      "cohortRowsRetained": 20000,
+      "batchUnreadBefore": 1007,
+      "batchUnreadAfter": 2007
+    },
+    "claims": {
+      "contenders": 20,
+      "unsettledClaimsAtRelease": 20,
+      "actualPostgresWaiters": 7,
+      "winners": 1,
+      "resourceOwnedConflicts": 19,
+      "claimDeadlockDelta": 0
+    }
+  },
+  "noAcceptance": "Feature Pending; no assurance/production/physical readiness claimed"
+}

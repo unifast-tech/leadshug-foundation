@@ -1,0 +1,110 @@
+{
+  "kind": "Parser158 minimal direct-wiring postpatch completion-barrier concretization",
+  "state": "PREPARED;156 concrete overlapfinding integrated by narrowing ONLY newadversarialvector to sharedJSON, retaining all4healthycompressedcompatibilitycontrols. No source/testyet; await155naturalterminal/rootqualification/Treconcile.",
+  "supersedesPlanning": "parser156-regression-protocol-prepared.json; preserve frozen156 review inputs",
+  "ownedSourceCandidate": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+  "currentDependency": "Exact human-admitted lock153 body-parser2.4.0 and qs6.16.1 only; no package substitution/install outside canonical runner",
+  "evidenceLimits": {
+    "prepatchCrash": "NOTRUN",
+    "causalRed": "NOTRUN",
+    "claim": "If passing, actual patched parser compatibility/drain/survival only for exercised finite probes; no full API/HMAC/domain/advisory clearance"
+  },
+  "primary": {
+    "url": "https://raw.githubusercontent.com/expressjs/body-parser/v2.4.0/test/json.js",
+    "lines": "195-250",
+    "vectorFacts": [
+      "Content-Encoding:deflate; logical bytes UTF8 {\"a\":1}",
+      "first=concat(deflateSync(logical),single zero byte)",
+      "trailing=Buffer.alloc(1024), zero-filled",
+      "Content-Length exactly first.length+trailing.length",
+      "raw HTTP write(first); actual parser completion then client.end(trailing); downstream waits original request finish; complete200/exactpayload"
+    ],
+    "advisory": "https://github.com/expressjs/body-parser/security/advisories/GHSA-27r3-jxmh-p828",
+    "adaptation": "Own-child IPC replaces same-process upstream client closure; deflate vector follows maintainer test, not local old-version reproduction",
+    "matchingParserSources": [
+      {
+        "url": "https://raw.githubusercontent.com/expressjs/body-parser/v2.4.0/lib/read.js",
+        "lines": "43-67",
+        "fact": "read checks onFinished then shouldParse before streamcreation; nonmatchingtypecallsnext without rereading body"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/expressjs/body-parser/v2.4.0/lib/types/urlencoded.js",
+        "lines": "32-49",
+        "fact": "defaulttype application/x-www-form-urlencoded passed to sharedread"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/expressjs/body-parser/v2.4.0/lib/utils.js",
+        "lines": "24-27,46-60",
+        "fact": "defaulttype produces actual type-is checker; application/json is not urlencoded"
+      }
+    ]
+  },
+  "childBoundary": [
+    "One owned child via process.execPath inside canonicaldisposableintegrationcontainer; require projectExpress and actual compiled configurarBodyParsers. Pass real Express app to original function: EVERY originalmiddleware is mounted unchanged/inorder, no registrationadapter/copy/schedulingoverride. Bind127.0.0.1:0 only.",
+    "Bind127.0.0.1:0 only; bounded IPC typed ready/parsed/closed/error; no operationalenv/processargs/logging; no extra dependencies/files/product endpoints",
+    "Parent registers exit/error/message listeners before HTTPdelivery. Only adversarial POST /parser-compat/json with Content-Type application/json emits correlated parsedIPC from terminal downstream handler AFTER complete configured middlewarechain succeeds. This path does NOT match OAuth/IG selectors; sharedJSON is sole matching consumingparser; subsequenturlencoded rejects application/json by actual shouldParse typecheck, so no overlappingmatchingparser waitingfortrailer. No body-parsercallback copied or assumed to equal incomingbytes.",
+    "Downstream finalhandler installs end/aborted/error/prematureclose handlers BEFORE parsedIPC. If already readableEnded&&complete respond immediately; otherwise waitfor complete originalHTTPend; incompleteend/abort/error/prematureclose fail. No request body/state injection or uncaughtException/unhandledRejection swallowing.",
+    "Own request agent:false, bounded response4096bytes, finite each-stage watchdog <=5s and whole scenario<=30s; no arbitrary sleeps or old budget relaxation",
+    "Success requires downstream health then graceful IPC close: stop accepting HTTP, await server.close then disconnect IPC, natural childexit0/no signal, stdout/stderr bounded; any forcedkill/watchdog/startup/path/module/parse failure FAILS. finally destroys only owned requests and terminates/awaits only its own lingering child, preserving original failure; cleanup termination can never satisfy success"
+  ],
+  "compatibilityContexts": [
+    {
+      "path": "/parser-compat/json",
+      "contentType": "application/json",
+      "logicalUtf8": "{\"a\":1}",
+      "body": {
+        "a": 1
+      },
+      "rawBody": "exact inflated logical Buffer bytes plus SHA256 from actual captureRaw"
+    },
+    {
+      "path": "/api/bff/business-units/parser-fixture/instagram-authorizations",
+      "contentType": "application/json",
+      "logicalUtf8": "{\"a\":1}",
+      "body": {
+        "a": 1
+      },
+      "rawBody": "exact inflated logical Buffer bytes plus SHA256 from actual captureRaw"
+    },
+    {
+      "path": "/webhooks/instagram",
+      "contentType": "application/json",
+      "logicalUtf8": "{\"a\":1}",
+      "body": "Buffer exact inflated logical bytes",
+      "rawBody": "exact inflated logical Buffer bytes plus SHA256 from actual captureRaw"
+    },
+    {
+      "path": "/parser-compat/form",
+      "contentType": "application/x-www-form-urlencoded",
+      "logicalUtf8": "profile[name]=Ana&active=true",
+      "body": {
+        "profile": {
+          "name": "Ana"
+        },
+        "active": "true"
+      },
+      "rawBody": "absent; hasOwnProperty false. No fake/wrapper capture or added productionverify"
+    }
+  ],
+  "sequence": [
+    "Start exact configured child; healthy GET200",
+    "For each4contexts sequentially: gzipSync(logical) delivered as complete request control \u2192200 exact final body/per-context rawcapture-or-formabsence through UNMODIFIED original chain",
+    "Adversarialvector ONCE at sharedJSON /parser-compat/json ONLY: logical UTF8 {\"a\":1}; prefix concat(deflateSync(logical),zero), trailer1024zeros, Content-Length exactlyprefix+trailer. Register correlatedparsedIPC waiter then writeprefix; await write callback and actual terminal-handler parsedIPC with request not yetcomplete, no trailer released",
+    "Only afterparsedIPC end(trailer). AwaitcompleteHTTP200/noabort/prematureclose, exactfinalJSONandcapture/digest; healthy GET200 on samechild",
+    "Gracefulclose/awaitnaturalexit0nosignal afterall5compressedrequests andhealthchecks. Missingbarrier/vectorincompatibility/harness/parsefail is actual testfailure, not historicalvulnerabilityRED"
+  ],
+  "preserve": [
+    "All existing gateway8MiB/2MiB size/HMAC/domain/provider/zeroeffect/counters/deadlines untouched",
+    "No package/source edit outside one admitted integration path, no runner/config/productionparser changes",
+    "No runtime/private/Meta/provider/tunnel/Git authority",
+    "Execution only canonicalapi-instagram/all after writerterminal/rootqualification; completecurrentALL/security/TQA/primary/CP6 stillmandatory"
+  ],
+  "addresses": [
+    "IG-PARSER149-01",
+    "IG-PARSER149-02",
+    "IG-PARSER149-03",
+    "IG-PARSER156-01"
+  ],
+  "schedulingDisclosure": "NO test-only middleware scheduling adaptation. All4healthycontexts run original fullchain. Only adversarial trailingbyte probe uses sharedJSON path with one matching consumingparser; this primary-supported representative exercises common body-parser2.4 read.js decodercleanup without introducing overlap. It does not claim adversarial trailingbyte success for OAuth/IG/form contexts or all malformedcompression inputs.",
+  "representativeRationale": "AllconfiguredExpress JSON/raw/urlencoded parser factories use same exactlocked body-parser2.4 read.js cleanup locus. Maintainer primary regression is JSON. Four healthygzipcontrols independently prove existing configured parser compatibility; sharedJSON only decisive trailerprobe proves actual cleanup/drain/survival. Fewer artificialmechanisms with unchanged actualmiddlewarewiring; no production or existingtest guarantee removed."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-dispatch.json",
+  "review_kind": "critique",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-parser156"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "acceptable",
+    "elegance": "acceptable",
+    "structural_soundness": "mixed",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Clarify the consuming-parser completion barrier before source authoring. The revised vector, context-specific capture expectations, bounded child lifecycle and postpatch-only claims address the prior findings. Preserve the exact admitted lock, single test path, existing gateway assertions and all remaining delivery gates."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-BCD745AE",
+      "severity": "medium",
+      "title": "The completion barrier does not account for overlapping JSON middleware",
+      "rationale": "OAuth JSON and Instagram raw requests also match the subsequently registered shared JSON parser. The protocol requires a parsed notification before releasing the trailer, but describes downstream observation without identifying the consuming middleware callback. Completion of the first parser therefore does not establish completion of the configured chain: a later matching parser could await or attempt another read while the parent withholds the trailer. The enclosed package does not establish the current dependency's skip semantics for that incomplete-request state. This is a planning gap in the deterministic test sequence, not evidence of an executed product failure.",
+      "suggested_action": "Specify the observed callback for each context. A minimal parser-only adaptation can use a small registration adapter around the actual configured middleware: observe successful completion of the consuming parser, install request-completion handlers, emit correlated IPC, and defer forwarding its successful next callback until the original request ends. Explicitly disclose that scheduling adaptation and retain exact final body/capture checks, same-child health and natural exit 0. If retaining unmodified middleware scheduling instead, establish from the current dependency source how subsequent matching parsers skip safely before relying on terminal downstream IPC. Never silently omit matching middleware or substitute timeout/input arrival for parser completion.",
+      "reviewer_labels": [
+        "fresh-internal-parser156"
+      ],
+      "source_finding_ids": [
+        "IG-PARSER156-01"
+      ],
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

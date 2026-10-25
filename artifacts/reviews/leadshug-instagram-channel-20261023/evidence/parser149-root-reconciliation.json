@@ -1,0 +1,26 @@
+{
+  "kind": "Root parser149 terminal frozen-input reconciliation",
+  "frozenRows": 21,
+  "sourceBodies": 6,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "turnCompleted": 1,
+  "completedItemTypes": [
+    "agent_message"
+  ],
+  "raw": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-raw.json",
+    "bytes": 5662,
+    "sha256": "3602c46684ab9c5ee267f558b7637f33fd4abea9c6b68ed4e1dcf6d6c36c30e0"
+  },
+  "merge": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-merge.json",
+    "bytes": 5869,
+    "sha256": "66ec200f7cf40acb755245e053cfb8c16c1dcdd7a0472c5fd15512ccfd972f01"
+  },
+  "result": "changes_required; three useful bounded planning corrections; no test source authorized by this receipt alone",
+  "wholeSourceFreezeClaimed": false
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "Root current frozen-input terminal review reconciliation",
+  "frozenRows": 32,
+  "sourceBodies": 15,
+  "allRowsMatched": true,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "naturalTerminal": true,
+  "turnCompleted": 1,
+  "completedItemTypes": [
+    "agent_message"
+  ],
+  "raw": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-raw.json",
+    "bytes": 2717,
+    "sha256": "04e7e02442ed236d8ad9d21b929642de8af65cb3620af22c3346cada91c68419"
+  },
+  "merge": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence157-merge.json",
+    "bytes": 3160,
+    "sha256": "7649cd98a18c04dc859be66dba79eade758fd89b82fbea1f67b4443a9f4a9b55"
+  },
+  "assessment": "changes_required",
+  "findingIds": [
+    "IG-ADHERENCE111D-04"
+  ],
+  "runtimeAcceptance": false
+}

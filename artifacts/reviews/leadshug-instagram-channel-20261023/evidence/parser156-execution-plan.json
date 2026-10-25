@@ -1,0 +1,141 @@
+{
+  "state": "READY frozen bounded planning critique; parallel canonicalAPI155 readonly",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "sourceBodyCount": 6,
+  "frozenRows": [
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "ad3bf58e17a1c6b81df976432c9765e074ff130cb5f8505f997e91ea485d64b4"
+    },
+    {
+      "path": "api-app/package.json",
+      "bytes": 1670,
+      "sha256": "df8551d3e506e7c68516cbd482362c4282671b7ec7eebbf121386390ac080a9d"
+    },
+    {
+      "path": "api-app/src/infra/http/body-parsers.ts",
+      "bytes": 2011,
+      "sha256": "81e5ce92417a5322d65140da0888180fbe7e346a31b40e5662994883bac9948d"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 26011,
+      "sha256": "aec0aef965e1c1cda60b0095d0492fe8b9abe3a9104153694c46e472b17fdf48"
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "bytes": 21180,
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/authority-parser156-ready.json",
+      "bytes": 871,
+      "sha256": "ae94cc7549ccd9991c1abcdf6c2de5f1a8c7120cfabafebe7258600111aa116c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-applicability.json",
+      "bytes": 1219,
+      "sha256": "6e84b2e889afcebbb5193c29c9c03af5fa5fd26d2fc9769ad040e82b7ca0e8fd"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-read-change-receipt.json",
+      "bytes": 1269,
+      "sha256": "ff97c67115d0bb4c41a9fc4acf95cbb51797e0ae5fbc466f7a9d5084d82b6195"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser145-primary-read-change.diff",
+      "bytes": 5097,
+      "sha256": "6203960c0665dea19f0271d830f27795b9399d304f03a0c37be0cf40dd15fd57"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser153-human-admission.json",
+      "bytes": 1460,
+      "sha256": "356adcf72509461306ec3964937e82a6d064f8203675bcbf50b877d5318adf9d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/body-parser153-root-qualification.json",
+      "bytes": 733,
+      "sha256": "8a44afb11b7107213040dda5b80cc6b9462da660f3d7ed9bbc204b473375bff1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/inherited-public-preservation-v1.5.json",
+      "bytes": 13202,
+      "sha256": "c989693387ce80626e46bf35fdee7d52a7d760fe8e4473a44364bb922d170af1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-raw.json",
+      "bytes": 5662,
+      "sha256": "3602c46684ab9c5ee267f558b7637f33fd4abea9c6b68ed4e1dcf6d6c36c30e0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-root-adjudication.json",
+      "bytes": 2764,
+      "sha256": "71e03b14bda2648acf1c4699f573ecfc8473fe4fa6eb44ef4458508e4c1457fb"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-root-reconciliation.json",
+      "bytes": 1059,
+      "sha256": "0163fbdca2c4f38cc65df430c73dd7053c52f00b4129b221092647250f4eb167"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "bytes": 825139,
+      "sha256": "0896cd1fd247736898cf00a803195242a5a445ff20179daa2ec7e6f0c88e7de5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-dispatch.json",
+      "bytes": 51396,
+      "sha256": "f9a4e82a37ea54072abbc898ccb943ea00fadd45bf742059677989c1fcd9f301"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-dispatch.md",
+      "bytes": 41755,
+      "sha256": "763c678b8b97bffc2eeed193a9f2047084b1d39c084d8ee501bbb387d3d12aa4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-package.json",
+      "bytes": 6241,
+      "sha256": "a894ff45e26c3f43d4496c8a9a4305b6c58091b5b0dbc3cc48cb2bf08a275d6b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-prompt-preflight.json",
+      "bytes": 88,
+      "sha256": "7ae513751ee400445e780d554ab1f3741cec935e0ff18fc3460892e6bd375485"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-regression-protocol-prepared.json",
+      "bytes": 5727,
+      "sha256": "690210595c27a8f39469383e436374f35e0ef9ada8b845e6bb66446c3005e4ea"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/routing-parser156-ready.json",
+      "bytes": 996,
+      "sha256": "4c2ce365f65fa047a363a67fd5af0a698061873d19eea0dcbd5ace0d482ed815"
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 427726,
+      "sha256": "ab75821f3092bb8fd2f309a6e899ac570af241479458b01baa1046876c68f81a"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13918,
+      "sha256": "1ab8c3da8e7d05d7c25057356fa3802a3671a86288798e87140d9b8f86ede06b"
+    }
+  ],
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "closedStdin": true,
+  "toolsAllowed": false,
+  "canonicalPrompt": {
+    "characters": 864192,
+    "utf8Bytes": 867222,
+    "limit": 1048576,
+    "passed": true
+  }
+}

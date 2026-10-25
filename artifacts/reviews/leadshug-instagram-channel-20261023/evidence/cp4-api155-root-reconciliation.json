@@ -1,0 +1,56 @@
+{
+  "kind": "Root independent API155 actual canonical reconciliation",
+  "naturalTerminal": true,
+  "exitCode": 0,
+  "invocations": 1,
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "sources": 333,
+  "positiveInputs": 1241,
+  "preservationRows": 34,
+  "exceptionCandidates": 5,
+  "fullTodoMatched": true,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-before.json",
+      "bytes": 266261,
+      "sha256": "e2081d47db419637019cbbd3bb44ea8f43044eb9aea0dacbf6225c55324dc9a6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-api.log",
+      "bytes": 212380,
+      "sha256": "18c91a06dc81f08aefb2962c27aa5ec1e818fd15b155240e82f9a8e21e4b78f9"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-after.json",
+      "bytes": 12341,
+      "sha256": "2f46dc9af7125b95b05bd59aba72c64383ac64398d75da2e7123f664d7925bf0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-result.json",
+      "bytes": 11718,
+      "sha256": "8eca8a4c262b1e4b54b2c3e225b87f64e31ec9180c4149f03c6a3b2b28075c27"
+    }
+  ],
+  "actualReached": [
+    "31 migrations up to date",
+    "API ESLint",
+    "Nest build",
+    "40 files453unitPASS",
+    "29files170focusedE2EPASS",
+    "CP5eightcasesPASSequaltwotenants20kcohort/EPS/UTF8/concurrency/RLS/1000batch"
+  ],
+  "cleanup": "own resources removed; no incompletecleanup reported",
+  "notProved": [
+    "Web build/unit on current152",
+    "complete browser/currentALL",
+    "newpostpatchparser158probe (not authored yet)",
+    "primarysubscriptionprotocol",
+    "fullsecurity/TQA/performance/cutover/final/physicalCP6"
+  ],
+  "acceptance": "Current focused API only; fullfeature stays pending"
+}

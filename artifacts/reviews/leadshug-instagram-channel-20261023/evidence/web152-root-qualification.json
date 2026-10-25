@@ -1,0 +1,43 @@
+{
+  "kind": "Root independent Web152 source qualification",
+  "owned": [
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 18041,
+      "sha256": "5c00b976807579c006b8440f1ee27acf0fc40c0f8c603fedf9ecdaf71c6f0870"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 43024,
+      "sha256": "3782fc9c880736de09cba9b3e250a7efd60d3ce355a1d1f4f23706a828c72b96"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 77849,
+      "sha256": "c32f3cb1f5e1b7666f05a852ce5472056e4837783f425fdc4f1d24315235ffed"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 62387,
+      "sha256": "14621fe0cdc785799e219da1a2d403b3c1cbc55a041f002c0f1633194a149a17"
+    }
+  ],
+  "unchangedOtherSources": 329,
+  "preservationRows": 34,
+  "exceptionCandidates": 5,
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "testsRun": false,
+  "acceptance": false,
+  "staticInspection": [
+    "mounted/ticket fence immediately after parent await before child GET",
+    "Inbox refuses unmounted read allocation/publication and invalidates on cleanup",
+    "optional seed derives unique case accounts; existing WA seed default unchanged",
+    "samecase A/B credential and peer scope retained; providertrace scoped to current account",
+    "valid padded visibility uses actual201 UUID before exact raw DOM text oracle",
+    "actual held A start-options/native B navigation authored; no native pass inferred"
+  ]
+}

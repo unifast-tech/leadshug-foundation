@@ -1,0 +1,32 @@
+{
+  "kind": "Prepared sole159 source-only parser/native proof repair",
+  "state": "READY after155naturalterminal/rootmatched; no validators/reviewers/writers active",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 26011,
+      "sha256": "aec0aef965e1c1cda60b0095d0492fe8b9abe3a9104153694c46e472b17fdf48"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 77849,
+      "sha256": "c32f3cb1f5e1b7666f05a852ce5472056e4837783f425fdc4f1d24315235ffed"
+    }
+  ],
+  "baseline": "cp4-source-web152-terminal-manifest.json",
+  "protocol": "parser158-regression-protocol-ready-prepared.json",
+  "reviewAdjudication": "adherence157-parser156-root-adjudication.json",
+  "requirements": [
+    "Implement current parser158 in existing gateway integration file. ONEownedloopbackchild uses projectExpress + ACTUALcompiled configurarBodyParsers(realapp), no copiedparser/registrationadapter/schedulingoverride or production/config/lockchange. Alloriginalmiddlewaremountedunchanged/inorder. Fourcontexts healthyGZIPcontrols with completebody prove finalparsedbody and actualrawcapture/digest orformabsence. ONLY adversarialvector at /parser-compat/json Content-Typeapplication/json (sole matching sharedJSON;urlencoded typecheckskips): maintainerdeflate({\"a\":1})+onezero prefix,1024zero trailer/exactContentLength. Parent installscorrelatedIPC wait, writesprefix, downstreamAFTERconfiguredchain installs originalreqend/abort/error/close handlers thenparsedIPC BEFOREparentrelease; rejectalreadycomplete adversarialbarrier. Parentends exacttrailer onlyafterparsedIPC; completeHTTP200exactlogical/capture, samechildhealth, gracefulnaturalexit0/nosignal mandatory. Onechildatonce/4096bytecaptures/finite5sstage30sscenario; watchdog/forcedkillalwaysFAIL not hidden survival; no exception swallowing/oldversioncomparison/causalRED claim. Explicit representative-onlycoverage: no adversarialclaimforOAuth/IG/form. Existing gatewaycases/counters/limits/deadlines untouched. Source-only no execution.",
+    "In ONE named152 nativeunmount case only, instrument exact held GET A start-options application response.text using existing admitted channel-transport pattern as read-onlyreference. Scope instrumentation to exactpathname/method after initialAmetadata andbeforeclick; count consumedstarted/settled, browser task scheduledFROMthatconsumption then markprocessed/resolve. Await this barrier after actualheldrelease/bodyhash/contenttypechecks before asserting zeroobsoletefollowupGET/POST andunchangedacceptedB. Exact oldAresponse must remain unchanged. Restore fetchinstrumentation in finally, release/awaitheldroute/unroute/listeners as applicable. No unrelatedtest/source edits or fabricated BFFdata.",
+    "All333sources except twoownedpaths,34preservations/fiveexceptions/root3index untouched. No tests/build/lint/npm/Node/Docker/Git/Foundation/privateenv/operational/Meta/provider/tunnel access; report exact terminalhashes/codeinspectionlimits. Rootqualifies before separate canonical fullALL/browser/native checks/freshaffected review."
+  ],
+  "minimumLocalValidation": "Source inspection and exactfilehashes only; execution belongs separate currentcanonicalvalidator afterterminal.",
+  "beforeValidation": "cp4-api155-root-reconciliation.json"
+}

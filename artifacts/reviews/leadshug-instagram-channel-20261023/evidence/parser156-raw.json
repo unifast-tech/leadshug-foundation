@@ -1,0 +1,30 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-dispatch.json",
+  "review_kind": "critique",
+  "reviewer_label": "fresh-internal-parser156",
+  "overall_assessment": "changes_required",
+  "recommended_path": "Clarify the consuming-parser completion barrier before source authoring. The revised vector, context-specific capture expectations, bounded child lifecycle and postpatch-only claims address the prior findings. Preserve the exact admitted lock, single test path, existing gateway assertions and all remaining delivery gates.",
+  "performance_position": "acceptable",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-PARSER156-01",
+      "severity": "medium",
+      "category": "tests",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "The completion barrier does not account for overlapping JSON middleware",
+      "rationale": "OAuth JSON and Instagram raw requests also match the subsequently registered shared JSON parser. The protocol requires a parsed notification before releasing the trailer, but describes downstream observation without identifying the consuming middleware callback. Completion of the first parser therefore does not establish completion of the configured chain: a later matching parser could await or attempt another read while the parent withholds the trailer. The enclosed package does not establish the current dependency's skip semantics for that incomplete-request state. This is a planning gap in the deterministic test sequence, not evidence of an executed product failure.",
+      "suggested_action": "Specify the observed callback for each context. A minimal parser-only adaptation can use a small registration adapter around the actual configured middleware: observe successful completion of the consuming parser, install request-completion handlers, emit correlated IPC, and defer forwarding its successful next callback until the original request ends. Explicitly disclose that scheduling adaptation and retain exact final body/capture checks, same-child health and natural exit 0. If retaining unmodified middleware scheduling instead, establish from the current dependency source how subsequent matching parsers skip safely before relying on terminal downstream IPC. Never silently omit matching middleware or substitute timeout/input arrival for parser completion.",
+      "affected_paths": [
+        "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-regression-protocol-prepared.json",
+        "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+        "api-app/src/infra/http/body-parsers.ts"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "Current focused Instagram API155 validation",
+  "state": "READY after Web152 rootqualification; no source writer active",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-api.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-result.json"
+  ],
+  "freeze": "cp4-api155-frozen-manifest.json",
+  "policy": "One naturalterminal canonical invocation in principalcheckout and own disposable namespace only. Freeze333sources/fullT/publicpositiveinputs/34preservedrows/5exceptions/policyv1.5/root3gitlinks. No source/T/frozeninput/dependency/runner/config/Git/privateenv/operational/Meta/provider/tunnel changes or reads; no filters/retries/autofix/skip/assertion/threshold/timeout relaxation. Actual reached/unreached/failure/counts/EPS observations/cleanup only; no fullALL/browser/feature/security/primary/CP6 acceptance.",
+  "dependencyState": "Exacthuman-admitted lock153 body-parser2.4.0/qs6.16.1; compatibility/security still to prove"
+}

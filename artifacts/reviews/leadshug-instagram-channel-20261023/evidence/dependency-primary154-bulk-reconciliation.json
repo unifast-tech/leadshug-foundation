@@ -1,0 +1,30 @@
+{
+  "kind": "Read-only post153 public registry advisory metadata",
+  "url": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+  "httpStatus": 200,
+  "requestNames": 582,
+  "responseReportedNames": 13,
+  "advisoryObjects": 46,
+  "changedDependencyVersions": {
+    "body-parser": "2.4.0",
+    "qs": "6.16.1"
+  },
+  "reportedNames": [
+    "@vitest/mocker",
+    "brace-expansion",
+    "deepmerge-ts",
+    "esbuild",
+    "fast-uri",
+    "js-yaml",
+    "multer",
+    "proxy-addr",
+    "react-router",
+    "source-map-js",
+    "tinypool",
+    "vite",
+    "vitest"
+  ],
+  "bodyParserCurrentlyReported": false,
+  "qsCurrentlyReported": false,
+  "qualification": "Official unauthenticated bulk metadata only, after exacthuman-admittedlockchange. Two publiclocks read; rootprivate/app/link/nonregistry packages excluded. No npm/npmrc/env/installedpackage/codeexecution/lockmutation or exploittest. Counts are not npm meta-vulnerability totals or securityclearance; applicability and fullsecurity gate remain."
+}

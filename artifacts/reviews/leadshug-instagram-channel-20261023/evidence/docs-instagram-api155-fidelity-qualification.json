@@ -1,0 +1,90 @@
+{
+  "kind": "Narrow Foundation witness fidelity whitespace qualification",
+  "decision": "Allow only exactlisteddiagnostics/hashboundrawlog/closedprimarydiff-renderedpackage/historicalderivedmerge; no productexception or source normalization",
+  "fidelityFiles": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-api.log",
+      "bytes": 212380,
+      "sha256": "18c91a06dc81f08aefb2962c27aa5ec1e818fd15b155240e82f9a8e21e4b78f9"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-merge.md",
+      "bytes": 7818,
+      "sha256": "30c87501b749992219c829b1e60f7436cf9062db7b91acb69ae048fceaa5ecc6"
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "bytes": 825139,
+      "sha256": "0896cd1fd247736898cf00a803195242a5a445ff20179daa2ec7e6f0c88e7de5"
+    }
+  ],
+  "diagnostics": [
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-api.log",
+      "line": 206,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api155-api.log",
+      "line": 630,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser149-merge.md",
+      "line": 63,
+      "diagnostic": "new blank line at EOF."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12670,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12674,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12682,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12687,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12691,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12722,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12760,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12764,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12790,
+      "diagnostic": "trailing whitespace."
+    },
+    {
+      "path": "artifacts/reviews/leadshug-instagram-channel-20261023/evidence/parser156-closed-package.md",
+      "line": 12848,
+      "diagnostic": "trailing whitespace."
+    }
+  ],
+  "allOtherStagedWhitespace": "clean",
+  "rationale": "Maintain actualcanonicalrawlog and reviewedclosedpacket bytes; embedded unifieddiff context blanklines preserved.149derivedmerge retained as recordedterminal witness. No code/build/behavior consequence."
+}
