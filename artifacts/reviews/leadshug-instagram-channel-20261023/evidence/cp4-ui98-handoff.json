@@ -1,0 +1,65 @@
+{
+  "kind": "CP4 complete UI98 source handoff",
+  "authority": "Approved ST-IG-03 v1.3 consumer implementation and admitted specs;97/97a terminal/root-qualified. Single product writer, source-only nine exact files.",
+  "profile": "Operational/Coder",
+  "baseline": "cp4-source97a-terminal-manifest.json",
+  "ownedExisting": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/componentes/NovaConversa.spec.ts",
+    "web-app/src/instagramState.ts",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "obligations": [
+    {
+      "id": "98-CANONICAL-INITIAL",
+      "requirement": "Type initialRecipientPlatform:WHATSAPP|null from95start-options. Mountmanual/firstWAflowusingexactcurrentauthorizedcanonicalpeerproof independentofroute-deriveddisplay; unknown/missing/mixedgraphremainblocked. IGnevermanualinitial. Do notinferfromphone/candidates/firstchannel. Preserveoldstart-conversation tests byteexact; onlyupdateNovaConversa.spec typedfixtures withcanonicalfield ifrequired. Existinghistoricaltruewindow/templateentrypointguidance mustworkwith truthful95fixturepastqualification and97policy."
+    },
+    {
+      "id": "98-BOUND-POLICY-PARSER",
+      "requirement": "StrictknownV2reply-options parser permitsactualOFICIALrequiresWindowboolean, preservingmodule165falseexception; trueofficialrequiresqualifiedunexpiredwindowwhenavailable; INSTAGRAMstricttrue andEvolutionstrictfalse. Policyname/origin/schema/exactkeys/fingerprint/generationchecks unchanged. Meaningfulunitcasesfalseofficialavailable/noexpiry, trueofficialexpiredinvalid, IGfalseinvalid, Evolutiontrueinvalid; no relaxunknownschema/origin."
+    },
+    {
+      "id": "98-UNCERTAIN-RECOVERY",
+      "requirement": "BackendUNKNOWNalwaysretainsUNCERTAINordinaryadmission, evenACK_WITHOUT_IDdiagnosticRECORDED. NeverSETTLE/release/auto-retry/alterdeadline/clearattemptto satisfytest. Parent-ownedfencedfixedsafeoutcomecopy/draftmustsurviveprojection intoOrdinaryRecovery. RecoveryiscommonforWAandIG, notmanualinitialpermission. Considerkeeping samequalifiedcomposerinstance mountedreadonly/blockedbyrecovery plusOrdinaryRecovery controls so draftvisible/refresh stable; no send actionpossible whileactualcurrentadmissionSENDING/UNCERTAIN. NativeGETrefreshmayupdatestateonly, cannotgrantretry; explicitoriginaldeadline/riskack pathpreserved. No state/draft/error crossingactor/BU/conversation/route/gen/navigation. Priorreadonlydraftreview manualcopy remains."
+    },
+    {
+      "id": "98-ERROR-ARBITRATION",
+      "requirement": "Useoneparent-ownedversionedrole=alert forhistory/options/senderrors, withinexistingactor/BU/conversation/gen/navfences. LaterSENDerror supersedesolderrecoveryerror; recovery successclearsONLYitsownoldversion, nevercurrentSENDerror. CurrentACKcopy persists ifsamecontext; lateA-B-Aoldresponsecannotpublishnewerror. Do notsuppresshistorygap/retryfacts; representongoing recovery status separately. Existingtimeline544oracle untouchedmustpass. Addappropriatepurestate/raceunitcoverageifextractingmechanics, notimplementationmirrors."
+    },
+    {
+      "id": "98-RECONNECT-OPTIONS",
+      "requirement": "Browser93timeline205 showsoneremainingalert afterrestorednetwork buterrorbodyunavailable; preservezero-alertoracleanddiagnose withsource/runtimeevidence. MetadataoptionsGETcanfail duringofflineinitialload whilehistorylaterrecovers. IfaddingnativeWSreconnect/currentthreadmetadataepochretry, metadata-onlyboundedGET, samefullintentfences, preservefulltupledraft/revision andexplicitselection/no fallback; clearonlyownoldoptionserror onactualsuccessfulsafeDTO. Do noteraseSENDuncertainty orremountcomposertoclearerror. Originaltimelinefilebyteexact."
+    },
+    {
+      "id": "98-DUPLICATE-BU",
+      "requirement": "CurrentNumerosouterstrongBUname andInstagramConnectionsinnername duplicatecausesoldprotectedtelas405strictlocator. KeeponevisibleBUname andexistingsectionaria-label/accountlabels/permissions, noeditprotectedtelas.spec."
+    },
+    {
+      "id": "98-ADAPTER-DOM-READINESS",
+      "requirement": "Rootrejectsadvisorclaimofmissingsecondroute: oneWAimmutablepeer/businessroute SHAREDbyOfficial+Evolution, fixturealreadyclaimsbothsamebusinessresource; NEVERaddsecondWAroute. Browser93onlyshowsimmediateevaluateAllreturnednooption. evaluateAlldoesNOTautowait; assertactualselectorvisible andactual3options (placeholder+twoadapters), thenread/selectexactnonofficialandretainnativePOST/PGprovideroracles. ReportactualDTOifstillabsent, donotguessbackend."
+    },
+    {
+      "id": "98-MIXED-WAVES",
+      "requirement": "Preservechannel-transport5waves x20actualsubmittriggers, onePOST/external-effect/PGauditperwave/accepted+unknown/draftnativebodyhashoracles andoriginal30sbudget. CannotimmediatelyreuseUNCERTAINconversationafterunknown. Usehonestlydistinctcanonicalownedrecipientcontexts forUNKNOWNrounds (nativecurrent signedINs, notdeadlineedits) orsequencingwithsamefull5waves/alloracles; API95fixture3claimedroutes+defaultcanonicalpeerincomingavailable. GlobalMeta.sendcountermuststillprove5effects evenifdifferentcontexts. No fakeBFFresponses/silentskip/blindretry, no timeoutincrease. Originalscenariointentmustremain."
+    },
+    {
+      "id": "98-NATIVE-IG-SEQUENCE",
+      "requirement": "NativeIGspec hasUNKNOWN A-B-A beforeacceptedhold/fivewaves on SAMEconversation, violatingdurableUNCERTAINreservation. Reorder UNKNOWN scenario AFTERallremainingA sends, oruseanothercanonicalownedpeer; preserveALLoriginalOAuth/securecookies/realcallback/rawWSS/2accounts/samepeer/IN/window/receipt/UNKNOWNA-B-A/heldACCEPTEDsamecomposer/newrevision/5x20/provider+PGnegative/operatororacles andactualnativeproxybody/status/hash. DoNOTdropanyoracleoralterproductionprotocol/UNKNOWNguard; existingnew120sbudget/real10.5scooldowns preserved. Exacteffects10A+1B originallymustremainoraccounttransparentlyifaddingnativecontexts, nofabrication."
+    }
+  ],
+  "forbidden": [
+    "AllAPI/fixturewrites (95/97owned separately)",
+    "protectedtimeline.spec.ts/telas.spec.ts/start-conversation.spec.ts andglobalApp/Playwright/Vite/session/config/privacy",
+    "Unknownsocket.IOprotocol;actualraw/wsplainJSONonly",
+    "Tests/build/lint/hostNode/npm/docker/provider/network/runtime/tunnel/real.env/private/operationaldata/Gitmutations/worktrees/goals",
+    "Droppingassertions/counters/scenarios/budgets orclaimingnativecoverageunreached",
+    "ALL Git commands including status/diff/hash-object; no private path enumeration or filesystem discovery beyond positive public manifest."
+  ],
+  "validation": "Sourcewriteronly; completepatch+exactninehashes/staticlimits/testsNOTRUN. Rootqualifiesfullconsolidationbeforeonecurrentcanonicalrun andfreshreviews. No backendonly/partialfeatureacceptance.",
+  "pending": "Privacy/UTF8primaryCP5CP6/assurancegatesstillopen; timeline88withdrawnnoapply."
+}

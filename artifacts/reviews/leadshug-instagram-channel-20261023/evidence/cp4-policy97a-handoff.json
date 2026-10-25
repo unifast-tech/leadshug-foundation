@@ -1,0 +1,16 @@
+{
+  "kind": "CP4 policy97a native fixture correction",
+  "authority": "Onealreadyadmittednew97spec only; rootstaticaudit beforeanyexecution. Allpolicy/productsource97terminal and mustremainunchanged.",
+  "owned": [
+    "api-app/test/instagram-cp4-window-config.e2e-spec.ts"
+  ],
+  "defects": [
+    "All3Idempotency-Key valuesare nonUUIDstrings rejectedbeforetestedpolicy; replacewithrandomUUID().",
+    "criarCanalVerificado defaultsWABA null, currentnewsetup usesunknownphoneID; resolverreadinessneedsWABA. Useexistingpublicfixtureknownphone987654321/WABA123456789/provedBusinessPhone5584999990000 consistently, optionsrequiresWindowasgiven; no arbitrarynewproviderresourceclaim/rawphonefallback.",
+    "Official firstsend usesrealMetaInitialMessageClient directglobalfetch, NOTmetaFake.enviarTexto. CurrentnewtesthasnoHTTPfakeandwrongmetaFake.enviadosoracle. InstallstrictfixedexternalHTTPboundaryfake foronlyPOST https://graph.facebook.com/v26.0/987654321/messages withvalidatedBearerfixture-scoped-token/contentType/body/to/account/text; captureactualwirePOST/effect andreturnlegitimateGraphmessagesid. Blockunexpectedexternalrequests; neverfallbacktorealprovider. KeeprealAppModule/services/claim/PG/parser/clients. RestoreglobalsafterEach/finally. Assertcapturedwireone, localacceptedmessage andnoordinarymetaFake.enviadoscall; racezeroactualHTTPPOST.",
+    "Truewindowpositive mustingestrealrawHMACsignedMetaIN, notdirectqualifiedMessageinsert. UseexportedpublichelpersMETA_APP_SECRET andcreateHmac, fixedsyntheticmetadata/sender/timestampcurrent, actual /webhooks/meta200 andassertstoredPRI/officialInboundAt beforepreview/send. PreservefalsecasezeroIN andtruecaseclosed-before-IN/providerzero.",
+    "TransparentprepareInitialspy delegatesactualmethod thenmutatesrequiresWindow inrealPG; keepactualguardeddispatchrace/restoreand0HTTP/canonicalstate assertions. No stubdecision/transactionmock."
+  ],
+  "limits": "No tests/build/lint/npm/docker/provider/network/runtime/private/env/Git/status/branch/worktree/copy/goals. Source-only onepath. Rootqualifiesall328sources beforelaterUI/canonicalproof.",
+  "provenance": "97executor ran broader readonlyGitstatus/diff-name command outsidelane. No rawoutputused/repeated; rootrequiresindependentpositive-source/indexqualification. No claimthatpublicinventoryprovesprivatefileaccessabsence."
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "Already-admitted legacy channel92 exact browser prerequisite correction",
+  "profile": "Operational/Coder routine gpt-6-luna medium",
+  "allowedWrites": [
+    "web-app/e2e/channel-transport.spec.ts"
+  ],
+  "preimageManifest": "cp4-source91-terminal-manifest.json files; exactchannelTransport16133SHA39fc1106...",
+  "readAuthority": [
+    "web-app/e2e/channel-transport.spec.ts",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/src/telas/Inbox.tsx",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md"
+  ],
+  "required": [
+    "ONLY third legacy5waves20submits case: beforelogin addONEgenuinelycurrentsignedIN using existing /incoming with exactfixture.conversationId/phoneNumberId,target=https-browser; assertfixtureHTTP andnativewebhook200 asfirstcase; expect4messages atlogin(original3historiesplusactualIN), nohistoricalmutation. All5wave/original20events/onePOST/MetaPGcount/accepted+unknown/assertions/budgets untouched.",
+    "AftereachUNKNOWNwave anditsoriginalerror/draft/audit/provider assertions, explicitly click actual Atualizar op\u00e7\u00f5es once and await same draft stillpresent/currentcomposer enabled before next distinctaction. This consults native localadmissions+replyoptions, not resend/ackrisk. No automaticproviderretry/direct slotrelease orclockrewrite.",
+    "Preserve every existing scenario/assertion/counter and30stimeout; no other test/product/global/helper changes. No tests/build/lint/runner/network/runtime/Git/private/Foundationwrites. Rootwillrunfreshcanonicalbrowser."
+  ],
+  "completion": "Onlyownedfile terminalbytes/hash andexactlimiteddiff rationale; testsNOTRUN."
+}

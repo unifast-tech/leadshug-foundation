@@ -1,0 +1,70 @@
+{
+  "kind": "cp4-browser93-result",
+  "canonicalCommand": "bash scripts/test-channels-local.sh browser",
+  "invocations": 1,
+  "canonicalExitCode": 1,
+  "stages": {
+    "CI parity guard": "completed; guard self-check line present",
+    "API build": "passed",
+    "database migrations": "passed; 31 applied and schema up to date",
+    "Web build": "passed; tsc and Vite build completed",
+    "Playwright": "completed; 90 tests reached, 64 passed, 26 failed; 23.9m",
+    "API unit tests": "not run by browser target",
+    "API E2E tests": "not run by browser target",
+    "Web unit tests": "not run by browser target"
+  },
+  "firstFourFailures": [
+    {
+      "test": "e2e/channel-transport.spec.ts:52",
+      "summary": "Expected alert text “aceitou o envio sem confirmar o ID externo”; no alert element was found."
+    },
+    {
+      "test": "e2e/channel-transport.spec.ts:88",
+      "summary": "Expected an option matching /não oficial/i; no Evolution route option was found."
+    },
+    {
+      "test": "e2e/channel-transport.spec.ts:203",
+      "summary": "30s timeout clicking “Atualizar opções”; button detached from DOM during retry."
+    },
+    {
+      "test": "e2e/instagram-channel.spec.ts:199",
+      "summary": "Expected “Confirmar conta” after callback; browser navigated to instagramAuthorizationError=OAUTH_EXCHANGE_UNCERTAIN."
+    }
+  ],
+  "failedTests": [
+    "e2e/channel-transport.spec.ts:52:3 › Channel outbound pela Inbox com BFF e PostgreSQL reais › envia por Meta, mantém rascunho em ACK sem ID e bloqueia conversa ambígua",
+    "e2e/channel-transport.spec.ts:88:3 › Channel outbound pela Inbox com BFF e PostgreSQL reais › seleciona explicitamente a rota V2 e descarta resposta atrasada após troca A→B→A",
+    "e2e/channel-transport.spec.ts:203:3 › Channel outbound pela Inbox com BFF e PostgreSQL reais › bloqueia vinte novos submits durante cada envio real em cinco ondas",
+    "e2e/instagram-channel.spec.ts:199:3 › Instagram real HTTPS and BFF browser transport › proves account isolation, native callback/receipt/reply, held responses, recovery, and operator scope",
+    "e2e/number-onboarding.spec.ts:129:3 › cadastro guiado de número no BFF real › recupera NOVO expirado com nova autorização no mesmo canal",
+    "e2e/number-onboarding.spec.ts:178:3 › cadastro guiado de número no BFF real › bloqueia recuperação quando outra sessão substitui a tentativa atual do canal",
+    "e2e/number-onboarding.spec.ts:246:3 › cadastro guiado de número no BFF real › recupera troca Meta ambígua de NOVO com nova autorização sem reapresentar o código",
+    "e2e/number-onboarding.spec.ts:640:3 › cadastro guiado de número no BFF real › QR só aparece para o pareamento atual; IN antecipado é recusado e eco de envio reconcilia uma única mensagem",
+    "e2e/start-conversation.spec.ts:118:3 › Nova conversa pelo BFF com PostgreSQL real › abre contato vazio sem enviar e apresenta o fluxo explícito de primeira mensagem",
+    "e2e/start-conversation.spec.ts:202:3 › Nova conversa pelo BFF com PostgreSQL real › reconcilia uma reserva PREPARED sem liberar antes do prazo nem fazer chamadas ao canal",
+    "e2e/start-conversation.spec.ts:259:3 › Nova conversa pelo BFF com PostgreSQL real › permite editar e gerar nova prévia apenas após recusa BFF comprovada antes da reserva",
+    "e2e/start-conversation.spec.ts:301:3 › Nova conversa pelo BFF com PostgreSQL real › retry com resposta pré-admission não apaga uma submissão anterior incerta",
+    "e2e/start-conversation.spec.ts:369:3 › Nova conversa pelo BFF com PostgreSQL real › mantém snapshot após resposta perdida e não repete o envio automaticamente no reload",
+    "e2e/start-conversation.spec.ts:504:3 › Nova conversa pelo BFF com PostgreSQL real › recupera um envio comum incerto pelo BFF e só libera risco após o prazo real",
+    "e2e/start-conversation.spec.ts:607:3 › Nova conversa pelo BFF com PostgreSQL real › não inicia o POST se não consegue persistir o snapshot seguro da tentativa",
+    "e2e/start-conversation.spec.ts:656:3 › Nova conversa pelo BFF com PostgreSQL real › reutiliza histórico sem marcar leitura ou atender e permite modelo aprovado fora da janela",
+    "e2e/start-conversation.spec.ts:742:3 › Nova conversa pelo BFF com PostgreSQL real › mantém resultado incerto recuperável e reconhece risco sem repetir o POST",
+    "e2e/start-conversation.spec.ts:810:3 › Nova conversa pelo BFF com PostgreSQL real › conclui localmente um aceite conhecido após restauração da permissão, sem reenviar",
+    "e2e/start-conversation.spec.ts:870:3 › Nova conversa pelo BFF com PostgreSQL real › reconhece risco de aceite local pendente, envia sucessor uma vez e mantém a recuperação antiga isolada",
+    "e2e/start-conversation.spec.ts:995:3 › Nova conversa pelo BFF com PostgreSQL real › descarta prévia antiga após editar e trocar canal em ciclo A-B-A",
+    "e2e/start-conversation.spec.ts:1051:3 › Nova conversa pelo BFF com PostgreSQL real › cinco envios recebem vinte gatilhos síncronos cada sem duplicar o POST",
+    "e2e/telas.spec.ts:405:3 › as telas, no navegador › a tela de números mostra a BU sem canais e oferece o cadastro guiado por modalidade",
+    "e2e/timeline.spec.ts:205:3 › timeline da inbox com backend e PostgreSQL reais › reconecta sem evento posterior e recupera 130 mensagens em mais de uma rodada",
+    "e2e/timeline.spec.ts:544:3 › timeline da inbox com backend e PostgreSQL reais › sucesso da recuperação não apaga erro mais recente de envio",
+    "e2e/timeline.spec.ts:637:3 › timeline da inbox com backend e PostgreSQL reais › mescla envio real com autoria e mantém o novo draft digitado durante o envio",
+    "e2e/timeline.spec.ts:710:3 › timeline da inbox com backend e PostgreSQL reais › troca de conversa e BU protege resposta atrasada de envio"
+  ],
+  "cleanup": {
+    "runnerCompletedCleanup": true,
+    "evidence": "canonical log records removal of validation Postgres container, validation network, and disposable validation volumes including DB data, workspace, node_modules, npm and Playwright caches."
+  },
+  "postflightExact": true,
+  "protectedTimeline88": "remains pending human review; no acceptance or coverage claim made",
+  "deliveryClaim": false,
+  "rootReconciliationRequiredBeforeThaw": true
+}

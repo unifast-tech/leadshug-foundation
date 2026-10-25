@@ -1,0 +1,16 @@
+{
+  "kind": "CP4 policy97/97a root static qualification",
+  "sixReportedHashesExact": true,
+  "otherKnownSourcesExact": 322,
+  "sourceCount": 328,
+  "preservedImmutableRows": 34,
+  "approvedExceptionCandidatesExact": 3,
+  "rootIndexExact": true,
+  "staticChecks": [
+    "Trusted persisted official requiresWindow=false exception retained through abstract bound policy; true official/Instagram remain qualified-window constrained",
+    "Final transaction compares captured policy flag against current binding before dispatch",
+    "Native fixtures use actual BFF, UUID keys, fixed external HTTP boundary, raw signed current-resource IN and real PG flag-race"
+  ],
+  "limits": "Tests/build/lint NOT RUN for97/97a. Static source/hash qualification does not establish compiler/native/browser acceptance. Prior executor broader read-only Git inventory deviation recorded; no claim about private-path enumeration.",
+  "next": "Sole UI98 source writer then whole current canonical validation and mandatory remaining gates."
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "CP4 source95a bounded static correction",
+  "authority": "Same admitted six95paths; no newfunctional/path approval. Source95terminal butnotyetqualified due concrete staticdefects.",
+  "owned": [
+    "api-app/src/domain/inbox/contact-identity.ts",
+    "api-app/src/surfaces/bff/me.controller.ts",
+    "api-app/test/timeline-fixtures.cjs",
+    "api-app/test/instagram-cp4-initial-recipient.e2e-spec.ts"
+  ],
+  "requirements": [
+    "Fix helper input to Pick<Prisma.TransactionClient,contactIdentity> (singledelegate), call input.contactIdentity.findMany; reject mixedplatform graph by boundedtake2 allidentities forBU/contact, exactlyoneWHATSAPP/PERSON/BU canonicalpeer, optionalcontactBUrelationguard. Test mixedWA+IG samecontact andmissingidentity withoutdrops.",
+    "Preserve original optional explicitconversationId incomingcontract. Onlywhenprovided enforceuniqueownedcanonicaltarget; no-IDpath continues knownsyntheticownedphone+canonicalpeer/default signedIN throughactualwebhook, includingnewmanual-opencontactreply notinseededconversationIDset. No arbitraryprovider/URL.",
+    "Legacylist/detail readsbounded3WArows/lookahead, normalmax2oneperadapter. Linked+unlinkedduplicateorigin/morethan2 returns explicit409 CHANNEL_GRAPH_AMBIGUOUS, nevertruncate/pickfirst/returnfalseabsence. Preservegrantsandnormalpendingmetadata; addnativeconflictcase forownedofficial+null-ownerpendingofficial whileordinary2distinctadapterscase still200.",
+    "Preservehistories,exactV2prepare,realHTTPprovider-portDI,allotherknownsource. No tests/build/lint/runtime/Gitmutations inwriterlane."
+  ],
+  "outboundPolicyCorrection": "Rootconfirmed canonical integrations-and-channels.md165 explicitlypreserveslegacy requiresWindow=false. Earlierrootproposalrewriteallfirstsendteststotemplates rejected. Separatepolicy/typedUIrepair follows; doNOTeditpolicyinyour95alane.",
+  "terminal": "Exactfourcandidatehashes, other95hashespreserved, testsNOTRUN; rootqualificationrequired."
+}

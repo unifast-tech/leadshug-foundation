@@ -1,0 +1,20 @@
+{
+  "kind": "Root91 source qualification",
+  "changed": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 31536,
+      "sha256": "97e5efde41e7a1ce95d1f36f2a0fe1f9bfcade7c5c7dfb8a684505053db8eeee"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 33579,
+      "sha256": "ece36acaca62fa5f5a89b76f7a36a473ced8dcd36d1c82ed243c3f7e268eb8a5"
+    }
+  ],
+  "other323Exact": true,
+  "preservation34Exact": true,
+  "rootIndexExact": true,
+  "tests": "NOTRUN;68Webunit/build90on87source only",
+  "qualification": "Safe account labels list/header; exact rawJSONWSS/ws/currentinstance event proof source, not runtime. Original scope/windows/nativeoracles retained."
+}

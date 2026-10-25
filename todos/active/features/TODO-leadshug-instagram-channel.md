@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** UI87/display86 source qualified; run canonical Web90 once, then implement native HTTPS browser89 and obtain consolidated current ALL proof. Exact timeline88 companion awaits human admission; primary/CP5/CP6/assurance/real gates remain open.
+- **Next exact step:** Browser93 terminal/root-reconciled:64/90Playwright passed,26failed. Serialized causal source/fixture repairs and current complete canonical proof are required. Privacy/UTF-8 companions remain pending human validation; timeline88 was withdrawn as unnecessary; primary/CP5/CP6/assurance/real gates remain open.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** API66 completa GREEN426unit/597E2E e revisão afetada67complementar terminal/root reconciliada, sem novo defeito CP3. Testes nativos CP4 executados73: catálogo404/realtimeausente efixturesqualificadas antesdetodocódigoCP4; corrigirfixtures74 preservandolimites. Primary own-subscription, propostas humanas e todas as provas posteriores permanecem obrigatórias; nenhuma entrega parcial está aceita.
+- **Why this state now:** Browser93 completed actual API/Web builds,31migrations and all90Playwright:64pass/26fail. Empty-WA initial-flow, pending WA projection, V1 fixture context and synthetic fetch DI capture require correction; remaining failures need causal triage. API85 remains433unit/610of611E2E; no current complete ALL or native Instagram acceptance.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** API66 completa GREEN31migrações/lint/build/426unit39files/597E2E55files, log228825bytes SHA9ac52e007e774f18c7bb3049f7bb442b2cf1e2cc4a315f641fb7f9b846f66d91. Adherence67A21+B21/union35+33disjuntoscarried=68unique, ambos turn.completed/strictmerge; root conferiu261fontes/T/847inputs/35preservações/3gitlinks. Reparos afetados CP3 encerrados, ROOT03CP4/primário/latergates abertos. Após interrupção root confirmou261fontes+3novostestes+3gitlinks exatos; testes68/69 NOTRUN, produtoCP4 não implementado.
+- **Last confirmed truth:** Root independently reconciled Browser93 all325sources/fullT/1036positiveinputs/34immutable rows/3exceptions/rootindex/fouroutputs. ONEcanonicalbrowser exit1:builds/31migrations PASS;64/90Playwright passed,26failed in23.9m; cleanup complete. Native Instagram failed at OAuth exchange and later oracles were not reached. No current ALL/feature acceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1940,3 +1940,59 @@ Root matched6reported hashes/317other source bytes/34immutable rows/root index. 
 Root matched323sources/fullT/1012inputs/34immutable rows/root index/fouroutputs. ExactlyONE canonicalWeb90 exit0:26parityprobes,Prisma prerequisite,tsc/Vite63modules1.40s,68unit8files698ms PASS. API/E2E/browser NOTREACHED. Install summary reported9dependency vulnerabilities among106packages; security lane must qualify applicability before delivery, no dependency mutation inferred.90freeze ends after reconciliation.
 
 `evidence/cp4-browser89-handoff.json` admits sole routine writer only browser-server/timeline-fixtures, channel-transport/start-conversation existing specs and two new Instagram spec/freshness files. Actual ownedNest3102+TLS4174/nativePG/session/BFF/WS; fakeexternalHTTP/document only, productionGETnull/UNKNOWNunchanged; ownedproxy holds actual completed BFF responses without fabrication. QualifiedWA ownership/currentIN fixtures preserve every oldhistory/oracle. Protectedtimeline88 remains unmodified pending human. No globalconfig/helper/productAPI/privacy/UTF8/runtime/private/Meta/Git expansion. Root reconciles terminal source before canonical browser/ALL; all later gates remain mandatory.
+
+
+Read-only UI91 qualification: safe DTO/producer already carries accountLabel/platform, but Inbox list/header omit it and use raw janela.canal. Samepeer acrossIGaccounts is not distinguishable beforeselection. Already-approved SCOPE07 correction is queued in `evidence/cp4-ui91-prospective-handoff.json`; no writer dispatched while browser89active. Explicit same-conversation options refresh is honest and requires no automatic route change; no actor/draft leak established. Canonical Web90 proof remains for87source only; full browser/ALL/native race proof still required.
+
+
+### Browser89 terminal — bounded static corrections89a
+
+Root qualified3existingchanges+2newfiles/320preserved existing sources,325total/34immutable rows/rootindex; tests NOTRUN. Read-only source found duplicate lexicalvariable, missing scopedauthvalidation inIGHTTPfake, exacteffectarray missing5nativewaves, one-shotcounter unabletocountduplicates, acceptedcase navigation maskingrevisionoracle, transient/ambiguous/wrongstate locators, and actual10sverifycooldown unmet. `evidence/cp4-browser89a-handoff.json` confines repairs to3alreadyadmitted testfiles; realcooldowns plus120sbudget onlyfornewcombinedworkflow leave every oldtimeout/policy/SLOunchanged. Native child/session/client/BFF/DB/proxy andalloriginaloracles preserved. After89aterminal/rootreconcile, UI91then canonicalbrowser/ALL; no fullfeatureacceptance.
+
+
+### Browser89a terminal — fresh UI91 source handoff
+
+Root matched3reported hashes/322other knownsources/34immutable rows/root index. TestsNOTRUN. Remainingnewtest defect is invented Socket.IO path/framing; actualproductionws/client use /ws plainJSON. `evidence/cp4-browser89a-root-qualification.json` records it; no productionprotocolchange permitted. Fresh routine executor owns only Inbox.tsx readableaccountlabels andnewInstagram spec exactcurrentWSSframeoracle in `evidence/cp4-ui91-handoff.json`. Priorwriter reset after protocolguess. Othernativefixture/HTTP/proxy/specoracles preserved. Then rootqualification andcurrentcanonicalbrowser/ALL; protectedtimelinehuman/primary/CP5/CP6/assurance/realgatesremain.
+
+
+### UI91 terminal — admitted legacy channel92 fixture interaction
+
+Root matched2reported hashes/323other sources/34immutable rows/rootindex; no newtest run. Safeaccount display andactualrawJSONcurrentWSSoracle qualified onlystatically. Existingadmitted channel-transport third5waves case still lacksactualcurrentIN andexplicitconsultation afterUNKNOWN, unlikeearliercases. `evidence/cp4-channel92-handoff.json` limits solewriter tothatoneexistingtest: original3histories+oneactualsignedIN, all5×20/provider/PGoracles and30sbound retained, nativeexplicitconsultation only. Then canonicalbrowser93; protectedtimelinehuman/primary/latergates remainmandatory.
+
+
+### Channel92 terminal — canonical browser93 freeze
+
+Root matchedoneexacthash/324other sources/34immutable rows/root index; no newtest run. Allwriters terminal. Freeze325sources/fullT/positivelynamedpublicinputs for exactlyONE `bash scripts/test-channels-local.sh browser` invocation93. Fresh routinevalidator owns only four unique93outputs, naturaltermination/cleanup, no retries/autofix/source/T/inputwrites/operational/private/Meta/Gitexpansion. Actualcanonicalbrowser buildsAPI/migratesdedicatedPG/buildsWeb/runsallPlaywright; it doesnotrunAPIunit/E2E/Webunit. Protectedtimeline88 remains originalpendinghuman and mayfailthetwoqualifiedpositivecases; no skip/weakening/inferredfeaturepass. Rootreconciles actualreached/unreached/fixture/product failures before thaw. CurrentcompleteALL,primary/CP5/CP6/assurance/physicalgatesmandatory.
+
+### CP4 Browser93 terminal — causal repairs required
+
+Root independently reconciled325sources/fullT/1036positiveinputs/34immutable rows/3exceptions/rootindex andfouroutputs; raw118707bytesSHA29ac6de6ca46ee5ea7953cc55a49595330be6924d3c930b34003a099e66d1ae6. ONEcanonicalbrowser exit1:26parity/APIbuild/31migrations/Webbuild PASS; all90Playwright reached64pass26fail in23.9m; dedicated cleanup complete. `evidence/cp4-browser93-root-reconciliation.json` records reached/unreached and causal findings without claiming that later Instagram oracles executed.
+
+93freeze ends after root reconciliation. Correct canonically qualified route-free WA initial flow, bounded pending WA channel projection, V2 PREPARED fixture context, and fixture injection of captured Instagram fetch; triage remaining UI/recovery/native consumer failures. Never release uncertain admission, alter original deadlines, infer platform from a phone/candidate, fake BFF/provider success, or waive existing assertions/budgets. Protected timeline88 remains original pending exact human validation; privacy/UTF-8/primary/CP5/CP6/independent assurance/real gates all remain mandatory.
+
+### CP4 causal95 source handoff
+
+`evidence/cp4-api95-handoff.json` serializes one routine source writer for canonical initial peer qualification, bounded pending-WA legacy projection, native test fetch DI and exact V2 PREPARED fixture. Only five existing admitted API/fixture files and one new admitted Instagram spec; Web remains frozen for later source lane. No test/build/runtime/provider/private/Git expansion; no uncertain admission release or scope/threshold change. Root qualifies terminal bytes before serialized UI repair and actual consolidated validation. All pending human and whole-feature gates retained.
+
+#### CP4 source95a qualification corrections and window-policy recalibration
+
+95source is terminal but notaccepted. Root found nested Prisma delegate type/call, newlymandatory incomingconversationId breaking originalsyntheticcontract, and unbounded/conflicting legacyWAprojection. `evidence/cp4-api95a-handoff.json` authorizes sameadmittedfour-path repair/newtestassertions; allother95source preserved, no validationyet. Fixtureaddendum in95handoff records actualcanonicalroutes/otherBUclaim/pastqualifiedmetadata, preservinghistory.
+
+Rootrecalibration: `modules/integrations-and-channels.md:165` explicitlypreserves inherited `requiresWindow=false`; TODO821 requiresWAexistingpolicyreuse. Fixedtrue official eligibility introduceda productregression. Earlierrootproposaltoadaptalllegacyfirstsendtextteststotemplates is rejected, notimplemented. Separateboundpolicysource/typedconsumerrepair mustpreserveconfiguredWAexception, true-channelqualifiedwindow, andInstagramalways24h. No policy/timeout/assertionweakening, nor guessingroutefromphone. Existingprotectedtimeline88 remainspending.
+
+### CP4 source95a terminal — bound policy97
+
+Rootmatchedsix95/95acandidatehashes/320otherknownsources/34immutable rows/rootindex; `evidence/cp4-api95a-root-qualification.json` records326sources andsource-onlylimits. Compiler/nativePG/validation notyetproved. `evidence/cp4-policy97-handoff.json` serializesonefreshroutinewriter forabstracttrustedbinding-specificWApolicy andtransactionalflagfence, fouradmittedexistingsources/twonewadmittedtests. Officialfalseexception isrestoration ofmodule165/TODO821, notnewunsafeuserinput; trueofficialandInstagramqualifiedwindows preserved. No othercodewriter/tests/runtime/private/Meta/Git expansion.
+
+`evidence/timeline-window88-withdrawal97.json` WITHDRAWS theunnecessarytwofreshINprotected-testproposal, which assumedfixedtrueofficialpolicy. Originaltimelinebytes/oraclesremainmandatory; priorreview/requesthistorical, no pendinghumanvalidationforobsoletecandidate andnoapplyevenifalaterreplyarrives. Privacy/UTF8exactcompanionsremainpending; allwholeCP4/currentALL/primary/CP5/CP6/assurance/physicalgates retained.
+
+#### Policy97 source terminal — native fixture97a before execution
+
+97writer reports sixexactpaths/source-only; no testpass. RootfoundinvalidnonUUIDkeys, unreadyWABA/phonefixture, missingfixedMetaHTTPfake/wrongordinarysendcounter, anddirectqualified-rowinsert innewnativepolicytest. `evidence/cp4-policy97a-handoff.json` admitsonealreadyownednewtestcorrection toactualBFF/rawsignedIN/HTTPboundary/providercounters. Allother97source mustremain. Noextraexecution/private/providerauthority.
+
+97executor reported broadread-only `git status --short`/`git diff --name-only` outsideitslane; noGitmutationreported. Rootdoesnotreuseorrepeatrawoutput, andwillindependentlymatchallpositive328sources/protectedrows/exactrootindex. Thisrecordisnotretroactiveauthorizationorproofaboutprivatepathenumeration. FollowingexecutorshaveexplicitnoGit/statuscommands. No scope/validation/gatewaiver.
+
+
+### Policy97a terminal — whole UI98 source handoff
+
+Root independently matched six97/97a candidate hashes,322 other known sources,328 total public sources,34 immutable rows,three approved exception candidates and exact root index. `evidence/cp4-policy97a-root-qualification.json` records static-only qualification; tests/build/lint not run. `evidence/cp4-ui98-handoff.json` dispatches one fresh Operational/Coder routine executor on nine exact already-admitted Web paths for canonical initial-peer qualification, persisted official window policy parsing, common durable uncertain recovery, fenced versioned error ownership and complete native browser sequencing. No other source writer, no Git commands, no protected timeline/start/telas rewrite, no execution/private/runtime/Meta authority. All current complete validation and remaining human/primary/CP5/CP6/independent assurance/physical gates stay open.

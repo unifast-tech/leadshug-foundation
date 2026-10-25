@@ -1,0 +1,33 @@
+{
+  "kind": "UI91 account display and native WebSocket test correction",
+  "status": "GO only freshly dispatched sole routinewriter;89aterminal/rootbytequalified",
+  "allowedWrites": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "readAuthority": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/api.ts",
+    "web-app/src/tempoReal.ts",
+    "web-app/src/instagramState.ts",
+    "api-app/src/domain/channels/channel-display.ts",
+    "api-app/src/realtime/realtime.service.ts",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-ui91-handoff.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source89a-terminal-manifest.json"
+  ],
+  "sourceFacts": [
+    "Typed ConversationDisplay includes safe platform/accountLabel. Qualified projection emits Instagram @username or WhatsApp provider-proved ownphone; unknown emits nullplatform/accountLabel.",
+    "Inbox list currently recipientLabel and attendant only; header recipient/status/raw janela.canal. Two accounts with samepeertext cannot be distinguished before selecting.",
+    "Explicit same-conversation option refresh is intentional/honest; no automatic alternate needed. No new actor/draft leak established by read-only qualification."
+  ],
+  "required": [
+    "Render safe accountLabel in each conversation list row and thread header, with friendly known platform fallback and neutral unknown. It already includes platform, avoid duplicate words. Preserve existing recipient/status/attendant/unread and all timeline/navigation/composer behavior.",
+    "Do not derive from raw contact/BU.phone/providerIDs/latestorigin or exposeUUIDs, and do not enable Instagram manual initial send. No newAPI/helper/dependency/globalconfig.",
+    "New native browser89 twoaccounts/samepeer test must observe real account distinction; root canonical browser/ALL validates later. No mirror-unit test needed for simple presentation.",
+    "Native WS test must read actual listed realtime/client source: wss://127.0.0.1:4174/ws, plain JSON {tipo:conectado,escopo:[buIds]} and{tipo:mensagem,buId,conversaId}. Remove all /socket.io/40/42/Engine.IO guesses. Track actual socketinstance/monotonic id so initial-conectado andINframes are from CURRENT postgotoInbox connection, not retained frames fromprevious login/navigation. Capture only realframes, no injecting/replaying/mocking. Assert exactoneIN event peraccount/conversation onthatcurrentauthenticatedsocket plusDOM. Keep all old89a nativeOAuth/holds/5waves20/providercounters/PG/draft/120snewtest andlegacytimeouts."
+  ],
+  "completion": "Onlythese2paths terminal exactbytes/hash; staticsourceonly, no tests/build/lint/runtime/network/Git/private/otherwrites. Rootownsdocs/qualifiedcurrentcanonicalvalidation. No persistentgoal.",
+  "preimageManifest": "cp4-source89a-terminal-manifest.json files"
+}

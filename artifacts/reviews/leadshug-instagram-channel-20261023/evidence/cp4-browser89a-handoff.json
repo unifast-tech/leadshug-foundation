@@ -1,0 +1,50 @@
+{
+  "kind": "Browser89a bounded source corrections before canonical run",
+  "profile": "Operational/Coder routine gpt-6-luna medium",
+  "preimageManifest": "cp4-source89-terminal-manifest.json files",
+  "allowedWrites": [
+    "api-app/test/browser-server.cjs",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "findings": [
+    {
+      "id": "B89-01",
+      "fact": "Spec redeclares const composer in same test scope near192 and363, causing parser error.",
+      "fix": "Distinct scoped variable or rename laterComposer with all proper uses. Preserve scenarios."
+    },
+    {
+      "id": "B89-02",
+      "fact": "IG fake adapter discards Authorization/content-type; subscribed_apps fake ignores URLtoken/account and message fake accepts any nonemptyrecipient without credential proof.",
+      "fix": "Forward actual method/content-type/BearerHeader/body bytes. Fixture must validate exact fake client/redirect/grant fields for exchange and exact query token/account for subscribed-apps and bearer token/account for sends; reject missing/wrong token/account without call/effect records. Keep real productionclients/normalizers/UNKNOWNGET, no rawtoken/code logging. Add explicit negative fakeboundaries/noeffect asserts where natural."
+    },
+    {
+      "id": "B89-03",
+      "fact": "Final exact effects array expects6 entries although five native accepted waves now add5Aeffects beforeB; actual expected11.",
+      "fix": "Retain exact ordered destinations/account/peer for all11 effects, includingfivewaves. No weakened containment/threshold/counter removal."
+    },
+    {
+      "id": "B89-04",
+      "fact": "Nativewave requestCount increments only in waitForRequest one-shot predicate, which detaches on firstmatch and cannot count extra requests.",
+      "fix": "Use persistent request listener perwave with exactmethod/path, remove in finally after terminalchecks. Keep all5waves/20events/nativeprovider/PG/onePOST asserts; async UI clear assertions must await observable change."
+    },
+    {
+      "id": "B89-05",
+      "fact": "Accepted hold case navigates A-B-A and therefore proves navigation fence, not actual same-instance draftrevision clearing.",
+      "fix": "For accepted201hold remain in SAME actor/BU/conversation/composer instance, type newer draft while response pending then release unchanged actualresponse and assertnewdraft retained. ExistingUNKNOWNA-B-A andWArealBUreturn preserve navigation proof. No fakeBFFresponse."
+    },
+    {
+      "id": "B89-06",
+      "fact": "Immediate transient auth URL toHaveURL can miss document when fake script instantlyredirects. Global getByText @account becomes strict ambiguous once91addslist+header+composerlabel. AccountCard role=status useschannelstatusCONECTANDO=>Conex\u00e3o em andamento plusrecebimentopendente, not attemptMAPPED_PENDING_RECEIPT label.",
+      "fix": "Assert actualexternal authrequest via promise/capturedURL plusactual303/cleanURL; no dependence on polling transientURL. Scope accountLabel assertion toactualthreadheader. Assert correctchannelcard pendingstate and separateattemptstate without alteringproductcopy."
+    },
+    {
+      "id": "B89-07",
+      "fact": "Production verifyConnection enforces owner lastSubscriptionAttempt10scooldown (service~155) afterPOST; immediateverifycannotproduce expectedGET. Twoactualcooldowns pluslargejourney exceed30stest budget.",
+      "fix": "Wait real remaining10scooldown (safe fixture actualPG timestamp ifexposed, or conservative10s+margin) before each explicitverify; do not retryHTTP automatically or rewriteclock/lease. Set ONLY newly-authored combinedInstagramworkflowtest timeout120s tocover2real10swaits+OAuth/holds/5waves; all old30s/timing/performance/deadline budgets bytepreserved. This is newworkflowexecutionbudget, not policy/SLO relaxation."
+    }
+  ],
+  "preservation": "All325othercurrentknownsources except3owned,34immutable+3exceptions/rootindex unchanged. Protectedtimeline88/globalconfigs/privacypending/productpolicy untouched. Rootownsdocs, no otherwriter/runner.",
+  "forbidden": "No tests/build/lint/runner/runtime/provider/network/private/env/Git/inventory/Foundationwrites/otherpaths. Existingcomplete89contract stillmandatory; correct actualstaticdefects before validation, no passingclaims.",
+  "completion": "Return exact changed paths bytes/hash, eachfinding outcome and remaining concretegaps; tests NOTRUN."
+}

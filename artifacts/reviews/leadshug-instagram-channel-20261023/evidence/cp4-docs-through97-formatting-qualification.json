@@ -1,0 +1,10 @@
+{
+  "kind": "Owned docs97 formatting qualification",
+  "stagedExactPaths": 53,
+  "authoredWhitespaceExit": 0,
+  "generatedRawLogWhitespaceExit": 2,
+  "rawLogPolicy": "Exact canonical93 log preserved verbatim; only generated cp4-browser93-browser.log excluded from strict whitespace. All other authored documents pass strict whitespace.",
+  "rawLogSha256": "29ac6de6ca46ee5ea7953cc55a49595330be6924d3c930b34003a099e66d1ae6",
+  "productRootIndexMutated": false,
+  "priorQualificationAttempt": "Stopped on carriage-return progress lines in raw log; no content normalized, no commit performed during that attempt."
+}

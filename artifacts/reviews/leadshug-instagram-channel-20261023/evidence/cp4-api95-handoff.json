@@ -1,0 +1,58 @@
+{
+  "kind": "CP4 causal API/fixture source95 handoff",
+  "authority": "ApprovedST-IG-03v1.3; Browser93 terminal independently reconciled. No protected deviation or real runtime authority.",
+  "profile": "Operational / Coder",
+  "routing": {
+    "role": "routine-executor",
+    "model": "gpt-6-luna",
+    "effort": "medium",
+    "topology": "primary-checkout-single-writer"
+  },
+  "baseline": "cp4-source92-terminal-manifest.json",
+  "ownedExisting": [
+    "api-app/src/domain/inbox/initial-message.service.ts",
+    "api-app/src/domain/inbox/contact-identity.ts",
+    "api-app/src/surfaces/bff/me.controller.ts",
+    "api-app/test/browser-server.cjs",
+    "api-app/test/timeline-fixtures.cjs"
+  ],
+  "ownedNew": [
+    "api-app/test/instagram-cp4-initial-recipient.e2e-spec.ts"
+  ],
+  "objectives": [
+    {
+      "id": "95-INITIAL-PEER",
+      "requirement": "Add safe explicit initialRecipientPlatform:WHATSAPP|null to start-options, independently derived from unique canonical ContactIdentity bound to conversation/contact/BU; WHATSAPP PERSON namespace+BU scope+canonicalpeer+PESSOA only. Unknown/missing/ambiguous/malformed/mixed/crossBU graph returnsnull. No raw conversation.contact or candidate/route/BU.phone inference; no route creation or provider I/O in this read. Use existing canonical peer normalizer only to validate identity peer, not infer from legacy phone. Keep new helper within admitted contact-identity.ts if useful. Preserve existing options/attempts/admissions and exactlybounded local reads."
+    },
+    {
+      "id": "95-PENDING-WA",
+      "requirement": "Restore unverified/pending sameBU WA channels to legacy /business-units list/detail needed by recovery andQR. Current predicate businessIdentity WHATSAPP wrongly drops null-businessIdentity reserved channels. Explicit compatibleWAtypes only, max2normaladapters; nullidentityisnotproof/ready/phone andmustnotreceiveresourcefallback. Preserve role/grants/currentAttemptId/generation, IGexcluded, conflictsvisibleconservatively; do notsilentlytruncate/conflict-hide. Add bounded tests for pending official/unofficial projections andIGexclusion before ownership, including existingownedWAwithpendingsecondadapter."
+    },
+    {
+      "id": "95-HTTP-FAKE-DI",
+      "requirement": "InstagramIntegrationModule captures fetch via useValue at require(AppModule). In browser-server TestingModule override ONLY INSTAGRAM_HTTP_FETCH with fixture-wrapped fetch after wrappersetup; keep actualproductionHTTP/messagingclients/AppModule/rawparser/services/session/PG/callback/BFF. No productionmodulechange/classfake/nativeBFFresponse fabrication. All IG endpoints must use exactlocalprovider port fake; add safe fixedoperation diagnostics/count verification if needed, nevercode/token/rawURL output. Do not assert observednetworkrequestdetails from93beyondactualuncertainerror; causecaptureverifiedstatically."
+    },
+    {
+      "id": "95-PREPARED-V2",
+      "requirement": "Owned /provider/initial-attempt/prepare stillbuildsV1. Build exactcurrentV2 from actualownedcanonicalroute/contact/business/provider/channel/credential tuple; schemaVersion2 plusallrequiredkeys, adapterOrigin, NOlegacyrequiresWindow/channelOrigin keys. No made-upUUID, tablebypassofreserveInitial orproductionV1writer. Preserve canonicalrequestrecipient/fingerprint/recoverytimers, fixtureauth/scopeguards andallrecoveryassertions. No provider calls ordeadlineediting for this correction."
+    },
+    {
+      "id": "95-NATIVE-ORACLES",
+      "requirement": "New PostgreSQL native BFF spec covers route-free canonicalWA initial qualification without sends/routecreation/providerIO, IG/unknown/malformed/ambiguous/crossBUnegatives; legacy projections pendingofficial+unofficial/currentattempt/QRmetadata andIGexclusion, no grantsleak. Reuse existinghelpers andactualservices; no transactionmock/relaxation."
+    },
+    {
+      "id": "95-FIXTURE-PEER-ADDENDUM",
+      "requirement": "Claim actual other-BU WA business resource and create immutable routes for allthree owned synthetic contacts. Explicit incomingconversationId mustderivecanonicalpeerfromuniqueownedroute/BU/provider/businessproof, nothardcodedmainpeer. Preserve optional-ID originalincomingcontract forknownsyntheticphone+canonicalpeer andactualwebhookcreation ofnewcontacts. SeedhistoricalofficialInboundAt/PRI fromsameactualfixtureprovider andoriginalpastcreatedAt; no recentIN orcount/ID/timestampchange."
+    }
+  ],
+  "forbidden": [
+    "All other325knownsources/tests exceptownedpaths",
+    "AllWebsource; rootwillserializeUIafter95",
+    "protectedtimeline/EPS/Evolution/privacyfiles",
+    "actual.env/privatefiles/runtime/Meta/credential/operationalDB/log/process/volumes/tunnel",
+    "tests/build/lint/npm/docker/provider/network validation in sourcewritinglane",
+    "Git mutations/branches/worktrees/copies/goals",
+    "scope/budget/cardinality/timeout/assertionweakening or releasingUNCERTAINordinaryadmissions"
+  ],
+  "terminalContract": "Report exactchangedfilebytes/SHA256 and causalstaticqualification plus testsNOTRUN. Preserve allotherbaseline325sourcebytes,34immutable/3boundedexceptions/rootindex. RootqualifiesbeforeUIandonecurrentcanonicalrun; nofeatureacceptance."
+}

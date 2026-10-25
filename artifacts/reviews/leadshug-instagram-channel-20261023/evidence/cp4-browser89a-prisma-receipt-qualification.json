@@ -1,0 +1,10 @@
+{
+  "kind": "Browser89a concrete Prisma/receipt fixture qualification",
+  "allowedPathsUnchanged": true,
+  "facts": [
+    "Message schema has only officialInboundAt; instagramInboundAt is domain input mapped to the same qualified window column by MessageAcceptance. Fixture selecting/filtering instagramInboundAt is invalid Prisma.",
+    "confirmInboundReceipt updates receiptVerifiedAt=now for authenticated accepted inbound even when originaltimestamp is stale and qualifiedwindow timestampnull. Oldoriginaltimestamp does not prove lack of receipt."
+  ],
+  "correction": "Use actual officialInboundAt with explicit Instagram origin/provider qualification in fixture. Preserve no-qualifiedwindow increase/closedwindow and badsignature/crosstarget zeroeffects; validagedIN keepsconfirmedreceipt with monotonic timestamp, not prior-equality. No schema/product/policy changes.",
+  "validation": "Source-qualified only; canonical proof not run."
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "sources": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "bytes": 18668,
+      "sha256": "41a0ecb80205a75571bbfe09746fc8150956ef37706a11d8e8a2dc6fa6e60047",
+      "facts": "Official Markdown documents InstagramLogin POST account/subscribed_apps on graph.instagram.com v26.0 with Instagram User token, fields query, success:true. Contains six subscribed_apps mentions (POST forUnifiedLogin/InstagramLogin/FacebookLogin) and no app_id; doesnotsettle GET ownapp/envelope/visibility/completeness/absence."
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/reference/me.md",
+      "bytes": 1083,
+      "sha256": "9cee86ae47f4a1256c53d53f34837e5909270afd9c15bf197c53a0ee593f62c5",
+      "facts": "No subscribed_apps orapp_id contract. Doesnotsettleremainingprimarygap."
+    }
+  ],
+  "limits": "Public documentation only in memory, no providerprobe/runtime/private/code change. Webtool inaccessible, direct public HTTPS200. Primarygap remainsOPEN; no guessedsemantics ornewPOST/retry permitted."
+}

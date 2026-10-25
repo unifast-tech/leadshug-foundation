@@ -1,0 +1,15 @@
+{
+  "kind": "Browser89a original lifecycle requirement qualification",
+  "notAdditionalScope": true,
+  "allowedPathsUnchanged": [
+    "api-app/test/browser-server.cjs",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/instagram-channel.spec.ts"
+  ],
+  "sourceFacts": [
+    "Existing close awaits frontdoor close before releasing held responses/terminating owned child; pending nativehold orWS could prevent teardown after a failingassert.",
+    "Parent3100 listen currently precedes child3102/TLS4174 readiness; oldhealth therefore alone does not guarantee new topologyready."
+  ],
+  "required": "Within existingbrowser-server only, idempotent owned shutdown releasespendinggate/closesownedsockets+child andremovescert. Advertiseparenthealthonlyafterchild/frontdoorready, withoutchangingglobalPlaywright/config/private orotherprocesses. PreserveactualAPI/WS/status/header/body semantics.",
+  "tests": "NOTRUN; source-qualified lifecycle ordering correction only; no claim actual hang occurred."
+}

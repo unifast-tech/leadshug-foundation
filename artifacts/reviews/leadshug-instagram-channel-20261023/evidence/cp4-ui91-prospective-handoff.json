@@ -1,0 +1,24 @@
+{
+  "kind": "Prospective UI91 exact already-approved account-identification correction",
+  "status": "NOT DISPATCHED; browser89 currently sole codewriter. Execute only after89terminal/rootqualification.",
+  "allowedWrites": [
+    "web-app/src/telas/Inbox.tsx"
+  ],
+  "readAuthority": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/api.ts",
+    "web-app/src/instagramState.ts",
+    "api-app/src/domain/channels/channel-display.ts"
+  ],
+  "sourceFacts": [
+    "Typed ConversationDisplay includes safe platform/accountLabel. Qualified projection emits Instagram @username or WhatsApp provider-proved ownphone; unknown emits nullplatform/accountLabel.",
+    "Inbox list currently recipientLabel and attendant only; header recipient/status/raw janela.canal. Two accounts with samepeertext cannot be distinguished before selecting.",
+    "Explicit same-conversation option refresh is intentional/honest; no automatic alternate needed. No new actor/draft leak established by read-only qualification."
+  ],
+  "required": [
+    "Render safe accountLabel in each conversation list row and thread header, with friendly known platform fallback and neutral unknown. It already includes platform, avoid duplicate words. Preserve existing recipient/status/attendant/unread and all timeline/navigation/composer behavior.",
+    "Do not derive from raw contact/BU.phone/providerIDs/latestorigin or exposeUUIDs, and do not enable Instagram manual initial send. No newAPI/helper/dependency/globalconfig.",
+    "New native browser89 twoaccounts/samepeer test must observe real account distinction; root canonical browser/ALL validates later. No mirror-unit test needed for simple presentation."
+  ],
+  "completion": "Oneownedpathonly exactbytes/hash; no tests/build/runner/runtime/private/Git. Rootrecords separateGO after89terminal."
+}

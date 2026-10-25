@@ -1,0 +1,43 @@
+{
+  "kind": "Root browser89 exact terminal source qualification",
+  "terminalFiles": [
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 21139,
+      "sha256": "8c2536572eb454296cc81009d54a8fac6f54a08640f3148acd88c7832ae92486"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 55497,
+      "sha256": "43cdfe06dbde242ab3c22f518d463186c12577d425277478631a496657642ed4"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 16133,
+      "sha256": "39fc11063246a312e4746dd8ee6c2ff1306808de0f6e25d30689d875850d2db5"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 27286,
+      "sha256": "2bbfe2251f2d0c3065de58c8eea1d11df61e6d7bc99388cc5966f19039e10c1a"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel-freshness.ts",
+      "bytes": 6659,
+      "sha256": "533e8186eb7314f51432bba876fc8afb20086dfd0032d94ca06b00536095ef46"
+    }
+  ],
+  "existingChanged": [
+    "api-app/test/browser-server.cjs",
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/channel-transport.spec.ts"
+  ],
+  "other320ExistingSourcesExact": true,
+  "newFiles": 2,
+  "sources": 325,
+  "preservation34Exact": true,
+  "rootIndexExact": true,
+  "tests": "NOT RUN on89; source qualification only",
+  "reportedNativeTestCoverage": "HTTPS/actualOAuthcallback/currentIGsignedIN+reply/providerPGchecks/proxyheldACKacceptedandUNKNOWN/5waves20submits/realBUA-B-A/agedINclosedwindow/operatorisolation/storageunavailable",
+  "reportedLimit": "Inboxopenvisibleupdate asserted; specificWSframe causaltransport not yet captured. All browser/ALL/primary/later gates unaccepted."
+}

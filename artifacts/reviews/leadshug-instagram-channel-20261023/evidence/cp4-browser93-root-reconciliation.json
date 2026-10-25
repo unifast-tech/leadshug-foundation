@@ -1,0 +1,63 @@
+{
+  "kind": "Browser93 independent root reconciliation",
+  "sourceCount": 325,
+  "sourcesExact": true,
+  "fullTodoExact": true,
+  "boundInputCount": 1036,
+  "boundInputsExact": true,
+  "immutablePreservationRows": 34,
+  "preservationExact": true,
+  "approvedExceptionCandidatesExact": true,
+  "rootIndexExact": true,
+  "fourReportedOutputsExact": true,
+  "canonicalInvocations": 1,
+  "canonicalExitCode": 1,
+  "actual": {
+    "parity": "26 probes passed",
+    "APIbuild": "passed",
+    "migrations": "31 applied; schema up to date",
+    "WebBuild": "tsc/Vite passed",
+    "Playwright": {
+      "total": 90,
+      "passed": 64,
+      "failed": 26,
+      "durationMinutes": 23.9
+    },
+    "cleanup": "canonical dedicated containers/volumes/network removed"
+  },
+  "unreached": [
+    "API unit tests",
+    "API integration tests",
+    "Web unit tests",
+    "live provider/runtime/physical proof"
+  ],
+  "causalFindings": [
+    {
+      "id": "BR93-INITIAL-IDENTITY",
+      "state": "confirmed source causal mismatch with failed empty-WA browser oracle",
+      "detail": "Route-derived display.platform is null before explicit first-send route; Inbox uses it to block canonically qualified new WA contact. Need safe server-owned contact qualification independent of route; no phone/candidate inference."
+    },
+    {
+      "id": "BR93-PREPARED-V1",
+      "state": "confirmed fixture mismatch and actual500",
+      "detail": "Owned synthetic prepare helper still constructs V1 selectedContext; current reserveInitial requires complete V2. Existing recovery behavior/assertions must remain."
+    },
+    {
+      "id": "BR93-IG-FETCH-CAPTURE",
+      "state": "confirmed source DI mismatch; actual OAuth exchange uncertain, exact failing exchange not yet isolated",
+      "detail": "InstagramIntegrationModule captures fetch in useValue at module import before harness global.fetch wrapping. Bind only INSTAGRAM_HTTP_FETCH to the fixture-wrapped fetch in TestingModule; retain actual production clients/parser/services. No production protocol rewrite. Existing evidence does not prove which upstream request failed or that it never attempted an external synthetic request."
+    },
+    {
+      "id": "BR93-WA-PENDING-PROJECTION",
+      "state": "confirmed source mismatch matching retry/QR failures",
+      "detail": "Legacy business-unit projection filters businessIdentity WHATSAPP, omitting unverified WA channels before ownership claim; lifecycle recovery/QR requires same pending channel/currentAttemptId. Preserve bounded WA-only grants and safe neutral presentation."
+    },
+    {
+      "id": "BR93-UI-REMAINDER",
+      "state": "open diagnosis",
+      "detail": "ACK alert lost, refresh detach, adapter option observation, duplicate BU label, timeline recovery alert/error arbitration, initial/template window entry and late navigation require causal triage. Never release UNCERTAIN ordinary admission or weaken deadlines to satisfy stale oracles."
+    }
+  ],
+  "protectedTimeline": "Original bytes remain; exact timeline88 companion still awaits explicit human validation. Four timeline failures include two additional recovery/error oracles; no blanket permission inferred.",
+  "freezeDisposition": "Browser93 freeze ends only after this independent reconciliation; no source was changed during run. Separate bounded serialized repairs follow. All CP4/primary/CP5/CP6/assurance/real gates remain open; no partial acceptance."
+}

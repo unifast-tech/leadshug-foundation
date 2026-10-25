@@ -1,0 +1,33 @@
+{
+  "kind": "CP4 bound eligibility policy97 source handoff",
+  "authority": "Restore explicit approved canonicalrequiresWindow preservation; no newfunctional scope. 95a source terminal/rootqualified326files.",
+  "profile": "Operational/Coder",
+  "routing": {
+    "role": "routine-executor",
+    "model": "gpt-6-luna",
+    "effort": "medium",
+    "topology": "primary-checkout-single-writer"
+  },
+  "baseline": "cp4-source95a-terminal-manifest.json",
+  "ownedExisting": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/domain/inbox/outbound.service.ts",
+    "api-app/src/domain/channels/transport/channel.ts"
+  ],
+  "ownedNew": [
+    "api-app/src/domain/inbox/channel-eligibility-policy.spec.ts",
+    "api-app/test/instagram-cp4-window-config.e2e-spec.ts"
+  ],
+  "requirements": [
+    "Read canonicalmodule165 andTODO821 first. Official configuredrequiresWindow=false exception MUSTworkforreply,initial,automation andprojections; trueofficial retains existingqualifiedOfficialChannelWindowPolicy; IGalways24h/humanreply/text/exactaccount; Evolutionneverwindow. DoNOTrewriteoldstart/timeline tests to compensateforproductregression.",
+    "Bind immutable ChannelEligibilityPolicy to trustedservercandidate metadata throughsmallabstractbindingcontract/registry. Caller dependsontheabstractpolicy only; no scatteredcallerconcreteinstancechecks/framework. Defaultmissingofficialconfig remainsconservative true; explicitfalsecomesonlyfromactualDBbinding. Falsepolicyinspectreturnsopen:true,expiresAt:null withoutwindowquery, andevaluatehonors text eligibility; approvedtemplate semanticsunchanged. PreserveexistingOfficialWindowPolicy/indexqueryalgorithm.",
+    "Everyresolverpolicyuse and batchedwindowreference mustresolveconsistentlyforsamecandidate config: initialOptions,replyOptions,single/manyavailability,bind,initial,reply,automation. Keep batching/querybudgets andno externalI/O; no silenttype-global mismatch. ExactcurrentV2persistedcontextshape/fingerprintkeysstayunchanged.",
+    "Capture configuredpolicyonResolvedChannelOperation andguard finaldispatchagainstbindingflagflip inalreadylockedcurrentchanneltransaction. Mayaddoptional expectedRequiresWindow parameteratendofabstractvalidateOperationContextInTransaction+implementation andpassitfromOutboundvalidateDispatchContext usingcapturedpolicy.requiresWindow; comparecurrenttrustedpolicyrequiresWindow underchannelpin beforedispatch. No changetoacceptedfact/local-onlyrecoverysemantics or originaldeadlines. Missingtest-onlyargumentdoesnotauthorizeproduction: productionalwayspassescapturedboolean. No addingcaller-controlledwindowflagtoBFFbody/context.",
+    "Meaningfulunitcoverage configuredfalseofficialtext(initial/reply/automation), trueofficialclosed/open/template, IGcannotbeweakenedbyfalse, Evolutionno-window. NativePostgreSQLBFF spec: actualverifiedfalseofficialroute-freeopen→preview→firsttextsend withoutpriorIN, actualreply/readiness/options reflectfalse, trueofficial remainsblockedwithoutqualifiedIN thenvalidaftercurrentIN; IGpolicy staysstrict usingexistingactualflow orunitcombinedevidence. Include transparentactualbinding/concurrentflagflipcase: zero provider dispatch whenfalse→trueaftercapture, no fake context/policydecisions or transaction mocks. Reuseexistingactualhelper/ownerchains.",
+    "Preserveall326knownsources except4ownedexisting and2new,34immutable/3boundedexceptions/rootindex. No othertests/thresholds/fixtureupdates; no private/env/runtime/Meta/tunnel/network/Gitmutations/worktrees/goals. No tests/build/lint in sourcewriterlane.",
+    "Return completepatch and exactsixfilebyte/SHA hashes withtestsNOTRUN/staticlimits. RootqualifiesbeforewholeUIconsumerwriter andonecurrentcanonicalvalidation. No gate/primary/privacy/UTF8/CP5/CP6waiver."
+  ],
+  "source95aLimits": "Compiler/nativePG/browser proof stillopen, no earliercounts reused.",
+  "timeline88": "Obsoleteproposalwithdrawn97; protectedoriginalbyteexact mandatory."
+}

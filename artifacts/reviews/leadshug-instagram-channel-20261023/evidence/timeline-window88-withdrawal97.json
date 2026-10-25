@@ -1,0 +1,10 @@
+{
+  "kind": "Withdraw obsolete timeline88 proposal",
+  "reason": "Proposal assumed official always requires24h. Canonical modules/integrations-and-channels.md165 preserves inherited requiresWindow=false; TODO821 requires reuseofexistingWApolicy. Correctproductpolicy ratherthanrewritelegacypositivefixtures.",
+  "proposal": "timeline-window88-proposal.json",
+  "priorReview": "timeline-window88-root-review-reconciliation.json",
+  "protectedSource": "web-app/e2e/timeline.spec.ts",
+  "preservedSha256": "36e51ccf9df361ff0f6704660cdf3fe86b821b4845e264a649c9d2583e0e1e4e",
+  "disposition": "WITHDRAWN; candidate diff not applied, human question no longer needed. Historical critique/admissionrequest retained. Any later answer doesnotautomaticallyrevive obsoletecandidate. Original90browseroracles must be preserved.",
+  "otherHumanQuestions": "Privacy HTML and outboundUTF8 exactproposals still pending; no authority implied."
+}

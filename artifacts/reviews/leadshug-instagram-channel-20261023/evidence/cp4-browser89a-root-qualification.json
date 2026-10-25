@@ -1,0 +1,25 @@
+{
+  "kind": "Root89a source byte qualification",
+  "changed": [
+    {
+      "path": "api-app/test/browser-server.cjs",
+      "bytes": 22805,
+      "sha256": "9a900a78b4e004dfad0e0ad454a403c6ef66b3876d57c5e53e492fdb6e60b2e9"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 57114,
+      "sha256": "920c5dac784a0b7923b14a2107bce495ef5cd3c547d7c44e759d61f6cdcbf59d"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 32544,
+      "sha256": "4bba7ee51ea0e816960d52b4380e88ce30f4dc871e5f38fdce30b3f8a0a06e63"
+    }
+  ],
+  "other322Exact": true,
+  "preservation34Exact": true,
+  "rootIndexExact": true,
+  "tests": "NOTRUN",
+  "residualStaticDefect": "Spec invents Socket.IO /socket.io and40/42packets, but actualRealtimeService/ws and tempoReal.ts use plainJSON at /ws with{tipo:conectado,escopo}. Requires exact fixture correction; no runtime/protocol productchange."
+}
