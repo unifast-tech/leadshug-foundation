@@ -1,0 +1,84 @@
+{
+  "kind": "Independent terminal Web117 root qualification",
+  "owned": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42023,
+      "sha256": "b304db19995dc34a7adea764fda50f57b1178a7095c22cfa5386961dac6ec9ff"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 43295,
+      "sha256": "a2a9549f099853a336a6719fcad3e012d85d0cd6e9280982bb99d8ae157d7ca5"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 21212,
+      "sha256": "3a8365a7815d1c37d2ec97b7aa46d6e0c93788f3b5a6f8e17597885f32c8d813"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 16881,
+      "sha256": "d891883e9c8150c35eb3cd6e68923dcd7aa9ed32ec72b9627329d38ea9d562d1"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 8877,
+      "sha256": "fa5f86c23900a89a088a13b41c98077053240ac4ce8a3dd21521abd1ad19cd97"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 12788,
+      "sha256": "841e1313cf7f474e668fdfdea24d0c4608d277d0396334157aa0ee233d47f327"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3102,
+      "sha256": "57d9294ff2895eb022097df595279ddea3be8a31243fdf83434ff71b0ca2c261"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 6611,
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 49919,
+      "sha256": "0d195432fc8cacad73840bdaf83df3f655ca4c2fd0b1afb85baeea35f92daa19"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 38882,
+      "sha256": "33de54e1feb553927c8e18095e50a111e1251448c9c5e7b37c44dc25b50c41e9"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel-freshness.ts",
+      "bytes": 6659,
+      "sha256": "533e8186eb7314f51432bba876fc8afb20086dfd0032d94ca06b00536095ef46"
+    },
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 61513,
+      "sha256": "fedf301625858352821aa5afcc66335bc321f5fd7a1fc2c7a23ad99e914ea58e"
+    }
+  ],
+  "ownedChanged": [
+    "api-app/test/timeline-fixtures.cjs",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/componentes/InstagramReplyComposer.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/src/instagramState.ts",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/telas/Numeros.tsx"
+  ],
+  "otherKnownSourcesExact": 321,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "D02-D08 source and separate native cases authored, actual-contract D05 completed with real-response delivery barrier; three typed parent callbacks adapted. No native/compiler/ALL pass inferred. All affected findings remain open pending actual proofs and fresh review. Full reload with every storage unavailable cannot recover a lost in-memory key; no lookup route invented."
+}

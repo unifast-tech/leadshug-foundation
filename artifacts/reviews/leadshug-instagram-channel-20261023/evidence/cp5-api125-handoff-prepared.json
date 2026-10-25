@@ -1,0 +1,39 @@
+{
+  "kind": "Prepared sole API125 existing protocol/protection completion",
+  "state": "PREPARED ONLY; Web117 currently solewriter, no125source permission until root dispatch after117terminal/rootqualification",
+  "profile": "Operational / Coder, NestJS/Prisma/PostgreSQL native fixture overlays",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10218,
+      "sha256": "6caeefd575ec00a76d23ad4a4327e00156a12b6a9163063285fb06a233b5ec88"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 89839,
+      "sha256": "8bf313b017286aacfc2f43659bb6f92f1eb570c5b076bd97a5e99f401b024333"
+    }
+  ],
+  "basis": "adherence124e-root-adjudication.json",
+  "readOnly": [
+    "api-app/test/helpers.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/src/infra/http/body-parsers.ts",
+    "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+    "cp5-peer121-actual-plan-adjudication.json"
+  ],
+  "requirements": [
+    "ExistingE07 list protection: inspect actual list ci relation/alias nodes separately from r/rr, assert declared indexed qualified peer lookup and total work(returned+removedFilter+removedRecheck)*loops bounded by requestedpage50. Preserve both legitimate PKid and declared contact_id+bu_id paths with exact scoped identity residuals, actualSQL/params/EXPLAIN and all thread/options/route/owner allowances/budgets. No forceplanner or new physical-index mandate.",
+    "124E01: change only inbound text ceiling to approved Unicode codepoints, keeping1000 limit, signature/body8MiB/1000events/completebatchpreflight/orderedboundedworkers unchanged. Prefer bounded early-exit counting at1001points rather than allocating an array proportional to an8MiB malicious text. Pending1000UTF8bytes proposal is NOT applied.",
+    "Write signed native supplementary-character positive1000 andnegative1001 boundaries in the admitted CP5spec, retaining same realNest/PG/HMAC/owner/20kcohort. Include a batch with otherwise valid event plus oversizedtext to prove fullpreflight rejects BEFORE any receipt/message/contact/route/unread/provider effect; assert exact no-effect snapshot and all3fakeprovidercounters. Positive acceptedcontent must retain all1000wholecodepoints and exact qualified owner/route/conversation effects. Preserve original6cases/oracles/timeouts/cohortcounts andall1000message/BCI/RLS/replay workloads; separate bounded additional boundary case is permitted. No fakeBFF/domain/transaction mocks or direct trust mutation.",
+    "124E02: around existing measured EPS workload record own Vitest/Nest process CPUusage delta and actual memoryusage before/after (optional cumulative maxRSS labelled honestly), sampling monotonic/wall timing andscope. Record bounded owned synthetic DB resource/activity observations e.g current-db pg_stat_database counters, buffer/tuple/temp/deadlock counters and aggregate active/wait states/currentDBsize as relevant; clarify cumulative/asynchronousscope. Retain actual EXPLAINbuffers/DBversions/CPUmodel/capacity metadata. Queries outside timed request loops and isolated querycount slices; noperrequest metricsN+1, newperformance threshold, invented peak/perroundprecision or operational/host/containerinspection. Never read pgstat queries/credentials/userenv; owned disposable DB only during canonical validation.",
+    "Exactly2ownedpaths, staticonly at laterdispatch. No other product/test/helper/schema/runner/dependency/env/private/operational/Meta/provider/network/Git/status/diff/discovery/npm/Node/build/lint/test/Docker/worktree/copy or Foundation edits. Root owns docs/validation. Report concrete path/contract need before expansion, finalbytes/SHA/testsNOTRUN."
+  ],
+  "remaining": "Final current fullALL/Web/browser/complete EPS/nativeUnicode/current affected reviews/primary/human/security/TQA/cutover/final/CP6proof unwaived."
+}

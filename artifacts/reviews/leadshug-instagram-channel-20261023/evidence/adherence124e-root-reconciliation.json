@@ -1,0 +1,19 @@
+{
+  "kind": "Independent root 124E natural-terminal reconciliation",
+  "frozenRowsExact": 27,
+  "fullSourceBodiesExact": 17,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-CP5-111E-07",
+    "IG-ADHERENCE124E-01",
+    "IG-ADHERENCE124E-02"
+  ],
+  "qualification": "Complete current CP5/source-owner complementary review only. Web117 solewriter remains active on disjoint paths. No native EPS after123/currentALL/Web/browser/completefeature acceptance."
+}

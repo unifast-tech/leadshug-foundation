@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** CP5source113a terminal/root-qualified, source-only; serialize prepared product114 then Web/gateway repairs for111D. Complete fresh affected reviews/currentALL/nativeproof and all remaining gates before acceptance.
+- **Next exact step:** Execute sole Web130 residual consumer/type/native repair, qualify sources, then repeat canonical Web before fullALL and remaining independent gates.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** Browser108 actual88/91Playwright,3fail; native109/109a is source-only qualified. API100435unit/616integration andWeb10270unit are prior scoped evidence. NewCP5fixture110a source corrections are terminal/root-hash-qualified but unexecuted; independentcode review/currentwholeALL/nativeInstagram/recovery proof and remaininggates stillopen.
+- **Why this state now:** Web126 stopped at TypeScript before Web unit;127D identifies residual D04/D06 ownership/recovery defects and four protection-test defects.129E independently supports current complete CP5 source, with native EPS/ALL still pending. Source130 stays within admitted consumer/test paths.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** Browser108 root matches329sources/fullT/1146publicinputs/34immutable/threeexceptions/rootindex/fouroutputs. Onecanonicalbrowser:88/91passed16.5m; APIbuild/31migrations/Webbuild passed, ownedcleanup completed. CT actualwelcome passed but CDP offline neverclosedWSS; IG externalnavigation passed but literal waitingparagraph missing; protectedtimeline retained1unobservedalert. No featureacceptance.
+- **Last confirmed truth:** Web126 one canonicalcommand naturallyexit1 at InstagramConnections TS2339, with333sources/1198positiveinputs/protections/rootindex matched and ownedcleanup complete; no Web unit/Vite/browser pass.127D23fullconsumerbodies/129E17fullAPIbodies naturalterminal/strictmerged/rootmatched.129E no materialfindings;127D residuals require source130. No feature acceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -684,6 +684,13 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-ADHERENCE119C-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 | IG-API116-EVOLUTION-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 | IG-API116-GATEWAY-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
+| IG-ADHERENCE124E-01 | medium | release-blocker | fix in this TODO | approved Unicode preflight / workload resource evidence | open; source/native proof and fresh review | adherence124e-root-adjudication.json |
+| IG-ADHERENCE124E-02 | medium | release-blocker | fix in this TODO | approved Unicode preflight / workload resource evidence | open; source/native proof and fresh review | adherence124e-root-adjudication.json |
+| IG-ADHERENCE127D-01 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
+| IG-ADHERENCE127D-02 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
+| IG-ADHERENCE127D-03 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
+| IG-ADHERENCE127D-04 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
+| IG-WEB126-TYPE-01 | medium | release-blocker | fix in this TODO | existing consumer recovery / native test correctness | open; sole130 repair then canonical proof | adherence127d-web126-root-adjudication-ready.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -2171,6 +2178,13 @@ With113a writer terminal and no live review/validator freeze, root may dispatch 
 | IG-ADHERENCE119C-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
 | IG-API116-EVOLUTION-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
 | IG-API116-GATEWAY-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | cp4-instagram121-adherence122g-scoped-closure.json; original affected repair closed |
+| IG-ADHERENCE124E-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence124e-root-adjudication.json; still open |
+| IG-ADHERENCE124E-02 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence124e-root-adjudication.json; still open |
+| IG-ADHERENCE127D-01 | Integrated | useful | yes | project | existing ST-IG-03 consumer/proof invariants | adherence127d-web126-root-adjudication-ready.json; open |
+| IG-ADHERENCE127D-02 | Integrated | useful | yes | project | existing ST-IG-03 consumer/proof invariants | adherence127d-web126-root-adjudication-ready.json; open |
+| IG-ADHERENCE127D-03 | Integrated | useful | yes | project | existing ST-IG-03 consumer/proof invariants | adherence127d-web126-root-adjudication-ready.json; open |
+| IG-ADHERENCE127D-04 | Integrated | useful | partial | project | existing ST-IG-03 consumer/proof invariants | adherence127d-web126-root-adjudication-ready.json; open |
+| IG-WEB126-TYPE-01 | Integrated | useful | yes | project | existing ST-IG-03 consumer/proof invariants | adherence127d-web126-root-adjudication-ready.json; open |
 
 
 ### Prepared gateway115 and Web117 — no parallel source authorization
@@ -2241,3 +2255,38 @@ Finish all open111D02-D08 consumer requirements together: bounded50 pagination; 
 
 
 Fresh complementary124E may review the complete current CP5 protection spec and its seventeen API owners/contexts while the sole Web117 writer edits its twelve disjoint consumer/fixture paths. Its closed packet includes the full current TODO, all ten architectural obligations, all five review axes and exact actual121 evidence. During that review, its API bodies/TODO/evidence stay immutable. No Web117 path overlaps the seventeen enclosed API bodies; timeline-fixtures.cjs is not part of124E. The review is source-only and cannot grant native EPS, browser or full delivery acceptance.
+
+
+### Complete124E terminal — prepared serialized API125 protection completion
+
+Fresh124E ended naturally; strict merge and independent root reconciliation matched27 frozen rows, seventeen complete current API bodies and fullTODO, all ten obligations/five axes/consumer matrix. It supports E01-E06 source corrections and the legitimate123 composite peer-index alternative. Existing111E07 remains open: list-page ci index/work must be asserted independently of the thread plan. Two current gaps are Integrated/useful/project/release-blocker:124E01 inbound text preflight uses UTF16 units instead of approved code points;124E02 EPS records machine capacity but lacks exercised CPU/memory/DB resource observations. `evidence/adherence124e-root-adjudication.json` records the exact findings and approved contracts. No old scoped connection/metadata/gateway closure is reopened.
+
+Web117 remains the sole sourcewriter. Prepare API125 on exactly `api-app/src/surfaces/webhooks/instagram.controller.ts` and the admitted CP5 native spec, but do not dispatch until Web117 is terminal and root-qualified. Complete actual list peer protection with unchanged budgets; add bounded codepoint preflight plus signed1000/1001 supplementary-character complete-batch tests; record honest own-worker CPU/memory and owned synthetic DB resource/activity observations around EPS without new acceptance thresholds or operational inspection. All original six workloads and wholebatch guards remain. Then qualify the consolidated source, run canonical Web and fullALL, and collect fresh affected API/consumer reviews. Pending UTF8bytes/privacy and primary/assurance/CP6 gates remain mandatory.
+
+
+### Web117 bounded source continuation — actual same-thread recovery contract
+
+The first twelve-path source snapshot is intermediate, not accepted: D05 lacked native same-thread two-admission replacement proof. Root read the actual ordinary reservation/BFF/recovery/list contracts and established the legitimate second ordinary request path without fixture database mutation. `evidence/cp4-web117-d05-contract-guidance.json` freezes the exact contract inputs and maps real signed ingress, actual BFF sends, held original reconcile responses, current parent metadata refresh, per-admission reset and fresh risk confirmation after the actual deadline. Continue the same sole writer on existing paths only; API125 remains prepared. Root also identified the swapped publisher argument order in the three owned onOptions props; repair under existing D04 before any compiler/native claim. No test/runtime/provider/private/Git authority expansion, no authored-test pass.
+
+
+### Web117 terminal qualified — sole API125 source handoff
+
+Root matched all twelve terminal Web117 hashes,321 other known public sources,34 preservation rows,three approved exception candidates and unchanged root gitlinks; `evidence/cp4-web117-root-qualification.json` and `cp4-source117-terminal-manifest.json` record source-only evidence. The callback order is adapted, and D05 now uses two actual ordinary requests, current same-thread replacement, held original responses with delivery/body/hash/browser-task barriers and fresh risk controls after the real deadline. D02/D03/D04/D06/D07/D08 native/unit coverage is authored, not executed. No finding or feature acceptance follows from authored tests.
+
+Serialize Operational/Coder API125 on the two existing admitted files through `evidence/cp5-api125-handoff.json`: complete current list-peer scan protection, approved inbound codepoint preflight/signed boundaries and honest EPS resource observations. No other source, runtime, Meta/provider/private/Git permission. After terminal root qualification, execute prepared canonical Web126 compiler/build/unit once, then mandatory current fullALL and fresh affected complete API/consumer reviews. All primary/human/security/TQA/cutover/final/CP6 obligations remain.
+
+
+### Fresh127D complementary current consumer review
+
+The complete affected Web117 consumer/fixture source is terminal and root-qualified. Fresh127D may review all twenty-two current Web/native/tooling/controller bodies from the original111D set plus the previously admitted NovaConversa unit companion. The unchanged protected template EPS selector retains its exact111D full-body receipt/hash and separate passing native evidence; it is carried explicitly, not claimed as freshly read. Full current TODO, all ten obligations/five axes/full consumer matrix and actual historical/current proof limitations are enclosed. API125 is the only sourcewriter and its two paths do not overlap these twenty-three full bodies. Frozen review bodies/TODO/evidence remain immutable until natural terminal and root match. Complete native/currentALL and remaining assurance/primary/human/physical gates remain mandatory.
+
+
+### Web126 and complete127D/129E terminal — sole Web130 repair
+
+One canonical Web126 naturally exited1 during TypeScript: snapshot body union not narrowed before REAUTHORIZE field reads. Vite and Web unit suites were unreached. Root matched333sources/1198publicinputs/fullTODO/protected34/approvedexceptions3/rootgitlinks/fouroutputs and actualcleanup. `evidence/cp4-web126-root-reconciliation.json` retains the failure; no rerun or ALL invocation occurred.
+
+Fresh127D strictly merged/rootmatched33frozenrows and23fullcurrentconsumer/tooling/controller bodies, carrying only the unchanged protected template selector exact prior fullbody receipt. D04 residual: children may mutate local recoveredAttempt before shared ticket acceptance or allocate follow-up reads after unmount. D06 residual: dispatch/observation phases conflate failed GET with failed creation and authoritative terminal with uncertainty. Four new real protection defects concern missing createHash import,10k scoped cohort expectation, absent retry control and incomplete application-continuation barrier. All Integrated/useful/project/release-blocker; existing D04/D06 remain open, no duplicate new findings or historical reopening.
+
+Fresh129E strictly merged/rootmatched28frozenrows and17completecurrentAPI/nativeowners with no material findings. It supports the independent list-peer work guard, bounded Unicodepreflight/signedcase and scoped resource observations. All E/native EPS/currentALL claims remain open until execution.
+
+All freezes are now released after naturalterminal/rootqualification. Serialize Operational/Coder source130 on exactly six previously admitted Web consumer/unit/native paths through `evidence/cp4-web130-handoff.json`; no other source/runtime/private/Meta/provider/Git expansion. Preserve exact risk deadlines/responsehashes/sharedtickets/originalcases/thresholds and recover creation by phase/conclusive observation. Root qualifies terminal before a new one-shot canonical Web plan, mandatory currentfullALL and fresh affected review. All primary/human/security/TQA/cutover/final/CP6realproof gates remain.

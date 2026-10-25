@@ -1,0 +1,22 @@
+{
+  "kind": "Independent127D natural-terminal root reconciliation",
+  "frozenRowsExact": 33,
+  "fullSourceBodiesExact": 23,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-ADHERENCE111D-04",
+    "IG-ADHERENCE111D-06",
+    "IG-ADHERENCE127D-01",
+    "IG-ADHERENCE127D-02",
+    "IG-ADHERENCE127D-03",
+    "IG-ADHERENCE127D-04"
+  ],
+  "qualification": "Complementary completeaffectedconsumer review only. Known D04/D06 residuals and four native/unit protection defects require same-scope repair after currentWeb/E129 freezes terminal/rootmatched. Unchanged protected template selector explicitly carried from111D/fullbodyhash, not freshly read. No feature/native acceptance."
+}

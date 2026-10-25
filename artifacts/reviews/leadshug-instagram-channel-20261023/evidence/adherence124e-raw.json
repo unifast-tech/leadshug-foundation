@@ -1,0 +1,55 @@
+{
+  "schema_version": "subagent-review-result-v1",
+  "artifact_kind": "subagent_review_result",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence124e-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "reviewer_label": "fresh_no_context_adherence124e",
+  "overall_assessment": "changes_required",
+  "recommended_path": "Preserve the approved architecture and legitimate source123 composite-index alternative. E01–E06 corrections are supported in the enclosed source, but E07 retains a list-peer protection gap. Complete that harness protection, the inbound character-count correction and workload resource telemetry within the admitted paths. Then obtain the planned frozen current ALL, complete EPS execution and fresh affected review. Existing primary-protocol, consumer/browser, assurance and separately approved CP6 obligations remain open; this review grants no checkpoint or feature acceptance.",
+  "performance_position": "mixed",
+  "elegance_position": "acceptable",
+  "structural_soundness_position": "mixed",
+  "operational_fit_position": "mixed",
+  "findings": [
+    {
+      "finding_id": "IG-CP5-111E-07",
+      "severity": "medium",
+      "category": "performance",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "The list-page peer scan remains outside the strengthened plan assertions",
+      "rationale": "The list-plan assertions identify and bound the main r and lateral rr route accesses, but contact_identities scan nodes are only logged in identityOwnerRoutePlans. Peer index usage and scan work are enforced for the separate single-conversation thread plan. PostgreSQL can choose different plans for those workloads: a list-page hash join scanning the retained peer cohort could satisfy the route assertions, index-definition checks and latency limits while the thread lookup remains indexed. Actual121 shows a valid list peer index access; it does not make the missing regression protection executable. This leaves part of the existing E07 obligation unresolved.",
+      "suggested_action": "Inspect the list plan's actual ci relation/alias nodes and enforce qualified indexed access and total scan work bounded by the requested page, including loops and removed rows. Preserve both justified peer index alternatives, small-owner scan allowances, existing thresholds and actual SQL parameters. Validate through the planned complete EPS run without forcing planner settings.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE124E-01",
+      "severity": "medium",
+      "category": "adherence",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "title": "Inbound text preflight still counts UTF-16 units instead of approved characters",
+      "rationale": "InstagramWebhookController rejects message.text.length > 1000, while the reply controller uses Array.from(texto).length and the governing TODO explicitly requires consistent Unicode code-point limits. A signed message containing 501 supplementary Unicode characters has JavaScript length 1002 and receives 413 despite remaining below the approved 1000-character limit. CP5's ASCII-only batches cannot expose this discrepancy. This is an uncovered server boundary of the still-open Unicode obligation.",
+      "suggested_action": "Use the approved code-point count in webhook preflight and add signed native boundary coverage for 1000 and 1001 supplementary characters, retaining complete-batch preflight and zero effects on rejection. Keep the pending UTF-8-byte proposal unapplied.",
+      "affected_paths": [
+        "api-app/src/surfaces/webhooks/instagram.controller.ts",
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ]
+    },
+    {
+      "finding_id": "IG-ADHERENCE124E-02",
+      "severity": "medium",
+      "category": "performance",
+      "formalizable_hint": "partial",
+      "candidate_rule_level": "project",
+      "title": "EPS telemetry records machine capacity without workload resource measurements",
+      "rationale": "The frozen EPS contract requires CPU, memory and DB recording. The authored EPS artifact reports CPU count/model, total system memory and database versions; these describe capacity and configuration. It records no workload CPU consumption, memory usage or DB resource measurements. The enclosed execution reconciliation supplies no complementary measurements. A future passing latency round could therefore complete without the required resource evidence.",
+      "suggested_action": "Record bounded synthetic workload CPU and memory measurements together with relevant DB activity/resource observations around the existing measured workloads. Include their sampling scope and timing in the durable evidence. Preserve every workload and threshold, and introduce no additional numeric acceptance gate.",
+      "affected_paths": [
+        "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts"
+      ]
+    }
+  ]
+}

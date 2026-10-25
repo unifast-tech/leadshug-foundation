@@ -1,0 +1,63 @@
+{
+  "kind": "Independent Web126 terminal root reconciliation",
+  "sourcesExact": 333,
+  "boundInputsExact": 1198,
+  "fullTodoExact": true,
+  "preservationRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web126-before.json",
+      "bytes": 342463,
+      "sha256": "e9c9850807a3c1807b20899d864aed2e342974a051dc6a44ac74ea642871aeb4"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web126-web.log",
+      "bytes": 8999,
+      "sha256": "ba0ff6d66d1821fb15bb2ad33e74e0b4fe630509943a81e0a22695ff6786431e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web126-after.json",
+      "bytes": 351219,
+      "sha256": "41532edec1630ed2f4a6ea5108b098fd911796b1ae94c1ac8c39a98592d3a05e"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web126-result.json",
+      "bytes": 2903,
+      "sha256": "5b8a0417368a73134433017a19e660efdc28848921e309dac85472f8f2d421ec"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "naturalExitCode": 1,
+  "reached": [
+    "canonical guards/publicmasks",
+    "dependencyinstall",
+    "Prismaclientgeneration",
+    "WebTypeScript started"
+  ],
+  "unreached": [
+    "Vitebuild",
+    "Webunit",
+    "browser",
+    "APIsuites outsidetarget"
+  ],
+  "decisiveFailure": {
+    "stage": "web TypeScript build",
+    "file": "web-app/src/componentes/InstagramConnections.tsx",
+    "line": 41,
+    "diagnostics": [
+      "TS2339 Property channelId does not exist on type AuthorizationCreationBody",
+      "TS2339 Property expectedGeneration does not exist on type AuthorizationCreationBody"
+    ],
+    "actualExpected": "compiler reports both properties unavailable on the AuthorizationCreationBody union; CONNECT arm is `{ operation: \"CONNECT\"; }`"
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed (log lines 111-130)",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "remainingFreeze": "129E stilllive; T/source remain immutable. Do not retry or startALL before qualifiedrepair and freshWebproof."
+}

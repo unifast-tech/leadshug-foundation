@@ -1,0 +1,61 @@
+{
+  "kind": "Prepared sole Web130 current consumer repair",
+  "state": "READY; all priorwriters/Web126/reviews127D129E naturalterminal/rootqualified. Explicit root dispatch starts exactly this solewriter.",
+  "profile": "Operational / Coder React/Vite native fixture overlays",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/componentes/InstagramConnections.tsx",
+    "web-app/src/instagramState.spec.ts",
+    "web-app/e2e/instagram-channel.spec.ts",
+    "web-app/e2e/channel-transport.spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42023,
+      "sha256": "b304db19995dc34a7adea764fda50f57b1178a7095c22cfa5386961dac6ec9ff"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 43295,
+      "sha256": "a2a9549f099853a336a6719fcad3e012d85d0cd6e9280982bb99d8ae157d7ca5"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 21212,
+      "sha256": "3a8365a7815d1c37d2ec97b7aa46d6e0c93788f3b5a6f8e17597885f32c8d813"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 12788,
+      "sha256": "841e1313cf7f474e668fdfdea24d0c4608d277d0396334157aa0ee233d47f327"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 49919,
+      "sha256": "0d195432fc8cacad73840bdaf83df3f655ca4c2fd0b1afb85baeea35f92daa19"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 38882,
+      "sha256": "33de54e1feb553927c8e18095e50a111e1251448c9c5e7b37c44dc25b50c41e9"
+    }
+  ],
+  "basis": "adherence127d-web126-root-adjudication-ready.json",
+  "baseline": "cp5-source125-terminal-manifest.json",
+  "requirements": [
+    "D04 every child admission-local state update must check current shared read ticket as well as actor/BU/conversation/navigation/generation/action owner. Parent reject alone does not fence setRecoveredAttempt in PrimeiraMensagem.reloadOptions. Add a reliable shared-ticket acceptance check/callback contract inside existing owners; no cast, duplicated epoch or completion-order promotion. Preserve all exact typed call sites.",
+    "D04/D05 OrdinaryRecovery must test mounted/current action before even allocating follow-up parent ticket or starting GET, and again at each await/local update. Obsolete A action cannot invalidate B pending read. Native hold actual B current metadata response and release old actual A action response; prove current B read is neither discarded nor superseded and old notice/error/finally/risk never publish. Use actual response-consumption AND follow-up/application completion barriers, not network plus timer while async follow-up is pending. No fake businesspayload/DBmutation/domainspy/newtesting endpoint.",
+    "D06 separate creation dispatch from subsequent observation/continuation failures. Keep original exact actor/BU/operation/channel/generation/key/body after knownsuccessful or uncertain creation through failed GET, including structured4xx. Handle authoritative CANCELLED/FAILED_SAFE/EXPIRED explicitly as conclusive terminal: no redirect/replay, surface safe result and enable deliberate newattempt. No automaticnewkey/externalretry, no OAuth URL/state/code/token storage. Native current real creation/GET ordering denial and terminal recovery; hold/abort actual responses where needed, preserve originalstatus/body. If producing terminal via existingactualBFFcancel is possible use it; report neededread-onlypaths, never newfixturemutation.",
+    "Web126TS01 parse unknown creationSnapshot body using actual body.operation discriminant/runtime shape before reading REAUTHORIZE fields. No broad assertion/cast or weakened validator. Compile remains mandatory.",
+    "127D01 import createHash explicitly in native transport spec. Existing dynamic import in a different test does not define it for D05. Preserve actual status/body bytes/SHA and cleanup.",
+    "127D02 correct10000draftcohort scoped membership expectation/target context without deleting originalrecords or weakening indexedlookup/revision/actor/restore behavior. Owner itself need not change if correct. Retain honest measurements/no inventedSLO.",
+    "127D03 surface failed current refreshOrdinaryOptions through shared current parent metadata state/owned error (or use supported explicit current recovery path coherently), preserving failclosed composer/draft/no extra sends. Ensure newnative test only clicks a genuinely rendered retry control, records its own current read failure, then proves actualsuccessfulrecovery/admissiondisplay/zeroextraPOST. Do not weaken existing sourceownership/alertfreshness.",
+    "Onlysixlistedsourcepaths; no untouched protectedtests/testtimeouts/thresholds/providerserver/fixture/runner/deps/env/private/operational/Meta/network/Git/worktree/copy or Foundation edits; no npm/Node/test/build/lint/Docker execution. Original91cases/oracles/policies/sourcefreshness retained; new cases separatebounded. All testsNOTRUN untilrootdispatch. Report exact6terminalbytes/SHA +findingproofmapping/openlimitations."
+  ],
+  "remaining": "CanonicalWeb afterrepair and fullALL mandatory. Current129E/freshaffectedconsumer/security/primary/human/TQA/cutover/final/CP6proof remain; no partialdelivery.",
+  "parallelProof": "129E no_material_findings/currentAPI12517fullbodies; native EPS/ALL unexecuted"
+}

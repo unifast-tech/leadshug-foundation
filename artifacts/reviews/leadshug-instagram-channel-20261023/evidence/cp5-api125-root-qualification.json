@@ -1,0 +1,23 @@
+{
+  "kind": "Independent terminal API125 root qualification",
+  "owned": [
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10700,
+      "sha256": "6d23eb3998d9c106ff1a6a1eec7cef88e6cab1994b1a9c7295e98d2e082f5133"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 104303,
+      "sha256": "d5be322462a379c9af9a8a4529b33c5c94c29f131e9115bd2e595000955398a0"
+    }
+  ],
+  "otherKnownSourcesExact": 331,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "parallel127dFrozenRowsExact": 33,
+  "testsRun": false,
+  "staticAssessment": "Independent list ci index/scanwork protection; bounded1000codepoint preflight; separate signed1000/1001case preserves exact existing20kcohort and originalmessage/unreadincrement; mixedbatch rejection snapshots/counters; CPU/memory/currentownedDB telemetry with cumulative/asynchronous/nonpeak caveats outside requesttimers/querycounts. Unicode positive fixture corrected to existing peer before any runtime; original numeric thresholds retained. Fresh affected review/currentnative/fullALL required; no acceptance."
+}

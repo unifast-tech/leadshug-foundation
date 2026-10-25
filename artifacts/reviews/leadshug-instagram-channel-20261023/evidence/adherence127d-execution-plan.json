@@ -1,0 +1,186 @@
+{
+  "kind": "Fresh127D closed no-context review execution",
+  "state": "READY explicitrootlaunch now; soleAPI125twofiles disjoint from all23fullsources",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "prompt": {
+    "characters": 958138,
+    "utf8Bytes": 962006,
+    "limit": 1048576,
+    "outcome": "go"
+  },
+  "frozenRows": [
+    {
+      "path": "api-app/test/timeline-fixtures.cjs",
+      "bytes": 61513,
+      "sha256": "fedf301625858352821aa5afcc66335bc321f5fd7a1fc2c7a23ad99e914ea58e"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 38882,
+      "sha256": "33de54e1feb553927c8e18095e50a111e1251448c9c5e7b37c44dc25b50c41e9"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel-freshness.ts",
+      "bytes": 6659,
+      "sha256": "533e8186eb7314f51432bba876fc8afb20086dfd0032d94ca06b00536095ef46"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 49919,
+      "sha256": "0d195432fc8cacad73840bdaf83df3f655ca4c2fd0b1afb85baeea35f92daa19"
+    },
+    {
+      "path": "web-app/src/api.spec.ts",
+      "bytes": 10884,
+      "sha256": "b58aaa05f61fd86dec85f27b7ae38f39f0ce6220f8bdc849defa07dfe1b357c1"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20545,
+      "sha256": "224667ec238a483ec1000c2ee782809f8b5bd3aa7b7d69ec596568cf15d4ecdd"
+    },
+    {
+      "path": "web-app/src/componentes/CadastroNumero.tsx",
+      "bytes": 43742,
+      "sha256": "01d32acef1dea7eacbc1e341abe6593e3fe7296268466f56fa3292530d7e754b"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 21212,
+      "sha256": "3a8365a7815d1c37d2ec97b7aa46d6e0c93788f3b5a6f8e17597885f32c8d813"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramReplyComposer.tsx",
+      "bytes": 16881,
+      "sha256": "d891883e9c8150c35eb3cd6e68923dcd7aa9ed32ec72b9627329d38ea9d562d1"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 43295,
+      "sha256": "a2a9549f099853a336a6719fcad3e012d85d0cd6e9280982bb99d8ae157d7ca5"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 12788,
+      "sha256": "841e1313cf7f474e668fdfdea24d0c4608d277d0396334157aa0ee233d47f327"
+    },
+    {
+      "path": "web-app/src/instagramState.ts",
+      "bytes": 8877,
+      "sha256": "fa5f86c23900a89a088a13b41c98077053240ac4ce8a3dd21521abd1ad19cd97"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42023,
+      "sha256": "b304db19995dc34a7adea764fda50f57b1178a7095c22cfa5386961dac6ec9ff"
+    },
+    {
+      "path": "web-app/src/telas/Numeros.tsx",
+      "bytes": 3102,
+      "sha256": "57d9294ff2895eb022097df595279ddea3be8a31243fdf83434ff71b0ca2c261"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13918,
+      "sha256": "1ab8c3da8e7d05d7c25057356fa3802a3671a86288798e87140d9b8f86ede06b"
+    },
+    {
+      "path": "scripts/check-channels-ci-parity.py",
+      "bytes": 30527,
+      "sha256": "edb1dc40535a78d97a6267ea1d7781e9441a5d9be3da11ee6148fed126bc7d7d"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 4049,
+      "sha256": "16acaf6d4b807a806a50a31c75715b14e8b2e220e0e17e2bac43ec4b740318e5"
+    },
+    {
+      "path": "docker-compose.channels.yml",
+      "bytes": 21180,
+      "sha256": "9978e713ce190ad20b6bddb0ecf0b469d068c0e43bb4eaf50aa630ec03aea235"
+    },
+    {
+      "path": "docker/local-gateway.conf.template",
+      "bytes": 2089,
+      "sha256": "02224cf2e1984b061c9995ce05257da7ee73dccd9eaa14a245ce2b1aa23adaf6"
+    },
+    {
+      "path": ".env.example",
+      "bytes": 1467,
+      "sha256": "7dd8af0fd26706697cdc1eee0ebbe71af4d69e9b3d5d0f0b2bb86ba8c3fe8429"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22627,
+      "sha256": "c9544b159c1aaeb984c94bf20726b0da1416a95afb2c213f5e6a7181f8c2b516"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/instagram-authorizations.controller.ts",
+      "bytes": 5938,
+      "sha256": "618795b4cb3291c48652b63fce969a10977e32ab0adc2683e40cfbe392b3b62b"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 6611,
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence111d-raw.json",
+      "bytes": 10853,
+      "sha256": "60e2321406c57510b2152b7bb127dd20dc16a3eca4fc4317d4002e395930160f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web117-root-qualification.json",
+      "bytes": 3190,
+      "sha256": "18c97640fbcd4cf220a89aedc610167e78c5884b15f9db8aa0584b08794cd79d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web117-d05-contract-guidance.json",
+      "bytes": 3687,
+      "sha256": "56f0ab04a13e417326a8ccd9b33159a9e4597b38ab154e4f538333683bc88ca6"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-browser108-root-reconciliation.json",
+      "bytes": 4578,
+      "sha256": "82d342f16f0af99614451e4bb9da6d21e70ea17eae922f5b5fc9457ce623e98f"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-instagram121-adherence122g-scoped-closure.json",
+      "bytes": 993,
+      "sha256": "fffb9873e27dbcea45dd1dcd285e9b322b18877d0178b07a0cd3d6e4b99a24ae"
+    },
+    {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 398881,
+      "sha256": "6a9e7894f220e3643888f0875310034471c37de64bde91e56d2f452b2654c0ef"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence127d-package.json",
+      "bytes": 12227,
+      "sha256": "197659cbc7178d2d3375ed59b746e2016f9bf58b1da115aeae9c8090a3c6cdb0"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence127d-closed-package.md",
+      "bytes": 924326,
+      "sha256": "b5bb7e9e5baaa0e16638a9a15b83b54ed49fc1650916106a9c24ebc674b9e1a7"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence127d-dispatch.json",
+      "bytes": 45561,
+      "sha256": "8fee4f4e12507a57f4e4a9fdb452ab477c35cdb1455374f118527070ab164f15"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence127d-dispatch.md",
+      "bytes": 37352,
+      "sha256": "c5b3b4de0d6348fa87f2cc1a0c3197e4588c9b2ba1db7cdf80c40227f8837a85"
+    }
+  ],
+  "canonicalRunner": {
+    "path": "delphi-ai/tools/subagent_review_run.py",
+    "bytes": 6332,
+    "sha256": "36ea0185160cf660ae58a89dd2fbb0bd488d7a1634ee42831aa26e14a83afe77"
+  },
+  "configuration": "Unchanged canonical runner, in-memory subprocess argv adds codex exec --strict-config -c model_reasoning_effort=xhigh; closedstdin/ephemeral/readonly/isolatecontext/no tools. Dispatch EOF normalized before hash/prompt.",
+  "lifecycle": "Naturalterminal only; no timebasedinterrupt/duplicate/recycle/repackage. All23source bodies/T/evidence immutable until strictmerge and rootmatch. API125twofiles disjoint source edits allowed; no other edits."
+}

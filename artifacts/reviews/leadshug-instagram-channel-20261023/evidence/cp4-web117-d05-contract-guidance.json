@@ -1,0 +1,54 @@
+{
+  "kind": "Web117 same-thread ordinary replacement native guidance",
+  "state": "source-only same solewriter continuation; no runtime or additional path authority",
+  "contractInputs": [
+    {
+      "path": "api-app/src/domain/inbox/dispatch-admission.service.ts",
+      "bytes": 49834,
+      "sha256": "ac6859204f25a215f17cabd125c494599124f22c81845c9dccdd811cc05847ab"
+    },
+    {
+      "path": "api-app/src/domain/inbox/initial-message.service.ts",
+      "bytes": 24910,
+      "sha256": "1090943b53ac7efa25fd66fd00a2628fca5434c06407d4d3c9f9f95a05211db6"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22627,
+      "sha256": "c9544b159c1aaeb984c94bf20726b0da1416a95afb2c213f5e6a7181f8c2b516"
+    },
+    {
+      "path": "web-app/src/api.ts",
+      "bytes": 20545,
+      "sha256": "224667ec238a483ec1000c2ee782809f8b5bd3aa7b7d69ec596568cf15d4ecdd"
+    }
+  ],
+  "existingContract": [
+    "reserveOrdinary blocks an active initial slot, not other ordinary admissions. Multiple ordinary calls are intentional and independently reserved.",
+    "Actual BFF POST messages requires six fields: schemaVersion=2, routeId, channelId, expectedGeneration, contextFingerprint, texto. Use the actual current GET reply-options/captured UI request and authenticated same-context cookie with x-requested-with.",
+    "The existing unknown send-mode gives actual provider ACK_WITHOUT_ID/409 and a durable unresolved ordinary admission.",
+    "listActiveAdmissions orders createdAt DESC/id DESC; a second real ordinary admission becomes the displayed newest uncertain admission.",
+    "Composer Atualizar op\u00e7\u00f5es calls parent onOutcomeNeedsReview before current reply-options, legitimately refreshing parent start-options while a previous recovery action is held."
+  ],
+  "nativePlan": [
+    "Construct admission A through real UI send with signed inbound, real BFF/Nest/PG and HTTP fake provider.",
+    "Check A risk checkbox, execute actual A reconcile using route.fetch and retain its exact real response.",
+    "Construct admission B through the authenticated real BFF message endpoint as a concurrent operator/client. No DB mutation, domain spy or invented business response.",
+    "Use the real composer Atualizar op\u00e7\u00f5es action. Observe both unresolved IDs and newest B in actual start-options. Same conversation/navigation; B risk starts unchecked and not busy.",
+    "Hold B actual reconcile response; release A original response, verifying A response/finally cannot publish obsolete state/notice/alert or clear B busy. Release B unchanged response.",
+    "For meaningful fresh-risk eligibility proof, wait bounded until actual B dispatchDeadlineAt, then assert acknowledgement disabled unchecked, enabled only after fresh check, disabled again when unchecked. No acknowledgement POST needed; no repeated provider sends. Separate bounded new case timeout may cover actual90s deadline; prior case timeouts remain fixed.",
+    "Cleanup all held real responses/routes in finally; assert exactly two explicit sends and no recovery-triggered sends."
+  ],
+  "rootStaticRepair": {
+    "locus": "Inbox publishStartOptions and three NovaConversa/OrdinaryRecovery onOptions props",
+    "defect": "publishStartOptions(ticket,result) passed directly to props typed/called onOptions(options,ticket)",
+    "routing": "existing IG-ADHERENCE111D-04 implementation repair, not a new scope expansion",
+    "required": "Adapt the three callbacks or consistently align the owned contract/call sites without type casts; canonical Web compile still required."
+  },
+  "notRun": [
+    "tests",
+    "build",
+    "Meta",
+    "operational runtime"
+  ]
+}

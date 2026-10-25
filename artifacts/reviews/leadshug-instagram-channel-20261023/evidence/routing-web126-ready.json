@@ -1,0 +1,28 @@
+{
+  "blocked": false,
+  "context": {
+    "allowed_roles": "routine-executor",
+    "client": "codex",
+    "contract_id": "delphi.agent-role-routing.v1",
+    "contract_path": "/mnt/c/Unifast/delphi-ai/config/agent_role_routing.json",
+    "exception_in_effect": false,
+    "exception_reason": "",
+    "execution_topology": "primary-checkout-single-writer",
+    "expected_efforts": "medium",
+    "expected_models": "gpt-6-luna",
+    "max_concurrent_writers": 1,
+    "proof_mode": "declared",
+    "required_lane": "executor",
+    "selected_effort": "medium",
+    "selected_model": "gpt-6-luna",
+    "selected_model_family": "routine_executor",
+    "selected_role": "routine-executor",
+    "surface": "implementation-validation",
+    "waiver_in_effect": false,
+    "waiver_reference_present": false,
+    "worktree_authorization": "not-authorized",
+    "worktree_authorization_reference_present": false
+  },
+  "outcome": "go",
+  "violations": []
+}
