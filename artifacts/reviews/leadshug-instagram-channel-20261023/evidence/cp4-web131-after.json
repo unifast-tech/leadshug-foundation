@@ -1,0 +1,64 @@
+{
+  "kind": "cp4-web131-after",
+  "timestampUtc": "2026-10-25T13:41:52.637100+00:00",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-frozen-manifest.json",
+  "manifestSha256": "25c8cc92f8fbc01530270312cf9e7f207d0028f457eca493af262edfe2ecd6a0",
+  "preflight": "PASS",
+  "postflight": "PASS",
+  "sourceCount": 333,
+  "allSourceBytesAndSha256Matched": true,
+  "positiveInputCount": 1206,
+  "allPositiveInputBytesAndSha256Matched": true,
+  "todo": {
+    "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+    "bytes": 404619,
+    "sha256": "2faea83926c05390100d3c4f6ffc53c2a7fdd509c60be90e0aabbf7600c1e9ba"
+  },
+  "protectedCount": 34,
+  "allProtectedSha256Matched": true,
+  "approvedExceptionCount": 3,
+  "approvedExceptions": [
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.ts",
+      "candidateSha256": "195a43d05523ff810564b2d7c4772db2857cc10781774c39bdfa133cd1f62674"
+    },
+    {
+      "path": "api-app/src/integrations/evolution/evolution.client.spec.ts",
+      "candidateSha256": "d0332bb64966dc65287697473fa768e000630fe178374960f4738716ae542769"
+    },
+    {
+      "path": "api-app/test/message-template-management.e2e-spec.ts",
+      "candidateSha256": "e522f80651434b541fbdd74d5636c93097d84e1b9db2b23bf464069337bb245a"
+    }
+  ],
+  "rootIndex": [
+    "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+    "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+    "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+  ],
+  "runnerExitCode": 0,
+  "runnerNaturalTermination": true,
+  "stages": {
+    "canonicalGuard": "reached/passed",
+    "sourceBindAndPublicDotenvMask": "reached/passed",
+    "prismaClientGeneration": "reached/passed",
+    "webTypeScriptAndViteBuild": "reached/passed (63 modules; Vite 1.41s)",
+    "webUnit": "reached/passed (8 files, 71 tests; Vitest 692ms)",
+    "apiUnit": "not part of web target; not run",
+    "apiE2E": "not part of web target; not run",
+    "browser": "not part of web target; not run"
+  },
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "runnerDurationObservedSeconds": 55.1,
+  "durationBasis": "observed single command session lifetime through natural exit; approximate",
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-web.log",
+    "bytes": 9859,
+    "sha256": "7d69e48ccaa0d0a0484135104ddafc361c82f9664760f757eb8930d832d68256"
+  }
+}

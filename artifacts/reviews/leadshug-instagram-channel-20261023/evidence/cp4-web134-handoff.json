@@ -1,0 +1,46 @@
+{
+  "kind": "Sole Web134 remaining first-send recovery ownership repair",
+  "state": "READY after133D naturalterminal strictmerge rootmatch and Web131pass; all freezes released. Explicit root dispatch starts sole sourcewriter.",
+  "profile": "Operational / Coder; React/Vite/NestJS native fixture scope",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "web-app/src/componentes/NovaConversa.tsx",
+    "web-app/src/telas/Inbox.tsx",
+    "web-app/e2e/channel-transport.spec.ts",
+    "web-app/src/componentes/NovaConversa.spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 45446,
+      "sha256": "69bc572844d3e22cbe4a1be66a9faa9079c3293c6607c4556e7afde24f771b28"
+    },
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42613,
+      "sha256": "8cb0e7efdc057cf1d9725d78504685af62daacc7c3977548f5660a8326f947b4"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 53343,
+      "sha256": "678a1caad66b08c9fda0c381e995a7733548a60e1802436ca1a4ec2556622afb"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.spec.ts",
+      "bytes": 6611,
+      "sha256": "84184865db156d6c147e382982e235ea82f16ea9892cb0cc6e59f16ac1393757"
+    }
+  ],
+  "baseline": "cp4-source130-terminal-manifest.json",
+  "basis": "adherence133d-root-adjudication.json",
+  "requirements": [
+    "Fix exact remaining111D04/133D01. Make current first-send attempt the owner of cached presentation, eligibility and duplicate-risk consent. A consultation result may render only for same current attempt, with no A facts/checkbox consent for B. Consecutive attempts must work in one mounted conversation, no navigation/remount workaround and no lost current draft.",
+    "Accepted authoritative parent start-options observations including activeAttempt:null must retire obsolete fallback state independently of child reloadOptions. Preserve unknown-dispatch snapshots/idempotency until legitimately conclusive. Avoid null-payload heuristics or clearing unobserved pending sends. Prefer one authoritative current fact owner/simple faithful contract; no parallel epoch authority or hidden stale fallback.",
+    "Every await/local state mutation/action/finally remains fenced by mounted actor/BU/conversation/navigation/generation/current attempt/action/shared request ticket as appropriate. Preserve130 shared request-start ordering and all original D04/D05 late response barriers.",
+    "Extend meaningful actual native coverage for two consecutive first-send attempts A then B without conversation navigation. Actual original BFF GET/POST/provider fakes and existing bounded fixture only, no new server/DBmutation/testing endpoint. Exercise A consulted then remotely legitimately released and discovered through current observation, B own facts/eligibleAt/unchecked fresh risk/no inheritedbusy/notice/error; accepted parent null retiresA; zero unintended provider redispatch. Use actual naturaldeadlines, originalresponse bytes/hash+applicationconsumption barriers/cleanup; new separate boundedcase permitted, oldcasebudgets/oracles untouched. If existing contract cannot prove a required branch, report precise read-only dependency and await guidance rather than inventing fixture state.",
+    "Optional existing NovaConversa.spec.ts may cover extracted production-used owner logic, not disconnected mirror or implementation-only test. No new sourcepath/dependency. Main coverage must include actual native journey.",
+    "Only four owned public paths; no other source, private/env/runtime/Meta/provider/network/Git/worktree/copy/Foundation changes. No test/build/lint/npm/Node/Docker execution. Retain all original cases/assertions/thresholds/trusted requiresWindow=false exception. OutboundUTF8/privacy proposals remain unapplied. Report exact terminal changedpaths/bytes/SHA, causal mapping and limitations; tests NOTRUN."
+  ],
+  "remaining": "Root qualifies all333/protections/gitlinks then current canonical Web and fullALL mandatory; affected fresh review/security/TQA/primary/human/cutover/final/CP6 remain. No partialdelivery."
+}

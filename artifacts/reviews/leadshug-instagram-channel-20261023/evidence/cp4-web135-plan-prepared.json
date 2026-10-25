@@ -1,0 +1,22 @@
+{
+  "kind": "Prospective current canonical WEB135 validation",
+  "state": "PREPARED ONLY;134solewriter active; requires naturalterminal/root333qualification. No execution/freeze yet.",
+  "profile": "Operational / Coder implementation-validation",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web135-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web135-web.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web135-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web135-result.json"
+  ],
+  "policy": "Principal checkout canonical disposable namespace only, exactpublic333sources/positiveknowninputs/fullT/protections/exceptions/rootgitlinks before-after; one naturalterminal invocation and four unique outputs. No retry/filter/autofix/skip/threshold/assertion/timeout/runner/dependency/source/T/frozeninput/private/env/operational/Meta/provider/tunnel/Git writes. Independently rootmatch actual reached/unreached/log/cleanup before thaw. CompleteALL and remaining formal/security/primary/human/cutover/final/CP6 obligations remain; no authored-test acceptance.",
+  "dependencies": [
+    "134 terminal/rootqualified",
+    "current authority/routing guards GO",
+    "root READYplan/frozenmanifest/explicitdispatch"
+  ],
+  "supersedes": "Prepared ALL132 not executed because fresh133D found remaining first-send ownership. HistoricalWeb131 PASS remains scoped to source130."
+}

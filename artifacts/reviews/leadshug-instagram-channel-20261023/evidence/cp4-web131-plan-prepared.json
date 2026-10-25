@@ -1,0 +1,18 @@
+{
+  "kind": "Canonical current WEB131 prepared validation plan",
+  "state": "PREPARED ONLY; sole Web130 writer active. Requires130terminal/rootqualification and explicitrootfreeze/dispatch. ALL132 additionally requires actualWeb131pass; no execution yet.",
+  "profile": "Operational / Coder implementation-validation; source readonly",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-web.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-result.json"
+  ],
+  "frozenManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-frozen-manifest.json",
+  "policy": "One canonical principal-checkout Web compiler/build/unit command, existing positive public masks and own disposable namespace only. Freeze all current333knownsources/fullTODO/exactknownpositiveinputs/protections/rootthreegitlinks, independently verify before/after, retain actualexit/log/stages/cleanup. No source/T/frozeninput edits, no testfilter/retry/autofix/assertion/threshold/timeout/dependency/runner/privateenv/operational/provider/Meta/Git writes. Record actual reached/unreached only. This target does not substitute mandatory current fullALL/API/nativebrowser/CP5EPS/assurance/primary/human/CP6realproof.",
+  "supersedes": "Web126actualTypeScriptfailure prevents ALL128; neither old preparedALL128 nor this new plan has executed."
+}

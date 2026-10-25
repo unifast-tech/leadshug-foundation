@@ -1,0 +1,49 @@
+{
+  "kind": "Independent terminal Web130 source qualification",
+  "owned": [
+    {
+      "path": "web-app/src/telas/Inbox.tsx",
+      "bytes": 42613,
+      "sha256": "8cb0e7efdc057cf1d9725d78504685af62daacc7c3977548f5660a8326f947b4"
+    },
+    {
+      "path": "web-app/src/componentes/NovaConversa.tsx",
+      "bytes": 45446,
+      "sha256": "69bc572844d3e22cbe4a1be66a9faa9079c3293c6607c4556e7afde24f771b28"
+    },
+    {
+      "path": "web-app/src/componentes/InstagramConnections.tsx",
+      "bytes": 23291,
+      "sha256": "85f0f8069bf1b5065153b7c9d598b6eeed34468e53e150a1e6292ccc3193f2d1"
+    },
+    {
+      "path": "web-app/src/instagramState.spec.ts",
+      "bytes": 13829,
+      "sha256": "14a67e61d48e6a7835155ab079a97a75dff44f64c11cc5d6feaa4debc9ad2f6a"
+    },
+    {
+      "path": "web-app/e2e/instagram-channel.spec.ts",
+      "bytes": 55524,
+      "sha256": "00b9dd22b4a39ebe72ae72ee1bf617ad0e85b7b8a141cf5b6642408d3f2f3031"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 53343,
+      "sha256": "678a1caad66b08c9fda0c381e995a7733548a60e1802436ca1a4ec2556622afb"
+    }
+  ],
+  "otherKnownSourcesExact": 327,
+  "totalSources": 333,
+  "immutableRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "testsRun": false,
+  "staticAssessment": "Shared request-start acceptance now fences first-send consultation and reload local state including authoritative activeAttempt:null; obsolete ordinary action cannot allocate follow-up current read. Creation parse is unknown/discriminant safe; phase-aware failedobservation keeps original creation key/body and conclusive terminal observation clears uncertainty. Native actual operator403/samekey/cancel, held Bmetadata vs Aaction, and held firstsend consultation vs real deadline/ack/freshreleasedstate authored with originalbodyhash/consumption barriers.10kactualowner timing/revision/scope corrected. Missing cryptoimportfixed.",
+  "rootPreQualificationRepairs": [
+    "Timed100operations revision assertion corrected to actual captured result",
+    "CurrentactiveAttempt:null replaces stale locallyrecoveredattempt",
+    "Initialconsult GET allocates ticket at request start and checks beforelocalupdates/followup",
+    "New native case explicit trustedrequiresWindowfalse seed; one-shot oldGET hold; release-before-await; actualdeadlinepoll beforeACK"
+  ],
+  "remaining": "No compiler/unit/native/fullALL pass inferred. Fresh affected review and all primary/human/security/TQA/cutover/final/CP6 gates remain."
+}

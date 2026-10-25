@@ -1,0 +1,50 @@
+{
+  "kind": "Root133D exact finding and deduplicated approved-contract adjudication",
+  "inputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence133d-raw.json",
+      "bytes": 2772,
+      "sha256": "571784979fd2a51205995e90b6a69d0ddd1e4405cce462d8ce1b37873d01bac8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence133d-root-reconciliation.json",
+      "bytes": 1629,
+      "sha256": "c61384b87bfd3d60647990d6c3dd5dd20ca5a9f5daac8ee29fe85e32fe8902ca"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-root-reconciliation.json",
+      "bytes": 2340,
+      "sha256": "5a9b27a90d722a2ccbcbe6b8618bf49c3c392f3c22c03e463ef623ff78d8225f"
+    }
+  ],
+  "finding": {
+    "finding_id": "IG-ADHERENCE133D-01",
+    "severity": "medium",
+    "category": "structural_soundness",
+    "formalizable_hint": "yes",
+    "candidate_rule_level": "project",
+    "title": "First-send recovery state can outlive its authoritative attempt",
+    "rationale": "PrimeiraMensagem retains consulted, recoveredAttempt and confirmRisk across attempt changes, while its component key identifies navigation rather than the attempt. After consulting A, releasing A and creating B in the same conversation, recovery presentation still uses consulted ?? attempt, so A's cached facts and eligibility timestamp can describe B. If A was released elsewhere and discovered through consultation, confirmRisk is not reset either. Also, only the child's reloadOptions clears recoveredAttempt on activeAttempt:null; a newer accepted parent observation does not independently retire that fallback, which still participates in locked. The shared-ticket checks repair the reviewed late-GET path, but these remaining local authorities conflict with DOD-06 and the unresolved D04 requirement. This is a static finding, not a claimed runtime reproduction.",
+    "suggested_action": "Scope cached recovery facts and risk confirmation to the current attempt ID. Ensure accepted authoritative observations, including activeAttempt:null, retire obsolete local fallback state. Extend native coverage to consecutive first-send attempts within one mounted conversation, verifying B's facts, fresh consent and retirement of A without repeated provider dispatch.",
+    "affected_paths": [
+      "web-app/src/componentes/NovaConversa.tsx",
+      "web-app/src/telas/Inbox.tsx",
+      "web-app/e2e/channel-transport.spec.ts"
+    ]
+  },
+  "canonicalFindingId": "IG-ADHERENCE111D-04",
+  "deduplication": "133D01 is a concrete residual in the materially changed same first-send recovery owner under unresolved111D04. Keep original row open; no duplicate independent defect or reopening closed repair.",
+  "resolution": "Integrated",
+  "usefulness": "useful",
+  "formalizable": "yes",
+  "ruleLevel": "project",
+  "classification": "release-blocker",
+  "contractCheck": [
+    "DOD-06 and D04 require current attempt/request ownership for every local presentation/lock/consent state, including accepted parent activeAttempt:null.",
+    "Static source confirms consulted ?? attempt may display A for B; boolean confirmRisk lacks attempt owner and recoveredAttempt persists across accepted parent null.",
+    "Scope risk acknowledgement to exact current attempt. Preserve exact idempotency snapshot through uncertainty; no clear-on-null if it would discard an unobserved/unknown send.",
+    "Native consecutive attempts must use actual BFF/provider fakes, real immutable responses/deadlines and zero automatic redispatch; no test-only database mutation, fabricated business result or weakened old cases."
+  ],
+  "routing": "Repair in already-admitted NovaConversa/Inbox/transport native and existing NovaConversa unit companion only through sole Web134. No human scope deviation.",
+  "status": "open; source134 then current Web/fullALL and fresh affected review. Web131 proves compiler/71unit only; native untouched by that command."
+}

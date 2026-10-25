@@ -1,0 +1,43 @@
+{
+  "kind": "Read-only primary reconciliation of held first-send read timeout hypothesis",
+  "inputs": [
+    {
+      "path": "web-app/package-lock.json",
+      "bytes": 78215,
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "bytes": 5773,
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "web-app/e2e/channel-transport.spec.ts",
+      "bytes": 53343,
+      "sha256": "678a1caad66b08c9fda0c381e995a7733548a60e1802436ca1a4ec2556622afb"
+    }
+  ],
+  "lockedVersion": "@playwright/test,playwright,playwright-core all1.62.1",
+  "hypothesis": "Library waitForResponse default30s might reject old response promise held across actual90s eligibility.",
+  "primarySources": [
+    {
+      "url": "https://playwright.dev/docs/api/class-page#page-wait-for-response",
+      "fact": "Library API documents30s default, override by context/page default timeout."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.62.1/packages/playwright/src/index.ts",
+      "fact": "Exactlocked runner initializes actionTimeout=0 and assigns actionTimeout||0 as defaultContextTimeout in setupContextOptions."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.62.1/packages/playwright-core/src/client/browser.ts",
+      "fact": "Exactlocked Browser setup applies Playwright defaultContextTimeout through context.setDefaultTimeout."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.62.1/packages/playwright-core/src/client/timeoutSettings.ts",
+      "fact": "Explicit context default overrides library fallback; parent hierarchy preserves configured0."
+    }
+  ],
+  "localInference": "Current project use has no overriding actionTimeout or setDefaultTimeout; @playwright/test supplies0, while the new case itself has180s and naturaldeadlinepoll120s. Generic library30s alone does not establish a current native defect.",
+  "disposition": "Hypothesis disproved statically against exactlockedprimary source; no source/timeout/test mutation or finding expansion. Actualnativecase stillunexecuted, no runtimepass inferred.",
+  "accessBoundary": "Only explicit public lock/config/spec and upstream official Playwright docs/versioned source read; no installeddependencyinventory/private/operational/runtime access."
+}

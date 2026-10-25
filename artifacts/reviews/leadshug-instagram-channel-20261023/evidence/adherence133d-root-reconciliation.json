@@ -1,0 +1,41 @@
+{
+  "kind": "Independent133D natural-terminal root reconciliation",
+  "frozenRowsExact": 33,
+  "fullSourceBodiesExact": 23,
+  "fullTodoExact": true,
+  "currentSourcesExact": 333,
+  "rootIndexExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-ADHERENCE133D-01"
+  ],
+  "outputs": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence133d-raw.json",
+      "bytes": 2772,
+      "sha256": "571784979fd2a51205995e90b6a69d0ddd1e4405cce462d8ce1b37873d01bac8"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence133d-events.jsonl",
+      "bytes": 3239,
+      "sha256": "7d157afce00e38caa6bc254d4197f538a215f8d44cb039526248ef76458b3aaf"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence133d-stderr.log",
+      "bytes": 1608,
+      "sha256": "0560b3896d0fdb775705e42cd58b2df396a677a7c4d9fff89d5579b9c5a3e43c"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence133d-merge.json",
+      "bytes": 3125,
+      "sha256": "07a0bdcbcad5b8743b49a5567cb4a7e88f576d6578fa46fc4b68e9548f439db9"
+    }
+  ],
+  "qualification": "Static remaining first-send recovery ownership defect; native D/fullALL still unproved. All133D/Web131 freezes now terminal/rootmatched; no feature/assurance/protocol/human/CP6 waiver."
+}

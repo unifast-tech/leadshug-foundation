@@ -1,0 +1,19 @@
+{
+  "kind": "Canonical current ALL132 prepared validation plan",
+  "state": "PREPARED ONLY; sole Web130 writer active. Requires130terminal/rootqualification and explicitrootfreeze/dispatch. ALL132 additionally requires actualWeb131pass; no execution yet.",
+  "profile": "Operational / Coder implementation-validation; source readonly",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "command": "bash scripts/test-channels-local.sh all",
+  "invocations": 1,
+  "outputs": [
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all132-before.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all132-all.log",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all132-after.json",
+    "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all132-result.json"
+  ],
+  "frozenManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp5-all132-frozen-manifest.json",
+  "scope": "Canonical principal-checkout complete API lint/build/unit/integration, Web compiler/build/unit and full native Playwright using actual Nest/PostgreSQL/HTTPS/WebSocket and declared provider HTTP fakes. Current exact source freshness and full retained workloads required.",
+  "policy": "Freeze all current333knownsources/fullTODO/explicitknownpositivepublicinputs/protectionrows/approvedexceptions/rootthreegitlinks and independently verify before/after. Only canonical owned disposable namespace/log/DB/volumes/network cleanup. No adhoctestselection/retry/autofix/skip/assertion/threshold/timeout/dependency/runner/source/T/frozeninput mutations, no privateenv/operationaldata/processenv/Meta/provider/production/tunnels/Gitwrites. One natural-terminal invocation, retain actual first decisive failure plus reached/unreached and cleanup; no testpass from authoredsource/earlier narrower commands. FullALL success still cannot replace required fresh reviews/security/TQA/cutover/final/primary/human/approvedCP6realproof.",
+  "supersedes": "Web126actualTypeScriptfailure prevents ALL128; neither old preparedALL128 nor this new plan has executed."
+}

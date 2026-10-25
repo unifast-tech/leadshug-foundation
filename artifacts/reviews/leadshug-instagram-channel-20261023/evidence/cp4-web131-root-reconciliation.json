@@ -1,0 +1,62 @@
+{
+  "kind": "Independent Web131 naturalterminal root reconciliation",
+  "sourcesExact": 333,
+  "boundInputsExact": 1206,
+  "fullTodoExact": true,
+  "preservationRowsExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-before.json",
+      "bytes": 258940,
+      "sha256": "37dab95761dd57b2ec8bdf526161f96bd278cf77759d121508a2d3aa439930e2"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-web.log",
+      "bytes": 9859,
+      "sha256": "7d69e48ccaa0d0a0484135104ddafc361c82f9664760f757eb8930d832d68256"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-after.json",
+      "bytes": 2693,
+      "sha256": "6264e7c4a1c859c48701e929a8c5fc610f271f5a31feca2fc2ac856e987b45e5"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-result.json",
+      "bytes": 2484,
+      "sha256": "29ed3266b2367202b7ddcdcc9e867618fe5b2936bb8f91f8b1038f38f3f0507a"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh web",
+  "invocations": 1,
+  "naturalExitCode": 0,
+  "passed": [
+    "canonicalguards/publicmasks",
+    "Prismaclientgeneration",
+    "WebTypeScript/Vite63modules1.41s",
+    "Vitest8files71tests692ms"
+  ],
+  "unreachedOutOfScope": [
+    "APIunit/E2E",
+    "nativebrowser",
+    "completeALL"
+  ],
+  "draftOwnerActual": {
+    "updates": 100,
+    "lookups": 100,
+    "elapsedMs": 0.4493999999999687,
+    "population": 10001,
+    "retainedCount": 10001,
+    "currentScopeReturnedCount": 1,
+    "totalScopedRowsReturned": 100
+  },
+  "timingQualification": "One actual unit-test-worker sample,100keyedupdates+100scopedreads over10001retainedrecords; no browserkeystroke/p95/throughput/SLO claim.",
+  "cleanup": {
+    "validationPostgresContainer": "stopped and removed",
+    "ownedValidationVolumes": "removed",
+    "ownedValidationNetwork": "removed",
+    "cleanupIncomplete": false
+  },
+  "remainingFreeze": "133D currently running against fullT/current23bodies; no source/T mutation untilnaturalterminal/rootmatch. FullALL132 notdispatched and mandatory."
+}

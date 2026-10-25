@@ -1,0 +1,86 @@
+{
+  "kind": "Read-only primary dependency applicability preparation134; not formal security clearance",
+  "scope": "Only explicit public lock/config/runner/Dockerfile and maintainer advisories. No package execution/install/auditfix/source/runtime/private reads or changes.",
+  "inputs": [
+    {
+      "path": "web-app/package.json",
+      "bytes": 701,
+      "sha256": "fc9083821e246d50c080f409b3590902b033041231d1688c04c4140f097818de"
+    },
+    {
+      "path": "web-app/package-lock.json",
+      "bytes": 78215,
+      "sha256": "546aec97be8273cf195a16b75c0127474ea3a5042668f8d4c93aab96c1619c8f"
+    },
+    {
+      "path": "web-app/vite.config.ts",
+      "bytes": 1865,
+      "sha256": "8b61a846e95c7fe77c938a2ebced24b48bbba45c42efcd25c8191491655e74b2"
+    },
+    {
+      "path": "web-app/playwright.config.ts",
+      "bytes": 5773,
+      "sha256": "53e9a54e97c9b785135d94846d99eb77c6f05789a58f27128544f9b2c903a63d"
+    },
+    {
+      "path": "web-app/Dockerfile",
+      "bytes": 1262,
+      "sha256": "b3fb2e04dc033ec8977926c93eb8cec36bf44f6351652bdb2f739325e4be19d4"
+    },
+    {
+      "path": "api-app/package-lock.json",
+      "bytes": 305491,
+      "sha256": "d1e45274c4b10d134469d7ec63e88777ec26b917d48197a03a4b97cefda047c7"
+    },
+    {
+      "path": "scripts/test-channels-local.sh",
+      "bytes": 13918,
+      "sha256": "1ab8c3da8e7d05d7c25057356fa3802a3671a86288798e87140d9b8f86ede06b"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-web131-web.log",
+      "bytes": 9859,
+      "sha256": "7d69e48ccaa0d0a0484135104ddafc361c82f9664760f757eb8930d832d68256"
+    }
+  ],
+  "actualNpmSummaries": {
+    "apiInstall": "19 vulnerabilities:4moderate11high4critical",
+    "webInstall": "9 vulnerabilities:5moderate2high2critical",
+    "qualification": "ActualWeb131 npmci summary, not named-advisory inventory. No exact audit reconstruction or claim all applicable."
+  },
+  "advisories": [
+    {
+      "id": "GHSA-rq7h-c2jc-7f22",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-rq7h-c2jc-7f22",
+      "published": "2026-10-06",
+      "primaryFacts": "Maintainer includes <=6.4.3; fixed6.4.4. Non-Windows network-exposed devserver plus imported project path matching readable host absolute path can bypass allowlist unless denied.",
+      "lockedVersionMatch": true,
+      "staticApplicabilityInference": "LockedVite5.4.21 falls in <=6.4.3. CanonicalPlaywright uses built-dist vitepreview bound127.0.0.1, notdevserver; static deployedWeb isNginx. No host-path import exploit or actual developer-runtime exposure was tested. This is not allVite5clearance or formal acceptedrisk."
+    },
+    {
+      "id": "GHSA-vfpm-58rq-9qcg",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-vfpm-58rq-9qcg",
+      "published": "2026-10-06",
+      "primaryFacts": "Maintainer identifies8.3.0..8.3.2 and8.2.0..8.2.3; fixed8.3.3/8.2.4; Wasm devserver error can expose firstfourfilebytes.",
+      "lockedVersionMatch": false,
+      "staticApplicabilityInference": "Exact range does not include locked5.4.21; no broader safety inference."
+    },
+    {
+      "id": "GHSA-9jrq-w75r-8gcw",
+      "url": "https://github.com/vitejs/vite/security/advisories/GHSA-9jrq-w75r-8gcw",
+      "published": "2026-10-06",
+      "primaryFacts": "Maintainer includes <=6.4.3; fixed6.4.4. Dev middleware/custom app passing unchanged request URL to transformIndexHtml plus inline module can execute hostile scripts; normal spa/mpa internal path excluded.",
+      "lockedVersionMatch": true,
+      "staticApplicabilityInference": "Inspected project defines React plugin and proxies, notmiddlewareMode/customtransformIndexHtml. Canonicalbrowser servesbuilt-dist preview. Exact describedpath not established by current inspectedconfig; formal review required."
+    },
+    {
+      "id": "GHSA-p458-7748-mcp3",
+      "url": "https://github.com/vitest-dev/vitest/security/advisories/GHSA-p458-7748-mcp3",
+      "published": "2026-10-16",
+      "primaryFacts": "Maintainer limits affectedVitestUI/browser5.0.0-beta.6..<5.0.5 (andvite-plusrange). Vitest4andearlier unaffected bythisreport; plainvitest run hasnoHTTPserver.",
+      "lockedVersionMatch": false,
+      "staticApplicabilityInference": "LockedVitest2.1.9 outside thisspecificaffectedrange. Other oldVitestUI/API critical advisory remains separate; no inheritedclearance."
+    }
+  ],
+  "remaining": "Formalcurrent dependency/security/attack-simulation gate must adjudicate actual reachability and full reported19/9 inventory. Older106/113 receipts remain bounded. No upgrade/lockchanges/blanketwaiver or completefeatureacceptance. Existing signedOAuth/webhook isolation tests and actualALL/security remain mandatory."
+}

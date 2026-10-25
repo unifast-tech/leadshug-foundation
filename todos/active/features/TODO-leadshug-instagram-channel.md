@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** Execute sole Web130 residual consumer/type/native repair, qualify sources, then repeat canonical Web before fullALL and remaining independent gates.
+- **Next exact step:** Apply sole Web134 first-send attempt-state ownership repair after133D/Web131 reconciliation; qualify source then current canonical Web/fullALL and fresh affected review.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** Web126 stopped at TypeScript before Web unit;127D identifies residual D04/D06 ownership/recovery defects and four protection-test defects.129E independently supports current complete CP5 source, with native EPS/ALL still pending. Source130 stays within admitted consumer/test paths.
+- **Why this state now:** Web131 compiler/build/71unit passed; fresh133D identifies remaining first-send attempt-state ownership under unresolved D04. Repair134 stays within admitted consumers/native/unit companions; current API125/129E source support remains, nativeEPS/fullALL pending.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** Web126 one canonicalcommand naturallyexit1 at InstagramConnections TS2339, with333sources/1198positiveinputs/protections/rootindex matched and ownedcleanup complete; no Web unit/Vite/browser pass.127D23fullconsumerbodies/129E17fullAPIbodies naturalterminal/strictmerged/rootmatched.129E no materialfindings;127D residuals require source130. No feature acceptance.
+- **Last confirmed truth:** Web131 naturallyexit0: TypeScript/Vite and8files71unit pass,333sources/1206inputs/fullT/protections/rootindex/outputsexact and cleanup complete.133D naturalterminal strictmerge/rootmatched33rows/23fullbodies; one concrete residual first-send recovery finding maps to open111D04. No native/currentALL/feature acceptance.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -672,7 +672,7 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 | IG-ADHERENCE111D-01 | high | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | closed affected repair by native121 and current focused122G | cp4-instagram121-adherence122g-scoped-closure.json |
 | IG-ADHERENCE111D-02 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-03 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
-| IG-ADHERENCE111D-04 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
+| IG-ADHERENCE111D-04 | medium | release-blocker | fix in this TODO | approved current-attempt and request-start ownership; residual133D01 same owner | open; source134 then native/fullALL/fresh review | adherence133d-root-adjudication.json; original adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-05 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-06 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
 | IG-ADHERENCE111D-07 | medium | release-blocker | fix in this TODO | approved Instagram gateway and declared frontend consumer invariants | open; source and native proof required | adherence111d-root-adjudication.json |
@@ -2290,3 +2290,19 @@ Fresh127D strictly merged/rootmatched33frozenrows and23fullcurrentconsumer/tooli
 Fresh129E strictly merged/rootmatched28frozenrows and17completecurrentAPI/nativeowners with no material findings. It supports the independent list-peer work guard, bounded Unicodepreflight/signedcase and scoped resource observations. All E/native EPS/currentALL claims remain open until execution.
 
 All freezes are now released after naturalterminal/rootqualification. Serialize Operational/Coder source130 on exactly six previously admitted Web consumer/unit/native paths through `evidence/cp4-web130-handoff.json`; no other source/runtime/private/Meta/provider/Git expansion. Preserve exact risk deadlines/responsehashes/sharedtickets/originalcases/thresholds and recover creation by phase/conclusive observation. Root qualifies terminal before a new one-shot canonical Web plan, mandatory currentfullALL and fresh affected review. All primary/human/security/TQA/cutover/final/CP6realproof gates remain.
+
+
+### Web130 terminal qualified — canonical Web131 next
+
+Root matched six terminal consumer/native/unit hashes,327 other known sources,34 preservation rows,three exception candidates and unchanged root gitlinks. `evidence/cp4-web130-root-qualification.json` records source-only repairs: request-start shared acceptance also fences Consultar estado and authoritative null recovery, old ordinary actions cannot allocate newer reads, creation recovery separates dispatch/observation and conclusive terminal outcomes, and snapshot parsing narrows unknown data. The10kowner test records bounded actual operation timings with corrected revision/scope assertions. Native cases retain actual operator denial/same-key replay/cancel and unchanged held-response hashes; the first-send ordering case uses an explicit trusted no-window fixture, natural deadline wait, actual ACK, current null observation and one-shot held older consultation without gate deadlocks. No tests ran in the writer.
+
+All prior freezes are terminal/rootmatched. Freeze current333sources/fullTODO/exactpositivepublicinputs/protectionrows/rootgitlinks for exactly one canonical `bash scripts/test-channels-local.sh web` invocation131 under `evidence/cp4-web131-plan.json`. No source/T/input mutation/retry/filter/autofix/private/runtime/provider/Meta/Git expansion. Root reconciles actual reached/unreached stages, bytes and cleanup before thaw. If green, prepare the mandatory fullALL132 and fresh complete affected consumer review on the consolidated candidate; fullALL128 remained unexecuted. API125 current17body129E source review remains applicable, with native EPS unproved. No D/native/ALL/primary/human/security/TQA/cutover/final/CP6 obligation waived or closed by authored tests.
+
+
+### Web131 pass and fresh133D terminal — sole Web134 remaining first-send ownership
+
+One canonical Web131 naturally exited0: current TypeScript/Vite63modules and8files71unit passed. Root matched333sources/1206positiveinputs/fullTODO/34preservationrows/threeexceptions/rootindex/fouroutputs; ownedPG/network/ninevolumes cleanup complete. Its actual draft-owner unit sample is100keyedupdates+100scopedreads over10001retainedrecords,0.4494ms in one worker; no browserkeystroke/p95/SLO/native/API/ALL claim. FullALL132 remains prepared and unexecuted.
+
+Fresh133D naturalterminal/strictmerge/rootmatch covers23completecurrentconsumer/native/tooling/controller bodies, fullT/alltenobligations/fiveaxes/consumerMatrix and33frozenrows. IG-ADHERENCE133D-01 is Integrated/useful/project/release-blocker, deduplicated into unresolved111D04: consulted presentation, recovered fallback and risk checkbox can retain A after legitimate release and new B within one mounted conversation; accepted parent null does not independently retire fallback. Exact rationale and contract checks are in `evidence/adherence133d-root-adjudication.json`. No original closed finding reopened or unrelated new scope.
+
+Serialize sole Operational/Coder Web134 through `evidence/cp4-web134-handoff.json` on four already admitted consumer/native/unit paths. Source/frozeninputs are now thawed only after both terminal rootqualifications. Scope local recovery facts and consent to exact authoritative current attempt, preserve uncertain send/idempotency semantics, and prove consecutive A/B plus accepted parent-null retirement with actual BFF responses and naturaldeadlines. No source/runtime/provider/Meta/private/Git expansion or tests in writer. Root sourcequalification precedes current Web/fullALL and fresh affected review. All other D/native/EPS/primary/human/security/TQA/cutover/final/CP6 gates remain; no feature acceptance.
