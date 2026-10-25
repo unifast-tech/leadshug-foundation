@@ -1,0 +1,62 @@
+{
+  "kind": "Prepared sole product114 source handoff",
+  "state": "PREPARED ONLY, rootdispatch forbidden until113 terminal exact reconciliation. No overlapping writer.",
+  "profile": "Operational / Coder",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/domain/channels/channel-connections.service.ts",
+    "api-app/src/domain/channels/channel-display.ts",
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 90997,
+      "sha256": "805759928260a6bfb80e2247aff3b2b5136e6135009b19fb32feb1febd40b06e"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-connections.service.ts",
+      "bytes": 10370,
+      "sha256": "f13fdea0822c601a552b93575d5249980aef9839e1b59277ebd6dcdcbf6c1a60"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14864,
+      "sha256": "667ec21d2a44e54e9adcbb0abd1db72583776105a57b2e2bb2c8eaed1d3d74e6"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 54746,
+      "sha256": "5e2643c3417c8b899eac40c4cf671921988eee1200aa8070b87a9fefcddf9b1d"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 29015,
+      "sha256": "45a35baead3b8c2b1a0a40b9693d16bcb0b7e59754c90816e52bb57836b022ab"
+    }
+  ],
+  "basis": "adherence111a-raw.json and adherence111ae-root-adjudication.json; newthreefindingsallrelease-blockers/open.",
+  "readOnlyInputs": [
+    "api-app/test/instagram-cp2-commit-fences.e2e-spec.ts",
+    "api-app/src/infra/session/session.service.ts",
+    "api-app/src/domain/produto/modulos.service.ts",
+    "api-app/src/surfaces/bff/channels.controller.ts",
+    "api-app/src/surfaces/bff/bff.module.ts",
+    "api-app/test/helpers.ts",
+    "api-app/prisma/schema.prisma",
+    "api-app/src/integrations/instagram/instagram-http.client.ts",
+    "api-app/src/domain/channels/channel-credential-crypto.ts"
+  ],
+  "requirements": [
+    "A01 extend exact original verification-token cleanup lifecycle around acquisition itself, including actorTransaction rejection AFTERCOMMIT; cleanup cannot depend on assigning fulfilled transaction return. Preserve successorlease, subscriptiondispatchhistory and existing actor/currentowner fences, failclosedUNKNOWN/noPOST behavior. Prior subscribeAfterMapping closure not reopened.",
+    "A01 native actual BFF verify acquired claim commits across natural signed-session expiration: scoped disposable deferred PGtrigger/advisory barrier on exact owner UPDATE, observe realCOMMIT waiter before signed exp, release after exp. No fake timers, transaction/domain mocks, session.verificar spies, lease/deadline timestamp rewrites or pg_sleep guess. Use existing native commit-fences pattern read-only. Matched live-session control with same barrier reaches actual providerGET/UNKNOWN. Expiredcontrol401/zeroHTTP and immediateoriginaltoken cleanup; successor-token and preserved-history assertions. Newtests may have explicit boundedcase timeout needed for natural expiry; no existing timeout changes. Unconditional barrier/drop-artifact/request drain cleanup.",
+    "A02 inject/reuse canonical ModulosService admission for NAO_OFICIAL UUIDverify beforeprovider work, preserve ADMIN/livesession/exact UUID/generation/currentbindings and official/IG semantics. Native same enabled/disabled product module controls through BOTH legacytype/UUID endpoints, zeroHTTP/trustmutation whenoff; enables prove actualEvolutioncalls, not just200. Do not change protected controller/helper/module/test files. ExistingBFFmodulealreadyowns provider; if actual constructor use elsewhere requires newpath reportroot beforeedit.",
+    "A03 safe metadata-only projection uses last proven completed authorization label independently of current credential usability. Keep exact channel/BU/business identity/provider owner/current appscope/account professional ID association and original readable username sanitization; never expose token, fabricate ready/receipt or use unrelated rejected/cancelledcandidate. Both channels andconversations projections consistent; noN+1/perrowqueries/decrypt. Avoid credential joins if no longer needed solely for provenlabel.",
+    "A03 native twoactualOAuth accounts distinctlabels throughdisconnect/catalogreload and subsequentreauthorization; verify own connection/conversation accountlabels, readiness/credentialabsence afterdisconnect, current appscope/mismatch controls and zeroHTTP/decrypt onreads. Do not weaken existingreadonly/querycount/counter/origin assertions.",
+    "Only fiveexactadmittedpaths source edits, no source outsideowned, helper/schema/controller/BFFmodule/test runner/env/dependency/doc changes. No Gitcommands/status/diff/discovery/private/env/process/runtime/network/provider/Meta/npm/Node/test/lint/build/worktree/copy. Root owns Foundation. Staticpositivepublicfiles only; R/AGENTS/instructions/profile allowed. Report terminalbyte/SHA/perfindingimplementation/proofmapping andtestsNOTRUN; report concrete uncertainties rather than bypass."
+  ],
+  "remaining": "FullcurrentALL/nativebrowser/CP5actualproof andfreshallaffectedreviews/primary/human/security/TQA/cutover/final/CP6realplan proof unwaived."
+}
