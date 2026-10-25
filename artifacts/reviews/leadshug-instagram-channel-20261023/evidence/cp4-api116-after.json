@@ -1,0 +1,59 @@
+{
+  "kind": "CP4 API116 after snapshot",
+  "recordedAtUtc": "2026-10-25T12:12:50+00:00",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-frozen-manifest.json",
+  "manifestSha256": "c2aae7e88a1892950d5c1927b867ecea1db898294e473cc9356e486e25193415",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "runner": {
+    "started": true,
+    "endedNaturally": true,
+    "exitCode": 1,
+    "terminalStage": "API E2E completed with failures",
+    "apiE2eDurationSeconds": 711.42,
+    "apiUnitDurationSeconds": 4.46
+  },
+  "verification": {
+    "frozenFiles": 333,
+    "frozenFilesMatch": true,
+    "todo": {
+      "path": "foundation_documentation/todos/active/features/TODO-leadshug-instagram-channel.md",
+      "bytes": 383101,
+      "sha256": "cac29233deb8c3694da35776e014813f6124ed8dbc52541897554f919bf18d6a"
+    },
+    "todoMatch": true,
+    "boundInputs": 1188,
+    "boundInputsMatch": true,
+    "preservationRows": 34,
+    "preservationMatch": true,
+    "approvedExceptions": 3,
+    "approvedExceptionCandidatesMatch": true,
+    "rootIndex": [
+      "160000 5db3fbe2043428749895fc3ff6441e9457467dd0 0\tapi-app",
+      "160000 40828a20f2d6c3a1443e7ee132f42483840d6abb 0\tfoundation_documentation",
+      "160000 6c99c27dafdce8ed9b461d17aaaaa491b8ae16e9 0\tweb-app"
+    ],
+    "rootIndexMatch": true,
+    "outcome": "pass"
+  },
+  "rawLog": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-api.log",
+    "bytes": 247899,
+    "sha256": "ad6105bc1d637b10ebf31a5e14e9d2562c853dc6ddf472b0644ee298c3cc2f56"
+  },
+  "cleanup": {
+    "containerStoppedAndRemoved": true,
+    "networkRemoved": true,
+    "removedVolumes": [
+      "leadshug_channels_validation_channels_web_workspace",
+      "leadshug_channels_validation_channels_web_node_modules",
+      "leadshug_channels_validation_validation_pg_data",
+      "leadshug_channels_validation_leadshug_arquivos",
+      "leadshug_channels_validation_channels_api_workspace",
+      "leadshug_channels_validation_channels_npm_cache",
+      "leadshug_channels_validation_channels_playwright_cache",
+      "leadshug_channels_validation_channels_api_node_modules",
+      "leadshug_channels_validation_leadshug_pg_data"
+    ]
+  }
+}

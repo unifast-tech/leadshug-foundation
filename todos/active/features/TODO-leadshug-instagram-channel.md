@@ -680,6 +680,10 @@ Historical planning observation retained: IG-REV-01..04, strategic source, high/
 
 | IG-ADHERENCE114F-01 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | open; native proof and fresh review required | adherence113f114f-root-adjudication.json |
 | IG-ADHERENCE114F-02 | medium | release-blocker | fix in this TODO | actual current admitted proof / completed account metadata contract | open; native proof and fresh review required | adherence113f114f-root-adjudication.json |
+| IG-ADHERENCE119B-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
+| IG-ADHERENCE119C-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
+| IG-API116-EVOLUTION-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
+| IG-API116-GATEWAY-01 | medium | release-blocker | fix in this TODO | current admitted native proof / account metadata chronology | open; source/native proof and fresh review | adherence119bc-api116-root-adjudication.json |
 
 ## TODO Closeout Disposition
 - **Disposition:** blocked
@@ -2163,6 +2167,10 @@ With113a writer terminal and no live review/validator freeze, root may dispatch 
 | IG-ADHERENCE111D-08 | Integrated | useful | partial | project | existing ST-IG-03 invariants | adherence111d-root-adjudication.json; still open |
 | IG-ADHERENCE114F-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence113f114f-root-adjudication.json; still open |
 | IG-ADHERENCE114F-02 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence113f114f-root-adjudication.json; still open |
+| IG-ADHERENCE119B-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
+| IG-ADHERENCE119C-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
+| IG-API116-EVOLUTION-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
+| IG-API116-GATEWAY-01 | Integrated | useful | yes | project | existing ST-IG-03 invariants | adherence119bc-api116-root-adjudication.json; still open |
 
 
 ### Prepared gateway115 and Web117 — no parallel source authorization
@@ -2196,3 +2204,12 @@ Source118 samewriter completion additionally admits exactly the already-admitted
 Root independently matched five terminal hashes,328 unchanged known sources,34 protected rows/three approved exception candidates/rootindex. Source-only successor contender, completed-cancel label projection/native cases, actual route/peer scan-work protection and gateway no-effect snapshots are ready.118a adds two missing canonical fake-provider imports before execution; no tests inferred from static review.
 
 All sourcewriters and focused reviews are terminal. Seal333 positive sources, full current TODO, current exact positive public inputs/protections/rootindex for exactlyONE `bash scripts/test-channels-local.sh api` invocation116. Only canonical owned disposable namespace/build/API lint/build/unit/E2E and cleanup; four unique116 outputs. No source/T/input mutation, retry/filter/autofix/skip/assertion/threshold/timeout/private/env/operational/provider/Meta/Git expansion. This targeted full API run is diagnostic and cannot satisfy final VAL-05 full ALL or Web/browser/completefeature acceptance. Root independently reconciles actual reached/unreached stages and evidence before any thaw. Fresh complementary B/C reviews may run readonly against exact same frozen T/source. Web117/currentALL/CP5completeproof/primary/human/security/TQA/cutover/final/CP6realproof remain unwaived.
+
+
+### API116 and full complementary119B/C terminal — sole source120 repair
+
+One canonical full API completed naturally: lint/build/31migrations/435unit pass;622of626 integration tests pass across59of62files,711.42s. Fiveof6CP5 nativecases pass:5x20OAuthclaims,20signedreplays,20crossBUresourceclaims(13actualPGwaiters/onewinner),same20kRLS5rounds and1000signedmessages allaccepted4897ms/replay3621ms/noadditionalunread/messages. EPS failsatciIndexCondguard beforeactualmeasurement; no performancepass or forcedplanner. Fouractualfailures: oldpositiveEvolutionUUIDfixture moduleoff404, successorUPDATE cannotmatchuncommittedlease, EPSpeerindexconditionfalse(actualplanunemitted), ownedNginx exitsstartup beforebodyproof. Ownedcontainer/network/ninevolumesremoved. Rootmatches333sources/fullT/1188publicinputs/protections/index/fouractualoutputs.
+
+Both fresh complementary119reviews ended naturally/strictmerged/rootmatched: B17fullbodies(including12freshnative), C28fullbodies(including23freshcompatibility), completecurrentT/allrubrics. No peer-reading/fullfeature acceptance. B01explains realREADCOMMITTEDnullpredicate skippingrowlock; C01requires latestmappedversion chronology because cancellationtouchesupdatedAt. Four newreview/rootfixturefindings Integrated/useful/project/release-blocker; current111E07 remainsopen withactualfailure.
+
+All freezes now released afterrootterminalqualification. Serialize one source120 writer on exactly five alreadyadmitted paths through `evidence/cp4-source120-handoff.json`: existingCP4connections/CP5spec/gatewaynative spec/projector/CP4display. RepairrealMVCCcontender andmodulepositivefixture; durableversion metadataordering withnativeoldercancel; safeNginxownedlogdestination/startupdiagnostics/actualhealth. CP5 adds actualcapturedplan diagnostics BEFOREassertions, preservingeveryindex/predicate/alias/scanwork/budget assertion untilactualplanadjudication. No guessedrootcause/plannerforce or obligationwaiver. Tests/runtime/private/Meta/Git prohibited tosourcewriter. Rootqualifies terminalsource beforeonecanonicalfocuseddiagnostic ifneeded; focusedproofneverreplacesfinalALL. Web117/currentALL/CP5EPS/freshaffectedreviews/primary/human/security/TQA/cutover/final/CP6physicalproof remainmandatory.

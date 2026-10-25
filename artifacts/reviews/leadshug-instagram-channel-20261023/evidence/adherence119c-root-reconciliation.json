@@ -1,0 +1,18 @@
+{
+  "kind": "Independent119c root natural-terminal reconciliation",
+  "frozenRowsExact": 38,
+  "fullSourceBodiesExact": 28,
+  "freshCompatibilityBodies": 23,
+  "fullTodoExact": true,
+  "turnCompleted": 1,
+  "streamItemTypes": [
+    "agent_message"
+  ],
+  "toolsUsed": false,
+  "strictMerge": "pass",
+  "overallAssessment": "changes_required",
+  "findingIds": [
+    "IG-ADHERENCE119C-01"
+  ],
+  "qualification": "Complementary fullbody source review only; no API116terminal/native/fullfeature/peer-lane acceptance. RemainingB/API116 freezes stillactive, no source/T/evidence mutation."
+}

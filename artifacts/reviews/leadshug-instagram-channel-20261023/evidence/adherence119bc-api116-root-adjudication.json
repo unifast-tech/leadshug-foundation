@@ -1,0 +1,93 @@
+{
+  "kind": "Terminal119B/C andactualAPI116 rootclassifiedreconvergence",
+  "findings": [
+    {
+      "kind": "119b root finding classification; T routing waits API116 freeze",
+      "finding": {
+        "finding_id": "IG-ADHERENCE119B-01",
+        "severity": "medium",
+        "category": "tests",
+        "formalizable_hint": "yes",
+        "candidate_rule_level": "project",
+        "title": "The successor UPDATE cannot queue on the uncommitted verification lease",
+        "rationale": "Source118 fixes the lazy-promise issue recorded under IG-ADHERENCE114F-01, but the contender still requires instagram_operation_lease_token IS NOT NULL. authorize() finishes with the committed binding lease cleared. resourceCommitBarrier then holds verification's new lease at deferred COMMIT. Under READ COMMITTED, the contender sees the preceding committed NULL token and excludes that row before attempting its row lock. It therefore returns zero instead of becoming the UPDATE waiter required by waitForResourceWaiter. The revised test still cannot establish successor preservation. This is a static harness defect, not an observed API116 result or evidence of a production fencing regression.",
+        "suggested_action": "Queue the real contender using the immutable identity and established owner tuple without filtering on the uncommitted lease value. Assert the initial cleared lease, observe the actual blocking relationship before releasing COMMIT, then retain the exact successor-token, affected-row, zero-HTTP and cleanup assertions. Execute both expiry branches and the live control.",
+        "affected_paths": [
+          "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+        ]
+      },
+      "classification": "release-blocker",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "contract": "Genuine successor PostgreSQL contender must queue behind actual uncommitted verification owner to prove CAS preservation; no mock/timestamprewrite.",
+      "independentInspection": "Deferred commit keeps newlyclaimedlease invisible to other READCOMMITTED transaction. Prior authorize finally releases committedlease toNULL. Successor WHERE instagram_operation_lease_token IS NOT NULL filterscommittedNULL andcannotattemptrowlock evenaftereagerconsumption.",
+      "proposedRepair": "Use immutableid/exactknownprovider/BU/currentchannel/businessidentity tuple, assertinitialclearedlease beforeverifiedclaim, eagerlystartUPDATE beforeobserveactualblockingchain. Retaincount1/successorCAS/exactzeroHTTP/history/finallydrain/triggercleanup/naturalsessionexpiry/livecontrol. No service change inferred.",
+      "status": "open; new119B01 is residual of114F01proof, no historicalproductfinding reopen. WaitAPI116naturalterminal/rootmatch before source/T repair."
+    },
+    {
+      "kind": "119c root finding classification; T routing waits remaining freeze",
+      "finding": {
+        "finding_id": "IG-ADHERENCE119C-01",
+        "severity": "medium",
+        "category": "operational_fit",
+        "formalizable_hint": "yes",
+        "candidate_rule_level": "project",
+        "title": "Mutable attempt timestamps can select an older completed account label",
+        "rationale": "Both display queries now include completed CANCELLED mappings but select their label using ORDER BY ia.updated_at DESC, ia.id DESC. Cancellation updates that timestamp while preserving mapping evidence. Cancelling an earlier completed mapping after a newer successful reauthorization can therefore make the earlier username outrank the newer proven username. The BU/channel/resource/app-scope predicates establish ownership, but do not establish which mapping is newest. This is a distinct residual defect in the materially changed cancellation selector under SCOPE-07/DOD-06, rather than reopening the original missing-CANCELLED-label finding. The enclosed native case cancels only the newest mapping and does not exercise this ordering. No executed failure is claimed.",
+        "suggested_action": "Select the last completed mapping using durable mapping chronology or version ordering that cancellation cannot advance, retaining all existing ownership and app-scope predicates. Add a native case with two completed mappings, cancel the older one, and verify catalog/list/thread/reply-options retain the newer label with unchanged channel readiness and provider counters.",
+        "affected_paths": [
+          "api-app/src/domain/channels/channel-display.ts",
+          "api-app/test/instagram-cp4-display.e2e-spec.ts"
+        ]
+      },
+      "classification": "release-blocker",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "contract": "SCOPE07/DOD06 current sameowner metadata must represent latest completed mappedaccount independentofmutableattemptcancelstatus.",
+      "independentInspection": "Confirm mapping computes version=max(current credential version, all prior samechannel/BU/professional mapped versions)+1. This monotonic durable mappedCredentialVersion survives credential removal and is not advanced by cancel. Both projection queries currently order updatedAt, so old completed cancellation can win incorrectly.",
+      "proposedRepair": "Order completed sameowner mapping by mapped_credential_version DESC withstabletie instead of mutable updated_at; bothbatchprojections exactscopechecks unchanged. Native twocompletedversions cancelOLDER afternewer thencatalog/list/thread/replyoptions shownewer withunchangedreadiness/counters. No new schema/credentialread/dispatchauthority.",
+      "status": "open; no source/T edits untilAPI116and119B terminal/rootqualified. Existing114F02fixedmissingCANCELLED state is not reopened;119C01 is distinct chronology residual."
+    },
+    {
+      "finding": {
+        "finding_id": "IG-API116-EVOLUTION-01",
+        "severity": "medium",
+        "category": "tests",
+        "title": "Exact UUID positive fixture lacks enabled NAO_OFICIAL tenant module"
+      },
+      "classification": "release-blocker",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "contract": "Correct new canonical modulegate muststay; matchedpositivefixture mustenablemodule, moduleoff404/zeroeffects separatecase remains.",
+      "status": "open source/nativeproof"
+    },
+    {
+      "finding": {
+        "finding_id": "IG-API116-GATEWAY-01",
+        "severity": "medium",
+        "category": "tests",
+        "title": "Owned Nginx startup exits with discarded diagnostics beforeboundaryproof"
+      },
+      "classification": "release-blocker",
+      "resolution": "Integrated",
+      "usefulness": "useful",
+      "formalizable": "yes",
+      "ruleLevel": "project",
+      "contract": "Actual publicNginx gatewaybodylimitproof required, setupmustreachreadiness andreportboundedstartupfailure honestly. No knownstartupcause yet.",
+      "status": "open source/nativeproof"
+    }
+  ],
+  "existingOpen": "IG-CP5-111E07 actual116failsciIndexCondition beforeEPSmeasurement; preserveallguards andemitactualplans beforeasserts, no inferredperformancebug orwaiver. B01residual114F01, C01distinctmutablechronologyresidual.",
+  "frozenProof": [
+    "adherence119b-root-reconciliation.json",
+    "adherence119c-root-reconciliation.json",
+    "cp4-api116-root-reconciliation.json"
+  ],
+  "remaining": "CurrentALL/Web/native/completefreshreviews/protocol/human/security/TQA/cutover/final/CP6mandatory; no acceptance."
+}

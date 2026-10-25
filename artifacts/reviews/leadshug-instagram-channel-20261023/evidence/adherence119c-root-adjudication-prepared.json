@@ -1,0 +1,26 @@
+{
+  "kind": "119c root finding classification; T routing waits remaining freeze",
+  "finding": {
+    "finding_id": "IG-ADHERENCE119C-01",
+    "severity": "medium",
+    "category": "operational_fit",
+    "formalizable_hint": "yes",
+    "candidate_rule_level": "project",
+    "title": "Mutable attempt timestamps can select an older completed account label",
+    "rationale": "Both display queries now include completed CANCELLED mappings but select their label using ORDER BY ia.updated_at DESC, ia.id DESC. Cancellation updates that timestamp while preserving mapping evidence. Cancelling an earlier completed mapping after a newer successful reauthorization can therefore make the earlier username outrank the newer proven username. The BU/channel/resource/app-scope predicates establish ownership, but do not establish which mapping is newest. This is a distinct residual defect in the materially changed cancellation selector under SCOPE-07/DOD-06, rather than reopening the original missing-CANCELLED-label finding. The enclosed native case cancels only the newest mapping and does not exercise this ordering. No executed failure is claimed.",
+    "suggested_action": "Select the last completed mapping using durable mapping chronology or version ordering that cancellation cannot advance, retaining all existing ownership and app-scope predicates. Add a native case with two completed mappings, cancel the older one, and verify catalog/list/thread/reply-options retain the newer label with unchanged channel readiness and provider counters.",
+    "affected_paths": [
+      "api-app/src/domain/channels/channel-display.ts",
+      "api-app/test/instagram-cp4-display.e2e-spec.ts"
+    ]
+  },
+  "classification": "release-blocker",
+  "resolution": "Integrated",
+  "usefulness": "useful",
+  "formalizable": "yes",
+  "ruleLevel": "project",
+  "contract": "SCOPE07/DOD06 current sameowner metadata must represent latest completed mappedaccount independentofmutableattemptcancelstatus.",
+  "independentInspection": "Confirm mapping computes version=max(current credential version, all prior samechannel/BU/professional mapped versions)+1. This monotonic durable mappedCredentialVersion survives credential removal and is not advanced by cancel. Both projection queries currently order updatedAt, so old completed cancellation can win incorrectly.",
+  "proposedRepair": "Order completed sameowner mapping by mapped_credential_version DESC withstabletie instead of mutable updated_at; bothbatchprojections exactscopechecks unchanged. Native twocompletedversions cancelOLDER afternewer thencatalog/list/thread/replyoptions shownewer withunchangedreadiness/counters. No new schema/credentialread/dispatchauthority.",
+  "status": "open; no source/T edits untilAPI116and119B terminal/rootqualified. Existing114F02fixedmissingCANCELLED state is not reopened;119C01 is distinct chronology residual."
+}

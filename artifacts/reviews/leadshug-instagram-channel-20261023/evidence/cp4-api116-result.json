@@ -1,0 +1,118 @@
+{
+  "kind": "CP4 API116 canonical validation result",
+  "manifestPath": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-frozen-manifest.json",
+  "manifestSha256": "c2aae7e88a1892950d5c1927b867ecea1db898294e473cc9356e486e25193415",
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "termination": "natural; canonical runner completed owned disposable cleanup",
+  "stages": {
+    "PrismaClientGeneration": "passed",
+    "PostgreSQLMigrations": "31/31 applied; schema up to date",
+    "APILint": "passed",
+    "APIBuild": "passed",
+    "APIUnit": "40 files; 435 passed; 4.46s Vitest duration",
+    "APIE2E": "62 files; 59 passed / 3 failed; 626 tests; 622 passed / 4 failed; 711.42s Vitest duration",
+    "WebUnit": "not part of API target; not run",
+    "WebBuildOrBrowser": "not part of API target; not run"
+  },
+  "failures": [
+    {
+      "file": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "routes exact WhatsApp UUID operations to the selected adapter and preserves the sibling binding",
+      "stack": "line 337 expected HTTP 200 OK but received 404 Not Found when verifying the Evolution channel with expectedGeneration."
+    },
+    {
+      "file": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "cleans a verification lease after post-COMMIT session expiry, preserves a successor lease, and reaches GET for a live control",
+      "stack": "runExpired line 598: waitForResourceWaiter(...) assertion expected false to be true; reached after 17,291ms."
+    },
+    {
+      "file": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "test": "measures real EPS BFF reads over the retained 20k Instagram cohort",
+      "stack": "line 485: usesDeclaredIndex(threadPlan, contact_identities, routeIndex...) expected false to be true; later scan-work assertions were unreached."
+    },
+    {
+      "file": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "test": "accepts signed bodies through 8 MiB on both paths and rejects over-limit bodies before upstream effects",
+      "stack": "line 139: Owned Nginx exited before gateway readiness (1,067ms); gateway body-size and no-upstream-effects assertions were unreached. Nginx version marker: nginx/1.22.1; cause not established."
+    }
+  ],
+  "cp5Actuals": {
+    "suite": "6 tests; 5 passed, 1 failed",
+    "oauthReservation": {
+      "waves": 5,
+      "requestsPerWave": 20,
+      "durableAttemptsPerWave": 1,
+      "subscriptionPostsPerWave": 1,
+      "statuses": {
+        "200": 5,
+        "409": 95
+      },
+      "perActor": 9,
+      "perBu": 17
+    },
+    "signedReplay": {
+      "requests": 20,
+      "persistedMessages": 1,
+      "unread": "1 to 2",
+      "invalidSignatureStatus": 401
+    },
+    "resourceClaims": {
+      "contenders": 20,
+      "unsettledAtRelease": 20,
+      "actualPostgresWaiters": 13,
+      "winners": 1,
+      "resourceOwnedConflicts": 19,
+      "deadlockDelta": 0
+    },
+    "rlsRounds": {
+      "rounds": 5,
+      "readersPerRound": 20,
+      "signedMessagesPerRound": 20,
+      "domainQueriesPerRound": 684,
+      "readP95Ms": 14.018767,
+      "concurrentReadP95Ms": 106.908734,
+      "readDomainQueriesPerContext": 11,
+      "pendingBlockers": 0,
+      "deadlockDelta": 0
+    },
+    "signedBatch": {
+      "submitted": 1000,
+      "accepted": 1000,
+      "elapsedMs": 4897.459,
+      "limitMs": 15000,
+      "replayElapsedMs": 3620.524,
+      "replayAdditionalMessages": 0,
+      "replayAdditionalUnread": 0,
+      "cohortRowsRetained": 20000,
+      "unreadBefore": 1006,
+      "unreadAfter": 2006
+    },
+    "eps20k": "failed before emitting a measurement marker at declared-index assertion for contact_identities; query-plan measurement and subsequent scan-work assertions not evidenced."
+  },
+  "gatewayActual": "Native gateway test started but owned nginx did not become ready; signed-size acceptance/rejection and upstream counters were not reached.",
+  "postflight": "pass: all333 frozen sources, full TODO exact bytes/SHA256, 1,188 bound inputs,34 preservation rows,3 approved exception candidates/current hashes, and exact3 root gitlinks matched.",
+  "cleanup": {
+    "postgresContainer": "stopped and removed",
+    "network": "removed",
+    "volumes": "all nine listed canonical owned volumes removed"
+  },
+  "artifacts": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-before.json",
+      "bytes": 1533,
+      "sha256": "023d6d899e0a5eb007c54c6db31d0723f901a03a50966f9885b298288bdfa3e1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-api.log",
+      "bytes": 247899,
+      "sha256": "ad6105bc1d637b10ebf31a5e14e9d2562c853dc6ddf472b0644ee298c3cc2f56"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-after.json",
+      "bytes": 2322,
+      "sha256": "7ada9ee2635098774c37be03c70eca171e2306cb6aa30a19e8810102009e445d"
+    }
+  ]
+}

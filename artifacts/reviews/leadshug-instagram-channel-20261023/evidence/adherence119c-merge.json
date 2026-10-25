@@ -1,0 +1,42 @@
+{
+  "schema_version": "subagent-review-merge-v2",
+  "artifact_kind": "subagent_review_merge",
+  "authoritative": false,
+  "edit_policy": "derived_merge_packet",
+  "dispatch_path": "/mnt/c/unifast/leadshug/leadshug_now_docker/foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/adherence119c-dispatch.json",
+  "review_kind": "architecture_adherence",
+  "review_count": 1,
+  "reviewer_labels": [
+    "fresh-internal-no-context-119c"
+  ],
+  "highest_finding_severity": "medium",
+  "axis_summary": {
+    "performance": "unknown",
+    "elegance": "acceptable",
+    "structural_soundness": "acceptable",
+    "operational_fit": "mixed"
+  },
+  "recommended_paths": [
+    "Correct the completed-account metadata ordering and add native regression coverage within this TODO. Reconcile terminal API116 evidence separately; current ALL, browser, primary subscription observation and remaining assurance/CP6 gates stay open. This complementary review provides no checkpoint or feature acceptance."
+  ],
+  "exact_next_step": "Record reviewer resolutions in the governing TODO using the machine-checkable resolution table or equivalent gate ledger, then extract the derived resolution packet and decide whether another bounded review pass is still required.",
+  "findings": [
+    {
+      "finding_id": "F-7D47B745",
+      "severity": "medium",
+      "title": "Mutable attempt timestamps can select an older completed account label",
+      "rationale": "Both display queries now include completed CANCELLED mappings but select their label using ORDER BY ia.updated_at DESC, ia.id DESC. Cancellation updates that timestamp while preserving mapping evidence. Cancelling an earlier completed mapping after a newer successful reauthorization can therefore make the earlier username outrank the newer proven username. The BU/channel/resource/app-scope predicates establish ownership, but do not establish which mapping is newest. This is a distinct residual defect in the materially changed cancellation selector under SCOPE-07/DOD-06, rather than reopening the original missing-CANCELLED-label finding. The enclosed native case cancels only the newest mapping and does not exercise this ordering. No executed failure is claimed.",
+      "suggested_action": "Select the last completed mapping using durable mapping chronology or version ordering that cancellation cannot advance, retaining all existing ownership and app-scope predicates. Add a native case with two completed mappings, cancel the older one, and verify catalog/list/thread/reply-options retain the newer label with unchanged channel readiness and provider counters.",
+      "reviewer_labels": [
+        "fresh-internal-no-context-119c"
+      ],
+      "source_finding_ids": [
+        "IG-ADHERENCE119C-01"
+      ],
+      "category": "operational_fit",
+      "formalizable_hint": "yes",
+      "candidate_rule_level": "project",
+      "candidate_rule_id": "n/a"
+    }
+  ]
+}

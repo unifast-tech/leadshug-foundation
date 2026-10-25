@@ -1,0 +1,56 @@
+{
+  "kind": "Prepared sole source120 actual116/119B/C repair and bounded diagnostics",
+  "state": "PREPARED ONLY; no sourcewrites untilAPI116naturalterminal/fullpostflight/rootqualification andexplicitrootdispatch",
+  "profile": "Operational / Coder with owned nativeNginxfixture DevOps overlay only",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "owned": [
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+    "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+    "api-app/src/domain/channels/channel-display.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 69247,
+      "sha256": "4295a591e926a7e0e21d177387f1b9d06e12a1e4ae35ff92ad5dfccf6b55b947"
+    },
+    {
+      "path": "api-app/test/instagram-cp5-scale-concurrency.e2e-spec.ts",
+      "bytes": 87828,
+      "sha256": "c382942b7794bdc6f7de46ae59757c28f2b6ac7180c0c62d0758b29a17e2243c"
+    },
+    {
+      "path": "api-app/test/instagram-gateway-boundary.e2e-spec.ts",
+      "bytes": 24867,
+      "sha256": "64e535d0c87145ce9930be813d51ccda9c4e31a6eb695d8c8b8474d8675a9970"
+    },
+    {
+      "path": "api-app/src/domain/channels/channel-display.ts",
+      "bytes": 14269,
+      "sha256": "568b07f91732d93ff7b7e5c86e95bfe7759047deefc0845ec81211284171552a"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 39319,
+      "sha256": "875e4b7251c403f5ea563390ed6da7fd7b3f5bff0ee9c9a612c991efe449a675"
+    }
+  ],
+  "baseline": "cp4-source118a-terminal-manifest.json",
+  "basis": [
+    "adherence119b-root-adjudication-prepared.json",
+    "adherence119c-root-adjudication-prepared.json",
+    "API116 actualfourfailurestacks; rootreconciliation pending"
+  ],
+  "requirements": [
+    "119B01/actual116 UPDATEwaiter line598: remove successor predicate on uncommitted leasevalue. First assert initialcommitted ownerleaseNULL. Real queuedUPDATE matches immutableid/provider/BU/currentchannel/businessidentity tuple, immediatehandledthen before actualPGblockingchain observation, then naturalexpiration/releaseCOMMIT/count1/successorCAS/zeroHTTP/history/finallycleanup preserved. No production verification/session/leaseTTL changes.",
+    "116 exactEvolutionUUIDpositivecase line337 gets404 after new correct tenantNAO_OFICIALmodulegate. Enable canonical tenant module in exactexisting positivefixture BEFOREcallingUUIDverify; preservecurrent moduleOFFmatchedproof andall200/zero-crossscope/provider/owner/generation/disconnect assertions. No bypassnewproductmodulegate orchangingexpectedstatus.",
+    "119C01: mappingversion monotonically=max(currentcredential,prior-mappedversion)+1 inactualconfirmation owner. Bothmetadataqueries order completedmappedversions DESC withstabletiebreak, not mutableupdatedAt; unchangedexactBU/channel/resource/businessidentity/appscope/professionalowner/sanitization. Native twoactualcompletedmappings, cancelOLDER afternewer andprove newerlabels catalog/list/thread/replyoptions, unchangedreadiness andprovidercounters. Keepexistingnewestcancel/disconnect/reauth/alloldoracles. No credentialread orschema/productauthority expansion.",
+    "116EPS exactfailingassert atline485 checks ci declaredindex andwhole-word id IndexCond. Actualplan not emitted beforeassert, so causeUNKNOWN (SeqScan vslegitimatecontact_idindex vsalias/predicate). Add bounded safe actualcapturedfullSQL+boundparams+EXPLAINJSON/relevantnodeevidence immediately BEFORE relevant planassertions including list/thread/options. Keep ALLindex/predicate/alias/loops/removedrows/workbounds/list<=8/p95/20k/6cases/countersunchanged inthis diagnosticrepair. No guessingruntimeplan/noforceplanner/ANALYZE/plannerconfig/latencywaiver or approvedindexprotection relaxation. Root willadjudicateactualnextcanonicaldiagnostic.",
+    "116gatewayNginx exitsbeforereadiness, stderrdiscarded soactualstartupcauseUNKNOWN. Improve ownedchild fixture: preserveactualpublictemplate andproxy/bodylimits/logformat; exactsafeaccesslog destination mayrender intoownedtempprefix instead of /dev/stdout andreadownedredactedlogfile. Node child pipe maynotbe reopenable as/dev/stdout, treatashypothesis notproven. Capture boundedownedstartupstderr/configcheck diagnostics with no body/query/token/signature. A real nginx -t actualrenderedconfig assertion mayprecedeownedspawn, thenactualhealth. Unconditionalownedchild/temp/Nestcleanup andallcurrent8MiB/2MiB/slash/signature/domain/provider assertions retained. Do notborrowhostgateway/changeOSconfig/readhostprocesses/operationalfiles.",
+    "Exactlyfiveadmittedpaths andstaticonly; no Foundation/other product/schema/helper/runner/dependency/config/private/env/Meta/provider/network/Git/status/diff/discovery/npm/Node/lint/build/test/Docker/worktree/copy. Rootownsdocs. If extraactualpathneededreportbeforeedit. Terminalbytes/SHA/perfindingmapping/testsNOTRUN mandatory."
+  ],
+  "remaining": "Focuseddiagnostic willnotreplacecurrentfullALL/Web/browser/CP5EPS/completefreshreview/protocol/human/security/TQA/cutover/final/CP6physicalproof."
+}

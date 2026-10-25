@@ -1,0 +1,60 @@
+{
+  "kind": "Independent root API116 natural-terminal reconciliation",
+  "sourceExact": 333,
+  "boundInputsExact": 1188,
+  "fullTodoExact": true,
+  "immutableExact": 34,
+  "approvedExceptionsExact": 3,
+  "rootIndexExact": true,
+  "outputsExact": [
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-before.json",
+      "bytes": 1533,
+      "sha256": "023d6d899e0a5eb007c54c6db31d0723f901a03a50966f9885b298288bdfa3e1"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-api.log",
+      "bytes": 247899,
+      "sha256": "ad6105bc1d637b10ebf31a5e14e9d2562c853dc6ddf472b0644ee298c3cc2f56"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-after.json",
+      "bytes": 2322,
+      "sha256": "7ada9ee2635098774c37be03c70eca171e2306cb6aa30a19e8810102009e445d"
+    },
+    {
+      "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api116-result.json",
+      "bytes": 5121,
+      "sha256": "0efcbe9d20b5f669e929ee40d54db1970d1caa243a559ae4cc10fac0a26826b4"
+    }
+  ],
+  "command": "bash scripts/test-channels-local.sh api",
+  "invocations": 1,
+  "exitCode": 1,
+  "actualResults": {
+    "migrations": 31,
+    "lint": "pass",
+    "build": "pass",
+    "unitTests": 435,
+    "unitFiles": 40,
+    "e2eTests": 626,
+    "e2ePass": 622,
+    "e2eFail": 4,
+    "e2eFilesPass": 59,
+    "e2eFilesFail": 3,
+    "e2eDurationSeconds": 711.42,
+    "cp5Pass": 5,
+    "cp5Total": 6,
+    "batch1000Ms": 4897,
+    "batchReplayMs": 3621,
+    "retainedCohort": 20000
+  },
+  "failures": [
+    "Evolution UUID positive fixture gets404 (modulegate active)",
+    "Real successorUPDATE waiter absent (119B01 MVCCpredicate defect)",
+    "EPS peer declaredindex predicate false; actualplan notemitted beforeassert, diagnosisopen",
+    "Nginx child exitedbeforereadiness; startupstderrdiscarded, causeUNKNOWN/bodyboundariesunreached"
+  ],
+  "cleanup": "Canonicalowned PostgreSQLcontainer/network/allninevolumesremoved",
+  "qualification": "ActualAPIproof with4failures; noWeb/browser/ALL/featurepass.119B/Cbothrootterminalqualified; allfreezeinputs exact. Source120 repair allowedonlyvia explicitreadyhandoff, no operational/private/Meta authority."
+}
