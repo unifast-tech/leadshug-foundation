@@ -1,0 +1,18 @@
+{
+  "kind": "CP4api71rootreconciliation",
+  "frozenSources264Exact": true,
+  "todoExact": true,
+  "boundInputs608Exact": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "oneInvocation": 1,
+  "exit": 1,
+  "actualLog": {
+    "bytes": 14063,
+    "sha256": "d161123220b9a143d4d93daccb9d992fea6aba1cf84f9f75c4c4363a6e3f215b"
+  },
+  "observed": "31 migrations applied, Prisma schema up-to-date, lint stopped with 2 no-useless-assignment diagnostics connections508/509. Build and all unit/E2E unexecuted; NOT causal behavioral RED.",
+  "validatorDerivedCorrections": "Result prismaMigrateDeploy.schemaUpToDate=false conflicts with actual final raw Database schema is up to date!, which root qualifies true. Second lint diagnostic source field contains prior line; both diagnostics actually same connections spec. Original validator result preserved.",
+  "staticFixtureCorrection": "Catalog ATENDENTE+ per T; current malformed cursor with ATENDENTE expects403 incorrectly. Change to authorized GET200 + malformed400; ADMIN-only verify ATENDENTE403 stays. All roles OWNER/ADMIN/ATENDENTE, no lower role. No executed behavioral assertion weakened, all unreached in71.",
+  "next": "Thaw after this receipt; one writer faithfulfixture72, then one complete canonicalapi-instagram73. Product CP4 remains NOTIMPLEMENTED. Full React/HTTPSbrowser/alllatergates remain."
+}

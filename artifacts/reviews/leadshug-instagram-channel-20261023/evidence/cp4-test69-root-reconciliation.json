@@ -1,0 +1,25 @@
+{
+  "kind": "cp4-native-test69-terminal-reconciliation",
+  "previous261Exact": true,
+  "new68Exact": true,
+  "files": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 43182,
+      "sha256": "f73abefffcdbf70d96c4f3057e63a5ef126e5a1ce6b77c82a34e5bf119958a70"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+      "bytes": 14297,
+      "sha256": "dfbf4326f5283aef4de1c319285f369983b39e11257ba1e8b09f726e5f220c72"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 18535,
+      "sha256": "49d881a846adc4e6e14bb8098df9ed8e9e7127fdf7f2a11bac46e975bb34ee14"
+    }
+  ],
+  "writerTerminal": true,
+  "testBuildRunner": "NOTRUN",
+  "qualifications": "Read-only48 inspecting69nativecontracts/oracles; no plannedtests accepted asexecution. Ambiguousroutefixturemissingreported, do notclaimcovered. Three68oraclecorrections andexactUUIDnativecase/completedACKpreservation queuedforone70handoff afterinspection. No productbeforecanonicalRED. All3newtestfiles currentlyfrozen."
+}

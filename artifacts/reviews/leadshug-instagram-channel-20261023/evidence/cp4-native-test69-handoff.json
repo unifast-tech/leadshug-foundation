@@ -1,0 +1,35 @@
+{
+  "kind": "CP4 native tests69 sole-writer handoff",
+  "authority": "Same approved ST-IG-03v1.3 CP4; routine HOW no newWHAT, routing-cp4-native-test69 GO. Native tests before correspondingproduct.",
+  "writer": "instagram_repair44",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "allowedWrites": [
+    "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "immutable": "261 pre68 sources plus newconnections68 exactf73abeff/43182. All helpers/existingspecs/product/private/config/Git untouched. Independent48 mayinspect68, no otherwriter.",
+  "readInputs": [
+    "cp4-realtime-preparation62-root-qualified.json",
+    "cp4-safe-display68-root-qualification.json",
+    "cp4-native-fixture67-preparation.json",
+    "cp3-api66-root-reconciliation.json"
+  ],
+  "realtimeTests": [
+    "Actual Nest app.listen/nativeHTTPserver, app.get(RealtimeService).ligar(realserver); native ws package alreadydependency, genuine signedcookie sessions/authorizedBU+foreignBU. Awaitactualconnectedack withlistenersinstalledbeforeingress; nevermockRealtime/Incoming/domain/DB/BFF.",
+    "TwoactualOAuthconfirmedIGaccounts/sameopaquepeer -> distinct contacts/conversations; signedrealHTTP acceptsoneINeach, realtimeoneeventeachaftercommit +unread1/list/threadvisible. Replayexactresource/externalmessageID createszeroextraevent/message/unread/currentreceiptmutation. NegativeWSproofusesnativeping/pong orderedsettlement afterHTTP, notarbitrarysleeps.",
+    "SignedIGHTTP withactiveTypebottrigger zeroactualTypebot trigger/sessionSQL and fakeHTTPcalls; realWA signedMeta control sameBUwithactualverifiedbinding/activetrigger provesnormalTypebotSQL+call. CountersafterOAuth/setup, noingressprofile/providerHTTP. Preserveoriginalqualifiedactiontimestamp and window facts.",
+    "Existing1000batch/preflight/max4/drain tests keptunchanged and rerun currentafterwiring. Newtests donotneedduplicate1000cohort if existingcanonicalcases remain andactualrerun recorded. Do not read or change oldtestcomment yet; sourcehandoff later exactpaths."
+  ],
+  "displayTests": [
+    "Use actual nativeNest/BFF/PG/Session, actualOAuth/signedIN creation, only providerHTTPsynthetic. Expectnew approved safe display onlist/thread and qualifiedexistingreplyoptions; missingdisplay/unsafeexistinglabels are causalRED beforeproduct.",
+    "ConcretedTO in cp4-safe-display68-root-qualification.json: listentry.display/thread.conversa.display {platform,recipientLabel,recipientPhone,accountLabel,instagramUsername}; IGnoopaquepeerphone; catalogfieldchannelId selectedby68. ExistingWAlegacyfields preserved.",
+    "TwoIGaccounts/sameopaquepeer staydifferent withrespectivequalifiedaccountusername; unknownrecipientgeneric; wrongaccountpending/rejectedattempt cannotrelabel; currentcredentialversion rotation correctlyqualifiesonlycurrentmappedusername. Missingusername/accountambiguity/no-route neutral, nofirst/latest guess.",
+    "VerifiedWA BCI OWN businessnumber labelsaccount; canonicalWA recipientphone separate; contradictBU.phone/rawWABA/providerIDs and assert noauthority/displayborrowing. ForeignBU404.",
+    "50conversations createdviaactualsignedIN/boundedbatch, existingtotal/pagination/unread/thread retained; actualqueryeventcounts <=8DOMAIN SQL per request including projection/authwheregoverned (excludeonlytransactioncontrols, notonlySELECT; WITH statements count). Explicitzero mutatingSQL/provider/profileHTTP/credentialdecrypt andnoperrowreplyOptions. Keeptelemetrycompactnumeric."
+  ],
+  "forbidden": "No tests/build/runner/Git/docs/private/env/operationalDB/MetaHTTP yet; no source/helpers/oldtests/import-other-Vitest-spec/skip/thresholdrelax/newdependency/fakeclock. Root inspectandcanonicalRED afterbothterminal and68qualified. boundedtimeouts only fail-safe for actualnativepositiveevents, neverarbitrarysleepsprovingabsence.",
+  "report": "Exactnewfiles/hash/bytes/testcases andanyremainingconstraints; tests NOTRUN. AllCP4/primary/human/latergatesnotwaived.",
+  "allowedReads": "All261 explicitly positive public paths in cp3-adherence67-frozen-manifest.json.files, currentT and exactnamedpublicE artifacts. Includes RealtimeService/helpers/BFFcontroller/currentpreviousspecs for realexistingcontract reference. These public reads do NOT authorize any writes outside the2newfiles. No private/env/runtime/process/provider/Git reads.",
+  "rootWordingCorrection": "Root followup message overly broadly said no helpers/product/previousspec reads. Corrected promptly: existing public source reads allowed, existing writes forbidden. No forbidden read or mutation reported/inferred. Actual native contract in existing source authoritative, not guessed from handoff."
+}

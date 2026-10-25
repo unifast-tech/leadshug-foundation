@@ -1,0 +1,30 @@
+{
+  "kind": "cp4-native69 static root adjudication before first RED",
+  "status": "Readonlyinspect terminal; no tests/build/run, prospective faithfulHOW corrections only",
+  "currentSourceCorrection": "Root assumedIG Conversation.contact null fromnullable schema; actualcurrentacceptance writesopaqueinput.contact, sharedIncomingpublishesstoredlegacycontact. That assumption isinvalid. NO database/nullstorage rewrite or requiredWScontatonull contract inferred. Tests correlatequalifiedlocalroute ratherthanlegacycontact; UI/BFFsafedisplaymustnottreatopaquepeer asphone.",
+  "fixes": [
+    {
+      "locus": "realtime event/route correlation",
+      "how": "AfteractualsignedHTTP resolvespersistedrouteusingaccount-qualifiedBCI+ContactIdentity;matchWSbuId/canal/direcao/conversaId. Donotrequirecontato==opaquepeer OR null. SharedIncominglegacyWScontractnotchangedforfixture."
+    },
+    {
+      "locus": "foreignnegative/replay",
+      "how": "Nativeauthorizedsocketping/pong afterforeignHTTP/event beforeabsenceassert. Replayrereadactualunread/Message+Contact/conversationuniqueness andreceipt/events, notjustinitialunread."
+    },
+    {
+      "locus": "display sharedA/Blookup",
+      "how": "IncludecontactIdentity inactualroutesqueries, select byqualifiedexternalPeerId+resource/scope (notlegacyConversation.contact). Explicitfoundpreconditionsbeforepropertyaccess."
+    },
+    {
+      "locus": "querybounds",
+      "how": "T851 freezes<=8DOMAINSQL/PAGE andp95lookup/options;7optionswasanunmeasuredadvisorytarget. Preservepage8strict actualallnontransactionSQLcount; recordthread/optionsactualcountsastelemetry/noN+1 notinventedhard7/8notapprovedforindividualread. ZeroHTTP/metadataonlyremain. No executedfailingthresholdisbeingrelaxed; allnewtestsNOTRUN."
+    }
+  ],
+  "ambiguityAdjudication": {
+    "rejectAdvisorAlternative": "SecondfakeBusinessIdentitywithsameaccountscopebutdifferentexternalresource andnoowningchannel/PIdisnotasecondqualifiedbinding. Itmaybelocallyinvalidandmustnotbeclaimedtwoqualifiedaccounts orforcefallbackpolicy.",
+    "faithfulNegativeFixture": "AftergenuineOAuthmapsA/B, createNEW standalone syntheticContact+Conversation and2NEWContactIdentity+ConversationRoute rows, each scoped to ONE ofactualownedA/B resources, differentfreshpeerstrings, validcompositeFKs. DoNOTmoveorupdateanyexistingcontact/route/provider/BCI orimplementmerge. Explicitvalid-FKadversarialambiguousgraph, notgenuineingress/provenpeerownership;50positiveingresscasesremaintrue/differentcontacts.",
+    "oracle": "Aggregatedlist/threadsafe display neutralplatform/account/username andnullrecipientPhone, nofirst/latestaccountchoice. Replyoptionsmayproperlyoffer2explicitV2tuples withsafequalifiedaccountlabels/windowavailability; doNOTdemandconflict/empty or weakenexplicitrouting. ZeroHTTP/decrypt, atmost8pagequeries remains."
+  },
+  "metadataOnlyProof": "Add transparentrealfunctionspy openChannelCredential or actualChannelCredentialResolver.resolve observation around readonlyphasesonly, zerocalls; OAuth/rotation legitimatelydecryptsoutsideassertedspan. Nofakecrypto or alteredresult.",
+  "sourceProofQualification": "Currentrawlegacycontactmaycontainsopaquepeer; BFFpayloadsafeprojection/nulllegacyIG presentation isCP4HOW underapprovedconsumercontract, notstoragebackfill. WSlegacyfieldnotaddressauthority."
+}

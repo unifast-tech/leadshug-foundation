@@ -1,0 +1,28 @@
+{
+  "kind": "CP4fixture70terminalbytequalification",
+  "existing261Exact": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "files": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 51599,
+      "sha256": "f0f5293deb1c722593ae690abda92eca10ab9bb2e2f98ee482ab929d43353f3f"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+      "bytes": 19222,
+      "sha256": "e77142d62cd6ac7e3726353653aed7a39e96afb82f589149113349a5befb3b1c"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 28686,
+      "sha256": "3e1f5f2e1543ad421170908690514eca605fe160af792dcd5372312a3fa6ac64"
+    }
+  ],
+  "writerTerminal": true,
+  "testsBuildRunner": "NOTRUN",
+  "staticQualification": "Freshreadonlyfinalinspectioninprogress; notexecutionacceptance. WriterGitboundarywordingclarificationpending, no privateaccessassumed.",
+  "preimageQualification": "Prior3newtests hadhash+bytes recorded; no completebodypreimagepreservation assertion ismade. All261existing/inheritedsourcebytes independentlyexact. Currentnewnativecases undergoactualread/contractqualification beforefirstRED; noexecutedassertionisbeingweakened.",
+  "next": "Afterfinalstatic/boundaryqualification, freeze264+T/publicinputs foronecanonicalapi-instagramRED71; noCP4productyet."
+}

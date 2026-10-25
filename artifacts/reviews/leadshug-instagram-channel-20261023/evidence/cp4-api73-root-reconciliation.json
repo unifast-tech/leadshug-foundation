@@ -1,0 +1,94 @@
+{
+  "kind": "CP4api73rootqualification",
+  "frozenSources264Exact": true,
+  "todoExact": true,
+  "publicInputs620Exact": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "oneInvocation": 1,
+  "exit": 1,
+  "raw": {
+    "bytes": 72706,
+    "sha256": "b4e4ff402bcd48652d0ea810cdfa5cd453639e3f6bf46b09ca3431bdb070094e"
+  },
+  "stages": {
+    "migrations": 31,
+    "lint": "PASS",
+    "build": "PASS",
+    "unit": {
+      "files": 39,
+      "passed": 426
+    },
+    "instagramE2E": {
+      "filesPassed": 22,
+      "filesFailed": 3,
+      "testsPassed": 141,
+      "testsFailed": 12
+    }
+  },
+  "actualFailures": [
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > first exposes the approved local cursor catalog contract; the missing route is a causal RED",
+      "observed": "Error: expected 200 \"OK\", got 404 \"Not Found\"\n \u276f test/instagram-cp4-connections.e2e-spec.ts:138:91"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > routes exact WhatsApp UUID operations to the selected adapter and preserves the sibling binding",
+      "observed": "AssertionError: expected 404 to be 409 // Object.is equality\n"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > rejects a captured selected UUID after legacy disconnect and same-type generation-one replacement",
+      "observed": "AssertionError: Native selected-UUID verify returned 404 before the service boundary.: expected 'response' to be 'entered' // Object.is equality\n"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > makes a legacy type-only WhatsApp operation conflict when more than two compatible rows exist",
+      "observed": "PrismaClientKnownRequestError: \nInvalid `prisma.buChannel.create()` invocation in"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > verifies a durable binding after OAuth expiry, preserves known receipt, and fences UNKNOWN without POST",
+      "observed": "AssertionError: expected 404 to be 503 // Object.is equality\n"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > commits local disconnect while a real reauthorization callback is held and preserves completed history",
+      "observed": "Error: expected 200 \"OK\", got 404 \"Not Found\"\n \u276f test/instagram-cp4-connections.e2e-spec.ts:457:59"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > does not let an already-dispatched subscription response restore a channel disconnected in flight",
+      "observed": "Error: expected 200 \"OK\", got 404 \"Not Found\"\n \u276f test/instagram-cp4-connections.e2e-spec.ts:518:51"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > reattaches an absent-credential same-account channel with a mapped-history version and requires a new-generation receipt",
+      "observed": "PrismaClientValidationError: \nInvalid `prisma.dispatchAdmission.findFirstOrThrow()` invocation in"
+    },
+    {
+      "case": " test/instagram-cp4-connections.e2e-spec.ts > Instagram CP4 connections and current UUID lifecycle (real Nest/PostgreSQL) > keeps the global prior-POST uncertainty fence across disconnect and reauthorization",
+      "observed": "Error: expected 200 \"OK\", got 404 \"Not Found\"\n \u276f test/instagram-cp4-connections.e2e-spec.ts:674:57"
+    },
+    {
+      "case": " test/instagram-cp4-display.e2e-spec.ts > Instagram CP4 safe conversation display (real Nest, sessions and PostgreSQL) > projects two same-peer IG accounts safely across a real 50-row paged inbox and current credential mapping",
+      "observed": "AssertionError: expected [ { \u2026(13) } ] to have a length of 25 but got 1\n"
+    },
+    {
+      "case": " test/instagram-cp4-display.e2e-spec.ts > Instagram CP4 safe conversation display (real Nest, sessions and PostgreSQL) > uses the qualified WhatsApp business identity and recipient address, not contradictory BU or provider metadata",
+      "observed": "AssertionError: expected 9 to be less than or equal to 8\n \u276f assertBoundedReadOnly test/instagram-cp4-display.e2e-spec.ts:28:29"
+    },
+    {
+      "case": " test/instagram-cp4-realtime.e2e-spec.ts > Instagram CP4 realtime ingress (real Nest, PostgreSQL, HTTP and WebSocket) > publishes distinct account-scoped accepted messages once, scopes sockets by BU, and keeps Typebot WhatsApp-only",
+      "observed": "Error: Timed out waiting for Instagram account A qualified realtime route event\n \u276f Timeout.<anonymous> test/instagram-cp4-realtime.e2e-spec.ts:20:39"
+    }
+  ],
+  "qualifiedCausalRED": [
+    "Approved catalog200 observed404 at connections138 before new product",
+    "Selected UUID verify route absent404, stale expected409; capture barrier neverentered",
+    "Durableverify503 expected404/disconnect200 expected404 at actual HTTP",
+    "IG realtime qualified event absent timeout with accepted ingress"
+  ],
+  "notQualifiedAsProductDefects": [
+    "Legacy3sameBCI/OFICIALhelper violates real unique business_identity_id/type before route",
+    "Ordinary admission fixture uses InitialMessageIntent enum values and releasedAt null despite completed ordinary SETTLED/released fact",
+    "Display account route lookup filters sharedPeer then expects25; accepted total50 not same-peer25",
+    "Late heldcallback expects third /me after actual second-token-request cancellation; unsafe/unreached oracle"
+  ],
+  "queryBudget": "Actual WA page total9 nontransactionSQL > currentstrict8 test. Keepstrict8/zeroDML and complete telemetry; do not hideauth/businessSQL or relax after failure. Batch existingconvo+BU+setor projection can remove ORM relation fanout inside admitted CP4 implementation; approveddomain<=8 remains.",
+  "unreached": "Late UUIDreplacement effects, disconnect/callback/confirm preservation, reattach/uncertainty and most safe display assertions remain unproved behind missing routes/fixture blockers. No retroclaim.",
+  "next": "Freeze73 ends after this receipt; faithfulfixture74 correction only then wholeCP4API75 handoff. Subsequent canonical fullAPI validates currentproduct+oracles. ReactV2/HTTPSbrowser/alllatergates remain required."
+}

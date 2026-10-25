@@ -1,0 +1,41 @@
+{
+  "kind": "CP4faithfulfixture74corrections",
+  "authority": "SameapprovedSTIG03v1.3, root73actualRED reconciliation. Existing261 product source stillimmutable.",
+  "allowedWrites": [
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 51717,
+      "sha256": "612d637a4b49ea4555fb856bcbfec1c67591915f487301a78c5b7eea55a9da37"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 28817,
+      "sha256": "419d8f4a66d235f4b7a4ed5e39b03800d57175ec859b31fa8efaabc1a56b0aff"
+    }
+  ],
+  "changes": [
+    {
+      "where": "connections legacy>2 case",
+      "fix": "Do notcallprovedsameBCI+typehelper3times (realunique forbids it). CreateONE real verified official viaexistinghelper andTWO standalone legacy BuChannel rows typeOFICIAL/businessIdentityId:null/notready withfreshlocalIDs+distinctphoneNumberIDs. No newowner/BCI/PId/credential/transfer. NULL legacybusinessFK admissible schema, selectorsmustcountcompatiblelegacyrows before readiness. Exactly3samebu/type rows ->409zeroMeta; preservehelper/source/constraints."
+    },
+    {
+      "where": "connections completedordinaryACKbeforedisconnect",
+      "fix": "DispatchAdmission statesPREPARED/SENDING/SETTLED/UNCERTAIN, notinitialintentEXTERNAL_ACCEPTED/SUCCEEDED. Query actualsamebu/conversation/callerBFF/actor tenant.owner.id admission SETTLED/releasedAt notnull after actual201. Assertunique native admission andselectedContext actualrouteId/channelId/generation/conversation/BU/providerID; exact acceptedMessage and tuple/ownerNonce/deadlines/releasedAt snapshots preserved afterdisco/reattach. No directmutation/forgedACK/newstate. No promise incompletegenerationconflictcompletion."
+    },
+    {
+      "where": "display actual50conversationfixture",
+      "fix": "routesA/B are scoped to actual account businessIdentity/namespace/scope but currently externalPeerId sharedPeer filter returns1. RemoveonlythatsharedPeer restriction from bothroutecollectionqueries; require25distinctacceptedpeers each, keeplater find(sharedPeer)exactqualified checks and50pages20/20/10, stabletotal/unread/no merge."
+    },
+    {
+      "where": "connections heldOAuthcallback lateoracle",
+      "fix": "Hookholds SECOND request GETgraph/access_token. Disconnect cancels; existingrealrequestJson calls revalidateowner AFTERthatHTTP, so third /v26.0/me mustNOTdispatch. Expectexact2alreadydispatched URLs, no third; all303/no-store/no-referrer/CANCELLED/zero candidate/preservedcompletedfacts stay. Do notalterclient/owner or execute third provider to satisfyincorrecttest."
+    }
+  ],
+  "preserve": "Everyotherassert/source/helper/3rdrealtimespec unchanged. In particular allquery<=8 bounds/countALLSQL includingWITH/auth/zeroDML unchanged, timings/budgets unchanged. No skip/retry/waiver.",
+  "forbidden": "No Git/status/diff/inventory/private/env/runtime/provider/network or tests/build/runner. Read only exactpositivepublicfiles/currentT/actualschema/owner and suppliedevidence. Root ownsdocs.",
+  "execution": "Testsnotrunbywriter. Actual73causalRED remainsqualified; current74changedlateoracles notretroclaimedexecuted. Afterrootqualification producthandoff then canonicalfullAPI."
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "cp4-test68-terminal-reconciliation",
+  "existing261Exact": true,
+  "rootIndex3Exact": true,
+  "newTest": {
+    "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "bytes": 43182,
+    "sha256": "f73abefffcdbf70d96c4f3057e63a5ef126e5a1ce6b77c82a34e5bf119958a70"
+  },
+  "report": "Writerterminal no tests/build/runner. Native scenarios prospectively authored beforeCP4product. Rootbyteprovenance verified; independentfixtureinspection48 inprogress. No RED/GREEN or execution acceptance yet.",
+  "next": "Serialize disjoint realtime+display native tests69 before one currentcanonical api-instagramRED. All261source/test68 immutable while69writes. CompleteCP4/backend+React+HTTPSbrowser/latergatesrequired."
+}

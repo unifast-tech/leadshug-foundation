@@ -1,0 +1,19 @@
+{
+  "kind": "CP4fixture72-faithful-corrections",
+  "authority": "SameapprovedSTIG03v1.3; root71terminalreconciliation, no product behavior change",
+  "allowedWrites": [
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts"
+  ],
+  "preimage": {
+    "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "bytes": 51599,
+    "sha256": "f0f5293deb1c722593ae690abda92eca10ab9bb2e2f98ee482ab929d43353f3f"
+  },
+  "changes": [
+    "Remove only useless initial assignments channelId emptystring and generation0; preserve typed variables assigned before use, all barrier/finally/race assertions. No non-null assertions hiding real runtime gap.",
+    "Catalog lowRoleCookie is ATENDENTE, minimum approved read role. Add genuine catalogGET200 for this actor, malformed cursor expectation400 after authorization. Keep POSTverify ATENDENTE403 and all foreign/no-grant404/session401 oracles intact."
+  ],
+  "prohibited": "No product/helper/other2newtests/docs/Git/inventory/private/env/runtime/provider reads or changes, no tests/build/runner; only exactpublicfile+actualowner/T sources as necessary. No skip/retry/threshold relax. Root owns docs.",
+  "allOther264SourceBytes": "Immutable, exact against71freeze",
+  "terminal": "Report exact changedlines and final hash/bytes; root inspect, freeze then one canonical73"
+}

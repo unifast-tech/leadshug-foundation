@@ -1,0 +1,25 @@
+{
+  "kind": "CP4 shared safe display68 root-qualified HOW",
+  "status": "Read-only advisory inspection/root concretization only. No source or test writes authorized by this document; exact later serialized handoff required.",
+  "inspection": "instagram_test48 terminal public-source-only; no tests/runner/private/provider.",
+  "acceptedHow": [
+    "One narrow shared batch projection function using existing owner Prisma, imported by catalog/resolver/ConversationsService without newDI framework/cycle or protected public.module change. Presentation never dispatch authority.",
+    "Only current page <=50/local route IDs. Require complete conversation->route->contact/business identity->currentPId/channel scope/namespace/BU/resource association. Ambiguous or missing account routes return neutral platform/account, never first/latest guess.",
+    "IG username only durably mapped samechannel/BU/professionalaccount/currentcredentialversion; mappedCredentialVersion equals actualversion and verifiedprofessionalUserId exactresource; currentmappedproof/confirmation, not merelylatest pending/rejected attempt. Missing/ambiguous/absentcurrentcredential username => neutral Instagram account. No opaquepeer as telephone.",
+    "WAownaccountlabel fromsolequalifiedWHATSAPP BCI canonicalbusinessnumber; notBU.phone/rawWABA/instance/phoneNumberId. WArecipientphone fromcanonicalqualified PERSON/GROUP grammar, preserveexistingdisplay/businessuserhistory.",
+    "Batch rawSQL joins and qualifiedlateralattemptfilter are feasible. List existingcount/page/load3 plusonebatchread target4; replyoptions target<=7subjectnativequerymeasurement; includeactualauth/readboundary whereTrequires. No credentialdecrypt/provider/profileHTTP/perrowreplyOptions/unbounded BU hydrate."
+  ],
+  "routineDtoConcretization": {
+    "catalogDisplay": "Existing test68: {platform,accountLabel,whatsappPhone,instagramUsername}; whatsappPhone is OWN businessnumber for WA, nullforIG.",
+    "conversationDisplay": "Add display:{platform:WHATSAPP|INSTAGRAM|null,recipientLabel:string,recipientPhone:string|null,accountLabel:string|null,instagramUsername:string|null} to each listconversation and thread.conversa. recipientPhone refers onlytoqualifiedWA recipient, neverIG. CatalogwhatsappPhone andconversationrecipientPhone haveexplicitdifferentpurposes. Existinglegacyfields preserved forWA; UI usesnewdisplay; sendcapturesreplyoptiontupleindependently.",
+    "replyOptions": "Reuse samequalifiedaccountLabel/recipientLabel projectors; retainexistingstrictV2tuple/capability/windowfields. No displayfieldsbecomeaddressauthority."
+  },
+  "nativeTestsBeforeProduct": [
+    "TwoactualOAuthIGaccounts/sameopaquepeer -> separateconversations with correct accountlabel and genericrecipientlabel, nullrecipientPhone.",
+    "Pending/rejectedwrongaccountcandidate and sameaccountcredentialrotation cannotrelabelorborrowoldcredentialusername. Missingvalidusername neutral.",
+    "CanonicalWA BCI businessnumber label despitecontradictoryBU.phone/rawWABA/providerinstance, qualifiedrecipientphone preserved.",
+    "Multipleambiguousroutes/missingprovenroute neutral; foreignBU404.",
+    "50actualsignedIN-createdconversationpage:<=8actualdomainSQL inclusiveofprojection,zeroHTTP/decryption/perrowreplyOptions, stableexistingpagination/total/unread/thread andbothWAjourneys retained."
+  ],
+  "limitations": "Staticquerytargetsnotmeasuredproof. No newWHAT/policy/primaryprotocol/runtime/privateauthority. WholeCP4/alllatergatesremain."
+}

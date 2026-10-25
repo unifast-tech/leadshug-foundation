@@ -1,0 +1,180 @@
+{
+  "kind": "cp4-api73-result",
+  "scenario": "ST-IG-03 CP4 API canonical disposable synthetic validation",
+  "canonicalCommand": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "canonicalExitCode": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api73-api.log",
+    "bytes": 72706,
+    "sha256": "b4e4ff402bcd48652d0ea810cdfa5cd453639e3f6bf46b09ca3431bdb070094e",
+    "lineCount": 913
+  },
+  "stages": {
+    "runnerSetup": "completed; disposable synthetic runner started and cleanup completed",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": true
+    },
+    "prismaClientGeneration": {
+      "reached": true,
+      "passed": true
+    },
+    "prismaMigrateDeploy": {
+      "reached": true,
+      "passed": true,
+      "migrationsFound": 31,
+      "allMigrationsApplied": true,
+      "databaseSchemaUpToDate": true
+    },
+    "apiLint": {
+      "reached": true,
+      "passed": true
+    },
+    "apiBuild": {
+      "reached": true,
+      "passed": true
+    },
+    "apiUnitTests": {
+      "reached": true,
+      "passed": 426,
+      "failed": 0,
+      "testFilesPassed": 39,
+      "testFilesFailed": 0
+    },
+    "apiE2ETests": {
+      "reached": true,
+      "passed": 141,
+      "failed": 12,
+      "testFilesPassed": 22,
+      "testFilesFailed": 3,
+      "totalTests": 153,
+      "totalTestFiles": 25
+    }
+  },
+  "actualFailures": [
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "first exposes the approved local cursor catalog contract; the missing route is a causal RED",
+      "decisive": "GET expected 200; received 404.",
+      "classification": "expected missing-route causal RED; subsequent assertions in this test were not reached"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "routes exact WhatsApp UUID operations to the selected adapter and preserves the sibling binding",
+      "decisive": "stale operation expected 409; received 404"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "rejects a captured selected UUID after legacy disconnect and same-type generation-one replacement",
+      "decisive": "Native selected-UUID verify returned 404 before service boundary; expected boundary entered, received response"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "makes a legacy type-only WhatsApp operation conflict when more than two compatible rows exist",
+      "decisive": "synthetic fixture Prisma create failed unique constraint (business_identity_id,type) at test/helpers.ts:473"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "verifies a durable binding after OAuth expiry, preserves known receipt, and fences UNKNOWN without POST",
+      "decisive": "expected 503; received 404"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "commits local disconnect while a real reauthorization callback is held and preserves completed history",
+      "decisive": "disconnect expected 200; received 404. Assertions after disconnect, including held-callback outcomes, were unreached"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "does not let an already-dispatched subscription response restore a channel disconnected in flight",
+      "decisive": "disconnect expected 200; received 404. Assertions after disconnect were unreached"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "reattaches an absent-credential same-account channel with a mapped-history version and requires a new-generation receipt",
+      "decisive": "Prisma validation error: `dispatchAdmission.findFirstOrThrow` enum filter `in` received invalid DispatchAdmissionState values EXTERNAL_ACCEPTED and SUCCEEDED"
+    },
+    {
+      "testFile": "test/instagram-cp4-connections.e2e-spec.ts",
+      "test": "keeps the global prior-POST uncertainty fence across disconnect and reauthorization",
+      "decisive": "disconnect expected 200; received 404. Later assertions were unreached"
+    },
+    {
+      "testFile": "test/instagram-cp4-display.e2e-spec.ts",
+      "test": "projects two same-peer IG accounts safely across a real 50-row paged inbox and current credential mapping",
+      "decisive": "expected 25 routes for account A; received 1. Remaining assertions in this test were unreached"
+    },
+    {
+      "testFile": "test/instagram-cp4-display.e2e-spec.ts",
+      "test": "uses the qualified WhatsApp business identity and recipient address, not contradictory BU or provider metadata",
+      "decisive": "bounded read-only query assertion expected <=8 domain statements; observed 9"
+    },
+    {
+      "testFile": "test/instagram-cp4-realtime.e2e-spec.ts",
+      "test": "publishes distinct account-scoped accepted messages once, scopes sockets by BU, and keeps Typebot WhatsApp-only",
+      "decisive": "timed out waiting for Instagram account A qualified realtime route event; subsequent assertions were unreached"
+    }
+  ],
+  "actualPassedTotals": {
+    "migrationsApplied": 31,
+    "unitTestsPassed": 426,
+    "unitTestFilesPassed": 39,
+    "e2eTestsPassed": 141,
+    "e2eTestFilesPassed": 22
+  },
+  "actualFailedTotals": {
+    "unitTestsFailed": 0,
+    "e2eTestsFailed": 12,
+    "e2eTestFilesFailed": 3
+  },
+  "behavioralReachability": {
+    "catalogGET": {
+      "reached": true,
+      "observedStatus": 404,
+      "expectedStatus": 200
+    },
+    "safeDisplay": {
+      "reached": true,
+      "firstPagingProjectionAssertionFailed": true,
+      "laterDisplayAssertionsWithinThatTestReached": false
+    },
+    "qualifiedWhatsAppDisplay": {
+      "reached": true,
+      "failedAtBoundedReadOnlyQueryAssertion": true
+    },
+    "realtime": {
+      "reached": true,
+      "timedOutWaitingForQualifiedRouteEvent": true,
+      "subsequentAssertionsReached": false
+    },
+    "disconnectReauthorizationHeldCallback": {
+      "testReached": true,
+      "disconnectReturned404BeforeHeldCallbackOutcomeAssertions": true
+    },
+    "subscriptionResponseDisconnectRace": {
+      "testReached": true,
+      "disconnectReturned404BeforePostDisconnectAssertions": true
+    },
+    "priorPostUncertaintyReauthorization": {
+      "testReached": true,
+      "disconnectReturned404BeforeLaterAssertions": true
+    },
+    "lateLifecycleRaceWebSocketDisplayAssertions": "See per-test failure detail; assertions after each failure point were not reached."
+  },
+  "postflight": {
+    "checksPassed": 922,
+    "checksFailed": 0,
+    "sourceCount": 264,
+    "todoChecked": true,
+    "boundInputCount": 620,
+    "preservationRows": 35,
+    "approvedExceptions": 2,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "runner cleanup completed; exact disposable namespace resources were removed by canonical runner lifecycle",
+  "limitations": [
+    "The first catalog request proves the expected missing-route 404.",
+    "The aggregate result is not a clean behavioral RED because 11 other E2E cases also failed, including fixture errors and broader implementation assertions.",
+    "Late in-test lifecycle/race assertions after failed disconnects, display assertions after the first page assertion, and realtime assertions after the event timeout were not reached."
+  ]
+}

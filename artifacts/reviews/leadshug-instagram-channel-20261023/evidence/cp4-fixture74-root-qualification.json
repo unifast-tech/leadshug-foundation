@@ -1,0 +1,22 @@
+{
+  "kind": "CP4fixture74rootqualification",
+  "files": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 52254,
+      "sha256": "a9e7acb45a6bb629efe0a18f0ad9aea87ee25dec58126f989d10ede302b968ac"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 28761,
+      "sha256": "b7ea313865cc24b8b896481c252d712d3d5d8b4268a77c8ae9bab178cec896f6"
+    }
+  ],
+  "reverseExactBothPreimages": true,
+  "other262SourcesExact": true,
+  "preservations35Exact": true,
+  "index3Exact": true,
+  "changes": "Only authorized nativelegacy/nullowner rows, actualordinarySETTLED/released+qualifiedcontext,2alreadydispatchedHTTPaftercancel,scope25routequeries. Strict8SQL/WITH/auth/zeroDML/alltimings andeveryotherbody exact via reverseSHA.",
+  "status": "NOTRUN since74; actual73 causalcatalog/realtimeRED preserved, lateoracles notretroclaimed.",
+  "next": "WholeCP4API75sourcehandoff then onefullcanonicalAPI; React/HTTPSbrowser mandatory."
+}

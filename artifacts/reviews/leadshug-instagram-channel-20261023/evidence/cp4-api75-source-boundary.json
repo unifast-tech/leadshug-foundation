@@ -1,0 +1,91 @@
+{
+  "kind": "CP4API75exact-source-boundary",
+  "status": "Ready only on actual root dispatch afterrouting/authorityGO",
+  "allowedWrites": [
+    "api-app/src/domain/channels/channels.service.ts",
+    "api-app/src/domain/channels/instagram-authorization.service.ts",
+    "api-app/src/domain/inbox/conversations.service.ts",
+    "api-app/src/domain/inbox/incoming.service.ts",
+    "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+    "api-app/src/surfaces/bff/channels.controller.ts",
+    "api-app/src/surfaces/bff/bff.module.ts",
+    "api-app/src/surfaces/bff/conversations.controller.ts",
+    "api-app/src/surfaces/webhooks/instagram.controller.ts",
+    "api-app/src/domain/historico/catalogo.ts",
+    "api-app/src/domain/historico/cobertura.ts",
+    "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+    "api-app/src/domain/channels/channel-connections.service.ts",
+    "api-app/src/domain/channels/channel-display.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/src/domain/channels/channels.service.ts",
+      "bytes": 46758,
+      "sha256": "3783c1b2a3afa982b4e9d719c71c172df1717bda7ba380ef143c9dd06045805f"
+    },
+    {
+      "path": "api-app/src/domain/channels/instagram-authorization.service.ts",
+      "bytes": 73878,
+      "sha256": "2ecfcbfe83de72da41f3b89543df021d164168cccc13254b63c1069a84e6263a"
+    },
+    {
+      "path": "api-app/src/domain/inbox/conversations.service.ts",
+      "bytes": 9601,
+      "sha256": "d00c6453a8c93f8c035257bc9046400bdd1a5ecbe36700b2669537686da9e2fc"
+    },
+    {
+      "path": "api-app/src/domain/inbox/incoming.service.ts",
+      "bytes": 8594,
+      "sha256": "62776c3152c3b486aade744c4daf4830d16d032aded69eee9e9a55b3fefc38f8"
+    },
+    {
+      "path": "api-app/src/integrations/channels/prisma-channel-resolver.ts",
+      "bytes": 64678,
+      "sha256": "55220d272312d68f5bb379a12c0f9f54350ab233696a2dc071b753c14c09eff8"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/channels.controller.ts",
+      "bytes": 6018,
+      "sha256": "c7a3917c84ac1921b757fd7bca5a9b0b29ab2078312fcf2fd421104ef41a6182"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/bff.module.ts",
+      "bytes": 6675,
+      "sha256": "a6d2544ea66c693f53b9fd3e92e8a6044462c6e3a1c1ce36fb8e4feac9a4c1b2"
+    },
+    {
+      "path": "api-app/src/surfaces/bff/conversations.controller.ts",
+      "bytes": 22396,
+      "sha256": "702c49ee462610aa3a9fdef0c003f4b108209dad76ea03ae1dbcf8e2cc9c38ac"
+    },
+    {
+      "path": "api-app/src/surfaces/webhooks/instagram.controller.ts",
+      "bytes": 10257,
+      "sha256": "00b97ed246bf28d1a72a0cd9dbc7fea437e5ca67da05a8e1cd7f3439e1874be0"
+    },
+    {
+      "path": "api-app/src/domain/historico/catalogo.ts",
+      "bytes": 8758,
+      "sha256": "9c785f32a1c9fd10c40de2a0185932aaa16ae68dcccd7a42831fa284ad40f60b"
+    },
+    {
+      "path": "api-app/src/domain/historico/cobertura.ts",
+      "bytes": 9536,
+      "sha256": "f19a8f904807dbc07aebc9e5a9be91e440c0af10b5cb6ef00b1c86bb329ef12a"
+    },
+    {
+      "path": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+      "bytes": 12494,
+      "sha256": "61c6576e3dc913c058d4a3ba7c2fa28afa426b34e072b1b2f93b245659d661ea"
+    }
+  ],
+  "newAbsent": [
+    "api-app/src/domain/channels/channel-connections.service.ts",
+    "api-app/src/domain/channels/channel-display.ts"
+  ],
+  "commentOnly": "api-app/test/instagram-consumer-isolation.e2e-spec.ts",
+  "handoff": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-whole-api75-handoff.md",
+  "positiveManifest": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-source75-positive-manifest.json",
+  "runtimeOrTestExecution": false,
+  "rootGitOrPrivateReads": false
+}

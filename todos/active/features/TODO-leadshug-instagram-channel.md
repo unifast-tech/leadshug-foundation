@@ -31,16 +31,16 @@ Este TODO define WHAT, exclusões e critérios de entrega. A baseline v1.3 abaix
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** implementar reparo54 do fence final coerente e elegibilidade B46, com controles nativos de serialização/sessão e ajuste apenas de medição; depois API completa55 e adherence afetada. CP4 completo permanece obrigatório.
+- **Next exact step:** API73 trouxe RED causal com426unit/141E2E passando e12falhas novas qualificadas. Corrigir fielmente fixtures74 e então implementar todoCP4API75; depois ReactV2/HTTPSbrowser e todos os gates restantes. Depois completar catálogo/lifecycle/projeções/realtime, ReactV2 e HTTPSbrowser, sem entrega parcial; todos os gates posteriores permanecem obrigatórios.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** implementation
-- **Why this state now:** API66 completa passou31migrações/lint/build/426unit e597/597E2E em fontes estáveis. Revisão afetada fresca67 é a próxima etapa, antes de todoCP4. Primary own-subscription, propostas humanas e todas as provas posteriores permanecem obrigatórias; nenhuma entrega parcial está aceita.
+- **Why this state now:** API66 completa GREEN426unit/597E2E e revisão afetada67complementar terminal/root reconciliada, sem novo defeito CP3. Testes nativos CP4 executados73: catálogo404/realtimeausente efixturesqualificadas antesdetodocódigoCP4; corrigirfixtures74 preservandolimites. Primary own-subscription, propostas humanas e todas as provas posteriores permanecem obrigatórias; nenhuma entrega parcial está aceita.
 - **Exit condition:** todos os checkpoints e critérios validados, revisões/guards completos e prova runtime posterior explicitamente aprovada; nenhum fechamento parcial implícito.
 
 ## Blocker Notes
 - **Blocker:** none for remaining admitted code/disposable synthetic validation. Exact OAuth-session v2 source is applied; corrected infrastructure tests24 passed in API29 with native503 and callback confidentiality controls. Browser/gateway proof remains unvalidated. Privacy HTML and outbound UTF-8 proposals await explicit human validation; primary own-subscription observation remains unresolved, no gate waiver.
-- **Last confirmed truth:** API45 completaGREEN:424unit39files/586E2E55files; auth6/ACK4/query4/CSV1/native lock3grupos/P2002count3/finalclock9/residual12 passaram. Lote1000 inicial5099.176ms/replay3344.715ms e asserts seguintes passaram. Root conferiu261fontes/T/690inputs/35preservações/3gitlinks/log226548bytes SHA07fd007b5795d91b324b1f2baf8e315004271c6957639c9cfb7c51eb2070aa8a. Evidência somente API; fonteadherence46/CP4/primário/runtime ainda pendentes.
+- **Last confirmed truth:** API66 completa GREEN31migrações/lint/build/426unit39files/597E2E55files, log228825bytes SHA9ac52e007e774f18c7bb3049f7bb442b2cf1e2cc4a315f641fb7f9b846f66d91. Adherence67A21+B21/union35+33disjuntoscarried=68unique, ambos turn.completed/strictmerge; root conferiu261fontes/T/847inputs/35preservações/3gitlinks. Reparos afetados CP3 encerrados, ROOT03CP4/primário/latergates abertos. Após interrupção root confirmou261fontes+3novostestes+3gitlinks exatos; testes68/69 NOTRUN, produtoCP4 não implementado.
 - **Runtime boundary:** ativação real, leitura privada, Meta e prova física dependem do plano posterior; nenhuma autorização herdada é reutilizada.
 
 ## Scope
@@ -1785,3 +1785,53 @@ No new material CP3 defect. Root reconciled complementary evidence and closes af
 ### CP4 native test68 first write
 
 Sole routineexecutor owns onlynew `api-app/test/instagram-cp4-connections.e2e-spec.ts` under `evidence/cp4-native-test68-handoff.json`. All261existing source bytes, helpers/previousspecs/35preservations/rootindex immutable. Nativecatalog/lifecycle cases useactualNest/PG/session/signedingress and externalHTTPfake only; firstapproved200 must expose missingroute404 as causalRED before sourceimplementation. Root reconciles terminaltest then freezes exactlyonecanonicalapi-instagram RED invocation, notrunalongsidewriter. WholeCP4 continuation remains explicit; no source/private/runtime/Meta expansion.
+
+### CP4 native test68 terminal / native tests69 continuation
+
+Root matched261existingbytes andnewconnections68 SHA f73abefffcdbf70d96c4f3057e63a5ef126e5a1ce6b77c82a34e5bf119958a70/43182bytes; no run. Independentreadonly48 inspects fixture correctness beforeRED. Solewriter nowowns onlytwoNEW native69 specs (realtime/display) under `evidence/cp4-native-test69-handoff.json`; previous261+68testimmutable whilewriter. Sharedsafedisplay routineDTO/queryqualification in `evidence/cp4-safe-display68-root-qualification.json` isexistingCP4HOW, notnewWHAT. ActualNest/PG/session/signedingress/nativeWS/realBFF only; providerHTTPsynthetic. Afterterminal/rootinspection/faithfulfixturecorrections, onecurrentcanonicalapi-instagramRED precedes anyCP4productimplementation. No broadeningtohelpers/private/runtime/Meta or weakenedoracles. WholeCP4React+HTTPSbrowser/latergatesmandatory.
+
+## CP4 resume70 — exact source and native fixture state
+
+After deliberate interruption, no live nativeagents remained in the orchestration tree. Root verified261existing sources and all3terminalnewtest hashes plus3rootgitlinks unchanged; Foundation HEAD c0afb2ae2d64c82a4281ceaee25f9f125f88af4b already pushed. Both67canonicalreviews were terminal; no newrunner had been dispatched. Currentfixture69inspection resumed in a fresh routine readonly lane with explicitpositivepublicreadset. No private/process/env/runtime/provider/Gitproduct inspection or authority inferred.
+
+Before anyproductCP4, onefaithfulfixture70handoff will address current68oracles and69legacycontact assumptions/complete replay/WSnegativeproof. T851 approved8DOMAINqueries/PAGE remains strict; prospectiveadvisory7-options isnotanewapprovedpolicy, and correctingthistestbeforefirstexecution must be documented, notpresentedaspassingwaiver. CompleteCP4 andalllatergates remain withinthisapproveddelivery.
+
+### CP4 native fixture70 — faithful corrections before any RED/product
+
+Freshreadonly69inspection terminal. Root correctsitsownassumption: actualIG Conversation.contact currentlystoresopaquepeer, notnull. No database/backfill/WScontatonull contract isauthorized; nativeoracles correlatequalifiedContactIdentity/resource/localconversation, andsafeBFFdisplayneverinterpretsopaquepeer asphone. Current3newtestfilesremainNOTRUN; frozen261production/previoussourcebytesunchanged.
+
+`evidence/cp4-faithful-fixture70-handoff.json` authorizesonesolefreshroutinewriter only3newnativefiles:68validpositive-stalegeneration/completeSQLzeroDML/displayproof/exactUUIDreplacementrace/actualcompletedACKpreservation;69qualifiedcorrelation/nativeWSnegative+replayunread/list-threadvisibility andseparatevalidFKambiguousgraph. Standaloneadversarialgraphdoesnotmoveexistingcontacts/providers orimplementmerge; eachresourceactuallyOAuthowned. Allpositive50signedIN and3actor21catalogproofs retained.
+
+Prospective7-options/8-thread thresholds wereunapprovedadvisorytargets; correctingbeforefirstexecutionisnotwaivingafailingapprovedtest. T851<=8DOMAINqueries/PAGE staysstrict, options/threadactualcountstelemetry/noN+1, zeroHTTP/decrypt/readmutationwheregoverned. No otherassertion/threshold/source/helper/Git/private/runtime/Meta expansion. Rootinspectterminalthenonecanonicalapi-instagramRED71 beforeanyCP4product. AllCP4React/HTTPSbrowser andalllatergates remainmandatory.
+
+### CP4 fixture70 final qualification — canonical RED71
+
+Root independently matched261existing sources/35preservations/3rootgitlinks and3newtests. Finaldisplay adds only4 explicit marcarLida=false query arguments and1formattinglinewrap; removingexactadditions/wrap restorespriorSHA3e1f5f2e. Readonlynativeinspector identifieddefaultthreadreadmutation, nowfixturefaithfulbeforefirstexecution. All3specs remainNOTRUN. `evidence/cp4-native70-final-root-qualification.json` recordsactualhashes/limits.
+
+Fixture70writer self-reported forbidden Git name/status enumeration outsidepositivepublicreadset (2commands exit0). Thisisahandoffboundaryviolation, notestablishedprivatecontent/credentialexposure. No replay/expandedinventory; exact4query-onlychange independentlyverified andlaneended. Futurevalidator isforbiddenanyGitexceptexactrootgitlinkread. No product/runtime/providerchangesinferred.
+
+Allwriters terminal. Exactlyonecanonicalapi-instagram71 underfreeze264/currentT/positiveinputs/35preservations/3gitlinks; no source/T/inputwrite, retry/autofix or private/runtime/Meta access. Rootqualifiesactualrawfailuresandunreachedoracles beforewholeCP4sourceimplementation. ReactV2/HTTPSbrowser andalllatergates remainmandatory.
+
+### CP4 API71 terminal — fixture72 before actual RED
+
+Root independently matched264sources/T/608deduplicatedpositiveinputs/35preservations/3gitlinks and14063rawbytes SHAd161123220b9a143d4d93daccb9d992fea6aba1cf84f9f75c4c4363a6e3f215b. Exactlyonecanonicalapi-instagram exited1 atlint: connections508/509 two no-useless-assignment errors.31migrationsapplied/schema up-to-date; build/unit/E2E unreached. ThisisNOTbehavioralRED anddoesnotproveanyCP4oracle. Originalderivedresult retained; rootcorrectsschemaUpToDate false field peractualrawandmalformedsecondsourcefield in `evidence/cp4-api71-root-reconciliation.json`.
+
+Freeze71ended afterrootreconciliation. Solewriterfixture72 onlyconnectionsnewtest: removeuselessinitialassignments, addactualATENDENTEcatalog200/controlmalformed400 perapprovedreadpermission. ADMINverifyATENDENTE403remains. No previouslyexecutedbehavioralassert relaxed; all71unreached. Afterrootterminalinspection, exactlyonecanonicalapi-instagram73; noCP4product beforeactualqualifiedRED. AllCP4React/HTTPSbrowser/primary/human/latergatesremainmandatory.
+
+### CP4 fixture72 terminal — API73 freeze
+
+Root independently matched263otherfrozenbytes/35preservations/3gitlinks; reversingonlyauthorizedchanges and1linewrap exactlyrestores priorconnectionsSHAf0f5293d. Newconnections51717bytes SHA612d637a4b49ea4555fb856bcbfec1c67591915f487301a78c5b7eea55a9da37. Onlytwo typeddeclarations andATENDENTEvalid200/malformed400control; ADMINverify403preserved. Nocode/product/helperchange orretrytestexecutedbywriter. Freeze264/currentT/publicinputs forONEcanonicalapi-instagram73. RootmustqualifyactualbehavioralRED/unreachedoracles beforeproducthandoff; allremainingdeliverygatesretained.
+
+### CP4 API73 actual RED — qualified fixture74 then whole API75
+
+Root independently matched264sources/T/620positiveinputs/35preservations/3gitlinks and72706rawbytes SHAb4e4ff402bcd48652d0ea810cdfa5cd453639e3f6bf46b09ca3431bdb070094e. Exactlyonecanonicalapi-instagram exit1:31migrations/lint/build/426unit39files PASS; E2E22files/141tests pass,3files/12fail. Actualcatalog200→404 andrealtimeabsence arequalifiedcausalRED beforeproduct. MissingUUIDverify/disconnect/durableverifyroutes observed. No newCP4productyet.
+
+`evidence/cp4-api73-root-reconciliation.json` listsall12actualfailuresandunreachedoracles. Threefixtures needfaithfulcorrection: realunique prevents3provedsamebusiness/type; completedordinaryadmission isSETTLED/released notInitialMessageIntentenum; accountscopedroutequery mustnotfilteronepeerthenexpect25. Rootalsocorrectslateunexecutedoracle: heldsecondOAuthHTTPreturnmustnotdispatchthird/meaftercancellation. No source/policychangeorretroactivepassingclaim. Strict8SQL/zeroDML/allcounters retained; observedWApage9totalSQLrequiresbatchprojectionqualification/implementation, neverhidingbusinessSQLorrelaxinglimit.
+
+73freezeendsafterrootreceipt. Solefixture74writer2newtestfilesonly, thenwholeCP4API75catalog/lifecycle/sharedprojection/realtime sourcehandoff. Noextra canonicalrunrequired merelyforunchangedmissingrouteRED; new74lateoracles remaindesignuntilcurrentproductvalidation. FullAPI/ReactV2/HTTPSbrowser/primary/human/alllatergatesmandatory, no backend-onlydelivery.
+
+### CP4 fixture74 terminal — whole API75 implementation handoff
+
+Root independently reversedexact74edits tobothknownpreimages;262othersources/35preservations/3gitlinksexact. Connections52254bytesSHAa9e7acb45a6bb629efe0a18f0ad9aea87ee25dec58126f989d10ede302b968ac; display28761bytesSHAb7ea313865cc24b8b896481c252d712d3d5d8b4268a77c8ae9bab178cec896f6. Only4authorizedfaithfulcorrections; strict8allSQL/WITH/auth/zeroDML/timings preserved. No rerun/retroclaimeveryoracleRED; actual73catalog/realtimeRED governsnextsourcehandoff.
+
+`evidence/cp4-whole-api75-handoff.md` andexactsourceboundary serializeonesoleOperational/Coderroutinewriter14paths(12existing+2new), allother264sources/tests preservedexceptconsumer-isolationcommentonly. EntireAPIcatalog/UUIDWAbridge/IGdurableverify-disconnect-reauthorize/sharedsafedisplay/boundedjoinedlist/commonIncoming realtime+audit together; no parallelIGstatemachine/providerprotocolguess. SeparatefullAPIafterterminal; thenstrictV2React+actualHTTPSbrowser. Allprimary/human/CP5/CP6/assurance/realgatesremainopen; no backend-onlydelivery. No tests/private/runtime/provider/Git in75sourcewriter.

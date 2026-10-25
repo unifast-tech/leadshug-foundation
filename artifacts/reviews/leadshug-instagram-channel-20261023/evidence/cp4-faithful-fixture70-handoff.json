@@ -1,0 +1,71 @@
+{
+  "kind": "cp4-faithful-native-fixtures70-handoff",
+  "writer": "freshroutineexecutor",
+  "model": "gpt-6-luna",
+  "effort": "medium",
+  "profile": "Operational / Coder",
+  "authority": "SameapprovedST-IG03v1.3; authority-cp4-fixture70/routing GO. Test-onlyHOW beforefirstRED, no product/WHAT/policy change.",
+  "allowedWrites": [
+    "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+    "api-app/test/instagram-cp4-display.e2e-spec.ts"
+  ],
+  "preimages": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 43182,
+      "sha256": "f73abefffcdbf70d96c4f3057e63a5ef126e5a1ce6b77c82a34e5bf119958a70"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+      "bytes": 14297,
+      "sha256": "dfbf4326f5283aef4de1c319285f369983b39e11257ba1e8b09f726e5f220c72"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 18535,
+      "sha256": "49d881a846adc4e6e14bb8098df9ed8e9e7127fdf7f2a11bac46e975bb34ee14"
+    }
+  ],
+  "immutable": "All261pre68sourcepaths/35preservations/3rootindex exact per67manifest. No existinghelper/previousspec/product/docs/Git/private/env/runtime/provideraccess. No tests/build/runner yet. Rootowns docs.",
+  "allowedReads": "261exactpositivepublicsourcepaths from67manifest plus3newtestfiles/currentT/exactnamedpublicE artifacts; instructions/AGENTS publiccontext. No private/env/operationaldata/process/Meta network.",
+  "requiredSources": [
+    "cp4-test68-static-inspection70-preparation.json",
+    "cp4-native69-static-root-adjudication70.json",
+    "cp4-native-test68-handoff.json",
+    "cp4-native-test69-handoff.json",
+    "cp4-safe-display68-root-qualification.json"
+  ],
+  "changes68": [
+    "Fixbothinitialgeneration-1=0 stalefixtures: validmismatchedgeneration+1must409/zeroHTTP; includeinvalid0payload400 separately ifneeded, donotimplement0asvalid.",
+    "Allcatalogpagequerybudgets countALLactualnontransactiondomainSQLincludingWITH; explicitzeroDMLnotcountsonly. Approvedpage<=8strict. Retain21actualOAuth/3actorsx7/unmodifiedquotas andallpage/DTO/auth/cursororacles.",
+    "Wrongaccounttest mustreadactualsuccessfulcatalogbefore/afterreject, originalusernamepreserved/candidateabsent; donotmerelytestname.",
+    "Add ONE nativecapturedUUIDreplacementrace per exactpreparation70: transparent typedChannelsService.verificar spy forwardsALLargs afterbarrier; actuallegacyBFFdeleteoriginalwhilepaused;nativefixture replacementofficialsametype/gen1/SAMEbusinessphone+BCI,NEWproviderphoneID; metaFakecanverifyreplacementifcalled. Resumeoldcapturedselection->409/zeroNEWHTTP/replacementfactsunchanged. Restoreanddrainfinally. NoDBlockheldthroughbarrier, nofakeowner.",
+    "Reconnectcase currentlyonlyIN; addactualordinaryIGreply201/oneexternalfakePOST/oneacceptedOUT beforedisconnect, snapshotcompletedMessage/admissionknownfacts/tuple/fingerprint/deadline andcompareexactafterdisconnect/reattach. No claimoldACCEPTED_LOCAL_INCOMPLETE canbecompletedaftergenchange; existingCP3generationconflictsemanticsretained."
+  ],
+  "changes69": [
+    "UseactualqualifiedContactIdentity/resource/conversation route correlation, NEVERlegacycontactassumption. RootassumptionIGcontactnullwaswrong: currentDBstoresopaquepeer; noDBstorage/WScontatonullcontractchange. Realtime correlatebuId/canal/direcao/conversaId obtainedfrompersistedqualifiedroute afteractualHTTP, notevent.contato. DisplayqueryincludescontactIdentityandmatchesexternalPeerId+actualbusinessscope withfoundprecondition.",
+    "AfterforeignHTTP/event, nativeping/pong authorizedsocketbeforeassertingnoforeign event. Afterexactreplay rereadunread/counts/receipt/IDs/noextraWS; explicitactualBFFlist/threadvisibility and originalqualifiedtimestamp retained.",
+    "Remove inventedhard7-options/hard8-thread prospectiveasserts: T851hard8DOMAINSQLperPAGE staysstrictandzeroHTTP/noN+1/metadataonly. For options/thread reportactualcountnumerictelemetry, no inventedthreshold. ThiscorrectsprospectiveHOW beforefirsttestexecution, neverrelaxesexecutedfailingcontract. Countauth/totalhonestly;doNOThidebusinessSQL.",
+    "Addtransparentrealcryptodecrypt/credentialresolve spy observations aroundreadonlyphasesonly; zeroactualdecrypt/resolve; restorefinally. Rotation/OAuth legitimatecryptooutsideobservedreadonlyspan. Nofakefunctionresult.",
+    "Addseparatevalid-FKadversarialambiguousgraphfixture: aftergenuineOAuthmapsA/B, createNEWstandaloneContact+Conversation and2NEWContactIdentity+ConversationRoute rows, eachscopedtooneACTUALownedA/B business/PId/channel, freshdifferentpeerstrings. Noexistingcontact/route/provider/BI updates,movement,merge orowningtransfer. Labelsyntheticnegativegraphnotgenuinepeer-ingressproof;50positivesremaintrue/separate. Aggregate list/threadsafedisplay neutralplatform/account/username, nullrecipientPhone/no first/latestchoice; doNOTforceexplicitreplyoptionsconflict/empty—twoexplicitqualifiedV2optionsmayremainvalid/unavailablewithoutIN. No fakeBIwithunownedPId pretendingsecondqualifiedaccount."
+  ],
+  "constraints": "Preserveallothercurrentasserts/cases/thresholds/sources, no fakeclock, skip/retries/sourcechange/newdependency orcrossfileVitestimports. Only3nativefilesmutable. Unknownactualschema/semantics readactualowner; askrootonlyspecificunresolvedHOW whilecontinuingindependentfixes. Nativequeries/providerfakecounts no productionproof.",
+  "terminalReport": "Exactthreepaths/hashes/bytes; changeenumeration; tests/build/runnerNOTRUN; anyremaininglimitations. RootreconcileandthenonecanonicalRED71inserializedvalidatorlanebeforeproduct.",
+  "nativeRaceRouteClarification": {
+    "newApprovedRoute": "POST /api/bff/business-units/:buId/channel-connections/:channelId/verify; Cookie+CSRF; {expectedGeneration:positivecurrent}; notimplementedyet, baseline404isexpectedREDnotfixturegap.",
+    "existingInterveningRoute": "DELETE /api/bff/business-units/:buId/channels/oficial; Cookie+CSRF;204. FollowexistingcriarCanalVerificado/nativeexternalfakeconfiguration.",
+    "nativeBoundary": "Transparentrest Parameters<typeof service.verificar> forwardsALL actualargs toboundrealowner; nonewargfieldassumption orproductionedits. Racewaiteragainstactualpendingrequestterminal tofailfastfor404beforeownerentry; neverclaimraceoraclesreachedonbaseline.",
+    "laterOwnerHOW": "Laterproducthandoffaddsoptionalexact{id,type,generation} argument,revalidatescapturedselectioninsideexistingownerlocks. Thatproductisoutsidecurrentfixturewriter."
+  },
+  "additionalUnexecutedFixtureCorrections": [
+    {
+      "locus": "Eligible durableverify afterexpiredOAuthattempt",
+      "how": "Initialrealconfirm sets sharedPId.instagramLastSubscriptionAttemptAt now, so immediateverify isstill10scooldown429. Modelolderpersistedadministrativelast-attempt metadata forinitialeligibleverify (e.g past11sec) while preservingcurrent7200credential/receipt/globalPOSTmarker; notfakeDate/thresholdchange orclaimactual10selapsed. Actualnewverifythenpersistfreshclockandimmediatenative429+RetryAfter remainsrequired. SeparateattemptTTLstoragebackdateisnotnatural10minexpiryproof."
+    },
+    {
+      "locus": "403knownscope vs404nogrant",
+      "how": "T774403 requiresknownBU currentgrantbutrolebelowADMIN (ATENDENTE). SameparentBU withNOgrant isoutside AccessService.scope ->404 perexisting exigirPapelNaBu. Catalog/verifyknown403fixturesmustuseATENDENTEtargetgrant, keepseparatenogrant404/foreign404/invalidsession401/stale409. Existingprivate actor/grant revocation-after-in-flight semantics unchanged."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "primary-public-documentation-recheck",
+  "date": "2026-10-25",
+  "scope": "Public official docs only, no credentials, graph provider requests, operational runtime, or private files",
+  "browserTool": "Meta docs /docs/instagram-platform/webhooks returned429; Instagram Login nested webhooks inaccessible; official Postman page only navigation, no authoritative GET envelope. Search thirdparty results not used as authority.",
+  "directPrimaryRetrievals": [
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks.md",
+      "http": 200,
+      "contentType": "text/markdown",
+      "bytes": 4955,
+      "sha256": "38846e838d4afbb0768a960675d2e7b9a273c85b9f61ef3c131ad44bd3b9b80e"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/instagram-platform/webhooks/setup.md",
+      "http": 200,
+      "contentType": "text/markdown",
+      "bytes": 18504,
+      "sha256": "c3ae23a8c1a32d96879f78dab2eaf5fd793c1192b86dcd86463d1a9a912724ca",
+      "supports": "Instagram Login POST account subscribed_apps on graph.instagram.com with Instagram User token; true success envelope. Unified Login and Facebook Login have separate host/token purposes.",
+      "doesNotSettle": "Own GET response envelope, ID namespace, visibility/completeness/absence meaning."
+    }
+  ],
+  "notFoundQualification": "Three guessed instagram-user/subscribed_apps reference paths returned HTTP200 HTML Page not found; not valid primary reference despite status200. Reference/ig-user/messaging Markdown retrieved but did not settle ownGET.",
+  "disposition": "IG-SUBPROTO-01 stays OPEN. Do not guess app ID equality, treat empty as absent, repeat mutating POST after uncertainty, or infer unsupported GET from doc omission. Later bounded approved runtime probe may provide empirical data, not universal completeness guarantee.",
+  "productChange": false,
+  "thirdPartyAuthority": false
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "CP4native70finalqualification",
+  "profile": "Strategic / CTO-Tech-Lead",
+  "scope": [
+    "nestjs",
+    "react",
+    "prisma",
+    "postgresql",
+    "docker"
+  ],
+  "existing261Exact": true,
+  "preservations35Exact": true,
+  "rootIndex3Exact": true,
+  "files": [
+    {
+      "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+      "bytes": 51599,
+      "sha256": "f0f5293deb1c722593ae690abda92eca10ab9bb2e2f98ee482ab929d43353f3f"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-realtime.e2e-spec.ts",
+      "bytes": 19222,
+      "sha256": "e77142d62cd6ac7e3726353653aed7a39e96afb82f589149113349a5befb3b1c"
+    },
+    {
+      "path": "api-app/test/instagram-cp4-display.e2e-spec.ts",
+      "bytes": 28817,
+      "sha256": "419d8f4a66d235f4b7a4ed5e39b03800d57175ec859b31fa8efaabc1a56b0aff"
+    }
+  ],
+  "threadFix": {
+    "fourQueryAdditionsAndOneLineWrapOnly": true,
+    "removingAdditionsAndLineWrapRestoresPreimageHash": true,
+    "initialReconstruction": "Removing arguments alone left one formatting newline; root checked actual four sites and removed that line wrap too, restoring exact preimage. No product/test failure inferred.",
+    "actualOwnerDefault": "timeline-pagination defaults marcarLida true; read-only projection fixture explicitly false"
+  },
+  "staticQualification": "Fresh readonly terminal inspection plus root reconciliation: qualified native identity/replay/WS/privacy/query/lifecycle oracles; future-route absence expected. Runtime reachability unproved until actual run.",
+  "testsBuildRunner": "NOTRUN",
+  "boundaryIncident": {
+    "actor": "instagram_fixture70",
+    "selfReportedCommands": [
+      "git diff --name-only; git diff --stat -- exact3tests; exact3tests sha256sum/wc",
+      "git -C api-app diff --name-only; git -C api-app diff --stat -- exact3tests; git -C api-app status --short"
+    ],
+    "exitCodes": [
+      0,
+      0
+    ],
+    "confirmed": "Git enumerated paths outside positive read set; violated handoff. No replay or expansion.",
+    "notEstablished": "No private content read, credential exposure, product mutation, or provider access established by report. Do not infer these.",
+    "containment": "Lane instructed to cease Git/inventory, exact4query-only edit independently verified; terminal. Next validator explicitly no Git except exact root gitlink read."
+  },
+  "next": "Freeze264/currentT/positivepublicinputs/35preservations/3gitlinks; one canonical api-instagram RED71, no CP4 product writes."
+}

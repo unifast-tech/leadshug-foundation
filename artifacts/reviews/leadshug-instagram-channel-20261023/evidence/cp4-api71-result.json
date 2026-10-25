@@ -1,0 +1,204 @@
+{
+  "kind": "cp4-api71-result",
+  "scenario": "ST-IG-03 CP4 API canonical disposable synthetic RED validation",
+  "command": "bash scripts/test-channels-local.sh api-instagram",
+  "invocations": 1,
+  "exitCode": 1,
+  "log": {
+    "path": "foundation_documentation/artifacts/reviews/leadshug-instagram-channel-20261023/evidence/cp4-api71-api.log",
+    "bytes": 14063,
+    "sha256": "d161123220b9a143d4d93daccb9d992fea6aba1cf84f9f75c4c4363a6e3f215b"
+  },
+  "stages": {
+    "runnerSetup": "completed; disposable namespace created and runner started Node v22.23.3",
+    "channelsCiParityGuard": {
+      "reached": true,
+      "passed": true,
+      "observed": [
+        {
+          "guard": "channels-ci-parity-v1",
+          "mutations_rejected": [
+            "missing-pr-trigger",
+            "missing-channels-job",
+            "missing-retained-guard",
+            "weakened-job-gate",
+            "swallowed-job-errors",
+            "skipped-validate-step",
+            "swallowed-retained-job",
+            "skipped-retained-admission",
+            "missing-retained-private-checkout",
+            "missing-common-guard",
+            "swallowed-common-guard-failure",
+            "missing-instagram-selector",
+            "widened-instagram-selector",
+            "extra-runner-arguments-accepted",
+            "missing-e2e",
+            "swallowed-e2e-failure",
+            "missing-browser",
+            "missing-migrate",
+            "missing-generate",
+            "missing-lint",
+            "reordered-suite",
+            "missing-shell-guard",
+            "widened-wsl-socket",
+            "changed-wsl-host-prefix",
+            "wrong-wsl-mask-source",
+            "missing-wsl-overlay"
+          ],
+          "outer_wrapper": {
+            "collision_control": {
+              "compose_calls": 0,
+              "exit_code": 1
+            },
+            "empty_config_control": {
+              "compose_calls": [
+                [
+                  "compose",
+                  "--project-name",
+                  "leadshug_channels_validation",
+                  "--env-file",
+                  "/workspace/.env.example",
+                  "--env-file",
+                  "/tmp/tmp.B7QaaWykDh",
+                  "-f",
+                  "/workspace/docker-compose.yml",
+                  "-f",
+                  "/workspace/docker-compose.channels.yml",
+                  "--profile",
+                  "validation",
+                  "config",
+                  "--quiet"
+                ]
+              ],
+              "exit_code": 0
+            },
+            "inventory_failures": {
+              "network": {
+                "compose_calls": 0,
+                "docker_calls": 3,
+                "exit_code": 1
+              },
+              "ps": {
+                "compose_calls": 0,
+                "docker_calls": 1,
+                "exit_code": 1
+              },
+              "volume": {
+                "compose_calls": 0,
+                "docker_calls": 2,
+                "exit_code": 1
+              }
+            },
+            "mandatory_failure_cleanup": {
+              "cleanup_observed": true,
+              "compose_lifecycle": [
+                "run",
+                "down"
+              ],
+              "exit_code": 42,
+              "provider_or_real_docker_invoked": false,
+              "required_leaf": "fake python3 reached through actual RUNNER_SCRIPT and returned 42"
+            },
+            "native_path_control": {
+              "exit_code": 0,
+              "overlay_added": false,
+              "posix_bind_paths_preserved": true
+            },
+            "unsupported_wsl_socket_control": {
+              "docker_calls": 0,
+              "exit_code": 1
+            },
+            "wsl_bind_path_control": {
+              "skipped": "self-test checkout is not on a WSL-mounted drive"
+            }
+          },
+          "yaml": "safe-no-alias-no-duplicates"
+        }
+      ]
+    },
+    "prismaClientGeneration": {
+      "reached": true,
+      "passed": true
+    },
+    "prismaMigrateDeploy": {
+      "reached": true,
+      "passed": true,
+      "migrationsFound": 31,
+      "schemaUpToDate": false
+    },
+    "apiLint": {
+      "reached": true,
+      "passed": false,
+      "errors": 2,
+      "diagnostics": [
+        {
+          "source": "/workspace/api-app/test/instagram-cp4-connections.e2e-spec.ts",
+          "diagnostic": "508:9  error  The value assigned to 'channelId' is not used in subsequent statements   no-useless-assignment"
+        },
+        {
+          "source": "508:9  error  The value assigned to 'channelId' is not used in subsequent statements   no-useless-assignment",
+          "diagnostic": "509:9  error  The value assigned to 'generation' is not used in subsequent statements  no-useless-assignment"
+        }
+      ]
+    },
+    "build": {
+      "reached": false,
+      "reason": "runner stopped after lint failure"
+    },
+    "apiUnitTests": {
+      "reached": false,
+      "passed": 0,
+      "failed": 0,
+      "reason": "runner stopped after lint failure"
+    },
+    "apiE2ETests": {
+      "reached": false,
+      "passed": 0,
+      "failed": 0,
+      "reason": "runner stopped after lint failure"
+    },
+    "behavioralAssertions": {
+      "reached": false,
+      "reason": "test suites did not execute; no catalog 200\u2192404, safe display, or realtime assertion was observed"
+    },
+    "lateLifecycleRaceWsDisplayAssertions": {
+      "reached": false,
+      "reason": "test suites did not execute"
+    }
+  },
+  "actualFailure": {
+    "class": "lint failure before behavioral tests",
+    "failedTests": [],
+    "lintErrorCount": 2,
+    "diagnostics": [
+      {
+        "source": "/workspace/api-app/test/instagram-cp4-connections.e2e-spec.ts",
+        "diagnostic": "508:9  error  The value assigned to 'channelId' is not used in subsequent statements   no-useless-assignment"
+      },
+      {
+        "source": "508:9  error  The value assigned to 'channelId' is not used in subsequent statements   no-useless-assignment",
+        "diagnostic": "509:9  error  The value assigned to 'generation' is not used in subsequent statements  no-useless-assignment"
+      }
+    ]
+  },
+  "passedTotals": {
+    "migrationsApplied": 31,
+    "unitTests": 0,
+    "e2eTests": 0
+  },
+  "postflight": {
+    "checksPassed": 910,
+    "checksFailed": 0,
+    "sourceCount": 264,
+    "todoChecked": true,
+    "boundInputCount": 608,
+    "preservationRows": 35,
+    "approvedExceptions": 2,
+    "rootIndexMatch": true
+  },
+  "runnerOwnedDisposableState": "runner cleanup observed in log; validation postgres/container and disposable volumes/network removed",
+  "limitations": [
+    "This is not a behavioral RED result: lint blocked execution before any API unit/E2E assertions.",
+    "No late lifecycle, race, WebSocket, or display assertions were reached."
+  ]
+}

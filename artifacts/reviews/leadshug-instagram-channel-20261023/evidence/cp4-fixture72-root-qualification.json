@@ -1,0 +1,15 @@
+{
+  "kind": "CP4fixture72rootqualification",
+  "file": {
+    "path": "api-app/test/instagram-cp4-connections.e2e-spec.ts",
+    "bytes": 51717,
+    "sha256": "612d637a4b49ea4555fb856bcbfec1c67591915f487301a78c5b7eea55a9da37"
+  },
+  "onlyAuthorizedChangesPlusLineWrap": true,
+  "reverseExactPreimage": true,
+  "other263SourcesExact": true,
+  "preservations35Exact": true,
+  "index3Exact": true,
+  "execution": "NOTRUN since72 edit.71 waslintblocked beforeanytest.",
+  "next": "Onecanonicalapi-instagram73; noCP4productyet"
+}
