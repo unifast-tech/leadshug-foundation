@@ -33,7 +33,7 @@ O acordo humano autoriza organizar as duas frentes e preparar este TODO. Este co
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** congelar/publicar somente este TODO para revisão independente, integrar os achados e executar os guards de planejamento antes de solicitar APROVADO.
+- **Next exact step:** concluir os guards finais e solicitar APROVADO para implementação local, documentação e inventário I; nenhum checkpoint remoto é concedido por essa aprovação.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
@@ -312,7 +312,7 @@ Pode absorver ajustes de IaC, Nginx, release/migration tooling e testes nos path
 | audit | Corte de canais | Gate cutover independente | Dois writers, rollback destrutivo | implement-in-this-todo | DOD10/VAL06; delivery review |
 
 ## Plan Review Gate
-- **Status:** findings_integrated; arquitetura revisada, crítica final pendente de refresh
+- **Status:** findings_integrated; arquitetura e crítica r3 convergidas, sem achados materiais abertos
 - **Review depth:** full; arquitetura, segurança de dados/ingresso, evidência e operação.
 | Issue ID | Severity | Problem / chosen handling | Status |
 | --- | --- | --- | --- |
@@ -419,11 +419,11 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Why this decision:** revisão precisa de baseline publicada e pertencente somente a este TODO.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** pending-refresh
+- **Baseline commit:** 24e7ce47
 - **Baseline push reference:** origin/main
-- **Gate status:** not_run
-- **Findings summary:**895ed3dd revisada; CRIT-02 integrado, refresh antes da convergência final.
-- **Evidence / reference:** artifacts/tmp/railway-plan/critique-r2-merge.json; prepared-pre-freeze para refresh.
+- **Gate status:** findings_integrated
+- **Findings summary:**24e7ce47 publicada após CRIT-02; somente o TODO Railway foi committed/pushed.
+- **Evidence / reference:** origin/main e artifacts/tmp/railway-plan/critique-r2-merge.json; freeze da proposta vigente.
 
 ## Gate: Review Scope Drift
 - **Gate decision:** required
@@ -439,9 +439,9 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Package mode:** bounded-file-set
 - **Critique isolation mode:** fresh internal no-context reviewer
 - **Critique lenses:** correctness, performance, elegance, structural-soundness, risk
-- **Critique status:** not_run
-- **Findings summary:** prepared-pre-freeze
-- **Evidence / reference:** prepared-pre-freeze
+- **Critique status:** no_material_findings
+- **Findings summary:** crítica r3 sem novos achados; ARCH01..04 e CRIT01..02 integrados e confirmados, sem blocker material de planejamento. Performance depende das medições planejadas, não foi validada.
+- **Evidence / reference:** artifacts/tmp/railway-plan/critique-r3-review.json e critique-r3-merge.json; processos internos encerraram com turn.completed.
 - **Canonical multi-lane audit protocol (when required):** audit-protocol-triple-review, delivery only after validation
 
 ## Gate: Assumption Code Coherence
@@ -449,9 +449,9 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Why this decision:** A-01..03 precisam de paths de código e conferência antes de aprovação.
 - **Trigger stage:** after critique convergence and before APROVADO
 - **Guard scope:** A-01,A-02,A-03
-- **Gate status:** not_run
-- **Findings summary:** prepared-pre-freeze
-- **Evidence / reference:** prepared-pre-freeze
+- **Gate status:** no_material_findings
+- **Findings summary:** inspeção direta dos paths citados e SHA-256 dos14inputs confirma base vazia/socket same-origin, configuração API/volume e seleção do owner sem prova de runtime. A-04 é obrigação de parar se sessão não retomar, não promessa de portabilidade.
+- **Evidence / reference:** artifacts/tmp/railway-plan/source-baseline.json e code-coherence.json; suporte estático não equivale a validação hospedada.
 
 ## Rules Acknowledgement / Ingestion
 Fontes concretas previstas; reload vinculante depois de APROVADO, não prova de ingestão futura.
@@ -539,4 +539,4 @@ Tupla proposta de execução, distinta dos revisores de planejamento. Verificada
 - Fontes locais inspecionadas: README/Makefile, Compose/overlay, Dockerfiles/entrypoints, api main/config/realtime, Web runtime config/socket, root CI e runners; nenhum arquivo privado ou banco real aberto nesta etapa.
 
 ## TODO Closeout Disposition
-Plano em revisão; arquitetura concluída com quatro achados integrados, crítica inicial concluída com CRIT-01 integrado e convergência em revisão. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
+Plano em revisão; arquitetura e crítica r3 concluídas, ARCH01..04 e CRIT01..02 integrados e confirmados sem novos achados materiais. Guards finais em execução; sem autoridade de implementação. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
