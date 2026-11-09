@@ -33,7 +33,7 @@ O acordo humano autoriza organizar as duas frentes e preparar este TODO. Este co
 ## Delivery Status Canon (Required)
 - **Current delivery stage:** Pending
 - **Qualifiers:** none
-- **Next exact step:** concluir os guards finais e solicitar APROVADO para implementação local, documentação e inventário I; nenhum checkpoint remoto é concedido por essa aprovação.
+- **Next exact step:** aguardar APROVADO para implementação local, documentação e inventário I; checkpoints P/M1/M2 permanecem separados e nenhum recurso remoto será alterado antecipadamente.
 
 ## Active Work State (Required While TODO Remains In `active/`)
 - **Work state:** review
@@ -430,8 +430,8 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Why this decision:** comparar seções materiais com freeze publicado antes de aprovação.
 - **Trigger stage:** after planning review and before APROVADO
 - **Baseline source:** Review Baseline Freeze -> Baseline commit
-- **Gate status:** not_run
-- **Evidence / reference:** prepared-pre-freeze
+- **Gate status:** no_material_findings
+- **Evidence / reference:** artifacts/tmp/railway-plan/scope-drift.json; GO,23seções materiais,0mudanças contra24e7ce47 alcançável em origin/main.
 
 ## Independent No-Context Critique Gate
 - **Critique decision:** required
@@ -491,6 +491,15 @@ Tupla proposta de execução, distinta dos revisores de planejamento. Verificada
 - **Lane-promoted threshold for this TODO:** homologação publicada com provas aceitas; não declarar merge canônico por deploy.
 - **Production-ready threshold for this TODO:** não há produção de clientes no escopo; homologação completa exige DOD01..10 e entrega documental. Não rotular Production-Ready para contornar promoção Git.
 
+## Planning Verification Results
+- Arquitetura independente: quatro achados integrados; crítica r3 confirmou ARCH01..04 e CRIT01..02 fechados, sem novos achados materiais.
+- Audit escalation: GO; piso required para crítica/arquitetura e gates de entrega aplicáveis; resultados reais de implementação continuam pending.
+- Module coherence: preservar BU/rotas/sessão, contratos de canais e restrição SEC-R6-04; nenhuma capacidade Meta ou de domínio inferida por hospedagem.
+- Assumption/code coherence: GO, três pressupostos vivos com âncoras concretas;14inputs protegidos sem alteração durante a revisão.
+- Scope drift: GO,23seções materiais e zero mudanças após o freeze24e7ce47.
+- Authority pre-approval: preflight-go, execução não concedida; artefato `artifacts/tmp/railway-plan/authority-preapproval.json`.
+- Verificação Foundation estrutural/whitespace passou; não foram executados build, testes de produto, migrations, leitura de dados privados ou runtime remoto nesta preparação.
+
 ## Approval
 - **Planning authorization:** “Vamos fechar esse plano então”, Lucas Paifer, 2026-11-09, e decisões anteriores D-R1..6.
 - **Approved by:** pending
@@ -539,4 +548,4 @@ Tupla proposta de execução, distinta dos revisores de planejamento. Verificada
 - Fontes locais inspecionadas: README/Makefile, Compose/overlay, Dockerfiles/entrypoints, api main/config/realtime, Web runtime config/socket, root CI e runners; nenhum arquivo privado ou banco real aberto nesta etapa.
 
 ## TODO Closeout Disposition
-Plano em revisão; arquitetura e crítica r3 concluídas, ARCH01..04 e CRIT01..02 integrados e confirmados sem novos achados materiais. Guards finais em execução; sem autoridade de implementação. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
+Plano em revisão; arquitetura e crítica r3 concluídas, ARCH01..04 e CRIT01..02 integrados e confirmados sem novos achados materiais. Guards de planejamento GO e authority preflight-go; sem autoridade de implementação até resposta APROVADO. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Freeze e revisões concluídos; aguardar APROVADO para implementação local, documentação e metadados I. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
