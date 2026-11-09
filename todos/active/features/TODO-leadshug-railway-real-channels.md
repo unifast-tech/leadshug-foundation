@@ -125,7 +125,7 @@ D-01..D-12 são a proposta a revisar e aprovar; não substituem D-R1..6, que pre
 | D-08 | Volumes independentes: PG do produto, PG Evolution, Redis persistente, `/dados/arquivos` API e `/evolution/instances` Evolution. Inventário I autorizado pelo APROVADO inicial coleta somente tamanhos, contagens de arquivos e versões antes de P, sem dados de negócio ou valores privados. Medir usados antes de alocar; provisionar capacidade maior que o usado com folga de50%, arredondada ao GiB seguinte, mínimo1GiB. Registrar custo/capacidade antes do apply, sem resize destrutivo. Backups diários e semanais dos volumes como proteção adicional; não tratá-los como um conjunto transacional entre serviços. Conjunto coerente cifrado sob custódia do operador antes de cada release e semanalmente em janela coordenada, conforme protocolo de recuperação abaixo, com prova de restore após alterações pós-cutover. |
 | D-09 | Preservar histórico, IDs, grants, chaves de credenciais, arquivos, instâncias/sessões e configurações necessárias. Novo destino recebe restauração da fonte local canônica, nunca do banco antigo Railway. Preservar segredos de decriptação; não rotacionar credenciais durante migração. `.env.testing` não é copiada integralmente; valores passam por canal privado, referências entre serviços permanecem referências. |
 | D-10 | Release owner único (executor DevOps). Builds/validações consomem fontes congeladas do principal checkout; manifesto inclui commits-base, dirty hashes públicos e hashes dos inputs efetivos. Fonte de ST-UI-01 só entra quando seu owner aceitar evidências; baseline Git antiga não representa seu candidato local. Imagem válida é a testada/atestada pelo manifesto; mudar qualquer input invalida a prova. Publicar OCI exige autorização de checkpoint, sem tornar imagem pública por fallback. |
-| D-11 | Implantar bancos/volumes primeiro; restauração ensaiada antes do snapshot final. API só inicia após restore e `./node_modules/.bin/prisma migrate deploy` instalado no mesmo digest, sem download de pacote, um owner por vez, `./node_modules/.bin/prisma migrate status` e integridade conferidos. Evolution do destino só inicia após origem quiescente e snapshot coerente; nunca ligar duas instâncias na mesma sessão. Backend/gateway público só abre após segurança e prova de readiness privada. |
+| D-11 | Implantar bancos/volumes primeiro; restauração ensaiada antes do snapshot final. API só inicia após restore e `./node_modules/.bin/prisma migrate deploy` instalado no mesmo digest, sem download de pacote, um owner por vez, `./node_modules/.bin/prisma migrate status` e integridade conferidos. Evolution do destino só inicia após origem quiescente e snapshot coerente; nunca ligar duas instâncias na mesma sessão. Primeiro start/execução da API NestJS no Railway, mesmo sem domínio ou em rede privada, exige evidência aceita da remediação SEC-R6-04 no contrato próprio. Infraestrutura inerte e binário Prisma sem bootstrap da aplicação podem ser preparados antes; não criar caminho de ativação implícito. Gateway público só abre após esse gate e prova de readiness privada. |
 | D-12 | Preservar plano Pro e políticas/limites de cobrança existentes do workspace; sem mudar subscription, spending cap ou orçamento global. Antes de recurso cobrável, apresentar alocação, projeção e custo incremental no checkpoint de provisionamento. Valor mensal ainda não é compromisso autorizado; não presumir que Pro cobre o consumo. Sem novos provedores além de GHCR/Railway existentes sem revisão de acesso/custo. |
 
 ## Proposed Runtime Topology
@@ -183,9 +183,9 @@ Todos os nomes abaixo são proposta, não identidade remota validada. Construç�
 ## Execution Plan (Required Before APROVADO)
 1. Refinamento/revisões (agora): congelar somente este TODO, revisar arquitetura e crítica sem contexto, integrar resoluções e guards; obter APROVADO para implementação local delimitada.
 2. Implementação local: configurar IaC, gateway, publicação verificável, migração e teste de ingresso sem tocar runtime operacional. Nenhuma leitura de credenciais/DB de clientes por testes. Ensaios usam somente fixtures isoladas.
-3. Validação e inventário I: suites locais canônicas + ingress/volumes/restore sintéticos. O APROVADO inicial também autoriza leitura delimitada de metadados do runtime operacional: owner/IDs, versões, estado de migrations, tamanhos usados e contagens de arquivos, sem secrets, mensagens ou dados pessoais e sem exportação/restore/restart. Isso dimensiona o pacote P; não é prova de restore dos dados reais. Fonte ambígua interrompe a leitura. Gate de segurança herdada precisa estar satisfeito antes da publicação pública.
-4. Checkpoint P: apresentar projeto/ambiente/workspace, plano IaC sem deletes, recursos/custos, digests e configuração de acesso e obter autoridade para criação/configuração/OCI/deploy. Se o alvo ainda não existir, criar projeto novo só neste checkpoint e revalidar IDs após criação antes das demais mutações. Não requer terminar todas as telas; usar candidato aceito e congelado.
-5. Checkpoint M1: após P, apresentar metadados I, prova de ensaio sintético, destinos isolados/custódia e plano de exportação. Obter autoridade para ler/exportar dados/chaves/sessões e realizar ensaio real de restauração em destino com egress/callbacks desabilitados. Somente após restore real aceito, checkpoint M2 apresenta resultado, fontes/IDs/app/contas e janela e obtém autoridade para quiescer origem, snapshot final, restore/cutover, callbacks e provas reais. M2 não precede a evidência M1.
+3. Validação e inventário I: suites locais canônicas + ingress/volumes/restore sintéticos. O APROVADO inicial também autoriza leitura delimitada de metadados do runtime operacional: owner/IDs, versões, estado de migrations, tamanhos usados e contagens de arquivos, sem secrets, mensagens ou dados pessoais e sem exportação/restore/restart. Isso dimensiona o pacote P; não é prova de restore dos dados reais. Fonte ambígua interrompe a leitura. Gate SEC-R6-04 precisa estar satisfeito antes da primeira execução da API no Railway, privada ou pública; desligar somente o gateway não satisfaz a restrição.
+4. Checkpoint P: apresentar projeto/ambiente/workspace, plano IaC sem deletes, recursos/custos, digests e configuração de acesso e obter autoridade para criação/configuração/OCI/deploy. P pode preparar bancos/volumes e imagens inertes; nenhum start/deploy ativo da API no Railway é autorizado sem evidência aceita de SEC-R6-04. O release wrapper deve recusar a ativação sem essa referência; migração pelo binário Prisma não pode iniciar a aplicação. Se o alvo ainda não existir, criar projeto novo só neste checkpoint e revalidar IDs após criação antes das demais mutações. Não requer terminar todas as telas; usar candidato aceito e congelado.
+5. Checkpoint M1: após P, apresentar metadados I, prova de ensaio sintético, destinos isolados/custódia e plano de exportação. Não iniciar API Railway para ensaiar dados se SEC-R6-04 estiver pendente; usar restore/conferência offline em alvo isolado e sem bootstrap da aplicação. Obter autoridade para ler/exportar dados/chaves/sessões e realizar ensaio real de restauração em destino com egress/callbacks desabilitados. Somente após restore real aceito, checkpoint M2 apresenta resultado, fontes/IDs/app/contas e janela e obtém autoridade para quiescer origem, snapshot final, restore/cutover, callbacks e provas reais. M2 não precede a evidência M1.
 6. Aceite: provar DODs, atualizar os owners/documentação explicitamente listados no diff, com handoff estratégico e writer serializado, auditorias finais e guards; manter App Review como processo externo posterior. Submissão do app Meta continua fora desta autoridade.
 
 ## Flow Evidence Planning Matrix
@@ -319,7 +319,7 @@ Pode absorver ajustes de IaC, Nginx, release/migration tooling e testes nos path
 | PR01 | high | Mesmo cookie em hosts Railway distintos: adotar gateway same-origin e provar WS, headers e cookies | decisão proposta; teste antes de exposição |
 | PR02 | high | Perda/split-brain na migração: quiescência, snapshot final, único consumidor e rollback com eventos novos | decisão proposta; ensaio e checkpoint M |
 | PR03 | high | Fonte suja/sem CI source repo: manifesto de fontes aceitas e OCI por digest; gate root completo explícito | decisão proposta; bloquear publish sem recibos |
-| PR04 | high | SEC-R6-04: bloquear gateway público até entrega do budget no contrato próprio | pré-requisito obrigatório, sem waiver/disable implícito |
+| PR04 | high | SEC-R6-04: bloquear primeira execução API no Railway (privada inclusive) até entrega aceita do budget no contrato próprio; somente recursos inertes podem preceder | pré-requisito obrigatório, sem waiver/disable implícito |
 | PR05 | medium | Novo SDK e rede privada/volumes: prova de compatibilidade e tipo/ingresso/restore antes de apply | falhar fechado e voltar ao plano em mudança material |
 
 ## Failure Modes & Residual Risks
@@ -328,7 +328,7 @@ Pode absorver ajustes de IaC, Nginx, release/migration tooling e testes nos path
 - Evolution pode exigir pareamento após transporte; preservar snapshot não garante sessão. Não prometer reconexão transparente nem deletar origem.
 - Tokens/políticas/app/contas podem impedir prova real; disponibilidade local histórica não prova atual e domínio fixo não remove limitações Meta.
 - Uma réplica com volumes pode ter indisponibilidade em deploy; não há promessa de zero downtime, SLA ou escala/HA.
-- A remediação `BLG-leadshug-template-recovery-read-budget` é pré-requisito externo deste TODO antes de Railway público; precisa contrato próprio e provas sequenciais/concorrentes, sem excluir feature ou reduzir gate por conveniência.
+- A remediação `BLG-leadshug-template-recovery-read-budget` é pré-requisito externo deste TODO antes da primeira execução da API no Railway, mesmo privada; precisa contrato próprio e provas sequenciais/concorrentes, sem excluir feature ou reduzir gate por conveniência.
 - A suite browser existente inicializa servidores/fixtures locais; não apontá-la diretamente ao Railway. Smoke hospedado deve usar contrato específico sem seeds, com mutações reais somente pelo operador autorizado.
 
 ## Questions To Close
@@ -353,11 +353,11 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 | Domínio Railway | unknown | Modalidade escolhida; hostname real nasce em P |
 | Meta/contas | unknown | Provas históricas; verificar ownership/estado em M |
 | Backup/volumes reais | unknown | Metadados I antes de P; exportação/ensaio real M1; corte M2; testes locais usam sintéticos |
-| SEC-R6-04 | unknown | Restrição documental explícita; exigir contrato/evidência da remediação antes do público |
+| SEC-R6-04 | unknown | Restrição local-only; exigir contrato/evidência aceitos antes da primeira execução API no Railway, inclusive privada. P inerte não satisfaz prontidão da aplicação |
 
 ## Security Risk Assessment
 - **Security review:** required; sessão/BU/dados privados e superfície pública.
-- Pré-requisito de admissão: SEC-R6-04/BLG-leadshug-template-recovery-read-budget concluído com orçamento persistente e provas; gateway não abre antes. Não há autorização de correção API por este contrato.
+- Pré-requisito de admissão: SEC-R6-04/BLG-leadshug-template-recovery-read-budget concluído com orçamento persistente e provas; API não executa no Railway, mesmo privada, antes. Não há autorização de correção API por este contrato.
 - Preservar HMAC, raw body, integridade/criptografia, autorização BU, não repetição de POST e redaction. Testar header spoofing/rate limiting, internal deny e ausência de tooling/fixtures no destino.
 - Reavaliar gatilhos da dívida de tooling Instagram à luz da plataforma/launcher e fonte das dependências; sem upgrade geral ou inferência de imunidade.
 - **Evidence plan:** testes locais ingress/restore, auditoria de segurança da imagem/config e revisão antes do corte.
@@ -408,6 +408,11 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 | ARCH-03 | Integrated | useful | yes | project | n/a | Usar binário Prisma instalado no digest sem downloads; package.json confirma dependência production; preflight comprova imagem final |
 | ARCH-04 | Integrated | useful | partial | project | n/a | F06 mede startup/ownership/upload com contagem representativa de anexos; falha/prazo excedido retorna ao escopo, sem ocultar erro |
 
+## Critique Findings Resolution
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| CRIT-01 | Integrated | useful | yes | project | n/a | D-11, P/M1, PR04, riscos, readiness e segurança bloqueiam a primeira execução API no Railway, privada inclusive, até remediação aceita de SEC-R6-04. Banco/volume/OCI inerte não significa ativação; Prisma não faz bootstrap da API |
+
 ## Gate: Review Baseline Freeze
 - **Gate decision:** required
 - **Why this decision:** revisão precisa de baseline publicada e pertencente somente a este TODO.
@@ -416,8 +421,8 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Baseline commit:** pending-refresh
 - **Baseline push reference:** origin/main
 - **Gate status:** not_run
-- **Findings summary:** baseline a450c222 foi publicada e revisada; refresh necessário após ARCH01..04 e concretização dos paths documentais, antes de crítica.
-- **Evidence / reference:** artifacts/tmp/railway-plan/architecture-merge.json; prepared-pre-freeze para o novo pacote.
+- **Findings summary:**8027357a revisada; CRIT-01 integrado e novo freeze necessário antes de crítica de convergência.
+- **Evidence / reference:** artifacts/tmp/railway-plan/critique-merge.json; prepared-pre-freeze para refresh.
 
 ## Gate: Review Scope Drift
 - **Gate decision:** required
@@ -533,4 +538,4 @@ Tupla proposta de execução, distinta dos revisores de planejamento. Verificada
 - Fontes locais inspecionadas: README/Makefile, Compose/overlay, Dockerfiles/entrypoints, api main/config/realtime, Web runtime config/socket, root CI e runners; nenhum arquivo privado ou banco real aberto nesta etapa.
 
 ## TODO Closeout Disposition
-Plano em revisão; arquitetura concluída com quatro achados integrados, crítica final pendente. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
+Plano em revisão; arquitetura concluída com quatro achados integrados, crítica inicial concluída com CRIT-01 integrado e convergência em revisão. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
