@@ -159,8 +159,8 @@ Todos os nomes abaixo são proposta, não identidade remota validada. Construç�
 3. Cutover com operador: confirmar ownership dos apps/callbacks e se o app atende terceiros; alterações compartilhadas não são presumidas autorizadas. Reservar janela, impedir novos envios/mutações no local, drenar requisições aceitas/receipts/jobs e conservar operações UNKNOWN sem replay externo. Registrar ponto consistente dos dois bancos/anexos/cache/sessão após quiescência.
 4. Ingresso antigo durante janela: não responder2xx a webhook que não foi duravelmente persistido. Verificar comportamento documentado de retry dos provedores; não assumir retenção infinita ou zero perda. Interromper se não houver rota de retry/retomada verificável e contabilização dos eventos em trânsito. Não executar envios de teste antes do gate próprio.
 5. Restaurar snapshot final no novo alvo e validar; iniciar API privada só após migrations; iniciar Evolution somente com origem parada. Configurar callback interno Evolution com autenticação preservada, sem recriar/remover instância. Se sessão não retomar, registrar falha e retornar ao operador antes de solicitar QR ou reinscrição.
-6. Trocar origens/retornos/callbacks Meta no checkpoint autorizado, sem troca de tokens/app/recurso por conveniência. Provar challenge/HMAC, recebimento, idempotência e persistência; old ingress não permanece processador canônico concorrente.
-7. Abrir gateway e realizar login/BU/WS e IN/OUT assistida nos três canais; readback e novo deploy controlado. O domínio gerado permanece estável entre publicações do mesmo serviço; não recriar serviço/domain para cada release.
+6. Depois do gate SEC-R6-04, restore/migrations e readiness privada aceitos e sob M2, iniciar gateway e admitir primeiro as rotas públicas exatas de webhook/health e documento institucional necessário. Manter acesso normal ao app/BFF e qualquer rota não admitida fechados nesta fase. Só então trocar origens/retornos/callbacks Meta, sem troca de tokens/app/recurso por conveniência. Provar challenge/HMAC, recebimento, idempotência e persistência; old ingress não permanece processador canônico concorrente. Ensaio de corte deve reproduzir esta ordem: readiness → admissão webhook → configuração callback → verificação Meta.
+7. Após verificação dos callbacks, liberar acesso normal ao app/BFF no gateway e realizar login/BU/WS e IN/OUT assistida nos três canais; readback e novo deploy controlado. O domínio gerado permanece estável entre publicações do mesmo serviço; não recriar serviço/domain para cada release.
 8. Rollback antes de qualquer escrita no destino: retomar origem a partir do snapshot consistente e restabelecer callbacks com autorização. Após primeira escrita no destino: congelar remoto, preservar eventos novos e reconciliar/dump reverso antes de retorno; forward-fix é preferido se houver migrations incompatíveis. Nunca restaurar snapshot antigo sobre mensagens novas nem apontar callbacks para DB defasado. Manter origem parada e backup preservado após aceite; sem apagar volumes automaticamente.
 
 ### Consistent Recovery Set — ongoing operation
@@ -412,6 +412,7 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 | Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
 | --- | --- | --- | --- | --- | --- | --- |
 | CRIT-01 | Integrated | useful | yes | project | n/a | D-11, P/M1, PR04, riscos, readiness e segurança bloqueiam a primeira execução API no Railway, privada inclusive, até remediação aceita de SEC-R6-04. Banco/volume/OCI inerte não significa ativação; Prisma não faz bootstrap da API |
+| CRIT-02 | Integrated | useful | yes | project | n/a | Corte6 admite rotas públicas exatas de webhook após readiness/SEC e sob M2 antes de configurar/verificar Meta; corte7 libera app e provas assistidas. Ensaio reproduz ordem, sem abrir internal ou antecipar efeitos |
 
 ## Gate: Review Baseline Freeze
 - **Gate decision:** required
@@ -421,8 +422,8 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Baseline commit:** pending-refresh
 - **Baseline push reference:** origin/main
 - **Gate status:** not_run
-- **Findings summary:**8027357a revisada; CRIT-01 integrado e novo freeze necessário antes de crítica de convergência.
-- **Evidence / reference:** artifacts/tmp/railway-plan/critique-merge.json; prepared-pre-freeze para refresh.
+- **Findings summary:**895ed3dd revisada; CRIT-02 integrado, refresh antes da convergência final.
+- **Evidence / reference:** artifacts/tmp/railway-plan/critique-r2-merge.json; prepared-pre-freeze para refresh.
 
 ## Gate: Review Scope Drift
 - **Gate decision:** required
