@@ -122,10 +122,10 @@ D-01..D-12 são a proposta a revisar e aprovar; não substituem D-R1..6, que pre
 | D-05 | Infraestrutura declarativa atual em `.railway/railway.ts`, owner exclusivo no root; SDK TypeScript e CLI fixados por lock/version. `railway.json` dos submódulos fica como histórico não consumido. A documentação atual depreca Config as Code para novos serviços. Plano remoto redigido antes de apply, sem deletes ou alteração do projeto antigo. |
 | D-06 | API/Web continuam imagens Docker separadas. Publicação por imagens OCI privadas no GHCR, fixadas por digest, com manifesto de fontes/build/evidência; gateway tem imagem própria de contexto mínimo. Evolution conserva imagem/digest do Compose; PG16 e Redis7.4 conservam major e recebem digest registrado, sem upgrade de provedor nesta fatia. Autoupdate desativado, sem `latest`. Nenhum deploy automático por commit nesta primeira entrega. |
 | D-07 | Uma réplica por serviço, sem autoscaling/serverless/sleep; mesma região. API preserva Node22, Prisma/OpenSSL e entrypoint de permissões. API health `/health`, web health `/`, gateway health verifica API e a disponibilidade estática do Web; prazo inicial de startup120s, restart ON_FAILURE/3 e captura redigida da falha. Health de banco/cache por conexão nativa privada; Evolution por endpoint compatível com a imagem pinada. Graceful shutdown/drenagem serão comprovados, sem inferir suporte por configuração. |
-| D-08 | Volumes independentes: PG do produto, PG Evolution, Redis persistente, `/dados/arquivos` API e `/evolution/instances` Evolution. Medir usados antes de alocar; provisionar capacidade maior que o usado com folga de50%, arredondada ao GiB seguinte, mínimo1GiB. Registrar custo/capacidade antes do apply, sem resize destrutivo. Backups diários e semanais dos volumes, com prova de restore; cópia consistente de migração adicional cifrada sob custódia do operador. |
+| D-08 | Volumes independentes: PG do produto, PG Evolution, Redis persistente, `/dados/arquivos` API e `/evolution/instances` Evolution. Inventário I autorizado pelo APROVADO inicial coleta somente tamanhos, contagens de arquivos e versões antes de P, sem dados de negócio ou valores privados. Medir usados antes de alocar; provisionar capacidade maior que o usado com folga de50%, arredondada ao GiB seguinte, mínimo1GiB. Registrar custo/capacidade antes do apply, sem resize destrutivo. Backups diários e semanais dos volumes como proteção adicional; não tratá-los como um conjunto transacional entre serviços. Conjunto coerente cifrado sob custódia do operador antes de cada release e semanalmente em janela coordenada, conforme protocolo de recuperação abaixo, com prova de restore após alterações pós-cutover. |
 | D-09 | Preservar histórico, IDs, grants, chaves de credenciais, arquivos, instâncias/sessões e configurações necessárias. Novo destino recebe restauração da fonte local canônica, nunca do banco antigo Railway. Preservar segredos de decriptação; não rotacionar credenciais durante migração. `.env.testing` não é copiada integralmente; valores passam por canal privado, referências entre serviços permanecem referências. |
 | D-10 | Release owner único (executor DevOps). Builds/validações consomem fontes congeladas do principal checkout; manifesto inclui commits-base, dirty hashes públicos e hashes dos inputs efetivos. Fonte de ST-UI-01 só entra quando seu owner aceitar evidências; baseline Git antiga não representa seu candidato local. Imagem válida é a testada/atestada pelo manifesto; mudar qualquer input invalida a prova. Publicar OCI exige autorização de checkpoint, sem tornar imagem pública por fallback. |
-| D-11 | Implantar bancos/volumes primeiro; restauração ensaiada antes do snapshot final. API só inicia após restore e `npx prisma migrate deploy` do mesmo digest, um owner por vez, `migrate status` e integridade conferidos. Evolution do destino só inicia após origem quiescente e snapshot coerente; nunca ligar duas instâncias na mesma sessão. Backend/gateway público só abre após segurança e prova de readiness privada. |
+| D-11 | Implantar bancos/volumes primeiro; restauração ensaiada antes do snapshot final. API só inicia após restore e `./node_modules/.bin/prisma migrate deploy` instalado no mesmo digest, sem download de pacote, um owner por vez, `./node_modules/.bin/prisma migrate status` e integridade conferidos. Evolution do destino só inicia após origem quiescente e snapshot coerente; nunca ligar duas instâncias na mesma sessão. Backend/gateway público só abre após segurança e prova de readiness privada. |
 | D-12 | Preservar plano Pro e políticas/limites de cobrança existentes do workspace; sem mudar subscription, spending cap ou orçamento global. Antes de recurso cobrável, apresentar alocação, projeção e custo incremental no checkpoint de provisionamento. Valor mensal ainda não é compromisso autorizado; não presumir que Pro cobre o consumo. Sem novos provedores além de GHCR/Railway existentes sem revisão de acesso/custo. |
 
 ## Proposed Runtime Topology
@@ -163,6 +163,15 @@ Todos os nomes abaixo são proposta, não identidade remota validada. Construç�
 7. Abrir gateway e realizar login/BU/WS e IN/OUT assistida nos três canais; readback e novo deploy controlado. O domínio gerado permanece estável entre publicações do mesmo serviço; não recriar serviço/domain para cada release.
 8. Rollback antes de qualquer escrita no destino: retomar origem a partir do snapshot consistente e restabelecer callbacks com autorização. Após primeira escrita no destino: congelar remoto, preservar eventos novos e reconciliar/dump reverso antes de retorno; forward-fix é preferido se houver migrations incompatíveis. Nunca restaurar snapshot antigo sobre mensagens novas nem apontar callbacks para DB defasado. Manter origem parada e backup preservado após aceite; sem apagar volumes automaticamente.
 
+### Consistent Recovery Set — ongoing operation
+- Unidade recuperável é o produto e seus canais em um mesmo ponto quiescente: dump PG produto + dump PG Evolution + anexos + sessões Evolution + estado Redis necessário + referência às versões de chaves/segredos mantidas em custódia privada. Manifesto contém IDs de backup, versões, ordem, integridade e timestamp; nunca os valores das chaves.
+- Release owner coordena pausa de mutações/recebimento com retry validado, drenagem e captura na ordem DBs/arquivos/sessão/cache sem writers concorrentes. Backups de volume diários/semanais continuam adicionais; restauração individual não autoriza recombinar pontos incompatíveis.
+- Antes de cada release e semanalmente, operador/executor agenda esta janela e guarda conjunto cifrado correspondente. Sem cron extra ou serviço novo nesta fatia. Alteração de chave exige novo conjunto e custódia compatível, sem girar chaves por este TODO.
+- Após o primeiro tráfego aceito no Railway, capturar conjunto que inclua alterações pós-cutover e restaurá-lo em ambiente isolado sem egress. Provar FKs/contagens/anexos/decriptação/sessão offline; não iniciar cópia viva do canal.
+- Recuperação de desastre usa o último conjunto coerente validado. Alterações posteriores a esse ponto podem se perder em desastre total; não há promessa de RPO zero ou de retenção indefinida por provedor. Registrar o instante do conjunto e o intervalo de perda potencial antes de restore; mudanças de tolerância entram em decisão humana.
+- Release preflight verifica binário Prisma instalado/versão contra lock e executa migrate deploy/status do mesmo digest sem `npx`/downloads. `prisma` já consta em dependências de produção em `api-app/package.json`; provar sua presença na imagem final. Falta do binário bloqueia o release e requer expansão de packaging delimitada.
+- F06 mede startup até readiness com ownership restaurado e cardinalidade de anexos representativa do inventário I; testar upload/retorno para detectar chown silenciosamente falho. Comparar tempo ao prazo120s e aos três retries; não aumentá-los para ocultar erro de permissão. Mudança necessária no entrypoint API exige renovação do write set.
+
 ## Assumptions Preview (Required Before Plan Review)
 | ID | Assumption | Evidence | Impact if wrong | Risk | Handling |
 | --- | --- | --- | --- | --- | --- |
@@ -174,10 +183,10 @@ Todos os nomes abaixo são proposta, não identidade remota validada. Construç�
 ## Execution Plan (Required Before APROVADO)
 1. Refinamento/revisões (agora): congelar somente este TODO, revisar arquitetura e crítica sem contexto, integrar resoluções e guards; obter APROVADO para implementação local delimitada.
 2. Implementação local: configurar IaC, gateway, publicação verificável, migração e teste de ingresso sem tocar runtime operacional. Nenhuma leitura de credenciais/DB de clientes por testes. Ensaios usam somente fixtures isoladas.
-3. Validação: suites locais canônicas + ingress/volumes/restore isolados; gerar pacote concreto de provisionamento com custos/IDs/fontes/artefatos redigidos. Gate de segurança herdada precisa estar satisfeito antes da publicação pública.
+3. Validação e inventário I: suites locais canônicas + ingress/volumes/restore sintéticos. O APROVADO inicial também autoriza leitura delimitada de metadados do runtime operacional: owner/IDs, versões, estado de migrations, tamanhos usados e contagens de arquivos, sem secrets, mensagens ou dados pessoais e sem exportação/restore/restart. Isso dimensiona o pacote P; não é prova de restore dos dados reais. Fonte ambígua interrompe a leitura. Gate de segurança herdada precisa estar satisfeito antes da publicação pública.
 4. Checkpoint P: apresentar projeto/ambiente/workspace, plano IaC sem deletes, recursos/custos, digests e configuração de acesso e obter autoridade para criação/configuração/OCI/deploy. Se o alvo ainda não existir, criar projeto novo só neste checkpoint e revalidar IDs após criação antes das demais mutações. Não requer terminar todas as telas; usar candidato aceito e congelado.
-5. Checkpoint M: apresentar inventário/custódia do backup, ensaio e plano de corte; obter autoridade específica para ler/exportar/restaurar dados/chaves/sessões, parar origem e alterar callbacks. Testes reais só após alvo e contas explicitados com operador.
-6. Aceite: provar DODs, atualizar owners/documentação no escopo autorizado, auditorias finais e guards; manter App Review como processo externo posterior. Submissão do app Meta continua fora desta autoridade.
+5. Checkpoint M1: após P, apresentar metadados I, prova de ensaio sintético, destinos isolados/custódia e plano de exportação. Obter autoridade para ler/exportar dados/chaves/sessões e realizar ensaio real de restauração em destino com egress/callbacks desabilitados. Somente após restore real aceito, checkpoint M2 apresenta resultado, fontes/IDs/app/contas e janela e obtém autoridade para quiescer origem, snapshot final, restore/cutover, callbacks e provas reais. M2 não precede a evidência M1.
+6. Aceite: provar DODs, atualizar os owners/documentação explicitamente listados no diff, com handoff estratégico e writer serializado, auditorias finais e guards; manter App Review como processo externo posterior. Submissão do app Meta continua fora desta autoridade.
 
 ## Flow Evidence Planning Matrix
 | ID | Fluxo/cenário | Evidência planejada | Preconditions / alvo |
@@ -187,7 +196,7 @@ Todos os nomes abaixo são proposta, não identidade remota validada. Construç�
 | F03 | WhatsApp oficial IN/OUT | Prova assistida, persistência/readback e confirmação humana de recebimento | Conta oficial vigente, sem retry de POST; checkpoint M |
 | F04 | Instagram IN/OUT Unified | Mesma conversa/rota/BU, leitura após reabrir e confirmação humana | Conta elegível conforme módulo; EMPTY_LIST ou portfólio incompatível não são resolvidos por deploy |
 | F05 | Evolution IN/OUT e retomada | Identidade e sessão retomadas, callback autenticado e readback; sem novo pareamento implícito | Origem parada, DB/sessão restaurados; reconexão nova exige decisão |
-| F06 | Restore e novo deploy | Restore íntegro + migrações + arquivos/decriptação + estado antes/depois; eventos novos não sobrescritos | DB/cache/volumes descartáveis no ensaio; snapshot real somente M |
+| F06 | Restore e novo deploy | Restore íntegro + migrações + arquivos/decriptação + estado antes/depois; eventos novos não sobrescritos | DB/cache/volumes descartáveis no ensaio sintético; ensaio real M1, corte M2; conjunto pós-cutover e startup com contagem representativa |
 | F07 | Provas Meta | Roteiro e URLs de privacidade/exclusão/retornos exigidos pelo app, credencial de avaliação via canal privado | App exato e permissão descritos; conteúdo ausente vira pendência material, sem declaração fictícia |
 
 ## Local CI-Equivalent Suite Matrix
@@ -240,6 +249,14 @@ Admissão de novo wrapper/job por `ci-equivalent-test-surface-admission`; preser
 | web | .dockerignore | M | Excluir .git/private/artefatos locais do contexto de imagem; não alterar telas |
 | foundation | todos/active/features/TODO-leadshug-railway-real-channels.md | M | Contrato/evidências desta frente |
 | foundation | artifacts/tmp/railway-plan/** | A,M | Evidência transitória ignorada e redigida |
+| foundation | modules/integrations-and-channels.md | M | Consolidar topologia/canais/limites realmente provados, sem alterar domínio |
+| foundation | modules/identity-and-tenancy.md | M | Consolidar sessão/origens/ingresso comprovados |
+| foundation | modules/inbox-and-conversations.md | M | Registrar provas hospedadas/versão sem inventar funcionalidade |
+| foundation | modules/audit-and-history.md | M | Proveniência e recuperação sem copiar mensagens |
+| foundation | system_roadmap.md | M | Registrar homologação em paralelo às telas, sem declarar gates entregues |
+| foundation | artifacts/environment-topology.md | A | Contrato project-owned: proposta até prova do alvo, depois evidência redigida |
+| foundation | artifacts/runbooks/railway-homologation.md | A | Runbook de operação/custódia sem secrets |
+| foundation | artifacts/feature-briefs/leadshug-railway-real-channels-20261109.md | A | Consolidar enquadramento persistente derivado do TODO |
 
 ### Not Expected Changed Paths
 | Repository | Path glob | Change types | Reason |
@@ -250,10 +267,8 @@ Admissão de novo wrapper/job por `ci-equivalent-test-surface-admission`; preser
 | root | .gitmodules | any | Topologia existente preservada |
 | root | .env* | any | Configuração privada não será editada/versionada por esta implementação local |
 | foundation | todos/active/features/TODO-leadshug-project-screens.md | any | Outro owner/contrato |
-| foundation | modules/** | any | Consolidação proposta abaixo exige fase documental delimitada, não mistura ao delta de implementação |
-| foundation | system_roadmap.md | any | Fonte compartilhada; handoff estratégico próprio antes de editar |
 
-Arquivos de secrets/backups não entram em diff ou Git. Adotar runtime/valores privados somente nos checkpoints de autoridade próprios. Módulos/roadmap e brief persistente receberão consolidação em fase documental explicitamente delimitada antes do fechamento; até lá este TODO é a autoridade tática e nenhuma publicação é alegada. Guard de diff exige classificar todo delta preexistente, não há waiver implícito.
+Arquivos de secrets/backups não entram em diff ou Git. Adotar runtime/valores privados somente nos checkpoints de autoridade próprios. Módulos/roadmap e brief persistente receberão consolidação nos paths explicitamente listados, com handoff estratégico e writer serializado antes do fechamento; até lá este TODO é a autoridade tática e nenhuma publicação é alegada. Guard de diff exige classificar todo delta preexistente, não há waiver implícito.
 
 ## Bounded But Elastic Guardrails
 Pode absorver ajustes de IaC, Nginx, release/migration tooling e testes nos paths acima que preservem o mesmo contrato. Novo domínio, remediação API/schema, substituição de provedor, mudança de identidade ou aceitação de risco exige novo contrato/renovação, sem contornar bloqueadores públicos.
@@ -297,7 +312,7 @@ Pode absorver ajustes de IaC, Nginx, release/migration tooling e testes nos path
 | audit | Corte de canais | Gate cutover independente | Dois writers, rollback destrutivo | implement-in-this-todo | DOD10/VAL06; delivery review |
 
 ## Plan Review Gate
-- **Status:** prepared-pre-freeze
+- **Status:** findings_integrated; arquitetura revisada, crítica final pendente de refresh
 - **Review depth:** full; arquitetura, segurança de dados/ingresso, evidência e operação.
 | Issue ID | Severity | Problem / chosen handling | Status |
 | --- | --- | --- | --- |
@@ -317,7 +332,7 @@ Pode absorver ajustes de IaC, Nginx, release/migration tooling e testes nos path
 - A suite browser existente inicializa servidores/fixtures locais; não apontá-la diretamente ao Railway. Smoke hospedado deve usar contrato específico sem seeds, com mutações reais somente pelo operador autorizado.
 
 ## Questions To Close
-Não há pergunta humana adicional necessária para revisar este pacote. APROVADO aceitará as propostas técnicas D-01..12 para implementação local, sem conceder checkpoints P/M. Ambiguidade de workspace, nova correção API, estimativa de custo ou pré-requisito de segurança não resolvido interrompe o checkpoint afetado.
+Não há pergunta humana adicional necessária para revisar este pacote. APROVADO aceitará as propostas técnicas D-01..12 para implementação local, consolidação documental e metadados I, sem conceder checkpoints P/M1/M2. Ambiguidade de workspace, nova correção API, estimativa de custo ou pré-requisito de segurança não resolvido interrompe o checkpoint afetado.
 
 ## Profile Scope & Handoffs
 - **Current profile:** Strategic / CTO-Tech-Lead; Genesis excluído pelo canon existente.
@@ -337,7 +352,7 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 | GHCR / permissão de publish | unknown | Verificar por leitura; publicar só em P, sem fallback público |
 | Domínio Railway | unknown | Modalidade escolhida; hostname real nasce em P |
 | Meta/contas | unknown | Provas históricas; verificar ownership/estado em M |
-| Backup/volumes reais | unknown | Inventário/ensaio real somente M; testes usam sintéticos |
+| Backup/volumes reais | unknown | Metadados I antes de P; exportação/ensaio real M1; corte M2; testes locais usam sintéticos |
 | SEC-R6-04 | unknown | Restrição documental explícita; exigir contrato/evidência da remediação antes do público |
 
 ## Security Risk Assessment
@@ -376,8 +391,8 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Decision review lifecycle:** after diagnosis is closed and before APROVADO
 - **Decision review kind:** architecture_opinion
 - **Decision review package:** bounded-file-set
-- **Decision review status:** not_run
-- **Decision review evidence / resolution:** prepared-pre-freeze; fresh internal reviewer required
+- **Decision review status:** findings_integrated
+- **Decision review evidence / resolution:** artifacts/tmp/railway-plan/architecture-review.json e architecture-merge.json; quatro achados integrados no ledger ARCH-01..04; crítica final verifica a convergência.
 - **Architecture adherence review:** required
 - **Adherence review lifecycle:** after implementation and before Completed
 - **Adherence review kind:** architecture_adherence
@@ -385,16 +400,24 @@ Não há pergunta humana adicional necessária para revisar este pacote. APROVAD
 - **Adherence review status:** not_run
 - **Adherence review evidence / resolution:** required at delivery
 
+## Architecture Findings Resolution
+| Finding ID | Resolution | Usefulness | Formalizable | Candidate Rule Level | Candidate Rule ID | Rationale / Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+| ARCH-01 | Integrated | useful | yes | project | n/a | Inventário I somente metadados antes de P; exportação/ensaio real M1 precede autoridade de corte M2; nenhuma prova sintética substitui restore real |
+| ARCH-02 | Integrated | useful | partial | project | n/a | Conjunto recuperável coerente, custódia de versões de chave, backup coordenado pré-release/semanal e prova com alterações pós-cutover; volume schedules são adicionais |
+| ARCH-03 | Integrated | useful | yes | project | n/a | Usar binário Prisma instalado no digest sem downloads; package.json confirma dependência production; preflight comprova imagem final |
+| ARCH-04 | Integrated | useful | partial | project | n/a | F06 mede startup/ownership/upload com contagem representativa de anexos; falha/prazo excedido retorna ao escopo, sem ocultar erro |
+
 ## Gate: Review Baseline Freeze
 - **Gate decision:** required
 - **Why this decision:** revisão precisa de baseline publicada e pertencente somente a este TODO.
 - **Trigger stage:** before the first planning-side review or guard run
 - **Baseline branch:** main
-- **Baseline commit:** pending-freeze
+- **Baseline commit:** pending-refresh
 - **Baseline push reference:** origin/main
 - **Gate status:** not_run
-- **Findings summary:** somente este TODO será staged/committed/pushed; alterações anteriores e TODO de telas preservados.
-- **Evidence / reference:** prepared-pre-freeze
+- **Findings summary:** baseline a450c222 foi publicada e revisada; refresh necessário após ARCH01..04 e concretização dos paths documentais, antes de crítica.
+- **Evidence / reference:** artifacts/tmp/railway-plan/architecture-merge.json; prepared-pre-freeze para o novo pacote.
 
 ## Gate: Review Scope Drift
 - **Gate decision:** required
@@ -464,8 +487,8 @@ Tupla proposta de execução, distinta dos revisores de planejamento. Verificada
 
 ## Approval
 - **Planning authorization:** “Vamos fechar esse plano então”, Lucas Paifer, 2026-11-09, e decisões anteriores D-R1..6.
-- **Approved by:** aguardando APROVADO após gates de planejamento.
-- **Approval scope:** proposta de implementação local dos paths esperados e validação sintética. Checkpoint P concede publicação/provisionamento e M concede dados/callbacks/provas reais somente após pacote concreto e autoridade próprios.
+- **Approved by:** pending
+- **Approval scope:** proposta de implementação local dos paths esperados, consolidação documental serializada, validação sintética e inventário I somente de metadados delimitados. Checkpoint P concede publicação/provisionamento e M concede dados/callbacks/provas reais somente após pacote concreto e autoridade próprios.
 - **Execution not authorized by approval:** projeto Railway antigo, produção clientes, submissão Meta, mudanças API/schema, worktrees, credenciais em chat/Git, mutações remotas antecipadas, alterações globais de cobrança ou Git/push de produto.
 - **Renewed approval required when:** novo path, domínio/schema/auth, alteração de risco/validação, nova versão de provedor, exclusão de feature ou waiver material.
 
@@ -510,4 +533,4 @@ Tupla proposta de execução, distinta dos revisores de planejamento. Verificada
 - Fontes locais inspecionadas: README/Makefile, Compose/overlay, Dockerfiles/entrypoints, api main/config/realtime, Web runtime config/socket, root CI e runners; nenhum arquivo privado ou banco real aberto nesta etapa.
 
 ## TODO Closeout Disposition
-Plano em revisão; somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
+Plano em revisão; arquitetura concluída com quatro achados integrados, crítica final pendente. Somente este TODO e artifacts/tmp próprios mudaram. Sem implementação/provisionamento/migração/Meta/envio nesta etapa. Após freeze e revisões: solicitar APROVADO para implementação local. Pré-requisito de segurança e checkpoints P/M continuam explícitos; TODO de telas preservado.
